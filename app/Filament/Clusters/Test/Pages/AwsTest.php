@@ -5,9 +5,13 @@ declare(strict_types=1);
 namespace Modules\Media\Filament\Clusters\Test\Pages;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Override;
 =======
 >>>>>>> 0a466ed (.)
+=======
+use Override;
+>>>>>>> 37a2da6 (.)
 use Filament\Schemas\Schema;
 use Filament\Schemas\Components\Tabs;
 use Filament\Schemas\Components\Tabs\Tab;
@@ -29,10 +33,14 @@ use Modules\Xot\Filament\Pages\XotBasePage;
 class AwsTest extends XotBasePage
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
     protected static null|string $cluster = Test::class;
 =======
     protected static ?string $cluster = Test::class;
 >>>>>>> 0a466ed (.)
+=======
+    protected static null|string $cluster = Test::class;
+>>>>>>> 37a2da6 (.)
 
     public array $testResults = [];
     public string $activeTab = 's3';
@@ -48,6 +56,9 @@ class AwsTest extends XotBasePage
     ];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 37a2da6 (.)
     #[Override]
     public function form(Schema $schema): Schema
     {
@@ -59,6 +70,7 @@ class AwsTest extends XotBasePage
                 Tab::make('Diagnostics')->schema($this->getDiagnosticsSchema()),
             ]),
         ]);
+<<<<<<< HEAD
 =======
     public function form(Schema $schema): Schema
     {
@@ -80,6 +92,8 @@ class AwsTest extends XotBasePage
                     ]),
             ]);
 >>>>>>> 0a466ed (.)
+=======
+>>>>>>> 37a2da6 (.)
     }
 
     protected function getS3TestSchema(): array
@@ -93,22 +107,29 @@ class AwsTest extends XotBasePage
                             ->label(__('ui::aws_test.test_s3_connection'))
                             ->action('testS3Connection'),
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 0a466ed (.)
+=======
+>>>>>>> 37a2da6 (.)
                         Action::make('test_s3_permissions')
                             ->label(__('ui::aws_test.test_s3_permissions'))
                             ->color('warning')
                             ->action('testS3Permissions'),
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 0a466ed (.)
+=======
+>>>>>>> 37a2da6 (.)
                         Action::make('test_file_operations')
                             ->label(__('ui::aws_test.test_file_operations'))
                             ->color('success')
                             ->action('testS3FileOperations'),
                     ])->fullWidth(),
+<<<<<<< HEAD
 <<<<<<< HEAD
                     ViewField::make('s3_results')
                         ->view('ui::filament.components.test-results')
@@ -119,6 +140,11 @@ class AwsTest extends XotBasePage
                         ->view('ui::filament.components.test-results')
                         ->viewData(fn () => ['results' => $this->testResults['s3'] ?? null]),
 >>>>>>> 0a466ed (.)
+=======
+                    ViewField::make('s3_results')
+                        ->view('ui::filament.components.test-results')
+                        ->viewData(fn() => ['results' => $this->testResults['s3'] ?? null]),
+>>>>>>> 37a2da6 (.)
                 ]),
         ];
     }
@@ -127,6 +153,9 @@ class AwsTest extends XotBasePage
     {
         return [
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 37a2da6 (.)
             Section::make('CloudFront Test')->schema([
                 TextInput::make('cloudfront_url')->default(config('filesystems.cloudfront.url')),
                 Actions::make([
@@ -137,6 +166,7 @@ class AwsTest extends XotBasePage
                     ->view('ui::filament.components.test-results')
                     ->viewData(fn() => ['results' => $this->testResults['cloudfront'] ?? null]),
             ]),
+<<<<<<< HEAD
 =======
             Section::make('CloudFront Test')
                 ->schema([
@@ -156,6 +186,8 @@ class AwsTest extends XotBasePage
                         ->viewData(fn () => ['results' => $this->testResults['cloudfront'] ?? null]),
                 ]),
 >>>>>>> 0a466ed (.)
+=======
+>>>>>>> 37a2da6 (.)
         ];
     }
 
@@ -163,6 +195,9 @@ class AwsTest extends XotBasePage
     {
         return [
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 37a2da6 (.)
             Section::make('IAM Permissions Test')->schema([
                 TextInput::make('iam_user')->default(env('AWS_ACCESS_KEY_ID')),
                 Actions::make([
@@ -173,6 +208,7 @@ class AwsTest extends XotBasePage
                     ->view('ui::filament.components.test-results')
                     ->viewData(fn() => ['results' => $this->testResults['iam'] ?? null]),
             ]),
+<<<<<<< HEAD
 =======
             Section::make('IAM Permissions Test')
                 ->schema([
@@ -193,6 +229,8 @@ class AwsTest extends XotBasePage
                         ->viewData(fn () => ['results' => $this->testResults['iam'] ?? null]),
                 ]),
 >>>>>>> 0a466ed (.)
+=======
+>>>>>>> 37a2da6 (.)
         ];
     }
 
@@ -200,6 +238,9 @@ class AwsTest extends XotBasePage
     {
         return [
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 37a2da6 (.)
             Section::make('Complete Diagnostic')->schema([
                 Actions::make([
                     Action::make('run_full_diagnostic')
@@ -212,6 +253,7 @@ class AwsTest extends XotBasePage
                     ->viewData(fn() => ['results' => $this->testResults['full'] ?? null]),
                 KeyValue::make('aws_config')->columnSpanFull()->state($this->getAwsConfig(...)),
             ]),
+<<<<<<< HEAD
 =======
             Section::make('Complete Diagnostic')
                 ->schema([
@@ -231,6 +273,8 @@ class AwsTest extends XotBasePage
                         ->state(fn () => $this->getAwsConfig()),
                 ]),
 >>>>>>> 0a466ed (.)
+=======
+>>>>>>> 37a2da6 (.)
         ];
     }
 
@@ -343,11 +387,16 @@ class AwsTest extends XotBasePage
     {
         return [
 <<<<<<< HEAD
+<<<<<<< HEAD
             'AWS_ACCESS_KEY_ID' =>
                 substr((string) config('filesystems.disks.s3.key', ''), 0, self::KEY_PREVIEW_LENGTH) . '...',
 =======
             'AWS_ACCESS_KEY_ID' => substr((string) config('filesystems.disks.s3.key', ''), 0, self::KEY_PREVIEW_LENGTH).'...',
 >>>>>>> 0a466ed (.)
+=======
+            'AWS_ACCESS_KEY_ID' =>
+                substr((string) config('filesystems.disks.s3.key', ''), 0, self::KEY_PREVIEW_LENGTH) . '...',
+>>>>>>> 37a2da6 (.)
             'AWS_DEFAULT_REGION' => config('filesystems.disks.s3.region'),
             'AWS_BUCKET' => config('filesystems.disks.s3.bucket'),
             'CLOUDFRONT_URL' => config('filesystems.cloudfront.url'),
@@ -356,10 +405,14 @@ class AwsTest extends XotBasePage
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     protected function getS3Solution(null|string $errorCode): string
 =======
     protected function getS3Solution(?string $errorCode): string
 >>>>>>> 0a466ed (.)
+=======
+    protected function getS3Solution(null|string $errorCode): string
+>>>>>>> 37a2da6 (.)
     {
         if (null === $errorCode) {
             return 'Unknown error - check AWS credentials and configuration';
@@ -373,10 +426,14 @@ class AwsTest extends XotBasePage
         ];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         return $solutions[$errorCode] ?? ('Consult AWS documentation for error: ' . $errorCode);
 =======
         return $solutions[$errorCode] ?? 'Consult AWS documentation for error: '.$errorCode;
 >>>>>>> 0a466ed (.)
+=======
+        return $solutions[$errorCode] ?? ('Consult AWS documentation for error: ' . $errorCode);
+>>>>>>> 37a2da6 (.)
     }
 
     public function testS3Permissions(): void
@@ -414,10 +471,14 @@ class AwsTest extends XotBasePage
             $this->testResults['s3_permissions'] = [
                 'status' => 'error',
 <<<<<<< HEAD
+<<<<<<< HEAD
                 'message' => 'S3 permissions error: ' . ($e->getAwsErrorCode() ?? 'UnknownError'),
 =======
                 'message' => 'S3 permissions error: '.($e->getAwsErrorCode() ?? 'UnknownError'),
 >>>>>>> 0a466ed (.)
+=======
+                'message' => 'S3 permissions error: ' . ($e->getAwsErrorCode() ?? 'UnknownError'),
+>>>>>>> 37a2da6 (.)
                 'details' => [
                     'Error' => $e->getMessage(),
                     'Solution' => $this->getS3Solution($e->getAwsErrorCode() ?? 'UnknownError'),
@@ -445,10 +506,14 @@ class AwsTest extends XotBasePage
             ]);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             $testFileName = 'test-file-' . now()->timestamp . '.txt';
 =======
             $testFileName = 'test-file-'.now()->timestamp.'.txt';
 >>>>>>> 0a466ed (.)
+=======
+            $testFileName = 'test-file-' . now()->timestamp . '.txt';
+>>>>>>> 37a2da6 (.)
             $testContent = 'Test file content for AWS S3 operations';
 
             // Test put operation
@@ -490,10 +555,14 @@ class AwsTest extends XotBasePage
             $this->testResults['s3_operations'] = [
                 'status' => 'error',
 <<<<<<< HEAD
+<<<<<<< HEAD
                 'message' => 'S3 file operations error: ' . ($e->getAwsErrorCode() ?? 'UnknownError'),
 =======
                 'message' => 'S3 file operations error: '.($e->getAwsErrorCode() ?? 'UnknownError'),
 >>>>>>> 0a466ed (.)
+=======
+                'message' => 'S3 file operations error: ' . ($e->getAwsErrorCode() ?? 'UnknownError'),
+>>>>>>> 37a2da6 (.)
                 'details' => [
                     'Error' => $e->getMessage(),
                     'Solution' => $this->getS3Solution($e->getAwsErrorCode() ?? 'UnknownError'),
@@ -517,10 +586,14 @@ class AwsTest extends XotBasePage
             $baseUrl = config('filesystems.cloudfront.url');
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             if (!$privateKey || !$keyPairId || !$baseUrl) {
 =======
             if (! $privateKey || ! $keyPairId || ! $baseUrl) {
 >>>>>>> 0a466ed (.)
+=======
+            if (!$privateKey || !$keyPairId || !$baseUrl) {
+>>>>>>> 37a2da6 (.)
                 throw new Exception('Missing CloudFront configuration');
             }
 
@@ -587,10 +660,14 @@ class AwsTest extends XotBasePage
             $this->testResults['iam_credentials'] = [
                 'status' => 'error',
 <<<<<<< HEAD
+<<<<<<< HEAD
                 'message' => 'IAM credentials error: ' . ($e->getAwsErrorCode() ?? 'UnknownError'),
 =======
                 'message' => 'IAM credentials error: '.($e->getAwsErrorCode() ?? 'UnknownError'),
 >>>>>>> 0a466ed (.)
+=======
+                'message' => 'IAM credentials error: ' . ($e->getAwsErrorCode() ?? 'UnknownError'),
+>>>>>>> 37a2da6 (.)
                 'details' => [
                     'Error' => $e->getMessage(),
                     'Solution' => 'Check AWS access keys and secret',
@@ -647,10 +724,14 @@ class AwsTest extends XotBasePage
             $this->testResults['iam_policies'] = [
                 'status' => 'error',
 <<<<<<< HEAD
+<<<<<<< HEAD
                 'message' => 'IAM policies error: ' . ($e->getAwsErrorCode() ?? 'UnknownError'),
 =======
                 'message' => 'IAM policies error: '.($e->getAwsErrorCode() ?? 'UnknownError'),
 >>>>>>> 0a466ed (.)
+=======
+                'message' => 'IAM policies error: ' . ($e->getAwsErrorCode() ?? 'UnknownError'),
+>>>>>>> 37a2da6 (.)
                 'details' => [
                     'Error' => $e->getMessage(),
                     'Solution' => 'Check IAM user policies and permissions',

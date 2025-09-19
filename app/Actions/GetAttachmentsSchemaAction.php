@@ -8,6 +8,9 @@ use Filament\Schemas\Components\Utilities\Set;
 use Livewire\Features\SupportFileUploads\TemporaryUploadedFile;
 use Filament\Forms;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 37a2da6 (.)
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
 use Filament\Forms\Components\TextInput;
@@ -75,6 +78,7 @@ class GetAttachmentsSchemaAction
                 });
         }
 
+<<<<<<< HEAD
 =======
 use function Safe\glob;
 use Filament\Forms\Form;
@@ -149,6 +153,8 @@ class GetAttachmentsSchemaAction
         }
         
 >>>>>>> 0a466ed (.)
+=======
+>>>>>>> 37a2da6 (.)
         return $schema;
     }
 }

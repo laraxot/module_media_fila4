@@ -33,10 +33,14 @@ class SubtitleService
     public Model $model;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     private static null|self $instance = null;
 =======
     private static ?self $instance = null;
 >>>>>>> 0a466ed (.)
+=======
+    private static null|self $instance = null;
+>>>>>>> 37a2da6 (.)
 
     /**
      * ---.
@@ -44,12 +48,17 @@ class SubtitleService
     public static function getInstance(): self
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (!(self::$instance instanceof self)) {
             self::$instance = new self();
 =======
         if (! self::$instance instanceof self) {
             self::$instance = new self;
 >>>>>>> 0a466ed (.)
+=======
+        if (!(self::$instance instanceof self)) {
+            self::$instance = new self();
+>>>>>>> 37a2da6 (.)
         }
 
         return self::$instance;
@@ -102,10 +111,14 @@ class SubtitleService
         foreach ($xmlObject->annotation->type->sentence as $sentence) {
             foreach ($sentence->item as $item) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $txt .= $item->__toString() . ' ';
 =======
                 $txt .= $item->__toString().' ';
 >>>>>>> 0a466ed (.)
+=======
+                $txt .= $item->__toString() . ' ';
+>>>>>>> 37a2da6 (.)
             }
         }
 
@@ -119,11 +132,15 @@ class SubtitleService
     {
         $info = pathinfo($this->file_path);
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 37a2da6 (.)
         if (!isset($info['extension'])) {
             return [];
         }
 
         $func = 'getFrom' . Str::studly($info['extension']);
+<<<<<<< HEAD
 =======
         if (! isset($info['extension'])) {
             return [];
@@ -131,6 +148,8 @@ class SubtitleService
 
         $func = 'getFrom'.Str::studly($info['extension']);
 >>>>>>> 0a466ed (.)
+=======
+>>>>>>> 37a2da6 (.)
 
         Assert::isArray($res = $this->{$func}());
 
@@ -166,6 +185,9 @@ class SubtitleService
                 $attributes = $item->attributes();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 37a2da6 (.)
                 if (!($attributes instanceof SimpleXMLElement)) {
                     throw new Exception('[' . __LINE__ . '][' . class_basename($this) . ']');
                 }
@@ -173,6 +195,7 @@ class SubtitleService
                 // 00:06:35,360
                 $start = ((int) $attributes->start->__toString()) / 1000;
                 $end = ((int) $attributes->end->__toString()) / 1000;
+<<<<<<< HEAD
 =======
                 if (! $attributes instanceof SimpleXMLElement) {
                     throw new Exception('['.__LINE__.']['.class_basename($this).']');
@@ -182,6 +205,8 @@ class SubtitleService
                 $start = (int) $attributes->start->__toString() / 1000;
                 $end = (int) $attributes->end->__toString() / 1000;
 >>>>>>> 0a466ed (.)
+=======
+>>>>>>> 37a2da6 (.)
                 // dddx([$start,$this->secondsToHms($start),$end,$this->secondsToHms($end)]);
                 $tmp = [
                     // 'id' => $i++,
@@ -190,10 +215,14 @@ class SubtitleService
                     'start' => $start,
                     'end' => $end,
 <<<<<<< HEAD
+<<<<<<< HEAD
                     'time' => secondsToHms($start) . ',' . secondsToHms($end),
 =======
                     'time' => secondsToHms($start).','.secondsToHms($end),
 >>>>>>> 0a466ed (.)
+=======
+                    'time' => secondsToHms($start) . ',' . secondsToHms($end),
+>>>>>>> 37a2da6 (.)
                     'text' => $item->__toString(),
                 ];
                 $data[] = $tmp;
@@ -223,10 +252,14 @@ class SubtitleService
             }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             if (!feof($fileHandle)) {
 =======
             if (! feof($fileHandle)) {
 >>>>>>> 0a466ed (.)
+=======
+            if (!feof($fileHandle)) {
+>>>>>>> 37a2da6 (.)
                 exit("Error: unexpected fgets() fail\n");
             }
 
@@ -243,9 +276,13 @@ class SubtitleService
         $header = "WEBVTT\n\n";
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         file_put_contents(public_path($webVttFile), $header . implode('', $lines));
 =======
         file_put_contents(public_path($webVttFile), $header.implode('', $lines));
 >>>>>>> 0a466ed (.)
+=======
+        file_put_contents(public_path($webVttFile), $header . implode('', $lines));
+>>>>>>> 37a2da6 (.)
     }
 }

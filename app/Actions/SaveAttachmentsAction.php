@@ -7,6 +7,9 @@ namespace Modules\Media\Actions;
 use Exception;
 use Filament\Forms;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 37a2da6 (.)
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
 use Filament\Forms\Components\TextInput;
@@ -38,6 +41,7 @@ class SaveAttachmentsAction
     {
         $dataAttachments = [];
 
+<<<<<<< HEAD
 =======
 use Filament\Forms\Set;
 use function Safe\glob;
@@ -75,6 +79,8 @@ class SaveAttachmentsAction
         $dataAttachments = [];
         
 >>>>>>> 0a466ed (.)
+=======
+>>>>>>> 37a2da6 (.)
         foreach ($attachments as $attachment) {
             if (empty($data[$attachment])) {
                 continue;
@@ -82,10 +88,14 @@ class SaveAttachmentsAction
 
             $path = $data[$attachment];
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 37a2da6 (.)
 
             // Metodo compatibile con Laravel 9+ e Flysystem 3.x
             $storage = Storage::disk($disk);
 
+<<<<<<< HEAD
 =======
             
            
@@ -93,6 +103,8 @@ class SaveAttachmentsAction
             $storage = Storage::disk($disk);
             
 >>>>>>> 0a466ed (.)
+=======
+>>>>>>> 37a2da6 (.)
             if (!$storage->exists($path)) {
                 continue;
             }
@@ -101,6 +113,9 @@ class SaveAttachmentsAction
             $fileContent = $storage->get($path);
             $tempPath = tempnam(sys_get_temp_dir(), 'media_');
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 37a2da6 (.)
 
             file_put_contents($tempPath, $fileContent);
 
@@ -110,6 +125,7 @@ class SaveAttachmentsAction
                     $disk,
                 );
 
+<<<<<<< HEAD
 =======
             
             file_put_contents($tempPath, $fileContent);
@@ -120,6 +136,8 @@ class SaveAttachmentsAction
                     ->toMediaCollection($attachment,$disk);
                 
 >>>>>>> 0a466ed (.)
+=======
+>>>>>>> 37a2da6 (.)
                 $dataAttachments[$attachment] = $media->getPathRelativeToRoot();
             } finally {
                 // Cleanup del file temporaneo
@@ -128,9 +146,12 @@ class SaveAttachmentsAction
                 }
             }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
            
 >>>>>>> 0a466ed (.)
+=======
+>>>>>>> 37a2da6 (.)
         }
 
         if (!empty($dataAttachments)) {
@@ -138,6 +159,9 @@ class SaveAttachmentsAction
         }
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 37a2da6 (.)
 
     public function executeOLD(HasMedia $record, array $attachments, array $data, string $disk = 'attachments'): void
     {
@@ -165,6 +189,7 @@ class SaveAttachmentsAction
             $data_attachments[$attachment] = $media->getPathRelativeToRoot();
         }
         $record->update($data_attachments);
+<<<<<<< HEAD
 =======
     /**
      *
@@ -196,5 +221,7 @@ class SaveAttachmentsAction
         }
         $record->update($data_attachments); 
 >>>>>>> 0a466ed (.)
+=======
+>>>>>>> 37a2da6 (.)
     }
 }

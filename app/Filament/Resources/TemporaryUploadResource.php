@@ -5,10 +5,15 @@ declare(strict_types=1);
 namespace Modules\Media\Filament\Resources;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Filament\Schemas\Components\Component;
 use Override;
 =======
 >>>>>>> 0a466ed (.)
+=======
+use Filament\Schemas\Components\Component;
+use Override;
+>>>>>>> 37a2da6 (.)
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\DateTimePicker;
@@ -27,12 +32,16 @@ use Modules\Xot\Filament\Resources\XotBaseResource;
 class TemporaryUploadResource extends XotBaseResource
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 37a2da6 (.)
     protected static null|string $model = TemporaryUpload::class;
 
     /**
      * @return array<string, Component>
      */
     #[Override]
+<<<<<<< HEAD
 =======
     protected static ?string $model = TemporaryUpload::class;
 
@@ -40,6 +49,8 @@ class TemporaryUploadResource extends XotBaseResource
      * @return array<string, \Filament\Schemas\Components\Component>
      */
 >>>>>>> 0a466ed (.)
+=======
+>>>>>>> 37a2da6 (.)
     public static function getFormSchema(): array
     {
         return [
@@ -48,6 +59,7 @@ class TemporaryUploadResource extends XotBaseResource
                 ->preserveFilenames()
                 ->acceptedFileTypes(['image/*', 'application/pdf', 'application/msword'])
                 ->maxSize(10240),
+<<<<<<< HEAD
 <<<<<<< HEAD
             'folder' => TextInput::make('folder')->required()->maxLength(255),
             'expires_at' => DateTimePicker::make('expires_at')->required(),
@@ -58,6 +70,10 @@ class TemporaryUploadResource extends XotBaseResource
             'expires_at' => DateTimePicker::make('expires_at')
                 ->required(),
 >>>>>>> 0a466ed (.)
+=======
+            'folder' => TextInput::make('folder')->required()->maxLength(255),
+            'expires_at' => DateTimePicker::make('expires_at')->required(),
+>>>>>>> 37a2da6 (.)
         ];
     }
 
@@ -65,16 +81,22 @@ class TemporaryUploadResource extends XotBaseResource
      * @psalm-return array<never, never>
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 37a2da6 (.)
     #[Override]
     public static function getRelations(): array
     {
         return [];
+<<<<<<< HEAD
 =======
     public static function getRelations(): array
     {
         return [
         ];
 >>>>>>> 0a466ed (.)
+=======
+>>>>>>> 37a2da6 (.)
     }
 
     /**
@@ -83,9 +105,13 @@ class TemporaryUploadResource extends XotBaseResource
      * @psalm-return array{index: PageRegistration, create: PageRegistration, edit: PageRegistration}
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     #[Override]
 =======
 >>>>>>> 0a466ed (.)
+=======
+    #[Override]
+>>>>>>> 37a2da6 (.)
     public static function getPages(): array
     {
         return [

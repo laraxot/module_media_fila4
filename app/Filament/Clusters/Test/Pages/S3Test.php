@@ -5,6 +5,9 @@ declare(strict_types=1);
 namespace Modules\Media\Filament\Clusters\Test\Pages;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 37a2da6 (.)
 use Filament\Schemas\Schema;
 use Filament\Schemas\Components\Component;
 use Override;
@@ -30,6 +33,7 @@ use function Safe\file_put_contents;
 use function Safe\json_decode;
 use function Safe\json_encode;
 use function Safe\unlink;
+<<<<<<< HEAD
 =======
 use Filament\Schemas\Components\Grid;
 use Exception;
@@ -54,24 +58,34 @@ use Modules\Media\Filament\Clusters\Test;
 use Modules\Xot\Filament\Pages\XotBasePage;
 use Modules\Media\Actions\CloudFront\GetCloudFrontSignedUrlAction;
 >>>>>>> 0a466ed (.)
+=======
+>>>>>>> 37a2da6 (.)
 
 /**
  * S3Test Page for AWS S3 testing and diagnostics.
  *
 <<<<<<< HEAD
+<<<<<<< HEAD
  * @property Schema $form
 =======
  * @property \Filament\Schemas\Schema $form
 >>>>>>> 0a466ed (.)
+=======
+ * @property Schema $form
+>>>>>>> 37a2da6 (.)
  * @property array<string, mixed> $debugResults
  */
 class S3Test extends XotBasePage
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
     protected static null|string $cluster = Test::class;
 =======
     protected static ?string $cluster = Test::class;
 >>>>>>> 0a466ed (.)
+=======
+    protected static null|string $cluster = Test::class;
+>>>>>>> 37a2da6 (.)
 
     /** @var array<string, mixed> */
     public array $debugResults = [];
@@ -106,6 +120,9 @@ class S3Test extends XotBasePage
      * @return array<Action>
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 37a2da6 (.)
     #[Override]
     protected function getFormActions(): array
     {
@@ -119,6 +136,7 @@ class S3Test extends XotBasePage
             Action::make('debugConfig')->color('gray')->action('debugConfig'),
             Action::make('clearResults')->color('warning')->action('clearResults'),
             Action::make('test01')->submit('test01'),
+<<<<<<< HEAD
 =======
     protected function getFormActions(): array
     {
@@ -161,6 +179,8 @@ class S3Test extends XotBasePage
                 
                 ->submit('test01'),
 >>>>>>> 0a466ed (.)
+=======
+>>>>>>> 37a2da6 (.)
         ];
     }
 
@@ -168,6 +188,9 @@ class S3Test extends XotBasePage
      * Get the form schema for this page.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 37a2da6 (.)
      * @return array<int, Component>
      */
     protected function getFormSchema(): array
@@ -192,6 +215,7 @@ class S3Test extends XotBasePage
                     ->disabled()
                     ->columnSpan(1),
             ]),
+<<<<<<< HEAD
 =======
      * @return array<int, \Filament\Schemas\Components\Component>
      */
@@ -220,6 +244,8 @@ class S3Test extends XotBasePage
                         ->columnSpan(1),
                 ]),
 >>>>>>> 0a466ed (.)
+=======
+>>>>>>> 37a2da6 (.)
         ];
     }
 
@@ -331,19 +357,26 @@ class S3Test extends XotBasePage
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 0a466ed (.)
+=======
+>>>>>>> 37a2da6 (.)
     public function test01(): void
     {
         $data = $this->form->getState();
         $filePath = $data['attachment'] ?? null;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (!$filePath) {
 =======
         if (! $filePath) {
 >>>>>>> 0a466ed (.)
+=======
+        if (!$filePath) {
+>>>>>>> 37a2da6 (.)
             Notification::make()
                 ->warning()
                 ->title(__('media::s3test.notifications.no_attachment'))
@@ -357,6 +390,9 @@ class S3Test extends XotBasePage
         $signedUrl = app(GetCloudFrontSignedUrlAction::class)->execute((string) $filePath, 60);
         dddx([
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 37a2da6 (.)
             'signedurl' => $signedUrl,
             'filePath' => $filePath,
             'url2' => Storage::disk('s3')->url((string) $filePath),
@@ -364,6 +400,7 @@ class S3Test extends XotBasePage
         ]);
         $this->debugResults = [];
         $this->updateDebugOutput();
+<<<<<<< HEAD
 =======
             'signedurl'=>$signedUrl,
             'filePath'=>$filePath,
@@ -373,6 +410,8 @@ class S3Test extends XotBasePage
         $this->debugResults = [];
           $this->updateDebugOutput();
 >>>>>>> 0a466ed (.)
+=======
+>>>>>>> 37a2da6 (.)
     }
 
     /**
@@ -387,15 +426,22 @@ class S3Test extends XotBasePage
             'status' => 'info',
             'data' => [
 <<<<<<< HEAD
+<<<<<<< HEAD
                 'AWS_ACCESS_KEY_ID' => substr((string) config('filesystems.disks.s3.key', ''), 0, 8) . '...',
 =======
                 'AWS_ACCESS_KEY_ID' => substr((string) config('filesystems.disks.s3.key', ''), 0, 8).'...',
 >>>>>>> 0a466ed (.)
+=======
+                'AWS_ACCESS_KEY_ID' => substr((string) config('filesystems.disks.s3.key', ''), 0, 8) . '...',
+>>>>>>> 37a2da6 (.)
                 'AWS_SECRET_ACCESS_KEY' => config('filesystems.disks.s3.secret') ? '✅ Present' : '❌ Missing',
                 'AWS_DEFAULT_REGION' => config('filesystems.disks.s3.region'),
                 'AWS_BUCKET' => config('filesystems.disks.s3.bucket'),
                 'AWS_USE_PATH_STYLE_ENDPOINT' => config('filesystems.disks.s3.use_path_style_endpoint', 'false'),
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 37a2da6 (.)
                 'CLOUDFRONT_BASE_URL' => config(
                     'services.cloudfront.base_url',
                     env('CLOUDFRONT_RESOURCE_KEY_BASE_URL'),
@@ -404,11 +450,14 @@ class S3Test extends XotBasePage
                 'CLOUDFRONT_PRIVATE_KEY' => config('services.cloudfront.private_key') || env('CLOUDFRONT_PRIVATE_KEY')
                     ? '✅ Present'
                     : '❌ Missing',
+<<<<<<< HEAD
 =======
                 'CLOUDFRONT_BASE_URL' => config('services.cloudfront.base_url', env('CLOUDFRONT_RESOURCE_KEY_BASE_URL')),
                 'CLOUDFRONT_KEYPAIR_ID' => config('services.cloudfront.key_pair_id', env('CLOUDFRONT_KEYPAIR_ID')),
                 'CLOUDFRONT_PRIVATE_KEY' => config('services.cloudfront.private_key') || env('CLOUDFRONT_PRIVATE_KEY') ? '✅ Present' : '❌ Missing',
 >>>>>>> 0a466ed (.)
+=======
+>>>>>>> 37a2da6 (.)
             ],
         ];
     }
@@ -536,10 +585,14 @@ class S3Test extends XotBasePage
 
             $bucket = config('filesystems.disks.s3.bucket');
 <<<<<<< HEAD
+<<<<<<< HEAD
             $testKey = self::PERMISSION_TEST_PREFIX . time() . '.txt';
 =======
             $testKey = self::PERMISSION_TEST_PREFIX.time().'.txt';
 >>>>>>> 0a466ed (.)
+=======
+            $testKey = self::PERMISSION_TEST_PREFIX . time() . '.txt';
+>>>>>>> 37a2da6 (.)
 
             // Test ListBucket
             try {
@@ -547,10 +600,14 @@ class S3Test extends XotBasePage
                 $results['data']['ListBucket'] = '✅ OK';
             } catch (AwsException $e) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $results['data']['ListBucket'] = '❌ ' . ($e->getAwsErrorCode() ?? 'UnknownError');
 =======
                 $results['data']['ListBucket'] = '❌ '.($e->getAwsErrorCode() ?? 'UnknownError');
 >>>>>>> 0a466ed (.)
+=======
+                $results['data']['ListBucket'] = '❌ ' . ($e->getAwsErrorCode() ?? 'UnknownError');
+>>>>>>> 37a2da6 (.)
             }
 
             // Test PutObject
@@ -569,10 +626,14 @@ class S3Test extends XotBasePage
                     $results['data']['GetObject'] = '✅ OK';
                 } catch (AwsException $e) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                     $results['data']['GetObject'] = '❌ ' . ($e->getAwsErrorCode() ?? 'UnknownError');
 =======
                     $results['data']['GetObject'] = '❌ '.($e->getAwsErrorCode() ?? 'UnknownError');
 >>>>>>> 0a466ed (.)
+=======
+                    $results['data']['GetObject'] = '❌ ' . ($e->getAwsErrorCode() ?? 'UnknownError');
+>>>>>>> 37a2da6 (.)
                 }
 
                 // Test DeleteObject (cleanup)
@@ -581,16 +642,22 @@ class S3Test extends XotBasePage
                     $results['data']['DeleteObject'] = '✅ OK';
                 } catch (AwsException $e) {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 37a2da6 (.)
                     $results['data']['DeleteObject'] = '❌ ' . ($e->getAwsErrorCode() ?? 'UnknownError');
                 }
             } catch (AwsException $e) {
                 $results['data']['PutObject'] = '❌ ' . ($e->getAwsErrorCode() ?? 'UnknownError');
+<<<<<<< HEAD
 =======
                     $results['data']['DeleteObject'] = '❌ '.($e->getAwsErrorCode() ?? 'UnknownError');
                 }
             } catch (AwsException $e) {
                 $results['data']['PutObject'] = '❌ '.($e->getAwsErrorCode() ?? 'UnknownError');
 >>>>>>> 0a466ed (.)
+=======
+>>>>>>> 37a2da6 (.)
                 $results['data']['GetObject'] = 'Skipped (PutObject failed)';
                 $results['data']['DeleteObject'] = 'Skipped (PutObject failed)';
             }
@@ -667,10 +734,14 @@ class S3Test extends XotBasePage
             $privateKey = config('services.cloudfront.private_key', env('CLOUDFRONT_PRIVATE_KEY'));
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             if (!$baseUrl || !$keyPairId || !$privateKey) {
 =======
             if (! $baseUrl || ! $keyPairId || ! $privateKey) {
 >>>>>>> 0a466ed (.)
+=======
+            if (!$baseUrl || !$keyPairId || !$privateKey) {
+>>>>>>> 37a2da6 (.)
                 return [
                     'title' => '☁️ CloudFront',
                     'status' => 'error',
@@ -678,6 +749,9 @@ class S3Test extends XotBasePage
                         'Configuration' => '❌ Incomplete',
                         'Missing' => collect([
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 37a2da6 (.)
                             'Base URL' => !$baseUrl,
                             'Key Pair ID' => !$keyPairId,
                             'Private Key' => !$privateKey,
@@ -685,12 +759,15 @@ class S3Test extends XotBasePage
                             ->filter()
                             ->keys()
                             ->implode(', '),
+<<<<<<< HEAD
 =======
                             'Base URL' => ! $baseUrl,
                             'Key Pair ID' => ! $keyPairId,
                             'Private Key' => ! $privateKey,
                         ])->filter()->keys()->implode(', '),
 >>>>>>> 0a466ed (.)
+=======
+>>>>>>> 37a2da6 (.)
                     ],
                 ];
             }
@@ -707,10 +784,14 @@ class S3Test extends XotBasePage
                     'Key Pair ID' => $keyPairId,
                     'Signed URL Test' => '✅ Success',
 <<<<<<< HEAD
+<<<<<<< HEAD
                     'Sample URL' => substr((string) $testUrl, 0, self::URL_PREVIEW_LENGTH) . '...',
 =======
                     'Sample URL' => substr((string) $testUrl, 0, self::URL_PREVIEW_LENGTH).'...',
 >>>>>>> 0a466ed (.)
+=======
+                    'Sample URL' => substr((string) $testUrl, 0, self::URL_PREVIEW_LENGTH) . '...',
+>>>>>>> 37a2da6 (.)
                 ],
             ];
         } catch (Exception $e) {
@@ -728,10 +809,14 @@ class S3Test extends XotBasePage
      * Get solution for AWS error.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     private function getSolutionForError(null|string $errorCode): string
 =======
     private function getSolutionForError(?string $errorCode): string
 >>>>>>> 0a466ed (.)
+=======
+    private function getSolutionForError(null|string $errorCode): string
+>>>>>>> 37a2da6 (.)
     {
         if (null === $errorCode) {
             return 'Unknown error - check AWS credentials and configuration';
@@ -746,10 +831,14 @@ class S3Test extends XotBasePage
         ];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         return $solutions[$errorCode] ?? ('Check AWS documentation for error: ' . $errorCode);
 =======
         return $solutions[$errorCode] ?? 'Check AWS documentation for error: '.$errorCode;
 >>>>>>> 0a466ed (.)
+=======
+        return $solutions[$errorCode] ?? ('Check AWS documentation for error: ' . $errorCode);
+>>>>>>> 37a2da6 (.)
     }
 
     /**
@@ -764,10 +853,14 @@ class S3Test extends XotBasePage
         $output = [];
         foreach ($this->debugResults as $category => $result) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             if (!is_array($result) || !isset($result['title'], $result['status'], $result['data'])) {
 =======
             if (! is_array($result) || ! isset($result['title'], $result['status'], $result['data'])) {
 >>>>>>> 0a466ed (.)
+=======
+            if (!is_array($result) || !isset($result['title'], $result['status'], $result['data'])) {
+>>>>>>> 37a2da6 (.)
                 continue;
             }
 
@@ -784,10 +877,14 @@ class S3Test extends XotBasePage
                     $keyStr = (string) $key;
                     if (is_array($value)) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                         $output[] = "{$keyStr}: " . json_encode($value, JSON_PRETTY_PRINT);
 =======
                         $output[] = "{$keyStr}: ".json_encode($value, JSON_PRETTY_PRINT);
 >>>>>>> 0a466ed (.)
+=======
+                        $output[] = "{$keyStr}: " . json_encode($value, JSON_PRETTY_PRINT);
+>>>>>>> 37a2da6 (.)
                     } else {
                         $valueStr = (string) $value;
                         $output[] = "{$keyStr}: {$valueStr}";
@@ -813,10 +910,14 @@ class S3Test extends XotBasePage
             $filePath = $data['attachment'] ?? null;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             if (!$filePath) {
 =======
             if (! $filePath) {
 >>>>>>> 0a466ed (.)
+=======
+            if (!$filePath) {
+>>>>>>> 37a2da6 (.)
                 Notification::make()
                     ->warning()
                     ->title(__('media::s3test.notifications.no_attachment'))
@@ -866,12 +967,17 @@ class S3Test extends XotBasePage
         try {
             $testData = 'This is a test file content for S3 upload/download test.';
 <<<<<<< HEAD
+<<<<<<< HEAD
             $testFileName = 'test-file-' . time() . '.txt';
             $localTestPath = sys_get_temp_dir() . '/' . $testFileName;
 =======
             $testFileName = 'test-file-'.time().'.txt';
             $localTestPath = sys_get_temp_dir().'/'.$testFileName;
 >>>>>>> 0a466ed (.)
+=======
+            $testFileName = 'test-file-' . time() . '.txt';
+            $localTestPath = sys_get_temp_dir() . '/' . $testFileName;
+>>>>>>> 37a2da6 (.)
 
             // Create test file
             file_put_contents($localTestPath, $testData);
@@ -880,10 +986,14 @@ class S3Test extends XotBasePage
             $uploadResult = Storage::disk('s3')->put($testFileName, $testData);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             if (!$uploadResult) {
 =======
             if (! $uploadResult) {
 >>>>>>> 0a466ed (.)
+=======
+            if (!$uploadResult) {
+>>>>>>> 37a2da6 (.)
                 return [
                     'status' => 'error',
                     'message' => 'Failed to upload test file to S3',
@@ -930,10 +1040,14 @@ class S3Test extends XotBasePage
             return [
                 'status' => 'error',
 <<<<<<< HEAD
+<<<<<<< HEAD
                 'message' => 'File operations test failed: ' . $e->getMessage(),
 =======
                 'message' => 'File operations test failed: '.$e->getMessage(),
 >>>>>>> 0a466ed (.)
+=======
+                'message' => 'File operations test failed: ' . $e->getMessage(),
+>>>>>>> 37a2da6 (.)
                 'details' => [
                     'error_class' => get_class($e),
                     'error_file' => $e->getFile(),
@@ -961,10 +1075,14 @@ class S3Test extends XotBasePage
         try {
             // Test basic S3 operation
 <<<<<<< HEAD
+<<<<<<< HEAD
             $filename = self::TEST_FILE_PREFIX . time() . '.txt';
 =======
             $filename = self::TEST_FILE_PREFIX.time().'.txt';
 >>>>>>> 0a466ed (.)
+=======
+            $filename = self::TEST_FILE_PREFIX . time() . '.txt';
+>>>>>>> 37a2da6 (.)
             Storage::disk('s3')->put($filename, 'Hello World from Filament Test');
 
             // Test CloudFront signed URL
@@ -985,12 +1103,16 @@ class S3Test extends XotBasePage
                     'temporary_url' => $temporaryUrl,
                 ],
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 37a2da6 (.)
                 'uploaded_file' => $filePath
                     ? [
                         'path' => (string) $filePath,
                         'cloudfront_url' => app(GetCloudFrontSignedUrlAction::class)->execute((string) $filePath, 30),
                         'temporary_url' => $s3Disk->temporaryUrl((string) $filePath, now()->addMinutes(30)),
                     ] : null,
+<<<<<<< HEAD
 =======
                 'uploaded_file' => $filePath ? [
                     'path' => (string) $filePath,
@@ -998,6 +1120,8 @@ class S3Test extends XotBasePage
                     'temporary_url' => $s3Disk->temporaryUrl((string) $filePath, now()->addMinutes(30)),
                 ] : null,
 >>>>>>> 0a466ed (.)
+=======
+>>>>>>> 37a2da6 (.)
             ];
 
             // Clean up test file

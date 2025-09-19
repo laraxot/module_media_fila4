@@ -6,6 +6,9 @@ namespace Modules\Media\Filament\Tables\Columns;
 
 use Exception;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 37a2da6 (.)
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
@@ -41,6 +44,7 @@ class CloudFrontIconMediaColumn extends IconColumn
             ->openUrlInNewTab();
     }
 }
+<<<<<<< HEAD
 =======
 use Illuminate\Support\Arr;
 use Spatie\ModelStates\State;
@@ -88,3 +92,5 @@ class CloudFrontIconMediaColumn extends IconColumn
 
 }
 >>>>>>> 0a466ed (.)
+=======
+>>>>>>> 37a2da6 (.)
