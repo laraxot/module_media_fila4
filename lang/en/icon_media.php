@@ -1,17 +1,8 @@
 <?php
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 declare(strict_types=1);
 
 
-=======
->>>>>>> 0a466ed (.)
-=======
-declare(strict_types=1);
-
-
->>>>>>> 37a2da6 (.)
 return [
     'fields' => [
         'change-state' => [

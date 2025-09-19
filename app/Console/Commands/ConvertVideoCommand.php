@@ -21,46 +21,18 @@ class ConvertVideoCommand extends Command
     {
         Assert::string($disk = $this->argument('disk'));
         Assert::string($file = $this->argument('file'));
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 37a2da6 (.)
         $this->info('disk: ' . print_r($disk, true));
         $this->info('file: ' . print_r($file, true));
 
         if (!Storage::disk($disk)->exists($file)) {
             $this->error('[' . $disk . '] file [' . $file . '] Not Exists');
-<<<<<<< HEAD
-=======
-        $this->info('disk: '.print_r($disk, true));
-        $this->info('file: '.print_r($file, true));
-
-        if (! Storage::disk($disk)->exists($file)) {
-            $this->error('['.$disk.'] file ['.$file.'] Not Exists');
->>>>>>> 0a466ed (.)
-=======
->>>>>>> 37a2da6 (.)
 
             return '';
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         $format = new WebM();
         $extension = mb_strtolower(class_basename($format));
         $file_new = Str::of($file)->replaceLast('.mp4', '.' . $extension)->toString();
-=======
-        $format = new WebM;
-        $extension = mb_strtolower(class_basename($format));
-        $file_new = Str::of($file)
-            ->replaceLast('.mp4', '.'.$extension)
-            ->toString();
->>>>>>> 0a466ed (.)
-=======
-        $format = new WebM();
-        $extension = mb_strtolower(class_basename($format));
-        $file_new = Str::of($file)->replaceLast('.mp4', '.' . $extension)->toString();
->>>>>>> 37a2da6 (.)
 
         $media = FFMpeg::fromDisk($disk)->open($file);
         $export = $media->export();
@@ -70,20 +42,9 @@ class ConvertVideoCommand extends Command
             $this->info("{$remaining} seconds left at rate: {$rate}");
         });
         // @phpstan-ignore method.nonObject, method.nonObject
-<<<<<<< HEAD
-<<<<<<< HEAD
         $export
             ->toDisk($disk)
             // @phpstan-ignore method.nonObject
-=======
-        $export->toDisk($disk)
-        // @phpstan-ignore method.nonObject
->>>>>>> 0a466ed (.)
-=======
-        $export
-            ->toDisk($disk)
-            // @phpstan-ignore method.nonObject
->>>>>>> 37a2da6 (.)
             ->inFormat($format)
             // @phpstan-ignore method.nonObject
             ->save($file_new);
