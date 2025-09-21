@@ -14,13 +14,39 @@ use Modules\Xot\Database\Migrations\XotBaseMigration;
 /**
  * Class CreateImagesTable.
  */
+<<<<<<< HEAD
 return new class extends XotBaseMigration {
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+return new class extends XotBaseMigration {
+=======
+return new class extends XotBaseMigration
+{
+>>>>>>> a12f125f4a (.)
+=======
+return new class extends XotBaseMigration {
+>>>>>>> b93ef594b4 (.)
+=======
+return new class extends XotBaseMigration
+{
+>>>>>>> origin/develop
+>>>>>>> e9b0959 (.)
     /**
      * i don't write table name, it take from Model, model is singular of this class wit.
      */
     public function up(): void
     {
         // -- CREATE --
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> b93ef594b4 (.)
+>>>>>>> e9b0959 (.)
         $this->tableCreate(function (Blueprint $table): void {
             $table->id();
             $table->foreignIdFor(Media::class, 'media_id');
@@ -38,6 +64,10 @@ return new class extends XotBaseMigration {
             $table->decimal('rate', 7, 3)->nullable();
             $table->decimal('execution_time', 7, 3)->nullable();
         });
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> e9b0959 (.)
         // -- UPDATE --
         $this->tableUpdate(function (Blueprint $table): void {
             if (!$this->hasColumn('format')) {
@@ -46,5 +76,58 @@ return new class extends XotBaseMigration {
 
             $this->updateTimestamps($table, true);
         });
+<<<<<<< HEAD
+=======
+=======
+=======
+>>>>>>> origin/develop
+        $this->tableCreate(
+            function (Blueprint $table): void {
+                $table->id();
+                $table->foreignIdFor(Media::class, 'media_id');
+                $table->string('format')->nullable();
+                $table->string('codec_video')->nullable();
+                $table->string('codec_audio')->nullable();
+                $table->string('preset')->nullable();
+                $table->string('bitrate')->nullable();
+                $table->integer('width')->nullable();
+                $table->integer('height')->nullable();
+                $table->integer('threads')->nullable();
+                $table->integer('speed')->nullable();
+                $table->decimal('percentage', 7, 3)->nullable();
+                $table->decimal('remaining', 7, 3)->nullable();
+                $table->decimal('rate', 7, 3)->nullable();
+                $table->decimal('execution_time', 7, 3)->nullable();
+            }
+        );
+<<<<<<< HEAD
+=======
+>>>>>>> b93ef594b4 (.)
+        // -- UPDATE --
+        $this->tableUpdate(function (Blueprint $table): void {
+            if (!$this->hasColumn('format')) {
+                $table->string('format')->nullable();
+            }
+<<<<<<< HEAD
+        );
+>>>>>>> a12f125f4a (.)
+=======
+
+            $this->updateTimestamps($table, true);
+        });
+>>>>>>> b93ef594b4 (.)
+=======
+        // -- UPDATE --
+        $this->tableUpdate(
+            function (Blueprint $table): void {
+                if (! $this->hasColumn('format')) {
+                    $table->string('format')->nullable();
+                }
+
+                $this->updateTimestamps($table, true);
+            }
+        );
+>>>>>>> origin/develop
+>>>>>>> e9b0959 (.)
     }
 };
