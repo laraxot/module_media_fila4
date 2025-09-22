@@ -4,7 +4,11 @@ declare(strict_types=1);
 
 namespace Modules\Media\Actions\Image;
 
+<<<<<<< HEAD
 use Intervention\Image\Drivers\Gd\Driver as GdDriver;
+=======
+use Intervention\Image\ImageManager as InterventionImageManager;
+>>>>>>> c14635e (.)
 
 class Merge
 {
@@ -18,6 +22,18 @@ class Merge
      */
     public function handle(string $path1, string $path2, string $outputPath): bool
     {
+<<<<<<< HEAD
+=======
+        // Compatibile con Intervention Image v2 (Laravel 10):
+        $manager = new InterventionImageManager(['driver' => 'gd']);
+
+        // Carica le immagini
+        $image1 = $manager->make($path1);
+        $image2 = $manager->make($path2);
+
+        // Inserisce image2 sopra image1 (centrato)
+        $image1->insert($image2, 'center');
+>>>>>>> c14635e (.)
 
         // Salva il risultato
         $image1->save($outputPath);
