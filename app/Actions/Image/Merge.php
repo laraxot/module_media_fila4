@@ -6,6 +6,7 @@ namespace Modules\Media\Actions\Image;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Intervention\Image\Drivers\Gd\Driver as GdDriver;
 =======
 use Intervention\Image\ImageManager as InterventionImageManager;
@@ -13,6 +14,9 @@ use Intervention\Image\ImageManager as InterventionImageManager;
 =======
 use Intervention\Image\ImageManager as InterventionImageManager;
 >>>>>>> 9348522 (.)
+=======
+use Intervention\Image\Drivers\Gd\Driver as GdDriver;
+>>>>>>> 5a393f1 (.)
 
 class Merge
 {
@@ -26,6 +30,7 @@ class Merge
      */
     public function handle(string $path1, string $path2, string $outputPath): bool
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -44,6 +49,8 @@ class Merge
 >>>>>>> c14635e (.)
 =======
 >>>>>>> 9348522 (.)
+=======
+>>>>>>> 5a393f1 (.)
 
         // Salva il risultato
         $image1->save($outputPath);
