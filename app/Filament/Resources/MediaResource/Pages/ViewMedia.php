@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 namespace Modules\Media\Filament\Resources\MediaResource\Pages;
 
+use Filament\Schemas\Components\Actions;
+use Filament\Schemas\Components\Section;
 use Filament\Schemas\Components\Component;
 use Override;
-use Filament\Schemas\Components\Flex;
-use Filament\Schemas\Components\Section;
-use Filament\Schemas\Components\Actions;
+use Filament\Forms\Components\Flex;
 use Filament\Actions\Action;
 use Filament\Actions\DeleteAction;
 use Filament\Infolists\Components\ImageEntry;

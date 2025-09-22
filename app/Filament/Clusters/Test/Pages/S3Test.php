@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace Modules\Media\Filament\Clusters\Test\Pages;
 
-use Filament\Schemas\Schema;
-use Filament\Schemas\Components\Component;
-use Override;
 use Filament\Schemas\Components\Grid;
+use Filament\Schemas\Components\Component;
+use Filament\Forms\Form;
+use Override;
 use Exception;
 use Illuminate\Filesystem\FilesystemAdapter;
 use Aws\Exception\AwsException;
@@ -33,7 +33,7 @@ use function Safe\unlink;
 /**
  * S3Test Page for AWS S3 testing and diagnostics.
  *
- * @property Schema $form
+ * @property Form $form
  * @property array<string, mixed> $debugResults
  */
 class S3Test extends XotBasePage
