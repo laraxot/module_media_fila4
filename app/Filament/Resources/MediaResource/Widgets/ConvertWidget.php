@@ -4,14 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Media\Filament\Resources\MediaResource\Widgets;
 
-<<<<<<< HEAD
 use FFMpeg\Format\Video\WebM;
-=======
-<<<<<<< HEAD
-use FFMpeg\Format\Video\WebM;
-=======
->>>>>>> origin/develop
->>>>>>> e9b0959 (.)
 use Filament\Notifications\Notification;
 use Filament\Widgets\Widget;
 use Illuminate\Support\Facades\Storage;
@@ -36,15 +29,7 @@ class ConvertWidget extends Widget
     /** @var float */
     public $rate;
 
-<<<<<<< HEAD
     protected string $view = 'media::filament.widgets.convert';
-=======
-<<<<<<< HEAD
-    protected string $view = 'media::filament.widgets.convert';
-=======
-    protected static string $view = 'media::filament.widgets.convert';
->>>>>>> origin/develop
->>>>>>> e9b0959 (.)
 
     protected static string $resource = MediaResource::class;
 
@@ -58,36 +43,9 @@ class ConvertWidget extends Widget
 
         // dddx($file_mp4);
 
-<<<<<<< HEAD
         $format = new WebM();
         $extension = mb_strtolower(class_basename($format));
         $file_new = Str::of($file_mp4)->replaceLast('.mp4', '.' . $extension)->toString();
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        $format = new WebM();
-        $extension = mb_strtolower(class_basename($format));
-        $file_new = Str::of($file_mp4)->replaceLast('.mp4', '.' . $extension)->toString();
-=======
-        $format = new WebM;
-=======
-        $format = new \FFMpeg\Format\Video\WebM;
->>>>>>> origin/develop
-        $extension = mb_strtolower(class_basename($format));
-        $file_new = Str::of($file_mp4)
-            ->replaceLast('.mp4', '.'.$extension)
-            ->toString();
-<<<<<<< HEAD
->>>>>>> a12f125f4a (.)
-=======
-        $format = new WebM();
-        $extension = mb_strtolower(class_basename($format));
-        $file_new = Str::of($file_mp4)->replaceLast('.mp4', '.' . $extension)->toString();
->>>>>>> b93ef594b4 (.)
-=======
->>>>>>> origin/develop
->>>>>>> e9b0959 (.)
 
         /*
          * -preset ultrafast.
@@ -125,26 +83,8 @@ class ConvertWidget extends Widget
             // Pause for 1 second between numbers...
             // sleep(1);
 
-<<<<<<< HEAD
             $this->start =
                 "{$this->percentage}% transcoded" . PHP_EOL . "{$this->remaining} seconds left at rate: {$this->rate}";
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-            $this->start =
-                "{$this->percentage}% transcoded" . PHP_EOL . "{$this->remaining} seconds left at rate: {$this->rate}";
-=======
-            $this->start = "{$this->percentage}% transcoded".PHP_EOL."{$this->remaining} seconds left at rate: {$this->rate}";
->>>>>>> a12f125f4a (.)
-=======
-            $this->start =
-                "{$this->percentage}% transcoded" . PHP_EOL . "{$this->remaining} seconds left at rate: {$this->rate}";
->>>>>>> b93ef594b4 (.)
-=======
-            $this->start = "{$this->percentage}% transcoded".PHP_EOL."{$this->remaining} seconds left at rate: {$this->rate}";
->>>>>>> origin/develop
->>>>>>> e9b0959 (.)
 
             // Decrement the counter...
             // $this->start = $this->start - 1;
