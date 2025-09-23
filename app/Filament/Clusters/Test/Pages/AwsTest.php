@@ -4,6 +4,11 @@ declare(strict_types=1);
 
 namespace Modules\Media\Filament\Clusters\Test\Pages;
 
+<<<<<<< HEAD
+=======
+use Override;
+use Filament\Schemas\Schema;
+>>>>>>> 1999eb3 (.)
 use Filament\Schemas\Components\Tabs;
 use Filament\Schemas\Components\Tabs\Tab;
 use Filament\Schemas\Components\Actions;
@@ -41,6 +46,21 @@ class AwsTest extends XotBasePage
         'full' => 'Full Diagnostic',
     ];
 
+<<<<<<< HEAD
+=======
+    #[Override]
+    public function form(Schema $schema): Schema
+    {
+        return $schema->components([
+            Tabs::make('Tests')->tabs([
+                Tab::make('S3')->schema($this->getS3TestSchema()),
+                Tab::make('CloudFront')->schema($this->getCloudFrontTestSchema()),
+                Tab::make('IAM')->schema($this->getIamTestSchema()),
+                Tab::make('Diagnostics')->schema($this->getDiagnosticsSchema()),
+            ]),
+        ]);
+    }
+>>>>>>> 1999eb3 (.)
 
     protected function getS3TestSchema(): array
     {
@@ -61,11 +81,17 @@ class AwsTest extends XotBasePage
                             ->color('success')
                             ->action('testS3FileOperations'),
                     ])->fullWidth(),
+<<<<<<< HEAD
                     Textarea::make('s3_results')
                         ->label('S3 Test Results')
                         ->rows(10)
                         ->disabled()
                         ->default(fn() => json_encode($this->testResults['s3'] ?? [], JSON_PRETTY_PRINT)),
+=======
+                    ViewField::make('s3_results')
+                        ->view('ui::filament.components.test-results')
+                        ->viewData(fn() => ['results' => $this->testResults['s3'] ?? null]),
+>>>>>>> 1999eb3 (.)
                 ]),
         ];
     }
