@@ -4,7 +4,10 @@ declare(strict_types=1);
 
 namespace Modules\Media\Actions\Image;
 
+<<<<<<< HEAD
 use Intervention\Image\ImageManager as InterventionImageManager;
+=======
+>>>>>>> 9359fe7 (.)
 use Intervention\Image\Drivers\Gd\Driver as GdDriver;
 
 class Merge
@@ -19,6 +22,7 @@ class Merge
      */
     public function handle(string $path1, string $path2, string $outputPath): bool
     {
+<<<<<<< HEAD
         // Intervention Image v3: il costruttore richiede un DriverInterface
         $manager = new InterventionImageManager(new GdDriver());
 
@@ -28,6 +32,8 @@ class Merge
 
         // Inserisce image2 sopra image1 (centrato) - v3 usa place()
         $image1->place($image2, 'center');
+=======
+>>>>>>> 9359fe7 (.)
 
         // Salva il risultato
         $image1->save($outputPath);
