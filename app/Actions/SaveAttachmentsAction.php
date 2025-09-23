@@ -9,7 +9,11 @@ use Filament\Forms;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
 use Filament\Forms\Components\TextInput;
+<<<<<<< HEAD
 use Filament\Forms\Form;
+=======
+use Filament\Schemas\Schema;
+>>>>>>> e0ce06e (.)
 use Filament\Forms\Set;
 use Filament\Pages\SubNavigationPosition;
 use Filament\Resources\Resource as FilamentResource;
