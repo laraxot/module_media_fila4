@@ -6,15 +6,7 @@ namespace Modules\Media\Filament\Clusters\Test\Pages;
 
 use Filament\Schemas\Components\Grid;
 use Filament\Schemas\Components\Component;
-<<<<<<< HEAD
-<<<<<<< HEAD
-use Filament\Forms\Form;
-=======
 use Filament\Schemas\Schema;
->>>>>>> e0ce06e (.)
-=======
-use Filament\Schemas\Schema;
->>>>>>> 365a876 (.)
 use Override;
 use Exception;
 use Illuminate\Filesystem\FilesystemAdapter;
@@ -41,18 +33,8 @@ use function Safe\unlink;
 /**
  * S3Test Page for AWS S3 testing and diagnostics.
  *
-<<<<<<< HEAD
-<<<<<<< HEAD
- * @property Form $form
- * @property array<string, mixed> $debugResults
-=======
  * @property array<string, mixed> $debugResults
  * @phpstan-ignore-next-line
->>>>>>> e0ce06e (.)
-=======
- * @property array<string, mixed> $debugResults
- * @phpstan-ignore-next-line
->>>>>>> 365a876 (.)
  */
 class S3Test extends XotBasePage
 {
@@ -141,14 +123,7 @@ class S3Test extends XotBasePage
      */
     protected function fillForms(): void
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
         /** @phpstan-ignore-next-line */
->>>>>>> e0ce06e (.)
-=======
-        /** @phpstan-ignore-next-line */
->>>>>>> 365a876 (.)
         $this->form->fill([
             'debug_output' => $this->getDebugOutput(),
         ]);
@@ -253,14 +228,7 @@ class S3Test extends XotBasePage
 
     public function test01(): void
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
         /** @phpstan-ignore-next-line */
->>>>>>> e0ce06e (.)
-=======
-        /** @phpstan-ignore-next-line */
->>>>>>> 365a876 (.)
         $data = $this->form->getState();
         $filePath = $data['attachment'] ?? null;
 
@@ -660,14 +628,7 @@ class S3Test extends XotBasePage
     public function sendEmail(): void
     {
         try {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
             /** @phpstan-ignore-next-line */
->>>>>>> e0ce06e (.)
-=======
-            /** @phpstan-ignore-next-line */
->>>>>>> 365a876 (.)
             $data = $this->form->getState();
             $filePath = $data['attachment'] ?? null;
 
@@ -790,14 +751,7 @@ class S3Test extends XotBasePage
      */
     private function updateDebugOutput(): void
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
         /** @phpstan-ignore-next-line */
->>>>>>> e0ce06e (.)
-=======
-        /** @phpstan-ignore-next-line */
->>>>>>> 365a876 (.)
         $this->form->fill([
             'debug_output' => $this->getDebugOutput(),
         ]);
@@ -821,14 +775,7 @@ class S3Test extends XotBasePage
             $s3Disk = Storage::disk('s3');
             $temporaryUrl = $s3Disk->temporaryUrl($filename, now()->addMinutes(5));
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
             /** @phpstan-ignore-next-line */
->>>>>>> e0ce06e (.)
-=======
-            /** @phpstan-ignore-next-line */
->>>>>>> 365a876 (.)
             $data = $this->form->getState();
             $filePath = $data['attachment'] ?? null;
 

@@ -8,15 +8,7 @@ use Filament\Schemas\Components\Actions;
 use Filament\Schemas\Components\Section;
 use Filament\Schemas\Components\Component;
 use Override;
-<<<<<<< HEAD
-<<<<<<< HEAD
-use Filament\Forms\Components\Flex;
-=======
 use Filament\Schemas\Components\Grid;
->>>>>>> e0ce06e (.)
-=======
-use Filament\Schemas\Components\Grid;
->>>>>>> 365a876 (.)
 use Filament\Actions\Action;
 use Filament\Actions\DeleteAction;
 use Filament\Infolists\Components\ImageEntry;
@@ -39,31 +31,14 @@ class ViewMedia extends XotBaseViewRecord
     /**
      * Restituisce lo schema dell'infolist per la visualizzazione dei dettagli del record.
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
-     * @return array<string, Component>
-=======
      * @return array<int, Component>
->>>>>>> e0ce06e (.)
-=======
-     * @return array<int, Component>
->>>>>>> 365a876 (.)
      */
     #[Override]
     public function getInfolistSchema(): array
     {
         return [
-<<<<<<< HEAD
-<<<<<<< HEAD
-            'media_viewer' => Flex::make([
-=======
             Grid::make(2)
                 ->schema([
->>>>>>> e0ce06e (.)
-=======
-            Grid::make(2)
-                ->schema([
->>>>>>> 365a876 (.)
                 Section::make()->schema([
                     ImageEntry::make('url')
                         ->defaultImageUrl(fn($record) => $record->getUrl())
@@ -94,15 +69,7 @@ class ViewMedia extends XotBaseViewRecord
                     TextEntry::make('created_at'),
                 ]),
             ]),
-<<<<<<< HEAD
-<<<<<<< HEAD
-            'entry_conversions' => RepeatableEntry::make('entry_conversions')
-=======
             RepeatableEntry::make('entry_conversions')
->>>>>>> e0ce06e (.)
-=======
-            RepeatableEntry::make('entry_conversions')
->>>>>>> 365a876 (.)
                 ->schema([
                     TextEntry::make('name'),
                     TextEntry::make('src'),
