@@ -7,7 +7,7 @@ namespace Modules\Media\Tests;
 use Illuminate\Foundation\Application;
 use Modules\Media\Providers\MediaServiceProvider;
 use Illuminate\Foundation\Testing\TestCase as BaseTestCase;
-use Tests\CreatesApplication;
+use Modules\Xot\Tests\CreatesApplication;
 
 /**
  * Base test case for Media module tests.

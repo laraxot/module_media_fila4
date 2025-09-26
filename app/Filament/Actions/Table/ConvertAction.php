@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace Modules\Media\Filament\Actions\Table;
 
 // Header actions must be an instance of Filament\Actions\Action, or Filament\Actions\ActionGroup.
-// use Filament\Tables\Actions\Action;
+// use Filament\Actions\Action;
 use Filament\Actions\Action;
 use Filament\Forms\Components\Radio;
 
