@@ -8,19 +8,10 @@ declare(strict_types=1);
 
 namespace Modules\Media\Models;
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> e9b0959 (.)
 use Illuminate\Support\Carbon;
 use Modules\Media\Database\Factories\MediaConvertFactory;
 use Illuminate\Database\Eloquent\Builder;
 use Modules\Xot\Contracts\ProfileContract;
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/develop
->>>>>>> e9b0959 (.)
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 /**
@@ -38,35 +29,17 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  * @property string|null $remaining
  * @property string|null $rate
  * @property string|null $execution_time
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> e9b0959 (.)
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
  * @property string|null $updated_by
  * @property string|null $created_by
  * @property Carbon|null $deleted_at
-<<<<<<< HEAD
-=======
-=======
- * @property \Illuminate\Support\Carbon|null $created_at
- * @property \Illuminate\Support\Carbon|null $updated_at
- * @property string|null $updated_by
- * @property string|null $created_by
- * @property \Illuminate\Support\Carbon|null $deleted_at
->>>>>>> origin/develop
->>>>>>> e9b0959 (.)
  * @property string|null $deleted_by
  * @property string|null $format
  * @property string|null $converted_file
  * @property string|null $disk
  * @property string|null $file
  * @property Media|null $media
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> e9b0959 (.)
  * @method static MediaConvertFactory factory($count = null, $state = [])
  * @method static Builder|MediaConvert newModelQuery()
  * @method static Builder|MediaConvert newQuery()
@@ -94,38 +67,6 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  * @method static Builder|MediaConvert whereWidth($value)
  * @property-read ProfileContract|null $creator
  * @property-read ProfileContract|null $updater
-<<<<<<< HEAD
-=======
-=======
- * @method static \Modules\Media\Database\Factories\MediaConvertFactory factory($count = null, $state = [])
- * @method static \Illuminate\Database\Eloquent\Builder|MediaConvert newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|MediaConvert newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|MediaConvert query()
- * @method static \Illuminate\Database\Eloquent\Builder|MediaConvert whereBitrate($value)
- * @method static \Illuminate\Database\Eloquent\Builder|MediaConvert whereCodecAudio($value)
- * @method static \Illuminate\Database\Eloquent\Builder|MediaConvert whereCodecVideo($value)
- * @method static \Illuminate\Database\Eloquent\Builder|MediaConvert whereCreatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|MediaConvert whereCreatedBy($value)
- * @method static \Illuminate\Database\Eloquent\Builder|MediaConvert whereDeletedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|MediaConvert whereDeletedBy($value)
- * @method static \Illuminate\Database\Eloquent\Builder|MediaConvert whereExecutionTime($value)
- * @method static \Illuminate\Database\Eloquent\Builder|MediaConvert whereFormat($value)
- * @method static \Illuminate\Database\Eloquent\Builder|MediaConvert whereHeight($value)
- * @method static \Illuminate\Database\Eloquent\Builder|MediaConvert whereId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|MediaConvert whereMediaId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|MediaConvert wherePercentage($value)
- * @method static \Illuminate\Database\Eloquent\Builder|MediaConvert wherePreset($value)
- * @method static \Illuminate\Database\Eloquent\Builder|MediaConvert whereRate($value)
- * @method static \Illuminate\Database\Eloquent\Builder|MediaConvert whereRemaining($value)
- * @method static \Illuminate\Database\Eloquent\Builder|MediaConvert whereSpeed($value)
- * @method static \Illuminate\Database\Eloquent\Builder|MediaConvert whereThreads($value)
- * @method static \Illuminate\Database\Eloquent\Builder|MediaConvert whereUpdatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|MediaConvert whereUpdatedBy($value)
- * @method static \Illuminate\Database\Eloquent\Builder|MediaConvert whereWidth($value)
- * @property-read \Modules\Xot\Contracts\ProfileContract|null $creator
- * @property-read \Modules\Xot\Contracts\ProfileContract|null $updater
->>>>>>> origin/develop
->>>>>>> e9b0959 (.)
  * @mixin IdeHelperMediaConvert
  * @mixin \Eloquent
  */
@@ -154,97 +95,25 @@ class MediaConvert extends BaseModel
         return $this->belongsTo(Media::class);
     }
 
-<<<<<<< HEAD
     public function getDiskAttribute(null|string $value): null|string
     {
         if ($this->media === null) {
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    public function getDiskAttribute(null|string $value): null|string
-    {
-        if ($this->media === null) {
-=======
-    public function getDiskAttribute(?string $value): ?string
-    {
-        if($this->media==null){
->>>>>>> a12f125f4a (.)
-=======
-    public function getDiskAttribute(null|string $value): null|string
-    {
-        if ($this->media === null) {
->>>>>>> b93ef594b4 (.)
-=======
-    public function getDiskAttribute(?string $value): ?string
-    {
-        if($this->media==null){
->>>>>>> origin/develop
->>>>>>> e9b0959 (.)
             return null;
         }
         return $this->media->disk;
     }
 
-<<<<<<< HEAD
     public function getFileAttribute(null|string $value): null|string
     {
         if ($this->media === null) {
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    public function getFileAttribute(null|string $value): null|string
-    {
-        if ($this->media === null) {
-=======
-    public function getFileAttribute(?string $value): ?string
-    {
-        if($this->media==null){
->>>>>>> a12f125f4a (.)
-=======
-    public function getFileAttribute(null|string $value): null|string
-    {
-        if ($this->media === null) {
->>>>>>> b93ef594b4 (.)
-=======
-    public function getFileAttribute(?string $value): ?string
-    {
-        if($this->media==null){
->>>>>>> origin/develop
->>>>>>> e9b0959 (.)
             return null;
         }
         return $this->media->path . '/' . $this->media->file_name;
     }
 
-<<<<<<< HEAD
     public function getConvertedFileAttribute(null|string $value): null|string
     {
         if ($this->media === null) {
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    public function getConvertedFileAttribute(null|string $value): null|string
-    {
-        if ($this->media === null) {
-=======
-    public function getConvertedFileAttribute(?string $value): ?string
-    {
-        if($this->media==null){
->>>>>>> a12f125f4a (.)
-=======
-    public function getConvertedFileAttribute(null|string $value): null|string
-    {
-        if ($this->media === null) {
->>>>>>> b93ef594b4 (.)
-=======
-    public function getConvertedFileAttribute(?string $value): ?string
-    {
-        if($this->media==null){
->>>>>>> origin/develop
->>>>>>> e9b0959 (.)
             return null;
         }
         $info = pathinfo($this->media->file_name);
