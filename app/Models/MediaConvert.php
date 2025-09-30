@@ -8,11 +8,11 @@ declare(strict_types=1);
 
 namespace Modules\Media\Models;
 
+use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Support\Carbon;
 use Modules\Media\Database\Factories\MediaConvertFactory;
-use Illuminate\Database\Eloquent\Builder;
 use Modules\Xot\Contracts\ProfileContract;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 /**
  * @property int $id
@@ -40,6 +40,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  * @property string|null $disk
  * @property string|null $file
  * @property Media|null $media
+ *
  * @method static MediaConvertFactory factory($count = null, $state = [])
  * @method static Builder|MediaConvert newModelQuery()
  * @method static Builder|MediaConvert newQuery()
@@ -65,8 +66,10 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  * @method static Builder|MediaConvert whereUpdatedAt($value)
  * @method static Builder|MediaConvert whereUpdatedBy($value)
  * @method static Builder|MediaConvert whereWidth($value)
+ *
  * @property-read ProfileContract|null $creator
  * @property-read ProfileContract|null $updater
+ *
  * @mixin IdeHelperMediaConvert
  * @mixin \Eloquent
  */
@@ -95,23 +98,25 @@ class MediaConvert extends BaseModel
         return $this->belongsTo(Media::class);
     }
 
-    public function getDiskAttribute(null|string $value): null|string
+    public function getDiskAttribute(?string $value): ?string
     {
         if ($this->media === null) {
             return null;
         }
+
         return $this->media->disk;
     }
 
-    public function getFileAttribute(null|string $value): null|string
+    public function getFileAttribute(?string $value): ?string
     {
         if ($this->media === null) {
             return null;
         }
-        return $this->media->path . '/' . $this->media->file_name;
+
+        return $this->media->path.'/'.$this->media->file_name;
     }
 
-    public function getConvertedFileAttribute(null|string $value): null|string
+    public function getConvertedFileAttribute(?string $value): ?string
     {
         if ($this->media === null) {
             return null;
@@ -122,6 +127,6 @@ class MediaConvert extends BaseModel
         // "extension" => "mp4"
         // "filename" => "20600550-uhd_3840_2160_30fps"
 
-        return $this->media->path . '/conversions/' . $info['filename'] . '_' . $this->id . '.' . $this->format;
+        return $this->media->path.'/conversions/'.$info['filename'].'_'.$this->id.'.'.$this->format;
     }
 }

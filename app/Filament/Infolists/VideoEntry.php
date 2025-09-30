@@ -5,13 +5,13 @@ declare(strict_types=1);
 namespace Modules\Media\Filament\Infolists;
 
 use Closure;
-use Throwable;
 use Filament\Infolists\Components\Entry;
 use Illuminate\Contracts\Filesystem\Filesystem;
 use Illuminate\Filesystem\FilesystemAdapter;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\View\ComponentAttributeBag;
 use League\Flysystem\UnableToCheckFileExistence;
+use Throwable;
 use Webmozart\Assert\Assert;
 
 class VideoEntry extends Entry
@@ -59,24 +59,28 @@ class VideoEntry extends Entry
     public function disk(string|Closure|null $disk): static
     {
         $this->disk = $disk;
+
         return $this;
     }
 
     public function height(int|string|Closure|null $height): static
     {
         $this->height = $height;
+
         return $this;
     }
 
     public function circular(bool|Closure $condition = true): static
     {
         $this->isCircular = $condition;
+
         return $this;
     }
 
     public function square(bool|Closure $condition = true): static
     {
         $this->isSquare = $condition;
+
         return $this;
     }
 
@@ -84,18 +88,21 @@ class VideoEntry extends Entry
     {
         $this->width($size);
         $this->height($size);
+
         return $this;
     }
 
     public function visibility(string|Closure $visibility): static
     {
         $this->visibility = $visibility;
+
         return $this;
     }
 
     public function width(int|string|Closure|null $width): static
     {
         $this->width = $width;
+
         return $this;
     }
 
@@ -107,6 +114,7 @@ class VideoEntry extends Entry
     public function getDiskName(): string
     {
         Assert::string($res = $this->evaluate($this->disk) ?? config('filament.default_filesystem_disk'));
+
         return $res;
     }
 
@@ -115,7 +123,7 @@ class VideoEntry extends Entry
      *
      * @return string|null The height value as a string (with 'px' suffix if it was an integer) or null if not set
      */
-    public function getHeight(): null|string
+    public function getHeight(): ?string
     {
         $height = $this->evaluate($this->height);
 
@@ -139,10 +147,11 @@ class VideoEntry extends Entry
     public function defaultImageUrl(string|Closure|null $url): static
     {
         $this->defaultImageUrl = $url;
+
         return $this;
     }
 
-    public function getImageUrl(null|string $state = null): null|string
+    public function getImageUrl(?string $state = null): ?string
     {
         if (filter_var($state, FILTER_VALIDATE_URL) !== false || str($state)->startsWith('data:')) {
             return $state;
@@ -156,7 +165,7 @@ class VideoEntry extends Entry
 
         if ($this->shouldCheckFileExistence()) {
             try {
-                if (!$storage->exists($state)) {
+                if (! $storage->exists($state)) {
                     return null;
                 }
             } catch (UnableToCheckFileExistence) {
@@ -180,7 +189,7 @@ class VideoEntry extends Entry
      *
      * @return string|null The default image URL or null if not set
      */
-    public function getDefaultImageUrl(): null|string
+    public function getDefaultImageUrl(): ?string
     {
         $url = $this->evaluate($this->defaultImageUrl);
 
@@ -217,7 +226,7 @@ class VideoEntry extends Entry
      *
      * @return string|null The width value as a string (with 'px' suffix if it was an integer) or null if not set
      */
-    public function getWidth(): null|string
+    public function getWidth(): ?string
     {
         $width = $this->evaluate($this->width);
 
@@ -247,11 +256,12 @@ class VideoEntry extends Entry
     }
 
     /**
-     * @param array<mixed>|Closure $attributes
+     * @param  array<mixed>|Closure  $attributes
      */
     public function extraImgAttributes(array|Closure $attributes): static
     {
         $this->extraImgAttributes = $attributes;
+
         return $this;
     }
 
@@ -278,6 +288,7 @@ class VideoEntry extends Entry
     public function stacked(bool|Closure $condition = true): static
     {
         $this->isStacked = $condition;
+
         return $this;
     }
 
@@ -289,6 +300,7 @@ class VideoEntry extends Entry
     public function overlap(int|Closure|null $overlap): static
     {
         $this->overlap = $overlap;
+
         return $this;
     }
 
@@ -297,7 +309,7 @@ class VideoEntry extends Entry
      *
      * @return int|null The overlap value or null if not set
      */
-    public function getOverlap(): null|int
+    public function getOverlap(): ?int
     {
         $overlap = $this->evaluate($this->overlap);
 
@@ -315,6 +327,7 @@ class VideoEntry extends Entry
     public function ring(string|int|Closure|null $ring): static
     {
         $this->ring = $ring;
+
         return $this;
     }
 
@@ -323,7 +336,7 @@ class VideoEntry extends Entry
      *
      * @return int|null The ring value or null if not set
      */
-    public function getRing(): null|int
+    public function getRing(): ?int
     {
         $ring = $this->evaluate($this->ring);
 
@@ -341,6 +354,7 @@ class VideoEntry extends Entry
     public function limit(int|Closure|null $limit = 3): static
     {
         $this->limit = $limit;
+
         return $this;
     }
 
@@ -349,7 +363,7 @@ class VideoEntry extends Entry
      *
      * @return int|null The limit value or null if not set
      */
-    public function getLimit(): null|int
+    public function getLimit(): ?int
     {
         $limit = $this->evaluate($this->limit);
 
@@ -372,12 +386,14 @@ class VideoEntry extends Entry
         $this->hasLimitedRemainingText = $condition;
         $this->limitedRemainingTextSeparate($isSeparate);
         $this->limitedRemainingTextSize($size);
+
         return $this;
     }
 
     public function limitedRemainingTextSeparate(bool|Closure $condition = true): static
     {
         $this->isLimitedRemainingTextSeparate = $condition;
+
         return $this;
     }
 
@@ -394,6 +410,7 @@ class VideoEntry extends Entry
     public function limitedRemainingTextSize(string|Closure|null $size): static
     {
         $this->limitedRemainingTextSize = $size;
+
         return $this;
     }
 
@@ -402,7 +419,7 @@ class VideoEntry extends Entry
      *
      * @return string|null The text size or null if not set
      */
-    public function getLimitedRemainingTextSize(): null|string
+    public function getLimitedRemainingTextSize(): ?string
     {
         $size = $this->evaluate($this->limitedRemainingTextSize);
 
@@ -420,6 +437,7 @@ class VideoEntry extends Entry
     public function checkFileExistence(bool|Closure $condition = true): static
     {
         $this->shouldCheckFileExistence = $condition;
+
         return $this;
     }
 

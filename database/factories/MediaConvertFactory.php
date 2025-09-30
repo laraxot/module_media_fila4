@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Modules\Media\Database\Factories;
 
-use Modules\Media\Models\MediaConvert;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Modules\Media\Models\MediaConvert;
 
 /**
  * @extends Factory<MediaConvert>
