@@ -4,14 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Media\Filament\Resources\TemporaryUploadResource\Pages;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Override;
-=======
->>>>>>> 0a466ed (.)
-=======
-use Override;
->>>>>>> 37a2da6 (.)
 use Filament\Actions\ViewAction;
 use Filament\Actions\EditAction;
 use Filament\Actions\DeleteAction;
@@ -32,14 +25,7 @@ class ListTemporaryUploads extends XotBaseListRecords
     /**
      * @return array<string, TextColumn>
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     #[Override]
-=======
->>>>>>> 0a466ed (.)
-=======
-    #[Override]
->>>>>>> 37a2da6 (.)
     public function getTableColumns(): array
     {
         return [
@@ -51,27 +37,13 @@ class ListTemporaryUploads extends XotBaseListRecords
                 ->searchable()
                 ->sortable()
                 ->wrap(),
-<<<<<<< HEAD
-<<<<<<< HEAD
             'created_at' => TextColumn::make('created_at')->dateTime()->sortable(),
-=======
-            'created_at' => TextColumn::make('created_at')
-                ->dateTime()
-                ->sortable(),
->>>>>>> 0a466ed (.)
-=======
-            'created_at' => TextColumn::make('created_at')->dateTime()->sortable(),
->>>>>>> 37a2da6 (.)
         ];
     }
 
     /**
      * @return array<string, SelectFilter>
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 37a2da6 (.)
     #[Override]
     public function getTableFilters(): array
     {
@@ -80,30 +52,13 @@ class ListTemporaryUploads extends XotBaseListRecords
                 'folder',
                 'folder',
             )->toArray(...)),
-<<<<<<< HEAD
-=======
-    public function getTableFilters(): array
-    {
-        return [
-            'folder' => SelectFilter::make('folder')
-                ->options(fn () => TemporaryUpload::distinct()->pluck('folder', 'folder')->toArray()),
->>>>>>> 0a466ed (.)
-=======
->>>>>>> 37a2da6 (.)
         ];
     }
 
     /**
      * @return array<string, ViewAction|EditAction|DeleteAction>
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     #[Override]
-=======
->>>>>>> 0a466ed (.)
-=======
-    #[Override]
->>>>>>> 37a2da6 (.)
     public function getTableActions(): array
     {
         return [
@@ -114,20 +69,9 @@ class ListTemporaryUploads extends XotBaseListRecords
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @return array<string, DeleteBulkAction>
      */
     #[Override]
-=======
-     * @return array<string, \Filament\Actions\DeleteBulkAction>
-     */
->>>>>>> 0a466ed (.)
-=======
-     * @return array<string, DeleteBulkAction>
-     */
-    #[Override]
->>>>>>> 37a2da6 (.)
     public function getTableBulkActions(): array
     {
         return [
