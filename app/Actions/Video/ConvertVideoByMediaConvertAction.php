@@ -10,15 +10,26 @@ declare(strict_types=1);
 namespace Modules\Media\Actions\Video;
 
 use Exception;
+<<<<<<< HEAD
 use FFMpeg\Format\Video\DefaultVideo;
+=======
+>>>>>>> 0a466ed (.)
 use Filament\Notifications\Notification;
 use Illuminate\Support\Facades\Storage;
 use Modules\Media\Datas\ConvertData;
 use Modules\Media\Models\MediaConvert;
+<<<<<<< HEAD
 use ProtoneMedia\LaravelFFMpeg\FFMpeg\FFMpegExporter;
 use ProtoneMedia\LaravelFFMpeg\MediaOpener;
 use ProtoneMedia\LaravelFFMpeg\Support\FFMpeg;
 use Spatie\QueueableAction\QueueableAction;
+=======
+use ProtoneMedia\LaravelFFMpeg\Support\FFMpeg;
+use ProtoneMedia\LaravelFFMpeg\MediaOpener;
+use ProtoneMedia\LaravelFFMpeg\FFMpeg\FFMpegExporter;
+use Spatie\QueueableAction\QueueableAction;
+use FFMpeg\Format\Video\DefaultVideo;
+>>>>>>> 0a466ed (.)
 use Webmozart\Assert\Assert;
 
 /**

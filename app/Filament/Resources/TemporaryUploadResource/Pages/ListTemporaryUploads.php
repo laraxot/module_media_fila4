@@ -4,7 +4,10 @@ declare(strict_types=1);
 
 namespace Modules\Media\Filament\Resources\TemporaryUploadResource\Pages;
 
+<<<<<<< HEAD
 use Override;
+=======
+>>>>>>> 0a466ed (.)
 use Filament\Actions\ViewAction;
 use Filament\Actions\EditAction;
 use Filament\Actions\DeleteAction;
@@ -25,7 +28,10 @@ class ListTemporaryUploads extends XotBaseListRecords
     /**
      * @return array<string, TextColumn>
      */
+<<<<<<< HEAD
     #[Override]
+=======
+>>>>>>> 0a466ed (.)
     public function getTableColumns(): array
     {
         return [
@@ -37,13 +43,20 @@ class ListTemporaryUploads extends XotBaseListRecords
                 ->searchable()
                 ->sortable()
                 ->wrap(),
+<<<<<<< HEAD
             'created_at' => TextColumn::make('created_at')->dateTime()->sortable(),
+=======
+            'created_at' => TextColumn::make('created_at')
+                ->dateTime()
+                ->sortable(),
+>>>>>>> 0a466ed (.)
         ];
     }
 
     /**
      * @return array<string, SelectFilter>
      */
+<<<<<<< HEAD
     #[Override]
     public function getTableFilters(): array
     {
@@ -52,13 +65,23 @@ class ListTemporaryUploads extends XotBaseListRecords
                 'folder',
                 'folder',
             )->toArray(...)),
+=======
+    public function getTableFilters(): array
+    {
+        return [
+            'folder' => SelectFilter::make('folder')
+                ->options(fn () => TemporaryUpload::distinct()->pluck('folder', 'folder')->toArray()),
+>>>>>>> 0a466ed (.)
         ];
     }
 
     /**
      * @return array<string, ViewAction|EditAction|DeleteAction>
      */
+<<<<<<< HEAD
     #[Override]
+=======
+>>>>>>> 0a466ed (.)
     public function getTableActions(): array
     {
         return [
@@ -69,9 +92,14 @@ class ListTemporaryUploads extends XotBaseListRecords
     }
 
     /**
+<<<<<<< HEAD
      * @return array<string, DeleteBulkAction>
      */
     #[Override]
+=======
+     * @return array<string, \Filament\Actions\DeleteBulkAction>
+     */
+>>>>>>> 0a466ed (.)
     public function getTableBulkActions(): array
     {
         return [
