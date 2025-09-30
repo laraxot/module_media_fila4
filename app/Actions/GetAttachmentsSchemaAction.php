@@ -10,7 +10,7 @@ use Filament\Forms;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
 use Filament\Forms\Components\TextInput;
-use Filament\Schemas\Schema;
+use Filament\Forms\Form;
 use Filament\Pages\SubNavigationPosition;
 use Filament\Resources\Resource as FilamentResource;
 use Illuminate\Contracts\Support\Htmlable;
@@ -51,7 +51,7 @@ class GetAttachmentsSchemaAction
                 ->required()
                 ->previewable(false)
                 //->saveUploadedFiles()
-                ->afterStateUpdated(function ($state, Set $set) use ($attachment, $sessionDir, $disk) {
+                ->afterStateUpdated(function ($state, \Filament\Schemas\Components\Utilities\Set $set) use ($attachment, $sessionDir, $disk) {
                     if (!$state)
                         return;
                     $state = Arr::wrap($state);
