@@ -30,6 +30,9 @@ use function Safe\glob;
 
 class GetAttachmentsSchemaAction
 {
+    /**
+     * @return array<string, mixed>
+     */
     public function execute(array $attachments, string $disk = 'attachments'): array
     {
         $form = [];
@@ -41,7 +44,8 @@ class GetAttachmentsSchemaAction
             $sessionDir = $prefix . '/' . $sessionDir;
         }
         foreach ($attachments as $attachment) {
-            $form[$attachment] = FileUpload::make($attachment)
+            $attachmentKey = is_string($attachment) ? $attachment : (string) $attachment;
+            $form[$attachmentKey] = FileUpload::make($attachmentKey)
                 //$form[$attachment]=SpatieMediaLibraryFileUpload::make($attachment)
                 ->directory($sessionDir)
                 ->disk($disk)
@@ -51,7 +55,7 @@ class GetAttachmentsSchemaAction
                 ->required()
                 ->previewable(false)
                 //->saveUploadedFiles()
-                ->afterStateUpdated(function ($state, Set $set) use ($attachment, $sessionDir, $disk) {
+                ->afterStateUpdated(function ($state, Set $set) use ($attachmentKey, $sessionDir, $disk): void {
                     if (!$state)
                         return;
                     $state = Arr::wrap($state);
@@ -70,7 +74,7 @@ class GetAttachmentsSchemaAction
                         }
                     }
 
-                    $set($attachment, $sessionFiles);
+                    $set($attachmentKey, $sessionFiles);
                 });
         }
 

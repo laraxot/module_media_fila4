@@ -589,7 +589,7 @@ class S3Test extends XotBasePage
         }
 
         $output = [];
-        foreach ($this->debugResults as $category => $result) {
+        foreach ($this->debugResults as $result) {
             if (!is_array($result) || !isset($result['title'], $result['status'], $result['data'])) {
                 continue;
             }
