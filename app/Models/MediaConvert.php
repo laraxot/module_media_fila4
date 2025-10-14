@@ -100,33 +100,46 @@ class MediaConvert extends BaseModel
 
     public function getDiskAttribute(?string $value): ?string
     {
-        if ($this->media === null) {
+        $media = $this->media;
+        if ($media === null) {
             return null;
         }
-
-        return $this->media->disk;
+        $disk = $media->getAttribute('disk');
+        return is_string($disk) ? $disk : null;
     }
 
     public function getFileAttribute(?string $value): ?string
     {
-        if ($this->media === null) {
+        $media = $this->media;
+        if ($media === null) {
             return null;
         }
-
-        return $this->media->path.'/'.$this->media->file_name;
+        $path = $media->getAttribute('path');
+        $fileName = $media->getAttribute('file_name');
+        if (! is_string($path) || ! is_string($fileName)) {
+            return null;
+        }
+        return $path.'/'.$fileName;
     }
 
     public function getConvertedFileAttribute(?string $value): ?string
     {
-        if ($this->media === null) {
+        $media = $this->media;
+        if ($media === null) {
             return null;
         }
-        $info = pathinfo($this->media->file_name);
+        $fileName = $media->getAttribute('file_name');
+        $path = $media->getAttribute('path');
+        $format = $this->getAttribute('format');
+        if (! is_string($fileName) || ! is_string($path) || ! is_string($format)) {
+            return null;
+        }
+        $info = pathinfo($fileName);
         // "dirname" => "."
         // "basename" => "20600550-uhd_3840_2160_30fps.mp4"
         // "extension" => "mp4"
         // "filename" => "20600550-uhd_3840_2160_30fps"
 
-        return $this->media->path.'/conversions/'.$info['filename'].'_'.$this->id.'.'.$this->format;
+        return $path.'/conversions/'.$info['filename'].'_'.$this->id.'.'.$format;
     }
 }
