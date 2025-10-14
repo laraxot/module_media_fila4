@@ -15,7 +15,7 @@ describe('Media Business Logic', function (): void {
     });
 
     it('can create media from temporary upload', function (): void {
-        /** @var \Illuminate\Database\Eloquent\Collection */
+        /** @var User */
         $user = User/** @phpstan-ignore-line */ ::factory()->create();
         $file = UploadedFile::fake()->image('test-image.jpg', 100, 100);
 
@@ -60,7 +60,7 @@ describe('Media Business Logic', function (): void {
     });
 
     it('can convert media to different formats', function (): void {
-        /** @var \Illuminate\Database\Eloquent\Collection */
+        /** @var User */
         $user = User/** @phpstan-ignore-line */ ::factory()->create();
         /** @var \Illuminate\Database\Eloquent\Collection */
         $media = Media/** @phpstan-ignore-line */ ::factory()->create([
@@ -96,7 +96,7 @@ describe('Media Business Logic', function (): void {
     });
 
     it('can track temporary upload lifecycle', function (): void {
-        /** @var \Illuminate\Database\Eloquent\Collection */
+        /** @var User */
         $user = User/** @phpstan-ignore-line */ ::factory()->create();
         $file = UploadedFile::fake()->image('test-image.jpg', 100, 100);
 
@@ -127,7 +127,7 @@ describe('Media Business Logic', function (): void {
     });
 
     it('can manage media collections', function (): void {
-        /** @var \Illuminate\Database\Eloquent\Collection */
+        /** @var User */
         $user = User/** @phpstan-ignore-line */ ::factory()->create();
 
         /** @var \Illuminate\Database\Eloquent\Collection */
@@ -163,7 +163,7 @@ describe('Media Business Logic', function (): void {
     });
 
     it('can validate media file types', function (): void {
-        /** @var \Illuminate\Database\Eloquent\Collection */
+        /** @var User */
         $user = User/** @phpstan-ignore-line */ ::factory()->create();
 
         /** @var \Illuminate\Database\Eloquent\Collection */
@@ -186,7 +186,7 @@ describe('Media Business Logic', function (): void {
     });
 
     it('can track media conversion status', function (): void {
-        /** @var \Illuminate\Database\Eloquent\Collection */
+        /** @var User */
         $user = User/** @phpstan-ignore-line */ ::factory()->create();
         /** @var \Illuminate\Database\Eloquent\Collection */
         $media = Media/** @phpstan-ignore-line */ ::factory()->create([
@@ -216,9 +216,9 @@ describe('Media Business Logic', function (): void {
     });
 
     it('can manage media permissions', function (): void {
-        /** @var \Illuminate\Database\Eloquent\Collection */
+        /** @var User */
         $owner = User/** @phpstan-ignore-line */ ::factory()->create();
-        /** @var \Illuminate\Database\Eloquent\Collection */
+        /** @var User */
         $otherUser = User/** @phpstan-ignore-line */ ::factory()->create();
 
         /** @var \Illuminate\Database\Eloquent\Collection */
@@ -236,7 +236,7 @@ describe('Media Business Logic', function (): void {
     });
 
     it('can handle media deletion', function (): void {
-        /** @var \Illuminate\Database\Eloquent\Collection */
+        /** @var User */
         $user = User/** @phpstan-ignore-line */ ::factory()->create();
         /** @var \Illuminate\Database\Eloquent\Collection */
         $media = Media/** @phpstan-ignore-line */ ::factory()->create([
@@ -259,7 +259,7 @@ describe('Media Business Logic', function (): void {
     });
 
     it('can generate media urls', function (): void {
-        /** @var \Illuminate\Database\Eloquent\Collection */
+        /** @var User */
         $user = User/** @phpstan-ignore-line */ ::factory()->create();
         /** @var \Illuminate\Database\Eloquent\Collection */
         $media = Media/** @phpstan-ignore-line */ ::factory()->create([
@@ -275,7 +275,7 @@ describe('Media Business Logic', function (): void {
     });
 
     it('can validate file size limits', function (): void {
-        /** @var \Illuminate\Database\Eloquent\Collection */
+        /** @var User */
         $user = User/** @phpstan-ignore-line */ ::factory()->create();
 
         /** @var \Illuminate\Database\Eloquent\Collection */
@@ -296,7 +296,7 @@ describe('Media Business Logic', function (): void {
     });
 
     it('can track media usage statistics', function (): void {
-        /** @var \Illuminate\Database\Eloquent\Collection */
+        /** @var User */
         $user = User/** @phpstan-ignore-line */ ::factory()->create();
 
         Media::factory()
