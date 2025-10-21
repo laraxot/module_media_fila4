@@ -232,7 +232,7 @@ class TemporaryUpload extends BaseModel implements HasMedia
 >>>>>>> fbf6035 (.)
  * @mixin \Eloquent
  */
-class TemporaryUpload extends Model implements HasMedia
+class TemporaryUpload extends BaseModel implements HasMedia
 {
     use \Modules\Xot\Models\Traits\HasXotFactory;
     use InteractsWithMedia;
