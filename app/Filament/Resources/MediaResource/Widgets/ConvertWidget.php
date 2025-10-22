@@ -50,12 +50,14 @@ class ConvertWidget extends Widget
         /*
          * -preset ultrafast.
          */
-        $ffmpeg = FFMpeg::fromDisk($disk_mp4)
+        FFMpeg::fromDisk($disk_mp4)
             ->open($file_mp4)
-            ->export();
-            
-        if (is_object($ffmpeg) && method_exists($ffmpeg, 'onProgress')) {
-            $ffmpeg = $ffmpeg->onProgress(function (float $percentage, float $remaining, float $rate): void {
+            ->export()
+            // ->addFilter(function (VideoFilters $filters) {
+            //    $filters->resize(new \FFMpeg\Coordinate\Dimension(640, 480));
+            // })
+            // ->resize(640, 480)
+            ->onProgress(function (float $percentage, float $remaining, float $rate): void {
                 $this->percentage = $percentage;
                 $this->remaining = $remaining;
                 $this->rate = $rate;
@@ -65,20 +67,10 @@ class ConvertWidget extends Widget
                     ->title($msg)
                     ->success()
                     ->send();
-            });
-        }
-        
-        if (is_object($ffmpeg) && method_exists($ffmpeg, 'toDisk')) {
-            $ffmpeg = $ffmpeg->toDisk($disk_mp4);
-        }
-        
-        if (is_object($ffmpeg) && method_exists($ffmpeg, 'inFormat')) {
-            $ffmpeg = $ffmpeg->inFormat($format);
-        }
-        
-        if (is_object($ffmpeg) && method_exists($ffmpeg, 'save')) {
-            $ffmpeg->save($file_new);
-        }
+            })
+            ->toDisk($disk_mp4)
+            ->inFormat($format)
+            ->save($file_new);
 
         while ($this->percentage < 100) {
             // Stream the current count to the browser...

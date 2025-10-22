@@ -17,7 +17,6 @@ class GetAttachmentsSchemaActionTest extends TestCase
         $attachments = ['invoice', 'contract', 'receipt'];
 
         // Act
-        /** @phpstan-ignore-next-line method.nonObject */
         $form = $action->execute($attachments);
 
         // Assert
@@ -37,13 +36,10 @@ class GetAttachmentsSchemaActionTest extends TestCase
         $attachments = ['invoice', 'contract'];
 
         // Act
-        /** @phpstan-ignore-next-line method.nonObject */
         $form = $action->execute($attachments);
 
         // Assert
-        /** @phpstan-ignore-next-line offsetAccess.nonOffsetAccessible */
         static::assertSame('invoice', $form[0]->getName());
-        /** @phpstan-ignore-next-line offsetAccess.nonOffsetAccessible */
         static::assertSame('contract', $form[1]->getName());
     }
 
@@ -54,11 +50,9 @@ class GetAttachmentsSchemaActionTest extends TestCase
         $attachments = ['invoice'];
 
         // Act
-        /** @phpstan-ignore-next-line method.nonObject */
         $form = $action->execute($attachments);
 
         // Assert
-        /** @phpstan-ignore-next-line offsetAccess.nonOffsetAccessible */
         static::assertSame('Invoice', $form[0]->getLabel());
     }
 
@@ -69,19 +63,13 @@ class GetAttachmentsSchemaActionTest extends TestCase
         $attachments = ['invoice'];
 
         // Act
-        /** @phpstan-ignore-next-line method.nonObject */
         $form = $action->execute($attachments);
 
         // Assert
-        /** @phpstan-ignore-next-line offsetAccess.nonOffsetAccessible */
         $component = $form[0];
-        /** @phpstan-ignore-next-line method.nonObject */
         static::assertTrue($component->isRequired());
-        /** @phpstan-ignore-next-line method.nonObject */
         static::assertContains('pdf', $component->getAcceptedFileTypes());
-        /** @phpstan-ignore-next-line method.nonObject */
         static::assertContains('doc', $component->getAcceptedFileTypes());
-        /** @phpstan-ignore-next-line method.nonObject */
         static::assertContains('docx', $component->getAcceptedFileTypes());
     }
 
@@ -92,13 +80,10 @@ class GetAttachmentsSchemaActionTest extends TestCase
         $attachments = ['invoice'];
 
         // Act
-        /** @phpstan-ignore-next-line method.nonObject */
         $form = $action->execute($attachments);
 
         // Assert
-        /** @phpstan-ignore-next-line offsetAccess.nonOffsetAccessible */
         $component = $form[0];
-        /** @phpstan-ignore-next-line method.nonObject */
         static::assertSame('attachments', $component->getDiskName());
     }
 
@@ -109,13 +94,10 @@ class GetAttachmentsSchemaActionTest extends TestCase
         $attachments = ['invoice'];
 
         // Act
-        /** @phpstan-ignore-next-line method.nonObject */
         $form = $action->execute($attachments);
 
         // Assert
-        /** @phpstan-ignore-next-line offsetAccess.nonOffsetAccessible */
         $component = $form[0];
-        /** @phpstan-ignore-next-line method.nonObject */
         static::assertSame('temp', $component->getDirectory());
     }
 
@@ -126,13 +108,10 @@ class GetAttachmentsSchemaActionTest extends TestCase
         $attachments = ['invoice'];
 
         // Act
-        /** @phpstan-ignore-next-line method.nonObject */
         $form = $action->execute($attachments);
 
         // Assert
-        /** @phpstan-ignore-next-line offsetAccess.nonOffsetAccessible */
         $component = $form[0];
-        /** @phpstan-ignore-next-line method.nonObject */
         static::assertSame('public', $component->getVisibility());
     }
 
@@ -143,13 +122,10 @@ class GetAttachmentsSchemaActionTest extends TestCase
         $attachments = ['invoice'];
 
         // Act
-        /** @phpstan-ignore-next-line method.nonObject */
         $form = $action->execute($attachments);
 
         // Assert
-        /** @phpstan-ignore-next-line offsetAccess.nonOffsetAccessible */
         $component = $form[0];
-        /** @phpstan-ignore-next-line method.nonObject */
         static::assertSame(10 * 1024 * 1024, $component->getMaxSize()); // 10MB
     }
 
@@ -160,13 +136,10 @@ class GetAttachmentsSchemaActionTest extends TestCase
         $attachments = ['invoice'];
 
         // Act
-        /** @phpstan-ignore-next-line method.nonObject */
         $form = $action->execute($attachments);
 
         // Assert
-        /** @phpstan-ignore-next-line offsetAccess.nonOffsetAccessible */
         $component = $form[0];
-        /** @phpstan-ignore-next-line method.nonObject */
         static::assertFalse($component->isMultiple());
     }
 
@@ -177,13 +150,10 @@ class GetAttachmentsSchemaActionTest extends TestCase
         $attachments = ['invoice'];
 
         // Act
-        /** @phpstan-ignore-next-line method.nonObject */
         $form = $action->execute($attachments);
 
         // Assert
-        /** @phpstan-ignore-next-line offsetAccess.nonOffsetAccessible */
         $component = $form[0];
-        /** @phpstan-ignore-next-line method.nonObject */
         static::assertTrue($component->isPreviewable());
     }
 
@@ -194,13 +164,10 @@ class GetAttachmentsSchemaActionTest extends TestCase
         $attachments = ['invoice'];
 
         // Act
-        /** @phpstan-ignore-next-line method.nonObject */
         $form = $action->execute($attachments);
 
         // Assert
-        /** @phpstan-ignore-next-line offsetAccess.nonOffsetAccessible */
         $component = $form[0];
-        /** @phpstan-ignore-next-line method.nonObject */
         static::assertTrue($component->isDownloadable());
     }
 
@@ -211,13 +178,10 @@ class GetAttachmentsSchemaActionTest extends TestCase
         $attachments = ['invoice'];
 
         // Act
-        /** @phpstan-ignore-next-line method.nonObject */
         $form = $action->execute($attachments);
 
         // Assert
-        /** @phpstan-ignore-next-line offsetAccess.nonOffsetAccessible */
         $component = $form[0];
-        /** @phpstan-ignore-next-line method.nonObject */
         static::assertTrue($component->isRemovable());
     }
 
@@ -228,13 +192,10 @@ class GetAttachmentsSchemaActionTest extends TestCase
         $attachments = ['invoice'];
 
         // Act
-        /** @phpstan-ignore-next-line method.nonObject */
         $form = $action->execute($attachments);
 
         // Assert
-        /** @phpstan-ignore-next-line offsetAccess.nonOffsetAccessible */
         $component = $form[0];
-        /** @phpstan-ignore-next-line method.nonObject */
         static::assertFalse($component->isReorderable());
     }
 
@@ -245,13 +206,10 @@ class GetAttachmentsSchemaActionTest extends TestCase
         $attachments = ['invoice'];
 
         // Act
-        /** @phpstan-ignore-next-line method.nonObject */
         $form = $action->execute($attachments);
 
         // Assert
-        /** @phpstan-ignore-next-line offsetAccess.nonOffsetAccessible */
         $component = $form[0];
-        /** @phpstan-ignore-next-line method.nonObject */
         static::assertFalse($component->isAppendable());
     }
 
@@ -262,13 +220,10 @@ class GetAttachmentsSchemaActionTest extends TestCase
         $attachments = ['invoice'];
 
         // Act
-        /** @phpstan-ignore-next-line method.nonObject */
         $form = $action->execute($attachments);
 
         // Assert
-        /** @phpstan-ignore-next-line offsetAccess.nonOffsetAccessible */
         $component = $form[0];
-        /** @phpstan-ignore-next-line method.nonObject */
         static::assertSame('Attachments', $component->getPanel());
     }
 
@@ -279,13 +234,10 @@ class GetAttachmentsSchemaActionTest extends TestCase
         $attachments = ['invoice'];
 
         // Act
-        /** @phpstan-ignore-next-line method.nonObject */
         $form = $action->execute($attachments);
 
         // Assert
-        /** @phpstan-ignore-next-line offsetAccess.nonOffsetAccessible */
         $component = $form[0];
-        /** @phpstan-ignore-next-line method.nonObject */
         static::assertStringContainsString('Upload invoice file', $component->getHelperText());
     }
 
@@ -296,13 +248,10 @@ class GetAttachmentsSchemaActionTest extends TestCase
         $attachments = ['invoice'];
 
         // Act
-        /** @phpstan-ignore-next-line method.nonObject */
         $form = $action->execute($attachments);
 
         // Assert
-        /** @phpstan-ignore-next-line offsetAccess.nonOffsetAccessible */
         $component = $form[0];
-        /** @phpstan-ignore-next-line method.nonObject */
         static::assertStringContainsString('Select invoice file', $component->getPlaceholder());
     }
 }

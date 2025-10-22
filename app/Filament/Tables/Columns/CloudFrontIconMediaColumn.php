@@ -15,7 +15,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Storage;
 use Modules\Media\Actions\CloudFront\GetCloudFrontSignedUrlAction;
-use Modules\User\Models\User;
+use Modules\<main module>\Models\User;
 use Spatie\ModelStates\State;
 
 class CloudFrontIconMediaColumn extends IconColumn
@@ -25,39 +25,17 @@ class CloudFrontIconMediaColumn extends IconColumn
         parent::setUp();
         $attachment = $this->getName();
 
-        $this->default(function($record) use ($attachment) {
-                if (is_object($record) && method_exists($record, 'getFirstMedia')) {
-                    return $record->getFirstMedia($attachment);
-                }
-                return null;
-            })
+        $this->default(fn($record) => $record->getFirstMedia($attachment))
             ->icon('heroicon-o-document-text')
-            ->color(function($record) use ($attachment) {
-                if (is_object($record) && method_exists($record, 'getFirstMedia')) {
-                    return $record->getFirstMedia($attachment) ? 'success' : 'danger';
-                }
-                return 'danger';
-            })
-            ->tooltip(function($record) use ($attachment) {
-                if (is_object($record) && method_exists($record, 'getFirstMedia')) {
-                    $media = $record->getFirstMedia($attachment);
-                    if (is_object($media) && property_exists($media, 'file_name')) {
-                        return $media->file_name ?? 'Documento non caricato';
-                    }
-                }
-                return 'Documento non caricato';
-            })
+            ->color(fn($record) => $record->getFirstMedia($attachment) ? 'success' : 'danger')
+            ->tooltip(fn($record) => $record->getFirstMedia($attachment)->file_name ?? 'Documento non caricato')
             ->url(function ($record) use ($attachment) {
-                if (is_object($record) && method_exists($record, 'getFirstMedia')) {
-                    $media = $record->getFirstMedia($attachment);
-                    if (is_object($media) && method_exists($media, 'getPath')) {
-                        $path = $media->getPath();
-                        if (is_string($path)) {
-                            return app(GetCloudFrontSignedUrlAction::class)->execute($path, 60);
-                        }
-                    }
+                $media = $record->getFirstMedia($attachment);
+                if (!$media) {
+                    return;
                 }
-                return null;
+                $signedUrl = app(GetCloudFrontSignedUrlAction::class)->execute($media->getPath(), 60);
+                return $signedUrl;
             })
             ->openUrlInNewTab();
     }
