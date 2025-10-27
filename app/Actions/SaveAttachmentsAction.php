@@ -14,6 +14,10 @@ use function Safe\unlink;
 
 class SaveAttachmentsAction
 {
+    /**
+     * @param  array<int, string>  $attachments
+     * @param  array<string, string>  $data
+     */
     public function execute(HasMedia $record, array $attachments, array $data, string $disk = 'attachments'): void
     {
         $dataAttachments = [];
@@ -23,6 +27,7 @@ class SaveAttachmentsAction
                 continue;
             }
 
+            /** @var string $path */
             $path = $data[$attachment];
 
             // Metodo compatibile con Laravel 9+ e Flysystem 3.x
@@ -33,16 +38,16 @@ class SaveAttachmentsAction
             }
 
             // Ottieni il contenuto del file prima che venga eliminato
+            /** @var string $fileContent */
             $fileContent = $storage->get($path);
             $tempPath = tempnam(sys_get_temp_dir(), 'media_');
 
             file_put_contents($tempPath, $fileContent);
 
             try {
-                $media = $record->addMedia($tempPath)->usingFileName(basename($path))->toMediaCollection(
-                    $attachment,
-                    $disk,
-                );
+                $media = $record->addMedia($tempPath)
+                    ->usingFileName(basename($path))
+                    ->toMediaCollection($attachment, $disk);
 
                 $dataAttachments[$attachment] = $media->getPathRelativeToRoot();
             } finally {
@@ -58,10 +63,16 @@ class SaveAttachmentsAction
         }
     }
 
+    /**
+     * @param  array<int, string>  $attachments
+     * @param  array<string, string>  $data
+     */
     public function executeOLD(HasMedia $record, array $attachments, array $data, string $disk = 'attachments'): void
     {
+        /** @var array<string, string> $data_attachments */
         $data_attachments = [];
         foreach ($attachments as $attachment) {
+            /** @var string $path */
             $path = $data[$attachment];
             $full_path = Storage::disk($disk)->path($path);
             // *
@@ -75,12 +86,13 @@ class SaveAttachmentsAction
             if (! method_exists($record, 'addMediaFromDisk')) {
                 throw new Exception('Method addMediaFromDisk not found');
             }
-            $media = $record
-                ->addMediaFromDisk($path, $disk)
-                // $media=$record->addMediaFromRequest($attachment)
-
-                // $media=$record->addMedia($full_path)
-                ->toMediaCollection($attachment);
+            /** @var \Spatie\MediaLibrary\MediaCollections\FileAdder $mediaAdder */
+            $mediaAdder = $record->addMediaFromDisk($path, $disk);
+            if ($mediaAdder === null) {
+                continue;
+            }
+            /** @var \Spatie\MediaLibrary\MediaCollections\Models\Media $media */
+            $media = $mediaAdder->toMediaCollection($attachment);
             $data_attachments[$attachment] = $media->getPathRelativeToRoot();
         }
         $record->update($data_attachments);

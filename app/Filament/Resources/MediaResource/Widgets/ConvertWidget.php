@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use Modules\Media\Filament\Resources\MediaResource;
 use Modules\Media\Models\Media;
+use ProtoneMedia\LaravelFFMpeg\Exporters\MediaExporter;
 use ProtoneMedia\LaravelFFMpeg\Support\FFMpeg;
 
 class ConvertWidget extends Widget
@@ -50,27 +51,36 @@ class ConvertWidget extends Widget
         /*
          * -preset ultrafast.
          */
-        FFMpeg::fromDisk($disk_mp4)
+        /** @var MediaExporter $export */
+        $export = FFMpeg::fromDisk($disk_mp4)
             ->open($file_mp4)
-            ->export()
-            // ->addFilter(function (VideoFilters $filters) {
-            //    $filters->resize(new \FFMpeg\Coordinate\Dimension(640, 480));
-            // })
-            // ->resize(640, 480)
-            ->onProgress(function (float $percentage, float $remaining, float $rate): void {
-                $this->percentage = $percentage;
-                $this->remaining = $remaining;
-                $this->rate = $rate;
-                $msg = "{$percentage}% transcoded";
-                $msg .= "{$remaining} seconds left at rate: {$rate}";
-                Notification::make()
-                    ->title($msg)
-                    ->success()
-                    ->send();
-            })
-            ->toDisk($disk_mp4)
-            ->inFormat($format)
-            ->save($file_new);
+            ->export();
+
+        $export->onProgress(function (float $percentage, float $remaining, float $rate): void {
+            $this->percentage = $percentage;
+            $this->remaining = $remaining;
+            $this->rate = $rate;
+            $msg = "{$percentage}% transcoded";
+            $msg .= "{$remaining} seconds left at rate: {$rate}";
+            Notification::make()
+                ->title($msg)
+                ->success()
+                ->send();
+        });
+
+        $toDisk = $export->toDisk($disk_mp4);
+
+        if (! is_object($toDisk) || ! method_exists($toDisk, 'inFormat')) {
+            throw new \Exception('Failed to set disk');
+        }
+
+        $formatted = $toDisk->inFormat($format);
+
+        if (! is_object($formatted) || ! method_exists($formatted, 'save')) {
+            throw new \Exception('Failed to set format');
+        }
+
+        $formatted->save($file_new);
 
         while ($this->percentage < 100) {
             // Stream the current count to the browser...
