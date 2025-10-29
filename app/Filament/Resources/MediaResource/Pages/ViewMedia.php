@@ -19,7 +19,6 @@ use Modules\Media\Filament\Infolists\VideoEntry;
 use Modules\Media\Filament\Resources\MediaConvertResource;
 use Modules\Media\Filament\Resources\MediaResource;
 use Modules\Media\Filament\Resources\MediaResource\Widgets\ConvertWidget;
-use Modules\Media\Models\Media;
 use Modules\Xot\Filament\Resources\Pages\XotBaseViewRecord;
 use Override;
 
@@ -40,13 +39,13 @@ class ViewMedia extends XotBaseViewRecord
                 ->schema([
                     Section::make()->schema([
                         ImageEntry::make('url')
-                            ->defaultImageUrl(fn (Media $record): string => $record->getUrl())
+                            ->defaultImageUrl(fn ($record) => $record->getUrl())
                             ->size(500)
-                            ->visible(fn (Media $record): bool => $record->type === 'image'),
+                            ->visible(fn ($record): bool => $record->type === 'image'),
                         VideoEntry::make('url')
-                            ->defaultImageUrl(fn (Media $record): string => $record->getUrl())
+                            ->defaultImageUrl(fn ($record) => $record->getUrl())
                             ->size(500)
-                            ->visible(fn (Media $record): bool => $record->type === 'video'),
+                            ->visible(fn ($record): bool => $record->type === 'video'),
                     ]),
                     Section::make()->schema([
                         Actions::make([
@@ -54,16 +53,18 @@ class ViewMedia extends XotBaseViewRecord
                                 ->tooltip('convert')
                                 ->icon('heroicon-o-scale')
                                 ->schema(MediaConvertResource::getFormSchema())
-                                ->action(function (Media $record, array $data): void {
+                                ->action(function ($record, array $data): void {
                                     $data['disk'] = $record->disk;
                                     $data['file'] = $record->path.'/'.$record->file_name;
                                     $convert_data = ConvertData::from($data);
-
-                                    /** @var array<string, mixed> $attributes */
-                                    $attributes = $convert_data->all();
-                                    $record->mediaConverts()->create($attributes);
+                                    $record->mediaConverts()->create($convert_data->toArray());
                                 }),
                         ]),
+                        TextEntry::make('name'),
+                        TextEntry::make('collection_name'),
+                        TextEntry::make('mime_type'),
+                        TextEntry::make('human_readable_size'),
+                        TextEntry::make('created_at'),
                     ]),
                 ]),
             RepeatableEntry::make('entry_conversions')

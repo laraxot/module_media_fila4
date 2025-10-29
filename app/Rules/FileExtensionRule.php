@@ -13,12 +13,9 @@ class FileExtensionRule implements Rule
 {
     protected array $validExtensions = [];
 
-    /**
-     * @param  array<int, string>  $validExtensions
-     */
     public function __construct(array $validExtensions = [])
     {
-        $this->validExtensions = array_map(static fn (string $ext): string => mb_strtolower($ext), $validExtensions);
+        $this->validExtensions = array_map(mb_strtolower(...), $validExtensions);
     }
 
     /**
