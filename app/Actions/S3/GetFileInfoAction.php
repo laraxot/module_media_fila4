@@ -9,7 +9,7 @@ use Aws\S3\Exception\S3Exception;
 class GetFileInfoAction extends BaseS3Action
 {
     /**
-     * Get detailed file information from S3
+     * Get detailed file information from S3.
      *
      * @return array<string, mixed>
      */
