@@ -139,7 +139,7 @@ class S3Test extends XotBasePage
      */
     public function test_s3_connection(): void
     {
-        $this->debugResults['s3_connection'] = $this->testS3ConnectionDetails();
+        $this->debugResults['s3_connection'] = $this->test_s3_connection_details();
         $this->updateDebugOutput();
     }
 
@@ -148,7 +148,7 @@ class S3Test extends XotBasePage
      */
     public function test_permissions(): void
     {
-        $this->debugResults['permissions'] = $this->testS3Permissions();
+        $this->debugResults['permissions'] = $this->test_s3_permissions();
         $this->updateDebugOutput();
     }
 
@@ -157,7 +157,7 @@ class S3Test extends XotBasePage
      */
     public function test_cloud_front(): void
     {
-        $this->debugResults['cloudfront'] = $this->testCloudFrontConnection();
+        $this->debugResults['cloudfront'] = $this->test_cloud_front_connection();
         $this->updateDebugOutput();
     }
 
@@ -194,7 +194,7 @@ class S3Test extends XotBasePage
      */
     public function test_file_operations(): void
     {
-        $this->debugResults['file_operations'] = $this->testFileUploadDownload();
+        $this->debugResults['file_operations'] = $this->test_file_upload_download();
         $this->updateDebugOutput();
 
         Notification::make()

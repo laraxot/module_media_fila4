@@ -50,27 +50,43 @@ class ConvertWidget extends Widget
         /*
          * -preset ultrafast.
          */
-        FFMpeg::fromDisk($disk_mp4)
+        $exportedMedia = FFMpeg::fromDisk($disk_mp4)
             ->open($file_mp4)
-            ->export()
-            // ->addFilter(function (VideoFilters $filters) {
-            //    $filters->resize(new \FFMpeg\Coordinate\Dimension(640, 480));
-            // })
-            // ->resize(640, 480)
-            ->onProgress(function (float $percentage, float $remaining, float $rate): void {
-                $this->percentage = $percentage;
-                $this->remaining = $remaining;
-                $this->rate = $rate;
-                $msg = "{$percentage}% transcoded";
-                $msg .= "{$remaining} seconds left at rate: {$rate}";
-                Notification::make()
-                    ->title($msg)
-                    ->success()
-                    ->send();
-            })
-            ->toDisk($disk_mp4)
-            ->inFormat($format)
-            ->save($file_new);
+            ->export();
+        // ->addFilter(function (VideoFilters $filters) {
+        //    $filters->resize(new \FFMpeg\Coordinate\Dimension(640, 480));
+        // })
+        // ->resize(640, 480)
+
+        $exportedMedia->onProgress(function (float $percentage, float $remaining, float $rate): void {
+            $this->percentage = $percentage;
+            $this->remaining = $remaining;
+            $this->rate = $rate;
+            $msg = "{$percentage}% transcoded";
+            $msg .= "{$remaining} seconds left at rate: {$rate}";
+            Notification::make()
+                ->title($msg)
+                ->success()
+                ->send();
+        });
+
+        /** @phpstan-ignore-next-line - FFMpeg fluent API */
+        $toDiskMedia = $exportedMedia->toDisk($disk_mp4);
+        if ($toDiskMedia === null) {
+            throw new \RuntimeException('Failed to export media to disk');
+        }
+
+        /** @phpstan-ignore-next-line - FFMpeg fluent API */
+        $formattedMedia = $toDiskMedia->inFormat($format);
+        if ($formattedMedia === null || ! is_object($formattedMedia)) {
+            throw new \RuntimeException('Failed to format media');
+        }
+
+        if (! method_exists($formattedMedia, 'save')) {
+            throw new \RuntimeException('Formatted media does not have save method');
+        }
+
+        $formattedMedia->save($file_new);
 
         while ($this->percentage < 100) {
             // Stream the current count to the browser...

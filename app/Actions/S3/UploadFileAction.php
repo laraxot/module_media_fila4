@@ -69,6 +69,7 @@ class UploadFileAction extends BaseS3Action
                 'fileSize' => filesize($localFilePath),
             ]);
 
+            /** @var array{ObjectURL?: string, ETag?: string} $result AWS SDK returns array */
             $result = $uploader->upload();
 
             // Close the file after successful upload

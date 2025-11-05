@@ -207,13 +207,13 @@ class AwsTest extends XotBasePage
 
     public function runFullDiagnostic(): void
     {
-        $this->testS3Connection();
-        $this->testS3Permissions();
-        $this->testS3FileOperations();
-        $this->testCloudFrontConfig();
-        $this->testCloudFrontSignedUrls();
-        $this->testIamCredentials();
-        $this->testIamPolicies();
+        $this->test_s3_connection();
+        $this->test_s3_permissions();
+        $this->test_s3_file_operations();
+        $this->test_cloud_front_config();
+        $this->test_cloud_front_signed_urls();
+        $this->test_iam_credentials();
+        $this->test_iam_policies();
 
         $this->testResults['full'] = [
             'status' => 'completed',
