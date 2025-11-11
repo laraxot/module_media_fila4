@@ -39,13 +39,13 @@ class ViewMedia extends XotBaseViewRecord
                 ->schema([
                     Section::make()->schema([
                         ImageEntry::make('url')
-                            ->defaultImageUrl(fn ($record) => $record->getUrl())
+                            ->defaultImageUrl(fn (\Modules\Media\Models\Media $record) => $record->getUrl())
                             ->size(500)
-                            ->visible(fn ($record): bool => $record->type === 'image'),
+                            ->visible(fn (\Modules\Media\Models\Media $record): bool => $record->type === 'image'),
                         VideoEntry::make('url')
-                            ->defaultImageUrl(fn ($record) => $record->getUrl())
+                            ->defaultImageUrl(fn (\Modules\Media\Models\Media $record) => $record->getUrl())
                             ->size(500)
-                            ->visible(fn ($record): bool => $record->type === 'video'),
+                            ->visible(fn (\Modules\Media\Models\Media $record): bool => $record->type === 'video'),
                     ]),
                     Section::make()->schema([
                         Actions::make([
@@ -53,11 +53,16 @@ class ViewMedia extends XotBaseViewRecord
                                 ->tooltip('convert')
                                 ->icon('heroicon-o-scale')
                                 ->schema(MediaConvertResource::getFormSchema())
-                                ->action(function ($record, array $data): void {
-                                    $data['disk'] = $record->disk;
-                                    $data['file'] = $record->path.'/'.$record->file_name;
-                                    $convert_data = ConvertData::from($data);
-                                    $record->mediaConverts()->create($convert_data->toArray());
+                                ->action(function (\Modules\Media\Models\Media $record, array $data): void {
+                                    /** @var array<string, mixed> $actionData */
+                                    $actionData = $data;
+                                    $actionData['disk'] = (string) $record->disk;
+                                    $actionData['file'] = (string) $record->path.'/'.(string) $record->file_name;
+                                    $convert_data = ConvertData::from($actionData);
+                                    
+                                    /** @var array<string, mixed> $convertArray */
+                                    $convertArray = $convert_data->toArray();
+                                    $record->mediaConverts()->create($convertArray);
                                 }),
                         ]),
                         TextEntry::make('name'),

@@ -16,31 +16,47 @@ class IconMediaColumn extends IconColumn
         parent::setUp();
         $attachment = $this->getName();
 
-        $this->default(fn ($record) => $record->getFirstMedia($attachment))
+        $this->default(function ($record) use ($attachment) {
+                if (is_object($record) && method_exists($record, 'getFirstMedia')) {
+                    return $record->getFirstMedia($attachment);
+                }
+                return null;
+            })
             ->icon('heroicon-o-document-text')
-            ->color(fn ($record) => $record->getFirstMedia($attachment) ? 'success' : 'danger')
-            ->tooltip(fn ($record) => $record->getFirstMedia($attachment)->file_name ?? 'Documento non caricato')
-            /*
-             * ->url(function($record) use ($attachment){
-             * $media = $record->getFirstMedia($attachment);
-             * if (!$media) {
-             * return;
-             * }
-             * $signedUrl =$media->getUrl();
-             * //$signedUrl = app(GetCloudFrontSignedUrlAction::class)->execute($media->getPath(), 60);
-             * return $signedUrl;
-             * })
-             * ->openUrlInNewTab()
-             */
-
-            ->action(function ($record, Request $request) use ($attachment) {
-                // @phpstan-ignore method.nonObject
+            ->color(function ($record) use ($attachment): string {
+                if (is_object($record) && method_exists($record, 'getFirstMedia')) {
+                    return $record->getFirstMedia($attachment) ? 'success' : 'danger';
+                }
+                return 'danger';
+            })
+            ->tooltip(function ($record) use ($attachment): string {
+                if (is_object($record) && method_exists($record, 'getFirstMedia')) {
+                    $media = $record->getFirstMedia($attachment);
+                    if (is_object($media) && property_exists($media, 'file_name') && is_string($media->file_name)) {
+                        return $media->file_name;
+                    }
+                }
+                return 'Documento non caricato';
+            })
+            ->action(function (array $arguments, Request $request) use ($attachment) {
+                // Skip action if record is not available or doesn't have media capabilities
+                if (! isset($arguments['record'])) {
+                    return null;
+                }
+                
+                $record = $arguments['record'];
+                
+                // Verify record is an object and has the required method
+                if (! is_object($record) || ! method_exists($record, 'getFirstMedia')) {
+                    return null;
+                }
+                
+                /** @var \Spatie\MediaLibrary\MediaCollections\Models\Media|null $media */
                 $media = $record->getFirstMedia($attachment);
-                if (! $media) {
-                    return;
+                if ($media === null) {
+                    return null;
                 }
 
-                // dddx($media->getPath());
                 return $media->toInlineResponse($request);
 
                 // return $media->toResponse($request);
