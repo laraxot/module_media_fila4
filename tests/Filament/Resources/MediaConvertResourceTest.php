@@ -15,11 +15,7 @@ test('get form schema returns expected components', function (): void {
     expect($form)->toBeArray();
     expect($form)->not->toBeEmpty();
 
-<<<<<<< HEAD
     $componentClasses = array_map(get_class(...), $form);
-=======
-    $componentClasses = array_map(get_class(...), $schema);
->>>>>>> 1999eb3 (.)
 
     expect($componentClasses)->toContain(Radio::class);
     expect($componentClasses)->toContain(TextInput::class);
