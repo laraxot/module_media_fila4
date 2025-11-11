@@ -211,9 +211,6 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media as SpatieMedia;
  * @method static MediaCollection<int, static> get($columns = ['*'])
  * @method static MediaCollection<int, static> all($columns = ['*'])
  * @method static MediaCollection<int, static> get($columns = ['*'])
- *
- * @mixin Eloquent
- *
  * @method static MediaCollection<int, static> all($columns = ['*'])
  * @method static MediaCollection<int, static> get($columns = ['*'])
  * @method static MediaCollection<int, static> all($columns = ['*'])
@@ -257,7 +254,7 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media as SpatieMedia;
  */
 class Media extends SpatieMedia
 {
-    use HasFactory;
+    use \Modules\Xot\Models\Traits\HasXotFactory;
     use Updater;
 
     /** @var string */
@@ -371,13 +368,5 @@ class Media extends SpatieMedia
         ];
     }
 
-    /**
-     * Create a new factory instance for the model.
-     *
-     * @return Factory<static>
-     */
-    protected static function newFactory()
-    {
-        return app(GetFactoryAction::class)->execute(static::class);
-    }
+   
 }

@@ -59,17 +59,11 @@ use Webmozart\Assert\Assert;
  */
 class TemporaryUpload extends BaseModel implements HasMedia
 {
-    use HasFactory;
+    use \Modules\Xot\Models\Traits\HasXotFactory;
     use InteractsWithMedia;
     use MassPrunable;
 
-    /**
-     * Create a new factory instance for the model.
-     */
-    protected static function newFactory(): TemporaryUploadFactory
-    {
-        return TemporaryUploadFactory::new();
-    }
+   
 
     public static ?Closure $manipulatePreview = null;
 

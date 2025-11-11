@@ -24,7 +24,8 @@ class GetAttachmentsSchemaAction
             $sessionDir = $prefix.'/'.$sessionDir;
         }
         foreach ($attachments as $attachment) {
-            $form[$attachment] = FileUpload::make($attachment)
+            $attachmentStr = (string) $attachment;
+            $form[$attachmentStr] = FileUpload::make($attachmentStr)
                 // $form[$attachment]=SpatieMediaLibraryFileUpload::make($attachment)
                 ->directory($sessionDir)
                 ->disk($disk)
@@ -34,7 +35,7 @@ class GetAttachmentsSchemaAction
                 ->required()
                 ->previewable(false)
                 // ->saveUploadedFiles()
-                ->afterStateUpdated(function ($state, Set $set) use ($attachment, $sessionDir, $disk) {
+                ->afterStateUpdated(function ($state, Set $set) use ($attachment, $sessionDir, $disk): void {
                     if (! $state) {
                         return;
                     }
@@ -54,6 +55,8 @@ class GetAttachmentsSchemaAction
                         }
                     }
 
+                    // Set expects Component|string, pass attachment as string
+                    \Webmozart\Assert\Assert::string($attachment, 'Attachment must be string');
                     $set($attachment, $sessionFiles);
                 });
         }
