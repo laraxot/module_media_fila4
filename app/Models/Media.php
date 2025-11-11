@@ -249,7 +249,6 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media as SpatieMedia;
  */
 class Media extends SpatieMedia
 {
-    /** @use HasFactory<ModulesMediaDatabaseFactoriesMediaFactory> */
     use \Modules\Xot\Models\Traits\HasXotFactory;
     use Updater;
 
