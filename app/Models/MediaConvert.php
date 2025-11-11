@@ -70,9 +70,9 @@ use Modules\Xot\Contracts\ProfileContract;
  * @property-read ProfileContract|null $creator
  * @property-read ProfileContract|null $updater
  *
- * @mixin IdeHelperMediaConvert
  * @mixin \Eloquent
  */
+/** */
 class MediaConvert extends BaseModel
 {
     /** @var list<string> */
