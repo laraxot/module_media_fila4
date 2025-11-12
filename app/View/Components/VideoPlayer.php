@@ -22,14 +22,6 @@ class VideoPlayer extends Component
      *
      * @return void
      */
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> b93ef594b4 (.)
->>>>>>> e9b0959 (.)
     public function __construct(
         public string $mp4Src,
         public int $currentTime,
@@ -41,9 +33,9 @@ class VideoPlayer extends Component
 =======
         null|string $driver = null,
     ) {
-<<<<<<< HEAD
         $xot = XotData::make();
         Assert::string($driver ??= $xot->video_player, __FILE__ . ':' . __LINE__ . ' - ' . class_basename(__CLASS__));
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -87,6 +79,8 @@ class VideoPlayer extends Component
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
 >>>>>>> 47a54fe (.)
+=======
+>>>>>>> f1c6d6e (.)
 
         $this->driver = $driver;
     }

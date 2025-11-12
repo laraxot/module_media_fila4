@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 =======
@@ -26,10 +27,13 @@
 >>>>>>> a80d398 (.)
 =======
 >>>>>>> 47a54fe (.)
+=======
+>>>>>>> f1c6d6e (.)
 # ==============================================
 # LARAXOT MODULE MEDIA - .GITIGNORE
 # ==============================================
 # Modulo Media Laraxot - Template standardizzato
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -49,11 +53,15 @@
 >>>>>>> 80a2320 (.)
 =======
 >>>>>>> 47a54fe (.)
+=======
+# Ultimo aggiornamento: 2025-01-06
+>>>>>>> f1c6d6e (.)
 # ==============================================
 
 # ==============================================
 # DEPENDENCIES & PACKAGES
 # ==============================================
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -232,6 +240,9 @@ lerna-debug.log*
 # Dependencies and packages
 =======
 >>>>>>> b93ef594b4 (.)
+=======
+vendor/
+>>>>>>> f1c6d6e (.)
 /vendor/
 node_modules/
 /node_modules/
@@ -251,10 +262,6 @@ dist/
 docs/cache/
 cache/
 
-<<<<<<< HEAD
-# Laravel specific
->>>>>>> a12f125f4a (.)
-=======
 # ==============================================
 # CACHE & TEMPORARY FILES
 # ==============================================
@@ -285,6 +292,7 @@ lerna-debug.log*
 # ==============================================
 # LARAVEL SPECIFIC
 # ==============================================
+<<<<<<< HEAD
 >>>>>>> b93ef594b4 (.)
 >>>>>>> 47a54fe (.)
 =======
@@ -332,6 +340,8 @@ build/
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
 >>>>>>> 47a54fe (.)
+=======
+>>>>>>> f1c6d6e (.)
 bootstrap/compiled.php
 app/storage/
 public/storage
@@ -340,6 +350,7 @@ public_html/storage
 public_html/hot
 storage/*.key
 .env
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -366,6 +377,8 @@ storage/*.key
 >>>>>>> a80d398 (.)
 =======
 >>>>>>> 47a54fe (.)
+=======
+>>>>>>> f1c6d6e (.)
 .env.*
 !.env.example
 
@@ -422,6 +435,7 @@ docs/phpstan/
 docs/cache/
 
 # ==============================================
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -686,6 +700,8 @@ cache/
 =======
 
 # ==============================================
+=======
+>>>>>>> f1c6d6e (.)
 # OLD DIRECTORIES (LEGACY CLEANUP)
 # ==============================================
 resources/views/Components_old/
@@ -728,6 +744,7 @@ test_media_files/
 *.fila2
 laravel
 public_html
+<<<<<<< HEAD
 >>>>>>> b93ef594b4 (.)
 >>>>>>> 47a54fe (.)
 =======
@@ -782,3 +799,5 @@ public_html
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
 >>>>>>> 47a54fe (.)
+=======
+>>>>>>> f1c6d6e (.)

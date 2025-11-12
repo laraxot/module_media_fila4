@@ -9,6 +9,7 @@ namespace Modules\Media\Http\Controllers;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 abstract class BaseController {}
 =======
 abstract class BaseController
@@ -59,3 +60,8 @@ abstract class BaseController {}
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
 >>>>>>> 47a54fe (.)
+=======
+abstract class BaseController
+{
+}
+>>>>>>> f1c6d6e (.)
