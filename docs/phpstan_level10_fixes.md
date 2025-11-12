@@ -89,6 +89,7 @@ Questa soluzione mantiene la funzionalità originale migliorando al contempo la 
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 **Problema**: Diversi file del modulo Media contenevano conflitti di merge non risolti, indicati da marcatori git (`=======`, `>>>>>>>`, ecc.). Questi conflitti impedivano la corretta esecuzione del codice e causavano errori di sintassi.
 **Problema**: Diversi file del modulo Media contenevano conflitti di merge non risolti, indicati da marcatori git . Questi conflitti impedivano la corretta esecuzione del codice e causavano errori di sintassi.
 =======
@@ -116,6 +117,10 @@ Questa soluzione mantiene la funzionalità originale migliorando al contempo la 
 **Problema**: Diversi file del modulo Media contenevano conflitti di merge non risolti, indicati da marcatori git (`=======`, `>>>>>>>`, ecc.). Questi conflitti impedivano la corretta esecuzione del codice e causavano errori di sintassi.
 **Problema**: Diversi file del modulo Media contenevano conflitti di merge non risolti, indicati da marcatori git . Questi conflitti impedivano la corretta esecuzione del codice e causavano errori di sintassi.
 >>>>>>> a80d398 (.)
+=======
+**Problema**: Diversi file del modulo Media contenevano conflitti di merge non risolti, indicati da marcatori git (`=======`, `>>>>>>>`, ecc.). Questi conflitti impedivano la corretta esecuzione del codice e causavano errori di sintassi.
+**Problema**: Diversi file del modulo Media contenevano conflitti di merge non risolti, indicati da marcatori git . Questi conflitti impedivano la corretta esecuzione del codice e causavano errori di sintassi.
+>>>>>>> 0caa3cf (.)
 
 **Soluzione implementata**:
 1. Analisi sistematica dei conflitti di merge in ciascun file
@@ -150,6 +155,7 @@ Questa soluzione mantiene la funzionalità originale migliorando al contempo la 
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 > **Collegamento globale:** Questa documentazione locale dettaglia i casi concreti e le decisioni architetturali adottate nel modulo Media. Per le strategie generali e le best practices, consulta sempre anche la documentazione globale in [docs/git_conflict_resolution.md](../../../../docs/git_conflict_resolution.md). 
 =======
 > **Collegamento globale:** Questa documentazione locale dettaglia i casi concreti e le decisioni architetturali adottate nel modulo Media. Per le strategie generali e le best practices, consulta sempre anche la documentazione globale in [docs/git_conflict_resolution.md](../../../../docs/git_conflict_resolution.md). 
@@ -174,3 +180,6 @@ Questa soluzione mantiene la funzionalità originale migliorando al contempo la 
 =======
 > **Collegamento globale:** Questa documentazione locale dettaglia i casi concreti e le decisioni architetturali adottate nel modulo Media. Per le strategie generali e le best practices, consulta sempre anche la documentazione globale in [docs/git_conflict_resolution.md](../../../../docs/git_conflict_resolution.md). 
 >>>>>>> a80d398 (.)
+=======
+> **Collegamento globale:** Questa documentazione locale dettaglia i casi concreti e le decisioni architetturali adottate nel modulo Media. Per le strategie generali e le best practices, consulta sempre anche la documentazione globale in [docs/git_conflict_resolution.md](../../../../docs/git_conflict_resolution.md). 
+>>>>>>> 0caa3cf (.)
