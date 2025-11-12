@@ -18,11 +18,7 @@ use Filament\Forms;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
 use Filament\Forms\Components\TextInput;
-<<<<<<< HEAD
-use Filament\Schemas\Schema;
-=======
 use Filament\Forms\Form;
->>>>>>> e361059 (.)
 use Filament\Pages\SubNavigationPosition;
 use Filament\Resources\Resource as FilamentResource;
 use Illuminate\Contracts\Support\Htmlable;
