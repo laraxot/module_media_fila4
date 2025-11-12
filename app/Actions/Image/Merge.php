@@ -10,10 +10,15 @@ namespace Modules\Media\Actions\Image;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Intervention\Image\Drivers\Gd\Driver as GdDriver;
 use Intervention\Image\ImageManager as InterventionImageManager;
 =======
+=======
+>>>>>>> 492b8f5 (.)
 use Intervention\Image\ImageManager as InterventionImageManager;
+=======
+>>>>>>> 9359fe7 (.)
 use Intervention\Image\Drivers\Gd\Driver as GdDriver;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -86,10 +91,13 @@ class Merge
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f10d8e1 (.)
 =======
 >>>>>>> 16fa8f8 (.)
+=======
+>>>>>>> 492b8f5 (.)
         // Intervention Image v3: il costruttore richiede un DriverInterface
 <<<<<<< HEAD
         $manager = new InterventionImageManager(new GdDriver);
@@ -113,6 +121,7 @@ class Merge
 
         // Inserisce image2 sopra image1 (centrato) - v3 usa place()
         $image1->place($image2, 'center');
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -167,6 +176,10 @@ class Merge
 >>>>>>> f10d8e1 (.)
 =======
 >>>>>>> 16fa8f8 (.)
+=======
+=======
+>>>>>>> 9359fe7 (.)
+>>>>>>> 492b8f5 (.)
 
         // Salva il risultato
         $image1->save($outputPath);
