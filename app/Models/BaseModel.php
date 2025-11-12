@@ -11,10 +11,10 @@ use Modules\Xot\Traits\Updater;
 /**
  * Class BaseModel.
  *
- * @template TFactory of \Illuminate\Database\Eloquent\Factories\Factory
  */
 abstract class BaseModel extends Model
 {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     use \Modules\Xot\Models\Traits\HasXotFactory;
@@ -23,6 +23,8 @@ abstract class BaseModel extends Model
 >>>>>>> 5200b63 (.)
 =======
     /** @use HasFactory<TFactory> */
+=======
+>>>>>>> 1b9d086 (.)
     use \Modules\Xot\Models\Traits\HasXotFactory;
 >>>>>>> 13d1d7e (.)
 
