@@ -35,9 +35,7 @@ class FileExtensionRule implements Rule
 =======
     public function __construct(array $validExtensions = [])
     {
-        $this->validExtensions = array_map(function($extension) {
-            return mb_strtolower((string) $extension);
-        }, $validExtensions);
+        $this->validExtensions = array_map(mb_strtolower(...), $validExtensions);
     }
 
     /**

@@ -147,9 +147,6 @@ class ViewMedia extends XotBaseViewRecord
      * @return array<int, Component>
      */
     #[Override]
-    /**
-     * @return array<string, mixed>
-     */
     public function getInfolistSchema(): array
     {
         return [
@@ -221,27 +218,13 @@ class ViewMedia extends XotBaseViewRecord
 >>>>>>> 9a7a2fa (.)
                 Section::make()->schema([
                     ImageEntry::make('url')
-                        ->defaultImageUrl(function($record) {
-                            if (is_object($record) && method_exists($record, 'getUrl')) {
-                                return $record->getUrl();
-                            }
-                            return null;
-                        })
+                        ->defaultImageUrl(fn($record) => $record->getUrl())
                         ->size(500)
-                        ->visible(function($record): bool {
-                            return is_object($record) && property_exists($record, 'type') && $record->type === 'image';
-                        }),
+                        ->visible(fn($record): bool => $record->type === 'image'),
                     VideoEntry::make('url')
-                        ->defaultImageUrl(function($record) {
-                            if (is_object($record) && method_exists($record, 'getUrl')) {
-                                return $record->getUrl();
-                            }
-                            return null;
-                        })
+                        ->defaultImageUrl(fn($record) => $record->getUrl())
                         ->size(500)
-                        ->visible(function($record): bool {
-                            return is_object($record) && property_exists($record, 'type') && $record->type === 'video';
-                        }),
+                        ->visible(fn($record): bool => $record->type === 'video'),
                 ]),
                 Section::make()->schema([
                     Actions::make([
@@ -250,23 +233,10 @@ class ViewMedia extends XotBaseViewRecord
                             ->icon('heroicon-o-scale')
                             ->schema(MediaConvertResource::getFormSchema())
                             ->action(function ($record, array $data): void {
-                                if (is_object($record) && property_exists($record, 'disk') && property_exists($record, 'path') && property_exists($record, 'file_name')) {
-                                    $disk = $record->disk;
-                                    $path = $record->path;
-                                    $fileName = $record->file_name;
-                                    
-                                    if (is_string($disk) && is_string($path) && is_string($fileName)) {
-                                        $data['disk'] = $disk;
-                                        $data['file'] = $path . '/' . $fileName;
-                                    }
-                                }
+                                $data['disk'] = $record->disk;
+                                $data['file'] = $record->path . '/' . $record->file_name;
                                 $convert_data = ConvertData::from($data);
-                                if (is_object($record) && method_exists($record, 'mediaConverts')) {
-                                    $relation = $record->mediaConverts();
-                                    if (is_object($relation) && method_exists($relation, 'create')) {
-                                        $relation->create($convert_data->toArray());
-                                    }
-                                }
+                                $record->mediaConverts()->create($convert_data->toArray());
                             }),
                     ]),
                     TextEntry::make('name'),
