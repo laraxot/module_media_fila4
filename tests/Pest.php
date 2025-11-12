@@ -541,23 +541,42 @@ expect()->extend('toBeMediaCollection', function () {
 =======
 >>>>>>> 22b1256 (.)
 
+/**
+ * @param array<string, mixed> $attributes
+ */
 function createMedia(array $attributes = []): Media
 {
-    return Media::factory()->create($attributes);
+    $Media = Media::factory()->create($attributes);
+    assert($Media instanceof Media);
+    return $Media;
 }
 
+/**
+ * @param array<string, mixed> $attributes
+ */
 function makeMedia(array $attributes = []): Media
 {
-    return Media::factory()->make($attributes);
+    $Media = Media::factory()->make($attributes);
+    assert($Media instanceof Media);
+    return $Media;
 }
 
+/**
+ * @param array<string, mixed> $attributes
+ */
 function createMediaCollection(array $attributes = []): MediaCollection
 {
-    return MediaCollection::factory()->create($attributes);
+    $MediaCollection = MediaCollection::factory()->create($attributes);
+    assert($MediaCollection instanceof MediaCollection);
+    return $MediaCollection;
 }
 
+/**
+ * @param array<string, mixed> $attributes
+ */
 function makeMediaCollection(array $attributes = []): MediaCollection
 {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -647,4 +666,9 @@ function makeMediaCollection(array $attributes = []): \Modules\Media\Models\Medi
 >>>>>>> fa051fc (.)
 =======
 >>>>>>> 22b1256 (.)
+=======
+    $MediaCollection = MediaCollection::factory()->make($attributes);
+    assert($MediaCollection instanceof MediaCollection);
+    return $MediaCollection;
+>>>>>>> e28bed7 (.)
 }
