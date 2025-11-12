@@ -8,6 +8,7 @@ namespace Modules\Media\Actions\Image;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Intervention\Image\Drivers\Gd\Driver as GdDriver;
 use Intervention\Image\ImageManager as InterventionImageManager;
 =======
@@ -26,6 +27,8 @@ use Intervention\Image\Drivers\Gd\Driver as GdDriver;
 =======
 =======
 >>>>>>> c9ef35c (.)
+=======
+>>>>>>> 8b93fd8 (.)
 use Intervention\Image\Drivers\Gd\Driver as GdDriver;
 =======
 use Intervention\Image\ImageManager as InterventionImageManager;
@@ -36,7 +39,13 @@ use Intervention\Image\ImageManager as InterventionImageManager;
 =======
 use Intervention\Image\ImageManager as InterventionImageManager;
 >>>>>>> 9348522 (.)
+<<<<<<< HEAD
 >>>>>>> c9ef35c (.)
+=======
+=======
+use Intervention\Image\Drivers\Gd\Driver as GdDriver;
+>>>>>>> 5a393f1 (.)
+>>>>>>> 8b93fd8 (.)
 
 class Merge
 {
@@ -60,6 +69,7 @@ class Merge
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         // Intervention Image v3: il costruttore richiede un DriverInterface
 <<<<<<< HEAD
         $manager = new InterventionImageManager(new GdDriver);
@@ -77,6 +87,8 @@ class Merge
 >>>>>>> b1b659d (.)
 =======
 >>>>>>> c9ef35c (.)
+=======
+>>>>>>> 8b93fd8 (.)
 =======
 =======
 >>>>>>> 9348522 (.)
@@ -101,7 +113,12 @@ class Merge
 >>>>>>> c14635e (.)
 =======
 >>>>>>> 9348522 (.)
+<<<<<<< HEAD
 >>>>>>> c9ef35c (.)
+=======
+=======
+>>>>>>> 5a393f1 (.)
+>>>>>>> 8b93fd8 (.)
 
         // Salva il risultato
         $image1->save($outputPath);
