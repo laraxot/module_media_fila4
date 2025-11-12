@@ -103,6 +103,7 @@ Questo documento analizza tutti i modelli del modulo Media verificando la presen
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 - **<nome progetto>**: Documenti pazienti, referti medici, immagini profilo
 >>>>>>> 7df6a71 (.)
@@ -165,7 +166,13 @@ Questo documento analizza tutti i modelli del modulo Media verificando la presen
 >>>>>>> d44d947 (.)
 =======
 >>>>>>> ece6f0a (.)
+=======
+>>>>>>> 5af33b9 (.)
 - **SaluteOra**: Documenti pazienti, referti medici, immagini profilo
+=======
+- **<nome progetto>**: Documenti pazienti, referti medici, immagini profilo
+- ****: Documenti pazienti, referti medici, immagini profilo
+>>>>>>> 9348522 (.)
 - **User**: Avatar utenti, documenti identità
 - **Cms**: Immagini contenuti, allegati pagine
 - **Notify**: Allegati notifiche email
@@ -356,6 +363,7 @@ Tutti i file factory devono essere validati con PHPStan livello 9:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 - [<nome progetto> Module](../../<nome progetto>/docs/modelli_factory_seeder_analisi.md) - Documenti medici
 >>>>>>> 7df6a71 (.)
@@ -418,7 +426,13 @@ Tutti i file factory devono essere validati con PHPStan livello 9:
 >>>>>>> d44d947 (.)
 =======
 >>>>>>> ece6f0a (.)
+=======
+>>>>>>> 5af33b9 (.)
 - [SaluteOra Module](../../SaluteOra/docs/modelli_factory_seeder_analisi.md) - Documenti medici
+=======
+- [<nome progetto> Module](../../<nome progetto>/docs/modelli_factory_seeder_analisi.md) - Documenti medici
+- [<nome progetto> Module](../../../docs/modelli_factory_seeder_analisi.md) - Documenti medici
+>>>>>>> 9348522 (.)
 - [User Module](../../User/docs/modelli_factory_seeder_analisi.md) - Avatar e documenti utente
 - [Cms Module](../../Cms/docs/modelli_factory_seeder_analisi.md) - Contenuti multimediali
 - [Notify Module](../../Notify/docs/modelli_factory_seeder_analisi.md) - Allegati notifiche
