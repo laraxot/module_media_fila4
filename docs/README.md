@@ -34,6 +34,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 📁 **Media Module** - Sistema Avanzato Gestione File Multimediali
 
 [![Laravel 12.x](https://img.shields.io/badge/Laravel-12.x-red.svg)](https://laravel.com/)
@@ -745,3 +746,5 @@ $result = app(MediaService::class)->process($data);
 >>>>>>> 42a9eaf (.)
 =======
 >>>>>>> 3154445 (.)
+=======
+>>>>>>> 53e059b (.)
