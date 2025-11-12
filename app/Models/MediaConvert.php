@@ -161,6 +161,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  *
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> f41e45e (.)
  * @mixin IdeHelperMediaConvert
 =======
@@ -223,8 +224,11 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 =======
  * @mixin IdeHelperMediaConvert
 >>>>>>> 2a4b5df (.)
+=======
+>>>>>>> e28bed7 (.)
  * @mixin \Eloquent
  */
+/** */
 class MediaConvert extends BaseModel
 {
     /** @var list<string> */
