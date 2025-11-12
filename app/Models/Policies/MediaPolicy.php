@@ -22,6 +22,7 @@ use Modules\Media\Models\Media;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 =======
@@ -116,6 +117,12 @@ use Modules\Xot\Contracts\UserContract;
 =======
 use Modules\Xot\Contracts\UserContract;
 >>>>>>> f5f7069 (.)
+=======
+use Modules\Xot\Contracts\UserContract;
+=======
+use Modules\Xot\Contracts\ProfileContract;
+>>>>>>> 0a466ed (.)
+>>>>>>> c08a553 (.)
 
 class MediaPolicy extends MediaBasePolicy
 {
@@ -139,6 +146,7 @@ class MediaPolicy extends MediaBasePolicy
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 06bb10d (.)
 =======
@@ -151,10 +159,13 @@ class MediaPolicy extends MediaBasePolicy
 >>>>>>> 054dfa6 (.)
 =======
 >>>>>>> b8fda23 (.)
+=======
+>>>>>>> c08a553 (.)
     public function viewAny(UserContract $user): bool
     {
         return $user->hasPermissionTo('media.viewAny');
 =======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -208,10 +219,13 @@ class MediaPolicy extends MediaBasePolicy
 >>>>>>> 877e05f (.)
 =======
 >>>>>>> 054dfa6 (.)
+=======
+>>>>>>> c08a553 (.)
     public function viewAny(ProfileContract $user): bool
     {
         return $user->hasPermissionTo('media.viewAny'); /** @phpstan-ignore method.nonObject */
 >>>>>>> 0a466ed (.)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -275,11 +289,14 @@ class MediaPolicy extends MediaBasePolicy
     {
         return $user->hasPermissionTo('media.viewAny');
 >>>>>>> f5f7069 (.)
+=======
+>>>>>>> c08a553 (.)
     }
 
     /**
      * Determine whether the user can view the model.
      */
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -309,10 +326,13 @@ class MediaPolicy extends MediaBasePolicy
 >>>>>>> 054dfa6 (.)
 =======
 >>>>>>> b8fda23 (.)
+=======
+>>>>>>> c08a553 (.)
     public function view(UserContract $user, Media $_media): bool
     {
         return $user->hasPermissionTo('media.view');
 =======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -366,10 +386,13 @@ class MediaPolicy extends MediaBasePolicy
 >>>>>>> 877e05f (.)
 =======
 >>>>>>> 054dfa6 (.)
+=======
+>>>>>>> c08a553 (.)
     public function view(ProfileContract $user, Media $media): bool
     {
         return $user->hasPermissionTo('media.view'); /** @phpstan-ignore method.nonObject */
 >>>>>>> 0a466ed (.)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -433,11 +456,14 @@ class MediaPolicy extends MediaBasePolicy
     {
         return $user->hasPermissionTo('media.view');
 >>>>>>> f5f7069 (.)
+=======
+>>>>>>> c08a553 (.)
     }
 
     /**
      * Determine whether the user can create models.
      */
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -467,10 +493,13 @@ class MediaPolicy extends MediaBasePolicy
 >>>>>>> 054dfa6 (.)
 =======
 >>>>>>> b8fda23 (.)
+=======
+>>>>>>> c08a553 (.)
     public function create(UserContract $user): bool
     {
         return $user->hasPermissionTo('media.create');
 =======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -524,10 +553,13 @@ class MediaPolicy extends MediaBasePolicy
 >>>>>>> 877e05f (.)
 =======
 >>>>>>> 054dfa6 (.)
+=======
+>>>>>>> c08a553 (.)
     public function create(ProfileContract $user): bool
     {
         return $user->hasPermissionTo('media.create'); /** @phpstan-ignore method.nonObject */
 >>>>>>> 0a466ed (.)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -591,11 +623,14 @@ class MediaPolicy extends MediaBasePolicy
     {
         return $user->hasPermissionTo('media.create');
 >>>>>>> f5f7069 (.)
+=======
+>>>>>>> c08a553 (.)
     }
 
     /**
      * Determine whether the user can update the model.
      */
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -625,10 +660,13 @@ class MediaPolicy extends MediaBasePolicy
 >>>>>>> 054dfa6 (.)
 =======
 >>>>>>> b8fda23 (.)
+=======
+>>>>>>> c08a553 (.)
     public function update(UserContract $user, Media $_media): bool
     {
         return $user->hasPermissionTo('media.update');
 =======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -682,10 +720,13 @@ class MediaPolicy extends MediaBasePolicy
 >>>>>>> 877e05f (.)
 =======
 >>>>>>> 054dfa6 (.)
+=======
+>>>>>>> c08a553 (.)
     public function update(ProfileContract $user, Media $media): bool
     {
         return $user->hasPermissionTo('media.update'); /** @phpstan-ignore method.nonObject */
 >>>>>>> 0a466ed (.)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -749,11 +790,14 @@ class MediaPolicy extends MediaBasePolicy
     {
         return $user->hasPermissionTo('media.update');
 >>>>>>> f5f7069 (.)
+=======
+>>>>>>> c08a553 (.)
     }
 
     /**
      * Determine whether the user can delete the model.
      */
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -783,10 +827,13 @@ class MediaPolicy extends MediaBasePolicy
 >>>>>>> 054dfa6 (.)
 =======
 >>>>>>> b8fda23 (.)
+=======
+>>>>>>> c08a553 (.)
     public function delete(UserContract $user, Media $_media): bool
     {
         return $user->hasPermissionTo('media.delete');
 =======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -840,10 +887,13 @@ class MediaPolicy extends MediaBasePolicy
 >>>>>>> 877e05f (.)
 =======
 >>>>>>> 054dfa6 (.)
+=======
+>>>>>>> c08a553 (.)
     public function delete(ProfileContract $user, Media $media): bool
     {
         return $user->hasPermissionTo('media.delete'); /** @phpstan-ignore method.nonObject */
 >>>>>>> 0a466ed (.)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -907,11 +957,14 @@ class MediaPolicy extends MediaBasePolicy
     {
         return $user->hasPermissionTo('media.delete');
 >>>>>>> f5f7069 (.)
+=======
+>>>>>>> c08a553 (.)
     }
 
     /**
      * Determine whether the user can restore the model.
      */
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -941,10 +994,13 @@ class MediaPolicy extends MediaBasePolicy
 >>>>>>> 054dfa6 (.)
 =======
 >>>>>>> b8fda23 (.)
+=======
+>>>>>>> c08a553 (.)
     public function restore(UserContract $user, Media $_media): bool
     {
         return $user->hasPermissionTo('media.restore');
 =======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -998,10 +1054,13 @@ class MediaPolicy extends MediaBasePolicy
 >>>>>>> 877e05f (.)
 =======
 >>>>>>> 054dfa6 (.)
+=======
+>>>>>>> c08a553 (.)
     public function restore(ProfileContract $user, Media $media): bool
     {
         return $user->hasPermissionTo('media.restore'); /** @phpstan-ignore method.nonObject */
 >>>>>>> 0a466ed (.)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1065,11 +1124,14 @@ class MediaPolicy extends MediaBasePolicy
     {
         return $user->hasPermissionTo('media.restore');
 >>>>>>> f5f7069 (.)
+=======
+>>>>>>> c08a553 (.)
     }
 
     /**
      * Determine whether the user can permanently delete the model.
      */
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1149,9 +1211,16 @@ class MediaPolicy extends MediaBasePolicy
 >>>>>>> b8fda23 (.)
 =======
 >>>>>>> f5f7069 (.)
+=======
+>>>>>>> c08a553 (.)
     public function forceDelete(UserContract $user, Media $media): bool
     {
         return $user->hasPermissionTo('media.forceDelete');
+=======
+    public function forceDelete(ProfileContract $user, Media $media): bool
+    {
+        return $user->hasPermissionTo('media.forceDelete'); /** @phpstan-ignore method.nonObject */
+>>>>>>> 0a466ed (.)
     }
 }
 <<<<<<< HEAD

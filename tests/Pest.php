@@ -19,6 +19,7 @@ declare(strict_types=1);
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 =======
@@ -59,6 +60,8 @@ declare(strict_types=1);
 >>>>>>> b8fda23 (.)
 =======
 >>>>>>> f5f7069 (.)
+=======
+>>>>>>> c08a553 (.)
 use Modules\Media\Models\Media;
 use Modules\Media\Models\MediaCollection;
 use Modules\Media\Tests\TestCase;
@@ -101,6 +104,7 @@ expect()->extend('toBeMediaCollection', fn () => $this->toBeInstanceOf(MediaColl
  * | global functions to help you to reduce the number of lines of code in your test files.
  * |
  */
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -176,14 +180,19 @@ use Modules\Media\Tests\TestCase;
 =======
 >>>>>>> 89eb716 (.)
 =======
+>>>>>>> c08a553 (.)
+=======
 namespace Modules\Media\Tests;
 
 use Modules\Media\Models\Media;
 use Modules\Media\Models\MediaCollection;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 877e05f (.)
 =======
 >>>>>>> 054dfa6 (.)
+=======
+>>>>>>> c08a553 (.)
 
 /*
 |--------------------------------------------------------------------------
@@ -211,6 +220,7 @@ pest()->extend(TestCase::class)
 */
 
 expect()->extend('toBeMedia', function () {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     return $this->toBeInstanceOf(\Modules\Media\Models\Media::class);
@@ -350,6 +360,8 @@ expect()->extend('toBeMedia', function () {
 >>>>>>> 877e05f (.)
 =======
 >>>>>>> 054dfa6 (.)
+=======
+>>>>>>> c08a553 (.)
     return $this->toBeInstanceOf(Media::class);
 });
 
@@ -358,6 +370,7 @@ expect()->extend('toBeMediaCollection', function () {
 });
 
 /*
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -385,6 +398,8 @@ expect()->extend('toBeMediaCollection', function () {
 >>>>>>> 054dfa6 (.)
 =======
 >>>>>>> b8fda23 (.)
+=======
+>>>>>>> c08a553 (.)
 |--------------------------------------------------------------------------
 | Functions
 |--------------------------------------------------------------------------
@@ -394,6 +409,7 @@ expect()->extend('toBeMediaCollection', function () {
 | global functions to help you to reduce the number of lines of code in your test files.
 |
 */
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -460,6 +476,9 @@ expect()->extend('toBeMediaCollection', function () {
 >>>>>>> b8fda23 (.)
 =======
 >>>>>>> f5f7069 (.)
+=======
+>>>>>>> 0a466ed (.)
+>>>>>>> c08a553 (.)
 
 function createMedia(array $attributes = []): Media
 {
