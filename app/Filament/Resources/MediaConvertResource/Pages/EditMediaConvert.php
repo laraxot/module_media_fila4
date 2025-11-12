@@ -30,12 +30,4 @@ use Modules\Xot\Filament\Resources\Pages\XotBaseEditRecord;
 class EditMediaConvert extends XotBaseEditRecord
 {
     protected static string $resource = MediaConvertResource::class;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-   
->>>>>>> 0a466ed (.)
-=======
->>>>>>> 37a2da6 (.)
 }
