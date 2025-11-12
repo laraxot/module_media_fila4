@@ -26,6 +26,7 @@ class ConvertController extends Controller
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 =======
@@ -109,6 +110,9 @@ class ConvertController extends Controller
     public function __invoke(string|int $_id): View
 >>>>>>> 37a2da6 (.)
 >>>>>>> 89eb716 (.)
+=======
+    public function __invoke(string|int $_id): View
+>>>>>>> af40dd6 (.)
     {
         /**
          * @phpstan-var view-string
