@@ -28,12 +28,15 @@ use Spatie\QueueableAction\QueueableAction;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 =======
 >>>>>>> 1d21a10 (.)
 =======
 >>>>>>> b8fda23 (.)
+=======
+>>>>>>> 9a4eacb (.)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -47,6 +50,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -120,6 +124,8 @@ use Spatie\QueueableAction\QueueableAction;
 >>>>>>> 760b37c (.)
 =======
 >>>>>>> 3f513a2 (.)
+=======
+>>>>>>> 9a4eacb (.)
 /**
  * Action per la traduzione di elementi di una collezione.
  */
@@ -147,6 +153,7 @@ class GetCloudFrontSignedUrlAction
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 =======
@@ -154,10 +161,13 @@ class GetCloudFrontSignedUrlAction
 =======
 >>>>>>> b8fda23 (.)
 =======
+>>>>>>> 9a4eacb (.)
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> e9b0959 (.)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -207,6 +217,8 @@ class GetCloudFrontSignedUrlAction
 >>>>>>> 760b37c (.)
 =======
 >>>>>>> 3f513a2 (.)
+=======
+>>>>>>> 9a4eacb (.)
     public function execute(string $key, int $expiry = 30): string
     {
         $data = CloudFrontData::make();
@@ -214,6 +226,7 @@ class GetCloudFrontSignedUrlAction
         $cloudFront = new CloudFrontClient([
             'region' => $data->region,
             'version' => 'latest',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -247,6 +260,8 @@ class GetCloudFrontSignedUrlAction
 =======
 >>>>>>> b8fda23 (.)
 =======
+>>>>>>> 9a4eacb (.)
+=======
 =======
    
 =======
@@ -264,6 +279,7 @@ class GetCloudFrontSignedUrlAction
             'version' => 'latest',
 >>>>>>> b93ef594b4 (.)
 =======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -286,6 +302,8 @@ class GetCloudFrontSignedUrlAction
 =======
 =======
 >>>>>>> c08a553 (.)
+=======
+>>>>>>> 9a4eacb (.)
    
     public function execute(string $key, int $expiry = 30): string
     {
@@ -295,6 +313,7 @@ class GetCloudFrontSignedUrlAction
         $cloudFront = new CloudFrontClient([
             'region' => $data->region,
             'version' => 'latest'
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -348,15 +367,21 @@ class GetCloudFrontSignedUrlAction
 >>>>>>> 760b37c (.)
 =======
 >>>>>>> 3f513a2 (.)
+=======
+>>>>>>> origin/develop
+>>>>>>> e9b0959 (.)
+>>>>>>> 9a4eacb (.)
         ]);
 
         return $cloudFront->getSignedUrl([
             'url' => $data->base_url.'/'.ltrim($key, '/'),
             'expires' => time() + ($expiry * 60),
             'key_pair_id' => $data->key_pair_id,
+<<<<<<< HEAD
             'private_key' => $data->getPrivateKey(),
         ]);
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -373,6 +398,8 @@ class GetCloudFrontSignedUrlAction
 =======
 >>>>>>> b8fda23 (.)
 =======
+>>>>>>> 9a4eacb (.)
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -382,6 +409,7 @@ class GetCloudFrontSignedUrlAction
 =======
 =======
 >>>>>>> origin/develop
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -397,6 +425,8 @@ class GetCloudFrontSignedUrlAction
 =======
 =======
 >>>>>>> c08a553 (.)
+=======
+>>>>>>> 9a4eacb (.)
             'private_key' => $data->getPrivateKey()
             ,
         ]);
@@ -411,10 +441,13 @@ class GetCloudFrontSignedUrlAction
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 1d21a10 (.)
 =======
 >>>>>>> b8fda23 (.)
+=======
+>>>>>>> 9a4eacb (.)
 >>>>>>> a12f125f4a (.)
 =======
             'private_key' => $data->getPrivateKey(),
@@ -424,6 +457,7 @@ class GetCloudFrontSignedUrlAction
 =======
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -546,4 +580,6 @@ class GetCloudFrontSignedUrlAction
 >>>>>>> 760b37c (.)
 =======
 >>>>>>> 3f513a2 (.)
+=======
+>>>>>>> 9a4eacb (.)
 }
