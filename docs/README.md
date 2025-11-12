@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 📁 **Media Module** - Sistema Avanzato Gestione File Multimediali
 
 [![Laravel 12.x](https://img.shields.io/badge/Laravel-12.x-red.svg)](https://laravel.com/)
@@ -30,11 +31,16 @@
 [![Filament 3.x](https://img.shields.io/badge/Filament-3.x-blue.svg)](https://filamentphp.com/)
 >>>>>>> b1b659d (.)
 =======
+=======
+>>>>>>> d2f9543 (.)
 # 📁 **Media Module** - Sistema Avanzato Gestione File Multimediali
 
 [![Laravel 12.x](https://img.shields.io/badge/Laravel-12.x-red.svg)](https://laravel.com/)
 [![Filament 3.x](https://img.shields.io/badge/Filament-3.x-blue.svg)](https://filamentphp.com/)
+<<<<<<< HEAD
 >>>>>>> 1a0067b (.)
+=======
+>>>>>>> d2f9543 (.)
 [![PHPStan Level 9](https://img.shields.io/badge/PHPStan-Level%209-brightgreen.svg)](https://phpstan.org/)
 [![Translation Ready](https://img.shields.io/badge/Translation-IT%20%7C%20EN%20%7C%20DE-green.svg)](https://laravel.com/docs/localization)
 [![File Upload](https://img.shields.io/badge/File-Upload%20Ready-orange.svg)](https://laravel.com/docs/filesystem)
@@ -495,6 +501,7 @@ ffmpeg -codecs
 **🔧 S3Test Corrections**: Completate ✅
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 8cdc78f (.)
 =======
@@ -543,3 +550,5 @@ $result = app(MediaService::class)->process($data);
 >>>>>>> f41e45e (.)
 =======
 >>>>>>> 21a9aec (.)
+=======
+>>>>>>> d2f9543 (.)
