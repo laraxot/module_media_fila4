@@ -12,6 +12,7 @@ namespace Modules\Media\Filament\Clusters\Test\Pages;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Aws\Exception\AwsException;
 use Aws\S3\S3Client;
 use Aws\Sts\StsClient;
@@ -48,6 +49,8 @@ use Filament\Schemas\Schema;
 >>>>>>> 77463ee (.)
 =======
 >>>>>>> 76e8f34 (.)
+=======
+>>>>>>> 71435ff (.)
 use Filament\Schemas\Components\Tabs;
 use Filament\Schemas\Components\Tabs\Tab;
 use Filament\Schemas\Components\Actions;
@@ -56,35 +59,18 @@ use Filament\Schemas\Components\Section;
 use Override;
 use Filament\Actions\Action;
 use Filament\Forms\Components\Textarea;
-=======
-use Override;
-use Filament\Schemas\Schema;
-use Filament\Schemas\Components\Tabs;
-use Filament\Schemas\Components\Tabs\Tab;
-use Filament\Schemas\Components\Section;
-use Filament\Schemas\Components\Actions;
-use Filament\Actions\Action;
-use Filament\Forms\Components\ViewField;
->>>>>>> 739e4b7 (.)
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\KeyValue;
 use Exception;
 use Aws\Exception\AwsException;
 use Aws\S3\S3Client;
 use Aws\Sts\StsClient;
-<<<<<<< HEAD
 use Filament\Schemas\Components;
 use Filament\Notifications\Notification;
 use Modules\Media\Filament\Clusters\Test;
 use Modules\Xot\Filament\Pages\XotBasePage;
 >>>>>>> 5200b63 (.)
 use function Safe\json_encode;
-=======
-use Filament\Forms\Components;
-use Filament\Notifications\Notification;
-use Modules\Media\Filament\Clusters\Test;
-use Modules\Xot\Filament\Pages\XotBasePage;
->>>>>>> 739e4b7 (.)
 
 class AwsTest extends XotBasePage
 {
@@ -114,6 +100,7 @@ class AwsTest extends XotBasePage
         'full' => 'Full Diagnostic',
     ];
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -162,6 +149,8 @@ class AwsTest extends XotBasePage
 =======
 >>>>>>> 739e4b7 (.)
 >>>>>>> 76e8f34 (.)
+=======
+>>>>>>> 71435ff (.)
 
 >>>>>>> 5200b63 (.)
     protected function getS3TestSchema(): array
@@ -183,7 +172,6 @@ class AwsTest extends XotBasePage
                             ->color('success')
                             ->action('testS3FileOperations'),
                     ])->fullWidth(),
-<<<<<<< HEAD
                     Textarea::make('s3_results')
                         ->label('S3 Test Results')
                         ->rows(10)
@@ -192,6 +180,7 @@ class AwsTest extends XotBasePage
                         ->default(fn () => json_encode($this->testResults['s3'] ?? [], JSON_PRETTY_PRINT)),
 =======
                         ->default(fn() => json_encode($this->testResults['s3'] ?? [], JSON_PRETTY_PRINT)),
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -231,6 +220,8 @@ class AwsTest extends XotBasePage
 =======
 >>>>>>> 739e4b7 (.)
 >>>>>>> 76e8f34 (.)
+=======
+>>>>>>> 71435ff (.)
                 ]),
         ];
     }
@@ -244,7 +235,6 @@ class AwsTest extends XotBasePage
                     Action::make('test_cloudfront_config')->action('testCloudFrontConfig'),
                     Action::make('test_signed_urls')->action('testCloudFrontSignedUrls'),
                 ]),
-<<<<<<< HEAD
                 Textarea::make('cloudfront_results')
                     ->label('CloudFront Test Results')
                     ->rows(10)
@@ -253,6 +243,7 @@ class AwsTest extends XotBasePage
                     ->default(fn () => json_encode($this->testResults['cloudfront'] ?? [], JSON_PRETTY_PRINT)),
 =======
                     ->default(fn() => json_encode($this->testResults['cloudfront'] ?? [], JSON_PRETTY_PRINT)),
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -271,6 +262,8 @@ class AwsTest extends XotBasePage
 >>>>>>> 70517e3 (.)
 =======
 >>>>>>> 76e8f34 (.)
+=======
+>>>>>>> 71435ff (.)
             ]),
         ];
     }
@@ -284,7 +277,6 @@ class AwsTest extends XotBasePage
                     Action::make('test_iam_credentials')->action('testIamCredentials'),
                     Action::make('test_iam_policies')->color('warning')->action('testIamPolicies'),
                 ]),
-<<<<<<< HEAD
                 Textarea::make('iam_results')
                     ->label('IAM Test Results')
                     ->rows(10)
@@ -293,6 +285,7 @@ class AwsTest extends XotBasePage
                     ->default(fn () => json_encode($this->testResults['iam'] ?? [], JSON_PRETTY_PRINT)),
 =======
                     ->default(fn() => json_encode($this->testResults['iam'] ?? [], JSON_PRETTY_PRINT)),
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -311,6 +304,8 @@ class AwsTest extends XotBasePage
 >>>>>>> 70517e3 (.)
 =======
 >>>>>>> 76e8f34 (.)
+=======
+>>>>>>> 71435ff (.)
             ]),
         ];
     }
@@ -325,7 +320,6 @@ class AwsTest extends XotBasePage
                         ->icon('heroicon-o-bolt')
                         ->action('runFullDiagnostic'),
                 ]),
-<<<<<<< HEAD
                 Textarea::make('full_results')
                     ->label('Full Diagnostic Results')
                     ->rows(15)
@@ -334,6 +328,7 @@ class AwsTest extends XotBasePage
                     ->default(fn () => json_encode($this->testResults['full'] ?? [], JSON_PRETTY_PRINT)),
 =======
                     ->default(fn() => json_encode($this->testResults['full'] ?? [], JSON_PRETTY_PRINT)),
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -352,6 +347,8 @@ class AwsTest extends XotBasePage
 >>>>>>> 70517e3 (.)
 =======
 >>>>>>> 76e8f34 (.)
+=======
+>>>>>>> 71435ff (.)
                 KeyValue::make('aws_config')->columnSpanFull()->state($this->getAwsConfig(...)),
             ]),
         ];
