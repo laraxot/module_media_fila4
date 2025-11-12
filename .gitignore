@@ -187,6 +187,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 =======
@@ -521,11 +522,15 @@
 # Ultimo aggiornamento: 2025-01-06
 >>>>>>> 5a393f1 (.)
 >>>>>>> 030d3c9 (.)
+=======
+# Ultimo aggiornamento: 2025-01-06
+>>>>>>> 71fafa8 (.)
 # ==============================================
 
 # ==============================================
 # DEPENDENCIES & PACKAGES
 # ==============================================
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1324,6 +1329,8 @@ npm-debug.log
 >>>>>>> 9348522 (.)
 =======
 >>>>>>> 5a393f1 (.)
+=======
+>>>>>>> 71fafa8 (.)
 vendor/
 /vendor/
 node_modules/
@@ -1333,13 +1340,6 @@ package-lock.json
 yarn.lock
 yarn-error.log
 composer.lock
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> c14635e (.)
-=======
->>>>>>> 9348522 (.)
-=======
->>>>>>> 5a393f1 (.)
 
 # ==============================================
 # BUILD & COMPILED FILES
@@ -1362,18 +1362,7 @@ cache/
 *.swp
 *.swo
 *.stackdump
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 *.exe
->>>>>>> c14635e (.)
-=======
-*.exe
->>>>>>> 9348522 (.)
-=======
-*.exe
->>>>>>> 5a393f1 (.)
 *:Zone.Identifier
 v8-compile-cache-*
 .php-cs-fixer.cache
@@ -1385,18 +1374,7 @@ v8-compile-cache-*
 *.log
 error_log
 npm-debug.log*
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 npm-debug.log
->>>>>>> c14635e (.)
-=======
-npm-debug.log
->>>>>>> 9348522 (.)
-=======
-npm-debug.log
->>>>>>> 5a393f1 (.)
 yarn-error.log*
 lerna-debug.log*
 
@@ -1780,6 +1758,7 @@ docs/cache/
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 80a2320 (.)
 =======
@@ -2723,6 +2702,8 @@ database_old/
 >>>>>>> 9348522 (.)
 =======
 >>>>>>> 5a393f1 (.)
+=======
+>>>>>>> 71fafa8 (.)
 # OLD DIRECTORIES (LEGACY CLEANUP)
 # ==============================================
 resources/views/Components_old/
@@ -2736,13 +2717,6 @@ database/Factories_old
 database/Factories_
 database_old/
 database_old
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> c14635e (.)
-=======
->>>>>>> 9348522 (.)
-=======
->>>>>>> 5a393f1 (.)
 
 # ==============================================
 # MODULE SPECIFIC - MEDIA
@@ -2751,28 +2725,6 @@ database_old
 config/local.php
 config/development.php
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-# File media
-storage/media/
-storage/uploads/
-storage/thumbnails/
-storage/conversions/
-
-# File temporanei di media
-media/temp/
-media/cache/
-media/drafts/
-
-# File di test media
-media_test_data.json
-test_media.sql
-=======
-=======
->>>>>>> 9348522 (.)
-=======
->>>>>>> 5a393f1 (.)
 # File media temporanei
 media/temp/
 media/uploads/temp/
@@ -2785,31 +2737,12 @@ storage/thumbnails/
 # File di test media
 media_test_data.json
 test_media_files/
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> c14635e (.)
-=======
->>>>>>> 9348522 (.)
-=======
->>>>>>> 5a393f1 (.)
 
 # ==============================================
 # END OF MEDIA .GITIGNORE
 # ==============================================
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-# File specifici del progetto
-=======
 # 🚫 File specifici del progetto
->>>>>>> c14635e (.)
-=======
-# 🚫 File specifici del progetto
->>>>>>> 9348522 (.)
-=======
-# 🚫 File specifici del progetto
->>>>>>> 5a393f1 (.)
 *.fila2
 laravel
 public_html
