@@ -28,16 +28,25 @@ class GetVideoFrameContentAction
     {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (! Storage::disk($disk_mp4)->exists($file_mp4)) {
 =======
         if (!Storage::disk($disk_mp4)->exists($file_mp4)) {
 >>>>>>> 5200b63 (.)
 =======
+=======
+>>>>>>> 98c37f4 (.)
         if (!Storage::disk($disk_mp4)->exists($file_mp4)) {
 =======
         if (! Storage::disk($disk_mp4)->exists($file_mp4)) {
 >>>>>>> 0a466ed (.)
+<<<<<<< HEAD
 >>>>>>> 06bb10d (.)
+=======
+=======
+        if (!Storage::disk($disk_mp4)->exists($file_mp4)) {
+>>>>>>> 37a2da6 (.)
+>>>>>>> 98c37f4 (.)
             return '';
         }
 
@@ -45,10 +54,15 @@ class GetVideoFrameContentAction
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         $cache_key = Str::slug($disk_mp4.' '.$file_mp4.' '.$time.' 1');
 =======
 =======
 >>>>>>> 06bb10d (.)
+=======
+=======
+>>>>>>> 37a2da6 (.)
+>>>>>>> 98c37f4 (.)
         $cache_key = Str::slug($disk_mp4 . ' ' . $file_mp4 . ' ' . $time . ' 1');
 >>>>>>> 5200b63 (.)
 
@@ -67,6 +81,7 @@ class GetVideoFrameContentAction
                 return Storage::disk('public_html')->get('img/video_not_exists.jpg');
             }
         });
+<<<<<<< HEAD
 =======
         $cache_key = Str::slug($disk_mp4.' '.$file_mp4.' '.$time.' 1');
 
@@ -86,5 +101,7 @@ class GetVideoFrameContentAction
             }
         );
 >>>>>>> 0a466ed (.)
+=======
+>>>>>>> 37a2da6 (.)
     }
 }

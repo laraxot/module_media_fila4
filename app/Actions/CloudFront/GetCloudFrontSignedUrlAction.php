@@ -11,6 +11,7 @@ use Spatie\QueueableAction\QueueableAction;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -31,6 +32,13 @@ use Spatie\QueueableAction\QueueableAction;
 
 >>>>>>> 0a466ed (.)
 >>>>>>> 06bb10d (.)
+=======
+=======
+
+>>>>>>> 0a466ed (.)
+=======
+>>>>>>> 37a2da6 (.)
+>>>>>>> 98c37f4 (.)
 /**
  * Action per la traduzione di elementi di una collezione.
  */
@@ -38,6 +46,7 @@ class GetCloudFrontSignedUrlAction
 {
     use QueueableAction;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -50,6 +59,10 @@ class GetCloudFrontSignedUrlAction
 >>>>>>> 5200b63 (.)
 =======
 >>>>>>> 06bb10d (.)
+=======
+=======
+>>>>>>> 37a2da6 (.)
+>>>>>>> 98c37f4 (.)
     public function execute(string $key, int $expiry = 30): string
     {
         $data = CloudFrontData::make();
@@ -57,6 +70,7 @@ class GetCloudFrontSignedUrlAction
         $cloudFront = new CloudFrontClient([
             'region' => $data->region,
             'version' => 'latest',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -79,6 +93,8 @@ class GetCloudFrontSignedUrlAction
 >>>>>>> b93ef594b4 (.)
 =======
 >>>>>>> 06bb10d (.)
+=======
+>>>>>>> 98c37f4 (.)
 =======
    
     public function execute(string $key, int $expiry = 30): string
@@ -133,13 +149,19 @@ class GetCloudFrontSignedUrlAction
 =======
 =======
 >>>>>>> 0a466ed (.)
+<<<<<<< HEAD
 >>>>>>> 06bb10d (.)
+=======
+=======
+>>>>>>> 37a2da6 (.)
+>>>>>>> 98c37f4 (.)
         ]);
 
         return $cloudFront->getSignedUrl([
             'url' => $data->base_url . '/' . ltrim($key, '/'),
             'expires' => time() + ($expiry * 60),
             'key_pair_id' => $data->key_pair_id,
+<<<<<<< HEAD
 <<<<<<< HEAD
             'private_key' => $data->getPrivateKey(),
         ]);
@@ -157,5 +179,13 @@ class GetCloudFrontSignedUrlAction
 
   
 >>>>>>> 0a466ed (.)
+<<<<<<< HEAD
 >>>>>>> 06bb10d (.)
+=======
+=======
+            'private_key' => $data->getPrivateKey(),
+        ]);
+    }
+>>>>>>> 37a2da6 (.)
+>>>>>>> 98c37f4 (.)
 }
