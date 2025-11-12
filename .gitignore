@@ -218,6 +218,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 =======
@@ -614,11 +615,18 @@
 =======
 # Ultimo aggiornamento: 2025-01-31
 >>>>>>> efe5442 (.)
+=======
+# Ultimo aggiornamento: 2025-01-31
+=======
+# Ultimo aggiornamento: 2025-01-06
+>>>>>>> c14635e (.)
+>>>>>>> 6752b49 (.)
 # ==============================================
 
 # ==============================================
 # DEPENDENCIES & PACKAGES
 # ==============================================
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1509,6 +1517,8 @@ composer.lock
 =======
 =======
 >>>>>>> efe5442 (.)
+=======
+>>>>>>> 6752b49 (.)
 /vendor/
 /vendor
 /node_modules/
@@ -1519,6 +1529,17 @@ yarn.lock
 composer.lock
 yarn-error.log
 npm-debug.log
+=======
+vendor/
+/vendor/
+node_modules/
+/node_modules/
+/docs/vendor/
+package-lock.json
+yarn.lock
+yarn-error.log
+composer.lock
+>>>>>>> c14635e (.)
 
 # ==============================================
 # BUILD & COMPILED FILES
@@ -1558,6 +1579,10 @@ cache/
 *.swp
 *.swo
 *.stackdump
+<<<<<<< HEAD
+=======
+*.exe
+>>>>>>> c14635e (.)
 *:Zone.Identifier
 v8-compile-cache-*
 .php-cs-fixer.cache
@@ -1569,6 +1594,10 @@ v8-compile-cache-*
 *.log
 error_log
 npm-debug.log*
+<<<<<<< HEAD
+=======
+npm-debug.log
+>>>>>>> c14635e (.)
 yarn-error.log*
 lerna-debug.log*
 
@@ -2007,6 +2036,7 @@ docs/cache/
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 80a2320 (.)
 =======
@@ -3028,6 +3058,8 @@ database_old
 =======
 =======
 >>>>>>> efe5442 (.)
+=======
+>>>>>>> 6752b49 (.)
 # LANGUAGE FILES
 # ==============================================
 lang/lang/
@@ -3041,6 +3073,21 @@ database/Migrations_old/
 database/Seeders_old/
 database/Factories_old/
 database_old/
+=======
+# OLD DIRECTORIES (LEGACY CLEANUP)
+# ==============================================
+resources/views/Components_old/
+resources/views/Components_old
+database/Migrations_old/
+database/Migrations_old
+database/Seeders_old/
+database/Seeders_old
+database/Factories_old/
+database/Factories_old
+database/Factories_
+database_old/
+database_old
+>>>>>>> c14635e (.)
 
 # ==============================================
 # MODULE SPECIFIC - MEDIA
@@ -3049,6 +3096,7 @@ database_old/
 config/local.php
 config/development.php
 
+<<<<<<< HEAD
 # File media
 storage/media/
 storage/uploads/
@@ -3063,12 +3111,30 @@ media/drafts/
 # File di test media
 media_test_data.json
 test_media.sql
+=======
+# File media temporanei
+media/temp/
+media/uploads/temp/
+media/thumbnails/temp/
+
+# Cache media
+storage/media/
+storage/thumbnails/
+
+# File di test media
+media_test_data.json
+test_media_files/
+>>>>>>> c14635e (.)
 
 # ==============================================
 # END OF MEDIA .GITIGNORE
 # ==============================================
 
+<<<<<<< HEAD
 # File specifici del progetto
+=======
+# 🚫 File specifici del progetto
+>>>>>>> c14635e (.)
 *.fila2
 laravel
 public_html
