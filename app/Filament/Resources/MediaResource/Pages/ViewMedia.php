@@ -14,6 +14,7 @@ namespace Modules\Media\Filament\Resources\MediaResource\Pages;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 446bc61 (.)
@@ -33,11 +34,14 @@ namespace Modules\Media\Filament\Resources\MediaResource\Pages;
 >>>>>>> 71435ff (.)
 =======
 >>>>>>> 517d97d (.)
+=======
+>>>>>>> 21f8a63 (.)
 use Filament\Schemas\Components\Actions;
 use Filament\Schemas\Components\Section;
 use Filament\Schemas\Components\Component;
 use Override;
 use Filament\Schemas\Components\Grid;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -89,6 +93,8 @@ use Filament\Schemas\Components\Actions;
 =======
 >>>>>>> 1999eb3 (.)
 >>>>>>> 517d97d (.)
+=======
+>>>>>>> 21f8a63 (.)
 use Filament\Actions\Action;
 use Filament\Actions\DeleteAction;
 use Filament\Infolists\Components\ImageEntry;
@@ -122,11 +128,7 @@ class ViewMedia extends XotBaseViewRecord
     /**
      * Restituisce lo schema dell'infolist per la visualizzazione dei dettagli del record.
      *
-<<<<<<< HEAD
      * @return array<int, Component>
-=======
-     * @return array<string, Component>
->>>>>>> 1999eb3 (.)
      */
     #[Override]
     public function getInfolistSchema(): array
@@ -228,6 +230,7 @@ class ViewMedia extends XotBaseViewRecord
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 5200b63 (.)
 =======
 <<<<<<< HEAD
@@ -248,10 +251,9 @@ class ViewMedia extends XotBaseViewRecord
 >>>>>>> 71435ff (.)
 =======
 >>>>>>> 517d97d (.)
-            RepeatableEntry::make('entry_conversions')
 =======
-            'entry_conversions' => RepeatableEntry::make('entry_conversions')
->>>>>>> 1999eb3 (.)
+>>>>>>> 21f8a63 (.)
+            RepeatableEntry::make('entry_conversions')
                 ->schema([
                     TextEntry::make('name'),
                     TextEntry::make('src'),
