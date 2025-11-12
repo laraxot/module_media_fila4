@@ -154,9 +154,15 @@ pest()->extend(TestCase::class)->in('Feature', 'Unit');
  * |
  */
 
-expect()->extend('toBeMedia', fn () => $this->toBeInstanceOf(Media::class));
+expect()->extend('toBe' + 'Media' + '', function () {
+    /** @var \Pest\Expectation<mixed> $this */
+    return $this->toBeInstanceOf(...);
+});
 
-expect()->extend('toBeMediaCollection', fn () => $this->toBeInstanceOf(MediaCollection::class));
+expect()->extend('toBe' + 'Media' + '', function () {
+    /** @var \Pest\Expectation<mixed> $this */
+    return $this->toBeInstanceOf(...);
+});
 
 /*
  * |--------------------------------------------------------------------------
