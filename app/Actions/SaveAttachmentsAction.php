@@ -47,6 +47,7 @@ use function Safe\unlink;
 class SaveAttachmentsAction
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * Save attachments to media library.
      *
@@ -55,6 +56,12 @@ class SaveAttachmentsAction
      */
 =======
 >>>>>>> 5200b63 (.)
+=======
+    /**
+     * @param  array<int, string>  $attachments
+     * @param  array<string, string>  $data
+     */
+>>>>>>> 1634e53 (.)
     public function execute(HasMedia $record, array $attachments, array $data, string $disk = 'attachments'): void
     {
         $dataAttachments = [];
@@ -71,6 +78,7 @@ class SaveAttachmentsAction
                 continue;
             }
 
+            /** @var string $path */
             $path = $data[$attachment];
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -178,16 +186,16 @@ class SaveAttachmentsAction
             }
 
             // Ottieni il contenuto del file prima che venga eliminato
+            /** @var string $fileContent */
             $fileContent = $storage->get($path);
             $tempPath = tempnam(sys_get_temp_dir(), 'media_');
 
             file_put_contents($tempPath, $fileContent);
 
             try {
-                $media = $record->addMedia($tempPath)->usingFileName(basename($path))->toMediaCollection(
-                    $attachment,
-                    $disk,
-                );
+                $media = $record->addMedia($tempPath)
+                    ->usingFileName(basename($path))
+                    ->toMediaCollection($attachment, $disk);
 
                 $dataAttachments[$attachment] = $media->getPathRelativeToRoot();
             } finally {
@@ -213,20 +221,32 @@ class SaveAttachmentsAction
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /**
      * @param  array<int, string>  $attachments
      * @param  array<string, mixed>  $data
      */
 =======
 >>>>>>> 5200b63 (.)
+=======
+    /**
+     * @param  array<int, string>  $attachments
+     * @param  array<string, string>  $data
+     */
+>>>>>>> 1634e53 (.)
     public function executeOLD(HasMedia $record, array $attachments, array $data, string $disk = 'attachments'): void
     {
+        /** @var array<string, string> $data_attachments */
         $data_attachments = [];
         foreach ($attachments as $attachment) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             Assert::string($attachment, '['.__LINE__.']['.class_basename(__CLASS__).']');
+=======
+            /** @var string $path */
+>>>>>>> 1634e53 (.)
             $path = $data[$attachment];
             Assert::string($path, '['.__LINE__.']['.class_basename(__CLASS__).']');
 =======
@@ -262,6 +282,7 @@ class SaveAttachmentsAction
             if (! method_exists($record, 'addMediaFromDisk')) {
                 throw new Exception('Method addMediaFromDisk not found');
             }
+<<<<<<< HEAD
             $fileAdder = $record->addMediaFromDisk($path, $disk);
             // $media=$record->addMediaFromRequest($attachment)
 
@@ -290,6 +311,15 @@ class SaveAttachmentsAction
 
                 // $media=$record->addMedia($full_path)
                 ->toMediaCollection($attachment);
+=======
+            /** @var \Spatie\MediaLibrary\MediaCollections\FileAdder $mediaAdder */
+            $mediaAdder = $record->addMediaFromDisk($path, $disk);
+            if ($mediaAdder === null) {
+                continue;
+            }
+            /** @var \Spatie\MediaLibrary\MediaCollections\Models\Media $media */
+            $media = $mediaAdder->toMediaCollection($attachment);
+>>>>>>> 1634e53 (.)
             $data_attachments[$attachment] = $media->getPathRelativeToRoot();
         }
 >>>>>>> 5200b63 (.)

@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Modules\Media\Actions;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
 use Filament\Schemas\Components\Utilities\Set;
@@ -15,28 +16,22 @@ use Livewire\Features\SupportFileUploads\TemporaryUploadedFile;
 use Filament\Schemas\Components\Utilities\Set;
 use Livewire\Features\SupportFileUploads\TemporaryUploadedFile;
 use Filament\Forms;
+=======
+>>>>>>> 1634e53 (.)
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
-use Filament\Forms\Components\TextInput;
-use Filament\Schemas\Schema;
-use Filament\Pages\SubNavigationPosition;
-use Filament\Resources\Resource as FilamentResource;
-use Illuminate\Contracts\Support\Htmlable;
-use Illuminate\Contracts\Support\Renderable;
-use Illuminate\Contracts\View\View;
+use Filament\Schemas\Components\Utilities\Set;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Config;
-use Illuminate\Support\Facades\Storage;
-use Illuminate\Support\HtmlString;
-use Illuminate\Support\Str;
-use Modules\UI\Actions\Icon\GetAllIconsAction;
-use Modules\Xot\Actions\ModelClass\CountAction;
-use Modules\Xot\Filament\Traits\NavigationLabelTrait;
+use Livewire\Features\SupportFileUploads\TemporaryUploadedFile;
 use Webmozart\Assert\Assert;
 
+<<<<<<< HEAD
 use function Safe\glob;
 >>>>>>> 5200b63 (.)
 
+=======
+>>>>>>> 1634e53 (.)
 class GetAttachmentsSchemaAction
 {
     public function execute(array $attachments, string $disk = 'attachments'): array
@@ -48,6 +43,7 @@ class GetAttachmentsSchemaAction
         $sessionDir = "session-uploads/{$sessionId}";
         if ($prefix !== '') {
 <<<<<<< HEAD
+<<<<<<< HEAD
             $sessionDir = $prefix.'/'.$sessionDir;
         }
         foreach ($attachments as $attachment) {
@@ -56,9 +52,16 @@ class GetAttachmentsSchemaAction
                 // $form[$attachment]=SpatieMediaLibraryFileUpload::make($attachment)
 =======
             $sessionDir = $prefix . '/' . $sessionDir;
+=======
+            $sessionDir = $prefix.'/'.$sessionDir;
+>>>>>>> 1634e53 (.)
         }
         foreach ($attachments as $attachment) {
+            if (! is_string($attachment)) {
+                continue;
+            }
             $form[$attachment] = FileUpload::make($attachment)
+<<<<<<< HEAD
                 //$form[$attachment]=SpatieMediaLibraryFileUpload::make($attachment)
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -89,6 +92,9 @@ class GetAttachmentsSchemaAction
 >>>>>>> c3b81ef (.)
 =======
 >>>>>>> 9a7a2fa (.)
+=======
+                // $form[$attachment]=SpatieMediaLibraryFileUpload::make($attachment)
+>>>>>>> 1634e53 (.)
                 ->directory($sessionDir)
                 ->disk($disk)
                 ->acceptedFileTypes(['application/pdf', 'image/jpeg', 'image/png', 'image/jpg'])
@@ -97,6 +103,7 @@ class GetAttachmentsSchemaAction
                 ->required()
                 ->previewable(false)
 <<<<<<< HEAD
+<<<<<<< HEAD
                 // ->saveUploadedFiles()
                 ->afterStateUpdated(function ($state, Set $set) use ($attachment, $sessionDir, $disk): void {
                     if (! $state) {
@@ -104,10 +111,17 @@ class GetAttachmentsSchemaAction
                     }
 =======
                 //->saveUploadedFiles()
+=======
+                // ->saveUploadedFiles()
+>>>>>>> 1634e53 (.)
                 ->afterStateUpdated(function ($state, Set $set) use ($attachment, $sessionDir, $disk) {
-                    if (!$state)
+                    if (! $state) {
                         return;
+<<<<<<< HEAD
 >>>>>>> 5200b63 (.)
+=======
+                    }
+>>>>>>> 1634e53 (.)
                     $state = Arr::wrap($state);
 
                     $sessionFiles = [];
@@ -116,10 +130,14 @@ class GetAttachmentsSchemaAction
                         if ($file instanceof TemporaryUploadedFile) {
                             // Salva direttamente nella directory di sessione
 <<<<<<< HEAD
+<<<<<<< HEAD
                             $fileName = time().'_'.$file->getClientOriginalName();
 =======
                             $fileName = time() . '_' . $file->getClientOriginalName();
 >>>>>>> 5200b63 (.)
+=======
+                            $fileName = time().'_'.$file->getClientOriginalName();
+>>>>>>> 1634e53 (.)
                             $sessionPath = $file->storeAs($sessionDir, $fileName, $disk);
                             $sessionFiles[] = $sessionPath;
                         } else {
@@ -131,10 +149,15 @@ class GetAttachmentsSchemaAction
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                     // Set expects Component|string, pass attachment as string
                     \Webmozart\Assert\Assert::string($attachment, 'Attachment must be string');
 =======
 >>>>>>> 5200b63 (.)
+=======
+                    /** @phpstan-ignore-next-line staticMethod.alreadyNarrowedType - Runtime safety check */
+                    Assert::string($attachment, 'Attachment name must be a string');
+>>>>>>> 1634e53 (.)
                     $set($attachment, $sessionFiles);
 =======
                     $set($attachmentKey, $sessionFiles);

@@ -13,6 +13,7 @@ namespace Modules\Media\Filament\Tables\Columns;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Filament\Tables\Columns\IconColumn;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
@@ -57,15 +58,18 @@ use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Actions\Action;
+=======
+>>>>>>> 1634e53 (.)
 use Filament\Tables\Columns\IconColumn;
-use Filament\Tables\Columns\SelectColumn;
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Arr;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Modules\Media\Actions\CloudFront\GetCloudFrontSignedUrlAction;
+<<<<<<< HEAD
 use Modules\<main module>\Models\User;
 use Spatie\ModelStates\State;
 >>>>>>> 2a4b5df (.)
+=======
+>>>>>>> 1634e53 (.)
 
 class IconMediaColumn extends IconColumn
 {
@@ -74,6 +78,7 @@ class IconMediaColumn extends IconColumn
         parent::setUp();
         $attachment = $this->getName();
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -148,9 +153,36 @@ class IconMediaColumn extends IconColumn
 =======
         $this->default(fn($record) => $record->getFirstMedia($attachment))
 >>>>>>> 2a4b5df (.)
+=======
+        $this->default(static function (mixed $record) use ($attachment): mixed {
+            if (! is_object($record) || ! method_exists($record, 'getFirstMedia')) {
+                return null;
+            }
+
+            return $record->getFirstMedia($attachment);
+        })
+>>>>>>> 1634e53 (.)
             ->icon('heroicon-o-document-text')
-            ->color(fn($record) => $record->getFirstMedia($attachment) ? 'success' : 'danger')
-            ->tooltip(fn($record) => $record->getFirstMedia($attachment)->file_name ?? 'Documento non caricato')
+            ->color(static function (mixed $record) use ($attachment): string {
+                if (! is_object($record) || ! method_exists($record, 'getFirstMedia')) {
+                    return 'danger';
+                }
+
+                return $record->getFirstMedia($attachment) ? 'success' : 'danger';
+            })
+            ->tooltip(static function (mixed $record) use ($attachment): string {
+                if (! is_object($record) || ! method_exists($record, 'getFirstMedia')) {
+                    return 'Documento non caricato';
+                }
+                $media = $record->getFirstMedia($attachment);
+                if (! $media || ! is_object($media) || ! isset($media->file_name)) {
+                    return 'Documento non caricato';
+                }
+                /** @var string $fileName */
+                $fileName = $media->file_name;
+
+                return $fileName;
+            })
             /*
              * ->url(function($record) use ($attachment){
              * $media = $record->getFirstMedia($attachment);
@@ -164,15 +196,20 @@ class IconMediaColumn extends IconColumn
              * ->openUrlInNewTab()
              */
 
-            ->action(function ($record, Request $request) use ($attachment) {
-                // @phpstan-ignore method.nonObject
-                $media = $record->getFirstMedia($attachment);
-                if (!$media) {
-                    return;
+            ->action(static function (mixed $record, Request $request) use ($attachment): mixed {
+                /** @phpstan-ignore-next-line function.impossibleType, function.alreadyNarrowedType - Runtime safety check */
+                if (! is_object($record) || ! method_exists($record, 'getFirstMedia')) {
+                    return null;
                 }
-                //dddx($media->getPath());
+                $media = $record->getFirstMedia($attachment);
+                if (! $media || ! is_object($media) || ! method_exists($media, 'toInlineResponse')) {
+                    return null;
+                }
+
+                // dddx($media->getPath());
                 return $media->toInlineResponse($request);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -185,21 +222,30 @@ class IconMediaColumn extends IconColumn
                 //return $media->toResponse($request);
                 //return Storage::disk($media->disk)->download($media->getPathRelativeToRoot());
                 //return Storage::disk($media->disk)
+=======
+                // return $media->toResponse($request);
+                // return Storage::disk($media->disk)->download($media->getPathRelativeToRoot());
+                // return Storage::disk($media->disk)
+>>>>>>> 1634e53 (.)
                 //    ->temporaryUploadUrl($media->getPathRelativeToRoot(),now()->addMinutes(5));
-                //return response()->streamDownload(function () use ($media) {
+                // return response()->streamDownload(function () use ($media) {
                 //    echo $media->get();
-                //}, $media->file_name);
-                //$headers=[
+                // }, $media->file_name);
+                // $headers=[
                 //    'Content-Type' => $media->mime_type,
                 //    'Content-Disposition' => 'inline; filename="' . basename($media->getPathRelativeToRoot()) . '"'
-                //];
-                //$path = Storage::disk($media->disk)->path($media->getPathRelativeToRoot());
-                //return response()->file($path, $headers);
+                // ];
+                // $path = Storage::disk($media->disk)->path($media->getPathRelativeToRoot());
+                // return response()->file($path, $headers);
 
+<<<<<<< HEAD
 
                 //return Storage::disk($media->disk)->response($media->getPathRelativeToRoot(), null, $headers);
                 
 >>>>>>> 2a4b5df (.)
+=======
+                // return Storage::disk($media->disk)->response($media->getPathRelativeToRoot(), null, $headers);
+>>>>>>> 1634e53 (.)
             });
     }
 }

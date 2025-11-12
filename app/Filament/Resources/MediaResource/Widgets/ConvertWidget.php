@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use Modules\Media\Filament\Resources\MediaResource;
 use Modules\Media\Models\Media;
+use ProtoneMedia\LaravelFFMpeg\Exporters\MediaExporter;
 use ProtoneMedia\LaravelFFMpeg\Support\FFMpeg;
 
 class ConvertWidget extends Widget
@@ -129,6 +130,7 @@ class ConvertWidget extends Widget
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         $exportedMedia = FFMpeg::fromDisk($disk_mp4)
             ->open($file_mp4)
             ->export();
@@ -218,6 +220,38 @@ class ConvertWidget extends Widget
 >>>>>>> 13d1d7e (.)
 =======
 >>>>>>> 2a4b5df (.)
+=======
+        /** @var MediaExporter $export */
+        $export = FFMpeg::fromDisk($disk_mp4)
+            ->open($file_mp4)
+            ->export();
+
+        $export->onProgress(function (float $percentage, float $remaining, float $rate): void {
+            $this->percentage = $percentage;
+            $this->remaining = $remaining;
+            $this->rate = $rate;
+            $msg = "{$percentage}% transcoded";
+            $msg .= "{$remaining} seconds left at rate: {$rate}";
+            Notification::make()
+                ->title($msg)
+                ->success()
+                ->send();
+        });
+
+        $toDisk = $export->toDisk($disk_mp4);
+
+        if (! is_object($toDisk) || ! method_exists($toDisk, 'inFormat')) {
+            throw new \Exception('Failed to set disk');
+        }
+
+        $formatted = $toDisk->inFormat($format);
+
+        if (! is_object($formatted) || ! method_exists($formatted, 'save')) {
+            throw new \Exception('Failed to set format');
+        }
+
+        $formatted->save($file_new);
+>>>>>>> 1634e53 (.)
 
         while ($this->percentage < 100) {
             // Stream the current count to the browser...
