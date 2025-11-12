@@ -68,6 +68,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> b8fda23 (.)
@@ -843,6 +844,8 @@
 >>>>>>> 9a4eacb (.)
 =======
 >>>>>>> 10ef3f7 (.)
+=======
+>>>>>>> c90879e (.)
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" 
      fill="none" 
@@ -934,6 +937,7 @@
     <!-- Focus indicators -->
     <circle cx="12" cy="15" r="6" stroke-width="0.5" opacity="0.3" stroke-dasharray="2 4" />
 </svg>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1041,3 +1045,5 @@
 >>>>>>> 10ef3f7 (.)
 =======
 >>>>>>> 91c1d65 (.)
+=======
+>>>>>>> c90879e (.)
