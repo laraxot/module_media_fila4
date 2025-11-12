@@ -25,24 +25,3 @@ abstract class BaseModel extends XotBaseModel
 ---
 [DRY/KISS Global](../../docs/DRY_KISS_ANALYSIS_2025-10-15.md)
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 3b38061 (.)
-=======
-
-
->>>>>>> e76d5b8 (.)
-=======
->>>>>>> f72d22d (.)
-=======
-
-
->>>>>>> fa1fb90 (.)
-=======
->>>>>>> 53e059b (.)

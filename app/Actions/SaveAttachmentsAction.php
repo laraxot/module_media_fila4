@@ -5,201 +5,40 @@ declare(strict_types=1);
 namespace Modules\Media\Actions;
 
 use Exception;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Illuminate\Support\Facades\Storage;
-=======
-use Filament\Forms;
-use Filament\Forms\Components\FileUpload;
-use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
-use Filament\Forms\Components\TextInput;
-use Filament\Schemas\Schema;
-use Filament\Forms\Set;
-use Filament\Pages\SubNavigationPosition;
-use Filament\Resources\Resource as FilamentResource;
-use Illuminate\Contracts\Support\Htmlable;
-use Illuminate\Contracts\Support\Renderable;
-use Illuminate\Contracts\View\View;
-use Illuminate\Support\Arr;
-use Illuminate\Support\Facades\Storage;
-use Illuminate\Support\HtmlString;
-use Illuminate\Support\Str;
-use Modules\UI\Actions\Icon\GetAllIconsAction;
-use Modules\Xot\Actions\ModelClass\CountAction;
-use Modules\Xot\Filament\Traits\NavigationLabelTrait;
->>>>>>> 5200b63 (.)
-=======
-use Illuminate\Support\Facades\Storage;
->>>>>>> f41e45e (.)
 use Spatie\MediaLibrary\HasMedia;
 use Webmozart\Assert\Assert;
 
 use function Safe\file_put_contents;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-use function Safe\glob;
->>>>>>> 5200b63 (.)
-=======
->>>>>>> f41e45e (.)
 use function Safe\tempnam;
 use function Safe\unlink;
 
 class SaveAttachmentsAction
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 1900eb1 (.)
     /**
      * Save attachments to media library.
      *
      * @param  array<int, string>  $attachments
      * @param  array<string, mixed>  $data
      */
-<<<<<<< HEAD
-=======
->>>>>>> 5200b63 (.)
-=======
-    /**
-     * @param  array<int, string>  $attachments
-     * @param  array<string, string>  $data
-     */
->>>>>>> 1634e53 (.)
-=======
->>>>>>> 21a9aec (.)
-=======
->>>>>>> 1900eb1 (.)
     public function execute(HasMedia $record, array $attachments, array $data, string $disk = 'attachments'): void
     {
         $dataAttachments = [];
 
         foreach ($attachments as $attachment) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
             Assert::string($attachment, '['.__LINE__.']['.class_basename(__CLASS__).']');
 
-=======
->>>>>>> 5200b63 (.)
-=======
-            Assert::string($attachment, '['.__LINE__.']['.class_basename(__CLASS__).']');
-
->>>>>>> 1900eb1 (.)
             if (empty($data[$attachment])) {
                 continue;
             }
 
             $path = $data[$attachment];
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
             Assert::string($path, '['.__LINE__.']['.class_basename(__CLASS__).']');
-=======
->>>>>>> 5200b63 (.)
-=======
->>>>>>> 06bb10d (.)
-=======
-=======
->>>>>>> 37a2da6 (.)
->>>>>>> 98c37f4 (.)
-=======
->>>>>>> a80d398 (.)
-=======
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> e9b0959 (.)
->>>>>>> 47a54fe (.)
-=======
->>>>>>> f1c6d6e (.)
-=======
-            $attachmentKey = is_string($attachment) ? $attachment : (string) $attachment;
-            if (empty($data[$attachmentKey])) {
-                continue;
-            }
-
-            $path = $data[$attachmentKey];
-            if (!is_string($path)) {
-                continue;
-            }
->>>>>>> 13d1d7e (.)
-=======
-            if (empty($data[$attachment])) {
-                continue;
-            }
-
-            $path = $data[$attachment];
->>>>>>> 2a4b5df (.)
-=======
-            Assert::string($path, '['.__LINE__.']['.class_basename(__CLASS__).']');
->>>>>>> 1900eb1 (.)
 
             // Metodo compatibile con Laravel 9+ e Flysystem 3.x
             $storage = Storage::disk($disk);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
             if (! $storage->exists($path)) {
-=======
-=======
-=======
->>>>>>> 98c37f4 (.)
-=======
-=======
-=======
-=======
-=======
->>>>>>> origin/develop
->>>>>>> 47a54fe (.)
-            
-           
-            // Metodo compatibile con Laravel 9+ e Flysystem 3.x
-            $storage = Storage::disk($disk);
-            
-<<<<<<< HEAD
->>>>>>> 0a466ed (.)
-<<<<<<< HEAD
->>>>>>> 06bb10d (.)
-=======
-=======
->>>>>>> 37a2da6 (.)
->>>>>>> 98c37f4 (.)
-=======
->>>>>>> a80d398 (.)
-=======
-<<<<<<< HEAD
->>>>>>> a12f125f4a (.)
-=======
-
-            // Metodo compatibile con Laravel 9+ e Flysystem 3.x
-            $storage = Storage::disk($disk);
-
->>>>>>> b93ef594b4 (.)
-=======
->>>>>>> origin/develop
->>>>>>> e9b0959 (.)
->>>>>>> 47a54fe (.)
-=======
->>>>>>> f1c6d6e (.)
-            if (!$storage->exists($path)) {
->>>>>>> 5200b63 (.)
-=======
-            if (! $storage->exists($path)) {
->>>>>>> f41e45e (.)
                 continue;
             }
 
@@ -224,105 +63,35 @@ class SaveAttachmentsAction
             }
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         if (! empty($dataAttachments)) {
             /** @var array<string, string> $dataAttachments */
-<<<<<<< HEAD
-=======
-        if (!empty($dataAttachments)) {
->>>>>>> 5200b63 (.)
-=======
-        if (! empty($dataAttachments)) {
->>>>>>> f41e45e (.)
-=======
->>>>>>> 1900eb1 (.)
             $record->update($dataAttachments);
         }
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 1900eb1 (.)
     /**
      * @param  array<int, string>  $attachments
      * @param  array<string, mixed>  $data
      */
-<<<<<<< HEAD
-=======
->>>>>>> 5200b63 (.)
-=======
-    /**
-     * @param  array<int, string>  $attachments
-     * @param  array<string, string>  $data
-     */
->>>>>>> 1634e53 (.)
-=======
->>>>>>> 21a9aec (.)
-=======
->>>>>>> 1900eb1 (.)
     public function executeOLD(HasMedia $record, array $attachments, array $data, string $disk = 'attachments'): void
     {
         $data_attachments = [];
         foreach ($attachments as $attachment) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-            Assert::string($attachment, '['.__LINE__.']['.class_basename(__CLASS__).']');
-=======
-            /** @var string $path */
->>>>>>> 1634e53 (.)
-=======
->>>>>>> 21a9aec (.)
-            $path = $data[$attachment];
-            Assert::string($path, '['.__LINE__.']['.class_basename(__CLASS__).']');
-=======
-            $attachmentKey = is_string($attachment) ? $attachment : (string) $attachment;
-            $path = $data[$attachmentKey] ?? null;
-            if (!is_string($path)) {
-                continue;
-            }
->>>>>>> 13d1d7e (.)
-=======
-            $path = $data[$attachment];
->>>>>>> 2a4b5df (.)
-=======
             Assert::string($attachment, '['.__LINE__.']['.class_basename(__CLASS__).']');
             $path = $data[$attachment];
             Assert::string($path, '['.__LINE__.']['.class_basename(__CLASS__).']');
->>>>>>> 1900eb1 (.)
             $full_path = Storage::disk($disk)->path($path);
             // *
-=======
-            $path = $data[$attachment];
-            $full_path = Storage::disk($disk)->path($path);
-<<<<<<< HEAD
-            //*
->>>>>>> 5200b63 (.)
-=======
-            // *
->>>>>>> f41e45e (.)
             dddx([
                 'exists' => Storage::disk($disk)->exists($path),
                 'path' => $path,
                 'disk' => $disk,
                 'full_path' => Storage::disk($disk)->path($path),
             ]);
-<<<<<<< HEAD
-<<<<<<< HEAD
             // */
             if (! method_exists($record, 'addMediaFromDisk')) {
                 throw new Exception('Method addMediaFromDisk not found');
             }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
             $fileAdder = $record->addMediaFromDisk($path, $disk);
             // $media=$record->addMediaFromRequest($attachment)
 
@@ -336,53 +105,6 @@ class SaveAttachmentsAction
             $data_attachments[$attachment] = $media->getPathRelativeToRoot();
         }
         /** @var array<string, string> $data_attachments */
-=======
-            //*/
-            if (!method_exists($record, 'addMediaFromDisk')) {
-=======
-            // */
-            if (! method_exists($record, 'addMediaFromDisk')) {
->>>>>>> f41e45e (.)
-                throw new Exception('Method addMediaFromDisk not found');
-            }
-=======
->>>>>>> 21a9aec (.)
-            $media = $record
-                ->addMediaFromDisk($path, $disk)
-                // $media=$record->addMediaFromRequest($attachment)
-
-                // $media=$record->addMedia($full_path)
-                ->toMediaCollection($attachment);
-<<<<<<< HEAD
-=======
-            /** @var \Spatie\MediaLibrary\MediaCollections\FileAdder $mediaAdder */
-            $mediaAdder = $record->addMediaFromDisk($path, $disk);
-            if ($mediaAdder === null) {
-                continue;
-            }
-            /** @var \Spatie\MediaLibrary\MediaCollections\Models\Media $media */
-            $media = $mediaAdder->toMediaCollection($attachment);
->>>>>>> 1634e53 (.)
-=======
->>>>>>> 21a9aec (.)
-            $data_attachments[$attachment] = $media->getPathRelativeToRoot();
-        }
->>>>>>> 5200b63 (.)
-=======
-            $fileAdder = $record->addMediaFromDisk($path, $disk);
-            // $media=$record->addMediaFromRequest($attachment)
-
-            // $media=$record->addMedia($full_path)
-            if ($fileAdder === null) {
-                continue;
-            }
-            /** @phpstan-ignore-next-line - Spatie MediaLibrary fluent API */
-            $media = $fileAdder->toMediaCollection($attachment);
-            /** @phpstan-ignore-next-line - Spatie MediaLibrary Media model */
-            $data_attachments[$attachment] = $media->getPathRelativeToRoot();
-        }
-        /** @var array<string, string> $data_attachments */
->>>>>>> 1900eb1 (.)
         $record->update($data_attachments);
     }
 }

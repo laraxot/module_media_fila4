@@ -4,72 +4,10 @@ declare(strict_types=1);
 
 namespace Modules\Media\Filament\Tables\Columns;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Filament\Tables\Columns\IconColumn;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Modules\Media\Actions\CloudFront\GetCloudFrontSignedUrlAction;
-=======
-=======
->>>>>>> 47a54fe (.)
-=======
->>>>>>> f1c6d6e (.)
-=======
->>>>>>> 1d21a10 (.)
-=======
->>>>>>> 146bbc3 (.)
-=======
->>>>>>> b8fda23 (.)
-=======
->>>>>>> f5f7069 (.)
-use Illuminate\Http\Request;
-use Exception;
-use Filament\Forms\Components\Select;
-use Filament\Forms\Components\Textarea;
-use Filament\Forms\Components\TextInput;
-use Filament\Actions\Action;
-=======
->>>>>>> 13d1d7e (.)
-use Filament\Tables\Columns\IconColumn;
-use Illuminate\Database\Eloquent\Model;
-<<<<<<< HEAD
-use Illuminate\Support\Arr;
-use Illuminate\Support\Facades\Storage;
-use Modules\Media\Actions\CloudFront\GetCloudFrontSignedUrlAction;
-use Modules\<main module>\Models\User;
-use Spatie\ModelStates\State;
->>>>>>> 5200b63 (.)
-=======
-use Illuminate\Http\Request;
->>>>>>> 13d1d7e (.)
-=======
-use Illuminate\Http\Request;
-use Exception;
-use Filament\Forms\Components\Select;
-use Filament\Forms\Components\Textarea;
-use Filament\Forms\Components\TextInput;
-use Filament\Actions\Action;
-=======
->>>>>>> 1634e53 (.)
-use Filament\Tables\Columns\IconColumn;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
-use Modules\Media\Actions\CloudFront\GetCloudFrontSignedUrlAction;
-<<<<<<< HEAD
-use Modules\<main module>\Models\User;
-use Spatie\ModelStates\State;
->>>>>>> 2a4b5df (.)
-=======
->>>>>>> 1634e53 (.)
 
 class IconMediaColumn extends IconColumn
 {
@@ -78,21 +16,12 @@ class IconMediaColumn extends IconColumn
         parent::setUp();
         $attachment = $this->getName();
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 1900eb1 (.)
         $this->default(function ($record) use ($attachment) {
                 if (is_object($record) && method_exists($record, 'getFirstMedia')) {
                     return $record->getFirstMedia($attachment);
                 }
                 return null;
             })
-<<<<<<< HEAD
             ->icon('heroicon-o-document-text')
             ->color(function ($record) use ($attachment): string {
                 if (is_object($record) && method_exists($record, 'getFirstMedia')) {
@@ -145,107 +74,6 @@ class IconMediaColumn extends IconColumn
                 // return response()->file($path, $headers);
 
                 // return Storage::disk($media->disk)->response($media->getPathRelativeToRoot(), null, $headers);
-=======
-        $this->default(fn($record) => $record->getFirstMedia($attachment))
-=======
-        $this->default(function (Model $record) use ($attachment) {
-            if (method_exists($record, 'getFirstMedia')) {
-                return $record->getFirstMedia($attachment);
-            }
-
-        })
->>>>>>> 13d1d7e (.)
-=======
-        $this->default(fn($record) => $record->getFirstMedia($attachment))
->>>>>>> 2a4b5df (.)
-=======
-        $this->default(static function (mixed $record) use ($attachment): mixed {
-            if (! is_object($record) || ! method_exists($record, 'getFirstMedia')) {
-                return null;
-            }
-
-            return $record->getFirstMedia($attachment);
-        })
->>>>>>> 1634e53 (.)
-=======
-        $this->default(fn ($record) => $record->getFirstMedia($attachment))
->>>>>>> 21a9aec (.)
-=======
->>>>>>> 1900eb1 (.)
-            ->icon('heroicon-o-document-text')
-            ->color(function ($record) use ($attachment): string {
-                if (is_object($record) && method_exists($record, 'getFirstMedia')) {
-                    return $record->getFirstMedia($attachment) ? 'success' : 'danger';
-                }
-                return 'danger';
-            })
-            ->tooltip(function ($record) use ($attachment): string {
-                if (is_object($record) && method_exists($record, 'getFirstMedia')) {
-                    $media = $record->getFirstMedia($attachment);
-                    if (is_object($media) && property_exists($media, 'file_name') && is_string($media->file_name)) {
-                        return $media->file_name;
-                    }
-                }
-                return 'Documento non caricato';
-            })
-            ->action(function (array $arguments, Request $request) use ($attachment) {
-                // Skip action if record is not available or doesn't have media capabilities
-                if (! isset($arguments['record'])) {
-                    return null;
-                }
-                
-                $record = $arguments['record'];
-                
-                // Verify record is an object and has the required method
-                if (! is_object($record) || ! method_exists($record, 'getFirstMedia')) {
-                    return null;
-                }
-                
-                /** @var \Spatie\MediaLibrary\MediaCollections\Models\Media|null $media */
-                $media = $record->getFirstMedia($attachment);
-                if ($media === null) {
-                    return null;
-                }
-
-                return $media->toInlineResponse($request);
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-                //return Storage::disk($media->disk)->response($media->getPathRelativeToRoot(), null, $headers);
-                
->>>>>>> 5200b63 (.)
-=======
->>>>>>> 13d1d7e (.)
-=======
-                //return $media->toResponse($request);
-                //return Storage::disk($media->disk)->download($media->getPathRelativeToRoot());
-                //return Storage::disk($media->disk)
-=======
-                // return $media->toResponse($request);
-                // return Storage::disk($media->disk)->download($media->getPathRelativeToRoot());
-                // return Storage::disk($media->disk)
->>>>>>> 1634e53 (.)
-                //    ->temporaryUploadUrl($media->getPathRelativeToRoot(),now()->addMinutes(5));
-                // return response()->streamDownload(function () use ($media) {
-                //    echo $media->get();
-                // }, $media->file_name);
-                // $headers=[
-                //    'Content-Type' => $media->mime_type,
-                //    'Content-Disposition' => 'inline; filename="' . basename($media->getPathRelativeToRoot()) . '"'
-                // ];
-                // $path = Storage::disk($media->disk)->path($media->getPathRelativeToRoot());
-                // return response()->file($path, $headers);
-
-<<<<<<< HEAD
-
-                //return Storage::disk($media->disk)->response($media->getPathRelativeToRoot(), null, $headers);
-                
->>>>>>> 2a4b5df (.)
-=======
-                // return Storage::disk($media->disk)->response($media->getPathRelativeToRoot(), null, $headers);
->>>>>>> 1634e53 (.)
             });
     }
 }
