@@ -10,6 +10,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 3f50d25 (.)
 =======
@@ -572,3 +573,5 @@ describe('Media Performance Tests', function () {
 >>>>>>> ffc92bd (.)
 =======
 >>>>>>> 9a4eacb (.)
+=======
+>>>>>>> 4b6364d (.)
