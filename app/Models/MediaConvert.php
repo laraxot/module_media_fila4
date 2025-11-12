@@ -341,9 +341,11 @@ class MediaConvert extends BaseModel
     public function getDiskAttribute(?string $value): ?string
 >>>>>>> f41e45e (.)
     {
-        if ($this->media === null) {
+        $media = $this->media;
+        if ($media === null) {
             return null;
         }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -364,6 +366,10 @@ class MediaConvert extends BaseModel
 
         return $this->media->disk;
 >>>>>>> de4643e (.)
+=======
+        $disk = $media->getAttribute('disk');
+        return is_string($disk) ? $disk : null;
+>>>>>>> 29e9d39 (.)
     }
 
     public function getFileAttribute(?string $value): ?string
@@ -385,9 +391,11 @@ class MediaConvert extends BaseModel
     public function getFileAttribute(?string $value): ?string
 >>>>>>> f41e45e (.)
     {
-        if ($this->media === null) {
+        $media = $this->media;
+        if ($media === null) {
             return null;
         }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -399,12 +407,15 @@ class MediaConvert extends BaseModel
 =======
 =======
 >>>>>>> df262d8 (.)
+=======
+>>>>>>> 29e9d39 (.)
         $path = $media->getAttribute('path');
         $fileName = $media->getAttribute('file_name');
         if (! is_string($path) || ! is_string($fileName)) {
             return null;
         }
         return $path.'/'.$fileName;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 8bb13d7 (.)
 =======
@@ -415,6 +426,8 @@ class MediaConvert extends BaseModel
 
         return $this->media->path.'/'.$this->media->file_name;
 >>>>>>> de4643e (.)
+=======
+>>>>>>> 29e9d39 (.)
     }
 
     public function getConvertedFileAttribute(?string $value): ?string
@@ -434,15 +447,23 @@ class MediaConvert extends BaseModel
     public function getConvertedFileAttribute(?string $value): ?string
 >>>>>>> f41e45e (.)
     {
-        if ($this->media === null) {
+        $media = $this->media;
+        if ($media === null) {
             return null;
         }
-        $info = pathinfo($this->media->file_name);
+        $fileName = $media->getAttribute('file_name');
+        $path = $media->getAttribute('path');
+        $format = $this->getAttribute('format');
+        if (! is_string($fileName) || ! is_string($path) || ! is_string($format)) {
+            return null;
+        }
+        $info = pathinfo($fileName);
         // "dirname" => "."
         // "basename" => "20600550-uhd_3840_2160_30fps.mp4"
         // "extension" => "mp4"
         // "filename" => "20600550-uhd_3840_2160_30fps"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -468,5 +489,8 @@ class MediaConvert extends BaseModel
 =======
         return $this->media->path.'/conversions/'.$info['filename'].'_'.$this->id.'.'.$this->format;
 >>>>>>> de4643e (.)
+=======
+        return $path.'/conversions/'.$info['filename'].'_'.$this->id.'.'.$format;
+>>>>>>> 29e9d39 (.)
     }
 }
