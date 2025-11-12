@@ -74,7 +74,7 @@ use Modules\Media\Tests\TestCase;
  * |
  */
 
-pest()->extend(TestCase::class)->in('Feature', 'Unit');
+pest()->extend(TestCase::class)->in('Feature', 'Unit', 'Filament');
 
 /*
  * |--------------------------------------------------------------------------
@@ -87,15 +87,8 @@ pest()->extend(TestCase::class)->in('Feature', 'Unit');
  * |
  */
 
-expect()->extend('toBe' + 'Media' + '', function () {
-    /** @var \Pest\Expectation<mixed> $this */
-    return $this->toBeInstanceOf(...);
-});
-
-expect()->extend('toBe' + 'Media' + '', function () {
-    /** @var \Pest\Expectation<mixed> $this */
-    return $this->toBeInstanceOf(...);
-});
+/** @phpstan-ignore-next-line property.nonObject, variable.undefined */
+expect()->extend('toBeMedia', fn () => expect($this->value)->toBeInstanceOf(Media::class));
 
 /*
  * |--------------------------------------------------------------------------
@@ -469,39 +462,60 @@ expect()->extend('toBeMediaCollection', function () {
 
 /**
  * @param array<string, mixed> $attributes
+ * @return Media
  */
 function createMedia(array $attributes = []): Media
 {
-    $Media = Media::factory()->create($attributes);
-    assert($Media instanceof Media);
-    return $Media;
+    /** @var \Illuminate\Database\Eloquent\Factories\Factory<Media> $factory */
+    $factory = Media::factory();
+
+    /** @var Media $media */
+    $media = $factory->create($attributes);
+
+    return $media;
 }
 
 /**
  * @param array<string, mixed> $attributes
+ * @return Media
  */
 function makeMedia(array $attributes = []): Media
 {
-    $Media = Media::factory()->make($attributes);
-    assert($Media instanceof Media);
-    return $Media;
+    /** @var \Illuminate\Database\Eloquent\Factories\Factory<Media> $factory */
+    $factory = Media::factory();
+
+    /** @var Media $media */
+    $media = $factory->make($attributes);
+
+    return $media;
 }
 
 /**
  * @param array<string, mixed> $attributes
+ * @return MediaCollection
+ * @phpstan-ignore-next-line class.notFound
  */
 function createMediaCollection(array $attributes = []): MediaCollection
 {
-    $MediaCollection = MediaCollection::factory()->create($attributes);
-    assert($MediaCollection instanceof MediaCollection);
-    return $MediaCollection;
+    /** @var \Illuminate\Database\Eloquent\Factories\Factory<MediaCollection> $factory */
+    /** @phpstan-ignore-next-line class.notFound */
+    $factory = MediaCollection::factory();
+
+    /** @var MediaCollection $mediaCollection */
+    /** @phpstan-ignore-next-line class.notFound */
+    $mediaCollection = $factory->create($attributes);
+
+    return $mediaCollection;
 }
 
 /**
  * @param array<string, mixed> $attributes
+ * @return MediaCollection
+ * @phpstan-ignore-next-line class.notFound
  */
 function makeMediaCollection(array $attributes = []): MediaCollection
 {
+<<<<<<< HEAD
 <<<<<<< HEAD
     return MediaCollection::factory()->make($attributes);
 <<<<<<< HEAD
@@ -563,4 +577,15 @@ function makeMediaCollection(array $attributes = []): \Modules\Media\Models\Medi
     assert($MediaCollection instanceof MediaCollection);
     return $MediaCollection;
 >>>>>>> 13d1d7e (.)
+=======
+    /** @var \Illuminate\Database\Eloquent\Factories\Factory<MediaCollection> $factory */
+    /** @phpstan-ignore-next-line class.notFound */
+    $factory = MediaCollection::factory();
+
+    /** @var MediaCollection $mediaCollection */
+    /** @phpstan-ignore-next-line class.notFound */
+    $mediaCollection = $factory->make($attributes);
+
+    return $mediaCollection;
+>>>>>>> b69c36d (.)
 }
