@@ -26,6 +26,7 @@ declare(strict_types=1);
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 =======
@@ -85,6 +86,10 @@ declare(strict_types=1);
 >>>>>>> 22b1256 (.)
 =======
 >>>>>>> 10ef3f7 (.)
+=======
+=======
+>>>>>>> 37a2da6 (.)
+>>>>>>> 91c1d65 (.)
 use Modules\Media\Models\Media;
 use Modules\Media\Models\MediaCollection;
 use Modules\Media\Tests\TestCase;
@@ -127,6 +132,7 @@ expect()->extend('toBeMediaCollection', fn () => $this->toBeInstanceOf(MediaColl
  * | global functions to help you to reduce the number of lines of code in your test files.
  * |
  */
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -214,6 +220,8 @@ use Modules\Media\Tests\TestCase;
 >>>>>>> 760b37c (.)
 =======
 >>>>>>> 10ef3f7 (.)
+=======
+>>>>>>> 91c1d65 (.)
 =======
 namespace Modules\Media\Tests;
 
@@ -475,6 +483,7 @@ expect()->extend('toBeMediaCollection', function () {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 06bb10d (.)
 =======
 =======
@@ -553,6 +562,10 @@ expect()->extend('toBeMediaCollection', function () {
 =======
 >>>>>>> 0a466ed (.)
 >>>>>>> 10ef3f7 (.)
+=======
+=======
+>>>>>>> 37a2da6 (.)
+>>>>>>> 91c1d65 (.)
 
 function createMedia(array $attributes = []): Media
 {
