@@ -233,6 +233,7 @@ use Webmozart\Assert\Assert;
  */
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 class TemporaryUpload extends BaseModel implements HasMedia
 <<<<<<< HEAD
 =======
@@ -241,6 +242,9 @@ class TemporaryUpload extends Model implements HasMedia
 =======
 class TemporaryUpload extends BaseModel implements HasMedia
 >>>>>>> 6b11638 (.)
+=======
+class TemporaryUpload extends Model implements HasMedia
+>>>>>>> e06a511 (.)
 {
     use \Modules\Xot\Models\Traits\HasXotFactory;
     use InteractsWithMedia;
