@@ -109,6 +109,10 @@ class GetAttachmentsSchemaAction
                 });
         }
 
+<<<<<<< HEAD
         return $form;
+=======
+        return $schema;
+>>>>>>> 1999eb3 (.)
     }
 }
