@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 📁 **Media Module** - Sistema Avanzato Gestione File Multimediali
 
 [![Laravel 12.x](https://img.shields.io/badge/Laravel-12.x-red.svg)](https://laravel.com/)
@@ -496,3 +497,5 @@ ffmpeg -codecs
 >>>>>>> 8cdc78f (.)
 =======
 >>>>>>> 1a0067b (.)
+=======
+>>>>>>> 70517e3 (.)

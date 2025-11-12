@@ -41,11 +41,7 @@ class GetAttachmentsSchemaAction
 {
     public function execute(array $attachments, string $disk = 'attachments'): array
     {
-<<<<<<< HEAD
         $form = [];
-=======
-        $schema = [];
->>>>>>> 739e4b7 (.)
         $sessionId = session()->getId();
         $prefix = Config::string('media-library.prefix');
 
@@ -62,9 +58,9 @@ class GetAttachmentsSchemaAction
             $sessionDir = $prefix . '/' . $sessionDir;
         }
         foreach ($attachments as $attachment) {
-<<<<<<< HEAD
             $form[$attachment] = FileUpload::make($attachment)
                 //$form[$attachment]=SpatieMediaLibraryFileUpload::make($attachment)
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 5200b63 (.)
 =======
@@ -73,6 +69,8 @@ class GetAttachmentsSchemaAction
                 //$schema[$attachment]=SpatieMediaLibraryFileUpload::make($attachment)
 >>>>>>> 739e4b7 (.)
 >>>>>>> 1a0067b (.)
+=======
+>>>>>>> 70517e3 (.)
                 ->directory($sessionDir)
                 ->disk($disk)
                 ->acceptedFileTypes(['application/pdf', 'image/jpeg', 'image/png', 'image/jpg'])
@@ -121,10 +119,6 @@ class GetAttachmentsSchemaAction
                 });
         }
 
-<<<<<<< HEAD
         return $form;
-=======
-        return $schema;
->>>>>>> 739e4b7 (.)
     }
 }
