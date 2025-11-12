@@ -8,6 +8,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 3f50d25 (.)
 =======
@@ -340,3 +341,5 @@ Tutti i file factory devono essere validati con PHPStan livello 9:
 >>>>>>> 60ceacf (.)
 =======
 >>>>>>> d2f9543 (.)
+=======
+>>>>>>> ffc92bd (.)
