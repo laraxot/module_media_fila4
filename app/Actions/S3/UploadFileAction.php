@@ -15,6 +15,7 @@ use Aws\S3\MultipartUploader;
 use Aws\S3\ObjectUploader;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 5200b63 (.)
 =======
 <<<<<<< HEAD
@@ -24,6 +25,8 @@ use Aws\S3\ObjectUploader;
 =======
 >>>>>>> 37a2da6 (.)
 >>>>>>> 98c37f4 (.)
+=======
+>>>>>>> a80d398 (.)
 
 use function Safe\fclose;
 use function Safe\filesize;
@@ -32,6 +35,7 @@ use function Safe\mime_content_type;
 <<<<<<< HEAD
 =======
 use function Safe\rewind;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 5200b63 (.)
@@ -51,6 +55,8 @@ use function Safe\mime_content_type;
 =======
 >>>>>>> 37a2da6 (.)
 >>>>>>> 98c37f4 (.)
+=======
+>>>>>>> a80d398 (.)
 
 class UploadFileAction extends BaseS3Action
 {
@@ -64,21 +70,8 @@ class UploadFileAction extends BaseS3Action
 >>>>>>> 5200b63 (.)
      * @return array<string, mixed>
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function execute(string $localFilePath, string $destinationFilePath, array $options = []): array
     {
-=======
-    public function execute(
-        string $localFilePath, 
-        string $destinationFilePath, 
-        array $options = []
-    ): array {
->>>>>>> 0a466ed (.)
-=======
-    public function execute(string $localFilePath, string $destinationFilePath, array $options = []): array
-    {
->>>>>>> 37a2da6 (.)
         // Validation
 <<<<<<< HEAD
         if (! file_exists($localFilePath)) {
@@ -107,40 +100,18 @@ class UploadFileAction extends BaseS3Action
         }
 
         $sourceFile = null;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> 0a466ed (.)
-=======
-
->>>>>>> 37a2da6 (.)
         try {
             $sourceFile = fopen($localFilePath, 'rb');
 
             // Default options with proper typing
             $defaultOptions = [
                 'ACL' => 'private',
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 37a2da6 (.)
                 'ContentType' => mime_content_type($localFilePath) ?: 'application/octet-stream',
             ];
 
             $uploadOptions = array_merge($defaultOptions, $options);
 
-<<<<<<< HEAD
-=======
-                'ContentType' => mime_content_type($localFilePath) ?: 'application/octet-stream'
-            ];
-
-            $uploadOptions = array_merge($defaultOptions, $options);
-            
->>>>>>> 0a466ed (.)
-=======
->>>>>>> 37a2da6 (.)
             // Ensure ACL is string for type safety
             $acl = is_string($uploadOptions['ACL']) ? $uploadOptions['ACL'] : 'private';
 
@@ -151,24 +122,12 @@ class UploadFileAction extends BaseS3Action
                 $destinationFilePath,
                 $sourceFile,
                 (string) ($uploadOptions['ACL'] ?? 'private'),
-<<<<<<< HEAD
-<<<<<<< HEAD
                 $uploadOptions,
-=======
-                $uploadOptions
->>>>>>> 0a466ed (.)
-=======
-                $uploadOptions,
->>>>>>> 37a2da6 (.)
             );
 
             $this->logger->info('Uploading file to S3', [
                 'localPath' => $localFilePath,
                 's3Key' => $destinationFilePath,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 37a2da6 (.)
                 'fileSize' => filesize($localFilePath),
             ]);
 
@@ -185,23 +144,6 @@ class UploadFileAction extends BaseS3Action
                 'localPath' => $localFilePath,
                 's3Key' => $destinationFilePath,
                 'objectUrl' => $result['ObjectURL'] ?? null,
-<<<<<<< HEAD
-=======
-                'fileSize' => filesize($localFilePath)
-            ]);
-
-            $result = $uploader->upload();
-                
-            // Close the file after successful upload
-            fclose($sourceFile);
-                
-            $this->logger->info('File uploaded successfully to S3', [
-                'localPath' => $localFilePath,
-                's3Key' => $destinationFilePath,
-                'objectUrl' => $result['ObjectURL'] ?? null
->>>>>>> 0a466ed (.)
-=======
->>>>>>> 37a2da6 (.)
             ]);
 
             return [
@@ -209,28 +151,12 @@ class UploadFileAction extends BaseS3Action
                 'objectUrl' => $result['ObjectURL'] ?? null,
                 'etag' => $result['ETag'] ?? null,
                 'key' => $destinationFilePath,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 37a2da6 (.)
                 'bucket' => $this->bucketName,
             ];
         } catch (Exception $exception) {
             // Initialize $sourceFile as null if not already defined
             $sourceFile ??= null;
 
-<<<<<<< HEAD
-=======
-                'bucket' => $this->bucketName
-            ];
-
-        } catch (Exception $exception) {
-            // Initialize $sourceFile as null if not already defined
-            $sourceFile = $sourceFile ?? null;
-            
->>>>>>> 0a466ed (.)
-=======
->>>>>>> 37a2da6 (.)
             if (isset($sourceFile) && is_resource($sourceFile)) {
                 fclose($sourceFile);
             }
@@ -239,36 +165,14 @@ class UploadFileAction extends BaseS3Action
                 'localPath' => $localFilePath,
                 's3Key' => $destinationFilePath,
                 'error' => $exception->getMessage(),
-<<<<<<< HEAD
-<<<<<<< HEAD
                 'trace' => $exception->getTraceAsString(),
-=======
-                'trace' => $exception->getTraceAsString()
->>>>>>> 0a466ed (.)
-=======
-                'trace' => $exception->getTraceAsString(),
->>>>>>> 37a2da6 (.)
             ]);
 
             return [
                 'success' => false,
                 'error' => $exception->getMessage(),
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 37a2da6 (.)
                 'errorTrace' => $exception->getTraceAsString(),
             ];
         }
     }
 }
-<<<<<<< HEAD
-=======
-                'errorTrace' => $exception->getTraceAsString()
-            ];
-        }
-    }
-}
->>>>>>> 0a466ed (.)
-=======
->>>>>>> 37a2da6 (.)

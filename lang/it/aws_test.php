@@ -7,6 +7,7 @@ return [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 06bb10d (.)
     'navigation' => [
@@ -57,4 +58,9 @@ return [
     ],
 >>>>>>> 37a2da6 (.)
 >>>>>>> 98c37f4 (.)
+=======
+    'navigation' => [
+        'group' => 'Media',
+    ],
+>>>>>>> a80d398 (.)
 ];

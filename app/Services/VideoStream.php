@@ -30,6 +30,7 @@ class VideoStream
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     private ?string $mime = null; // MIME type of the video
 
     private ?int $fileModifiedTime = null; // Last modified time of the video file
@@ -58,6 +59,11 @@ class VideoStream
     private null|int $fileModifiedTime = null; // Last modified time of the video file
 >>>>>>> 37a2da6 (.)
 >>>>>>> 98c37f4 (.)
+=======
+    private null|string $mime = null; // MIME type of the video
+
+    private null|int $fileModifiedTime = null; // Last modified time of the video file
+>>>>>>> a80d398 (.)
 
     /** @var resource|null */
     private $stream = null; // File stream resource
@@ -88,15 +94,7 @@ class VideoStream
         }
 
         $mime = $filesystem->mimeType($path);
-<<<<<<< HEAD
-<<<<<<< HEAD
         if ($mime === false) {
-=======
-        if($mime==false){
->>>>>>> 0a466ed (.)
-=======
-        if ($mime === false) {
->>>>>>> 37a2da6 (.)
             throw new Exception('Unable to determine MIME type.');
         }
         $this->stream = $filesystem->readStream($path);
@@ -166,55 +164,23 @@ class VideoStream
         if ($unit !== 'bytes') {
             header('HTTP/1.1 416 Requested Range Not Satisfiable');
             header(sprintf('Content-Range: bytes %d-%d/%d', $this->start, $this->end, $this->size));
-<<<<<<< HEAD
-<<<<<<< HEAD
             exit();
-=======
-            exit;
->>>>>>> 0a466ed (.)
-=======
-            exit();
->>>>>>> 37a2da6 (.)
         }
 
         $rangeParts = explode('-', $range);
         $start = (int) $rangeParts[0];
-<<<<<<< HEAD
-<<<<<<< HEAD
         $end = isset($rangeParts[1]) ? ((int) $rangeParts[1]) : $this->end;
-=======
-        $end = isset($rangeParts[1]) ? (int) $rangeParts[1] : $this->end;
->>>>>>> 0a466ed (.)
-=======
-        $end = isset($rangeParts[1]) ? ((int) $rangeParts[1]) : $this->end;
->>>>>>> 37a2da6 (.)
 
         if ($start > $end || $start >= $this->size || $end >= $this->size) {
             header('HTTP/1.1 416 Requested Range Not Satisfiable');
             header(sprintf('Content-Range: bytes %d-%d/%d', $this->start, $this->end, $this->size));
-<<<<<<< HEAD
-<<<<<<< HEAD
             exit();
-=======
-            exit;
->>>>>>> 0a466ed (.)
-=======
-            exit();
->>>>>>> 37a2da6 (.)
         }
 
         $this->start = $start;
         $this->end = $end;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         $length = ($this->end - $this->start) + 1;
-=======
-        $length = $this->end - $this->start + 1;
->>>>>>> 0a466ed (.)
-=======
-        $length = ($this->end - $this->start) + 1;
->>>>>>> 37a2da6 (.)
         header('HTTP/1.1 206 Partial Content');
 <<<<<<< HEAD
         header('Content-Length: '.$length);
@@ -234,6 +200,7 @@ class VideoStream
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (! is_resource($this->stream)) {
 =======
         if (!is_resource($this->stream)) {
@@ -252,6 +219,9 @@ class VideoStream
         if (!is_resource($this->stream)) {
 >>>>>>> 37a2da6 (.)
 >>>>>>> 98c37f4 (.)
+=======
+        if (!is_resource($this->stream)) {
+>>>>>>> a80d398 (.)
             throw new Exception('Stream resource is not valid.');
         }
 
@@ -259,23 +229,18 @@ class VideoStream
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         while (! feof($this->stream) && $this->start <= $this->end) {
 =======
 =======
 >>>>>>> 06bb10d (.)
 =======
 >>>>>>> 98c37f4 (.)
+=======
+>>>>>>> a80d398 (.)
         while (!feof($this->stream) && $this->start <= $this->end) {
 >>>>>>> 5200b63 (.)
             $bytesToRead = min($this->bufferSize, ($this->end - $this->start) + 1);
-=======
-        while (! feof($this->stream) && $this->start <= $this->end) {
-            $bytesToRead = min($this->bufferSize, $this->end - $this->start + 1);
->>>>>>> 0a466ed (.)
-=======
-        while (!feof($this->stream) && $this->start <= $this->end) {
-            $bytesToRead = min($this->bufferSize, ($this->end - $this->start) + 1);
->>>>>>> 37a2da6 (.)
             if ($bytesToRead > 0) {
                 $data = fread($this->stream, $bytesToRead);
                 echo $data;
@@ -296,14 +261,6 @@ class VideoStream
             fclose($this->stream);
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         exit();
-=======
-        exit;
->>>>>>> 0a466ed (.)
-=======
-        exit();
->>>>>>> 37a2da6 (.)
     }
 }
