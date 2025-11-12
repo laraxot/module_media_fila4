@@ -10,6 +10,7 @@ DB_CONNECTION=sqlite
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 DB_DATABASE=<nome progetto>_data_test
 >>>>>>> 7df6a71 (.)
@@ -17,11 +18,9 @@ DB_DATABASE=<nome progetto>_data_test
 >>>>>>> 47a54fe (.)
 =======
 >>>>>>> c9ef35c (.)
-DB_DATABASE=saluteora_data_test
 =======
-DB_DATABASE=<nome progetto>_data_test
-DB_DATABASE=<nome progetto>_data_test
->>>>>>> 9348522 (.)
+>>>>>>> aa5e51a (.)
+DB_DATABASE=saluteora_data_test
 FILESYSTEM_DISK=local
 MEDIA_DISK=local
 ```
