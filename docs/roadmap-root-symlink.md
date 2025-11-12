@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 roadmap_media.md
 ## Collegamenti tra versioni di roadmap_root_symlink.md
 <<<<<<< HEAD
@@ -32,3 +33,10 @@ roadmap_media.md
 
 =======
 >>>>>>> 8cdc78f (.)
+=======
+roadmap_media.md
+## Collegamenti tra versioni di roadmap_root_symlink.md
+* [roadmap_root_symlink.md](../../../Notify/docs/roadmap_root_symlink.md)
+* [roadmap_root_symlink.md](../../../Media/docs/roadmap_root_symlink.md)
+
+>>>>>>> 3f50d25 (.)

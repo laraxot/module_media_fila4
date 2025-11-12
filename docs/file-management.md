@@ -3,7 +3,10 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 3f50d25 (.)
 # Gestione dei File in 
 
 ## Panoramica
@@ -13,6 +16,7 @@ Questo documento descrive le best practice per la gestione dei file in , inclusi
 ## Struttura delle Directory
 
  utilizza una struttura organizzata per l'archiviazione dei file:
+<<<<<<< HEAD
 >>>>>>> 7df6a71 (.)
 =======
 >>>>>>> 0caa3cf (.)
@@ -20,6 +24,8 @@ Questo documento descrive le best practice per la gestione dei file in , inclusi
 >>>>>>> c9ef35c (.)
 =======
 >>>>>>> aa5e51a (.)
+=======
+>>>>>>> 3f50d25 (.)
 # Gestione dei File in SaluteOra
 
 ## Panoramica
@@ -49,6 +55,7 @@ SaluteOra utilizza una struttura organizzata per l'archiviazione dei file:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 Per i form amministrativi,  utilizza il componente `FileUpload` di Filament:
 >>>>>>> 7df6a71 (.)
@@ -58,6 +65,9 @@ Per i form amministrativi,  utilizza il componente `FileUpload` di Filament:
 >>>>>>> c9ef35c (.)
 =======
 >>>>>>> aa5e51a (.)
+=======
+Per i form amministrativi,  utilizza il componente `FileUpload` di Filament:
+>>>>>>> 3f50d25 (.)
 Per i form amministrativi, SaluteOra utilizza il componente `FileUpload` di Filament:
 
 ```php
@@ -74,6 +84,7 @@ FileUpload::make('certifications')
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 0caa3cf (.)
 =======
@@ -86,14 +97,19 @@ Per una documentazione dettagliata sull'utilizzo di `FileUpload`, consulta la [G
 
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 3f50d25 (.)
 Per una documentazione dettagliata sull'utilizzo di `FileUpload`, consulta la [Gestione dei File Upload in Filament](../../UI/docs/filament-file-uploads.md).
 
 ### Utilizzo di Livewire
 
 Per i form frontend,  utilizza Livewire:
+<<<<<<< HEAD
 >>>>>>> 7df6a71 (.)
 =======
 >>>>>>> 0caa3cf (.)
+=======
+>>>>>>> 3f50d25 (.)
 Per i form frontend, SaluteOra utilizza Livewire:
 
 ```php
@@ -136,6 +152,7 @@ Schema::table('users', function (Blueprint $table) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 Per una documentazione dettagliata sulla mappatura dei campi, consulta la [Mappatura dei Campi Database nel Modulo Patient](/laravel/Modules/Patient/docs/DATABASE_FIELD_MAPPING.md).
 =======
 Per una documentazione dettagliata sulla mappatura dei campi, consulta la Mappatura dei Campi Database nel Modulo Patient (da creare se necessario).
@@ -152,6 +169,9 @@ Per una documentazione dettagliata sulla mappatura dei campi, consulta la Mappat
 =======
 Per una documentazione dettagliata sulla mappatura dei campi, consulta la [Mappatura dei Campi Database nel Modulo Patient](/laravel/Modules/Patient/docs/DATABASE_FIELD_MAPPING.md).
 >>>>>>> aa5e51a (.)
+=======
+Per una documentazione dettagliata sulla mappatura dei campi, consulta la Mappatura dei Campi Database nel Modulo Patient (da creare se necessario).
+>>>>>>> 3f50d25 (.)
 
 ## Accesso ai File
 
@@ -169,6 +189,7 @@ $url = Storage::url($path);
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
  implementa un sistema di controllo degli accessi per i file sensibili:
 >>>>>>> 7df6a71 (.)
@@ -178,6 +199,9 @@ $url = Storage::url($path);
 >>>>>>> c9ef35c (.)
 =======
 >>>>>>> aa5e51a (.)
+=======
+ implementa un sistema di controllo degli accessi per i file sensibili:
+>>>>>>> 3f50d25 (.)
 SaluteOra implementa un sistema di controllo degli accessi per i file sensibili:
 
 ```php
@@ -243,6 +267,7 @@ protected static function booted()
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 0caa3cf (.)
 =======
@@ -260,10 +285,13 @@ protected static function booted()
 =======
 >>>>>>> c9ef35c (.)
 =======
+=======
+>>>>>>> 3f50d25 (.)
 - [Gestione dei File Upload in Filament](../../UI/docs/filament-file-uploads.md)
 - [Migrazioni del Database](../../Xot/docs/migration-standards.md)
 - [Gestione degli Utenti](../../User/docs/user-management.md)
 - [Pattern di Ereditarietà dei Modelli](../../Xot/docs/archive/model-inheritance-patterns.md)
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 7df6a71 (.)
 =======
@@ -275,3 +303,5 @@ protected static function booted()
 >>>>>>> aa5e51a (.)
 =======
 >>>>>>> 8cdc78f (.)
+=======
+>>>>>>> 3f50d25 (.)

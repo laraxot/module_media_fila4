@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 3f50d25 (.)
 # Report PHPStan - Modulo Media
 
 ## Stato Attuale
@@ -62,6 +65,7 @@ L'analisi PHPStan di livello 1 non ha rilevato errori nel modulo Media. Questo Ã
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 * [phpstan_report.md](../../../Lang/docs/phpstan_report.md)
@@ -85,6 +89,10 @@ L'analisi PHPStan di livello 1 non ha rilevato errori nel modulo Media. Questo Ã
 * [phpstan_report.md](../../../Lang/docs/phpstan_report.md)
 * [phpstan_report.md](../../../Media/docs/phpstan_report.md)
 >>>>>>> f1c6d6e (.)
+=======
+* [phpstan_report.md](../../../Lang/docs/phpstan_report.md)
+* [phpstan_report.md](../../../Media/docs/phpstan_report.md)
+>>>>>>> 3f50d25 (.)
 
 
 ### Versione Incoming
@@ -93,5 +101,8 @@ L'analisi PHPStan di livello 1 non ha rilevato errori nel modulo Media. Questo Ã
 
 ---
 
+<<<<<<< HEAD
 =======
 >>>>>>> 8cdc78f (.)
+=======
+>>>>>>> 3f50d25 (.)
