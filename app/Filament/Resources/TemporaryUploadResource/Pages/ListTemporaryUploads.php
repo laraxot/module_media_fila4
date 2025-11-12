@@ -81,9 +81,6 @@ class ListTemporaryUploads extends XotBaseListRecords
      * @return array<string, TextColumn>
      */
     #[Override]
-    /**
-     * @return array<string, mixed>
-     */
     public function getTableColumns(): array
     {
         return [
@@ -103,9 +100,6 @@ class ListTemporaryUploads extends XotBaseListRecords
      * @return array<string, SelectFilter>
      */
     #[Override]
-    /**
-     * @return array<string, mixed>
-     */
     public function getTableFilters(): array
     {
         return [
@@ -120,9 +114,6 @@ class ListTemporaryUploads extends XotBaseListRecords
      * @return array<string, ViewAction|EditAction|DeleteAction>
      */
     #[Override]
-    /**
-     * @return array<string, mixed>
-     */
     public function getTableActions(): array
     {
         return [
@@ -136,9 +127,6 @@ class ListTemporaryUploads extends XotBaseListRecords
      * @return array<string, DeleteBulkAction>
      */
     #[Override]
-    /**
-     * @return array<string, mixed>
-     */
     public function getTableBulkActions(): array
     {
         return [
