@@ -21,6 +21,7 @@ class GetAttachmentsSchemaActionTest extends TestCase
         $attachments = ['invoice', 'contract', 'receipt'];
 
         // Act
+<<<<<<< HEAD
         $form = $action->execute($attachments);
 
         // Assert
@@ -29,6 +30,16 @@ class GetAttachmentsSchemaActionTest extends TestCase
 
         // Verifica che ogni attachment abbia un FileUpload component
         foreach ($form as $component) {
+=======
+        $schema = $action->execute($attachments);
+
+        // Assert
+        static::assertIsArray($schema);
+        static::assertCount(3, $schema);
+
+        // Verifica che ogni attachment abbia un FileUpload component
+        foreach ($schema as $component) {
+>>>>>>> 739e4b7 (.)
             static::assertInstanceOf(FileUpload::class, $component);
         }
     }
@@ -44,11 +55,19 @@ class GetAttachmentsSchemaActionTest extends TestCase
         $attachments = ['invoice', 'contract'];
 
         // Act
+<<<<<<< HEAD
         $form = $action->execute($attachments);
 
         // Assert
         static::assertSame('invoice', $form[0]->getName());
         static::assertSame('contract', $form[1]->getName());
+=======
+        $schema = $action->execute($attachments);
+
+        // Assert
+        static::assertSame('invoice', $schema[0]->getName());
+        static::assertSame('contract', $schema[1]->getName());
+>>>>>>> 739e4b7 (.)
     }
 
     public function test_schema_has_correct_labels(): void
@@ -62,10 +81,17 @@ class GetAttachmentsSchemaActionTest extends TestCase
         $attachments = ['invoice'];
 
         // Act
+<<<<<<< HEAD
         $form = $action->execute($attachments);
 
         // Assert
         static::assertSame('Invoice', $form[0]->getLabel());
+=======
+        $schema = $action->execute($attachments);
+
+        // Assert
+        static::assertSame('Invoice', $schema[0]->getLabel());
+>>>>>>> 739e4b7 (.)
     }
 
     public function test_schema_has_correct_validation(): void
@@ -79,10 +105,17 @@ class GetAttachmentsSchemaActionTest extends TestCase
         $attachments = ['invoice'];
 
         // Act
+<<<<<<< HEAD
         $form = $action->execute($attachments);
 
         // Assert
         $component = $form[0];
+=======
+        $schema = $action->execute($attachments);
+
+        // Assert
+        $component = $schema[0];
+>>>>>>> 739e4b7 (.)
         static::assertTrue($component->isRequired());
         static::assertContains('pdf', $component->getAcceptedFileTypes());
         static::assertContains('doc', $component->getAcceptedFileTypes());
@@ -100,10 +133,17 @@ class GetAttachmentsSchemaActionTest extends TestCase
         $attachments = ['invoice'];
 
         // Act
+<<<<<<< HEAD
         $form = $action->execute($attachments);
 
         // Assert
         $component = $form[0];
+=======
+        $schema = $action->execute($attachments);
+
+        // Assert
+        $component = $schema[0];
+>>>>>>> 739e4b7 (.)
         static::assertSame('attachments', $component->getDiskName());
     }
 
@@ -118,10 +158,17 @@ class GetAttachmentsSchemaActionTest extends TestCase
         $attachments = ['invoice'];
 
         // Act
+<<<<<<< HEAD
         $form = $action->execute($attachments);
 
         // Assert
         $component = $form[0];
+=======
+        $schema = $action->execute($attachments);
+
+        // Assert
+        $component = $schema[0];
+>>>>>>> 739e4b7 (.)
         static::assertSame('temp', $component->getDirectory());
     }
 
@@ -136,10 +183,17 @@ class GetAttachmentsSchemaActionTest extends TestCase
         $attachments = ['invoice'];
 
         // Act
+<<<<<<< HEAD
         $form = $action->execute($attachments);
 
         // Assert
         $component = $form[0];
+=======
+        $schema = $action->execute($attachments);
+
+        // Assert
+        $component = $schema[0];
+>>>>>>> 739e4b7 (.)
         static::assertSame('public', $component->getVisibility());
     }
 
@@ -154,10 +208,17 @@ class GetAttachmentsSchemaActionTest extends TestCase
         $attachments = ['invoice'];
 
         // Act
+<<<<<<< HEAD
         $form = $action->execute($attachments);
 
         // Assert
         $component = $form[0];
+=======
+        $schema = $action->execute($attachments);
+
+        // Assert
+        $component = $schema[0];
+>>>>>>> 739e4b7 (.)
         static::assertSame(10 * 1024 * 1024, $component->getMaxSize()); // 10MB
     }
 
@@ -172,10 +233,17 @@ class GetAttachmentsSchemaActionTest extends TestCase
         $attachments = ['invoice'];
 
         // Act
+<<<<<<< HEAD
         $form = $action->execute($attachments);
 
         // Assert
         $component = $form[0];
+=======
+        $schema = $action->execute($attachments);
+
+        // Assert
+        $component = $schema[0];
+>>>>>>> 739e4b7 (.)
         static::assertFalse($component->isMultiple());
     }
 
@@ -190,10 +258,17 @@ class GetAttachmentsSchemaActionTest extends TestCase
         $attachments = ['invoice'];
 
         // Act
+<<<<<<< HEAD
         $form = $action->execute($attachments);
 
         // Assert
         $component = $form[0];
+=======
+        $schema = $action->execute($attachments);
+
+        // Assert
+        $component = $schema[0];
+>>>>>>> 739e4b7 (.)
         static::assertTrue($component->isPreviewable());
     }
 
@@ -208,10 +283,17 @@ class GetAttachmentsSchemaActionTest extends TestCase
         $attachments = ['invoice'];
 
         // Act
+<<<<<<< HEAD
         $form = $action->execute($attachments);
 
         // Assert
         $component = $form[0];
+=======
+        $schema = $action->execute($attachments);
+
+        // Assert
+        $component = $schema[0];
+>>>>>>> 739e4b7 (.)
         static::assertTrue($component->isDownloadable());
     }
 
@@ -226,10 +308,17 @@ class GetAttachmentsSchemaActionTest extends TestCase
         $attachments = ['invoice'];
 
         // Act
+<<<<<<< HEAD
         $form = $action->execute($attachments);
 
         // Assert
         $component = $form[0];
+=======
+        $schema = $action->execute($attachments);
+
+        // Assert
+        $component = $schema[0];
+>>>>>>> 739e4b7 (.)
         static::assertTrue($component->isRemovable());
     }
 
@@ -244,10 +333,17 @@ class GetAttachmentsSchemaActionTest extends TestCase
         $attachments = ['invoice'];
 
         // Act
+<<<<<<< HEAD
         $form = $action->execute($attachments);
 
         // Assert
         $component = $form[0];
+=======
+        $schema = $action->execute($attachments);
+
+        // Assert
+        $component = $schema[0];
+>>>>>>> 739e4b7 (.)
         static::assertFalse($component->isReorderable());
     }
 
@@ -262,10 +358,17 @@ class GetAttachmentsSchemaActionTest extends TestCase
         $attachments = ['invoice'];
 
         // Act
+<<<<<<< HEAD
         $form = $action->execute($attachments);
 
         // Assert
         $component = $form[0];
+=======
+        $schema = $action->execute($attachments);
+
+        // Assert
+        $component = $schema[0];
+>>>>>>> 739e4b7 (.)
         static::assertFalse($component->isAppendable());
     }
 
@@ -280,10 +383,17 @@ class GetAttachmentsSchemaActionTest extends TestCase
         $attachments = ['invoice'];
 
         // Act
+<<<<<<< HEAD
         $form = $action->execute($attachments);
 
         // Assert
         $component = $form[0];
+=======
+        $schema = $action->execute($attachments);
+
+        // Assert
+        $component = $schema[0];
+>>>>>>> 739e4b7 (.)
         static::assertSame('Attachments', $component->getPanel());
     }
 
@@ -298,10 +408,17 @@ class GetAttachmentsSchemaActionTest extends TestCase
         $attachments = ['invoice'];
 
         // Act
+<<<<<<< HEAD
         $form = $action->execute($attachments);
 
         // Assert
         $component = $form[0];
+=======
+        $schema = $action->execute($attachments);
+
+        // Assert
+        $component = $schema[0];
+>>>>>>> 739e4b7 (.)
         static::assertStringContainsString('Upload invoice file', $component->getHelperText());
     }
 
@@ -316,10 +433,17 @@ class GetAttachmentsSchemaActionTest extends TestCase
         $attachments = ['invoice'];
 
         // Act
+<<<<<<< HEAD
         $form = $action->execute($attachments);
 
         // Assert
         $component = $form[0];
+=======
+        $schema = $action->execute($attachments);
+
+        // Assert
+        $component = $schema[0];
+>>>>>>> 739e4b7 (.)
         static::assertStringContainsString('Select invoice file', $component->getPlaceholder());
     }
 }
