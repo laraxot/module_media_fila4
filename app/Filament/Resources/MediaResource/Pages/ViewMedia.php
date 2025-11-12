@@ -13,6 +13,7 @@ namespace Modules\Media\Filament\Resources\MediaResource\Pages;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 446bc61 (.)
@@ -30,11 +31,14 @@ namespace Modules\Media\Filament\Resources\MediaResource\Pages;
 >>>>>>> 76e8f34 (.)
 =======
 >>>>>>> 71435ff (.)
+=======
+>>>>>>> 517d97d (.)
 use Filament\Schemas\Components\Actions;
 use Filament\Schemas\Components\Section;
 use Filament\Schemas\Components\Component;
 use Override;
 use Filament\Schemas\Components\Grid;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -52,11 +56,14 @@ use Filament\Schemas\Components\Grid;
 =======
 >>>>>>> 76e8f34 (.)
 =======
+>>>>>>> 517d97d (.)
+=======
 use Filament\Schemas\Components\Component;
 use Override;
 use Filament\Schemas\Components\Flex;
 use Filament\Schemas\Components\Section;
 use Filament\Schemas\Components\Actions;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -79,6 +86,9 @@ use Filament\Schemas\Components\Actions;
 >>>>>>> 76e8f34 (.)
 =======
 >>>>>>> 71435ff (.)
+=======
+>>>>>>> 1999eb3 (.)
+>>>>>>> 517d97d (.)
 use Filament\Actions\Action;
 use Filament\Actions\DeleteAction;
 use Filament\Infolists\Components\ImageEntry;
@@ -112,7 +122,11 @@ class ViewMedia extends XotBaseViewRecord
     /**
      * Restituisce lo schema dell'infolist per la visualizzazione dei dettagli del record.
      *
+<<<<<<< HEAD
      * @return array<int, Component>
+=======
+     * @return array<string, Component>
+>>>>>>> 1999eb3 (.)
      */
     #[Override]
     public function getInfolistSchema(): array
@@ -213,6 +227,7 @@ class ViewMedia extends XotBaseViewRecord
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 5200b63 (.)
 =======
 <<<<<<< HEAD
@@ -231,7 +246,12 @@ class ViewMedia extends XotBaseViewRecord
 >>>>>>> 76e8f34 (.)
 =======
 >>>>>>> 71435ff (.)
+=======
+>>>>>>> 517d97d (.)
             RepeatableEntry::make('entry_conversions')
+=======
+            'entry_conversions' => RepeatableEntry::make('entry_conversions')
+>>>>>>> 1999eb3 (.)
                 ->schema([
                     TextEntry::make('name'),
                     TextEntry::make('src'),
