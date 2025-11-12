@@ -4,16 +4,18 @@ declare(strict_types=1);
 
 namespace Modules\Media\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
-use Modules\Xot\Traits\Updater;
+use Modules\Xot\Models\XotBaseModel;
 
 /**
- * Class BaseModel.
+ * Base Model for Media module.
  *
+ * Extends XotBaseModel which provides all standard properties and methods.
+ *
+ * @see \Modules\Xot\Models\XotBaseModel
  */
-abstract class BaseModel extends Model
+abstract class BaseModel extends XotBaseModel
 {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -32,26 +34,15 @@ abstract class BaseModel extends Model
     // //use Cachable;
     use Updater;
 
+=======
+>>>>>>> fbf6035 (.)
     /**
-     * Indicates whether attributes are snake cased on arrays.
+     * The connection name for the model.
      *
-     * @see https://laravel-news.com/6-eloquent-secrets
-     *
-     * @var bool
+     * @var string
      */
-    public static $snakeAttributes = true;
-
-    /** @var bool */
-    public $incrementing = true;
-
-    /** @var bool */
-    public $timestamps = true;
-
-    /** @var int */
-    protected $perPage = 30;
-
-    /** @var string */
     protected $connection = 'media';
+<<<<<<< HEAD
 
     /** @var list<string> */
     protected $fillable = [
@@ -102,4 +93,6 @@ abstract class BaseModel extends Model
             'deleted_by' => 'string',
         ];
     }
+=======
+>>>>>>> fbf6035 (.)
 }

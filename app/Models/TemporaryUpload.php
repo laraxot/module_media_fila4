@@ -118,6 +118,7 @@ use Webmozart\Assert\Assert;
 <<<<<<< HEAD
 =======
  * @property int|null                    $media_count
+<<<<<<< HEAD
 >>>>>>> 13d1d7e (.)
  *
 =======
@@ -125,6 +126,8 @@ use Webmozart\Assert\Assert;
 =======
  *
 >>>>>>> f41e45e (.)
+=======
+>>>>>>> fbf6035 (.)
  * @method static Builder<static>|TemporaryUpload newModelQuery()
  * @method static Builder<static>|TemporaryUpload newQuery()
  * @method static Builder<static>|TemporaryUpload query()
@@ -132,6 +135,7 @@ use Webmozart\Assert\Assert;
  * @method static Builder<static>|TemporaryUpload whereId($value)
  * @method static Builder<static>|TemporaryUpload whereSessionId($value)
  * @method static Builder<static>|TemporaryUpload whereUpdatedAt($value)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -161,10 +165,13 @@ use Webmozart\Assert\Assert;
 =======
  *
 >>>>>>> f41e45e (.)
+=======
+>>>>>>> fbf6035 (.)
  * @property string|null $updated_by
  * @property string|null $created_by
  * @property string|null $deleted_at
  * @property string|null $deleted_by
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -182,6 +189,8 @@ use Webmozart\Assert\Assert;
 =======
  *
 >>>>>>> f41e45e (.)
+=======
+>>>>>>> fbf6035 (.)
  * @method static Builder<static>|TemporaryUpload whereCreatedBy($value)
  * @method static Builder<static>|TemporaryUpload whereDeletedAt($value)
  * @method static Builder<static>|TemporaryUpload whereDeletedBy($value)
@@ -195,6 +204,7 @@ use Webmozart\Assert\Assert;
  * @method static TemporaryUploadFactory factory($count = null, $state = [])
 =======
  * @method static TemporaryUploadFactory          factory($count = null, $state = [])
+<<<<<<< HEAD
 >>>>>>> 13d1d7e (.)
  *
  * @mixin \Eloquent
@@ -218,6 +228,8 @@ class TemporaryUpload extends BaseModel implements HasMedia
  *
  * @method static TemporaryUploadFactory factory($count = null, $state = [])
  *
+=======
+>>>>>>> fbf6035 (.)
  * @mixin \Eloquent
  */
 class TemporaryUpload extends Model implements HasMedia
