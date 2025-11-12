@@ -290,7 +290,61 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 >>>>>>> 0987d27 (.)
  * @mixin \Eloquent
  */
-/** */
+/**
+ * @property string $id
+ * @property int $media_id
+ * @property string|null $format
+ * @property string|null $codec_video
+ * @property string|null $codec_audio
+ * @property string|null $preset
+ * @property string|null $bitrate
+ * @property int|null $width
+ * @property int|null $height
+ * @property int|null $threads
+ * @property int|null $speed
+ * @property string|null $percentage
+ * @property string|null $remaining
+ * @property string|null $rate
+ * @property string|null $execution_time
+ * @property Carbon|null $created_at
+ * @property Carbon|null $updated_at
+ * @property string|null $updated_by
+ * @property string|null $created_by
+ * @property Carbon|null $deleted_at
+ * @property string|null $deleted_by
+ * @property-read \Modules\Fixcity\Models\Profile|null $creator
+ * @property-read string|null $converted_file
+ * @property-read string|null $disk
+ * @property-read string|null $file
+ * @property-read \Modules\Media\Models\Media|null $media
+ * @property-read \Modules\Fixcity\Models\Profile|null $updater
+ * @method static \Modules\Media\Database\Factories\MediaConvertFactory factory($count = null, $state = [])
+ * @method static Builder<static>|MediaConvert newModelQuery()
+ * @method static Builder<static>|MediaConvert newQuery()
+ * @method static Builder<static>|MediaConvert query()
+ * @method static Builder<static>|MediaConvert whereBitrate($value)
+ * @method static Builder<static>|MediaConvert whereCodecAudio($value)
+ * @method static Builder<static>|MediaConvert whereCodecVideo($value)
+ * @method static Builder<static>|MediaConvert whereCreatedAt($value)
+ * @method static Builder<static>|MediaConvert whereCreatedBy($value)
+ * @method static Builder<static>|MediaConvert whereDeletedAt($value)
+ * @method static Builder<static>|MediaConvert whereDeletedBy($value)
+ * @method static Builder<static>|MediaConvert whereExecutionTime($value)
+ * @method static Builder<static>|MediaConvert whereFormat($value)
+ * @method static Builder<static>|MediaConvert whereHeight($value)
+ * @method static Builder<static>|MediaConvert whereId($value)
+ * @method static Builder<static>|MediaConvert whereMediaId($value)
+ * @method static Builder<static>|MediaConvert wherePercentage($value)
+ * @method static Builder<static>|MediaConvert wherePreset($value)
+ * @method static Builder<static>|MediaConvert whereRate($value)
+ * @method static Builder<static>|MediaConvert whereRemaining($value)
+ * @method static Builder<static>|MediaConvert whereSpeed($value)
+ * @method static Builder<static>|MediaConvert whereThreads($value)
+ * @method static Builder<static>|MediaConvert whereUpdatedAt($value)
+ * @method static Builder<static>|MediaConvert whereUpdatedBy($value)
+ * @method static Builder<static>|MediaConvert whereWidth($value)
+ * @mixin \Eloquent
+ */
 class MediaConvert extends BaseModel
 {
     /** @var list<string> */

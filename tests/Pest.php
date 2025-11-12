@@ -120,7 +120,8 @@ use Modules\Media\Tests\TestCase;
  * |
  */
 
-pest()->extend(TestCase::class)->in('Feature', 'Unit', 'Filament');
+/** @phpstan-ignore-next-line method.internalClass */
+pest()->extend(TestCase::class)->in('Feature', 'Unit');
 
 /*
  * |--------------------------------------------------------------------------
@@ -133,8 +134,10 @@ pest()->extend(TestCase::class)->in('Feature', 'Unit', 'Filament');
  * |
  */
 
-/** @phpstan-ignore-next-line property.nonObject, variable.undefined */
-expect()->extend('toBeMedia', fn () => expect($this->value)->toBeInstanceOf(Media::class));
+expect()->extend('toBeMedia', function (): mixed {
+    /** @phpstan-ignore-next-line variable.undefined */
+    return $this->toBeInstanceOf(Media::class);
+});
 
 /*
  * |--------------------------------------------------------------------------
@@ -610,32 +613,22 @@ expect()->extend('toBeMediaCollection', function () {
 
 /**
  * @param array<string, mixed> $attributes
- * @return Media
  */
 function createMedia(array $attributes = []): Media
 {
-    /** @var \Illuminate\Database\Eloquent\Factories\Factory<Media> $factory */
-    $factory = Media::factory();
-
-    /** @var Media $media */
-    $media = $factory->create($attributes);
-
-    return $media;
+    $Media = Media::factory()->create($attributes);
+    assert($Media instanceof Media);
+    return $Media;
 }
 
 /**
  * @param array<string, mixed> $attributes
- * @return Media
  */
 function makeMedia(array $attributes = []): Media
 {
-    /** @var \Illuminate\Database\Eloquent\Factories\Factory<Media> $factory */
-    $factory = Media::factory();
-
-    /** @var Media $media */
-    $media = $factory->make($attributes);
-
-    return $media;
+    $Media = Media::factory()->make($attributes);
+    assert($Media instanceof Media);
+    return $Media;
 }
 
 /**
