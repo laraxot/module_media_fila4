@@ -130,6 +130,7 @@ $convertedPath = $action->execute($data);
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 [Torna alla documentazione Media](/docs/modules/module_media.md#actions) 
 =======
 [Torna alla documentazione Media](../README.md) 
@@ -263,3 +264,6 @@ $convertedPath = $action->execute($data);
 >>>>>>> 71b97ae (.)
 =======
 >>>>>>> 5af33b9 (.)
+=======
+[Torna alla documentazione Media](/docs/modules/module_media.md#actions) 
+>>>>>>> 22d28e3 (.)
