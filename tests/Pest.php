@@ -14,6 +14,7 @@ declare(strict_types=1);
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 =======
@@ -39,6 +40,8 @@ declare(strict_types=1);
 >>>>>>> 1d21a10 (.)
 =======
 >>>>>>> 146bbc3 (.)
+=======
+>>>>>>> 054dfa6 (.)
 use Modules\Media\Models\Media;
 use Modules\Media\Models\MediaCollection;
 use Modules\Media\Tests\TestCase;
@@ -81,6 +84,7 @@ expect()->extend('toBeMediaCollection', fn () => $this->toBeInstanceOf(MediaColl
  * | global functions to help you to reduce the number of lines of code in your test files.
  * |
  */
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -147,11 +151,16 @@ use Modules\Media\Tests\TestCase;
 =======
 >>>>>>> 7ea0764 (.)
 =======
+>>>>>>> 054dfa6 (.)
+=======
 namespace Modules\Media\Tests;
 
 use Modules\Media\Models\Media;
 use Modules\Media\Models\MediaCollection;
+<<<<<<< HEAD
 >>>>>>> 877e05f (.)
+=======
+>>>>>>> 054dfa6 (.)
 
 /*
 |--------------------------------------------------------------------------
@@ -179,6 +188,7 @@ pest()->extend(TestCase::class)
 */
 
 expect()->extend('toBeMedia', function () {
+<<<<<<< HEAD
 <<<<<<< HEAD
     return $this->toBeInstanceOf(\Modules\Media\Models\Media::class);
 });
@@ -309,6 +319,8 @@ expect()->extend('toBeMedia', function () {
 <<<<<<< HEAD
 =======
 >>>>>>> 877e05f (.)
+=======
+>>>>>>> 054dfa6 (.)
     return $this->toBeInstanceOf(Media::class);
 });
 
@@ -317,6 +329,7 @@ expect()->extend('toBeMediaCollection', function () {
 });
 
 /*
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -336,6 +349,8 @@ expect()->extend('toBeMediaCollection', function () {
 >>>>>>> 877e05f (.)
 =======
 >>>>>>> 1d21a10 (.)
+=======
+>>>>>>> 054dfa6 (.)
 |--------------------------------------------------------------------------
 | Functions
 |--------------------------------------------------------------------------
@@ -345,6 +360,7 @@ expect()->extend('toBeMediaCollection', function () {
 | global functions to help you to reduce the number of lines of code in your test files.
 |
 */
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -392,6 +408,9 @@ expect()->extend('toBeMediaCollection', function () {
 >>>>>>> 1d21a10 (.)
 =======
 >>>>>>> 146bbc3 (.)
+=======
+>>>>>>> 0a466ed (.)
+>>>>>>> 054dfa6 (.)
 
 function createMedia(array $attributes = []): Media
 {
