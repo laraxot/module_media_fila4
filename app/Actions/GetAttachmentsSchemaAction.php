@@ -39,6 +39,9 @@ use function Safe\glob;
 
 class GetAttachmentsSchemaAction
 {
+    /**
+     * @return array<string, mixed>
+     */
     public function execute(array $attachments, string $disk = 'attachments'): array
     {
         $form = [];
@@ -58,7 +61,8 @@ class GetAttachmentsSchemaAction
             $sessionDir = $prefix . '/' . $sessionDir;
         }
         foreach ($attachments as $attachment) {
-            $form[$attachment] = FileUpload::make($attachment)
+            $attachmentKey = is_string($attachment) ? $attachment : (string) $attachment;
+            $form[$attachmentKey] = FileUpload::make($attachmentKey)
                 //$form[$attachment]=SpatieMediaLibraryFileUpload::make($attachment)
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -104,7 +108,7 @@ class GetAttachmentsSchemaAction
                     }
 =======
                 //->saveUploadedFiles()
-                ->afterStateUpdated(function ($state, Set $set) use ($attachment, $sessionDir, $disk) {
+                ->afterStateUpdated(function ($state, Set $set) use ($attachmentKey, $sessionDir, $disk): void {
                     if (!$state)
                         return;
 >>>>>>> 5200b63 (.)
@@ -129,11 +133,15 @@ class GetAttachmentsSchemaAction
                     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
                     // Set expects Component|string, pass attachment as string
                     \Webmozart\Assert\Assert::string($attachment, 'Attachment must be string');
 =======
 >>>>>>> 5200b63 (.)
                     $set($attachment, $sessionFiles);
+=======
+                    $set($attachmentKey, $sessionFiles);
+>>>>>>> 13d1d7e (.)
                 });
         }
 

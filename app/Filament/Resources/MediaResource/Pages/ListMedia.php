@@ -75,6 +75,9 @@ class ListMedia extends XotBaseListRecords
      * @return array<string, Tables\Columns\Column>
      */
     #[Override]
+    /**
+     * @return array<string, mixed>
+     */
     public function getTableColumns(): array
     {
         return [
@@ -112,6 +115,9 @@ class ListMedia extends XotBaseListRecords
      * @return array<string, BaseFilter>
      */
     #[Override]
+    /**
+     * @return array<string, mixed>
+     */
     public function getTableFilters(): array
     {
         return [
@@ -130,6 +136,9 @@ class ListMedia extends XotBaseListRecords
      * @return array<string, Action|ActionGroup>
      */
     #[Override]
+    /**
+     * @return array<string, mixed>
+     */
     public function getTableActions(): array
     {
         return [
@@ -153,6 +162,7 @@ class ListMedia extends XotBaseListRecords
                 ->color('primary')
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 ->action(static function ($record) {
                     // PHPStan Level 10: isset() per Eloquent magic property
                     if (! is_object($record) || ! method_exists($record, 'getPath') || ! isset($record->file_name)) {
@@ -169,6 +179,18 @@ class ListMedia extends XotBaseListRecords
 =======
                 ->action(static fn ($record) => response()->download($record->getPath(), $record->file_name)),
 >>>>>>> f41e45e (.)
+=======
+                ->action(function ($record) {
+                    if (is_object($record) && method_exists($record, 'getPath') && property_exists($record, 'file_name')) {
+                        $path = $record->getPath();
+                        $fileName = $record->file_name;
+                        if (is_string($path) && is_string($fileName)) {
+                            return response()->download($path, $fileName);
+                        }
+                    }
+                    return null;
+                }),
+>>>>>>> 13d1d7e (.)
             'convert' => Action::make('convert')
                 ->icon('media-convert')
                 ->color('gray')

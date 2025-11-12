@@ -4,22 +4,27 @@ declare(strict_types=1);
 
 namespace Modules\Media\Models;
 
-use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Modules\Xot\Actions\Factory\GetFactoryAction;
 use Modules\Xot\Traits\Updater;
 
 /**
  * Class BaseModel.
+ *
+ * @template TFactory of \Illuminate\Database\Eloquent\Factories\Factory
  */
 abstract class BaseModel extends Model
 {
+<<<<<<< HEAD
 <<<<<<< HEAD
     use \Modules\Xot\Models\Traits\HasXotFactory;
 =======
     use HasFactory;
 >>>>>>> 5200b63 (.)
+=======
+    /** @use HasFactory<TFactory> */
+    use \Modules\Xot\Models\Traits\HasXotFactory;
+>>>>>>> 13d1d7e (.)
 
     // use Searchable;
     // //use Cachable;
@@ -63,6 +68,7 @@ abstract class BaseModel extends Model
     ];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     
 =======
     /**
@@ -77,6 +83,8 @@ abstract class BaseModel extends Model
     }
 >>>>>>> 5200b63 (.)
 
+=======
+>>>>>>> 13d1d7e (.)
     /** @return array<string, string> */
     protected function casts(): array
     {
