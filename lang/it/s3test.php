@@ -42,6 +42,7 @@ return [
         ],
     ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -55,6 +56,8 @@ return [
 
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
+=======
+>>>>>>> 5200b63 (.)
     'notifications' => [
         'credentials_tested' => 'Credenziali AWS testate',
         'bucket_policy_tested' => 'Policy bucket testata',
@@ -71,6 +74,7 @@ return [
         'email_failed' => 'Invio email fallito',
     ],
 <<<<<<< HEAD
+<<<<<<< HEAD
     'debug' => [
         'run_tests_message' => 'Esegui i test per vedere i risultati qui...',
     ],
@@ -99,6 +103,11 @@ return [
 =======
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
+=======
+    'debug' => [
+        'run_tests_message' => 'Esegui i test per vedere i risultati qui...',
+    ],
+>>>>>>> 5200b63 (.)
     'fields' => [
         'attachment' => [
             'label' => 'Allegato',
@@ -112,6 +121,7 @@ return [
         ],
     ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -125,6 +135,8 @@ return [
 
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
+=======
+>>>>>>> 5200b63 (.)
     'messages' => [
         'test_successful' => 'Test completato con successo',
         'test_failed' => 'Test fallito',
@@ -136,6 +148,7 @@ return [
         'connection_failed' => 'Connessione fallita',
     ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -149,6 +162,8 @@ return [
 
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
+=======
+>>>>>>> 5200b63 (.)
     'errors' => [
         'aws_credentials_invalid' => 'Credenziali AWS non valide',
         's3_bucket_inaccessible' => 'Bucket S3 non accessibile',
@@ -158,6 +173,7 @@ return [
         'unknown_error' => 'Errore sconosciuto',
     ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -171,6 +187,8 @@ return [
 
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
+=======
+>>>>>>> 5200b63 (.)
     'solutions' => [
         'check_credentials' => 'Verifica le credenziali AWS in .env',
         'check_bucket_name' => 'Verifica il nome del bucket S3',

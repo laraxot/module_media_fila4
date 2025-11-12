@@ -43,13 +43,20 @@ class ConvertWidget extends Widget
 
         // dddx($file_mp4);
 
+<<<<<<< HEAD
         $format = new WebM;
         $extension = mb_strtolower(class_basename($format));
         $file_new = Str::of($file_mp4)->replaceLast('.mp4', '.'.$extension)->toString();
+=======
+        $format = new WebM();
+        $extension = mb_strtolower(class_basename($format));
+        $file_new = Str::of($file_mp4)->replaceLast('.mp4', '.' . $extension)->toString();
+>>>>>>> 5200b63 (.)
 
         /*
          * -preset ultrafast.
          */
+<<<<<<< HEAD
         $exportedMedia = FFMpeg::fromDisk($disk_mp4)
             ->open($file_mp4)
             ->export();
@@ -87,6 +94,29 @@ class ConvertWidget extends Widget
         }
 
         $formattedMedia->save($file_new);
+=======
+        FFMpeg::fromDisk($disk_mp4)
+            ->open($file_mp4)
+            ->export()
+            // ->addFilter(function (VideoFilters $filters) {
+            //    $filters->resize(new \FFMpeg\Coordinate\Dimension(640, 480));
+            // })
+            // ->resize(640, 480)
+            ->onProgress(function (float $percentage, float $remaining, float $rate): void {
+                $this->percentage = $percentage;
+                $this->remaining = $remaining;
+                $this->rate = $rate;
+                $msg = "{$percentage}% transcoded";
+                $msg .= "{$remaining} seconds left at rate: {$rate}";
+                Notification::make()
+                    ->title($msg)
+                    ->success()
+                    ->send();
+            })
+            ->toDisk($disk_mp4)
+            ->inFormat($format)
+            ->save($file_new);
+>>>>>>> 5200b63 (.)
 
         while ($this->percentage < 100) {
             // Stream the current count to the browser...
@@ -100,7 +130,11 @@ class ConvertWidget extends Widget
             // sleep(1);
 
             $this->start =
+<<<<<<< HEAD
                 "{$this->percentage}% transcoded".PHP_EOL."{$this->remaining} seconds left at rate: {$this->rate}";
+=======
+                "{$this->percentage}% transcoded" . PHP_EOL . "{$this->remaining} seconds left at rate: {$this->rate}";
+>>>>>>> 5200b63 (.)
 
             // Decrement the counter...
             // $this->start = $this->start - 1;

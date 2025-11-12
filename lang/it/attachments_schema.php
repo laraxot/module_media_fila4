@@ -1,6 +1,7 @@
 <?php
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -10,6 +11,11 @@
 >>>>>>> e9b0959 (.)
 declare(strict_types=1);
 
+=======
+declare(strict_types=1);
+
+
+>>>>>>> 5200b63 (.)
 return [
     'fields' => [
         'invoice' => [
@@ -114,6 +120,7 @@ return [
         'delete_error' => 'Errore durante l\'eliminazione del file',
     ],
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -251,3 +258,5 @@ return array (
 =======
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
+=======
+>>>>>>> 5200b63 (.)

@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -57,6 +58,8 @@ namespace Modules\Media\Tests;
 
 =======
 >>>>>>> b93ef594b4 (.)
+=======
+>>>>>>> 5200b63 (.)
 use Modules\Media\Models\Media;
 use Modules\Media\Models\MediaCollection;
 use Modules\Media\Tests\TestCase;
@@ -90,6 +93,7 @@ expect()->extend('toBeMedia', fn() => $this->toBeInstanceOf(Media::class));
 expect()->extend('toBeMediaCollection', fn() => $this->toBeInstanceOf(MediaCollection::class));
 
 /*
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 use Modules\Media\Tests\TestCase;
@@ -141,6 +145,8 @@ expect()->extend('toBeMediaCollection', function () {
 <<<<<<< HEAD
 >>>>>>> a12f125f4a (.)
 =======
+=======
+>>>>>>> 5200b63 (.)
  * |--------------------------------------------------------------------------
  * | Functions
  * |--------------------------------------------------------------------------
@@ -150,8 +156,11 @@ expect()->extend('toBeMediaCollection', function () {
  * | global functions to help you to reduce the number of lines of code in your test files.
  * |
  */
+<<<<<<< HEAD
 >>>>>>> b93ef594b4 (.)
 >>>>>>> e9b0959 (.)
+=======
+>>>>>>> 5200b63 (.)
 
 function createMedia(array $attributes = []): Media
 {
@@ -171,6 +180,7 @@ function createMediaCollection(array $attributes = []): MediaCollection
 function makeMediaCollection(array $attributes = []): MediaCollection
 {
     return MediaCollection::factory()->make($attributes);
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -195,4 +205,6 @@ function makeMediaCollection(array $attributes = []): \Modules\Media\Models\Medi
     return \Modules\Media\Models\MediaCollection::factory()->make($attributes);
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
+=======
+>>>>>>> 5200b63 (.)
 }

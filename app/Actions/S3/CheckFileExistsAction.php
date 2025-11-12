@@ -17,15 +17,19 @@ class CheckFileExistsAction extends BaseS3Action
             $this->s3Client->headObject([
                 'Bucket' => $this->bucketName,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> e9b0959 (.)
+=======
+>>>>>>> 5200b63 (.)
                 'Key' => $key,
             ]);
 
             $this->logger->info('File existence check completed', ['key' => $key, 'exists' => true]);
+<<<<<<< HEAD
 
             return true;
 <<<<<<< HEAD
@@ -65,6 +69,14 @@ class CheckFileExistsAction extends BaseS3Action
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> e9b0959 (.)
+=======
+            return true;
+        } catch (S3Exception $exception) {
+            if ($exception->getStatusCode() === 404) {
+                $this->logger->info('File existence check completed', ['key' => $key, 'exists' => false]);
+                return false;
+            }
+>>>>>>> 5200b63 (.)
 
             $this->logger->error('Error checking file existence in S3', [
                 'key' => $key,
@@ -76,6 +88,7 @@ class CheckFileExistsAction extends BaseS3Action
         }
     }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -111,3 +124,5 @@ class CheckFileExistsAction extends BaseS3Action
 }
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
+=======
+>>>>>>> 5200b63 (.)

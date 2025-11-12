@@ -4,11 +4,18 @@ declare(strict_types=1);
 
 namespace Modules\Media\Services;
 
+<<<<<<< HEAD
+=======
+use SimpleXMLElement;
+>>>>>>> 5200b63 (.)
 use Exception;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
+<<<<<<< HEAD
 use SimpleXMLElement;
+=======
+>>>>>>> 5200b63 (.)
 use Webmozart\Assert\Assert;
 
 use function Safe\file_put_contents;
@@ -32,15 +39,24 @@ class SubtitleService
 
     public Model $model;
 
+<<<<<<< HEAD
     private static ?self $instance = null;
+=======
+    private static null|self $instance = null;
+>>>>>>> 5200b63 (.)
 
     /**
      * ---.
      */
     public static function getInstance(): self
     {
+<<<<<<< HEAD
         if (! (self::$instance instanceof self)) {
             self::$instance = new self;
+=======
+        if (!(self::$instance instanceof self)) {
+            self::$instance = new self();
+>>>>>>> 5200b63 (.)
         }
 
         return self::$instance;
@@ -92,7 +108,11 @@ class SubtitleService
         $txt = '';
         foreach ($xmlObject->annotation->type->sentence as $sentence) {
             foreach ($sentence->item as $item) {
+<<<<<<< HEAD
                 $txt .= $item->__toString().' ';
+=======
+                $txt .= $item->__toString() . ' ';
+>>>>>>> 5200b63 (.)
             }
         }
 
@@ -105,11 +125,19 @@ class SubtitleService
     public function get(): array
     {
         $info = pathinfo($this->file_path);
+<<<<<<< HEAD
         if (! isset($info['extension'])) {
             return [];
         }
 
         $func = 'getFrom'.Str::studly($info['extension']);
+=======
+        if (!isset($info['extension'])) {
+            return [];
+        }
+
+        $func = 'getFrom' . Str::studly($info['extension']);
+>>>>>>> 5200b63 (.)
 
         Assert::isArray($res = $this->{$func}());
 
@@ -144,8 +172,13 @@ class SubtitleService
             foreach ($sentence->item as $item) {
                 $attributes = $item->attributes();
 
+<<<<<<< HEAD
                 if (! ($attributes instanceof SimpleXMLElement)) {
                     throw new Exception('['.__LINE__.']['.class_basename($this).']');
+=======
+                if (!($attributes instanceof SimpleXMLElement)) {
+                    throw new Exception('[' . __LINE__ . '][' . class_basename($this) . ']');
+>>>>>>> 5200b63 (.)
                 }
 
                 // 00:06:35,360
@@ -158,7 +191,11 @@ class SubtitleService
                     'item_i' => $item_i,
                     'start' => $start,
                     'end' => $end,
+<<<<<<< HEAD
                     'time' => secondsToHms($start).','.secondsToHms($end),
+=======
+                    'time' => secondsToHms($start) . ',' . secondsToHms($end),
+>>>>>>> 5200b63 (.)
                     'text' => $item->__toString(),
                 ];
                 $data[] = $tmp;
@@ -174,8 +211,13 @@ class SubtitleService
     /**
      * Undocumented function.
      *
+<<<<<<< HEAD
      * @param  string  $srtFile
      * @param  string  $webVttFile
+=======
+     * @param  string $srtFile
+     * @param  string $webVttFile
+>>>>>>> 5200b63 (.)
      */
     public function srtToVtt($srtFile, $webVttFile): void
     {
@@ -187,7 +229,11 @@ class SubtitleService
                 $lines[] = $line;
             }
 
+<<<<<<< HEAD
             if (! feof($fileHandle)) {
+=======
+            if (!feof($fileHandle)) {
+>>>>>>> 5200b63 (.)
                 exit("Error: unexpected fgets() fail\n");
             }
 
@@ -203,6 +249,10 @@ class SubtitleService
 
         $header = "WEBVTT\n\n";
 
+<<<<<<< HEAD
         file_put_contents(public_path($webVttFile), $header.implode('', $lines));
+=======
+        file_put_contents(public_path($webVttFile), $header . implode('', $lines));
+>>>>>>> 5200b63 (.)
     }
 }

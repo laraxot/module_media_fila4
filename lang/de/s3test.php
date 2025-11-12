@@ -42,6 +42,7 @@ return [
         ],
     ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -55,6 +56,8 @@ return [
 
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
+=======
+>>>>>>> 5200b63 (.)
     'notifications' => [
         'credentials_tested' => 'AWS-Anmeldedaten getestet',
         'bucket_policy_tested' => 'Bucket-Richtlinie getestet',
@@ -71,6 +74,7 @@ return [
         'email_failed' => 'E-Mail-Versand fehlgeschlagen',
     ],
 <<<<<<< HEAD
+<<<<<<< HEAD
     'debug' => [
         'run_tests_message' => 'Führen Sie Tests aus, um Ergebnisse hier zu sehen...',
     ],
@@ -99,6 +103,11 @@ return [
 =======
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
+=======
+    'debug' => [
+        'run_tests_message' => 'Führen Sie Tests aus, um Ergebnisse hier zu sehen...',
+    ],
+>>>>>>> 5200b63 (.)
     'fields' => [
         'attachment' => [
             'label' => 'Anhang',
@@ -112,6 +121,7 @@ return [
         ],
     ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -125,6 +135,8 @@ return [
 
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
+=======
+>>>>>>> 5200b63 (.)
     'messages' => [
         'test_successful' => 'Test erfolgreich abgeschlossen',
         'test_failed' => 'Test fehlgeschlagen',
@@ -136,6 +148,7 @@ return [
         'connection_failed' => 'Verbindung fehlgeschlagen',
     ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -149,6 +162,8 @@ return [
 
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
+=======
+>>>>>>> 5200b63 (.)
     'errors' => [
         'aws_credentials_invalid' => 'Ungültige AWS-Anmeldedaten',
         's3_bucket_inaccessible' => 'S3-Bucket nicht zugänglich',
@@ -158,6 +173,7 @@ return [
         'unknown_error' => 'Unbekannter Fehler',
     ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -171,6 +187,8 @@ return [
 
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
+=======
+>>>>>>> 5200b63 (.)
     'solutions' => [
         'check_credentials' => 'Überprüfen Sie die AWS-Anmeldedaten in .env',
         'check_bucket_name' => 'Überprüfen Sie den S3-Bucket-Namen',

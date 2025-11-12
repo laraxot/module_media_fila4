@@ -27,9 +27,15 @@ class VideoStream
 
     private int $size = 0; // Total size of the video
 
+<<<<<<< HEAD
     private ?string $mime = null; // MIME type of the video
 
     private ?int $fileModifiedTime = null; // Last modified time of the video file
+=======
+    private null|string $mime = null; // MIME type of the video
+
+    private null|int $fileModifiedTime = null; // Last modified time of the video file
+>>>>>>> 5200b63 (.)
 
     /** @var resource|null */
     private $stream = null; // File stream resource
@@ -37,8 +43,13 @@ class VideoStream
     /**
      * Initialize the video stream.
      *
+<<<<<<< HEAD
      * @param  string  $disk  The disk storage name
      * @param  string  $path  The path to the video file
+=======
+     * @param  string $disk  The disk storage name
+     * @param  string $path  The path to the video file
+>>>>>>> 5200b63 (.)
      *
      * @throws Exception If the file does not exist or other errors
      */
@@ -46,7 +57,11 @@ class VideoStream
     {
         $filesystem = Storage::disk($disk);
 
+<<<<<<< HEAD
         if (! $filesystem->exists($path)) {
+=======
+        if (!$filesystem->exists($path)) {
+>>>>>>> 5200b63 (.)
             throw new Exception("File does not exist at path: {$path}");
         }
 
@@ -59,7 +74,11 @@ class VideoStream
         $this->fileModifiedTime = $filesystem->lastModified($path);
         $this->size = $filesystem->size($path);
 
+<<<<<<< HEAD
         if (! is_string($this->mime)) {
+=======
+        if (!is_string($this->mime)) {
+>>>>>>> 5200b63 (.)
             throw new Exception('Unable to determine MIME type.');
         }
     }
@@ -80,10 +99,17 @@ class VideoStream
     private function setHeaders(): void
     {
         ob_end_clean(); // Clean any previous output
+<<<<<<< HEAD
         header('Content-Type: '.$this->mime);
         header('Cache-Control: max-age=2592000, public'); // 30 days cache
         header('Expires: '.gmdate('D, d M Y H:i:s', time() + 2592000).' GMT'); // 30 days in the future
         header('Last-Modified: '.gmdate('D, d M Y H:i:s', $this->fileModifiedTime).' GMT');
+=======
+        header('Content-Type: ' . $this->mime);
+        header('Cache-Control: max-age=2592000, public'); // 30 days cache
+        header('Expires: ' . gmdate('D, d M Y H:i:s', time() + 2592000) . ' GMT'); // 30 days in the future
+        header('Last-Modified: ' . gmdate('D, d M Y H:i:s', $this->fileModifiedTime) . ' GMT');
+>>>>>>> 5200b63 (.)
 
         $this->end = $this->size - 1;
         header('Accept-Ranges: bytes');
@@ -92,7 +118,11 @@ class VideoStream
         if ($rangeHeader !== null) {
             $this->processRangeHeader($rangeHeader);
         } else {
+<<<<<<< HEAD
             header('Content-Length: '.$this->size);
+=======
+            header('Content-Length: ' . $this->size);
+>>>>>>> 5200b63 (.)
         }
     }
 
@@ -124,7 +154,11 @@ class VideoStream
 
         $length = ($this->end - $this->start) + 1;
         header('HTTP/1.1 206 Partial Content');
+<<<<<<< HEAD
         header('Content-Length: '.$length);
+=======
+        header('Content-Length: ' . $length);
+>>>>>>> 5200b63 (.)
         header(sprintf('Content-Range: bytes %d-%d/%d', $this->start, $this->end, $this->size));
     }
 
@@ -135,12 +169,20 @@ class VideoStream
     {
         set_time_limit(0); // Disable time limit for streaming
 
+<<<<<<< HEAD
         if (! is_resource($this->stream)) {
+=======
+        if (!is_resource($this->stream)) {
+>>>>>>> 5200b63 (.)
             throw new Exception('Stream resource is not valid.');
         }
 
         fseek($this->stream, $this->start);
+<<<<<<< HEAD
         while (! feof($this->stream) && $this->start <= $this->end) {
+=======
+        while (!feof($this->stream) && $this->start <= $this->end) {
+>>>>>>> 5200b63 (.)
             $bytesToRead = min($this->bufferSize, ($this->end - $this->start) + 1);
             if ($bytesToRead > 0) {
                 $data = fread($this->stream, $bytesToRead);

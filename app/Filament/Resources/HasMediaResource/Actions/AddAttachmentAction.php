@@ -4,8 +4,13 @@ declare(strict_types=1);
 
 namespace Modules\Media\Filament\Resources\HasMediaResource\Actions;
 
+<<<<<<< HEAD
 use Exception;
 use Filament\Actions\Action;
+=======
+use Filament\Actions\Action;
+use Exception;
+>>>>>>> 5200b63 (.)
 use Filament\Forms\Components\BaseFileUpload;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Radio;
@@ -22,21 +27,34 @@ class AddAttachmentAction extends Action
         $this->icon('heroicon-o-plus')
             ->color('success')
             ->button()
+<<<<<<< HEAD
             ->schema(fn (): array => static::getFormSchema(false))
+=======
+            ->schema(fn(): array => static::getFormSchema(false))
+>>>>>>> 5200b63 (.)
             ->action(static::formHandlerCallback(...));
     }
 
     public static function trans(string $key): string
     {
         Assert::string(
+<<<<<<< HEAD
             $ris = trans('media::add_attachment_action.'.$key),
             '['.$key.']['.__LINE__.']['.class_basename(__CLASS__).']',
+=======
+            $ris = trans('media::add_attachment_action.' . $key),
+            '[' . $key . '][' . __LINE__ . '][' . class_basename(__CLASS__) . ']',
+>>>>>>> 5200b63 (.)
         );
 
         return $ris;
     }
 
+<<<<<<< HEAD
     public static function getDefaultName(): ?string
+=======
+    public static function getDefaultName(): null|string
+>>>>>>> 5200b63 (.)
     {
         return 'add_attachment';
     }
@@ -88,6 +106,7 @@ class AddAttachmentAction extends Action
         $mediaCollection = $data['attachment_type'] ?? 'default';
         // $mediaCollection = 'default';
 
+<<<<<<< HEAD
         if (! method_exists($ownerRecord, 'addMediaFromDisk')) {
             throw new Exception('wip');
         }
@@ -117,6 +136,17 @@ class AddAttachmentAction extends Action
         if (! is_object($attachment) || ! method_exists($attachment, 'update')) {
             throw new Exception('toMediaCollection did not return valid object');
         }
+=======
+        if (!method_exists($ownerRecord, 'addMediaFromDisk')) {
+            throw new Exception('wip');
+        }
+
+        $attachment = $ownerRecord
+            ->addMediaFromDisk($data['file'], config('attachment.upload.disk.driver'))
+            ->setName($data['name'] ?? Str::beforeLast($data['original_file_name'], '.'))
+            ->preservingOriginal()
+            ->toMediaCollection($mediaCollection);
+>>>>>>> 5200b63 (.)
 
         $user_id = authId();
         $attachment->update([
