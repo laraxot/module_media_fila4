@@ -259,17 +259,11 @@ class TemporaryUpload extends BaseModel implements HasMedia
  */
 class TemporaryUpload extends Model implements HasMedia
 {
-    use HasFactory;
+    use \Modules\Xot\Models\Traits\HasXotFactory;
     use InteractsWithMedia;
     use MassPrunable;
 
-    /**
-     * Create a new factory instance for the model.
-     */
-    protected static function newFactory(): TemporaryUploadFactory
-    {
-        return TemporaryUploadFactory::new();
-    }
+   
 
     public static ?Closure $manipulatePreview = null;
 
@@ -399,6 +393,7 @@ class TemporaryUpload extends Model implements HasMedia
 <<<<<<< HEAD
         /**
 <<<<<<< HEAD
+<<<<<<< HEAD
          * @var Media|null $media
          *
          * @phpstan-ignore-next-line
@@ -427,6 +422,11 @@ class TemporaryUpload extends Model implements HasMedia
         if (! $media) {
 =======
          * @var Media $media
+=======
+         * @var Media|null $media
+         *
+         * @phpstan-ignore-next-line
+>>>>>>> 1900eb1 (.)
          */
         $media = $mediaModelClass::query()->where('uuid', $mediaUuid)->first();
 

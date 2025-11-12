@@ -20,6 +20,7 @@ abstract class BaseModel extends Model
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     use \Modules\Xot\Models\Traits\HasXotFactory;
 =======
     use HasFactory;
@@ -33,6 +34,9 @@ abstract class BaseModel extends Model
 =======
     use HasFactory;
 >>>>>>> 2a4b5df (.)
+=======
+    use \Modules\Xot\Models\Traits\HasXotFactory;
+>>>>>>> 1900eb1 (.)
 
     // use Searchable;
     // //use Cachable;
@@ -87,6 +91,7 @@ abstract class BaseModel extends Model
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     
 =======
 =======
@@ -103,6 +108,9 @@ abstract class BaseModel extends Model
     }
 <<<<<<< HEAD
 >>>>>>> 5200b63 (.)
+=======
+    
+>>>>>>> 1900eb1 (.)
 
 =======
 >>>>>>> 13d1d7e (.)
