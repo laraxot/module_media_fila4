@@ -29,6 +29,7 @@ class CheckFileExistsAction extends BaseS3Action
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 =======
@@ -68,6 +69,10 @@ class CheckFileExistsAction extends BaseS3Action
 >>>>>>> 146bbc3 (.)
 =======
 >>>>>>> 054dfa6 (.)
+=======
+=======
+>>>>>>> 37a2da6 (.)
+>>>>>>> 89eb716 (.)
                 'Key' => $key,
             ]);
 
@@ -83,6 +88,9 @@ class CheckFileExistsAction extends BaseS3Action
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 89eb716 (.)
 =======
 >>>>>>> 1d21a10 (.)
 =======
@@ -127,6 +135,7 @@ class CheckFileExistsAction extends BaseS3Action
 >>>>>>> 0a466ed (.)
 =======
 >>>>>>> 37a2da6 (.)
+<<<<<<< HEAD
 >>>>>>> 7ea0764 (.)
 =======
 >>>>>>> e0a46f3 (.)
@@ -139,12 +148,15 @@ class CheckFileExistsAction extends BaseS3Action
 =======
 >>>>>>> 0a466ed (.)
 >>>>>>> 054dfa6 (.)
+=======
+>>>>>>> 89eb716 (.)
         } catch (S3Exception $exception) {
             if ($exception->getStatusCode() === 404) {
                 $this->logger->info('File existence check completed', ['key' => $key, 'exists' => false]);
 
                 return false;
             }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -214,6 +226,10 @@ class CheckFileExistsAction extends BaseS3Action
 >>>>>>> 146bbc3 (.)
 =======
 >>>>>>> 054dfa6 (.)
+=======
+=======
+>>>>>>> 37a2da6 (.)
+>>>>>>> 89eb716 (.)
 
             $this->logger->error('Error checking file existence in S3', [
                 'key' => $key,
@@ -238,6 +254,9 @@ class CheckFileExistsAction extends BaseS3Action
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 89eb716 (.)
 =======
 >>>>>>> 7ea0764 (.)
 =======
@@ -305,6 +324,7 @@ class CheckFileExistsAction extends BaseS3Action
 >>>>>>> 0a466ed (.)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 06bb10d (.)
 =======
 =======
@@ -336,3 +356,7 @@ class CheckFileExistsAction extends BaseS3Action
 =======
 >>>>>>> 0a466ed (.)
 >>>>>>> 054dfa6 (.)
+=======
+=======
+>>>>>>> 37a2da6 (.)
+>>>>>>> 89eb716 (.)
