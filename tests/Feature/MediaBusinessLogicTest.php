@@ -15,7 +15,7 @@ describe('Media Business Logic', function (): void {
     });
 
     it('can create media from temporary upload', function (): void {
-        /** @var \Illuminate\Database\Eloquent\Collection */
+        /** @var User */
         $user = User/** @phpstan-ignore-line */ ::factory()->create();
         $file = UploadedFile::fake()->image('test-image.jpg', 100, 100);
 <<<<<<< HEAD
@@ -584,7 +584,7 @@ describe('Media Business Logic', function (): void {
     });
 
     it('can convert media to different formats', function (): void {
-        /** @var \Illuminate\Database\Eloquent\Collection */
+        /** @var User */
         $user = User/** @phpstan-ignore-line */ ::factory()->create();
         /** @var \Illuminate\Database\Eloquent\Collection */
         $media = Media/** @phpstan-ignore-line */ ::factory()->create([
@@ -933,7 +933,7 @@ describe('Media Business Logic', function (): void {
     });
 
     it('can track temporary upload lifecycle', function (): void {
-        /** @var \Illuminate\Database\Eloquent\Collection */
+        /** @var User */
         $user = User/** @phpstan-ignore-line */ ::factory()->create();
         $file = UploadedFile::fake()->image('test-image.jpg', 100, 100);
 
@@ -968,6 +968,7 @@ describe('Media Business Logic', function (): void {
 <<<<<<< HEAD
 <<<<<<< HEAD
     it('can manage media collections', function (): void {
+<<<<<<< HEAD
 <<<<<<< HEAD
         /** @var \Illuminate\Database\Eloquent\Collection */
 <<<<<<< HEAD
@@ -1124,6 +1125,9 @@ describe('Media Business Logic', function (): void {
 =======
         /** @var User */
 >>>>>>> df262d8 (.)
+=======
+        /** @var User */
+>>>>>>> 29e9d39 (.)
         $user = User/** @phpstan-ignore-line */ ::factory()->create();
 
         /** @var \Illuminate\Database\Eloquent\Collection */
@@ -1453,6 +1457,7 @@ describe('Media Business Logic', function (): void {
 <<<<<<< HEAD
     it('can validate media file types', function (): void {
 <<<<<<< HEAD
+<<<<<<< HEAD
         /** @var \Illuminate\Database\Eloquent\Collection */
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1608,6 +1613,9 @@ describe('Media Business Logic', function (): void {
 =======
         /** @var User */
 >>>>>>> df262d8 (.)
+=======
+        /** @var User */
+>>>>>>> 29e9d39 (.)
         $user = User/** @phpstan-ignore-line */ ::factory()->create();
 
         /** @var \Illuminate\Database\Eloquent\Collection */
@@ -2018,7 +2026,7 @@ describe('Media Business Logic', function (): void {
     });
 
     it('can track media conversion status', function (): void {
-        /** @var \Illuminate\Database\Eloquent\Collection */
+        /** @var User */
         $user = User/** @phpstan-ignore-line */ ::factory()->create();
         /** @var \Illuminate\Database\Eloquent\Collection */
         $media = Media/** @phpstan-ignore-line */ ::factory()->create([
@@ -2223,6 +2231,7 @@ describe('Media Business Logic', function (): void {
     it('can manage media permissions', function () {
 =======
     it('can manage media permissions', function (): void {
+<<<<<<< HEAD
         /** @var \Illuminate\Database\Eloquent\Collection */
 <<<<<<< HEAD
 >>>>>>> 0987d27 (.)
@@ -2231,6 +2240,11 @@ describe('Media Business Logic', function (): void {
         $owner = User/** @phpstan-ignore-line */ ::factory()->create();
 >>>>>>> e839d8d (.)
         /** @var \Illuminate\Database\Eloquent\Collection */
+=======
+        /** @var User */
+        $owner = User/** @phpstan-ignore-line */ ::factory()->create();
+        /** @var User */
+>>>>>>> 29e9d39 (.)
         $otherUser = User/** @phpstan-ignore-line */ ::factory()->create();
 
         /** @var \Illuminate\Database\Eloquent\Collection */
@@ -2548,7 +2562,7 @@ describe('Media Business Logic', function (): void {
     });
 
     it('can handle media deletion', function (): void {
-        /** @var \Illuminate\Database\Eloquent\Collection */
+        /** @var User */
         $user = User/** @phpstan-ignore-line */ ::factory()->create();
         /** @var \Illuminate\Database\Eloquent\Collection */
         $media = Media/** @phpstan-ignore-line */ ::factory()->create([
@@ -2571,7 +2585,7 @@ describe('Media Business Logic', function (): void {
     });
 
     it('can generate media urls', function (): void {
-        /** @var \Illuminate\Database\Eloquent\Collection */
+        /** @var User */
         $user = User/** @phpstan-ignore-line */ ::factory()->create();
         /** @var \Illuminate\Database\Eloquent\Collection */
         $media = Media/** @phpstan-ignore-line */ ::factory()->create([
@@ -2777,6 +2791,7 @@ describe('Media Business Logic', function (): void {
 <<<<<<< HEAD
     it('can validate file size limits', function (): void {
 <<<<<<< HEAD
+<<<<<<< HEAD
         /** @var \Illuminate\Database\Eloquent\Collection */
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2932,6 +2947,9 @@ describe('Media Business Logic', function (): void {
 =======
         /** @var User */
 >>>>>>> df262d8 (.)
+=======
+        /** @var User */
+>>>>>>> 29e9d39 (.)
         $user = User/** @phpstan-ignore-line */ ::factory()->create();
 
         /** @var \Illuminate\Database\Eloquent\Collection */
@@ -3102,6 +3120,7 @@ describe('Media Business Logic', function (): void {
     it('can track media usage statistics', function () {
 =======
     it('can track media usage statistics', function (): void {
+<<<<<<< HEAD
         /** @var \Illuminate\Database\Eloquent\Collection */
 <<<<<<< HEAD
 >>>>>>> 0987d27 (.)
@@ -3133,6 +3152,9 @@ describe('Media Business Logic', function (): void {
 =======
 >>>>>>> e5c049f (.)
 =======
+=======
+        /** @var User */
+>>>>>>> 29e9d39 (.)
         $user = User/** @phpstan-ignore-line */ ::factory()->create();
 >>>>>>> e839d8d (.)
 
