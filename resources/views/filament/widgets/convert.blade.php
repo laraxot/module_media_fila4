@@ -20,6 +20,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 =======
@@ -89,11 +90,14 @@
 >>>>>>> 9a4eacb (.)
 =======
 >>>>>>> fa051fc (.)
+=======
+>>>>>>> 22b1256 (.)
 <?php
 
 declare(strict_types=1);
 
 ?>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -203,6 +207,8 @@ declare(strict_types=1);
 >>>>>>> 9a4eacb (.)
 =======
 >>>>>>> fa051fc (.)
+=======
+>>>>>>> 22b1256 (.)
 <x-filament-widgets::widget>
     <x-filament::section>
         {{-- Widget content --}}
