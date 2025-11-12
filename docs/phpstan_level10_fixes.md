@@ -33,6 +33,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 446bc61 (.)
@@ -649,3 +650,5 @@ Questa soluzione mantiene la funzionalità originale migliorando al contempo la 
 > **Collegamento globale:** Questa documentazione locale dettaglia i casi concreti e le decisioni architetturali adottate nel modulo Media. Per le strategie generali e le best practices, consulta sempre anche la documentazione globale in [docs/git_conflict_resolution.md](../../../../docs/git_conflict_resolution.md). 
 >>>>>>> 1999eb3 (.)
 >>>>>>> 546e226 (.)
+=======
+>>>>>>> 2d01f8a (.)
