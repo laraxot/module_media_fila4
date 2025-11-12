@@ -14,8 +14,8 @@ use Intervention\Image\Drivers\Gd\Driver as GdDriver;
 use Intervention\Image\ImageManager as InterventionImageManager;
 =======
 use Intervention\Image\ImageManager as InterventionImageManager;
-<<<<<<< HEAD
 use Intervention\Image\Drivers\Gd\Driver as GdDriver;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 5200b63 (.)
 =======
@@ -57,6 +57,8 @@ use Intervention\Image\Drivers\Gd\Driver as GdDriver;
 =======
 >>>>>>> 6144976 (.)
 >>>>>>> f10d8e1 (.)
+=======
+>>>>>>> 16fa8f8 (.)
 
 class Merge
 {
@@ -83,13 +85,17 @@ class Merge
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f10d8e1 (.)
+=======
+>>>>>>> 16fa8f8 (.)
         // Intervention Image v3: il costruttore richiede un DriverInterface
 <<<<<<< HEAD
         $manager = new InterventionImageManager(new GdDriver);
 =======
         $manager = new InterventionImageManager(new GdDriver());
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 5200b63 (.)
 =======
@@ -98,14 +104,16 @@ class Merge
         $manager = new InterventionImageManager(['driver' => 'gd']);
 >>>>>>> 6144976 (.)
 >>>>>>> f10d8e1 (.)
+=======
+>>>>>>> 16fa8f8 (.)
 
         // Carica le immagini
         $image1 = $manager->read($path1);
         $image2 = $manager->read($path2);
 
-<<<<<<< HEAD
         // Inserisce image2 sopra image1 (centrato) - v3 usa place()
         $image1->place($image2, 'center');
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> b1b659d (.)
@@ -157,6 +165,8 @@ class Merge
         $image1->insert($image2, 'center');
 >>>>>>> 6144976 (.)
 >>>>>>> f10d8e1 (.)
+=======
+>>>>>>> 16fa8f8 (.)
 
         // Salva il risultato
         $image1->save($outputPath);
