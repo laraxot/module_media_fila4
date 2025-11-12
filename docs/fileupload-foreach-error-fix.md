@@ -5,12 +5,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 3f50d25 (.)
 =======
 >>>>>>> 9ffe7a9 (.)
 =======
 >>>>>>> 2883a97 (.)
+=======
+>>>>>>> 446a02b (.)
 # FileUpload foreach Error Fix - Internal Server Error
 
 ## Problema Identificato
@@ -26,6 +29,7 @@ L'errore si verifica nel metodo `getUploadedFiles` di `Filament\Forms\Components
 
 ### Contesto dell'Errore
 - **Widget**: `Modules\User\Filament\Widgets\RegistrationWidget`
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -56,6 +60,8 @@ L'errore si verifica nel metodo `getUploadedFiles` di `Filament\Forms\Components
 =======
 - **Resource**: `Modules\<nome modulo>\Filament\Resources\PatientResource`
 >>>>>>> 2883a97 (.)
+=======
+>>>>>>> 446a02b (.)
 - **Resource**: `Modules\SaluteOra\Filament\Resources\PatientResource`
 - **Campi coinvolti**:
   - `data.health_card`
@@ -249,6 +255,7 @@ public function getFormFill(): array
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 *Versione: 1.0* 
 =======
 >>>>>>> 8cdc78f (.)
@@ -267,3 +274,6 @@ public function getFormFill(): array
 >>>>>>> 2883a97 (.)
 =======
 >>>>>>> 5e10cb4 (.)
+=======
+*Versione: 1.0* 
+>>>>>>> 446a02b (.)
