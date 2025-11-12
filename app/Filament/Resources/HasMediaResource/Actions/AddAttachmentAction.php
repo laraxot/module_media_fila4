@@ -24,6 +24,7 @@ class AddAttachmentAction extends Action
     protected function setUp(): void
     {
         parent::setUp();
+<<<<<<< HEAD
         $this->icon('heroicon-o-plus')
             ->color('success')
             ->button()
@@ -33,10 +34,23 @@ class AddAttachmentAction extends Action
             ->schema(fn(): array => static::getFormSchema(false))
 >>>>>>> 5200b63 (.)
             ->action(static::formHandlerCallback(...));
+=======
+        $this
+            ->icon('heroicon-o-plus')
+            ->color('success')
+            ->button()
+            ->form(
+                fn (): array => static::getFormSchema(false)
+            )
+            ->action(
+                fn (RelationManager $livewire, array $data) => static::formHandlerCallback($livewire, $data),
+            );
+>>>>>>> 0a466ed (.)
     }
 
     public static function trans(string $key): string
     {
+<<<<<<< HEAD
         Assert::string(
 <<<<<<< HEAD
             $ris = trans('media::add_attachment_action.'.$key),
@@ -46,15 +60,25 @@ class AddAttachmentAction extends Action
             '[' . $key . '][' . __LINE__ . '][' . class_basename(__CLASS__) . ']',
 >>>>>>> 5200b63 (.)
         );
+=======
+        Assert::string($ris = trans('media::add_attachment_action.'.$key), '['.$key.']['.__LINE__.']['.class_basename(__CLASS__).']');
+>>>>>>> 0a466ed (.)
 
         return $ris;
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public static function getDefaultName(): ?string
 =======
     public static function getDefaultName(): null|string
 >>>>>>> 5200b63 (.)
+=======
+    public static function getDefaultName(): null|string
+=======
+    public static function getDefaultName(): ?string
+>>>>>>> 0a466ed (.)
+>>>>>>> 06bb10d (.)
     {
         return 'add_attachment';
     }
@@ -79,6 +103,7 @@ class AddAttachmentAction extends Action
                 ->required()
                 ->columnSpanFull(),
             /*
+<<<<<<< HEAD
              * Radio::make('attachment_type')
              * ->hiddenLabel()
              * ->options(
@@ -91,6 +116,20 @@ class AddAttachmentAction extends Action
              * ->required()
              * ->columnSpanFull(),
              */
+=======
+            Radio::make('attachment_type')
+                ->hiddenLabel()
+                ->options(
+                    AttachmentTypeEnum::descriptionsByValue($asset ? AttachmentTypeEnum::cases() : AttachmentTypeEnum::operationCases()),
+                )
+                ->default(AttachmentTypeEnum::Image())
+                ->columns(
+                    $asset ? \count(AttachmentTypeEnum::cases()) : \count(AttachmentTypeEnum::operationCases()),
+                )
+                ->required()
+                ->columnSpanFull(),
+            */
+>>>>>>> 0a466ed (.)
             // Radio::make('attachment_type')->columnSpanFull(),
             TextInput::make('name')
                 ->hint(static::trans('fields.name_hint'))
@@ -106,6 +145,7 @@ class AddAttachmentAction extends Action
         $mediaCollection = $data['attachment_type'] ?? 'default';
         // $mediaCollection = 'default';
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         if (! method_exists($ownerRecord, 'addMediaFromDisk')) {
             throw new Exception('wip');
@@ -137,18 +177,34 @@ class AddAttachmentAction extends Action
             throw new Exception('toMediaCollection did not return valid object');
         }
 =======
+=======
+>>>>>>> 06bb10d (.)
         if (!method_exists($ownerRecord, 'addMediaFromDisk')) {
+=======
+        if (! method_exists($ownerRecord, 'addMediaFromDisk')) {
+>>>>>>> 0a466ed (.)
             throw new Exception('wip');
         }
 
         $attachment = $ownerRecord
+<<<<<<< HEAD
             ->addMediaFromDisk($data['file'], config('attachment.upload.disk.driver'))
             ->setName($data['name'] ?? Str::beforeLast($data['original_file_name'], '.'))
+=======
+            ->addMediaFromDisk(
+                $data['file'],
+                config('attachment.upload.disk.driver'),
+            )
+            ->setName(
+                $data['name'] ?? Str::beforeLast($data['original_file_name'], '.'),
+            )
+>>>>>>> 0a466ed (.)
             ->preservingOriginal()
             ->toMediaCollection($mediaCollection);
 >>>>>>> 5200b63 (.)
 
         $user_id = authId();
+<<<<<<< HEAD
         $attachment->update([
             'created_by' => $user_id,
             'updated_by' => $user_id,
@@ -159,5 +215,18 @@ class AddAttachmentAction extends Action
          * $attachment->created_by=$user_id;
          * $attachment->save();
          */
+=======
+        $attachment->update(
+            [
+                'created_by' => $user_id,
+                'updated_by' => $user_id,
+            ]
+        );
+        /*
+        $attachment->created_by=$user_id;
+        $attachment->created_by=$user_id;
+        $attachment->save();
+        */
+>>>>>>> 0a466ed (.)
     }
 }

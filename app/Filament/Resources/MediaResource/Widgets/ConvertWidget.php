@@ -44,6 +44,7 @@ class ConvertWidget extends Widget
         // dddx($file_mp4);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         $format = new WebM;
         $extension = mb_strtolower(class_basename($format));
         $file_new = Str::of($file_mp4)->replaceLast('.mp4', '.'.$extension)->toString();
@@ -52,6 +53,18 @@ class ConvertWidget extends Widget
         $extension = mb_strtolower(class_basename($format));
         $file_new = Str::of($file_mp4)->replaceLast('.mp4', '.' . $extension)->toString();
 >>>>>>> 5200b63 (.)
+=======
+        $format = new WebM();
+        $extension = mb_strtolower(class_basename($format));
+        $file_new = Str::of($file_mp4)->replaceLast('.mp4', '.' . $extension)->toString();
+=======
+        $format = new WebM;
+        $extension = mb_strtolower(class_basename($format));
+        $file_new = Str::of($file_mp4)
+            ->replaceLast('.mp4', '.'.$extension)
+            ->toString();
+>>>>>>> 0a466ed (.)
+>>>>>>> 06bb10d (.)
 
         /*
          * -preset ultrafast.
@@ -129,12 +142,19 @@ class ConvertWidget extends Widget
             // Pause for 1 second between numbers...
             // sleep(1);
 
+<<<<<<< HEAD
             $this->start =
 <<<<<<< HEAD
                 "{$this->percentage}% transcoded".PHP_EOL."{$this->remaining} seconds left at rate: {$this->rate}";
 =======
                 "{$this->percentage}% transcoded" . PHP_EOL . "{$this->remaining} seconds left at rate: {$this->rate}";
+<<<<<<< HEAD
 >>>>>>> 5200b63 (.)
+=======
+=======
+            $this->start = "{$this->percentage}% transcoded".PHP_EOL."{$this->remaining} seconds left at rate: {$this->rate}";
+>>>>>>> 0a466ed (.)
+>>>>>>> 06bb10d (.)
 
             // Decrement the counter...
             // $this->start = $this->start - 1;

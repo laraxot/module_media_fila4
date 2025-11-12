@@ -7,6 +7,7 @@ namespace Modules\Media\Models\Policies;
 use Modules\Media\Models\MediaConvert;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Modules\Xot\Contracts\UserContract;
 =======
 <<<<<<< HEAD
@@ -26,6 +27,12 @@ use Modules\Xot\Contracts\UserContract;
 =======
 use Modules\Xot\Contracts\UserContract;
 >>>>>>> 5200b63 (.)
+=======
+use Modules\Xot\Contracts\UserContract;
+=======
+use Modules\Xot\Contracts\ProfileContract;
+>>>>>>> 0a466ed (.)
+>>>>>>> 06bb10d (.)
 
 class MediaConvertPolicy extends MediaBasePolicy
 {
@@ -34,10 +41,14 @@ class MediaConvertPolicy extends MediaBasePolicy
      */
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 06bb10d (.)
     public function viewAny(UserContract $user): bool
     {
         return $user->hasPermissionTo('media_convert.viewAny');
 =======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -65,6 +76,12 @@ class MediaConvertPolicy extends MediaBasePolicy
     {
         return $user->hasPermissionTo('media_convert.viewAny');
 >>>>>>> 5200b63 (.)
+=======
+    public function viewAny(ProfileContract $user): bool
+    {
+        return $user->hasPermissionTo('media_convert.viewAny'); /** @phpstan-ignore method.nonObject */
+>>>>>>> 0a466ed (.)
+>>>>>>> 06bb10d (.)
     }
 
     /**
@@ -72,10 +89,14 @@ class MediaConvertPolicy extends MediaBasePolicy
      */
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 06bb10d (.)
     public function view(UserContract $user, MediaConvert $_media_convert): bool
     {
         return $user->hasPermissionTo('media_convert.view');
 =======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -103,6 +124,12 @@ class MediaConvertPolicy extends MediaBasePolicy
     {
         return $user->hasPermissionTo('media_convert.view');
 >>>>>>> 5200b63 (.)
+=======
+    public function view(ProfileContract $user, MediaConvert $media_convert): bool
+    {
+        return $user->hasPermissionTo('media_convert.view'); /** @phpstan-ignore method.nonObject */
+>>>>>>> 0a466ed (.)
+>>>>>>> 06bb10d (.)
     }
 
     /**
@@ -110,10 +137,14 @@ class MediaConvertPolicy extends MediaBasePolicy
      */
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 06bb10d (.)
     public function create(UserContract $user): bool
     {
         return $user->hasPermissionTo('media_convert.create');
 =======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -141,6 +172,12 @@ class MediaConvertPolicy extends MediaBasePolicy
     {
         return $user->hasPermissionTo('media_convert.create');
 >>>>>>> 5200b63 (.)
+=======
+    public function create(ProfileContract $user): bool
+    {
+        return $user->hasPermissionTo('media_convert.create'); /** @phpstan-ignore method.nonObject */
+>>>>>>> 0a466ed (.)
+>>>>>>> 06bb10d (.)
     }
 
     /**
@@ -148,10 +185,14 @@ class MediaConvertPolicy extends MediaBasePolicy
      */
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 06bb10d (.)
     public function update(UserContract $user, MediaConvert $_media_convert): bool
     {
         return $user->hasPermissionTo('media_convert.update');
 =======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -179,6 +220,12 @@ class MediaConvertPolicy extends MediaBasePolicy
     {
         return $user->hasPermissionTo('media_convert.update');
 >>>>>>> 5200b63 (.)
+=======
+    public function update(ProfileContract $user, MediaConvert $media_convert): bool
+    {
+        return $user->hasPermissionTo('media_convert.update'); /** @phpstan-ignore method.nonObject */
+>>>>>>> 0a466ed (.)
+>>>>>>> 06bb10d (.)
     }
 
     /**
@@ -186,10 +233,14 @@ class MediaConvertPolicy extends MediaBasePolicy
      */
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 06bb10d (.)
     public function delete(UserContract $user, MediaConvert $_media_convert): bool
     {
         return $user->hasPermissionTo('media_convert.delete');
 =======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -217,6 +268,12 @@ class MediaConvertPolicy extends MediaBasePolicy
     {
         return $user->hasPermissionTo('media_convert.delete');
 >>>>>>> 5200b63 (.)
+=======
+    public function delete(ProfileContract $user, MediaConvert $media_convert): bool
+    {
+        return $user->hasPermissionTo('media_convert.delete'); /** @phpstan-ignore method.nonObject */
+>>>>>>> 0a466ed (.)
+>>>>>>> 06bb10d (.)
     }
 
     /**
@@ -224,10 +281,14 @@ class MediaConvertPolicy extends MediaBasePolicy
      */
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 06bb10d (.)
     public function restore(UserContract $user, MediaConvert $_media_convert): bool
     {
         return $user->hasPermissionTo('media_convert.restore');
 =======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -255,11 +316,18 @@ class MediaConvertPolicy extends MediaBasePolicy
     {
         return $user->hasPermissionTo('media_convert.restore');
 >>>>>>> 5200b63 (.)
+=======
+    public function restore(ProfileContract $user, MediaConvert $media_convert): bool
+    {
+        return $user->hasPermissionTo('media_convert.restore'); /** @phpstan-ignore method.nonObject */
+>>>>>>> 0a466ed (.)
+>>>>>>> 06bb10d (.)
     }
 
     /**
      * Determine whether the user can permanently delete the model.
      */
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -285,9 +353,16 @@ class MediaConvertPolicy extends MediaBasePolicy
 >>>>>>> e9b0959 (.)
 =======
 >>>>>>> 5200b63 (.)
+=======
+>>>>>>> 06bb10d (.)
     public function forceDelete(UserContract $user, MediaConvert $media_convert): bool
     {
         return $user->hasPermissionTo('media_convert.forceDelete');
+=======
+    public function forceDelete(ProfileContract $user, MediaConvert $media_convert): bool
+    {
+        return $user->hasPermissionTo('media_convert.forceDelete'); /** @phpstan-ignore method.nonObject */
+>>>>>>> 0a466ed (.)
     }
 }
 <<<<<<< HEAD

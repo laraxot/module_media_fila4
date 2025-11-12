@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Modules\Media\Filament\Resources;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Filament\Forms\Components\Radio;
 use Filament\Forms\Components\TextInput;
 use Filament\Schemas\Components\Component;
@@ -19,8 +20,12 @@ class MediaConvertResource extends XotBaseResource
 {
     protected static ?string $model = MediaConvert::class;
 =======
+=======
+>>>>>>> 06bb10d (.)
 use Filament\Schemas\Components\Component;
 use Override;
+=======
+>>>>>>> 0a466ed (.)
 use Modules\Media\Filament\Resources\MediaConvertResource\Pages\ListMediaConverts;
 use Modules\Media\Filament\Resources\MediaConvertResource\Pages\CreateMediaConvert;
 use Modules\Media\Filament\Resources\MediaConvertResource\Pages\EditMediaConvert;
@@ -32,6 +37,7 @@ use Modules\Xot\Filament\Resources\XotBaseResource;
 
 class MediaConvertResource extends XotBaseResource
 {
+<<<<<<< HEAD
     protected static null|string $model = MediaConvert::class;
 >>>>>>> 5200b63 (.)
 
@@ -39,6 +45,13 @@ class MediaConvertResource extends XotBaseResource
      * @return array<string, Component>
      */
     #[Override]
+=======
+    protected static ?string $model = MediaConvert::class;
+
+    /**
+     * @return array<string, \Filament\Schemas\Components\Component>
+     */
+>>>>>>> 0a466ed (.)
     public static function getFormSchema(): array
     {
         return [
@@ -79,6 +92,7 @@ class MediaConvertResource extends XotBaseResource
         ];
     }
 
+<<<<<<< HEAD
     #[Override]
     public static function getRelations(): array
     {
@@ -86,6 +100,14 @@ class MediaConvertResource extends XotBaseResource
     }
 
     #[Override]
+=======
+    public static function getRelations(): array
+    {
+        return [
+        ];
+    }
+
+>>>>>>> 0a466ed (.)
     public static function getPages(): array
     {
         return [
