@@ -28,7 +28,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Storage;
 use Modules\Media\Actions\CloudFront\GetCloudFrontSignedUrlAction;
-use Modules\SaluteOra\Models\User;
+use Modules\<main module>\Models\User;
 use Spatie\ModelStates\State;
 >>>>>>> 5200b63 (.)
 

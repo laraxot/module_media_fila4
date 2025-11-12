@@ -34,8 +34,11 @@ declare(strict_types=1);
 >>>>>>> f1c6d6e (.)
 declare(strict_types=1);
 
+<<<<<<< HEAD
 
 >>>>>>> 5200b63 (.)
+=======
+>>>>>>> f41e45e (.)
 return [
     'pages' => 'Pagine',
     'widgets' => 'Widgets',

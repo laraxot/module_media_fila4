@@ -7,6 +7,7 @@ namespace Modules\Media\Services;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 47a54fe (.)
@@ -14,14 +15,20 @@ namespace Modules\Media\Services;
 >>>>>>> f1c6d6e (.)
 use SimpleXMLElement;
 >>>>>>> 5200b63 (.)
+=======
+>>>>>>> f41e45e (.)
 use Exception;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use SimpleXMLElement;
 =======
 >>>>>>> 5200b63 (.)
+=======
+use SimpleXMLElement;
+>>>>>>> f41e45e (.)
 use Webmozart\Assert\Assert;
 
 use function Safe\file_put_contents;
@@ -45,6 +52,7 @@ class SubtitleService
 
     public Model $model;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -93,12 +101,16 @@ class SubtitleService
 =======
     private static null|self $instance = null;
 >>>>>>> f1c6d6e (.)
+=======
+    private static ?self $instance = null;
+>>>>>>> f41e45e (.)
 
     /**
      * ---.
      */
     public static function getInstance(): self
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -157,6 +169,10 @@ class SubtitleService
         if (!(self::$instance instanceof self)) {
             self::$instance = new self();
 >>>>>>> f1c6d6e (.)
+=======
+        if (! (self::$instance instanceof self)) {
+            self::$instance = new self;
+>>>>>>> f41e45e (.)
         }
 
         return self::$instance;
@@ -214,6 +230,7 @@ class SubtitleService
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $txt .= $item->__toString().' ';
 =======
                 $txt .= $item->__toString() . ' ';
@@ -256,6 +273,9 @@ class SubtitleService
 =======
                 $txt .= $item->__toString() . ' ';
 >>>>>>> f1c6d6e (.)
+=======
+                $txt .= $item->__toString().' ';
+>>>>>>> f41e45e (.)
             }
         }
 
@@ -274,6 +294,7 @@ class SubtitleService
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (! isset($info['extension'])) {
             return [];
         }
@@ -349,6 +370,13 @@ class SubtitleService
 >>>>>>> 47a54fe (.)
 =======
 >>>>>>> f1c6d6e (.)
+=======
+        if (! isset($info['extension'])) {
+            return [];
+        }
+
+        $func = 'getFrom'.Str::studly($info['extension']);
+>>>>>>> f41e45e (.)
 
         Assert::isArray($res = $this->{$func}());
 
@@ -389,6 +417,7 @@ class SubtitleService
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 if (! ($attributes instanceof SimpleXMLElement)) {
                     throw new Exception('['.__LINE__.']['.class_basename($this).']');
 =======
@@ -412,6 +441,10 @@ class SubtitleService
                 if (!($attributes instanceof SimpleXMLElement)) {
                     throw new Exception('[' . __LINE__ . '][' . class_basename($this) . ']');
 >>>>>>> 5200b63 (.)
+=======
+                if (! ($attributes instanceof SimpleXMLElement)) {
+                    throw new Exception('['.__LINE__.']['.class_basename($this).']');
+>>>>>>> f41e45e (.)
                 }
 
                 // 00:06:35,360
@@ -430,6 +463,7 @@ class SubtitleService
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                     'time' => secondsToHms($start).','.secondsToHms($end),
 =======
                     'time' => secondsToHms($start) . ',' . secondsToHms($end),
@@ -472,6 +506,9 @@ class SubtitleService
 =======
                     'time' => secondsToHms($start) . ',' . secondsToHms($end),
 >>>>>>> f1c6d6e (.)
+=======
+                    'time' => secondsToHms($start).','.secondsToHms($end),
+>>>>>>> f41e45e (.)
                     'text' => $item->__toString(),
                 ];
                 $data[] = $tmp;
@@ -488,12 +525,17 @@ class SubtitleService
      * Undocumented function.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  string  $srtFile
      * @param  string  $webVttFile
 =======
      * @param  string $srtFile
      * @param  string $webVttFile
 >>>>>>> 5200b63 (.)
+=======
+     * @param  string  $srtFile
+     * @param  string  $webVttFile
+>>>>>>> f41e45e (.)
      */
     public function srtToVtt($srtFile, $webVttFile): void
     {
@@ -511,6 +553,7 @@ class SubtitleService
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             if (! feof($fileHandle)) {
 =======
             if (!feof($fileHandle)) {
@@ -553,6 +596,9 @@ class SubtitleService
 =======
             if (!feof($fileHandle)) {
 >>>>>>> f1c6d6e (.)
+=======
+            if (! feof($fileHandle)) {
+>>>>>>> f41e45e (.)
                 exit("Error: unexpected fgets() fail\n");
             }
 
@@ -574,6 +620,7 @@ class SubtitleService
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         file_put_contents(public_path($webVttFile), $header.implode('', $lines));
 =======
         file_put_contents(public_path($webVttFile), $header . implode('', $lines));
@@ -616,5 +663,8 @@ class SubtitleService
 =======
         file_put_contents(public_path($webVttFile), $header . implode('', $lines));
 >>>>>>> f1c6d6e (.)
+=======
+        file_put_contents(public_path($webVttFile), $header.implode('', $lines));
+>>>>>>> f41e45e (.)
     }
 }

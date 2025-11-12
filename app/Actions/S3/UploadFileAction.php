@@ -7,6 +7,7 @@ namespace Modules\Media\Actions\S3;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Aws\S3\ObjectUploader;
 use Exception;
 =======
@@ -44,11 +45,16 @@ use Aws\S3\ObjectUploader;
 >>>>>>> 47a54fe (.)
 =======
 >>>>>>> f1c6d6e (.)
+=======
+use Aws\S3\ObjectUploader;
+use Exception;
+>>>>>>> f41e45e (.)
 
 use function Safe\fclose;
 use function Safe\filesize;
 use function Safe\fopen;
 use function Safe\mime_content_type;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 use function Safe\rewind;
@@ -100,6 +106,8 @@ use function Safe\mime_content_type;
 >>>>>>> 47a54fe (.)
 =======
 >>>>>>> f1c6d6e (.)
+=======
+>>>>>>> f41e45e (.)
 
 class UploadFileAction extends BaseS3Action
 {
@@ -107,15 +115,20 @@ class UploadFileAction extends BaseS3Action
      * Upload a file to S3
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  array<string, mixed>  $options
 =======
      * @param array<string, mixed> $options
 >>>>>>> 5200b63 (.)
+=======
+     * @param  array<string, mixed>  $options
+>>>>>>> f41e45e (.)
      * @return array<string, mixed>
      */
     public function execute(string $localFilePath, string $destinationFilePath, array $options = []): array
     {
         // Validation
+<<<<<<< HEAD
 <<<<<<< HEAD
         if (! file_exists($localFilePath)) {
             $error = "Local file does not exist: {$localFilePath}";
@@ -130,15 +143,23 @@ class UploadFileAction extends BaseS3Action
 
 =======
         if (!file_exists($localFilePath)) {
+=======
+        if (! file_exists($localFilePath)) {
+>>>>>>> f41e45e (.)
             $error = "Local file does not exist: {$localFilePath}";
             $this->logger->error($error);
+
             return ['success' => false, 'error' => $error];
         }
 
-        if (!is_readable($localFilePath)) {
+        if (! is_readable($localFilePath)) {
             $error = "Local file is not readable: {$localFilePath}";
             $this->logger->error($error);
+<<<<<<< HEAD
 >>>>>>> 5200b63 (.)
+=======
+
+>>>>>>> f41e45e (.)
             return ['success' => false, 'error' => $error];
         }
 

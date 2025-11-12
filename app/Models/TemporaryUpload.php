@@ -10,6 +10,7 @@ namespace Modules\Media\Models;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Closure;
 use Exception;
 =======
@@ -64,16 +65,25 @@ use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
 >>>>>>> 47a54fe (.)
 =======
 >>>>>>> f1c6d6e (.)
+=======
+use Closure;
+use Exception;
+>>>>>>> f41e45e (.)
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\MassPrunable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\UploadedFile;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Illuminate\Support\Carbon;
 use Modules\Media\Database\Factories\TemporaryUploadFactory;
 =======
 >>>>>>> 5200b63 (.)
+=======
+use Illuminate\Support\Carbon;
+use Modules\Media\Database\Factories\TemporaryUploadFactory;
+>>>>>>> f41e45e (.)
 use Modules\Media\Exceptions\CouldNotAddUpload;
 use Modules\Media\Exceptions\TemporaryUploadDoesNotBelongToCurrentSession;
 use Spatie\Image\Enums\Fit;
@@ -81,9 +91,13 @@ use Spatie\MediaLibrary\Conversions\Conversion;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
 =======
 >>>>>>> 5200b63 (.)
+=======
+use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
+>>>>>>> f41e45e (.)
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
 use Webmozart\Assert\Assert;
 
@@ -97,9 +111,13 @@ use Webmozart\Assert\Assert;
  * @property MediaCollection<int, Media> $media
  * @property int|null $media_count
 <<<<<<< HEAD
+<<<<<<< HEAD
  *
 =======
 >>>>>>> 5200b63 (.)
+=======
+ *
+>>>>>>> f41e45e (.)
  * @method static Builder<static>|TemporaryUpload newModelQuery()
  * @method static Builder<static>|TemporaryUpload newQuery()
  * @method static Builder<static>|TemporaryUpload query()
@@ -107,6 +125,7 @@ use Webmozart\Assert\Assert;
  * @method static Builder<static>|TemporaryUpload whereId($value)
  * @method static Builder<static>|TemporaryUpload whereSessionId($value)
  * @method static Builder<static>|TemporaryUpload whereUpdatedAt($value)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -132,10 +151,14 @@ use Webmozart\Assert\Assert;
 >>>>>>> 47a54fe (.)
 =======
 >>>>>>> f1c6d6e (.)
+=======
+ *
+>>>>>>> f41e45e (.)
  * @property string|null $updated_by
  * @property string|null $created_by
  * @property string|null $deleted_at
  * @property string|null $deleted_by
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -149,10 +172,14 @@ use Webmozart\Assert\Assert;
 >>>>>>> 47a54fe (.)
 =======
 >>>>>>> f1c6d6e (.)
+=======
+ *
+>>>>>>> f41e45e (.)
  * @method static Builder<static>|TemporaryUpload whereCreatedBy($value)
  * @method static Builder<static>|TemporaryUpload whereDeletedAt($value)
  * @method static Builder<static>|TemporaryUpload whereDeletedBy($value)
  * @method static Builder<static>|TemporaryUpload whereUpdatedBy($value)
+<<<<<<< HEAD
 <<<<<<< HEAD
  *
  * @mixin IdeHelperTemporaryUpload
@@ -173,8 +200,13 @@ class TemporaryUpload extends BaseModel implements HasMedia
 
     public static ?string $disk = null;
 =======
+=======
+ *
+>>>>>>> f41e45e (.)
  * @mixin IdeHelperTemporaryUpload
+ *
  * @method static TemporaryUploadFactory factory($count = null, $state = [])
+ *
  * @mixin \Eloquent
  */
 class TemporaryUpload extends Model implements HasMedia
@@ -185,16 +217,15 @@ class TemporaryUpload extends Model implements HasMedia
 
     /**
      * Create a new factory instance for the model.
-     *
-     * @return TemporaryUploadFactory
      */
     protected static function newFactory(): TemporaryUploadFactory
     {
         return TemporaryUploadFactory::new();
     }
 
-    public static null|Closure $manipulatePreview = null;
+    public static ?Closure $manipulatePreview = null;
 
+<<<<<<< HEAD
     public static null|string $disk = null;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -249,6 +280,9 @@ class TemporaryUpload extends Model implements HasMedia
 >>>>>>> 47a54fe (.)
 =======
 >>>>>>> f1c6d6e (.)
+=======
+    public static ?string $disk = null;
+>>>>>>> f41e45e (.)
 
     /** @var string */
     protected $connection = 'media';
@@ -258,6 +292,7 @@ class TemporaryUpload extends Model implements HasMedia
      */
     protected $guarded = [];
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -306,6 +341,9 @@ class TemporaryUpload extends Model implements HasMedia
 =======
     public static function findByMediaUuid(null|string $mediaUuid): null|self
 >>>>>>> f1c6d6e (.)
+=======
+    public static function findByMediaUuid(?string $mediaUuid): ?self
+>>>>>>> f41e45e (.)
     {
         Assert::string($mediaModelClass = config('media-library.media_model'));
 
@@ -323,6 +361,7 @@ class TemporaryUpload extends Model implements HasMedia
          */
         $media = $mediaModelClass::query()->where('uuid', $mediaUuid)->first();
 
+<<<<<<< HEAD
         if (!$media) {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -374,11 +413,15 @@ class TemporaryUpload extends Model implements HasMedia
 >>>>>>> 47a54fe (.)
 =======
 >>>>>>> f1c6d6e (.)
+=======
+        if (! $media) {
+>>>>>>> f41e45e (.)
             return null;
         }
 
         $temporaryUpload = $media->model;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -427,12 +470,16 @@ class TemporaryUpload extends Model implements HasMedia
 =======
         if (!($temporaryUpload instanceof self)) {
 >>>>>>> f1c6d6e (.)
+=======
+        if (! ($temporaryUpload instanceof self)) {
+>>>>>>> f41e45e (.)
             return null;
         }
 
         return $temporaryUpload;
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -464,6 +511,11 @@ class TemporaryUpload extends Model implements HasMedia
     {
         if (!(($temporaryUpload = static::findByMediaUuid($mediaUuid)) instanceof self)) {
 >>>>>>> 5200b63 (.)
+=======
+    public static function findByMediaUuidInCurrentSession(?string $mediaUuid): ?self
+    {
+        if (! (($temporaryUpload = static::findByMediaUuid($mediaUuid)) instanceof self)) {
+>>>>>>> f41e45e (.)
             return null;
         }
 
@@ -541,6 +593,7 @@ class TemporaryUpload extends Model implements HasMedia
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function registerMediaConversions(?Media $media = null): void
     {
         if (! config('media-library.generate_thumbnails_for_temporary_uploads')) {
@@ -566,6 +619,11 @@ class TemporaryUpload extends Model implements HasMedia
     {
         if (!config('media-library.generate_thumbnails_for_temporary_uploads')) {
 >>>>>>> 5200b63 (.)
+=======
+    public function registerMediaConversions(?Media $media = null): void
+    {
+        if (! config('media-library.generate_thumbnails_for_temporary_uploads')) {
+>>>>>>> f41e45e (.)
             return;
         }
 
@@ -590,6 +648,7 @@ class TemporaryUpload extends Model implements HasMedia
         // if (! $media instanceof \Spatie\MediaLibrary\MediaCollections\Models\Media) {
         //    throw new \Exception('['.__LINE__.']['.class_basename($this).']');
         // }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -638,6 +697,9 @@ class TemporaryUpload extends Model implements HasMedia
 =======
         Assert::isInstanceOf($media, Media::class, '[' . __LINE__ . '][' . class_basename($this) . ']');
 >>>>>>> f1c6d6e (.)
+=======
+        Assert::isInstanceOf($media, Media::class, '['.__LINE__.']['.class_basename($this).']');
+>>>>>>> f41e45e (.)
 
         $temporaryUploadModel = $media->model;
         $uuid = $media->uuid;
@@ -657,6 +719,7 @@ class TemporaryUpload extends Model implements HasMedia
         if (\is_string($res)) {
             return $res;
         }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -705,6 +768,9 @@ class TemporaryUpload extends Model implements HasMedia
 =======
         throw new Exception('[' . __LINE__ . '][' . class_basename(__CLASS__) . ']');
 >>>>>>> f1c6d6e (.)
+=======
+        throw new Exception('['.__LINE__.']['.class_basename(__CLASS__).']');
+>>>>>>> f41e45e (.)
     }
 
     // public function prunable(): Builder
@@ -714,6 +780,7 @@ class TemporaryUpload extends Model implements HasMedia
 
     protected function getPreviewManipulation(): Closure
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -745,10 +812,14 @@ class TemporaryUpload extends Model implements HasMedia
 >>>>>>> f1c6d6e (.)
         return (
 >>>>>>> 5200b63 (.)
+=======
+        return
+>>>>>>> f41e45e (.)
             static::$manipulatePreview ?? function (Conversion $conversion): void {
                 $conversion->fit(Fit::Crop, 300, 300);
 
                 // $conversion->fit('crop', 300, 300);
+<<<<<<< HEAD
 <<<<<<< HEAD
             };
 =======
@@ -798,5 +869,8 @@ class TemporaryUpload extends Model implements HasMedia
 >>>>>>> 47a54fe (.)
 =======
 >>>>>>> f1c6d6e (.)
+=======
+            };
+>>>>>>> f41e45e (.)
     }
 }

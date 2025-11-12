@@ -14,6 +14,7 @@ class MediaServiceProvider extends XotBaseServiceProvider
 
     protected string $module_ns = __NAMESPACE__;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
     
@@ -62,4 +63,6 @@ class MediaServiceProvider extends XotBaseServiceProvider
 >>>>>>> 47a54fe (.)
 =======
 >>>>>>> f1c6d6e (.)
+=======
+>>>>>>> f41e45e (.)
 }

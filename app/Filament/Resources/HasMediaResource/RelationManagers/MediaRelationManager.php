@@ -12,6 +12,7 @@ use Filament\Actions\ActionGroup;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Modules\Media\Filament\Resources\HasMediaResource\Actions\AddAttachmentAction;
 use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
 use Override;
@@ -38,9 +39,11 @@ use Filament\Actions\ActionGroup;
 use Override;
 use Filament\Schemas\Schema;
 use Illuminate\Database\Eloquent\Model;
+=======
+>>>>>>> f41e45e (.)
 use Modules\Media\Filament\Resources\HasMediaResource\Actions\AddAttachmentAction;
-use Modules\Media\Filament\Resources\MediaResource;
 use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
+<<<<<<< HEAD
 use Modules\Xot\Filament\Traits\NavigationLabelTrait;
 >>>>>>> 5200b63 (.)
 
@@ -76,11 +79,15 @@ use Modules\Media\Filament\Resources\HasMediaResource\Actions\AddAttachmentActio
 use Modules\Media\Filament\Resources\MediaResource;
 use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
 use Modules\Xot\Filament\Traits\NavigationLabelTrait;
+=======
+use Override;
+>>>>>>> f41e45e (.)
 
 class MediaRelationManager extends XotBaseRelationManager
 {
     protected static string $relationship = 'media';
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 use Filament\Forms\Form;
@@ -130,6 +137,9 @@ class MediaRelationManager extends XotBaseRelationManager
 >>>>>>> 47a54fe (.)
 =======
 >>>>>>> f1c6d6e (.)
+=======
+    protected static ?string $inverseRelationship = 'model';
+>>>>>>> f41e45e (.)
 
     /**
      * @return array<string, Action|ActionGroup>

@@ -7,6 +7,7 @@ namespace Modules\Media\Filament\Resources\HasMediaResource\Actions;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Exception;
 use Filament\Actions\Action;
 =======
@@ -28,6 +29,10 @@ use Exception;
 use Filament\Actions\Action;
 use Exception;
 >>>>>>> f1c6d6e (.)
+=======
+use Exception;
+use Filament\Actions\Action;
+>>>>>>> f41e45e (.)
 use Filament\Forms\Components\BaseFileUpload;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Radio;
@@ -45,10 +50,14 @@ class AddAttachmentAction extends Action
             ->color('success')
             ->button()
 <<<<<<< HEAD
+<<<<<<< HEAD
             ->schema(fn (): array => static::getFormSchema(false))
 =======
             ->schema(fn(): array => static::getFormSchema(false))
 >>>>>>> 5200b63 (.)
+=======
+            ->schema(fn (): array => static::getFormSchema(false))
+>>>>>>> f41e45e (.)
             ->action(static::formHandlerCallback(...));
     }
 
@@ -56,17 +65,23 @@ class AddAttachmentAction extends Action
     {
         Assert::string(
 <<<<<<< HEAD
+<<<<<<< HEAD
             $ris = trans('media::add_attachment_action.'.$key),
             '['.$key.']['.__LINE__.']['.class_basename(__CLASS__).']',
 =======
             $ris = trans('media::add_attachment_action.' . $key),
             '[' . $key . '][' . __LINE__ . '][' . class_basename(__CLASS__) . ']',
 >>>>>>> 5200b63 (.)
+=======
+            $ris = trans('media::add_attachment_action.'.$key),
+            '['.$key.']['.__LINE__.']['.class_basename(__CLASS__).']',
+>>>>>>> f41e45e (.)
         );
 
         return $ris;
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -115,6 +130,9 @@ class AddAttachmentAction extends Action
 =======
     public static function getDefaultName(): null|string
 >>>>>>> f1c6d6e (.)
+=======
+    public static function getDefaultName(): ?string
+>>>>>>> f41e45e (.)
     {
         return 'add_attachment';
     }
@@ -172,6 +190,7 @@ class AddAttachmentAction extends Action
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (! method_exists($ownerRecord, 'addMediaFromDisk')) {
             throw new Exception('wip');
         }
@@ -213,6 +232,9 @@ class AddAttachmentAction extends Action
 =======
 >>>>>>> f1c6d6e (.)
         if (!method_exists($ownerRecord, 'addMediaFromDisk')) {
+=======
+        if (! method_exists($ownerRecord, 'addMediaFromDisk')) {
+>>>>>>> f41e45e (.)
             throw new Exception('wip');
         }
 

@@ -5,6 +5,9 @@ declare(strict_types=1);
 namespace Modules\Media\Filament\Resources\MediaResource\Pages;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f41e45e (.)
 use Modules\Media\Filament\Resources\MediaResource;
 use Modules\Xot\Filament\Resources\Pages\XotBaseCreateRecord;
 

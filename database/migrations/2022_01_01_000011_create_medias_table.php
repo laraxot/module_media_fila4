@@ -19,6 +19,7 @@ use Modules\Xot\Database\Migrations\XotBaseMigration;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 return new class extends XotBaseMigration
 {
 =======
@@ -64,6 +65,10 @@ return new class extends XotBaseMigration
 =======
 return new class extends XotBaseMigration {
 >>>>>>> f1c6d6e (.)
+=======
+return new class extends XotBaseMigration
+{
+>>>>>>> f41e45e (.)
     /**
      * i don't write table name, it take from Model, model is singular of this class wit.
      */
