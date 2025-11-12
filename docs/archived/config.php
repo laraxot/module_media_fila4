@@ -12,8 +12,11 @@ return [
     'lang' => 'it',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 0caa3cf (.)
+=======
+>>>>>>> c9ef35c (.)
 
     'collections' => [
         'posts' => [
@@ -38,6 +41,7 @@ return [
         if (is_object($menuItem) && $menuItem->children) {
             return $menuItem->children->contains(fn ($child): bool => trimPath($page->getPath()) === trimPath($child));
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     'collections' => [
         'posts' => [
@@ -61,6 +65,8 @@ return [
 >>>>>>> 7df6a71 (.)
 =======
 >>>>>>> 0caa3cf (.)
+=======
+>>>>>>> c9ef35c (.)
         }
     },
     'url' => function ($page, $path) {
@@ -71,14 +77,18 @@ return [
         // return Str::startsWith($path, 'http') ? $path : '/' . trimPath($path);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 0caa3cf (.)
+=======
+>>>>>>> c9ef35c (.)
         return url('/'.$page->lang.'/'.trimPath($path));
     },
 
     'children' => fn ($page, $docs): array =>
         // return $docs->where('parent_id', $page->);
         [],
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
         return url('/' . $page->lang . '/' . trimPath($path));
@@ -90,4 +100,6 @@ return [
 >>>>>>> 7df6a71 (.)
 =======
 >>>>>>> 0caa3cf (.)
+=======
+>>>>>>> c9ef35c (.)
 ];
