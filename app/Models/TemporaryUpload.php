@@ -417,8 +417,9 @@ class TemporaryUpload extends Model implements HasMedia
 >>>>>>> 13d1d7e (.)
 =======
         /**
-         * @var Builder<Media> $query
+         * @var Media $media
          */
+<<<<<<< HEAD
 <<<<<<< HEAD
         $media = $mediaModelClass::query()->where('uuid', $mediaUuid)->first();
 >>>>>>> 2a4b5df (.)
@@ -492,10 +493,14 @@ class TemporaryUpload extends Model implements HasMedia
 
         if ($media === null) {
 >>>>>>> 1634e53 (.)
+=======
+        $media = $mediaModelClass::query()->where('uuid', $mediaUuid)->first();
+
+        if (! $media) {
+>>>>>>> 21a9aec (.)
             return null;
         }
 
-        /** @var Model|null $temporaryUpload */
         $temporaryUpload = $media->model;
 
 <<<<<<< HEAD

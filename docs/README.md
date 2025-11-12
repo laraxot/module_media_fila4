@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 📁 **Media Module** - Sistema Avanzato Gestione File Multimediali
 
 [![Laravel 12.x](https://img.shields.io/badge/Laravel-12.x-red.svg)](https://laravel.com/)
@@ -540,3 +541,5 @@ Media module for Laraxot PTVX providing specialized functionality and business l
 $result = app(MediaService::class)->process($data);
 ```
 >>>>>>> f41e45e (.)
+=======
+>>>>>>> 21a9aec (.)

@@ -156,6 +156,7 @@ class ListMedia extends XotBaseListRecords
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 ->action(static function ($record) {
                     // PHPStan Level 10: isset() per Eloquent magic property
                     if (! is_object($record) || ! method_exists($record, 'getPath') || ! isset($record->file_name)) {
@@ -192,6 +193,9 @@ class ListMedia extends XotBaseListRecords
                     return response()->download($record->getPath(), $record->file_name);
                 }),
 >>>>>>> 1634e53 (.)
+=======
+                ->action(static fn ($record) => response()->download($record->getPath(), $record->file_name)),
+>>>>>>> 21a9aec (.)
             'convert' => Action::make('convert')
                 ->icon('media-convert')
                 ->color('gray')

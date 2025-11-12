@@ -198,6 +198,7 @@ class AddAttachmentAction extends Action
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         $fileAdder = $ownerRecord->addMediaFromDisk($data['file'], config('attachment.upload.disk.driver'));
 
         if ($fileAdder === null || ! is_object($fileAdder)) {
@@ -243,11 +244,14 @@ class AddAttachmentAction extends Action
 
 =======
 >>>>>>> 2a4b5df (.)
+=======
+>>>>>>> 21a9aec (.)
         $attachment = $ownerRecord
             ->addMediaFromDisk($data['file'], config('attachment.upload.disk.driver'))
             ->setName($data['name'] ?? Str::beforeLast($data['original_file_name'], '.'))
             ->preservingOriginal()
             ->toMediaCollection($mediaCollection);
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 5200b63 (.)
 =======
@@ -309,16 +313,14 @@ class AddAttachmentAction extends Action
 
         $attachment = $media;
 >>>>>>> 1634e53 (.)
+=======
+>>>>>>> 21a9aec (.)
 
         $user_id = authId();
-        /** @phpstan-ignore-next-line */
-        if (method_exists($attachment, 'update')) {
-            /** @phpstan-ignore-next-line */
-            $attachment->update([
-                'created_by' => $user_id,
-                'updated_by' => $user_id,
-            ]);
-        }
+        $attachment->update([
+            'created_by' => $user_id,
+            'updated_by' => $user_id,
+        ]);
 
         /*
          * $attachment->created_by=$user_id;

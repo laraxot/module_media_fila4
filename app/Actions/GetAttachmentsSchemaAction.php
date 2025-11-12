@@ -24,7 +24,6 @@ use Filament\Schemas\Components\Utilities\Set;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Config;
 use Livewire\Features\SupportFileUploads\TemporaryUploadedFile;
-use Webmozart\Assert\Assert;
 
 <<<<<<< HEAD
 use function Safe\glob;
@@ -47,6 +46,7 @@ class GetAttachmentsSchemaAction
             $sessionDir = $prefix.'/'.$sessionDir;
         }
         foreach ($attachments as $attachment) {
+<<<<<<< HEAD
             $attachmentStr = (string) $attachment;
             $form[$attachmentStr] = FileUpload::make($attachmentStr)
                 // $form[$attachment]=SpatieMediaLibraryFileUpload::make($attachment)
@@ -60,6 +60,8 @@ class GetAttachmentsSchemaAction
             if (! is_string($attachment)) {
                 continue;
             }
+=======
+>>>>>>> 21a9aec (.)
             $form[$attachment] = FileUpload::make($attachment)
 <<<<<<< HEAD
                 //$form[$attachment]=SpatieMediaLibraryFileUpload::make($attachment)
@@ -150,6 +152,7 @@ class GetAttachmentsSchemaAction
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                     // Set expects Component|string, pass attachment as string
                     \Webmozart\Assert\Assert::string($attachment, 'Attachment must be string');
 =======
@@ -158,6 +161,8 @@ class GetAttachmentsSchemaAction
                     /** @phpstan-ignore-next-line staticMethod.alreadyNarrowedType - Runtime safety check */
                     Assert::string($attachment, 'Attachment name must be a string');
 >>>>>>> 1634e53 (.)
+=======
+>>>>>>> 21a9aec (.)
                     $set($attachment, $sessionFiles);
 =======
                     $set($attachmentKey, $sessionFiles);
