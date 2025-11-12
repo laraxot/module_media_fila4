@@ -49,8 +49,14 @@ use Intervention\Image\Drivers\Gd\Driver as GdDriver;
 >>>>>>> 8b93fd8 (.)
 =======
 use Intervention\Image\ImageManager as InterventionImageManager;
+<<<<<<< HEAD
 use Intervention\Image\Drivers\Gd\Driver as GdDriver;
+<<<<<<< HEAD
 >>>>>>> aa5e51a (.)
+=======
+=======
+>>>>>>> 6144976 (.)
+>>>>>>> f10d8e1 (.)
 
 class Merge
 {
@@ -76,20 +82,32 @@ class Merge
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f10d8e1 (.)
         // Intervention Image v3: il costruttore richiede un DriverInterface
 <<<<<<< HEAD
         $manager = new InterventionImageManager(new GdDriver);
 =======
         $manager = new InterventionImageManager(new GdDriver());
+<<<<<<< HEAD
 >>>>>>> 5200b63 (.)
+=======
+=======
+        // Compatibile con Intervention Image v2 (Laravel 10):
+        $manager = new InterventionImageManager(['driver' => 'gd']);
+>>>>>>> 6144976 (.)
+>>>>>>> f10d8e1 (.)
 
         // Carica le immagini
         $image1 = $manager->read($path1);
         $image2 = $manager->read($path2);
 
+<<<<<<< HEAD
         // Inserisce image2 sopra image1 (centrato) - v3 usa place()
         $image1->place($image2, 'center');
 =======
+<<<<<<< HEAD
 >>>>>>> b1b659d (.)
 =======
 >>>>>>> c9ef35c (.)
@@ -134,6 +152,11 @@ class Merge
         // Inserisce image2 sopra image1 (centrato) - v3 usa place()
         $image1->place($image2, 'center');
 >>>>>>> aa5e51a (.)
+=======
+        // Inserisce image2 sopra image1 (centrato)
+        $image1->insert($image2, 'center');
+>>>>>>> 6144976 (.)
+>>>>>>> f10d8e1 (.)
 
         // Salva il risultato
         $image1->save($outputPath);
