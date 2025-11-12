@@ -9,6 +9,7 @@ namespace Modules\Media\Filament\Resources\MediaResource\Pages;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 446bc61 (.)
@@ -18,6 +19,8 @@ namespace Modules\Media\Filament\Resources\MediaResource\Pages;
 >>>>>>> 1a0067b (.)
 =======
 >>>>>>> 70517e3 (.)
+=======
+>>>>>>> 07b5575 (.)
 use Filament\Schemas\Components\Actions;
 use Filament\Schemas\Components\Section;
 use Filament\Schemas\Components\Component;
@@ -27,16 +30,20 @@ use Filament\Schemas\Components\Grid;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 5200b63 (.)
 =======
 =======
 >>>>>>> 1a0067b (.)
+=======
+>>>>>>> 07b5575 (.)
 =======
 use Filament\Schemas\Components\Component;
 use Override;
 use Filament\Schemas\Components\Flex;
 use Filament\Schemas\Components\Section;
 use Filament\Schemas\Components\Actions;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 1999eb3 (.)
 >>>>>>> 446bc61 (.)
@@ -47,6 +54,9 @@ use Filament\Schemas\Components\Actions;
 >>>>>>> 1a0067b (.)
 =======
 >>>>>>> 70517e3 (.)
+=======
+>>>>>>> 1999eb3 (.)
+>>>>>>> 07b5575 (.)
 use Filament\Actions\Action;
 use Filament\Actions\DeleteAction;
 use Filament\Infolists\Components\ImageEntry;
@@ -80,7 +90,11 @@ class ViewMedia extends XotBaseViewRecord
     /**
      * Restituisce lo schema dell'infolist per la visualizzazione dei dettagli del record.
      *
+<<<<<<< HEAD
      * @return array<int, Component>
+=======
+     * @return array<string, Component>
+>>>>>>> 1999eb3 (.)
      */
     #[Override]
     public function getInfolistSchema(): array
@@ -168,6 +182,7 @@ class ViewMedia extends XotBaseViewRecord
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 5200b63 (.)
 =======
 <<<<<<< HEAD
@@ -178,7 +193,12 @@ class ViewMedia extends XotBaseViewRecord
 >>>>>>> 1a0067b (.)
 =======
 >>>>>>> 70517e3 (.)
+=======
+>>>>>>> 07b5575 (.)
             RepeatableEntry::make('entry_conversions')
+=======
+            'entry_conversions' => RepeatableEntry::make('entry_conversions')
+>>>>>>> 1999eb3 (.)
                 ->schema([
                     TextEntry::make('name'),
                     TextEntry::make('src'),

@@ -9,6 +9,7 @@ namespace Modules\Media\Filament\Clusters\Test\Pages;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Aws\Exception\AwsException;
 use Aws\S3\S3Client;
 use Aws\Sts\StsClient;
@@ -26,9 +27,12 @@ use Modules\Xot\Filament\Pages\XotBasePage;
 =======
 =======
 =======
+>>>>>>> 07b5575 (.)
+=======
 use Override;
 use Filament\Schemas\Schema;
 >>>>>>> 1999eb3 (.)
+<<<<<<< HEAD
 >>>>>>> 446bc61 (.)
 =======
 >>>>>>> 36d5713 (.)
@@ -36,6 +40,8 @@ use Filament\Schemas\Schema;
 >>>>>>> 1a0067b (.)
 =======
 >>>>>>> 70517e3 (.)
+=======
+>>>>>>> 07b5575 (.)
 use Filament\Schemas\Components\Tabs;
 use Filament\Schemas\Components\Tabs\Tab;
 use Filament\Schemas\Components\Actions;
@@ -89,10 +95,13 @@ class AwsTest extends XotBasePage
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> 1a0067b (.)
+=======
+>>>>>>> 07b5575 (.)
 =======
     #[Override]
     public function form(Schema $schema): Schema
@@ -107,6 +116,7 @@ class AwsTest extends XotBasePage
         ]);
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 1999eb3 (.)
 >>>>>>> 446bc61 (.)
 =======
@@ -116,6 +126,9 @@ class AwsTest extends XotBasePage
 >>>>>>> 1a0067b (.)
 =======
 >>>>>>> 70517e3 (.)
+=======
+>>>>>>> 1999eb3 (.)
+>>>>>>> 07b5575 (.)
 
 >>>>>>> 5200b63 (.)
     protected function getS3TestSchema(): array
@@ -137,6 +150,7 @@ class AwsTest extends XotBasePage
                             ->color('success')
                             ->action('testS3FileOperations'),
                     ])->fullWidth(),
+<<<<<<< HEAD
                     Textarea::make('s3_results')
                         ->label('S3 Test Results')
                         ->rows(10)
@@ -149,14 +163,18 @@ class AwsTest extends XotBasePage
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 5200b63 (.)
 =======
 =======
 >>>>>>> 1a0067b (.)
 =======
+>>>>>>> 07b5575 (.)
+=======
                     ViewField::make('s3_results')
                         ->view('ui::filament.components.test-results')
                         ->viewData(fn() => ['results' => $this->testResults['s3'] ?? null]),
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 1999eb3 (.)
 >>>>>>> 446bc61 (.)
@@ -167,6 +185,9 @@ class AwsTest extends XotBasePage
 >>>>>>> 1a0067b (.)
 =======
 >>>>>>> 70517e3 (.)
+=======
+>>>>>>> 1999eb3 (.)
+>>>>>>> 07b5575 (.)
                 ]),
         ];
     }
