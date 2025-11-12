@@ -41,6 +41,7 @@ class GetFileInfoAction extends BaseS3Action
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 =======
@@ -110,6 +111,8 @@ class GetFileInfoAction extends BaseS3Action
 >>>>>>> fa051fc (.)
 =======
 >>>>>>> 22b1256 (.)
+=======
+>>>>>>> 10ef3f7 (.)
                 'Key' => $key,
             ]);
 
@@ -117,6 +120,7 @@ class GetFileInfoAction extends BaseS3Action
             $effectiveUri = is_array($metadata) && isset($metadata['effectiveUri'])
                 ? ((string) $metadata['effectiveUri'])
                 : null;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -184,11 +188,15 @@ class GetFileInfoAction extends BaseS3Action
 >>>>>>> c08a553 (.)
 =======
 >>>>>>> 9a4eacb (.)
+=======
+=======
+>>>>>>> 10ef3f7 (.)
                 'Key'    => $key,
             ]);
 
             $metadata = $result['@metadata'] ?? [];
             $effectiveUri = is_array($metadata) && isset($metadata['effectiveUri']) ? (string) $metadata['effectiveUri'] : null;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -283,6 +291,9 @@ class GetFileInfoAction extends BaseS3Action
 >>>>>>> fa051fc (.)
 =======
 >>>>>>> 22b1256 (.)
+=======
+>>>>>>> 0a466ed (.)
+>>>>>>> 10ef3f7 (.)
 
             $fileInfo = [
                 'exists' => true,
@@ -315,6 +326,7 @@ class GetFileInfoAction extends BaseS3Action
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 =======
@@ -437,6 +449,12 @@ class GetFileInfoAction extends BaseS3Action
 =======
                 'metadata' => $result['Metadata'] ?? [],
 >>>>>>> 22b1256 (.)
+=======
+                'metadata' => $result['Metadata'] ?? [],
+=======
+                'metadata' => $result['Metadata'] ?? []
+>>>>>>> 0a466ed (.)
+>>>>>>> 10ef3f7 (.)
             ];
 
             $this->logger->info('File info retrieved successfully', [
@@ -464,6 +482,7 @@ class GetFileInfoAction extends BaseS3Action
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 =======
@@ -533,10 +552,13 @@ class GetFileInfoAction extends BaseS3Action
 >>>>>>> fa051fc (.)
 =======
 >>>>>>> 22b1256 (.)
+=======
+>>>>>>> 10ef3f7 (.)
                 'size' => $fileInfo['contentLength'],
             ]);
 
             return $fileInfo;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -604,11 +626,15 @@ class GetFileInfoAction extends BaseS3Action
 >>>>>>> c08a553 (.)
 =======
 >>>>>>> 9a4eacb (.)
+=======
+=======
+>>>>>>> 10ef3f7 (.)
                 'size' => $fileInfo['contentLength']
             ]);
 
             return $fileInfo;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -700,6 +726,9 @@ class GetFileInfoAction extends BaseS3Action
 >>>>>>> fa051fc (.)
 =======
 >>>>>>> 22b1256 (.)
+=======
+>>>>>>> 0a466ed (.)
+>>>>>>> 10ef3f7 (.)
         } catch (S3Exception $exception) {
             $this->logger->error('Error getting file info from S3', [
                 'key' => $key,
@@ -727,6 +756,7 @@ class GetFileInfoAction extends BaseS3Action
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 =======
@@ -849,6 +879,12 @@ class GetFileInfoAction extends BaseS3Action
 =======
                 'statusCode' => $exception->getStatusCode(),
 >>>>>>> 22b1256 (.)
+=======
+                'statusCode' => $exception->getStatusCode(),
+=======
+                'statusCode' => $exception->getStatusCode()
+>>>>>>> 0a466ed (.)
+>>>>>>> 10ef3f7 (.)
             ]);
 
             return [
@@ -878,6 +914,7 @@ class GetFileInfoAction extends BaseS3Action
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 =======
@@ -947,11 +984,14 @@ class GetFileInfoAction extends BaseS3Action
 >>>>>>> fa051fc (.)
 =======
 >>>>>>> 22b1256 (.)
+=======
+>>>>>>> 10ef3f7 (.)
                 'errorCode' => $exception->getStatusCode(),
             ];
         }
     }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1029,11 +1069,15 @@ class GetFileInfoAction extends BaseS3Action
 >>>>>>> c08a553 (.)
 =======
 >>>>>>> 9a4eacb (.)
+=======
+=======
+>>>>>>> 10ef3f7 (.)
                 'errorCode' => $exception->getStatusCode()
             ];
         }
     }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1112,3 +1156,6 @@ class GetFileInfoAction extends BaseS3Action
 >>>>>>> fa051fc (.)
 =======
 >>>>>>> 22b1256 (.)
+=======
+>>>>>>> 0a466ed (.)
+>>>>>>> 10ef3f7 (.)
