@@ -6,14 +6,18 @@ namespace Modules\Media\Filament\Resources\MediaResource\Pages;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 446bc61 (.)
+=======
+>>>>>>> 36d5713 (.)
 use Filament\Schemas\Components\Actions;
 use Filament\Schemas\Components\Section;
 use Filament\Schemas\Components\Component;
 use Override;
 use Filament\Schemas\Components\Grid;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 5200b63 (.)
 =======
@@ -25,6 +29,8 @@ use Filament\Schemas\Components\Section;
 use Filament\Schemas\Components\Actions;
 >>>>>>> 1999eb3 (.)
 >>>>>>> 446bc61 (.)
+=======
+>>>>>>> 36d5713 (.)
 use Filament\Actions\Action;
 use Filament\Actions\DeleteAction;
 use Filament\Infolists\Components\ImageEntry;
@@ -58,11 +64,7 @@ class ViewMedia extends XotBaseViewRecord
     /**
      * Restituisce lo schema dell'infolist per la visualizzazione dei dettagli del record.
      *
-<<<<<<< HEAD
      * @return array<int, Component>
-=======
-     * @return array<string, Component>
->>>>>>> 1999eb3 (.)
      */
     #[Override]
     public function getInfolistSchema(): array
@@ -138,14 +140,14 @@ class ViewMedia extends XotBaseViewRecord
                 ]),
             ]),
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 5200b63 (.)
 =======
 <<<<<<< HEAD
 >>>>>>> 446bc61 (.)
-            RepeatableEntry::make('entry_conversions')
 =======
-            'entry_conversions' => RepeatableEntry::make('entry_conversions')
->>>>>>> 1999eb3 (.)
+>>>>>>> 36d5713 (.)
+            RepeatableEntry::make('entry_conversions')
                 ->schema([
                     TextEntry::make('name'),
                     TextEntry::make('src'),

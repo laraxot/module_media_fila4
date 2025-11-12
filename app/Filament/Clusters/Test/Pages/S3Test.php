@@ -6,6 +6,7 @@ namespace Modules\Media\Filament\Clusters\Test\Pages;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Aws\Exception\AwsException;
 use Aws\S3\S3Client;
 use Aws\Sts\StsClient;
@@ -13,10 +14,9 @@ use Exception;
 =======
 =======
 >>>>>>> 446bc61 (.)
-use Filament\Schemas\Components\Grid;
 =======
-use Filament\Schemas\Schema;
->>>>>>> 1999eb3 (.)
+>>>>>>> 36d5713 (.)
+use Filament\Schemas\Components\Grid;
 use Filament\Schemas\Components\Component;
 use Filament\Schemas\Schema;
 use Override;
@@ -59,10 +59,6 @@ use function Safe\unlink;
 /**
  * S3Test Page for AWS S3 testing and diagnostics.
  *
-<<<<<<< HEAD
-=======
- * @property Schema $form
->>>>>>> 1999eb3 (.)
  * @property array<string, mixed> $debugResults
 <<<<<<< HEAD
  *
