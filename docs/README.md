@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 📁 **Media Module** - Sistema Avanzato Gestione File Multimediali
 
 [![Laravel 12.x](https://img.shields.io/badge/Laravel-12.x-red.svg)](https://laravel.com/)
@@ -483,3 +484,5 @@ ffmpeg -codecs
 **🚀 Performance**: 95/100 score  
 **🔧 S3Test Corrections**: Completate ✅
 
+=======
+>>>>>>> 8cdc78f (.)

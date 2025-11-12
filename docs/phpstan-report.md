@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Report PHPStan - Modulo Media
 
 ## Stato Attuale
@@ -92,3 +93,5 @@ L'analisi PHPStan di livello 1 non ha rilevato errori nel modulo Media. Questo Ã
 
 ---
 
+=======
+>>>>>>> 8cdc78f (.)
