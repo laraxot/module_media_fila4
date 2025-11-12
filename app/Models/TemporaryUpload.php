@@ -57,7 +57,7 @@ use Webmozart\Assert\Assert;
  *
  * @mixin \Eloquent
  */
-class TemporaryUpload extends BaseModel implements HasMedia
+class TemporaryUpload extends Model implements HasMedia
 {
     use \Modules\Xot\Models\Traits\HasXotFactory;
     use InteractsWithMedia;
