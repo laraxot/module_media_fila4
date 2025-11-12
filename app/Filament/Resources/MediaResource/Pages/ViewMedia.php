@@ -15,6 +15,7 @@ namespace Modules\Media\Filament\Resources\MediaResource\Pages;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 446bc61 (.)
@@ -36,11 +37,14 @@ namespace Modules\Media\Filament\Resources\MediaResource\Pages;
 >>>>>>> 517d97d (.)
 =======
 >>>>>>> 21f8a63 (.)
+=======
+>>>>>>> c3b81ef (.)
 use Filament\Schemas\Components\Actions;
 use Filament\Schemas\Components\Section;
 use Filament\Schemas\Components\Component;
 use Override;
 use Filament\Schemas\Components\Grid;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -62,11 +66,14 @@ use Filament\Schemas\Components\Grid;
 =======
 >>>>>>> 517d97d (.)
 =======
+>>>>>>> c3b81ef (.)
+=======
 use Filament\Schemas\Components\Component;
 use Override;
 use Filament\Schemas\Components\Flex;
 use Filament\Schemas\Components\Section;
 use Filament\Schemas\Components\Actions;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -95,6 +102,9 @@ use Filament\Schemas\Components\Actions;
 >>>>>>> 517d97d (.)
 =======
 >>>>>>> 21f8a63 (.)
+=======
+>>>>>>> 739e4b7 (.)
+>>>>>>> c3b81ef (.)
 use Filament\Actions\Action;
 use Filament\Actions\DeleteAction;
 use Filament\Infolists\Components\ImageEntry;
@@ -128,14 +138,20 @@ class ViewMedia extends XotBaseViewRecord
     /**
      * Restituisce lo schema dell'infolist per la visualizzazione dei dettagli del record.
      *
+<<<<<<< HEAD
      * @return array<int, Component>
+=======
+     * @return array<string, Component>
+>>>>>>> 739e4b7 (.)
      */
     #[Override]
     public function getInfolistSchema(): array
     {
         return [
+<<<<<<< HEAD
             Grid::make(2)
                 ->schema([
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -191,6 +207,11 @@ class ViewMedia extends XotBaseViewRecord
 >>>>>>> 76e8f34 (.)
 =======
 >>>>>>> 71435ff (.)
+=======
+=======
+            'media_viewer' => Flex::make([
+>>>>>>> 739e4b7 (.)
+>>>>>>> c3b81ef (.)
                 Section::make()->schema([
                     ImageEntry::make('url')
                         ->defaultImageUrl(fn($record) => $record->getUrl())
@@ -231,6 +252,7 @@ class ViewMedia extends XotBaseViewRecord
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 5200b63 (.)
 =======
 <<<<<<< HEAD
@@ -253,7 +275,12 @@ class ViewMedia extends XotBaseViewRecord
 >>>>>>> 517d97d (.)
 =======
 >>>>>>> 21f8a63 (.)
+=======
+>>>>>>> c3b81ef (.)
             RepeatableEntry::make('entry_conversions')
+=======
+            'entry_conversions' => RepeatableEntry::make('entry_conversions')
+>>>>>>> 739e4b7 (.)
                 ->schema([
                     TextEntry::make('name'),
                     TextEntry::make('src'),
