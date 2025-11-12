@@ -22,6 +22,14 @@ class VideoPlayer extends Component
      *
      * @return void
      */
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> b93ef594b4 (.)
+>>>>>>> e9b0959 (.)
     public function __construct(
         public string $mp4Src,
         public int $currentTime,
@@ -33,8 +41,10 @@ class VideoPlayer extends Component
 =======
         null|string $driver = null,
     ) {
+<<<<<<< HEAD
         $xot = XotData::make();
         Assert::string($driver ??= $xot->video_player, __FILE__ . ':' . __LINE__ . ' - ' . class_basename(__CLASS__));
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -43,10 +53,20 @@ class VideoPlayer extends Component
 =======
 >>>>>>> 98c37f4 (.)
 =======
+=======
+=======
+<<<<<<< HEAD
+        $xot = XotData::make();
+        Assert::string($driver ??= $xot->video_player, __FILE__ . ':' . __LINE__ . ' - ' . class_basename(__CLASS__));
+=======
+=======
+>>>>>>> origin/develop
+>>>>>>> 47a54fe (.)
     public function __construct(public string $mp4Src, public int $currentTime, ?string $driver = null)
     {
         $xot = XotData::make();
         Assert::string($driver ??= $xot->video_player);
+<<<<<<< HEAD
 >>>>>>> 0a466ed (.)
 <<<<<<< HEAD
 >>>>>>> 06bb10d (.)
@@ -56,6 +76,17 @@ class VideoPlayer extends Component
 >>>>>>> 98c37f4 (.)
 =======
 >>>>>>> a80d398 (.)
+=======
+<<<<<<< HEAD
+>>>>>>> a12f125f4a (.)
+=======
+        $xot = XotData::make();
+        Assert::string($driver ??= $xot->video_player, __FILE__ . ':' . __LINE__ . ' - ' . class_basename(__CLASS__));
+>>>>>>> b93ef594b4 (.)
+=======
+>>>>>>> origin/develop
+>>>>>>> e9b0959 (.)
+>>>>>>> 47a54fe (.)
 
         $this->driver = $driver;
     }

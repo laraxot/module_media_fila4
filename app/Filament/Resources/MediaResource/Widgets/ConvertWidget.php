@@ -4,7 +4,14 @@ declare(strict_types=1);
 
 namespace Modules\Media\Filament\Resources\MediaResource\Widgets;
 
+<<<<<<< HEAD
 use FFMpeg\Format\Video\WebM;
+=======
+<<<<<<< HEAD
+use FFMpeg\Format\Video\WebM;
+=======
+>>>>>>> origin/develop
+>>>>>>> e9b0959 (.)
 use Filament\Notifications\Notification;
 use Filament\Widgets\Widget;
 use Illuminate\Support\Facades\Storage;
@@ -29,7 +36,15 @@ class ConvertWidget extends Widget
     /** @var float */
     public $rate;
 
+<<<<<<< HEAD
     protected string $view = 'media::filament.widgets.convert';
+=======
+<<<<<<< HEAD
+    protected string $view = 'media::filament.widgets.convert';
+=======
+    protected static string $view = 'media::filament.widgets.convert';
+>>>>>>> origin/develop
+>>>>>>> e9b0959 (.)
 
     protected static string $resource = MediaResource::class;
 
@@ -47,6 +62,7 @@ class ConvertWidget extends Widget
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         $format = new WebM;
         $extension = mb_strtolower(class_basename($format));
         $file_new = Str::of($file_mp4)->replaceLast('.mp4', '.'.$extension)->toString();
@@ -58,23 +74,44 @@ class ConvertWidget extends Widget
 =======
 =======
 >>>>>>> 98c37f4 (.)
+=======
+        $format = new WebM();
+        $extension = mb_strtolower(class_basename($format));
+        $file_new = Str::of($file_mp4)->replaceLast('.mp4', '.' . $extension)->toString();
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 47a54fe (.)
         $format = new WebM();
         $extension = mb_strtolower(class_basename($format));
         $file_new = Str::of($file_mp4)->replaceLast('.mp4', '.' . $extension)->toString();
 =======
         $format = new WebM;
+<<<<<<< HEAD
+=======
+=======
+        $format = new \FFMpeg\Format\Video\WebM;
+>>>>>>> origin/develop
+>>>>>>> 47a54fe (.)
         $extension = mb_strtolower(class_basename($format));
         $file_new = Str::of($file_mp4)
             ->replaceLast('.mp4', '.'.$extension)
             ->toString();
+<<<<<<< HEAD
 >>>>>>> 0a466ed (.)
 <<<<<<< HEAD
 >>>>>>> 06bb10d (.)
 =======
 =======
+<<<<<<< HEAD
+>>>>>>> a12f125f4a (.)
+>>>>>>> 47a54fe (.)
+=======
         $format = new WebM();
         $extension = mb_strtolower(class_basename($format));
         $file_new = Str::of($file_mp4)->replaceLast('.mp4', '.' . $extension)->toString();
+<<<<<<< HEAD
 >>>>>>> 37a2da6 (.)
 >>>>>>> 98c37f4 (.)
 =======
@@ -82,6 +119,12 @@ class ConvertWidget extends Widget
         $extension = mb_strtolower(class_basename($format));
         $file_new = Str::of($file_mp4)->replaceLast('.mp4', '.' . $extension)->toString();
 >>>>>>> a80d398 (.)
+=======
+>>>>>>> b93ef594b4 (.)
+=======
+>>>>>>> origin/develop
+>>>>>>> e9b0959 (.)
+>>>>>>> 47a54fe (.)
 
         /*
          * -preset ultrafast.
@@ -159,11 +202,13 @@ class ConvertWidget extends Widget
             // Pause for 1 second between numbers...
             // sleep(1);
 
+<<<<<<< HEAD
             $this->start =
 <<<<<<< HEAD
                 "{$this->percentage}% transcoded".PHP_EOL."{$this->remaining} seconds left at rate: {$this->rate}";
 =======
                 "{$this->percentage}% transcoded" . PHP_EOL . "{$this->remaining} seconds left at rate: {$this->rate}";
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 5200b63 (.)
@@ -181,6 +226,25 @@ class ConvertWidget extends Widget
 >>>>>>> 98c37f4 (.)
 =======
 >>>>>>> a80d398 (.)
+=======
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+            $this->start =
+                "{$this->percentage}% transcoded" . PHP_EOL . "{$this->remaining} seconds left at rate: {$this->rate}";
+=======
+            $this->start = "{$this->percentage}% transcoded".PHP_EOL."{$this->remaining} seconds left at rate: {$this->rate}";
+>>>>>>> a12f125f4a (.)
+=======
+            $this->start =
+                "{$this->percentage}% transcoded" . PHP_EOL . "{$this->remaining} seconds left at rate: {$this->rate}";
+>>>>>>> b93ef594b4 (.)
+=======
+            $this->start = "{$this->percentage}% transcoded".PHP_EOL."{$this->remaining} seconds left at rate: {$this->rate}";
+>>>>>>> origin/develop
+>>>>>>> e9b0959 (.)
+>>>>>>> 47a54fe (.)
 
             // Decrement the counter...
             // $this->start = $this->start - 1;

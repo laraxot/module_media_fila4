@@ -21,6 +21,7 @@ class PowerPoint extends ImageGenerator
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function convert(string $file, ?Conversion $_conversion = null): string
 =======
     public function convert(string $file, null|Conversion $_conversion = null): string
@@ -42,6 +43,24 @@ class PowerPoint extends ImageGenerator
 =======
     public function convert(string $file, null|Conversion $_conversion = null): string
 >>>>>>> a80d398 (.)
+=======
+    public function convert(string $file, null|Conversion $_conversion = null): string
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    public function convert(string $file, null|Conversion $_conversion = null): string
+=======
+    public function convert(string $file, ?Conversion $conversion = null): string
+>>>>>>> a12f125f4a (.)
+=======
+    public function convert(string $file, null|Conversion $_conversion = null): string
+>>>>>>> b93ef594b4 (.)
+=======
+    public function convert(string $file, ?Conversion $conversion = null): string
+>>>>>>> origin/develop
+>>>>>>> e9b0959 (.)
+>>>>>>> 47a54fe (.)
     {
         // Here you should convert the file to an image and return generated conversion path.
         // EXAMPLE
@@ -49,6 +68,7 @@ class PowerPoint extends ImageGenerator
         // EXAMPLE
         // \PowerPoint::convertFileToImage($file)->store($pathToImageFile);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -74,6 +94,24 @@ class PowerPoint extends ImageGenerator
 =======
         return pathinfo($file, PATHINFO_DIRNAME) . '/' . pathinfo($file, PATHINFO_FILENAME) . '.jpg';
 >>>>>>> a80d398 (.)
+=======
+        return pathinfo($file, PATHINFO_DIRNAME) . '/' . pathinfo($file, PATHINFO_FILENAME) . '.jpg';
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+        return pathinfo($file, PATHINFO_DIRNAME) . '/' . pathinfo($file, PATHINFO_FILENAME) . '.jpg';
+=======
+        return pathinfo($file, PATHINFO_DIRNAME).'/'.pathinfo($file, PATHINFO_FILENAME).'.jpg';
+>>>>>>> a12f125f4a (.)
+=======
+        return pathinfo($file, PATHINFO_DIRNAME) . '/' . pathinfo($file, PATHINFO_FILENAME) . '.jpg';
+>>>>>>> b93ef594b4 (.)
+=======
+        return pathinfo($file, PATHINFO_DIRNAME).'/'.pathinfo($file, PATHINFO_FILENAME).'.jpg';
+>>>>>>> origin/develop
+>>>>>>> e9b0959 (.)
+>>>>>>> 47a54fe (.)
     }
 
     public function requirementsAreInstalled(): bool

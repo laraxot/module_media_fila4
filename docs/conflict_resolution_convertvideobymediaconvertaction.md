@@ -74,12 +74,18 @@ FFMpeg::fromDisk($data->disk)
 - [PHPStan Fixes Documentation](phpstan_fixes.md)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 47a54fe (.)
 - [Root Conflict Resolution Guidelines](../../../docs/conflict-resolution-guidelines.md)
 =======
 - [Root Conflict Resolution Guidelines](../../../project_docs/conflict-resolution-guidelines.md)
 >>>>>>> e9b0959 (.)
+<<<<<<< HEAD
 =======
 - [Root Conflict Resolution Guidelines](../../../docs/conflict-resolution-guidelines.md)
 >>>>>>> 0caa3cf (.)
+=======
+>>>>>>> 47a54fe (.)
 
 *Ultimo aggiornamento: giugno 2025*

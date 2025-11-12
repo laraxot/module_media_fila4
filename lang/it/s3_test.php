@@ -8,11 +8,15 @@ return [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 47a54fe (.)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> e9b0959 (.)
+<<<<<<< HEAD
 =======
 >>>>>>> 5200b63 (.)
 =======
@@ -23,6 +27,8 @@ return [
 >>>>>>> 98c37f4 (.)
 =======
 >>>>>>> a80d398 (.)
+=======
+>>>>>>> 47a54fe (.)
     'navigation' => [
         'group' => 'Media',
     ],
@@ -77,15 +83,21 @@ return [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 98c37f4 (.)
+=======
+>>>>>>> 47a54fe (.)
 =======
 =======
 =======
 >>>>>>> origin/develop
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 06bb10d (.)
+=======
+>>>>>>> 47a54fe (.)
   'navigation' => [
     'group' => 'Media',
   ],
@@ -97,6 +109,9 @@ return [
       'helper_text' => 'Informazioni di debug per la connessione S3',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 47a54fe (.)
 =======
     'navigation' => [
         'group' => 'Media',
@@ -150,8 +165,11 @@ return [
     ],
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 =======
 >>>>>>> 06bb10d (.)
+=======
+>>>>>>> 47a54fe (.)
     ],
     'attachment' => [
       'label' => 'Allegato',
@@ -165,9 +183,13 @@ return [
       'label' => 'Invia Email',
     ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/develop
 =======
 >>>>>>> 06bb10d (.)
+=======
+>>>>>>> origin/develop
+>>>>>>> 47a54fe (.)
     'clearResults' => [
       'label' => 'Cancella Risultati',
     ],
@@ -198,12 +220,16 @@ return [
   ],
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 47a54fe (.)
 >>>>>>> a12f125f4a (.)
 =======
 >>>>>>> b93ef594b4 (.)
 =======
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
+<<<<<<< HEAD
 =======
 >>>>>>> 5200b63 (.)
 =======
@@ -216,4 +242,6 @@ return [
 >>>>>>> 98c37f4 (.)
 =======
 >>>>>>> a80d398 (.)
+=======
+>>>>>>> 47a54fe (.)
 ];
