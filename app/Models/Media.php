@@ -702,12 +702,15 @@ class Media extends SpatieMedia
 {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     use \Modules\Xot\Models\Traits\HasXotFactory;
 =======
     use HasFactory;
 >>>>>>> 5200b63 (.)
 =======
     /** @use HasFactory<ModulesMediaDatabaseFactoriesMediaFactory> */
+=======
+>>>>>>> 1b9d086 (.)
     use \Modules\Xot\Models\Traits\HasXotFactory;
 >>>>>>> 13d1d7e (.)
     use Updater;

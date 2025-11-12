@@ -222,7 +222,6 @@ class TemporaryUpload extends BaseModel implements HasMedia
  */
 class TemporaryUpload extends Model implements HasMedia
 {
-    /** @use HasFactory<ModulesMediaDatabaseFactoriesTemporaryUploadFactory> */
     use \Modules\Xot\Models\Traits\HasXotFactory;
     use InteractsWithMedia;
     use MassPrunable;

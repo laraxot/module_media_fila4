@@ -1,6 +1,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 1b9d086 (.)
 # 🎯 MEDIA MODULE - ROADMAP 2025
 
 **Modulo**: Media ([Description])  
@@ -217,6 +220,7 @@ Media Module
 ---
 
 *Questa roadmap è specifica per il modulo Media e viene aggiornata regolarmente in base ai progressi e alle nuove esigenze.*
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 9ffe7a9 (.)
@@ -333,3 +337,5 @@ Overall Module Completion: 60%
 >>>>>>> 9ffe7a9 (.)
 =======
 >>>>>>> 446a02b (.)
+=======
+>>>>>>> 1b9d086 (.)
