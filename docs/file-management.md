@@ -38,6 +38,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 3f50d25 (.)
@@ -116,6 +117,8 @@ Questo documento descrive le best practice per la gestione dei file in , inclusi
 >>>>>>> 71fafa8 (.)
 =======
 >>>>>>> d44d947 (.)
+=======
+>>>>>>> 71b97ae (.)
 # Gestione dei File in SaluteOra
 
 ## Panoramica
@@ -168,6 +171,7 @@ SaluteOra utilizza una struttura organizzata per l'archiviazione dei file:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 Per i form amministrativi,  utilizza il componente `FileUpload` di Filament:
 >>>>>>> 7df6a71 (.)
@@ -228,6 +232,8 @@ Per i form amministrativi,  utilizza il componente `FileUpload` di Filament:
 =======
 Per i form amministrativi,  utilizza il componente `FileUpload` di Filament:
 >>>>>>> d44d947 (.)
+=======
+>>>>>>> 71b97ae (.)
 Per i form amministrativi, SaluteOra utilizza il componente `FileUpload` di Filament:
 
 ```php
@@ -240,6 +246,7 @@ FileUpload::make('certifications')
     ->maxSize(5120) // 5MB
 ```
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -309,10 +316,13 @@ FileUpload::make('certifications')
 >>>>>>> cec545b (.)
 =======
 >>>>>>> 71fafa8 (.)
+=======
+>>>>>>> 71b97ae (.)
 Per una documentazione dettagliata sull'utilizzo di `FileUpload`, consulta la [Gestione dei File Upload in Filament](/docs/filament-file-uploads.md).
 
 ### Utilizzo di Livewire
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -360,6 +370,8 @@ Per i form frontend,  utilizza Livewire:
 >>>>>>> 77b6d88 (.)
 =======
 >>>>>>> d44d947 (.)
+=======
+>>>>>>> 71b97ae (.)
 Per i form frontend, SaluteOra utilizza Livewire:
 
 ```php
@@ -425,6 +437,7 @@ Schema::table('users', function (Blueprint $table) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 Per una documentazione dettagliata sulla mappatura dei campi, consulta la [Mappatura dei Campi Database nel Modulo Patient](/laravel/Modules/Patient/docs/DATABASE_FIELD_MAPPING.md).
 =======
 Per una documentazione dettagliata sulla mappatura dei campi, consulta la Mappatura dei Campi Database nel Modulo Patient (da creare se necessario).
@@ -531,6 +544,9 @@ Per una documentazione dettagliata sulla mappatura dei campi, consulta la [Mappa
 =======
 Per una documentazione dettagliata sulla mappatura dei campi, consulta la Mappatura dei Campi Database nel Modulo Patient (da creare se necessario).
 >>>>>>> d44d947 (.)
+=======
+Per una documentazione dettagliata sulla mappatura dei campi, consulta la [Mappatura dei Campi Database nel Modulo Patient](/laravel/Modules/Patient/docs/DATABASE_FIELD_MAPPING.md).
+>>>>>>> 71b97ae (.)
 
 ## Accesso ai File
 
@@ -571,6 +587,7 @@ $url = Storage::url($path);
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
  implementa un sistema di controllo degli accessi per i file sensibili:
 >>>>>>> 7df6a71 (.)
@@ -631,6 +648,8 @@ $url = Storage::url($path);
 =======
  implementa un sistema di controllo degli accessi per i file sensibili:
 >>>>>>> d44d947 (.)
+=======
+>>>>>>> 71b97ae (.)
 SaluteOra implementa un sistema di controllo degli accessi per i file sensibili:
 
 ```php
@@ -719,6 +738,7 @@ protected static function booted()
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 0caa3cf (.)
 =======
@@ -761,11 +781,14 @@ protected static function booted()
 >>>>>>> cec545b (.)
 =======
 >>>>>>> 71fafa8 (.)
+=======
+>>>>>>> 71b97ae (.)
 - [Gestione dei File Upload in Filament](/docs/filament-file-uploads.md)
 - [Mappatura dei Campi Database nel Modulo Patient](/laravel/Modules/Patient/docs/DATABASE_FIELD_MAPPING.md)
 - [Migrazioni del Database](/docs/database-migrations.md)
 - [Gestione degli Utenti](/docs/user-management.md)
 - [Pattern di Ereditarietà dei Modelli](/docs/model-inheritance-patterns.md)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -925,3 +948,5 @@ protected static function booted()
 >>>>>>> d44d947 (.)
 =======
 >>>>>>> e398f47 (.)
+=======
+>>>>>>> 71b97ae (.)
