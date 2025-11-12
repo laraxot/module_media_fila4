@@ -232,6 +232,7 @@ use Webmozart\Assert\Assert;
  * @mixin \Eloquent
  */
 class TemporaryUpload extends BaseModel implements HasMedia
+<<<<<<< HEAD
 {
     use \Modules\Xot\Models\Traits\HasXotFactory;
     use InteractsWithMedia;
@@ -258,6 +259,8 @@ class TemporaryUpload extends BaseModel implements HasMedia
  * @mixin \Eloquent
  */
 class TemporaryUpload extends Model implements HasMedia
+=======
+>>>>>>> 87f7ab2 (.)
 {
     use \Modules\Xot\Models\Traits\HasXotFactory;
     use InteractsWithMedia;
