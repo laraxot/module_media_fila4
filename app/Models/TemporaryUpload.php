@@ -7,7 +7,6 @@ namespace Modules\Media\Models;
 use Closure;
 use Exception;
 use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\MassPrunable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\UploadedFile;
@@ -59,11 +58,9 @@ use Webmozart\Assert\Assert;
  */
 class TemporaryUpload extends Model implements HasMedia
 {
-    use \Modules\Xot\Models\Traits\HasXotFactory;
     use InteractsWithMedia;
     use MassPrunable;
-
-   
+    use \Modules\Xot\Models\Traits\HasXotFactory;
 
     public static ?Closure $manipulatePreview = null;
 
