@@ -8,7 +8,6 @@ use Closure;
 use Exception;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\MassPrunable;
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Carbon;
 use Modules\Media\Database\Factories\TemporaryUploadFactory;
@@ -56,7 +55,7 @@ use Webmozart\Assert\Assert;
  *
  * @mixin \Eloquent
  */
-class TemporaryUpload extends Model implements HasMedia
+class TemporaryUpload extends BaseModel implements HasMedia
 {
     use InteractsWithMedia;
     use MassPrunable;
