@@ -9,7 +9,6 @@ use Filament\Actions\DeleteAction;
 use Filament\Infolists\Components\ImageEntry;
 use Filament\Infolists\Components\RepeatableEntry;
 use Filament\Infolists\Components\TextEntry;
-use Filament\Infolists\Infolist;
 use Filament\Schemas\Components\Actions;
 use Filament\Schemas\Components\Component;
 use Filament\Schemas\Components\Grid;
@@ -83,7 +82,7 @@ class ViewMedia extends XotBaseViewRecord
     }
 
     /**
-     * @return DeleteAction[]
+     * @return array<DeleteAction>
      *
      * @psalm-return list{DeleteAction}
      */

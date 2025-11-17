@@ -219,7 +219,7 @@ class TemporaryUpload extends Model implements HasMedia
         if (\is_string($res)) {
             return $res;
         }
-        throw new Exception('['.__LINE__.']['.class_basename(__CLASS__).']');
+        throw new Exception('['.__LINE__.']['.class_basename(self::class).']');
     }
 
     // public function prunable(): Builder
@@ -229,11 +229,10 @@ class TemporaryUpload extends Model implements HasMedia
 
     protected function getPreviewManipulation(): Closure
     {
-        return
-            static::$manipulatePreview ?? function (Conversion $conversion): void {
-                $conversion->fit(Fit::Crop, 300, 300);
+        return static::$manipulatePreview ?? function (Conversion $conversion): void {
+            $conversion->fit(Fit::Crop, 300, 300);
 
-                // $conversion->fit('crop', 300, 300);
-            };
+            // $conversion->fit('crop', 300, 300);
+        };
     }
 }

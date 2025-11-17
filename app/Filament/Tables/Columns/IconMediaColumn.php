@@ -6,7 +6,6 @@ namespace Modules\Media\Filament\Tables\Columns;
 
 use Filament\Tables\Columns\IconColumn;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
 
 class IconMediaColumn extends IconColumn
 {
