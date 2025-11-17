@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Modules\Media\Actions;
 
 use Filament\Forms\Components\FileUpload;
+use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
 use Filament\Schemas\Components\Utilities\Set;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Config;

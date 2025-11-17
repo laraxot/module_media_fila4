@@ -6,6 +6,8 @@ namespace Modules\Media\Filament\Tables\Columns;
 
 use Filament\Tables\Columns\IconColumn;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+use Modules\Media\Actions\CloudFront\GetCloudFrontSignedUrlAction;
 
 class IconMediaColumn extends IconColumn
 {
@@ -15,28 +17,25 @@ class IconMediaColumn extends IconColumn
         $attachment = $this->getName();
 
         $this->default(function ($record) use ($attachment) {
-            if (is_object($record) && method_exists($record, 'getFirstMedia')) {
-                return $record->getFirstMedia($attachment);
-            }
-
-            return null;
-        })
+                if (is_object($record) && method_exists($record, 'getFirstMedia')) {
+                    return $record->getFirstMedia($attachment);
+                }
+                return null;
+            })
             ->icon('heroicon-o-document-text')
             ->color(function ($record) use ($attachment): string {
                 if (is_object($record) && method_exists($record, 'getFirstMedia')) {
                     return $record->getFirstMedia($attachment) ? 'success' : 'danger';
                 }
-
                 return 'danger';
             })
             ->tooltip(function ($record) use ($attachment): string {
                 if (is_object($record) && method_exists($record, 'getFirstMedia')) {
                     $media = $record->getFirstMedia($attachment);
-                    if (is_object($media) && isset($media->file_name) && is_string($media->file_name)) {
+                    if (is_object($media) && property_exists($media, 'file_name') && is_string($media->file_name)) {
                         return $media->file_name;
                     }
                 }
-
                 return 'Documento non caricato';
             })
             ->action(function (array $arguments, Request $request) use ($attachment) {
@@ -44,14 +43,14 @@ class IconMediaColumn extends IconColumn
                 if (! isset($arguments['record'])) {
                     return null;
                 }
-
+                
                 $record = $arguments['record'];
-
+                
                 // Verify record is an object and has the required method
                 if (! is_object($record) || ! method_exists($record, 'getFirstMedia')) {
                     return null;
                 }
-
+                
                 /** @var \Spatie\MediaLibrary\MediaCollections\Models\Media|null $media */
                 $media = $record->getFirstMedia($attachment);
                 if ($media === null) {
