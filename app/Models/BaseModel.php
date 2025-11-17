@@ -4,18 +4,17 @@ declare(strict_types=1);
 
 namespace Modules\Media\Models;
 
-use Illuminate\Database\Eloquent\Factories\Factory;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
-use Modules\Xot\Actions\Factory\GetFactoryAction;
+use Illuminate\Database\Eloquent\SoftDeletes;
+use Modules\Xot\Models\XotBaseModel;
 use Modules\Xot\Traits\Updater;
 
 /**
  * Class BaseModel.
  */
-abstract class BaseModel extends Model
+abstract class BaseModel extends XotBaseModel
 {
     use \Modules\Xot\Models\Traits\HasXotFactory;
+    use SoftDeletes;
 
     // use Searchable;
     // //use Cachable;
@@ -57,8 +56,6 @@ abstract class BaseModel extends Model
     protected $hidden = [
         // 'password'
     ];
-
-    
 
     /** @return array<string, string> */
     protected function casts(): array

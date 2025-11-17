@@ -23,6 +23,7 @@ use Modules\Media\Actions\CloudFront\GetCloudFrontSignedUrlAction;
 use Modules\Media\Filament\Clusters\Test;
 use Modules\Xot\Filament\Pages\XotBasePage;
 use Override;
+use Webmozart\Assert\Assert;
 
 use function Safe\file_put_contents;
 use function Safe\json_decode;
@@ -234,7 +235,9 @@ class S3Test extends XotBasePage
     public function test01(): void
     {
         /** @phpstan-ignore-next-line */
-        $data = $this->form->getState();
+        $formState = $this->form->getState();
+        Assert::isArray($formState, 'Form state must be array');
+        $data = $formState;
         $filePath = $data['attachment'] ?? null;
 
         if (! $filePath) {
@@ -634,7 +637,9 @@ class S3Test extends XotBasePage
     {
         try {
             /** @phpstan-ignore-next-line */
-            $data = $this->form->getState();
+            $formState = $this->form->getState();
+            Assert::isArray($formState, 'Form state must be array');
+            $data = $formState;
             $filePath = $data['attachment'] ?? null;
 
             if (! $filePath) {
@@ -781,7 +786,9 @@ class S3Test extends XotBasePage
             $temporaryUrl = $s3Disk->temporaryUrl($filename, now()->addMinutes(5));
 
             /** @phpstan-ignore-next-line */
-            $data = $this->form->getState();
+            $formState = $this->form->getState();
+            Assert::isArray($formState, 'Form state must be array');
+            $data = $formState;
             $filePath = $data['attachment'] ?? null;
 
             $results = [
