@@ -7,9 +7,7 @@ namespace Modules\Media\Models;
 use Closure;
 use Exception;
 use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\MassPrunable;
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Carbon;
 use Modules\Media\Database\Factories\TemporaryUploadFactory;
@@ -57,13 +55,11 @@ use Webmozart\Assert\Assert;
  *
  * @mixin \Eloquent
  */
-class TemporaryUpload extends Model implements HasMedia
+class TemporaryUpload extends BaseModel implements HasMedia
 {
-    use \Modules\Xot\Models\Traits\HasXotFactory;
     use InteractsWithMedia;
     use MassPrunable;
-
-   
+    use \Modules\Xot\Models\Traits\HasXotFactory;
 
     public static ?Closure $manipulatePreview = null;
 
@@ -222,7 +218,7 @@ class TemporaryUpload extends Model implements HasMedia
         if (\is_string($res)) {
             return $res;
         }
-        throw new Exception('['.__LINE__.']['.class_basename(__CLASS__).']');
+        throw new Exception('['.__LINE__.']['.class_basename(self::class).']');
     }
 
     // public function prunable(): Builder
@@ -232,11 +228,10 @@ class TemporaryUpload extends Model implements HasMedia
 
     protected function getPreviewManipulation(): Closure
     {
-        return
-            static::$manipulatePreview ?? function (Conversion $conversion): void {
-                $conversion->fit(Fit::Crop, 300, 300);
+        return static::$manipulatePreview ?? function (Conversion $conversion): void {
+            $conversion->fit(Fit::Crop, 300, 300);
 
-                // $conversion->fit('crop', 300, 300);
-            };
+            // $conversion->fit('crop', 300, 300);
+        };
     }
 }
