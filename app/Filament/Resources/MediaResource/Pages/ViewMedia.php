@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Media\Filament\Resources\MediaResource\Pages;
 
+use Modules\Media\Models\Media;
 use Filament\Actions\Action;
 use Filament\Actions\DeleteAction;
 use Filament\Infolists\Components\ImageEntry;
@@ -38,13 +39,13 @@ class ViewMedia extends XotBaseViewRecord
                 ->schema([
                     Section::make()->schema([
                         ImageEntry::make('url')
-                            ->defaultImageUrl(fn (\Modules\Media\Models\Media $record) => $record->getUrl())
+                            ->defaultImageUrl(fn (Media $record) => $record->getUrl())
                             ->size(500)
-                            ->visible(fn (\Modules\Media\Models\Media $record): bool => $record->type === 'image'),
+                            ->visible(fn (Media $record): bool => $record->type === 'image'),
                         VideoEntry::make('url')
-                            ->defaultImageUrl(fn (\Modules\Media\Models\Media $record) => $record->getUrl())
+                            ->defaultImageUrl(fn (Media $record) => $record->getUrl())
                             ->size(500)
-                            ->visible(fn (\Modules\Media\Models\Media $record): bool => $record->type === 'video'),
+                            ->visible(fn (Media $record): bool => $record->type === 'video'),
                     ]),
                     Section::make()->schema([
                         Actions::make([
@@ -52,7 +53,7 @@ class ViewMedia extends XotBaseViewRecord
                                 ->tooltip('convert')
                                 ->icon('heroicon-o-scale')
                                 ->schema(MediaConvertResource::getFormSchema())
-                                ->action(function (\Modules\Media\Models\Media $record, array $data): void {
+                                ->action(function (Media $record, array $data): void {
                                     /** @var array<string, mixed> $actionData */
                                     $actionData = $data;
                                     $actionData['disk'] = (string) $record->disk;

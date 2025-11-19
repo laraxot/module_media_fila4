@@ -8,6 +8,7 @@ declare(strict_types=1);
 
 namespace Modules\Media\Models;
 
+use Modules\Xot\Models\Traits\HasXotFactory;
 use Eloquent;
 use Exception;
 use Illuminate\Database\Eloquent\Builder;
@@ -250,7 +251,7 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media as SpatieMedia;
  */
 class Media extends SpatieMedia
 {
-    use \Modules\Xot\Models\Traits\HasXotFactory;
+    use HasXotFactory;
     use Updater;
 
     /** @var string */

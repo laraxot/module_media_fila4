@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Media\Actions;
 
+use Webmozart\Assert\Assert;
 use Filament\Forms\Components\FileUpload;
 use Filament\Schemas\Components\Utilities\Set;
 use Illuminate\Support\Arr;
@@ -55,7 +56,7 @@ class GetAttachmentsSchemaAction
                     }
 
                     // Set expects Component|string, pass attachment as string
-                    \Webmozart\Assert\Assert::string($attachment, 'Attachment must be string');
+                    Assert::string($attachment, 'Attachment must be string');
                     $set($attachment, $sessionFiles);
                 });
         }
