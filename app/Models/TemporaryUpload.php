@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Media\Models;
 
+use Modules\Xot\Models\Traits\HasXotFactory;
 use Closure;
 use Exception;
 use Illuminate\Database\Eloquent\Builder;
@@ -59,7 +60,7 @@ class TemporaryUpload extends BaseModel implements HasMedia
 {
     use InteractsWithMedia;
     use MassPrunable;
-    use \Modules\Xot\Models\Traits\HasXotFactory;
+    use HasXotFactory;
 
     public static ?Closure $manipulatePreview = null;
 

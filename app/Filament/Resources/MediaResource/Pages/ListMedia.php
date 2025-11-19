@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Media\Filament\Resources\MediaResource\Pages;
 
+use RuntimeException;
 use Filament\Actions\Action;
 use Filament\Actions\ActionGroup;
 use Filament\Actions\DeleteAction;
@@ -83,7 +84,7 @@ class ListMedia extends XotBaseListRecords
                 ->action(static function ($record) {
                     // PHPStan Level 10: isset() per Eloquent magic property
                     if (! is_object($record) || ! method_exists($record, 'getPath') || ! isset($record->file_name)) {
-                        throw new \RuntimeException('Invalid record for download');
+                        throw new RuntimeException('Invalid record for download');
                     }
                     $filePath = $record->getPath();
                     Assert::string($filePath, 'getPath must return string');
