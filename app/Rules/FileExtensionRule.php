@@ -9,9 +9,6 @@ use Illuminate\Http\UploadedFile;
 
 use function in_array;
 
-/**
- * @implements Rule<string>
- */
 class FileExtensionRule implements Rule
 {
     protected array $validExtensions = [];
