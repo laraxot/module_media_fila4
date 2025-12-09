@@ -7,6 +7,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 =======
@@ -37,11 +38,14 @@
 =======
 >>>>>>> 37a2da6 (.)
 >>>>>>> 7ea0764 (.)
+=======
+>>>>>>> e0a46f3 (.)
 <?php
 
 declare(strict_types=1);
 
 ?>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -91,6 +95,8 @@ declare(strict_types=1);
 =======
 >>>>>>> 37a2da6 (.)
 >>>>>>> 7ea0764 (.)
+=======
+>>>>>>> e0a46f3 (.)
 <x-dynamic-component :component="$getEntryWrapperView()" :entry="$entry">
     @php
         $limit = $getLimit();
@@ -217,6 +223,7 @@ declare(strict_types=1);
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 06bb10d (.)
 =======
@@ -301,6 +308,11 @@ declare(strict_types=1);
 >>>>>>> 877e05f (.)
 =======
 >>>>>>> 7ea0764 (.)
+=======
+            <div class="fi-in-placeholder text-gray-400 dark:text-gray-500">
+                {{ $placeholder }}
+            </div>
+>>>>>>> e0a46f3 (.)
         @endif
     </div>
 </x-dynamic-component>

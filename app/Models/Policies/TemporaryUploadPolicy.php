@@ -14,6 +14,7 @@ use Modules\Media\Models\TemporaryUpload;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 use Modules\Xot\Contracts\UserContract;
@@ -72,6 +73,9 @@ use Modules\Xot\Contracts\ProfileContract;
 use Modules\Xot\Contracts\UserContract;
 >>>>>>> 37a2da6 (.)
 >>>>>>> 7ea0764 (.)
+=======
+use Modules\Xot\Contracts\UserContract;
+>>>>>>> e0a46f3 (.)
 
 class TemporaryUploadPolicy extends MediaBasePolicy
 {
@@ -87,6 +91,7 @@ class TemporaryUploadPolicy extends MediaBasePolicy
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 06bb10d (.)
 =======
@@ -171,11 +176,17 @@ class TemporaryUploadPolicy extends MediaBasePolicy
 >>>>>>> 877e05f (.)
 =======
 >>>>>>> 7ea0764 (.)
+=======
+    public function viewAny(UserContract $user): bool
+    {
+        return $user->hasPermissionTo('temporary_upload.viewAny');
+>>>>>>> e0a46f3 (.)
     }
 
     /**
      * Determine whether the user can view the model.
      */
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -269,11 +280,17 @@ class TemporaryUploadPolicy extends MediaBasePolicy
 >>>>>>> 877e05f (.)
 =======
 >>>>>>> 7ea0764 (.)
+=======
+    public function view(UserContract $user, TemporaryUpload $_temporary_upload): bool
+    {
+        return $user->hasPermissionTo('temporary_upload.view');
+>>>>>>> e0a46f3 (.)
     }
 
     /**
      * Determine whether the user can create models.
      */
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -367,11 +384,17 @@ class TemporaryUploadPolicy extends MediaBasePolicy
 >>>>>>> 877e05f (.)
 =======
 >>>>>>> 7ea0764 (.)
+=======
+    public function create(UserContract $user): bool
+    {
+        return $user->hasPermissionTo('temporary_upload.create');
+>>>>>>> e0a46f3 (.)
     }
 
     /**
      * Determine whether the user can update the model.
      */
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -465,11 +488,17 @@ class TemporaryUploadPolicy extends MediaBasePolicy
 >>>>>>> 877e05f (.)
 =======
 >>>>>>> 7ea0764 (.)
+=======
+    public function update(UserContract $user, TemporaryUpload $_temporary_upload): bool
+    {
+        return $user->hasPermissionTo('temporary_upload.update');
+>>>>>>> e0a46f3 (.)
     }
 
     /**
      * Determine whether the user can delete the model.
      */
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -563,11 +592,17 @@ class TemporaryUploadPolicy extends MediaBasePolicy
 >>>>>>> 877e05f (.)
 =======
 >>>>>>> 7ea0764 (.)
+=======
+    public function delete(UserContract $user, TemporaryUpload $_temporary_upload): bool
+    {
+        return $user->hasPermissionTo('temporary_upload.delete');
+>>>>>>> e0a46f3 (.)
     }
 
     /**
      * Determine whether the user can restore the model.
      */
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -661,11 +696,17 @@ class TemporaryUploadPolicy extends MediaBasePolicy
 >>>>>>> 877e05f (.)
 =======
 >>>>>>> 7ea0764 (.)
+=======
+    public function restore(UserContract $user, TemporaryUpload $_temporary_upload): bool
+    {
+        return $user->hasPermissionTo('temporary_upload.restore');
+>>>>>>> e0a46f3 (.)
     }
 
     /**
      * Determine whether the user can permanently delete the model.
      */
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -715,19 +756,11 @@ class TemporaryUploadPolicy extends MediaBasePolicy
 >>>>>>> 877e05f (.)
 =======
 >>>>>>> 7ea0764 (.)
+=======
+>>>>>>> e0a46f3 (.)
     public function forceDelete(UserContract $user, TemporaryUpload $temporary_upload): bool
     {
         return $user->hasPermissionTo('temporary_upload.forceDelete');
-=======
-    public function forceDelete(ProfileContract $user, TemporaryUpload $temporary_upload): bool
-    {
-        return $user->hasPermissionTo('temporary_upload.forceDelete'); /** @phpstan-ignore method.nonObject */
->>>>>>> 0a466ed (.)
-=======
-    public function forceDelete(UserContract $user, TemporaryUpload $temporary_upload): bool
-    {
-        return $user->hasPermissionTo('temporary_upload.forceDelete');
->>>>>>> 37a2da6 (.)
     }
 }
 <<<<<<< HEAD
