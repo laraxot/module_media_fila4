@@ -1,11 +1,11 @@
 <?php
 
-<<<<<<< HEAD
 declare(strict_types=1);
 
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -42,28 +42,12 @@ declare(strict_types=1);
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
 >>>>>>> 47a54fe (.)
+=======
+>>>>>>> f1c6d6e (.)
 return [
     'add_attachment' => [
         'title' => 'Anhänge',
         'label' => 'Anhang hochladen',
-<<<<<<< HEAD
         'fields' => [],
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        'fields' => [],
-=======
-        'fields' => [
-        ],
->>>>>>> a12f125f4a (.)
-=======
-        'fields' => [],
->>>>>>> b93ef594b4 (.)
-=======
-        'fields' => [
-        ],
->>>>>>> origin/develop
->>>>>>> e9b0959 (.)
     ],
 ];
