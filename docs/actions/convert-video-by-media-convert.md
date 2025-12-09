@@ -18,6 +18,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 3f50d25 (.)
 =======
@@ -34,6 +35,8 @@
 >>>>>>> f81fb2b (.)
 =======
 >>>>>>> 77b6d88 (.)
+=======
+>>>>>>> d44d947 (.)
 # ConvertVideoByMediaConvertAction
 
 ## Panoramica
@@ -108,6 +111,7 @@ $action = new ConvertVideoByMediaConvertAction();
 $convertedPath = $action->execute($data, $record);
 ```
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -254,3 +258,6 @@ $convertedPath = $action->execute($data, $record);
 >>>>>>> 71fafa8 (.)
 =======
 >>>>>>> f6ae653 (.)
+=======
+[Torna alla documentazione Media](../README.md) 
+>>>>>>> d44d947 (.)
