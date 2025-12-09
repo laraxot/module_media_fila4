@@ -4,6 +4,9 @@ declare(strict_types=1);
 
 return [
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 37a2da6 (.)
     'navigation' => [
         'group' => 'Media',
     ],
@@ -53,6 +56,7 @@ return [
             'label' => 'Test 01',
         ],
     ],
+<<<<<<< HEAD
 =======
   'navigation' => [
     'group' => 'Media',
@@ -104,4 +108,6 @@ return [
     ],
   ],
 >>>>>>> 0a466ed (.)
+=======
+>>>>>>> 37a2da6 (.)
 ];
