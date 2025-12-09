@@ -13,6 +13,7 @@ use Exception;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Modules\Media\Datas\ConvertData;
 use Modules\Media\Models\MediaConvert;
 use ProtoneMedia\LaravelFFMpeg\Support\FFMpeg;
@@ -22,34 +23,17 @@ use Spatie\QueueableAction\QueueableAction;
 >>>>>>> 06bb10d (.)
 =======
 >>>>>>> 98c37f4 (.)
-use FFMpeg\Format\Video\DefaultVideo;
 =======
->>>>>>> 0a466ed (.)
-=======
+>>>>>>> a80d398 (.)
 use FFMpeg\Format\Video\DefaultVideo;
->>>>>>> 37a2da6 (.)
 use Filament\Notifications\Notification;
 use Illuminate\Support\Facades\Storage;
 use Modules\Media\Datas\ConvertData;
 use Modules\Media\Models\MediaConvert;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 37a2da6 (.)
 use ProtoneMedia\LaravelFFMpeg\FFMpeg\FFMpegExporter;
 use ProtoneMedia\LaravelFFMpeg\MediaOpener;
 use ProtoneMedia\LaravelFFMpeg\Support\FFMpeg;
 use Spatie\QueueableAction\QueueableAction;
-<<<<<<< HEAD
-=======
-use ProtoneMedia\LaravelFFMpeg\Support\FFMpeg;
-use ProtoneMedia\LaravelFFMpeg\MediaOpener;
-use ProtoneMedia\LaravelFFMpeg\FFMpeg\FFMpegExporter;
-use Spatie\QueueableAction\QueueableAction;
-use FFMpeg\Format\Video\DefaultVideo;
->>>>>>> 0a466ed (.)
-=======
->>>>>>> 37a2da6 (.)
 use Webmozart\Assert\Assert;
 >>>>>>> 5200b63 (.)
 
