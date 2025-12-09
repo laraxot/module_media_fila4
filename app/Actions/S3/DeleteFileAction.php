@@ -42,6 +42,7 @@ class DeleteFileAction extends BaseS3Action
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 =======
@@ -82,10 +83,13 @@ class DeleteFileAction extends BaseS3Action
 >>>>>>> 89eb716 (.)
 =======
 >>>>>>> 760b37c (.)
+=======
+>>>>>>> 91c1d65 (.)
                 'Key' => $key,
 =======
                 'Key'    => $key,
 >>>>>>> 0a466ed (.)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -170,6 +174,11 @@ class DeleteFileAction extends BaseS3Action
                 'Key'    => $key,
 >>>>>>> 0a466ed (.)
 >>>>>>> 10ef3f7 (.)
+=======
+=======
+                'Key' => $key,
+>>>>>>> 37a2da6 (.)
+>>>>>>> 91c1d65 (.)
             ]);
 
             $this->logger->info('File deleted successfully from S3', [
@@ -198,6 +207,7 @@ class DeleteFileAction extends BaseS3Action
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 =======
@@ -238,10 +248,13 @@ class DeleteFileAction extends BaseS3Action
 >>>>>>> 89eb716 (.)
 =======
 >>>>>>> 760b37c (.)
+=======
+>>>>>>> 91c1d65 (.)
                 'deleteMarker' => $result['DeleteMarker'] ?? false,
 =======
                 'deleteMarker' => $result['DeleteMarker'] ?? false
 >>>>>>> 0a466ed (.)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -326,6 +339,11 @@ class DeleteFileAction extends BaseS3Action
                 'deleteMarker' => $result['DeleteMarker'] ?? false
 >>>>>>> 0a466ed (.)
 >>>>>>> 10ef3f7 (.)
+=======
+=======
+                'deleteMarker' => $result['DeleteMarker'] ?? false,
+>>>>>>> 37a2da6 (.)
+>>>>>>> 91c1d65 (.)
             ]);
 
             return [
@@ -356,6 +374,7 @@ class DeleteFileAction extends BaseS3Action
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 =======
@@ -385,6 +404,8 @@ class DeleteFileAction extends BaseS3Action
 >>>>>>> 760b37c (.)
 =======
 >>>>>>> 9a4eacb (.)
+=======
+>>>>>>> 91c1d65 (.)
                 'versionId' => $result['VersionId'] ?? null,
             ];
 =======
@@ -448,6 +469,7 @@ class DeleteFileAction extends BaseS3Action
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 06bb10d (.)
 =======
 =======
@@ -457,9 +479,12 @@ class DeleteFileAction extends BaseS3Action
 =======
 >>>>>>> 760b37c (.)
 =======
+>>>>>>> 91c1d65 (.)
+=======
                 'versionId' => $result['VersionId'] ?? null,
             ];
 >>>>>>> 37a2da6 (.)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -522,6 +547,8 @@ class DeleteFileAction extends BaseS3Action
 >>>>>>> 22b1256 (.)
 =======
 >>>>>>> 10ef3f7 (.)
+=======
+>>>>>>> 91c1d65 (.)
         } catch (S3Exception $exception) {
             $this->logger->error('Error deleting file from S3', [
                 'key' => $key,
@@ -550,6 +577,7 @@ class DeleteFileAction extends BaseS3Action
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 =======
@@ -590,10 +618,13 @@ class DeleteFileAction extends BaseS3Action
 >>>>>>> 89eb716 (.)
 =======
 >>>>>>> 760b37c (.)
+=======
+>>>>>>> 91c1d65 (.)
                 'statusCode' => $exception->getStatusCode(),
 =======
                 'statusCode' => $exception->getStatusCode()
 >>>>>>> 0a466ed (.)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -678,6 +709,11 @@ class DeleteFileAction extends BaseS3Action
                 'statusCode' => $exception->getStatusCode()
 >>>>>>> 0a466ed (.)
 >>>>>>> 10ef3f7 (.)
+=======
+=======
+                'statusCode' => $exception->getStatusCode(),
+>>>>>>> 37a2da6 (.)
+>>>>>>> 91c1d65 (.)
             ]);
 
             return [
@@ -708,6 +744,7 @@ class DeleteFileAction extends BaseS3Action
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 =======
@@ -779,6 +816,10 @@ class DeleteFileAction extends BaseS3Action
 >>>>>>> 22b1256 (.)
 =======
 >>>>>>> 10ef3f7 (.)
+=======
+=======
+>>>>>>> 37a2da6 (.)
+>>>>>>> 91c1d65 (.)
                 'errorCode' => $exception->getStatusCode(),
             ];
         }
@@ -808,6 +849,9 @@ class DeleteFileAction extends BaseS3Action
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 91c1d65 (.)
 =======
 >>>>>>> 760b37c (.)
 =======
@@ -889,6 +933,7 @@ class DeleteFileAction extends BaseS3Action
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 06bb10d (.)
 =======
 =======
@@ -952,3 +997,7 @@ class DeleteFileAction extends BaseS3Action
 =======
 >>>>>>> 0a466ed (.)
 >>>>>>> 10ef3f7 (.)
+=======
+=======
+>>>>>>> 37a2da6 (.)
+>>>>>>> 91c1d65 (.)
