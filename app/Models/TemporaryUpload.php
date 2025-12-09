@@ -88,14 +88,18 @@ class TemporaryUpload extends Model implements HasMedia
         Assert::string($mediaModelClass = config('media-library.media_model'));
 
         /**
-         * @var Media $media
+         * @var Builder<Media> $query
          */
-        $media = $mediaModelClass::query()->where('uuid', $mediaUuid)->first();
+        $query = $mediaModelClass::query();
 
-        if (! $media) {
+        /** @var Media|null $media */
+        $media = $query->where('uuid', $mediaUuid)->first();
+
+        if ($media === null) {
             return null;
         }
 
+        /** @var Model|null $temporaryUpload */
         $temporaryUpload = $media->model;
 
         if (! ($temporaryUpload instanceof self)) {

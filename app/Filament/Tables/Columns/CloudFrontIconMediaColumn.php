@@ -4,19 +4,9 @@ declare(strict_types=1);
 
 namespace Modules\Media\Filament\Tables\Columns;
 
-use Exception;
-use Filament\Forms\Components\Select;
-use Filament\Forms\Components\Textarea;
-use Filament\Forms\Components\TextInput;
-use Filament\Actions\Action;
 use Filament\Tables\Columns\IconColumn;
-use Filament\Tables\Columns\SelectColumn;
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Arr;
-use Illuminate\Support\Facades\Storage;
 use Modules\Media\Actions\CloudFront\GetCloudFrontSignedUrlAction;
-use Modules\<main module>\Models\User;
-use Spatie\ModelStates\State;
+use Modules\Media\Models\Media;
 
 class CloudFrontIconMediaColumn extends IconColumn
 {
@@ -25,17 +15,42 @@ class CloudFrontIconMediaColumn extends IconColumn
         parent::setUp();
         $attachment = $this->getName();
 
-        $this->default(fn($record) => $record->getFirstMedia($attachment))
+        $this->default(static function (mixed $record) use ($attachment): mixed {
+            if (! is_object($record) || ! method_exists($record, 'getFirstMedia')) {
+                return null;
+            }
+
+            return $record->getFirstMedia($attachment);
+        })
             ->icon('heroicon-o-document-text')
-            ->color(fn($record) => $record->getFirstMedia($attachment) ? 'success' : 'danger')
-            ->tooltip(fn($record) => $record->getFirstMedia($attachment)->file_name ?? 'Documento non caricato')
-            ->url(function ($record) use ($attachment) {
-                $media = $record->getFirstMedia($attachment);
-                if (!$media) {
-                    return;
+            ->color(static function (mixed $record) use ($attachment): string {
+                if (! is_object($record) || ! method_exists($record, 'getFirstMedia')) {
+                    return 'danger';
                 }
-                $signedUrl = app(GetCloudFrontSignedUrlAction::class)->execute($media->getPath(), 60);
-                return $signedUrl;
+
+                return $record->getFirstMedia($attachment) ? 'success' : 'danger';
+            })
+            ->tooltip(static function (mixed $record) use ($attachment): string {
+                if (! is_object($record) || ! method_exists($record, 'getFirstMedia')) {
+                    return 'Documento non caricato';
+                }
+                /** @var Media|null $media */
+                $media = $record->getFirstMedia($attachment);
+
+                return $media->file_name ?? 'Documento non caricato';
+            })
+            ->url(static function (mixed $record) use ($attachment): ?string {
+                if (! is_object($record) || ! method_exists($record, 'getFirstMedia')) {
+                    return null;
+                }
+                /** @var Media|null $media */
+                $media = $record->getFirstMedia($attachment);
+
+                if ($media === null) {
+                    return null;
+                }
+
+                return app(GetCloudFrontSignedUrlAction::class)->execute($media->getPath(), 60);
             })
             ->openUrlInNewTab();
     }

@@ -80,7 +80,9 @@ class ListMedia extends XotBaseListRecords
             'download' => Action::make('download_attachment')
                 ->icon('heroicon-o-arrow-down-tray')
                 ->color('primary')
-                ->action(static fn ($record) => response()->download($record->getPath(), $record->file_name)),
+                ->action(static function (Media $record): \Symfony\Component\HttpFoundation\BinaryFileResponse {
+                    return response()->download($record->getPath(), $record->file_name);
+                }),
             'convert' => Action::make('convert')
                 ->icon('media-convert')
                 ->color('gray')

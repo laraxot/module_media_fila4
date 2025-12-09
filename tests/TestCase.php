@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace Modules\Media\Tests;
 
 use Illuminate\Foundation\Application;
-use Modules\Media\Providers\MediaServiceProvider;
 use Illuminate\Foundation\Testing\TestCase as BaseTestCase;
+use Modules\Media\Providers\MediaServiceProvider;
 use Modules\Xot\Tests\CreatesApplication;
 
 /**
@@ -33,7 +33,7 @@ abstract class TestCase extends BaseTestCase
     /**
      * Get package providers.
      *
-     * @param Application $app
+     * @param  Application  $app
      * @return array<int, class-string>
      */
     protected function getPackageProviders($app): array
