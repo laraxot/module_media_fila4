@@ -37,20 +37,39 @@ class TemporaryUploadFactory extends Factory
 
     /**
      * Create temporary upload for a specific session.
+<<<<<<< HEAD
      */
     public function forSession(string $sessionId): static
     {
         return $this->state(fn (array $_attributes): array => [
+=======
+     *
+     * @param string $sessionId
+     * @return static
+     */
+    public function forSession(string $sessionId): static
+    {
+        return $this->state(fn(array $_attributes): array => [
+>>>>>>> 5200b63 (.)
             'session_id' => $sessionId,
         ]);
     }
 
     /**
      * Create temporary upload for current session.
+<<<<<<< HEAD
      */
     public function currentSession(): static
     {
         return $this->state(fn (array $_attributes): array => [
+=======
+     *
+     * @return static
+     */
+    public function currentSession(): static
+    {
+        return $this->state(fn(array $_attributes): array => [
+>>>>>>> 5200b63 (.)
             'session_id' => session()->getId(),
         ]);
     }

@@ -100,6 +100,7 @@ return [
         'delete_error' => 'Error deleting file',
     ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 ];
 =======
 <<<<<<< HEAD
@@ -116,3 +117,6 @@ return [
 ]; 
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
+=======
+];
+>>>>>>> 5200b63 (.)

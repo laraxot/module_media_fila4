@@ -6,6 +6,7 @@ namespace Modules\Media\Models\Policies;
 
 use Modules\Media\Models\MediaConvert;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Modules\Xot\Contracts\UserContract;
 =======
 <<<<<<< HEAD
@@ -22,12 +23,16 @@ use Modules\Xot\Contracts\UserContract;
 use Modules\Xot\Contracts\UserContract;
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
+=======
+use Modules\Xot\Contracts\UserContract;
+>>>>>>> 5200b63 (.)
 
 class MediaConvertPolicy extends MediaBasePolicy
 {
     /**
      * Determine whether the user can view any models.
      */
+<<<<<<< HEAD
 <<<<<<< HEAD
     public function viewAny(UserContract $user): bool
     {
@@ -55,11 +60,17 @@ class MediaConvertPolicy extends MediaBasePolicy
         return $user->hasPermissionTo('media_convert.viewAny');
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
+=======
+    public function viewAny(UserContract $user): bool
+    {
+        return $user->hasPermissionTo('media_convert.viewAny');
+>>>>>>> 5200b63 (.)
     }
 
     /**
      * Determine whether the user can view the model.
      */
+<<<<<<< HEAD
 <<<<<<< HEAD
     public function view(UserContract $user, MediaConvert $_media_convert): bool
     {
@@ -87,11 +98,17 @@ class MediaConvertPolicy extends MediaBasePolicy
         return $user->hasPermissionTo('media_convert.view');
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
+=======
+    public function view(UserContract $user, MediaConvert $_media_convert): bool
+    {
+        return $user->hasPermissionTo('media_convert.view');
+>>>>>>> 5200b63 (.)
     }
 
     /**
      * Determine whether the user can create models.
      */
+<<<<<<< HEAD
 <<<<<<< HEAD
     public function create(UserContract $user): bool
     {
@@ -119,11 +136,17 @@ class MediaConvertPolicy extends MediaBasePolicy
         return $user->hasPermissionTo('media_convert.create');
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
+=======
+    public function create(UserContract $user): bool
+    {
+        return $user->hasPermissionTo('media_convert.create');
+>>>>>>> 5200b63 (.)
     }
 
     /**
      * Determine whether the user can update the model.
      */
+<<<<<<< HEAD
 <<<<<<< HEAD
     public function update(UserContract $user, MediaConvert $_media_convert): bool
     {
@@ -151,11 +174,17 @@ class MediaConvertPolicy extends MediaBasePolicy
         return $user->hasPermissionTo('media_convert.update');
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
+=======
+    public function update(UserContract $user, MediaConvert $_media_convert): bool
+    {
+        return $user->hasPermissionTo('media_convert.update');
+>>>>>>> 5200b63 (.)
     }
 
     /**
      * Determine whether the user can delete the model.
      */
+<<<<<<< HEAD
 <<<<<<< HEAD
     public function delete(UserContract $user, MediaConvert $_media_convert): bool
     {
@@ -183,11 +212,17 @@ class MediaConvertPolicy extends MediaBasePolicy
         return $user->hasPermissionTo('media_convert.delete');
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
+=======
+    public function delete(UserContract $user, MediaConvert $_media_convert): bool
+    {
+        return $user->hasPermissionTo('media_convert.delete');
+>>>>>>> 5200b63 (.)
     }
 
     /**
      * Determine whether the user can restore the model.
      */
+<<<<<<< HEAD
 <<<<<<< HEAD
     public function restore(UserContract $user, MediaConvert $_media_convert): bool
     {
@@ -215,11 +250,17 @@ class MediaConvertPolicy extends MediaBasePolicy
         return $user->hasPermissionTo('media_convert.restore');
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
+=======
+    public function restore(UserContract $user, MediaConvert $_media_convert): bool
+    {
+        return $user->hasPermissionTo('media_convert.restore');
+>>>>>>> 5200b63 (.)
     }
 
     /**
      * Determine whether the user can permanently delete the model.
      */
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -242,12 +283,17 @@ class MediaConvertPolicy extends MediaBasePolicy
 }
 =======
 >>>>>>> e9b0959 (.)
+=======
+>>>>>>> 5200b63 (.)
     public function forceDelete(UserContract $user, MediaConvert $media_convert): bool
     {
         return $user->hasPermissionTo('media_convert.forceDelete');
     }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
+=======
+>>>>>>> 5200b63 (.)

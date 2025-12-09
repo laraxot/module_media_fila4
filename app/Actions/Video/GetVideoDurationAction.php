@@ -16,9 +16,15 @@ class GetVideoDurationAction
 {
     use QueueableAction;
 
+<<<<<<< HEAD
     public function execute(string $disk, string $file): ?int
     {
         if (! Storage::disk($disk)->exists($file)) {
+=======
+    public function execute(string $disk, string $file): null|int
+    {
+        if (!Storage::disk($disk)->exists($file)) {
+>>>>>>> 5200b63 (.)
             return null;
         } // returns an int
 

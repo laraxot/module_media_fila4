@@ -15,7 +15,11 @@ use Modules\Xot\Traits\Updater;
  */
 abstract class BaseModel extends Model
 {
+<<<<<<< HEAD
     use \Modules\Xot\Models\Traits\HasXotFactory;
+=======
+    use HasFactory;
+>>>>>>> 5200b63 (.)
 
     // use Searchable;
     // //use Cachable;
@@ -58,7 +62,20 @@ abstract class BaseModel extends Model
         // 'password'
     ];
 
+<<<<<<< HEAD
     
+=======
+    /**
+     * ----
+     * Create a new factory instance for the model.
+     *
+     * @return Factory<static>
+     */
+    protected static function newFactory()
+    {
+        return app(GetFactoryAction::class)->execute(static::class);
+    }
+>>>>>>> 5200b63 (.)
 
     /** @return array<string, string> */
     protected function casts(): array

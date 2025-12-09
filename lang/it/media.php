@@ -1,6 +1,7 @@
 <?php
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -10,6 +11,11 @@
 >>>>>>> e9b0959 (.)
 declare(strict_types=1);
 
+=======
+declare(strict_types=1);
+
+
+>>>>>>> 5200b63 (.)
 return [
     'pages' => 'Pagine',
     'widgets' => 'Widgets',
@@ -62,6 +68,7 @@ return [
         'label' => 'media.model',
     ],
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -138,3 +145,5 @@ return array (
 =======
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
+=======
+>>>>>>> 5200b63 (.)

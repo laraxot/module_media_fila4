@@ -13,6 +13,7 @@ class FileExtensionRule implements Rule
 {
     protected array $validExtensions = [];
 
+<<<<<<< HEAD
     /**
      * @param  array<int, string>  $validExtensions
      */
@@ -31,6 +32,16 @@ class FileExtensionRule implements Rule
     /**
      * @param  mixed  $_attribute  The attribute being validated (not used in this rule)
      * @param  UploadedFile  $value  The uploaded file to validate
+=======
+    public function __construct(array $validExtensions = [])
+    {
+        $this->validExtensions = array_map(mb_strtolower(...), $validExtensions);
+    }
+
+    /**
+     * @param  mixed $_attribute The attribute being validated (not used in this rule)
+     * @param  UploadedFile  $value The uploaded file to validate
+>>>>>>> 5200b63 (.)
      */
     public function passes($_attribute, $value): bool
     {
