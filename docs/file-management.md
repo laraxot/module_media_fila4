@@ -6,6 +6,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 3f50d25 (.)
@@ -30,6 +31,8 @@ Questo documento descrive le best practice per la gestione dei file in , inclusi
 >>>>>>> 3f50d25 (.)
 =======
 >>>>>>> 9ffe7a9 (.)
+=======
+>>>>>>> 22abc4a (.)
 # Gestione dei File in SaluteOra
 
 ## Panoramica
@@ -39,6 +42,26 @@ Questo documento descrive le best practice per la gestione dei file in SaluteOra
 ## Struttura delle Directory
 
 SaluteOra utilizza una struttura organizzata per l'archiviazione dei file:
+=======
+# Gestione dei File in 
+
+## Panoramica
+
+Questo documento descrive le best practice per la gestione dei file in , inclusi il caricamento, l'archiviazione e l'accesso ai file in diverse parti dell'applicazione.
+
+## Struttura delle Directory
+
+ utilizza una struttura organizzata per l'archiviazione dei file:
+# Gestione dei File in <nome progetto>
+
+## Panoramica
+
+Questo documento descrive le best practice per la gestione dei file in <nome progetto>, inclusi il caricamento, l'archiviazione e l'accesso ai file in diverse parti dell'applicazione.
+
+## Struttura delle Directory
+
+<nome progetto> utilizza una struttura organizzata per l'archiviazione dei file:
+>>>>>>> 9348522 (.)
 
 ```
 /storage
@@ -61,6 +84,7 @@ SaluteOra utilizza una struttura organizzata per l'archiviazione dei file:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 Per i form amministrativi,  utilizza il componente `FileUpload` di Filament:
 >>>>>>> 7df6a71 (.)
@@ -75,7 +99,13 @@ Per i form amministrativi,  utilizza il componente `FileUpload` di Filament:
 >>>>>>> 3f50d25 (.)
 =======
 >>>>>>> 9ffe7a9 (.)
+=======
+>>>>>>> 22abc4a (.)
 Per i form amministrativi, SaluteOra utilizza il componente `FileUpload` di Filament:
+=======
+Per i form amministrativi,  utilizza il componente `FileUpload` di Filament:
+Per i form amministrativi, <nome progetto> utilizza il componente `FileUpload` di Filament:
+>>>>>>> 9348522 (.)
 
 ```php
 use Filament\Forms\Components\FileUpload;
@@ -93,6 +123,7 @@ FileUpload::make('certifications')
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 0caa3cf (.)
 =======
@@ -101,6 +132,8 @@ FileUpload::make('certifications')
 >>>>>>> aa5e51a (.)
 =======
 >>>>>>> 9ffe7a9 (.)
+=======
+>>>>>>> 22abc4a (.)
 Per una documentazione dettagliata sull'utilizzo di `FileUpload`, consulta la [Gestione dei File Upload in Filament](/docs/filament-file-uploads.md).
 
 ### Utilizzo di Livewire
@@ -124,6 +157,14 @@ Per i form frontend,  utilizza Livewire:
 =======
 >>>>>>> 9ffe7a9 (.)
 Per i form frontend, SaluteOra utilizza Livewire:
+=======
+Per una documentazione dettagliata sull'utilizzo di `FileUpload`, consulta la [Gestione dei File Upload in Filament](../../UI/docs/filament-file-uploads.md).
+
+### Utilizzo di Livewire
+
+Per i form frontend,  utilizza Livewire:
+Per i form frontend, <nome progetto> utilizza Livewire:
+>>>>>>> 9348522 (.)
 
 ```php
 public function save()
@@ -167,6 +208,7 @@ Schema::table('users', function (Blueprint $table) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 Per una documentazione dettagliata sulla mappatura dei campi, consulta la [Mappatura dei Campi Database nel Modulo Patient](/laravel/Modules/Patient/docs/DATABASE_FIELD_MAPPING.md).
 =======
 Per una documentazione dettagliata sulla mappatura dei campi, consulta la Mappatura dei Campi Database nel Modulo Patient (da creare se necessario).
@@ -189,6 +231,12 @@ Per una documentazione dettagliata sulla mappatura dei campi, consulta la Mappat
 =======
 Per una documentazione dettagliata sulla mappatura dei campi, consulta la [Mappatura dei Campi Database nel Modulo Patient](/laravel/Modules/Patient/docs/DATABASE_FIELD_MAPPING.md).
 >>>>>>> 9ffe7a9 (.)
+=======
+Per una documentazione dettagliata sulla mappatura dei campi, consulta la [Mappatura dei Campi Database nel Modulo Patient](/laravel/Modules/Patient/docs/DATABASE_FIELD_MAPPING.md).
+=======
+Per una documentazione dettagliata sulla mappatura dei campi, consulta la Mappatura dei Campi Database nel Modulo Patient (da creare se necessario).
+>>>>>>> 9348522 (.)
+>>>>>>> 22abc4a (.)
 
 ## Accesso ai File
 
@@ -202,6 +250,7 @@ $url = Storage::url($path);
 
 ### Controllo degli Accessi
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -222,7 +271,13 @@ $url = Storage::url($path);
 >>>>>>> 3f50d25 (.)
 =======
 >>>>>>> 9ffe7a9 (.)
+=======
+>>>>>>> 22abc4a (.)
 SaluteOra implementa un sistema di controllo degli accessi per i file sensibili:
+=======
+ implementa un sistema di controllo degli accessi per i file sensibili:
+<nome progetto> implementa un sistema di controllo degli accessi per i file sensibili:
+>>>>>>> 9348522 (.)
 
 ```php
 // In un controller
@@ -289,6 +344,7 @@ protected static function booted()
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 0caa3cf (.)
 =======
@@ -297,6 +353,8 @@ protected static function booted()
 >>>>>>> aa5e51a (.)
 =======
 >>>>>>> 9ffe7a9 (.)
+=======
+>>>>>>> 22abc4a (.)
 - [Gestione dei File Upload in Filament](/docs/filament-file-uploads.md)
 - [Mappatura dei Campi Database nel Modulo Patient](/laravel/Modules/Patient/docs/DATABASE_FIELD_MAPPING.md)
 - [Migrazioni del Database](/docs/database-migrations.md)
@@ -306,15 +364,20 @@ protected static function booted()
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> c9ef35c (.)
 =======
 =======
 >>>>>>> 3f50d25 (.)
+=======
+=======
+>>>>>>> 22abc4a (.)
 - [Gestione dei File Upload in Filament](../../UI/docs/filament-file-uploads.md)
 - [Migrazioni del Database](../../Xot/docs/migration-standards.md)
 - [Gestione degli Utenti](../../User/docs/user-management.md)
 - [Pattern di Ereditarietà dei Modelli](../../Xot/docs/archive/model-inheritance-patterns.md)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 7df6a71 (.)
@@ -333,3 +396,6 @@ protected static function booted()
 >>>>>>> 960f18d (.)
 =======
 >>>>>>> 9ffe7a9 (.)
+=======
+>>>>>>> 9348522 (.)
+>>>>>>> 22abc4a (.)

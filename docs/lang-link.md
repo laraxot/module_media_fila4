@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Collegamento alle Traduzioni del Modulo Media
 
 <<<<<<< HEAD
@@ -14,6 +15,10 @@
 # Collegamento alle Traduzioni del Modulo Media
 
 >>>>>>> 3f50d25 (.)
+=======
+# Collegamento alle Traduzioni del Modulo Media
+
+>>>>>>> 22abc4a (.)
 Questo modulo utilizza le traduzioni centralizzate nella cartella [Lang](../../Lang/project_docs/).
 
 Consulta la documentazione delle traduzioni:
@@ -24,6 +29,7 @@ Consulta la documentazione delle traduzioni:
 ## Collegamento Bidirezionale
 
 Per ogni risorsa o campo localizzato, vedi anche il file corrispondente in questo modulo e la relativa sezione in [Lang](../../Lang/project_docs/).
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 7df6a71 (.)
@@ -37,6 +43,8 @@ Per ogni risorsa o campo localizzato, vedi anche il file corrispondente in quest
 # Collegamento alle Traduzioni del Modulo Media
 
 >>>>>>> 9ffe7a9 (.)
+=======
+>>>>>>> 22abc4a (.)
 Questo modulo utilizza le traduzioni centralizzate nella cartella [Lang](../../Lang/docs/).
 
 Consulta la documentazione delle traduzioni:
@@ -56,11 +64,14 @@ Per ogni risorsa o campo localizzato, vedi anche il file corrispondente in quest
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> c9ef35c (.)
 =======
 >>>>>>> 3f50d25 (.)
+=======
+>>>>>>> 22abc4a (.)
 * [lang-link.md](../../../Chart/project_docs/lang-link.md)
 * [lang-link.md](../../../Reporting/project_docs/lang-link.md)
 * [lang-link.md](../../../Gdpr/project_docs/lang-link.md)
@@ -77,6 +88,7 @@ Per ogni risorsa o campo localizzato, vedi anche il file corrispondente in quest
 * [lang-link.md](../../../Cms/project_docs/lang-link.md)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 7df6a71 (.)
 =======
 >>>>>>> 0caa3cf (.)
@@ -86,6 +98,8 @@ Per ogni risorsa o campo localizzato, vedi anche il file corrispondente in quest
 >>>>>>> 3f50d25 (.)
 =======
 >>>>>>> 9ffe7a9 (.)
+=======
+>>>>>>> 22abc4a (.)
 * [lang-link.md](../../../Chart/docs/lang-link.md)
 * [lang-link.md](../../../Reporting/docs/lang-link.md)
 * [lang-link.md](../../../Gdpr/docs/lang-link.md)
@@ -103,6 +117,7 @@ Per ogni risorsa o campo localizzato, vedi anche il file corrispondente in quest
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 8cdc78f (.)
 =======
@@ -111,3 +126,5 @@ Per ogni risorsa o campo localizzato, vedi anche il file corrispondente in quest
 >>>>>>> 960f18d (.)
 =======
 >>>>>>> 9ffe7a9 (.)
+=======
+>>>>>>> 22abc4a (.)
