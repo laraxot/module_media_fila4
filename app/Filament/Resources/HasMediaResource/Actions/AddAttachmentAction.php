@@ -20,11 +20,15 @@ class AddAttachmentAction extends Action
     {
         parent::setUp();
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 37a2da6 (.)
         $this->icon('heroicon-o-plus')
             ->color('success')
             ->button()
             ->schema(fn(): array => static::getFormSchema(false))
             ->action(static::formHandlerCallback(...));
+<<<<<<< HEAD
 =======
         $this
             ->icon('heroicon-o-plus')
@@ -37,27 +41,39 @@ class AddAttachmentAction extends Action
                 fn (RelationManager $livewire, array $data) => static::formHandlerCallback($livewire, $data),
             );
 >>>>>>> 0a466ed (.)
+=======
+>>>>>>> 37a2da6 (.)
     }
 
     public static function trans(string $key): string
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 37a2da6 (.)
         Assert::string(
             $ris = trans('media::add_attachment_action.' . $key),
             '[' . $key . '][' . __LINE__ . '][' . class_basename(__CLASS__) . ']',
         );
+<<<<<<< HEAD
 =======
         Assert::string($ris = trans('media::add_attachment_action.'.$key), '['.$key.']['.__LINE__.']['.class_basename(__CLASS__).']');
 >>>>>>> 0a466ed (.)
+=======
+>>>>>>> 37a2da6 (.)
 
         return $ris;
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public static function getDefaultName(): null|string
 =======
     public static function getDefaultName(): ?string
 >>>>>>> 0a466ed (.)
+=======
+    public static function getDefaultName(): null|string
+>>>>>>> 37a2da6 (.)
     {
         return 'add_attachment';
     }
@@ -83,6 +99,9 @@ class AddAttachmentAction extends Action
                 ->columnSpanFull(),
             /*
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 37a2da6 (.)
              * Radio::make('attachment_type')
              * ->hiddenLabel()
              * ->options(
@@ -95,6 +114,7 @@ class AddAttachmentAction extends Action
              * ->required()
              * ->columnSpanFull(),
              */
+<<<<<<< HEAD
 =======
             Radio::make('attachment_type')
                 ->hiddenLabel()
@@ -109,6 +129,8 @@ class AddAttachmentAction extends Action
                 ->columnSpanFull(),
             */
 >>>>>>> 0a466ed (.)
+=======
+>>>>>>> 37a2da6 (.)
             // Radio::make('attachment_type')->columnSpanFull(),
             TextInput::make('name')
                 ->hint(static::trans('fields.name_hint'))
@@ -125,14 +147,19 @@ class AddAttachmentAction extends Action
         // $mediaCollection = 'default';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (!method_exists($ownerRecord, 'addMediaFromDisk')) {
 =======
         if (! method_exists($ownerRecord, 'addMediaFromDisk')) {
 >>>>>>> 0a466ed (.)
+=======
+        if (!method_exists($ownerRecord, 'addMediaFromDisk')) {
+>>>>>>> 37a2da6 (.)
             throw new Exception('wip');
         }
 
         $attachment = $ownerRecord
+<<<<<<< HEAD
 <<<<<<< HEAD
             ->addMediaFromDisk($data['file'], config('attachment.upload.disk.driver'))
             ->setName($data['name'] ?? Str::beforeLast($data['original_file_name'], '.'))
@@ -145,11 +172,18 @@ class AddAttachmentAction extends Action
                 $data['name'] ?? Str::beforeLast($data['original_file_name'], '.'),
             )
 >>>>>>> 0a466ed (.)
+=======
+            ->addMediaFromDisk($data['file'], config('attachment.upload.disk.driver'))
+            ->setName($data['name'] ?? Str::beforeLast($data['original_file_name'], '.'))
+>>>>>>> 37a2da6 (.)
             ->preservingOriginal()
             ->toMediaCollection($mediaCollection);
 
         $user_id = authId();
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 37a2da6 (.)
         $attachment->update([
             'created_by' => $user_id,
             'updated_by' => $user_id,
@@ -160,6 +194,7 @@ class AddAttachmentAction extends Action
          * $attachment->created_by=$user_id;
          * $attachment->save();
          */
+<<<<<<< HEAD
 =======
         $attachment->update(
             [
@@ -173,5 +208,7 @@ class AddAttachmentAction extends Action
         $attachment->save();
         */
 >>>>>>> 0a466ed (.)
+=======
+>>>>>>> 37a2da6 (.)
     }
 }

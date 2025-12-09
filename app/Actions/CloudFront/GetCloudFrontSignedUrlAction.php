@@ -9,9 +9,12 @@ use Modules\Media\Datas\CloudFrontData;
 use Spatie\QueueableAction\QueueableAction;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 0a466ed (.)
+=======
+>>>>>>> 37a2da6 (.)
 /**
  * Action per la traduzione di elementi di una collezione.
  */
@@ -20,6 +23,9 @@ class GetCloudFrontSignedUrlAction
     use QueueableAction;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 37a2da6 (.)
     public function execute(string $key, int $expiry = 30): string
     {
         $data = CloudFrontData::make();
@@ -27,6 +33,7 @@ class GetCloudFrontSignedUrlAction
         $cloudFront = new CloudFrontClient([
             'region' => $data->region,
             'version' => 'latest',
+<<<<<<< HEAD
 =======
    
     public function execute(string $key, int $expiry = 30): string
@@ -38,12 +45,15 @@ class GetCloudFrontSignedUrlAction
             'region' => $data->region,
             'version' => 'latest'
 >>>>>>> 0a466ed (.)
+=======
+>>>>>>> 37a2da6 (.)
         ]);
 
         return $cloudFront->getSignedUrl([
             'url' => $data->base_url . '/' . ltrim($key, '/'),
             'expires' => time() + ($expiry * 60),
             'key_pair_id' => $data->key_pair_id,
+<<<<<<< HEAD
 <<<<<<< HEAD
             'private_key' => $data->getPrivateKey(),
         ]);
@@ -58,4 +68,9 @@ class GetCloudFrontSignedUrlAction
 
   
 >>>>>>> 0a466ed (.)
+=======
+            'private_key' => $data->getPrivateKey(),
+        ]);
+    }
+>>>>>>> 37a2da6 (.)
 }

@@ -116,10 +116,14 @@ class VideoEntry extends Entry
      * @return string|null The height value as a string (with 'px' suffix if it was an integer) or null if not set
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getHeight(): null|string
 =======
     public function getHeight(): ?string
 >>>>>>> 0a466ed (.)
+=======
+    public function getHeight(): null|string
+>>>>>>> 37a2da6 (.)
     {
         $height = $this->evaluate($this->height);
 
@@ -133,16 +137,22 @@ class VideoEntry extends Entry
 
         // Convert to string to ensure consistent return type
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 37a2da6 (.)
         if (is_scalar($height) || is_object($height) && method_exists($height, '__toString')) {
             return is_string($height) ? $height : ((string) $height);
         }
 
+<<<<<<< HEAD
 =======
         if (is_scalar($height) || (is_object($height) && method_exists($height, '__toString'))) {
             return is_string($height) ? $height : (string) $height;
         }
         
 >>>>>>> 0a466ed (.)
+=======
+>>>>>>> 37a2da6 (.)
         // If we can't convert to string, return null
         return null;
     }
@@ -154,6 +164,7 @@ class VideoEntry extends Entry
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getImageUrl(null|string $state = null): null|string
     {
         if (filter_var($state, FILTER_VALIDATE_URL) !== false || str($state)->startsWith('data:')) {
@@ -162,6 +173,11 @@ class VideoEntry extends Entry
     {
         if ((filter_var($state, FILTER_VALIDATE_URL) !== false) || str($state)->startsWith('data:')) {
 >>>>>>> 0a466ed (.)
+=======
+    public function getImageUrl(null|string $state = null): null|string
+    {
+        if (filter_var($state, FILTER_VALIDATE_URL) !== false || str($state)->startsWith('data:')) {
+>>>>>>> 37a2da6 (.)
             return $state;
         }
         if ($state === null) {
@@ -174,10 +190,14 @@ class VideoEntry extends Entry
         if ($this->shouldCheckFileExistence()) {
             try {
 <<<<<<< HEAD
+<<<<<<< HEAD
                 if (!$storage->exists($state)) {
 =======
                 if (! $storage->exists($state)) {
 >>>>>>> 0a466ed (.)
+=======
+                if (!$storage->exists($state)) {
+>>>>>>> 37a2da6 (.)
                     return null;
                 }
             } catch (UnableToCheckFileExistence) {
@@ -188,6 +208,7 @@ class VideoEntry extends Entry
         if ($this->getVisibility() === 'private') {
             try {
 <<<<<<< HEAD
+<<<<<<< HEAD
                 return $storage->temporaryUrl($state, now()->addMinutes(5));
 =======
                 return $storage->temporaryUrl(
@@ -195,6 +216,9 @@ class VideoEntry extends Entry
                     now()->addMinutes(5)
                 );
 >>>>>>> 0a466ed (.)
+=======
+                return $storage->temporaryUrl($state, now()->addMinutes(5));
+>>>>>>> 37a2da6 (.)
             } catch (Throwable) {
                 // This driver does not support creating temporary URLs.
             }
@@ -209,6 +233,9 @@ class VideoEntry extends Entry
      * @return string|null The default image URL or null if not set
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 37a2da6 (.)
     public function getDefaultImageUrl(): null|string
     {
         $url = $this->evaluate($this->defaultImageUrl);
@@ -221,6 +248,7 @@ class VideoEntry extends Entry
             return is_string($url) ? $url : ((string) $url);
         }
 
+<<<<<<< HEAD
 =======
     public function getDefaultImageUrl(): ?string
     {
@@ -235,6 +263,8 @@ class VideoEntry extends Entry
         }
         
 >>>>>>> 0a466ed (.)
+=======
+>>>>>>> 37a2da6 (.)
         return null;
     }
 
@@ -247,11 +277,15 @@ class VideoEntry extends Entry
     {
         $visibility = $this->evaluate($this->visibility);
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 37a2da6 (.)
 
         if (is_scalar($visibility) || is_object($visibility) && method_exists($visibility, '__toString')) {
             return is_string($visibility) ? $visibility : ((string) $visibility);
         }
 
+<<<<<<< HEAD
 =======
         
         if (is_scalar($visibility) || (is_object($visibility) && method_exists($visibility, '__toString'))) {
@@ -259,6 +293,8 @@ class VideoEntry extends Entry
         }
         
 >>>>>>> 0a466ed (.)
+=======
+>>>>>>> 37a2da6 (.)
         // Default to public if invalid value
         return 'public';
     }
@@ -269,10 +305,14 @@ class VideoEntry extends Entry
      * @return string|null The width value as a string (with 'px' suffix if it was an integer) or null if not set
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getWidth(): null|string
 =======
     public function getWidth(): ?string
 >>>>>>> 0a466ed (.)
+=======
+    public function getWidth(): null|string
+>>>>>>> 37a2da6 (.)
     {
         $width = $this->evaluate($this->width);
 
@@ -285,16 +325,22 @@ class VideoEntry extends Entry
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 37a2da6 (.)
         if (is_scalar($width) || is_object($width) && method_exists($width, '__toString')) {
             return is_string($width) ? $width : ((string) $width);
         }
 
+<<<<<<< HEAD
 =======
         if (is_scalar($width) || (is_object($width) && method_exists($width, '__toString'))) {
             return is_string($width) ? $width : (string) $width;
         }
         
 >>>>>>> 0a466ed (.)
+=======
+>>>>>>> 37a2da6 (.)
         return null;
     }
 
@@ -324,11 +370,15 @@ class VideoEntry extends Entry
     {
         $attributes = $this->evaluate($this->extraImgAttributes);
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 37a2da6 (.)
 
         if (is_array($attributes)) {
             return $attributes;
         }
 
+<<<<<<< HEAD
 =======
         
         if (is_array($attributes)) {
@@ -336,6 +386,8 @@ class VideoEntry extends Entry
         }
         
 >>>>>>> 0a466ed (.)
+=======
+>>>>>>> 37a2da6 (.)
         // Return empty array if invalid value
         return [];
     }
@@ -368,6 +420,9 @@ class VideoEntry extends Entry
      * @return int|null The overlap value or null if not set
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 37a2da6 (.)
     public function getOverlap(): null|int
     {
         $overlap = $this->evaluate($this->overlap);
@@ -380,6 +435,7 @@ class VideoEntry extends Entry
             return (int) $overlap;
         }
 
+<<<<<<< HEAD
 =======
     public function getOverlap(): ?int
     {
@@ -394,6 +450,8 @@ class VideoEntry extends Entry
         }
         
 >>>>>>> 0a466ed (.)
+=======
+>>>>>>> 37a2da6 (.)
         return null;
     }
 
@@ -409,6 +467,9 @@ class VideoEntry extends Entry
      * @return int|null The ring value or null if not set
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 37a2da6 (.)
     public function getRing(): null|int
     {
         $ring = $this->evaluate($this->ring);
@@ -421,6 +482,7 @@ class VideoEntry extends Entry
             return (int) $ring;
         }
 
+<<<<<<< HEAD
 =======
     public function getRing(): ?int
     {
@@ -435,6 +497,8 @@ class VideoEntry extends Entry
         }
         
 >>>>>>> 0a466ed (.)
+=======
+>>>>>>> 37a2da6 (.)
         return null;
     }
 
@@ -450,6 +514,9 @@ class VideoEntry extends Entry
      * @return int|null The limit value or null if not set
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 37a2da6 (.)
     public function getLimit(): null|int
     {
         $limit = $this->evaluate($this->limit);
@@ -470,6 +537,7 @@ class VideoEntry extends Entry
         bool|Closure $isSeparate = false,
         string|Closure|null $size = null,
     ): static {
+<<<<<<< HEAD
 =======
     public function getLimit(): ?int
     {
@@ -489,6 +557,8 @@ class VideoEntry extends Entry
     public function limitedRemainingText(bool|Closure $condition = true, bool|Closure $isSeparate = false, string|Closure|null $size = null): static
     {
 >>>>>>> 0a466ed (.)
+=======
+>>>>>>> 37a2da6 (.)
         $this->hasLimitedRemainingText = $condition;
         $this->limitedRemainingTextSeparate($isSeparate);
         $this->limitedRemainingTextSize($size);
@@ -523,6 +593,9 @@ class VideoEntry extends Entry
      * @return string|null The text size or null if not set
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 37a2da6 (.)
     public function getLimitedRemainingTextSize(): null|string
     {
         $size = $this->evaluate($this->limitedRemainingTextSize);
@@ -535,6 +608,7 @@ class VideoEntry extends Entry
             return is_string($size) ? $size : ((string) $size);
         }
 
+<<<<<<< HEAD
 =======
     public function getLimitedRemainingTextSize(): ?string
     {
@@ -549,6 +623,8 @@ class VideoEntry extends Entry
         }
         
 >>>>>>> 0a466ed (.)
+=======
+>>>>>>> 37a2da6 (.)
         return null;
     }
 
