@@ -14,26 +14,13 @@ use Modules\Xot\Database\Migrations\XotBaseMigration;
 /**
  * Class CreateImagesTable.
  */
-<<<<<<< HEAD
-<<<<<<< HEAD
 return new class extends XotBaseMigration {
-=======
-return new class extends XotBaseMigration
-{
->>>>>>> 0a466ed (.)
-=======
-return new class extends XotBaseMigration {
->>>>>>> 37a2da6 (.)
     /**
      * i don't write table name, it take from Model, model is singular of this class wit.
      */
     public function up(): void
     {
         // -- CREATE --
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 37a2da6 (.)
         $this->tableCreate(function (Blueprint $table): void {
             $table->id();
             $table->foreignIdFor(Media::class, 'media_id');
@@ -59,39 +46,5 @@ return new class extends XotBaseMigration {
 
             $this->updateTimestamps($table, true);
         });
-<<<<<<< HEAD
-=======
-        $this->tableCreate(
-            function (Blueprint $table): void {
-                $table->id();
-                $table->foreignIdFor(Media::class, 'media_id');
-                $table->string('format')->nullable();
-                $table->string('codec_video')->nullable();
-                $table->string('codec_audio')->nullable();
-                $table->string('preset')->nullable();
-                $table->string('bitrate')->nullable();
-                $table->integer('width')->nullable();
-                $table->integer('height')->nullable();
-                $table->integer('threads')->nullable();
-                $table->integer('speed')->nullable();
-                $table->decimal('percentage', 7, 3)->nullable();
-                $table->decimal('remaining', 7, 3)->nullable();
-                $table->decimal('rate', 7, 3)->nullable();
-                $table->decimal('execution_time', 7, 3)->nullable();
-            }
-        );
-        // -- UPDATE --
-        $this->tableUpdate(
-            function (Blueprint $table): void {
-                if (! $this->hasColumn('format')) {
-                    $table->string('format')->nullable();
-                }
-
-                $this->updateTimestamps($table, true);
-            }
-        );
->>>>>>> 0a466ed (.)
-=======
->>>>>>> 37a2da6 (.)
     }
 };
