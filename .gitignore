@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -9,6 +10,8 @@
 >>>>>>> e9b0959 (.)
 =======
 >>>>>>> 5200b63 (.)
+=======
+>>>>>>> 06bb10d (.)
 # ==============================================
 # LARAXOT MODULE MEDIA - .GITIGNORE
 # ==============================================
@@ -164,7 +167,10 @@ lerna-debug.log*
 # LARAVEL SPECIFIC
 # ==============================================
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b93ef594b4 (.)
+=======
+>>>>>>> 06bb10d (.)
 =======
 # Dependencies and packages
 /vendor/
@@ -190,10 +196,14 @@ npm-debug.log
 build/
 
 # Laravel specific
+<<<<<<< HEAD
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
 =======
 >>>>>>> 5200b63 (.)
+=======
+>>>>>>> 0a466ed (.)
+>>>>>>> 06bb10d (.)
 bootstrap/compiled.php
 app/storage/
 public/storage
@@ -204,6 +214,7 @@ storage/*.key
 .env
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -211,6 +222,8 @@ storage/*.key
 >>>>>>> e9b0959 (.)
 =======
 >>>>>>> 5200b63 (.)
+=======
+>>>>>>> 06bb10d (.)
 .env.*
 !.env.example
 
@@ -437,7 +450,10 @@ test_media_files/
 laravel
 public_html
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b93ef594b4 (.)
+=======
+>>>>>>> 06bb10d (.)
 =======
 
 # Local configurations
@@ -467,7 +483,11 @@ Homestead.json
 docs/phpstan/
 docs/cache/
 cache/
+<<<<<<< HEAD
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
 =======
 >>>>>>> 5200b63 (.)
+=======
+>>>>>>> 0a466ed (.)
+>>>>>>> 06bb10d (.)
