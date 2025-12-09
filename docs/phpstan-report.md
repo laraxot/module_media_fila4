@@ -58,6 +58,7 @@ L'analisi PHPStan di livello 1 non ha rilevato errori nel modulo Media. Questo Ã
 ## Collegamenti tra versioni di phpstan_report.md
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 * [phpstan_report.md](../../../Lang/docs/phpstan_report.md)
 * [phpstan_report.md](../../../Media/docs/phpstan_report.md)
 =======
@@ -68,6 +69,10 @@ L'analisi PHPStan di livello 1 non ha rilevato errori nel modulo Media. Questo Ã
 * [phpstan_report.md](../../../Lang/docs/phpstan_report.md)
 * [phpstan_report.md](../../../Media/docs/phpstan_report.md)
 >>>>>>> 7df6a71 (.)
+=======
+* [phpstan_report.md](../../../Lang/docs/phpstan_report.md)
+* [phpstan_report.md](../../../Media/docs/phpstan_report.md)
+>>>>>>> 0caa3cf (.)
 
 
 ### Versione Incoming

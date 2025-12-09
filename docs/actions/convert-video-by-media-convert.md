@@ -73,7 +73,11 @@ $convertedPath = $action->execute($data, $record);
 ```
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 [Torna alla documentazione Media](/docs/modules/module_media.md#actions) 
 =======
 [Torna alla documentazione Media](../README.md) 
 >>>>>>> 7df6a71 (.)
+=======
+[Torna alla documentazione Media](/docs/modules/module_media.md#actions) 
+>>>>>>> 0caa3cf (.)
