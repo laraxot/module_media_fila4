@@ -69,15 +69,7 @@ abstract class BaseModel extends Model
      * ----
      * Create a new factory instance for the model.
      *
-<<<<<<< HEAD
      * @return Factory<static>
-=======
-<<<<<<< HEAD
-     * @return Factory<static>
-=======
-     * @return \Illuminate\Database\Eloquent\Factories\Factory<static>
->>>>>>> origin/develop
->>>>>>> e9b0959 (.)
      */
     protected static function newFactory()
     {
@@ -95,20 +87,6 @@ abstract class BaseModel extends Model
             'created_at' => 'datetime',
             'updated_at' => 'datetime',
             'deleted_at' => 'datetime',
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> a12f125f4a (.)
-=======
->>>>>>> b93ef594b4 (.)
-=======
-
->>>>>>> origin/develop
->>>>>>> e9b0959 (.)
             'updated_by' => 'string',
             'created_by' => 'string',
             'deleted_by' => 'string',
