@@ -31,6 +31,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 =======
@@ -133,11 +134,14 @@
 >>>>>>> a2b9bd0 (.)
 =======
 >>>>>>> da2a819 (.)
+=======
+>>>>>>> 53e059b (.)
 <?php
 
 declare(strict_types=1);
 
 ?>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -295,6 +299,8 @@ declare(strict_types=1);
 >>>>>>> a2b9bd0 (.)
 =======
 >>>>>>> da2a819 (.)
+=======
+>>>>>>> 53e059b (.)
 <x-filament-widgets::widget>
     <x-filament::section>
         {{-- Widget content --}}

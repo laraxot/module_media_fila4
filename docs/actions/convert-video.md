@@ -25,6 +25,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 3f50d25 (.)
 =======
@@ -287,3 +288,5 @@ $convertedPath = $action->execute($data);
 =======
 [Torna alla documentazione Media](/docs/modules/module_media.md#actions) 
 >>>>>>> a23d464 (.)
+=======
+>>>>>>> 53e059b (.)

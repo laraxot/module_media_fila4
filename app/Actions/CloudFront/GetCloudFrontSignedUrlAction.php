@@ -41,6 +41,7 @@ use Spatie\QueueableAction\QueueableAction;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 =======
@@ -179,6 +180,8 @@ use Spatie\QueueableAction\QueueableAction;
 >>>>>>> a2b9bd0 (.)
 =======
 >>>>>>> da2a819 (.)
+=======
+>>>>>>> 53e059b (.)
 /**
  * Action per la traduzione di elementi di una collezione.
  */
@@ -219,6 +222,7 @@ class GetCloudFrontSignedUrlAction
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 =======
@@ -319,6 +323,8 @@ class GetCloudFrontSignedUrlAction
 >>>>>>> a2b9bd0 (.)
 =======
 >>>>>>> da2a819 (.)
+=======
+>>>>>>> 53e059b (.)
     public function execute(string $key, int $expiry = 30): string
     {
         $data = CloudFrontData::make();
@@ -326,6 +332,7 @@ class GetCloudFrontSignedUrlAction
         $cloudFront = new CloudFrontClient([
             'region' => $data->region,
             'version' => 'latest',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -539,16 +546,18 @@ class GetCloudFrontSignedUrlAction
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
 >>>>>>> da2a819 (.)
+=======
+>>>>>>> 53e059b (.)
         ]);
 
         return $cloudFront->getSignedUrl([
             'url' => $data->base_url.'/'.ltrim($key, '/'),
             'expires' => time() + ($expiry * 60),
             'key_pair_id' => $data->key_pair_id,
-<<<<<<< HEAD
             'private_key' => $data->getPrivateKey(),
         ]);
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -822,4 +831,6 @@ class GetCloudFrontSignedUrlAction
 >>>>>>> a2b9bd0 (.)
 =======
 >>>>>>> da2a819 (.)
+=======
+>>>>>>> 53e059b (.)
 }
