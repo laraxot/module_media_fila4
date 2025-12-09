@@ -14,8 +14,11 @@ class MediaTest extends TestCase
 
     public function test_can_create_media_with_minimal_data(): void
     {
-        /** @var \Illuminate\Database\Eloquent\Collection */
-        $media = Media/** @phpstan-ignore-line */ ::factory()->create([
+        /** @var \Illuminate\Database\Eloquent\Factories\Factory<Media> $factory */
+        $factory = Media::factory();
+
+        /** @var Media $media */
+        $media = $factory->create([
             'model_type' => 'App\Models\User',
             'model_id' => '1',
             'collection_name' => 'avatars',
@@ -25,7 +28,6 @@ class MediaTest extends TestCase
             'size' => 1024,
         ]);
 
-        /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertDatabaseHas('media', [
             'id' => $media->id,
             'model_type' => 'App\Models\User',
@@ -70,10 +72,12 @@ class MediaTest extends TestCase
             'curations' => ['featured' => true, 'gallery' => false],
         ];
 
-        /** @var \Illuminate\Database\Eloquent\Collection */
-        $media = Media/** @phpstan-ignore-line */ ::factory()->create($mediaData);
+        /** @var \Illuminate\Database\Eloquent\Factories\Factory<Media> $factory */
+        $factory = Media::factory();
 
-        /** @phpstan-ignore-next-line property.notFound, method.nonObject */
+        /** @var Media $media */
+        $media = $factory->create($mediaData);
+
         $this->assertDatabaseHas('media', [
             'id' => $media->id,
             'model_type' => 'App\Models\Post',
@@ -110,43 +114,49 @@ class MediaTest extends TestCase
 
     public function test_media_has_soft_deletes(): void
     {
-        /** @var \Illuminate\Database\Eloquent\Collection */
-        $media = Media/** @phpstan-ignore-line */ ::factory()->create();
+        /** @var \Illuminate\Database\Eloquent\Factories\Factory<Media> $factory */
+        $factory = Media::factory();
+
+        /** @var Media $media */
+        $media = $factory->create();
         $mediaId = $media->id;
 
-        /** @phpstan-ignore-next-line method.nonObject */
         $media->delete();
 
-        /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertSoftDeleted('media', ['id' => $mediaId]);
-        /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertDatabaseMissing('media', ['id' => $mediaId]);
     }
 
     public function test_can_restore_soft_deleted_media(): void
     {
-        /** @var \Illuminate\Database\Eloquent\Collection */
-        $media = Media/** @phpstan-ignore-line */ ::factory()->create();
+        /** @var \Illuminate\Database\Eloquent\Factories\Factory<Media> $factory */
+        $factory = Media::factory();
+
+        /** @var Media $media */
+        $media = $factory->create();
         $mediaId = $media->id;
 
-        /** @phpstan-ignore-next-line method.nonObject */
         $media->delete();
-        /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertSoftDeleted('media', ['id' => $mediaId]);
 
+        /** @var Media|null $restoredMedia */
+        /** @phpstan-ignore-next-line staticMethod.notFound, method.nonObject */
         $restoredMedia = Media::withTrashed()->find($mediaId);
-        /** @phpstan-ignore-next-line method.nonObject */
-        $restoredMedia->restore();
+        /** @phpstan-ignore-next-line method.notFound */
+        $restoredMedia?->restore();
 
-        /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertDatabaseHas('media', ['id' => $mediaId]);
+        /** @phpstan-ignore-next-line property.nonObject */
         static::assertNull($restoredMedia->deleted_at);
     }
 
     public function test_can_find_media_by_model_type(): void
     {
-        /** @var \Illuminate\Database\Eloquent\Collection */
-        $media = Media/** @phpstan-ignore-line */ ::factory()->create(['model_type' => 'App\Models\UniqueModel']);
+        /** @var \Illuminate\Database\Eloquent\Factories\Factory<Media> $factory */
+        $factory = Media::factory();
+
+        /** @var Media $media */
+        $media = $factory->create(['model_type' => 'App\Models\UniqueModel']);
 
         $foundMedia = Media::where('model_type', 'App\Models\UniqueModel')->first();
 
@@ -156,8 +166,11 @@ class MediaTest extends TestCase
 
     public function test_can_find_media_by_model_id(): void
     {
-        /** @var \Illuminate\Database\Eloquent\Collection */
-        $media = Media/** @phpstan-ignore-line */ ::factory()->create(['model_id' => '999']);
+        /** @var \Illuminate\Database\Eloquent\Factories\Factory<Media> $factory */
+        $factory = Media::factory();
+
+        /** @var Media $media */
+        $media = $factory->create(['model_id' => '999']);
 
         $foundMedia = Media::where('model_id', '999')->first();
 
@@ -167,21 +180,25 @@ class MediaTest extends TestCase
 
     public function test_can_find_media_by_collection_name(): void
     {
-        Media/** @phpstan-ignore-line */ ::factory()->create(['collection_name' => 'avatars']);
-        Media/** @phpstan-ignore-line */ ::factory()->create(['collection_name' => 'images']);
-        Media/** @phpstan-ignore-line */ ::factory()->create(['collection_name' => 'documents']);
+        /** @var \Illuminate\Database\Eloquent\Factories\Factory<Media> $factory */
+        $factory = Media::factory();
+        $factory->create(['collection_name' => 'avatars']);
+        $factory->create(['collection_name' => 'images']);
+        $factory->create(['collection_name' => 'documents']);
 
         $avatarMedia = Media::where('collection_name', 'avatars')->get();
 
         static::assertCount(1, $avatarMedia);
-        /** @phpstan-ignore-next-line method.nonObject */
         static::assertSame('avatars', $avatarMedia->first()->collection_name);
     }
 
     public function test_can_find_media_by_name(): void
     {
-        /** @var \Illuminate\Database\Eloquent\Collection */
-        $media = Media/** @phpstan-ignore-line */ ::factory()->create(['name' => 'unique-media-name']);
+        /** @var \Illuminate\Database\Eloquent\Factories\Factory<Media> $factory */
+        $factory = Media::factory();
+
+        /** @var Media $media */
+        $media = $factory->create(['name' => 'unique-media-name']);
 
         $foundMedia = Media::where('name', 'unique-media-name')->first();
 
@@ -191,8 +208,11 @@ class MediaTest extends TestCase
 
     public function test_can_find_media_by_file_name(): void
     {
-        /** @var \Illuminate\Database\Eloquent\Collection */
-        $media = Media/** @phpstan-ignore-line */ ::factory()->create(['file_name' => 'unique-file.jpg']);
+        /** @var \Illuminate\Database\Eloquent\Factories\Factory<Media> $factory */
+        $factory = Media::factory();
+
+        /** @var Media $media */
+        $media = $factory->create(['file_name' => 'unique-file.jpg']);
 
         $foundMedia = Media::where('file_name', 'unique-file.jpg')->first();
 
@@ -202,138 +222,148 @@ class MediaTest extends TestCase
 
     public function test_can_find_media_by_disk(): void
     {
-        Media/** @phpstan-ignore-line */ ::factory()->create(['disk' => 'public']);
-        Media/** @phpstan-ignore-line */ ::factory()->create(['disk' => 's3']);
-        Media/** @phpstan-ignore-line */ ::factory()->create(['disk' => 'local']);
+        /** @var \Illuminate\Database\Eloquent\Factories\Factory<Media> $factory */
+        $factory = Media::factory();
+        $factory->create(['disk' => 'public']);
+        $factory->create(['disk' => 's3']);
+        $factory->create(['disk' => 'local']);
 
         $publicMedia = Media::where('disk', 'public')->get();
 
         static::assertCount(1, $publicMedia);
-        /** @phpstan-ignore-next-line method.nonObject */
         static::assertSame('public', $publicMedia->first()->disk);
     }
 
     public function test_can_find_media_by_mime_type(): void
     {
-        Media/** @phpstan-ignore-line */ ::factory()->create(['mime_type' => 'image/jpeg']);
-        Media/** @phpstan-ignore-line */ ::factory()->create(['mime_type' => 'image/png']);
-        Media/** @phpstan-ignore-line */ ::factory()->create(['mime_type' => 'application/pdf']);
+        /** @var \Illuminate\Database\Eloquent\Factories\Factory<Media> $factory */
+        $factory = Media::factory();
+        $factory->create(['mime_type' => 'image/jpeg']);
+        $factory->create(['mime_type' => 'image/png']);
+        $factory->create(['mime_type' => 'application/pdf']);
 
         $jpegMedia = Media::where('mime_type', 'image/jpeg')->get();
 
         static::assertCount(1, $jpegMedia);
-        /** @phpstan-ignore-next-line method.nonObject */
         static::assertSame('image/jpeg', $jpegMedia->first()->mime_type);
     }
 
     public function test_can_find_media_by_size_range(): void
     {
-        Media/** @phpstan-ignore-line */ ::factory()->create(['size' => 512]);
-        Media/** @phpstan-ignore-line */ ::factory()->create(['size' => 1024]);
-        Media/** @phpstan-ignore-line */ ::factory()->create(['size' => 2048]);
+        /** @var \Illuminate\Database\Eloquent\Factories\Factory<Media> $factory */
+        $factory = Media::factory();
+        $factory->create(['size' => 512]);
+        $factory->create(['size' => 1024]);
+        $factory->create(['size' => 2048]);
 
         $largeMedia = Media::where('size', '>', 1000)->get();
 
         static::assertCount(2, $largeMedia);
-        /** @phpstan-ignore-next-line method.nonObject */
         static::assertTrue($largeMedia->every(fn ($media) => $media->size > 1000));
     }
 
     public function test_can_find_media_by_type(): void
     {
-        Media/** @phpstan-ignore-line */ ::factory()->create(['type' => 'image']);
-        Media/** @phpstan-ignore-line */ ::factory()->create(['type' => 'video']);
-        Media/** @phpstan-ignore-line */ ::factory()->create(['type' => 'document']);
+        /** @var \Illuminate\Database\Eloquent\Factories\Factory<Media> $factory */
+        $factory = Media::factory();
+        $factory->create(['type' => 'image']);
+        $factory->create(['type' => 'video']);
+        $factory->create(['type' => 'document']);
 
         $imageMedia = Media::where('type', 'image')->get();
 
         static::assertCount(1, $imageMedia);
-        /** @phpstan-ignore-next-line method.nonObject */
         static::assertSame('image', $imageMedia->first()->type);
     }
 
     public function test_can_find_media_by_extension(): void
     {
-        Media/** @phpstan-ignore-line */ ::factory()->create(['ext' => 'jpg']);
-        Media/** @phpstan-ignore-line */ ::factory()->create(['ext' => 'png']);
-        Media/** @phpstan-ignore-line */ ::factory()->create(['ext' => 'pdf']);
+        /** @var \Illuminate\Database\Eloquent\Factories\Factory<Media> $factory */
+        $factory = Media::factory();
+        $factory->create(['ext' => 'jpg']);
+        $factory->create(['ext' => 'png']);
+        $factory->create(['ext' => 'pdf']);
 
         $jpgMedia = Media::where('ext', 'jpg')->get();
 
         static::assertCount(1, $jpgMedia);
-        /** @phpstan-ignore-next-line method.nonObject */
         static::assertSame('jpg', $jpgMedia->first()->ext);
     }
 
     public function test_can_find_media_by_dimensions(): void
     {
-        Media/** @phpstan-ignore-line */ ::factory()->create(['width' => 1920, 'height' => 1080]);
-        Media/** @phpstan-ignore-line */ ::factory()->create(['width' => 800, 'height' => 600]);
-        Media/** @phpstan-ignore-line */ ::factory()->create(['width' => 400, 'height' => 300]);
+        /** @var \Illuminate\Database\Eloquent\Factories\Factory<Media> $factory */
+        $factory = Media::factory();
+        $factory->create(['width' => 1920, 'height' => 1080]);
+        $factory->create(['width' => 800, 'height' => 600]);
+        $factory->create(['width' => 400, 'height' => 300]);
 
         $hdMedia = Media::where('width', '>=', 1920)->get();
 
         static::assertCount(1, $hdMedia);
-        /** @phpstan-ignore-next-line method.nonObject */
         static::assertSame(1920, $hdMedia->first()->width);
     }
 
     public function test_can_find_media_by_name_pattern(): void
     {
-        Media/** @phpstan-ignore-line */ ::factory()->create(['name' => 'profile-avatar']);
-        Media/** @phpstan-ignore-line */ ::factory()->create(['name' => 'cover-image']);
-        Media/** @phpstan-ignore-line */ ::factory()->create(['name' => 'logo-brand']);
+        /** @var \Illuminate\Database\Eloquent\Factories\Factory<Media> $factory */
+        $factory = Media::factory();
+        $factory->create(['name' => 'profile-avatar']);
+        $factory->create(['name' => 'cover-image']);
+        $factory->create(['name' => 'logo-brand']);
 
         $profileMedia = Media::where('name', 'like', '%profile%')->get();
 
         static::assertCount(1, $profileMedia);
-        /** @phpstan-ignore-next-line method.nonObject */
         static::assertTrue($profileMedia->every(fn ($media) => str_contains($media->name, 'profile')));
     }
 
     public function test_can_find_media_by_custom_properties(): void
     {
-        Media/** @phpstan-ignore-line */ ::factory()->create([
+        /** @var \Illuminate\Database\Eloquent\Factories\Factory<Media> $factory */
+        $factory = Media::factory();
+        $factory->create([
             'custom_properties' => ['alt' => 'Profile picture', 'category' => 'avatar'],
         ]);
 
-        Media/** @phpstan-ignore-line */ ::factory()->create([
+        $factory->create([
             'custom_properties' => ['alt' => 'Cover image', 'category' => 'banner'],
         ]);
 
         $avatarMedia = Media::whereJsonContains('custom_properties->category', 'avatar')->get();
 
         static::assertCount(1, $avatarMedia);
-        /** @phpstan-ignore-next-line method.nonObject */
         static::assertSame('avatar', $avatarMedia->first()->custom_properties['category']);
     }
 
     public function test_can_find_media_by_manipulations(): void
     {
-        Media/** @phpstan-ignore-line */ ::factory()->create([
+        /** @var \Illuminate\Database\Eloquent\Factories\Factory<Media> $factory */
+        $factory = Media::factory();
+        $factory->create([
             'manipulations' => ['resize' => ['width' => 800, 'height' => 600]],
         ]);
 
-        Media/** @phpstan-ignore-line */ ::factory()->create([
+        $factory->create([
             'manipulations' => ['crop' => ['x' => 0, 'y' => 0, 'width' => 400, 'height' => 300]],
         ]);
 
         $resizeMedia = Media::whereJsonContains('manipulations->resize', ['width' => 800, 'height' => 600])->get();
 
         static::assertCount(1, $resizeMedia);
-        /** @phpstan-ignore-next-line method.nonObject */
         static::assertArrayHasKey('resize', $resizeMedia->first()->manipulations);
     }
 
     public function test_can_update_media(): void
     {
-        /** @var \Illuminate\Database\Eloquent\Collection */
-        $media = Media/** @phpstan-ignore-line */ ::factory()->create(['name' => 'Old Name']);
+        /** @var \Illuminate\Database\Eloquent\Factories\Factory<Media> $factory */
+        $factory = Media::factory();
 
-        /** @phpstan-ignore-next-line method.nonObject */
+        /** @var Media $media */
+        $media = $factory->create(['name' => 'Old Name']);
+
         $media->update(['name' => 'New Name']);
 
-        /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertDatabaseHas('media', [
             'id' => $media->id,
             'name' => 'New Name',
@@ -342,8 +372,11 @@ class MediaTest extends TestCase
 
     public function test_can_handle_null_values(): void
     {
-        /** @var \Illuminate\Database\Eloquent\Collection */
-        $media = Media/** @phpstan-ignore-line */ ::factory()->create([
+        /** @var \Illuminate\Database\Eloquent\Factories\Factory<Media> $factory */
+        $factory = Media::factory();
+
+        /** @var Media $media */
+        $media = $factory->create([
             'model_type' => 'App\Models\Test',
             'model_id' => '1',
             'collection_name' => 'test',
@@ -373,7 +406,6 @@ class MediaTest extends TestCase
             'curations' => null,
         ]);
 
-        /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertDatabaseHas('media', [
             'id' => $media->id,
             'uuid' => null,
@@ -395,13 +427,15 @@ class MediaTest extends TestCase
 
     public function test_can_find_media_by_multiple_criteria(): void
     {
-        Media/** @phpstan-ignore-line */ ::factory()->create([
+        /** @var \Illuminate\Database\Eloquent\Factories\Factory<Media> $factory */
+        $factory = Media::factory();
+        $factory->create([
             'collection_name' => 'avatars',
             'type' => 'image',
             'ext' => 'jpg',
         ]);
 
-        Media/** @phpstan-ignore-line */ ::factory()->create([
+        $factory->create([
             'collection_name' => 'documents',
             'type' => 'document',
             'ext' => 'pdf',
@@ -410,61 +444,71 @@ class MediaTest extends TestCase
         $avatarImages = Media::where('collection_name', 'avatars')->where('type', 'image')->get();
 
         static::assertCount(1, $avatarImages);
-        /** @phpstan-ignore-next-line method.nonObject */
         static::assertSame('avatars', $avatarImages->first()->collection_name);
-        /** @phpstan-ignore-next-line method.nonObject */
         static::assertSame('image', $avatarImages->first()->type);
     }
 
     public function test_media_has_media_converts_relationship(): void
     {
-        /** @var \Illuminate\Database\Eloquent\Collection */
-        $media = Media/** @phpstan-ignore-line */ ::factory()->create();
+        /** @var \Illuminate\Database\Eloquent\Factories\Factory<Media> $factory */
+        $factory = Media::factory();
+
+        /** @var Media $media */
+        $media = $factory->create();
 
         static::assertTrue(method_exists($media, 'mediaConverts'));
     }
 
     public function test_media_has_temporary_upload_relationship(): void
     {
-        /** @var \Illuminate\Database\Eloquent\Collection */
-        $media = Media/** @phpstan-ignore-line */ ::factory()->create();
+        /** @var \Illuminate\Database\Eloquent\Factories\Factory<Media> $factory */
+        $factory = Media::factory();
+
+        /** @var Media $media */
+        $media = $factory->create();
 
         static::assertTrue(method_exists($media, 'temporaryUpload'));
     }
 
     public function test_media_has_creator_relationship(): void
     {
-        /** @var \Illuminate\Database\Eloquent\Collection */
-        $media = Media/** @phpstan-ignore-line */ ::factory()->create();
+        /** @var \Illuminate\Database\Eloquent\Factories\Factory<Media> $factory */
+        $factory = Media::factory();
+
+        /** @var Media $media */
+        $media = $factory->create();
 
         static::assertTrue(method_exists($media, 'creator'));
     }
 
     public function test_media_can_get_url_conversion(): void
     {
-        /** @var \Illuminate\Database\Eloquent\Collection */
-        $media = Media/** @phpstan-ignore-line */ ::factory()->create([
+        /** @var \Illuminate\Database\Eloquent\Factories\Factory<Media> $factory */
+        $factory = Media::factory();
+
+        /** @var Media $media */
+        $media = $factory->create([
             'file_name' => 'test-image.jpg',
             'directory' => 'test',
         ]);
 
-        /** @phpstan-ignore-next-line method.nonObject */
         $thumbUrl = $media->getUrlConv('thumb');
         static::assertStringContainsString('thumb.jpg', $thumbUrl);
 
-        /** @phpstan-ignore-next-line method.nonObject */
         $url800 = $media->getUrlConv('800');
         static::assertStringContainsString('800.jpg', $url800);
 
-        /** @phpstan-ignore-next-line method.nonObject */
         $url400 = $media->getUrlConv('400');
         static::assertStringContainsString('400.jpg', $url400);
     }
 
     public function test_media_has_entry_conversions_attribute(): void
     {
-        /** @var \Illuminate\Database\Eloquent\Collection */
-        $media = Media/** @phpstan-ignore-line */ ::factory()->create([
+        /** @var \Illuminate\Database\Eloquent\Factories\Factory<Media> $factory */
+        $factory = Media::factory();
+
+        /** @var Media $media */
+        $media = $factory->create([
             'generated_conversions' => ['thumb' => true, 'medium' => false],
         ]);
 
@@ -472,18 +516,18 @@ class MediaTest extends TestCase
 
         static::assertIsArray($entryConversions);
         static::assertCount(2, $entryConversions);
-        /** @phpstan-ignore-next-line offsetAccess.nonOffsetAccessible */
         static::assertArrayHasKey('name', $entryConversions[0]);
-        /** @phpstan-ignore-next-line offsetAccess.nonOffsetAccessible */
         static::assertArrayHasKey('generated', $entryConversions[0]);
-        /** @phpstan-ignore-next-line offsetAccess.nonOffsetAccessible */
         static::assertArrayHasKey('src', $entryConversions[0]);
     }
 
     public function test_media_has_factory(): void
     {
-        /** @var \Illuminate\Database\Eloquent\Collection */
-        $media = Media/** @phpstan-ignore-line */ ::factory()->create();
+        /** @var \Illuminate\Database\Eloquent\Factories\Factory<Media> $factory */
+        $factory = Media::factory();
+
+        /** @var Media $media */
+        $media = $factory->create();
 
         static::assertNotNull($media->id);
         static::assertInstanceOf(Media::class, $media);
@@ -508,7 +552,6 @@ class MediaTest extends TestCase
             'responsive_images' => 'array',
         ];
 
-        /** @phpstan-ignore-next-line method.nonObject */
         static::assertSame($expectedCasts, $media->getCasts());
     }
 }
