@@ -21,10 +21,8 @@ class GetVideoFrameContentAction
 
     /**
      * Execute the action.
-     *
-     * @return string|null
      */
-    public function execute(string $disk_mp4, string $file_mp4, int $time)
+    public function execute(string $disk_mp4, string $file_mp4, int $time): ?string
     {
         if (! Storage::disk($disk_mp4)->exists($file_mp4)) {
             return '';

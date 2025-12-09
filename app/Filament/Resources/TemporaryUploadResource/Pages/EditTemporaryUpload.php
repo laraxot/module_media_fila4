@@ -13,7 +13,7 @@ class EditTemporaryUpload extends XotBaseEditRecord
     protected static string $resource = TemporaryUploadResource::class;
 
     /**
-     * @return DeleteAction[]
+     * @return array<DeleteAction>
      *
      * @psalm-return list{DeleteAction}
      */
