@@ -4,132 +4,25 @@ declare(strict_types=1);
 
 namespace Modules\Media\Actions\S3;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Aws\S3\ObjectUploader;
 use Exception;
-=======
-=======
->>>>>>> 47a54fe (.)
-=======
->>>>>>> f1c6d6e (.)
-use Exception;
-use Aws\Exception\MultipartUploadException;
-use Aws\S3\Exception\S3Exception;
-use Aws\S3\MultipartUploader;
-use Aws\S3\ObjectUploader;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 5200b63 (.)
-=======
-<<<<<<< HEAD
->>>>>>> 06bb10d (.)
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 37a2da6 (.)
->>>>>>> 98c37f4 (.)
-=======
->>>>>>> a80d398 (.)
-=======
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> e9b0959 (.)
->>>>>>> 47a54fe (.)
-=======
->>>>>>> f1c6d6e (.)
-=======
-use Aws\S3\ObjectUploader;
-use Exception;
->>>>>>> f41e45e (.)
 
 use function Safe\fclose;
 use function Safe\filesize;
 use function Safe\fopen;
 use function Safe\mime_content_type;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-use function Safe\rewind;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 5200b63 (.)
-=======
-=======
->>>>>>> 98c37f4 (.)
-=======
-=======
-=======
-use function Safe\fopen;
-=======
-
->>>>>>> b93ef594b4 (.)
-use function Safe\fclose;
-use function Safe\filesize;
-use function Safe\fopen;
-use function Safe\mime_content_type;
-<<<<<<< HEAD
->>>>>>> a12f125f4a (.)
-=======
-use function Safe\rewind;
->>>>>>> b93ef594b4 (.)
->>>>>>> 47a54fe (.)
-=======
-use function Safe\fopen;
-use function Safe\fclose;
-use function Safe\rewind;
-use function Safe\filesize;
-use function Safe\mime_content_type;
-<<<<<<< HEAD
->>>>>>> 0a466ed (.)
-<<<<<<< HEAD
->>>>>>> 06bb10d (.)
-=======
-=======
->>>>>>> 37a2da6 (.)
->>>>>>> 98c37f4 (.)
-=======
->>>>>>> a80d398 (.)
-=======
->>>>>>> origin/develop
->>>>>>> e9b0959 (.)
->>>>>>> 47a54fe (.)
-=======
->>>>>>> f1c6d6e (.)
-=======
->>>>>>> f41e45e (.)
 
 class UploadFileAction extends BaseS3Action
 {
     /**
      * Upload a file to S3
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @param  array<string, mixed>  $options
-=======
-     * @param array<string, mixed> $options
->>>>>>> 5200b63 (.)
-=======
-     * @param  array<string, mixed>  $options
->>>>>>> f41e45e (.)
      * @return array<string, mixed>
      */
     public function execute(string $localFilePath, string $destinationFilePath, array $options = []): array
     {
         // Validation
-<<<<<<< HEAD
-<<<<<<< HEAD
         if (! file_exists($localFilePath)) {
             $error = "Local file does not exist: {$localFilePath}";
             $this->logger->error($error);
@@ -141,25 +34,6 @@ class UploadFileAction extends BaseS3Action
             $error = "Local file is not readable: {$localFilePath}";
             $this->logger->error($error);
 
-=======
-        if (!file_exists($localFilePath)) {
-=======
-        if (! file_exists($localFilePath)) {
->>>>>>> f41e45e (.)
-            $error = "Local file does not exist: {$localFilePath}";
-            $this->logger->error($error);
-
-            return ['success' => false, 'error' => $error];
-        }
-
-        if (! is_readable($localFilePath)) {
-            $error = "Local file is not readable: {$localFilePath}";
-            $this->logger->error($error);
-<<<<<<< HEAD
->>>>>>> 5200b63 (.)
-=======
-
->>>>>>> f41e45e (.)
             return ['success' => false, 'error' => $error];
         }
 
@@ -195,14 +69,7 @@ class UploadFileAction extends BaseS3Action
                 'fileSize' => filesize($localFilePath),
             ]);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
             /** @var array{ObjectURL?: string, ETag?: string} $result AWS SDK returns array */
-=======
->>>>>>> 5200b63 (.)
-=======
-            /** @var array{ObjectURL?: string, ETag?: string} $result AWS SDK returns array */
->>>>>>> 1900eb1 (.)
             $result = $uploader->upload();
 
             // Close the file after successful upload
