@@ -199,7 +199,7 @@ class GetCloudFrontSignedUrlAction
         ]);
 
         return $cloudFront->getSignedUrl([
-            'url' => $data->base_url . '/' . ltrim($key, '/'),
+            'url' => $data->base_url.'/'.ltrim($key, '/'),
             'expires' => time() + ($expiry * 60),
             'key_pair_id' => $data->key_pair_id,
 <<<<<<< HEAD

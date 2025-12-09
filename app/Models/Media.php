@@ -14,6 +14,7 @@ namespace Modules\Media\Models;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 06bb10d (.)
@@ -34,10 +35,13 @@ use Modules\Xot\Contracts\ProfileContract;
 use Modules\Media\Database\Factories\MediaFactory;
 use Illuminate\Database\Eloquent\Factories\Factory;
 >>>>>>> 5200b63 (.)
+=======
+>>>>>>> f41e45e (.)
 use Eloquent;
 use Exception;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection as EloquentCollection;
+<<<<<<< HEAD
 <<<<<<< HEAD
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -78,11 +82,18 @@ use Modules\Xot\Traits\Updater;
 >>>>>>> b93ef594b4 (.)
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection as EloquentCollection;
+=======
+use Illuminate\Database\Eloquent\Factories\Factory;
+>>>>>>> f41e45e (.)
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Support\Carbon;
+use Modules\Media\Database\Factories\MediaFactory;
 use Modules\Media\Enums\AttachmentTypeEnum;
 use Modules\Xot\Actions\Factory\GetFactoryAction;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 use Eloquent;
@@ -122,6 +133,13 @@ use Modules\Xot\Traits\Updater;
 >>>>>>> 47a54fe (.)
 =======
 >>>>>>> f1c6d6e (.)
+=======
+use Modules\Xot\Contracts\ProfileContract;
+use Modules\Xot\Contracts\UserContract;
+use Modules\Xot\Datas\XotData;
+use Modules\Xot\Traits\Updater;
+use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
+>>>>>>> f41e45e (.)
 use Spatie\MediaLibrary\MediaCollections\Models\Media as SpatieMedia;
 
 /**
@@ -164,9 +182,13 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media as SpatieMedia;
  * @property Model|Eloquent $model
  * @property TemporaryUpload|null $temporaryUpload
 <<<<<<< HEAD
+<<<<<<< HEAD
  *
 =======
 >>>>>>> 5200b63 (.)
+=======
+ *
+>>>>>>> f41e45e (.)
  * @method static MediaCollection<int, static> all($columns = ['*'])
  * @method static MediaCollection<int, static> get($columns = ['*'])
  * @method static Builder|Media newModelQuery()
@@ -206,6 +228,7 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media as SpatieMedia;
  * @method static Builder|Media whereUserId($value)
  * @method static Builder|Media whereUuid($value)
  * @method static Builder|Media whereWidth($value)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -262,10 +285,14 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media as SpatieMedia;
 >>>>>>> 47a54fe (.)
 =======
 >>>>>>> f1c6d6e (.)
+=======
+ *
+>>>>>>> f41e45e (.)
  * @property mixed $extension
  * @property mixed $human_readable_size
  * @property mixed $original_url
  * @property mixed $preview_url
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -279,6 +306,9 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media as SpatieMedia;
 >>>>>>> 47a54fe (.)
 =======
 >>>>>>> f1c6d6e (.)
+=======
+ *
+>>>>>>> f41e45e (.)
  * @method static MediaCollection<int, static> all($columns = ['*'])
  * @method static MediaCollection<int, static> get($columns = ['*'])
  * @method static MediaCollection<int, static> all($columns = ['*'])
@@ -288,14 +318,20 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media as SpatieMedia;
  * @method static MediaCollection<int, static> all($columns = ['*'])
  * @method static MediaCollection<int, static> get($columns = ['*'])
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f41e45e (.)
  *
  * @property string|null $deleted_at
  * @property string|null $deleted_by
  *
+<<<<<<< HEAD
 =======
  * @property string|null $deleted_at
  * @property string|null $deleted_by
 >>>>>>> 5200b63 (.)
+=======
+>>>>>>> f41e45e (.)
  * @method static MediaCollection<int, static> all($columns = ['*'])
  * @method static MediaCollection<int, static> get($columns = ['*'])
  * @method static Builder|Media whereDeletedAt($value)
@@ -313,16 +349,22 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media as SpatieMedia;
  * @method static MediaCollection<int, static> all($columns = ['*'])
  * @method static MediaCollection<int, static> get($columns = ['*'])
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f41e45e (.)
  *
  * @property array $entry_conversions
  * @property EloquentCollection<int, MediaConvert> $mediaConverts
  * @property int|null $media_converts_count
  *
+<<<<<<< HEAD
 =======
  * @property array $entry_conversions
  * @property EloquentCollection<int, MediaConvert> $mediaConverts
  * @property int|null $media_converts_count
 >>>>>>> 5200b63 (.)
+=======
+>>>>>>> f41e45e (.)
  * @method static MediaCollection<int, static> all($columns = ['*'])
  * @method static MediaCollection<int, static> get($columns = ['*'])
  * @method static MediaCollection<int, static> all($columns = ['*'])
@@ -370,11 +412,16 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media as SpatieMedia;
  * @method static MediaCollection<int, static> all($columns = ['*'])
  * @method static MediaCollection<int, static> get($columns = ['*'])
 <<<<<<< HEAD
+<<<<<<< HEAD
  *
  * @property ProfileContract|null $updater
  *
 =======
+=======
+ *
+>>>>>>> f41e45e (.)
  * @property ProfileContract|null $updater
+ *
  * @method static MediaCollection<int, static> all($columns = ['*'])
  * @method static MediaCollection<int, static> get($columns = ['*'])
  * @method static MediaCollection<int, static> all($columns = ['*'])
@@ -391,8 +438,13 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media as SpatieMedia;
  * @method static MediaCollection<int, static> get($columns = ['*'])
  * @method static MediaCollection<int, static> all($columns = ['*'])
  * @method static MediaCollection<int, static> get($columns = ['*'])
+ *
  * @mixin Eloquent
+<<<<<<< HEAD
 >>>>>>> 5200b63 (.)
+=======
+ *
+>>>>>>> f41e45e (.)
  * @method static MediaCollection<int, static> all($columns = ['*'])
  * @method static MediaCollection<int, static> get($columns = ['*'])
  * @method static MediaCollection<int, static> all($columns = ['*'])
@@ -428,6 +480,7 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media as SpatieMedia;
  * @method static MediaCollection<int, static> all($columns = ['*'])
  * @method static MediaCollection<int, static> get($columns = ['*'])
 <<<<<<< HEAD
+<<<<<<< HEAD
  * @method static MediaCollection<int, static> all($columns = ['*'])
  * @method static MediaCollection<int, static> get($columns = ['*'])
  * @method static MediaCollection<int, static> all($columns = ['*'])
@@ -450,8 +503,13 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media as SpatieMedia;
  * @method static MediaFactory factory($count = null, $state = [])
  *
 =======
+=======
+ *
+>>>>>>> f41e45e (.)
  * @mixin IdeHelperMedia
+ *
  * @method static MediaFactory factory($count = null, $state = [])
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 5200b63 (.)
@@ -593,6 +651,9 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media as SpatieMedia;
 >>>>>>> 47a54fe (.)
 =======
 >>>>>>> f1c6d6e (.)
+=======
+ *
+>>>>>>> f41e45e (.)
  * @mixin Eloquent
  */
 class Media extends SpatieMedia
@@ -615,6 +676,7 @@ class Media extends SpatieMedia
         // MediaLibraryPro::ensureInstalled();
 
         return static::whereIn('uuid', $uuids)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -644,6 +706,9 @@ class Media extends SpatieMedia
 >>>>>>> f1c6d6e (.)
             ->whereHasMorph('model', [TemporaryUpload::class], static fn(Builder $builder) => $builder->where(
 >>>>>>> 5200b63 (.)
+=======
+            ->whereHasMorph('model', [TemporaryUpload::class], static fn (Builder $builder) => $builder->where(
+>>>>>>> f41e45e (.)
                 'session_id',
                 session()->getId(),
             ))
@@ -667,15 +732,20 @@ class Media extends SpatieMedia
      *
      * @return BelongsTo<Model, self>
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
 =======
 >>>>>>> 5200b63 (.)
+=======
+     *
+>>>>>>> f41e45e (.)
      * @phpstan-return BelongsTo<Model, $this>
      */
     public function creator(): BelongsTo
     {
         /** @var class-string<Model> $userClass */
         $userClass = XotData::make()->getUserClass();
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -698,6 +768,9 @@ class Media extends SpatieMedia
 >>>>>>> 47a54fe (.)
 =======
 >>>>>>> f1c6d6e (.)
+=======
+
+>>>>>>> f41e45e (.)
         return $this->belongsTo($userClass, 'created_by');
     }
 
@@ -716,6 +789,7 @@ class Media extends SpatieMedia
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (! isset($info['dirname'])) {
             throw new Exception('['.__LINE__.']['.class_basename($this).']');
 =======
@@ -768,6 +842,10 @@ class Media extends SpatieMedia
         if (!isset($info['dirname'])) {
             throw new Exception('[' . __LINE__ . '][' . class_basename($this) . ']');
 >>>>>>> f1c6d6e (.)
+=======
+        if (! isset($info['dirname'])) {
+            throw new Exception('['.__LINE__.']['.class_basename($this).']');
+>>>>>>> f41e45e (.)
         }
         $url = '#';
         switch ($conv) {
@@ -778,6 +856,7 @@ class Media extends SpatieMedia
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $url = $info['dirname'].'/conversions/'.$info['filename'].'-thumb.jpg';
 
                 break;
@@ -806,13 +885,17 @@ class Media extends SpatieMedia
 =======
 >>>>>>> f1c6d6e (.)
                 $url = $info['dirname'] . '/conversions/' . $info['filename'] . '-thumb.jpg';
+=======
+                $url = $info['dirname'].'/conversions/'.$info['filename'].'-thumb.jpg';
+>>>>>>> f41e45e (.)
 
                 break;
             case '800':
-                $url = $info['dirname'] . '/conversions/' . $info['filename'] . '-800.jpg';
+                $url = $info['dirname'].'/conversions/'.$info['filename'].'-800.jpg';
 
                 break;
             case '400':
+<<<<<<< HEAD
                 $url = $info['dirname'] . '/conversions/' . $info['filename'] . '-400.jpg';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -870,6 +953,9 @@ class Media extends SpatieMedia
 >>>>>>> 47a54fe (.)
 =======
 >>>>>>> f1c6d6e (.)
+=======
+                $url = $info['dirname'].'/conversions/'.$info['filename'].'-400.jpg';
+>>>>>>> f41e45e (.)
 
                 break;
         }

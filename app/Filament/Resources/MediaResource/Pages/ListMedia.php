@@ -10,6 +10,7 @@ namespace Modules\Media\Filament\Resources\MediaResource\Pages;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Filament\Actions\Action;
 use Filament\Actions\ActionGroup;
 use Filament\Actions\DeleteAction;
@@ -39,19 +40,31 @@ use Filament\Tables\Filters\BaseFilter;
 use Filament\Actions\ActionGroup;
 use Override;
 use Filament\Actions\ViewAction;
+=======
+>>>>>>> f41e45e (.)
 use Filament\Actions\Action;
+use Filament\Actions\ActionGroup;
 use Filament\Actions\DeleteAction;
+use Filament\Actions\ViewAction;
 use Filament\Tables;
 use Filament\Tables\Columns\TextColumn;
+<<<<<<< HEAD
 >>>>>>> 5200b63 (.)
+=======
+use Filament\Tables\Filters\BaseFilter;
+>>>>>>> f41e45e (.)
 use Filament\Tables\Filters\SelectFilter;
 use Modules\Media\Filament\Resources\MediaResource;
 use Modules\Media\Models\Media;
 use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Override;
 =======
 >>>>>>> 5200b63 (.)
+=======
+use Override;
+>>>>>>> f41e45e (.)
 use Webmozart\Assert\Assert;
 
 class ListMedia extends XotBaseListRecords
@@ -74,6 +87,7 @@ class ListMedia extends XotBaseListRecords
             'mime_type' => TextColumn::make('mime_type')->searchable(),
             'disk' => TextColumn::make('disk')->searchable(),
 <<<<<<< HEAD
+<<<<<<< HEAD
             'size' => TextColumn::make('size')->formatStateUsing(fn (string $state): string => number_format(
                 ((int) $state) / 1024,
                 2,
@@ -84,6 +98,12 @@ class ListMedia extends XotBaseListRecords
                 2,
             ) . ' KB'),
 >>>>>>> 5200b63 (.)
+=======
+            'size' => TextColumn::make('size')->formatStateUsing(fn (string $state): string => number_format(
+                ((int) $state) / 1024,
+                2,
+            ).' KB'),
+>>>>>>> f41e45e (.)
             'created_at' => TextColumn::make('created_at')->dateTime(),
         ];
     }
@@ -118,15 +138,20 @@ class ListMedia extends XotBaseListRecords
                 ->icon('heroicon-s-eye')
                 ->color('gray')
 <<<<<<< HEAD
+<<<<<<< HEAD
                 ->url(static fn (Media $record): string => $record->getUrl())
 =======
                 ->url(static fn(Media $record): string => $record->getUrl())
 >>>>>>> 5200b63 (.)
+=======
+                ->url(static fn (Media $record): string => $record->getUrl())
+>>>>>>> f41e45e (.)
                 ->openUrlInNewTab(true),
             'delete' => DeleteAction::make()->requiresConfirmation(),
             'download' => Action::make('download_attachment')
                 ->icon('heroicon-o-arrow-down-tray')
                 ->color('primary')
+<<<<<<< HEAD
 <<<<<<< HEAD
                 ->action(static function ($record) {
                     // PHPStan Level 10: isset() per Eloquent magic property
@@ -141,15 +166,22 @@ class ListMedia extends XotBaseListRecords
 =======
                 ->action(static fn($record) => response()->download($record->getPath(), $record->file_name)),
 >>>>>>> 5200b63 (.)
+=======
+                ->action(static fn ($record) => response()->download($record->getPath(), $record->file_name)),
+>>>>>>> f41e45e (.)
             'convert' => Action::make('convert')
                 ->icon('media-convert')
                 ->color('gray')
                 ->url(function ($record): string {
                     Assert::string($res = static::$resource::getUrl('convert', ['record' => $record]));
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 5200b63 (.)
+=======
+
+>>>>>>> f41e45e (.)
                     return $res;
                 })
                 ->openUrlInNewTab(true),

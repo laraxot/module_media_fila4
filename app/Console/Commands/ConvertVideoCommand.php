@@ -27,6 +27,7 @@ class ConvertVideoCommand extends Command
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         $this->info('disk: '.print_r($disk, true));
         $this->info('file: '.print_r($file, true));
 
@@ -102,10 +103,18 @@ class ConvertVideoCommand extends Command
 >>>>>>> 47a54fe (.)
 =======
 >>>>>>> f1c6d6e (.)
+=======
+        $this->info('disk: '.print_r($disk, true));
+        $this->info('file: '.print_r($file, true));
+
+        if (! Storage::disk($disk)->exists($file)) {
+            $this->error('['.$disk.'] file ['.$file.'] Not Exists');
+>>>>>>> f41e45e (.)
 
             return '';
         }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -178,6 +187,11 @@ class ConvertVideoCommand extends Command
         $extension = mb_strtolower(class_basename($format));
         $file_new = Str::of($file)->replaceLast('.mp4', '.' . $extension)->toString();
 >>>>>>> f1c6d6e (.)
+=======
+        $format = new WebM;
+        $extension = mb_strtolower(class_basename($format));
+        $file_new = Str::of($file)->replaceLast('.mp4', '.'.$extension)->toString();
+>>>>>>> f41e45e (.)
 
         $media = FFMpeg::fromDisk($disk)->open($file);
         $export = $media->export();

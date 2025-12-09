@@ -6,6 +6,7 @@ namespace Modules\Media\Actions;
 
 use Exception;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Illuminate\Support\Facades\Storage;
 =======
 use Filament\Forms;
@@ -27,14 +28,19 @@ use Modules\UI\Actions\Icon\GetAllIconsAction;
 use Modules\Xot\Actions\ModelClass\CountAction;
 use Modules\Xot\Filament\Traits\NavigationLabelTrait;
 >>>>>>> 5200b63 (.)
+=======
+use Illuminate\Support\Facades\Storage;
+>>>>>>> f41e45e (.)
 use Spatie\MediaLibrary\HasMedia;
-use Webmozart\Assert\Assert;
 
 use function Safe\file_put_contents;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 use function Safe\glob;
 >>>>>>> 5200b63 (.)
+=======
+>>>>>>> f41e45e (.)
 use function Safe\tempnam;
 use function Safe\unlink;
 
@@ -100,6 +106,7 @@ class SaveAttachmentsAction
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             if (! $storage->exists($path)) {
 =======
 =======
@@ -144,6 +151,9 @@ class SaveAttachmentsAction
 >>>>>>> f1c6d6e (.)
             if (!$storage->exists($path)) {
 >>>>>>> 5200b63 (.)
+=======
+            if (! $storage->exists($path)) {
+>>>>>>> f41e45e (.)
                 continue;
             }
 
@@ -169,11 +179,15 @@ class SaveAttachmentsAction
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (! empty($dataAttachments)) {
             /** @var array<string, string> $dataAttachments */
 =======
         if (!empty($dataAttachments)) {
 >>>>>>> 5200b63 (.)
+=======
+        if (! empty($dataAttachments)) {
+>>>>>>> f41e45e (.)
             $record->update($dataAttachments);
         }
     }
@@ -198,14 +212,19 @@ class SaveAttachmentsAction
 =======
             $path = $data[$attachment];
             $full_path = Storage::disk($disk)->path($path);
+<<<<<<< HEAD
             //*
 >>>>>>> 5200b63 (.)
+=======
+            // *
+>>>>>>> f41e45e (.)
             dddx([
                 'exists' => Storage::disk($disk)->exists($path),
                 'path' => $path,
                 'disk' => $disk,
                 'full_path' => Storage::disk($disk)->path($path),
             ]);
+<<<<<<< HEAD
 <<<<<<< HEAD
             // */
             if (! method_exists($record, 'addMediaFromDisk')) {
@@ -227,11 +246,15 @@ class SaveAttachmentsAction
 =======
             //*/
             if (!method_exists($record, 'addMediaFromDisk')) {
+=======
+            // */
+            if (! method_exists($record, 'addMediaFromDisk')) {
+>>>>>>> f41e45e (.)
                 throw new Exception('Method addMediaFromDisk not found');
             }
             $media = $record
                 ->addMediaFromDisk($path, $disk)
-                //$media=$record->addMediaFromRequest($attachment)
+                // $media=$record->addMediaFromRequest($attachment)
 
                 // $media=$record->addMedia($full_path)
                 ->toMediaCollection($attachment);

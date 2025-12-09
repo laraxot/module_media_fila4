@@ -23,6 +23,7 @@ enum AttachmentTypeEnum: string implements HasLabel
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             ->mapWithKeys(static fn (self $case): array => [$case->value => $case->getTypeNote()])
 =======
             ->mapWithKeys(static fn(self $case): array => [$case->value => $case->getTypeNote()])
@@ -69,6 +70,9 @@ enum AttachmentTypeEnum: string implements HasLabel
 =======
             ->mapWithKeys(static fn(self $case): array => [$case->value => $case->getTypeNote()])
 >>>>>>> f1c6d6e (.)
+=======
+            ->mapWithKeys(static fn (self $case): array => [$case->value => $case->getTypeNote()])
+>>>>>>> f41e45e (.)
             ->toArray();
     }
 
@@ -82,6 +86,7 @@ enum AttachmentTypeEnum: string implements HasLabel
      * }
      */
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     public function getTypeNote(): ?string
 =======
@@ -138,6 +143,9 @@ enum AttachmentTypeEnum: string implements HasLabel
 >>>>>>> 47a54fe (.)
 =======
 >>>>>>> f1c6d6e (.)
+=======
+    public function getTypeNote(): ?string
+>>>>>>> f41e45e (.)
     {
         $translationKey = sprintf('media::attachments.type_notes.%s', $this->value);
         if (Lang::has($translationKey)) {
@@ -149,6 +157,7 @@ enum AttachmentTypeEnum: string implements HasLabel
 
     public function getLabel(): string
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -197,6 +206,9 @@ enum AttachmentTypeEnum: string implements HasLabel
 =======
         return trans('media::attachments.types.' . $this->value);
 >>>>>>> f1c6d6e (.)
+=======
+        return trans('media::attachments.types.'.$this->value);
+>>>>>>> f41e45e (.)
     }
 
     // private static function translateBaseUniquePath(): string

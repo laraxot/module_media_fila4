@@ -39,9 +39,14 @@ class FileExtensionRule implements Rule
     }
 
     /**
+<<<<<<< HEAD
      * @param  mixed $_attribute The attribute being validated (not used in this rule)
      * @param  UploadedFile  $value The uploaded file to validate
 >>>>>>> 5200b63 (.)
+=======
+     * @param  mixed  $_attribute  The attribute being validated (not used in this rule)
+     * @param  UploadedFile  $value  The uploaded file to validate
+>>>>>>> f41e45e (.)
      */
     public function passes($_attribute, $value): bool
     {

@@ -17,6 +17,7 @@ class TemporaryUploadPathGenerator
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  Media  $media
      */
     public function getPath($media): string
@@ -47,25 +48,29 @@ class TemporaryUploadPathGenerator
 =======
 >>>>>>> f1c6d6e (.)
      * @param Media $media
+=======
+     * @param  Media  $media
+>>>>>>> f41e45e (.)
      */
     public function getPath($media): string
     {
-        return $this->getBasePath($media) . '/' . md5($media->id . $media->uuid . 'original') . '/';
+        return $this->getBasePath($media).'/'.md5($media->id.$media->uuid.'original').'/';
     }
 
     /**
-     * @param Media $media
+     * @param  Media  $media
      */
     public function getPathForConversions($media): string
     {
-        return $this->getBasePath($media) . '/' . md5($media->id . $media->uuid . 'conversion');
+        return $this->getBasePath($media).'/'.md5($media->id.$media->uuid.'conversion');
     }
 
     /**
-     * @param Media $media
+     * @param  Media  $media
      */
     public function getPathForResponsiveImages($media): string
     {
+<<<<<<< HEAD
         return $this->getBasePath($media) . '/' . md5($media->id . $media->uuid . 'responsive');
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -123,11 +128,15 @@ class TemporaryUploadPathGenerator
 >>>>>>> 47a54fe (.)
 =======
 >>>>>>> f1c6d6e (.)
+=======
+        return $this->getBasePath($media).'/'.md5($media->id.$media->uuid.'responsive');
+>>>>>>> f41e45e (.)
     }
 
     /**
      * Get a unique base path for the given media.
      *
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -148,15 +157,22 @@ class TemporaryUploadPathGenerator
 =======
      * @param Media $media
 >>>>>>> f1c6d6e (.)
+=======
+     * @param  Media  $media
+>>>>>>> f41e45e (.)
      */
     protected function getBasePath($media): string
     {
         Assert::string($id = $media->getKey());
 <<<<<<< HEAD
+<<<<<<< HEAD
         $key = md5($media->uuid.$id);
 =======
         $key = md5($media->uuid . $id);
 >>>>>>> 5200b63 (.)
+=======
+        $key = md5($media->uuid.$id);
+>>>>>>> f41e45e (.)
 
         return "tmp/{$key}";
     }
