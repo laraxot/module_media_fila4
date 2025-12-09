@@ -1,8 +1,11 @@
+<<<<<<< HEAD
 <?php
 
 declare(strict_types=1);
 
 ?>
+=======
+>>>>>>> 0a466ed (.)
 <x-filament-widgets::widget>
     <x-filament::section>
         {{-- Widget content --}}
