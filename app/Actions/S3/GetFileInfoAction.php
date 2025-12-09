@@ -20,6 +20,7 @@ class GetFileInfoAction extends BaseS3Action
                 'Bucket' => $this->bucketName,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -27,6 +28,8 @@ class GetFileInfoAction extends BaseS3Action
 >>>>>>> e9b0959 (.)
 =======
 >>>>>>> 5200b63 (.)
+=======
+>>>>>>> 06bb10d (.)
                 'Key' => $key,
             ]);
 
@@ -36,15 +39,20 @@ class GetFileInfoAction extends BaseS3Action
                 : null;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 =======
 >>>>>>> origin/develop
+=======
+=======
+>>>>>>> 06bb10d (.)
                 'Key'    => $key,
             ]);
 
             $metadata = $result['@metadata'] ?? [];
             $effectiveUri = is_array($metadata) && isset($metadata['effectiveUri']) ? (string) $metadata['effectiveUri'] : null;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> a12f125f4a (.)
 =======
@@ -61,6 +69,9 @@ class GetFileInfoAction extends BaseS3Action
 >>>>>>> e9b0959 (.)
 =======
 >>>>>>> 5200b63 (.)
+=======
+>>>>>>> 0a466ed (.)
+>>>>>>> 06bb10d (.)
 
             $fileInfo = [
                 'exists' => true,
@@ -72,6 +83,7 @@ class GetFileInfoAction extends BaseS3Action
                 'etag' => $result['ETag'] ?? null,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 'metadata' => $result['Metadata'] ?? [],
 =======
 <<<<<<< HEAD
@@ -91,12 +103,19 @@ class GetFileInfoAction extends BaseS3Action
 =======
                 'metadata' => $result['Metadata'] ?? [],
 >>>>>>> 5200b63 (.)
+=======
+                'metadata' => $result['Metadata'] ?? [],
+=======
+                'metadata' => $result['Metadata'] ?? []
+>>>>>>> 0a466ed (.)
+>>>>>>> 06bb10d (.)
             ];
 
             $this->logger->info('File info retrieved successfully', [
                 'key' => $key,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -104,22 +123,29 @@ class GetFileInfoAction extends BaseS3Action
 >>>>>>> e9b0959 (.)
 =======
 >>>>>>> 5200b63 (.)
+=======
+>>>>>>> 06bb10d (.)
                 'size' => $fileInfo['contentLength'],
             ]);
 
             return $fileInfo;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 =======
 >>>>>>> origin/develop
+=======
+=======
+>>>>>>> 06bb10d (.)
                 'size' => $fileInfo['contentLength']
             ]);
 
             return $fileInfo;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> a12f125f4a (.)
 =======
                 'size' => $fileInfo['contentLength'],
@@ -132,10 +158,14 @@ class GetFileInfoAction extends BaseS3Action
 >>>>>>> e9b0959 (.)
 =======
 >>>>>>> 5200b63 (.)
+=======
+>>>>>>> 0a466ed (.)
+>>>>>>> 06bb10d (.)
         } catch (S3Exception $exception) {
             $this->logger->error('Error getting file info from S3', [
                 'key' => $key,
                 'error' => $exception->getMessage(),
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                 'statusCode' => $exception->getStatusCode(),
@@ -157,6 +187,12 @@ class GetFileInfoAction extends BaseS3Action
 =======
                 'statusCode' => $exception->getStatusCode(),
 >>>>>>> 5200b63 (.)
+=======
+                'statusCode' => $exception->getStatusCode(),
+=======
+                'statusCode' => $exception->getStatusCode()
+>>>>>>> 0a466ed (.)
+>>>>>>> 06bb10d (.)
             ]);
 
             return [
@@ -165,6 +201,7 @@ class GetFileInfoAction extends BaseS3Action
                 'error' => $exception->getMessage(),
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -172,11 +209,14 @@ class GetFileInfoAction extends BaseS3Action
 >>>>>>> e9b0959 (.)
 =======
 >>>>>>> 5200b63 (.)
+=======
+>>>>>>> 06bb10d (.)
                 'errorCode' => $exception->getStatusCode(),
             ];
         }
     }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -194,12 +234,18 @@ class GetFileInfoAction extends BaseS3Action
 =======
 >>>>>>> b93ef594b4 (.)
 =======
+>>>>>>> 06bb10d (.)
+=======
                 'errorCode' => $exception->getStatusCode()
             ];
         }
     }
 }
+<<<<<<< HEAD
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
 =======
 >>>>>>> 5200b63 (.)
+=======
+>>>>>>> 0a466ed (.)
+>>>>>>> 06bb10d (.)

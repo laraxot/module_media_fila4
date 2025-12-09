@@ -11,6 +11,7 @@ use Spatie\MediaLibrary\Conversions\ImageGenerators\ImageGenerator;
 class Webm extends ImageGenerator
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function convert(string $file, ?Conversion $conversion = null): string
     {
         $pathToImageFile = pathinfo($file, PATHINFO_DIRNAME).'/'.pathinfo($file, PATHINFO_FILENAME).'.webmXXX';
@@ -19,6 +20,16 @@ class Webm extends ImageGenerator
     {
         $pathToImageFile = pathinfo($file, PATHINFO_DIRNAME) . '/' . pathinfo($file, PATHINFO_FILENAME) . '.webmXXX';
 >>>>>>> 5200b63 (.)
+=======
+    public function convert(string $file, null|Conversion $conversion = null): string
+    {
+        $pathToImageFile = pathinfo($file, PATHINFO_DIRNAME) . '/' . pathinfo($file, PATHINFO_FILENAME) . '.webmXXX';
+=======
+    public function convert(string $file, ?Conversion $conversion = null): string
+    {
+        $pathToImageFile = pathinfo($file, PATHINFO_DIRNAME).'/'.pathinfo($file, PATHINFO_FILENAME).'.webmXXX';
+>>>>>>> 0a466ed (.)
+>>>>>>> 06bb10d (.)
         dddx([
             'file' => $file,
             '$pathToImageFile' => ${$pathToImageFile},
@@ -26,18 +37,28 @@ class Webm extends ImageGenerator
         ]);
 
         /*
+<<<<<<< HEAD
          * $image = imagecreatefromwebp($file);
          *
          * imagepng($image, $pathToImageFile, 9);
          *
          * imagedestroy($image);
          */
+=======
+        $image = imagecreatefromwebp($file);
+
+        imagepng($image, $pathToImageFile, 9);
+
+        imagedestroy($image);
+        */
+>>>>>>> 0a466ed (.)
         return $pathToImageFile;
     }
 
     public function requirementsAreInstalled(): bool
     {
         /*
+<<<<<<< HEAD
          * if (! function_exists('imagecreatefromwebp')) {
          * return false;
          * }
@@ -50,6 +71,20 @@ class Webm extends ImageGenerator
          * return false;
          * }
          */
+=======
+        if (! function_exists('imagecreatefromwebp')) {
+            return false;
+        }
+
+        if (! function_exists('imagepng')) {
+            return false;
+        }
+
+        if (! function_exists('imagedestroy')) {
+            return false;
+        }
+        */
+>>>>>>> 0a466ed (.)
         return true;
     }
 
