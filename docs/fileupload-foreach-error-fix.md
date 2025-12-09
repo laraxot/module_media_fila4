@@ -39,6 +39,7 @@ L'errore si verifica nel metodo `getUploadedFiles` di `Filament\Forms\Components
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 - **Resource**: `Modules\<nome modulo>\Filament\Resources\PatientResource`
 >>>>>>> 7df6a71 (.)
@@ -62,7 +63,13 @@ L'errore si verifica nel metodo `getUploadedFiles` di `Filament\Forms\Components
 >>>>>>> 2883a97 (.)
 =======
 >>>>>>> 446a02b (.)
+=======
+>>>>>>> 09fde8f (.)
 - **Resource**: `Modules\SaluteOra\Filament\Resources\PatientResource`
+=======
+- **Resource**: `Modules\<nome modulo>\Filament\Resources\PatientResource`
+- **Resource**: `Modules\<nome modulo>\Filament\Resources\PatientResource`
+>>>>>>> 9348522 (.)
 - **Campi coinvolti**:
   - `data.health_card`
   - `data.identity_document`
