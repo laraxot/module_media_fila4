@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Media Module - Testing Guidelines
 
 ## Testing Framework Requirements
@@ -479,3 +480,5 @@ describe('Media Performance Tests', function () {
 **Last Updated**: 2025-08-28
 **Testing Framework**: Pest
 **Environment**: .env.testing
+=======
+>>>>>>> 8cdc78f (.)
