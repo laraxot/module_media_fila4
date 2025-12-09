@@ -41,13 +41,6 @@ return [
             'tooltip' => 'Invia email con allegato per test',
         ],
     ],
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> 0a466ed (.)
-=======
->>>>>>> 37a2da6 (.)
     'notifications' => [
         'credentials_tested' => 'Credenziali AWS testate',
         'bucket_policy_tested' => 'Policy bucket testata',
@@ -63,23 +56,9 @@ return [
         'email_with_attachment' => 'Email con allegato inviata correttamente',
         'email_failed' => 'Invio email fallito',
     ],
-<<<<<<< HEAD
-<<<<<<< HEAD
     'debug' => [
         'run_tests_message' => 'Esegui i test per vedere i risultati qui...',
     ],
-=======
-
-    'debug' => [
-        'run_tests_message' => 'Esegui i test per vedere i risultati qui...',
-    ],
-
->>>>>>> 0a466ed (.)
-=======
-    'debug' => [
-        'run_tests_message' => 'Esegui i test per vedere i risultati qui...',
-    ],
->>>>>>> 37a2da6 (.)
     'fields' => [
         'attachment' => [
             'label' => 'Allegato',
@@ -92,13 +71,6 @@ return [
             'helper_text' => 'Output dettagliato dei test eseguiti',
         ],
     ],
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> 0a466ed (.)
-=======
->>>>>>> 37a2da6 (.)
     'messages' => [
         'test_successful' => 'Test completato con successo',
         'test_failed' => 'Test fallito',
@@ -109,13 +81,6 @@ return [
         'connection_ok' => 'Connessione stabilita',
         'connection_failed' => 'Connessione fallita',
     ],
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> 0a466ed (.)
-=======
->>>>>>> 37a2da6 (.)
     'errors' => [
         'aws_credentials_invalid' => 'Credenziali AWS non valide',
         's3_bucket_inaccessible' => 'Bucket S3 non accessibile',
@@ -124,13 +89,6 @@ return [
         'permissions_insufficient' => 'Permessi insufficienti',
         'unknown_error' => 'Errore sconosciuto',
     ],
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> 0a466ed (.)
-=======
->>>>>>> 37a2da6 (.)
     'solutions' => [
         'check_credentials' => 'Verifica le credenziali AWS in .env',
         'check_bucket_name' => 'Verifica il nome del bucket S3',
