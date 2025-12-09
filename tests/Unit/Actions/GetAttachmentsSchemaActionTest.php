@@ -13,15 +13,7 @@ class GetAttachmentsSchemaActionTest extends TestCase
     public function test_returns_attachment_schema(): void
     {
         // Arrange
-<<<<<<< HEAD
-<<<<<<< HEAD
         $action = new GetAttachmentsSchemaAction;
-=======
-        $action = new GetAttachmentsSchemaAction();
->>>>>>> 5200b63 (.)
-=======
-        $action = new GetAttachmentsSchemaAction;
->>>>>>> f41e45e (.)
         $attachments = ['invoice', 'contract', 'receipt'];
 
         // Act
@@ -40,15 +32,7 @@ class GetAttachmentsSchemaActionTest extends TestCase
     public function test_schema_has_correct_names(): void
     {
         // Arrange
-<<<<<<< HEAD
-<<<<<<< HEAD
         $action = new GetAttachmentsSchemaAction;
-=======
-        $action = new GetAttachmentsSchemaAction();
->>>>>>> 5200b63 (.)
-=======
-        $action = new GetAttachmentsSchemaAction;
->>>>>>> f41e45e (.)
         $attachments = ['invoice', 'contract'];
 
         // Act
@@ -62,15 +46,7 @@ class GetAttachmentsSchemaActionTest extends TestCase
     public function test_schema_has_correct_labels(): void
     {
         // Arrange
-<<<<<<< HEAD
-<<<<<<< HEAD
         $action = new GetAttachmentsSchemaAction;
-=======
-        $action = new GetAttachmentsSchemaAction();
->>>>>>> 5200b63 (.)
-=======
-        $action = new GetAttachmentsSchemaAction;
->>>>>>> f41e45e (.)
         $attachments = ['invoice'];
 
         // Act
@@ -83,15 +59,7 @@ class GetAttachmentsSchemaActionTest extends TestCase
     public function test_schema_has_correct_validation(): void
     {
         // Arrange
-<<<<<<< HEAD
-<<<<<<< HEAD
         $action = new GetAttachmentsSchemaAction;
-=======
-        $action = new GetAttachmentsSchemaAction();
->>>>>>> 5200b63 (.)
-=======
-        $action = new GetAttachmentsSchemaAction;
->>>>>>> f41e45e (.)
         $attachments = ['invoice'];
 
         // Act
@@ -108,15 +76,7 @@ class GetAttachmentsSchemaActionTest extends TestCase
     public function test_schema_has_correct_storage(): void
     {
         // Arrange
-<<<<<<< HEAD
-<<<<<<< HEAD
         $action = new GetAttachmentsSchemaAction;
-=======
-        $action = new GetAttachmentsSchemaAction();
->>>>>>> 5200b63 (.)
-=======
-        $action = new GetAttachmentsSchemaAction;
->>>>>>> f41e45e (.)
         $attachments = ['invoice'];
 
         // Act
@@ -130,15 +90,7 @@ class GetAttachmentsSchemaActionTest extends TestCase
     public function test_schema_has_correct_directory(): void
     {
         // Arrange
-<<<<<<< HEAD
-<<<<<<< HEAD
         $action = new GetAttachmentsSchemaAction;
-=======
-        $action = new GetAttachmentsSchemaAction();
->>>>>>> 5200b63 (.)
-=======
-        $action = new GetAttachmentsSchemaAction;
->>>>>>> f41e45e (.)
         $attachments = ['invoice'];
 
         // Act
@@ -152,15 +104,7 @@ class GetAttachmentsSchemaActionTest extends TestCase
     public function test_schema_has_correct_visibility(): void
     {
         // Arrange
-<<<<<<< HEAD
-<<<<<<< HEAD
         $action = new GetAttachmentsSchemaAction;
-=======
-        $action = new GetAttachmentsSchemaAction();
->>>>>>> 5200b63 (.)
-=======
-        $action = new GetAttachmentsSchemaAction;
->>>>>>> f41e45e (.)
         $attachments = ['invoice'];
 
         // Act
@@ -174,15 +118,7 @@ class GetAttachmentsSchemaActionTest extends TestCase
     public function test_schema_has_correct_max_size(): void
     {
         // Arrange
-<<<<<<< HEAD
-<<<<<<< HEAD
         $action = new GetAttachmentsSchemaAction;
-=======
-        $action = new GetAttachmentsSchemaAction();
->>>>>>> 5200b63 (.)
-=======
-        $action = new GetAttachmentsSchemaAction;
->>>>>>> f41e45e (.)
         $attachments = ['invoice'];
 
         // Act
@@ -196,15 +132,7 @@ class GetAttachmentsSchemaActionTest extends TestCase
     public function test_schema_has_correct_multiple(): void
     {
         // Arrange
-<<<<<<< HEAD
-<<<<<<< HEAD
         $action = new GetAttachmentsSchemaAction;
-=======
-        $action = new GetAttachmentsSchemaAction();
->>>>>>> 5200b63 (.)
-=======
-        $action = new GetAttachmentsSchemaAction;
->>>>>>> f41e45e (.)
         $attachments = ['invoice'];
 
         // Act
@@ -218,15 +146,7 @@ class GetAttachmentsSchemaActionTest extends TestCase
     public function test_schema_has_correct_preview(): void
     {
         // Arrange
-<<<<<<< HEAD
-<<<<<<< HEAD
         $action = new GetAttachmentsSchemaAction;
-=======
-        $action = new GetAttachmentsSchemaAction();
->>>>>>> 5200b63 (.)
-=======
-        $action = new GetAttachmentsSchemaAction;
->>>>>>> f41e45e (.)
         $attachments = ['invoice'];
 
         // Act
@@ -240,15 +160,7 @@ class GetAttachmentsSchemaActionTest extends TestCase
     public function test_schema_has_correct_download(): void
     {
         // Arrange
-<<<<<<< HEAD
-<<<<<<< HEAD
         $action = new GetAttachmentsSchemaAction;
-=======
-        $action = new GetAttachmentsSchemaAction();
->>>>>>> 5200b63 (.)
-=======
-        $action = new GetAttachmentsSchemaAction;
->>>>>>> f41e45e (.)
         $attachments = ['invoice'];
 
         // Act
@@ -262,15 +174,7 @@ class GetAttachmentsSchemaActionTest extends TestCase
     public function test_schema_has_correct_remove(): void
     {
         // Arrange
-<<<<<<< HEAD
-<<<<<<< HEAD
         $action = new GetAttachmentsSchemaAction;
-=======
-        $action = new GetAttachmentsSchemaAction();
->>>>>>> 5200b63 (.)
-=======
-        $action = new GetAttachmentsSchemaAction;
->>>>>>> f41e45e (.)
         $attachments = ['invoice'];
 
         // Act
@@ -284,15 +188,7 @@ class GetAttachmentsSchemaActionTest extends TestCase
     public function test_schema_has_correct_reorder(): void
     {
         // Arrange
-<<<<<<< HEAD
-<<<<<<< HEAD
         $action = new GetAttachmentsSchemaAction;
-=======
-        $action = new GetAttachmentsSchemaAction();
->>>>>>> 5200b63 (.)
-=======
-        $action = new GetAttachmentsSchemaAction;
->>>>>>> f41e45e (.)
         $attachments = ['invoice'];
 
         // Act
@@ -306,15 +202,7 @@ class GetAttachmentsSchemaActionTest extends TestCase
     public function test_schema_has_correct_append(): void
     {
         // Arrange
-<<<<<<< HEAD
-<<<<<<< HEAD
         $action = new GetAttachmentsSchemaAction;
-=======
-        $action = new GetAttachmentsSchemaAction();
->>>>>>> 5200b63 (.)
-=======
-        $action = new GetAttachmentsSchemaAction;
->>>>>>> f41e45e (.)
         $attachments = ['invoice'];
 
         // Act
@@ -328,15 +216,7 @@ class GetAttachmentsSchemaActionTest extends TestCase
     public function test_schema_has_correct_panel(): void
     {
         // Arrange
-<<<<<<< HEAD
-<<<<<<< HEAD
         $action = new GetAttachmentsSchemaAction;
-=======
-        $action = new GetAttachmentsSchemaAction();
->>>>>>> 5200b63 (.)
-=======
-        $action = new GetAttachmentsSchemaAction;
->>>>>>> f41e45e (.)
         $attachments = ['invoice'];
 
         // Act
@@ -350,15 +230,7 @@ class GetAttachmentsSchemaActionTest extends TestCase
     public function test_schema_has_correct_help_text(): void
     {
         // Arrange
-<<<<<<< HEAD
-<<<<<<< HEAD
         $action = new GetAttachmentsSchemaAction;
-=======
-        $action = new GetAttachmentsSchemaAction();
->>>>>>> 5200b63 (.)
-=======
-        $action = new GetAttachmentsSchemaAction;
->>>>>>> f41e45e (.)
         $attachments = ['invoice'];
 
         // Act
@@ -372,15 +244,7 @@ class GetAttachmentsSchemaActionTest extends TestCase
     public function test_schema_has_correct_placeholder(): void
     {
         // Arrange
-<<<<<<< HEAD
-<<<<<<< HEAD
         $action = new GetAttachmentsSchemaAction;
-=======
-        $action = new GetAttachmentsSchemaAction();
->>>>>>> 5200b63 (.)
-=======
-        $action = new GetAttachmentsSchemaAction;
->>>>>>> f41e45e (.)
         $attachments = ['invoice'];
 
         // Act
