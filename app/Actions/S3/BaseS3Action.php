@@ -13,19 +13,9 @@ abstract class BaseS3Action
     use QueueableAction;
 
     protected S3Client $s3Client;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     protected string $bucketName;
 
-=======
-    protected string $bucketName;
->>>>>>> 5200b63 (.)
-=======
-
-    protected string $bucketName;
-
->>>>>>> f41e45e (.)
     protected LoggerInterface $logger;
 
     public function __construct(LoggerInterface $logger)
@@ -46,57 +36,9 @@ abstract class BaseS3Action
     /**
      * Get string configuration value with type safety.
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @param  string  $configKey  Config key to check first
      * @param  string  $envKey  Environment variable key as fallback
      * @param  string  $default  Default value if neither config nor env is valid
-=======
-=======
-=======
-     * 
->>>>>>> 0a466ed (.)
-<<<<<<< HEAD
->>>>>>> 06bb10d (.)
-=======
-=======
-     *
->>>>>>> 37a2da6 (.)
->>>>>>> 98c37f4 (.)
-=======
->>>>>>> a80d398 (.)
-=======
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-     *
-=======
-     * 
->>>>>>> a12f125f4a (.)
-=======
-     *
->>>>>>> b93ef594b4 (.)
-=======
-     * 
->>>>>>> origin/develop
->>>>>>> e9b0959 (.)
->>>>>>> 47a54fe (.)
-=======
->>>>>>> f1c6d6e (.)
-     * @param string $configKey Config key to check first
-     * @param string $envKey Environment variable key as fallback
-     * @param string $default Default value if neither config nor env is valid
->>>>>>> 5200b63 (.)
-=======
-     * @param  string  $configKey  Config key to check first
-     * @param  string  $envKey  Environment variable key as fallback
-     * @param  string  $default  Default value if neither config nor env is valid
->>>>>>> f41e45e (.)
      * @return string Type-safe string value
      */
     protected function getStringConfig(string $configKey, string $envKey, string $default): string

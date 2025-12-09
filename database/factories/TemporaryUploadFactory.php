@@ -37,89 +37,20 @@ class TemporaryUploadFactory extends Factory
 
     /**
      * Create temporary upload for a specific session.
-<<<<<<< HEAD
-<<<<<<< HEAD
      */
     public function forSession(string $sessionId): static
     {
         return $this->state(fn (array $_attributes): array => [
-=======
-     *
-     * @param string $sessionId
-     * @return static
-     */
-    public function forSession(string $sessionId): static
-    {
-        return $this->state(fn(array $_attributes): array => [
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 5200b63 (.)
-=======
-=======
-        return $this->state(fn (array $attributes): array => [
->>>>>>> 0a466ed (.)
-<<<<<<< HEAD
->>>>>>> 06bb10d (.)
-=======
-=======
-        return $this->state(fn(array $_attributes): array => [
->>>>>>> 37a2da6 (.)
->>>>>>> 98c37f4 (.)
-=======
->>>>>>> a80d398 (.)
-=======
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        return $this->state(fn(array $_attributes): array => [
-=======
-        return $this->state(fn (array $attributes): array => [
->>>>>>> a12f125f4a (.)
-=======
-        return $this->state(fn(array $_attributes): array => [
->>>>>>> b93ef594b4 (.)
-=======
-        return $this->state(fn (array $attributes): array => [
->>>>>>> origin/develop
->>>>>>> e9b0959 (.)
->>>>>>> 47a54fe (.)
-=======
->>>>>>> f1c6d6e (.)
-=======
-     */
-    public function forSession(string $sessionId): static
-    {
-        return $this->state(fn (array $_attributes): array => [
->>>>>>> f41e45e (.)
             'session_id' => $sessionId,
         ]);
     }
 
     /**
      * Create temporary upload for current session.
-<<<<<<< HEAD
-<<<<<<< HEAD
      */
     public function currentSession(): static
     {
         return $this->state(fn (array $_attributes): array => [
-=======
-     *
-     * @return static
-     */
-    public function currentSession(): static
-    {
-        return $this->state(fn(array $_attributes): array => [
->>>>>>> 5200b63 (.)
-=======
-     */
-    public function currentSession(): static
-    {
-        return $this->state(fn (array $_attributes): array => [
->>>>>>> f41e45e (.)
             'session_id' => session()->getId(),
         ]);
     }

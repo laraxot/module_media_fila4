@@ -15,38 +15,12 @@ use Modules\Xot\Traits\Updater;
  */
 abstract class BaseModel extends Model
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     use \Modules\Xot\Models\Traits\HasXotFactory;
-=======
-    use HasFactory;
->>>>>>> 5200b63 (.)
-=======
-    /** @use HasFactory<TFactory> */
-=======
->>>>>>> 1b9d086 (.)
-    use \Modules\Xot\Models\Traits\HasXotFactory;
->>>>>>> 13d1d7e (.)
-=======
-    use HasFactory;
->>>>>>> 2a4b5df (.)
-=======
-    use \Modules\Xot\Models\Traits\HasXotFactory;
->>>>>>> 1900eb1 (.)
 
     // use Searchable;
     // //use Cachable;
     use Updater;
 
-<<<<<<< HEAD
-=======
->>>>>>> fbf6035 (.)
-=======
->>>>>>> 2a4b5df (.)
     /**
      * Indicates whether attributes are snake cased on arrays.
      *
@@ -67,10 +41,6 @@ abstract class BaseModel extends Model
 
     /** @var string */
     protected $connection = 'media';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 2a4b5df (.)
 
     /** @var list<string> */
     protected $fillable = [
@@ -88,35 +58,8 @@ abstract class BaseModel extends Model
         // 'password'
     ];
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     
-=======
-=======
->>>>>>> 2a4b5df (.)
-    /**
-     * ----
-     * Create a new factory instance for the model.
-     *
-     * @return Factory<static>
-     */
-    protected static function newFactory()
-    {
-        return app(GetFactoryAction::class)->execute(static::class);
-    }
-<<<<<<< HEAD
->>>>>>> 5200b63 (.)
-=======
-    
->>>>>>> 1900eb1 (.)
 
-=======
->>>>>>> 13d1d7e (.)
-=======
-
->>>>>>> 2a4b5df (.)
     /** @return array<string, string> */
     protected function casts(): array
     {
@@ -132,9 +75,4 @@ abstract class BaseModel extends Model
             'deleted_by' => 'string',
         ];
     }
-<<<<<<< HEAD
-=======
->>>>>>> fbf6035 (.)
-=======
->>>>>>> 2a4b5df (.)
 }
