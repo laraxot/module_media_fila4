@@ -10,7 +10,6 @@ use Filament\Actions\DeleteAction;
 use Filament\Infolists\Components\ImageEntry;
 use Filament\Infolists\Components\RepeatableEntry;
 use Filament\Infolists\Components\TextEntry;
-use Filament\Infolists\Infolist;
 use Filament\Schemas\Components\Actions;
 use Filament\Schemas\Components\Component;
 use Filament\Schemas\Components\Grid;
@@ -60,7 +59,7 @@ class ViewMedia extends XotBaseViewRecord
                                     $actionData['disk'] = (string) $record->disk;
                                     $actionData['file'] = (string) $record->path.'/'.(string) $record->file_name;
                                     $convert_data = ConvertData::from($actionData);
-                                    
+
                                     /** @var array<string, mixed> $convertArray */
                                     $convertArray = $convert_data->toArray();
                                     $record->mediaConverts()->create($convertArray);
@@ -84,7 +83,7 @@ class ViewMedia extends XotBaseViewRecord
     }
 
     /**
-     * @return DeleteAction[]
+     * @return array<DeleteAction>
      *
      * @psalm-return list{DeleteAction}
      */

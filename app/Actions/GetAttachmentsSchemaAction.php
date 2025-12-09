@@ -6,7 +6,6 @@ namespace Modules\Media\Actions;
 
 use Webmozart\Assert\Assert;
 use Filament\Forms\Components\FileUpload;
-use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
 use Filament\Schemas\Components\Utilities\Set;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Config;
