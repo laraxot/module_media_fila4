@@ -42,6 +42,7 @@ class CheckFileExistsAction extends BaseS3Action
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 =======
@@ -51,10 +52,13 @@ class CheckFileExistsAction extends BaseS3Action
 =======
 >>>>>>> 9a4eacb (.)
 =======
+>>>>>>> c4425b4 (.)
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> e9b0959 (.)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -119,6 +123,8 @@ class CheckFileExistsAction extends BaseS3Action
 >>>>>>> 91c1d65 (.)
 =======
 >>>>>>> c90879e (.)
+=======
+>>>>>>> c4425b4 (.)
                 'Key' => $key,
             ]);
 
@@ -127,6 +133,7 @@ class CheckFileExistsAction extends BaseS3Action
 <<<<<<< HEAD
 
             return true;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -160,6 +167,8 @@ class CheckFileExistsAction extends BaseS3Action
 =======
 >>>>>>> 9a4eacb (.)
 =======
+>>>>>>> c4425b4 (.)
+=======
 =======
                 'Key'    => $key,
 =======
@@ -175,6 +184,7 @@ class CheckFileExistsAction extends BaseS3Action
 =======
 >>>>>>> b93ef594b4 (.)
 =======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -197,12 +207,15 @@ class CheckFileExistsAction extends BaseS3Action
 =======
 =======
 >>>>>>> 10ef3f7 (.)
+=======
+>>>>>>> c4425b4 (.)
                 'Key'    => $key,
             ]);
             
             $this->logger->info('File existence check completed', ['key' => $key, 'exists' => true]);
             return true;
             
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -264,12 +277,17 @@ class CheckFileExistsAction extends BaseS3Action
 >>>>>>> 91c1d65 (.)
 =======
 >>>>>>> c90879e (.)
+=======
+>>>>>>> origin/develop
+>>>>>>> e9b0959 (.)
+>>>>>>> c4425b4 (.)
         } catch (S3Exception $exception) {
             if ($exception->getStatusCode() === 404) {
                 $this->logger->info('File existence check completed', ['key' => $key, 'exists' => false]);
 
                 return false;
             }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -296,10 +314,13 @@ class CheckFileExistsAction extends BaseS3Action
 =======
 >>>>>>> 9a4eacb (.)
 =======
+>>>>>>> c4425b4 (.)
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> e9b0959 (.)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -390,6 +411,8 @@ class CheckFileExistsAction extends BaseS3Action
 >>>>>>> 91c1d65 (.)
 =======
 >>>>>>> c90879e (.)
+=======
+>>>>>>> c4425b4 (.)
 
             $this->logger->error('Error checking file existence in S3', [
                 'key' => $key,
@@ -401,6 +424,7 @@ class CheckFileExistsAction extends BaseS3Action
         }
     }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -444,6 +468,8 @@ class CheckFileExistsAction extends BaseS3Action
 =======
 >>>>>>> 9a4eacb (.)
 =======
+>>>>>>> c4425b4 (.)
+=======
 =======
             
 =======
@@ -464,6 +490,7 @@ class CheckFileExistsAction extends BaseS3Action
 =======
 >>>>>>> b93ef594b4 (.)
 =======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -492,6 +519,8 @@ class CheckFileExistsAction extends BaseS3Action
 =======
 =======
 >>>>>>> 10ef3f7 (.)
+=======
+>>>>>>> c4425b4 (.)
             
             $this->logger->error('Error checking file existence in S3', [
                 'key' => $key,
@@ -503,6 +532,7 @@ class CheckFileExistsAction extends BaseS3Action
         }
     }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -592,3 +622,7 @@ class CheckFileExistsAction extends BaseS3Action
 >>>>>>> 91c1d65 (.)
 =======
 >>>>>>> c90879e (.)
+=======
+>>>>>>> origin/develop
+>>>>>>> e9b0959 (.)
+>>>>>>> c4425b4 (.)
