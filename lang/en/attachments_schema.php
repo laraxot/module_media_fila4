@@ -99,4 +99,20 @@ return [
         'delete_success' => 'File deleted successfully',
         'delete_error' => 'Error deleting file',
     ],
+<<<<<<< HEAD
 ];
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+];
+=======
+]; 
+>>>>>>> a12f125f4a (.)
+=======
+];
+>>>>>>> b93ef594b4 (.)
+=======
+]; 
+>>>>>>> origin/develop
+>>>>>>> e9b0959 (.)
