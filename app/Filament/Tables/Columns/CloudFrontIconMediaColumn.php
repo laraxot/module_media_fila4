@@ -6,7 +6,6 @@ namespace Modules\Media\Filament\Tables\Columns;
 
 use Filament\Tables\Columns\IconColumn;
 use Modules\Media\Actions\CloudFront\GetCloudFrontSignedUrlAction;
-use Modules\Media\Models\Media;
 
 class CloudFrontIconMediaColumn extends IconColumn
 {
@@ -15,42 +14,18 @@ class CloudFrontIconMediaColumn extends IconColumn
         parent::setUp();
         $attachment = $this->getName();
 
-        $this->default(static function (mixed $record) use ($attachment): mixed {
-            if (! is_object($record) || ! method_exists($record, 'getFirstMedia')) {
-                return null;
-            }
-
-            return $record->getFirstMedia($attachment);
-        })
+        $this->default(fn ($record) => $record->getFirstMedia($attachment))
             ->icon('heroicon-o-document-text')
-            ->color(static function (mixed $record) use ($attachment): string {
-                if (! is_object($record) || ! method_exists($record, 'getFirstMedia')) {
-                    return 'danger';
-                }
-
-                return $record->getFirstMedia($attachment) ? 'success' : 'danger';
-            })
-            ->tooltip(static function (mixed $record) use ($attachment): string {
-                if (! is_object($record) || ! method_exists($record, 'getFirstMedia')) {
-                    return 'Documento non caricato';
-                }
-                /** @var Media|null $media */
+            ->color(fn ($record) => $record->getFirstMedia($attachment) ? 'success' : 'danger')
+            ->tooltip(fn ($record) => $record->getFirstMedia($attachment)->file_name ?? 'Documento non caricato')
+            ->url(function ($record) use ($attachment) {
                 $media = $record->getFirstMedia($attachment);
-
-                return $media->file_name ?? 'Documento non caricato';
-            })
-            ->url(static function (mixed $record) use ($attachment): ?string {
-                if (! is_object($record) || ! method_exists($record, 'getFirstMedia')) {
-                    return null;
+                if (! $media) {
+                    return;
                 }
-                /** @var Media|null $media */
-                $media = $record->getFirstMedia($attachment);
+                $signedUrl = app(GetCloudFrontSignedUrlAction::class)->execute($media->getPath(), 60);
 
-                if ($media === null) {
-                    return null;
-                }
-
-                return app(GetCloudFrontSignedUrlAction::class)->execute($media->getPath(), 60);
+                return $signedUrl;
             })
             ->openUrlInNewTab();
     }
