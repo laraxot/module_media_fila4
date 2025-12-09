@@ -121,12 +121,16 @@ namespace Modules\Media\Models;               // Corretto
 ### PHPStan Check
 ```bash
 <<<<<<< HEAD
+<<<<<<< HEAD
 cd /var/www/html/_bases/base_saluteora/laravel
 =======
 cd /var/www/html/_bases/base_techplanner_fila3_mono/laravel
 cd /var/www/html/_bases/base_saluteora/laravel
 cd /var/www/html/_bases/base_techplanner_fila3_mono/laravel
 >>>>>>> 7df6a71 (.)
+=======
+cd /var/www/html/_bases/base_saluteora/laravel
+>>>>>>> 0caa3cf (.)
 ./vendor/bin/phpstan analyze Modules/Media --level=9
 ```
 
