@@ -42,9 +42,12 @@ return [
         ],
     ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 0a466ed (.)
+=======
+>>>>>>> 37a2da6 (.)
     'notifications' => [
         'credentials_tested' => 'AWS-Anmeldedaten getestet',
         'bucket_policy_tested' => 'Bucket-Richtlinie getestet',
@@ -61,6 +64,7 @@ return [
         'email_failed' => 'E-Mail-Versand fehlgeschlagen',
     ],
 <<<<<<< HEAD
+<<<<<<< HEAD
     'debug' => [
         'run_tests_message' => 'Führen Sie Tests aus, um Ergebnisse hier zu sehen...',
     ],
@@ -71,6 +75,11 @@ return [
     ],
 
 >>>>>>> 0a466ed (.)
+=======
+    'debug' => [
+        'run_tests_message' => 'Führen Sie Tests aus, um Ergebnisse hier zu sehen...',
+    ],
+>>>>>>> 37a2da6 (.)
     'fields' => [
         'attachment' => [
             'label' => 'Anhang',
@@ -84,9 +93,12 @@ return [
         ],
     ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 0a466ed (.)
+=======
+>>>>>>> 37a2da6 (.)
     'messages' => [
         'test_successful' => 'Test erfolgreich abgeschlossen',
         'test_failed' => 'Test fehlgeschlagen',
@@ -98,9 +110,12 @@ return [
         'connection_failed' => 'Verbindung fehlgeschlagen',
     ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 0a466ed (.)
+=======
+>>>>>>> 37a2da6 (.)
     'errors' => [
         'aws_credentials_invalid' => 'Ungültige AWS-Anmeldedaten',
         's3_bucket_inaccessible' => 'S3-Bucket nicht zugänglich',
@@ -110,9 +125,12 @@ return [
         'unknown_error' => 'Unbekannter Fehler',
     ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 0a466ed (.)
+=======
+>>>>>>> 37a2da6 (.)
     'solutions' => [
         'check_credentials' => 'Überprüfen Sie die AWS-Anmeldedaten in .env',
         'check_bucket_name' => 'Überprüfen Sie den S3-Bucket-Namen',
