@@ -10,7 +10,7 @@ use Modules\Media\Models\Media;
 class CreateTemporaryUploadFromDirectS3UploadRequest extends FormRequest
 {
     /**
-     * @return array<string>
+     * @return string[]
      *
      * @psalm-return array{uuid: string, key: 'required', bucket: 'required', name: 'required', content_type: 'required', size: 'required'}
      */
