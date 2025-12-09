@@ -56,10 +56,13 @@ return [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 =======
 >>>>>>> 1d21a10 (.)
+=======
+>>>>>>> b8fda23 (.)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -73,6 +76,7 @@ return [
 
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -127,6 +131,8 @@ return [
 >>>>>>> 89eb716 (.)
 =======
 >>>>>>> af40dd6 (.)
+=======
+>>>>>>> b8fda23 (.)
     'notifications' => [
         'credentials_tested' => 'AWS credentials tested',
         'bucket_policy_tested' => 'Bucket policy tested',
@@ -157,6 +163,7 @@ return [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 06bb10d (.)
 =======
@@ -173,10 +180,13 @@ return [
 >>>>>>> 054dfa6 (.)
 =======
 >>>>>>> 89eb716 (.)
+=======
+>>>>>>> b8fda23 (.)
     'debug' => [
         'run_tests_message' => 'Run tests to see results here...',
     ],
 =======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -189,12 +199,15 @@ return [
 >>>>>>> 47a54fe (.)
 =======
 >>>>>>> 1d21a10 (.)
+=======
+>>>>>>> b8fda23 (.)
     'debug' => [
         'run_tests_message' => 'Run tests to see results here...',
     ],
 =======
 =======
 >>>>>>> origin/develop
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -207,11 +220,14 @@ return [
 >>>>>>> 1d21a10 (.)
 =======
 >>>>>>> 054dfa6 (.)
+=======
+>>>>>>> b8fda23 (.)
 
     'debug' => [
         'run_tests_message' => 'Run tests to see results here...',
     ],
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -222,6 +238,8 @@ return [
 >>>>>>> 47a54fe (.)
 =======
 >>>>>>> 1d21a10 (.)
+=======
+>>>>>>> b8fda23 (.)
 >>>>>>> a12f125f4a (.)
 =======
     'debug' => [
@@ -231,6 +249,7 @@ return [
 =======
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -296,6 +315,8 @@ return [
         'run_tests_message' => 'Run tests to see results here...',
     ],
 >>>>>>> af40dd6 (.)
+=======
+>>>>>>> b8fda23 (.)
     'fields' => [
         'attachment' => [
             'label' => 'Attachment',
@@ -323,10 +344,13 @@ return [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 =======
 >>>>>>> 1d21a10 (.)
+=======
+>>>>>>> b8fda23 (.)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -340,6 +364,7 @@ return [
 
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -394,6 +419,8 @@ return [
 >>>>>>> 89eb716 (.)
 =======
 >>>>>>> af40dd6 (.)
+=======
+>>>>>>> b8fda23 (.)
     'messages' => [
         'test_successful' => 'Test completed successfully',
         'test_failed' => 'Test failed',
@@ -419,10 +446,13 @@ return [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 =======
 >>>>>>> 1d21a10 (.)
+=======
+>>>>>>> b8fda23 (.)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -436,6 +466,7 @@ return [
 
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -490,6 +521,8 @@ return [
 >>>>>>> 89eb716 (.)
 =======
 >>>>>>> af40dd6 (.)
+=======
+>>>>>>> b8fda23 (.)
     'errors' => [
         'aws_credentials_invalid' => 'Invalid AWS credentials',
         's3_bucket_inaccessible' => 'S3 bucket not accessible',
@@ -513,10 +546,13 @@ return [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 =======
 >>>>>>> 1d21a10 (.)
+=======
+>>>>>>> b8fda23 (.)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -530,6 +566,7 @@ return [
 
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -584,6 +621,8 @@ return [
 >>>>>>> 89eb716 (.)
 =======
 >>>>>>> af40dd6 (.)
+=======
+>>>>>>> b8fda23 (.)
     'solutions' => [
         'check_credentials' => 'Check AWS credentials in .env',
         'check_bucket_name' => 'Check S3 bucket name',
