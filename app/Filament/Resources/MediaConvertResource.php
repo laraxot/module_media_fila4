@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Media\Filament\Resources;
 
+<<<<<<< HEAD
 use Filament\Forms\Components\Radio;
 use Filament\Forms\Components\TextInput;
 use Filament\Schemas\Components\Component;
@@ -17,6 +18,22 @@ use Override;
 class MediaConvertResource extends XotBaseResource
 {
     protected static ?string $model = MediaConvert::class;
+=======
+use Filament\Schemas\Components\Component;
+use Override;
+use Modules\Media\Filament\Resources\MediaConvertResource\Pages\ListMediaConverts;
+use Modules\Media\Filament\Resources\MediaConvertResource\Pages\CreateMediaConvert;
+use Modules\Media\Filament\Resources\MediaConvertResource\Pages\EditMediaConvert;
+use Filament\Forms\Components\Radio;
+use Filament\Forms\Components\TextInput;
+use Modules\Media\Filament\Resources\MediaConvertResource\Pages;
+use Modules\Media\Models\MediaConvert;
+use Modules\Xot\Filament\Resources\XotBaseResource;
+
+class MediaConvertResource extends XotBaseResource
+{
+    protected static null|string $model = MediaConvert::class;
+>>>>>>> 5200b63 (.)
 
     /**
      * @return array<string, Component>

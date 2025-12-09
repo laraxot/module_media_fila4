@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 return [
 <<<<<<< HEAD
+<<<<<<< HEAD
     'navigation' => [
         'group' => 'Media',
     ],
@@ -30,4 +31,9 @@ return [
   ],
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
+=======
+    'navigation' => [
+        'group' => 'Media',
+    ],
+>>>>>>> 5200b63 (.)
 ];

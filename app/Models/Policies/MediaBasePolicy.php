@@ -12,7 +12,11 @@ abstract class MediaBasePolicy
 {
     use HandlesAuthorization;
 
+<<<<<<< HEAD
     public function before(UserContract $user, string $_ability): ?bool
+=======
+    public function before(UserContract $user, string $_ability): null|bool
+>>>>>>> 5200b63 (.)
     {
         $xotData = XotData::make();
         if ($user->hasRole('super-admin')) {

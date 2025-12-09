@@ -13,9 +13,13 @@ abstract class BaseS3Action
     use QueueableAction;
 
     protected S3Client $s3Client;
+<<<<<<< HEAD
 
     protected string $bucketName;
 
+=======
+    protected string $bucketName;
+>>>>>>> 5200b63 (.)
     protected LoggerInterface $logger;
 
     public function __construct(LoggerInterface $logger)
@@ -36,9 +40,15 @@ abstract class BaseS3Action
     /**
      * Get string configuration value with type safety.
      *
+<<<<<<< HEAD
      * @param  string  $configKey  Config key to check first
      * @param  string  $envKey  Environment variable key as fallback
      * @param  string  $default  Default value if neither config nor env is valid
+=======
+     * @param string $configKey Config key to check first
+     * @param string $envKey Environment variable key as fallback
+     * @param string $default Default value if neither config nor env is valid
+>>>>>>> 5200b63 (.)
      * @return string Type-safe string value
      */
     protected function getStringConfig(string $configKey, string $envKey, string $default): string

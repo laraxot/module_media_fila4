@@ -10,9 +10,15 @@ use Spatie\MediaLibrary\Conversions\ImageGenerators\ImageGenerator;
 
 class Webm extends ImageGenerator
 {
+<<<<<<< HEAD
     public function convert(string $file, ?Conversion $conversion = null): string
     {
         $pathToImageFile = pathinfo($file, PATHINFO_DIRNAME).'/'.pathinfo($file, PATHINFO_FILENAME).'.webmXXX';
+=======
+    public function convert(string $file, null|Conversion $conversion = null): string
+    {
+        $pathToImageFile = pathinfo($file, PATHINFO_DIRNAME) . '/' . pathinfo($file, PATHINFO_FILENAME) . '.webmXXX';
+>>>>>>> 5200b63 (.)
         dddx([
             'file' => $file,
             '$pathToImageFile' => ${$pathToImageFile},

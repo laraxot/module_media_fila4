@@ -4,16 +4,30 @@ declare(strict_types=1);
 
 namespace Modules\Media\Filament\Resources\TemporaryUploadResource\Pages;
 
+<<<<<<< HEAD
 use Filament\Actions\DeleteAction;
 use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\EditAction;
 use Filament\Actions\ViewAction;
+=======
+use Override;
+use Filament\Actions\ViewAction;
+use Filament\Actions\EditAction;
+use Filament\Actions\DeleteAction;
+use Filament\Actions\DeleteBulkAction;
+use Filament\Actions\Action;
+use Filament\Actions\ActionGroup;
+use Filament\Tables\Actions\CreateAction;
+>>>>>>> 5200b63 (.)
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Filters\SelectFilter;
 use Modules\Media\Filament\Resources\TemporaryUploadResource;
 use Modules\Media\Models\TemporaryUpload;
 use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
+<<<<<<< HEAD
 use Override;
+=======
+>>>>>>> 5200b63 (.)
 
 class ListTemporaryUploads extends XotBaseListRecords
 {
