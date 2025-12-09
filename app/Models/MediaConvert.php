@@ -374,12 +374,12 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  * @property string|null $created_by
  * @property Carbon|null $deleted_at
  * @property string|null $deleted_by
- * @property-read \Modules\Fixcity\Models\Profile|null $creator
+ * @property-read \Modules\Xot\Contracts\ProfileContract|null $creator
  * @property-read string|null $converted_file
  * @property-read string|null $disk
  * @property-read string|null $file
  * @property-read \Modules\Media\Models\Media|null $media
- * @property-read \Modules\Fixcity\Models\Profile|null $updater
+ * @property-read \Modules\Xot\Contracts\ProfileContract|null $updater
  * @method static \Modules\Media\Database\Factories\MediaConvertFactory factory($count = null, $state = [])
  * @method static Builder<static>|MediaConvert newModelQuery()
  * @method static Builder<static>|MediaConvert newQuery()
