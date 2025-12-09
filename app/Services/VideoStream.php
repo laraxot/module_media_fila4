@@ -106,7 +106,7 @@ class VideoStream
         if ($unit !== 'bytes') {
             header('HTTP/1.1 416 Requested Range Not Satisfiable');
             header(sprintf('Content-Range: bytes %d-%d/%d', $this->start, $this->end, $this->size));
-            exit;
+            exit();
         }
 
         $rangeParts = explode('-', $range);
@@ -116,13 +116,13 @@ class VideoStream
         if ($start > $end || $start >= $this->size || $end >= $this->size) {
             header('HTTP/1.1 416 Requested Range Not Satisfiable');
             header(sprintf('Content-Range: bytes %d-%d/%d', $this->start, $this->end, $this->size));
-            exit;
+            exit();
         }
 
         $this->start = $start;
         $this->end = $end;
 
-        $length = $this->end - $this->start + 1;
+        $length = ($this->end - $this->start) + 1;
         header('HTTP/1.1 206 Partial Content');
         header('Content-Length: '.$length);
         header(sprintf('Content-Range: bytes %d-%d/%d', $this->start, $this->end, $this->size));
@@ -141,7 +141,7 @@ class VideoStream
 
         fseek($this->stream, $this->start);
         while (! feof($this->stream) && $this->start <= $this->end) {
-            $bytesToRead = min($this->bufferSize, $this->end - $this->start + 1);
+            $bytesToRead = min($this->bufferSize, ($this->end - $this->start) + 1);
             if ($bytesToRead > 0) {
                 $data = fread($this->stream, $bytesToRead);
                 echo $data;
@@ -162,6 +162,6 @@ class VideoStream
             fclose($this->stream);
         }
 
-        exit;
+        exit();
     }
 }

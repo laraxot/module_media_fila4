@@ -28,15 +28,17 @@ class VideoPlayer extends Component
         ?string $driver = null,
     ) {
         $xot = XotData::make();
-        Assert::string($driver ??= $xot->video_player, __FILE__.':'.__LINE__.' - '.class_basename(self::class));
+        Assert::string($driver ??= $xot->video_player, __FILE__.':'.__LINE__.' - '.class_basename(__CLASS__));
 
         $this->driver = $driver;
     }
 
     /**
      * Get the view / contents that represent the component.
+     *
+     * @return View
      */
-    public function render(): View
+    public function render()
     {
         /**
          * @phpstan-var view-string
