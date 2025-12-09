@@ -168,6 +168,7 @@ declare(strict_types=1);
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 =======
@@ -310,10 +311,9 @@ declare(strict_types=1);
 >>>>>>> a70c4fa (.)
 =======
 >>>>>>> b2850c2 (.)
-<x-filament::page>
 =======
-<x-fi<x-filament::page>
->>>>>>> e0ce06e (.)
+>>>>>>> f6ae653 (.)
+<x-filament::page>
     {{--
    
     --}}
