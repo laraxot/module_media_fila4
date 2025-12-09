@@ -67,6 +67,7 @@ return [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 =======
@@ -75,6 +76,8 @@ return [
 >>>>>>> b8fda23 (.)
 =======
 >>>>>>> 9a4eacb (.)
+=======
+>>>>>>> c4425b4 (.)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -88,6 +91,7 @@ return [
 
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -182,6 +186,8 @@ return [
 >>>>>>> 91c1d65 (.)
 =======
 >>>>>>> c90879e (.)
+=======
+>>>>>>> c4425b4 (.)
     'notifications' => [
         'credentials_tested' => 'AWS credentials tested',
         'bucket_policy_tested' => 'Bucket policy tested',
@@ -223,6 +229,7 @@ return [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 06bb10d (.)
 =======
@@ -251,10 +258,13 @@ return [
 >>>>>>> 10ef3f7 (.)
 =======
 >>>>>>> 91c1d65 (.)
+=======
+>>>>>>> c4425b4 (.)
     'debug' => [
         'run_tests_message' => 'Run tests to see results here...',
     ],
 =======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -275,12 +285,15 @@ return [
 >>>>>>> b8fda23 (.)
 =======
 >>>>>>> 9a4eacb (.)
+=======
+>>>>>>> c4425b4 (.)
     'debug' => [
         'run_tests_message' => 'Run tests to see results here...',
     ],
 =======
 =======
 >>>>>>> origin/develop
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -303,11 +316,14 @@ return [
 >>>>>>> 9a4eacb (.)
 =======
 >>>>>>> 10ef3f7 (.)
+=======
+>>>>>>> c4425b4 (.)
 
     'debug' => [
         'run_tests_message' => 'Run tests to see results here...',
     ],
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -326,6 +342,8 @@ return [
 >>>>>>> b8fda23 (.)
 =======
 >>>>>>> 9a4eacb (.)
+=======
+>>>>>>> c4425b4 (.)
 >>>>>>> a12f125f4a (.)
 =======
     'debug' => [
@@ -335,6 +353,7 @@ return [
 =======
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -449,6 +468,8 @@ return [
         'run_tests_message' => 'Run tests to see results here...',
     ],
 >>>>>>> c90879e (.)
+=======
+>>>>>>> c4425b4 (.)
     'fields' => [
         'attachment' => [
             'label' => 'Attachment',
@@ -487,6 +508,7 @@ return [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 =======
@@ -495,6 +517,8 @@ return [
 >>>>>>> b8fda23 (.)
 =======
 >>>>>>> 9a4eacb (.)
+=======
+>>>>>>> c4425b4 (.)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -508,6 +532,7 @@ return [
 
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -602,6 +627,8 @@ return [
 >>>>>>> 91c1d65 (.)
 =======
 >>>>>>> c90879e (.)
+=======
+>>>>>>> c4425b4 (.)
     'messages' => [
         'test_successful' => 'Test completed successfully',
         'test_failed' => 'Test failed',
@@ -638,6 +665,7 @@ return [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 =======
@@ -646,6 +674,8 @@ return [
 >>>>>>> b8fda23 (.)
 =======
 >>>>>>> 9a4eacb (.)
+=======
+>>>>>>> c4425b4 (.)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -659,6 +689,7 @@ return [
 
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -753,6 +784,8 @@ return [
 >>>>>>> 91c1d65 (.)
 =======
 >>>>>>> c90879e (.)
+=======
+>>>>>>> c4425b4 (.)
     'errors' => [
         'aws_credentials_invalid' => 'Invalid AWS credentials',
         's3_bucket_inaccessible' => 'S3 bucket not accessible',
@@ -787,6 +820,7 @@ return [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 =======
@@ -795,6 +829,8 @@ return [
 >>>>>>> b8fda23 (.)
 =======
 >>>>>>> 9a4eacb (.)
+=======
+>>>>>>> c4425b4 (.)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -808,6 +844,7 @@ return [
 
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -902,6 +939,8 @@ return [
 >>>>>>> 91c1d65 (.)
 =======
 >>>>>>> c90879e (.)
+=======
+>>>>>>> c4425b4 (.)
     'solutions' => [
         'check_credentials' => 'Check AWS credentials in .env',
         'check_bucket_name' => 'Check S3 bucket name',
