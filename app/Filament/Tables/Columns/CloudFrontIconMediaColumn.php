@@ -8,6 +8,7 @@ namespace Modules\Media\Filament\Tables\Columns;
 <<<<<<< HEAD
 use Filament\Tables\Columns\IconColumn;
 use Modules\Media\Actions\CloudFront\GetCloudFrontSignedUrlAction;
+<<<<<<< HEAD
 =======
 use Exception;
 use Filament\Forms\Components\Select;
@@ -25,6 +26,8 @@ use Spatie\ModelStates\State;
 =======
 use Modules\Media\Models\Media;
 >>>>>>> 1634e53 (.)
+=======
+>>>>>>> 21a9aec (.)
 
 class CloudFrontIconMediaColumn extends IconColumn
 {
@@ -33,6 +36,7 @@ class CloudFrontIconMediaColumn extends IconColumn
         parent::setUp();
         $attachment = $this->getName();
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -132,23 +136,29 @@ class CloudFrontIconMediaColumn extends IconColumn
                     return 'Documento non caricato';
                 }
                 /** @var Media|null $media */
+=======
+        $this->default(fn ($record) => $record->getFirstMedia($attachment))
+            ->icon('heroicon-o-document-text')
+            ->color(fn ($record) => $record->getFirstMedia($attachment) ? 'success' : 'danger')
+            ->tooltip(fn ($record) => $record->getFirstMedia($attachment)->file_name ?? 'Documento non caricato')
+            ->url(function ($record) use ($attachment) {
+>>>>>>> 21a9aec (.)
                 $media = $record->getFirstMedia($attachment);
-
-                return $media->file_name ?? 'Documento non caricato';
-            })
-            ->url(static function (mixed $record) use ($attachment): ?string {
-                if (! is_object($record) || ! method_exists($record, 'getFirstMedia')) {
-                    return null;
+                if (! $media) {
+                    return;
                 }
-                /** @var Media|null $media */
-                $media = $record->getFirstMedia($attachment);
+                $signedUrl = app(GetCloudFrontSignedUrlAction::class)->execute($media->getPath(), 60);
 
+<<<<<<< HEAD
                 if ($media === null) {
                     return null;
                 }
 
                 return app(GetCloudFrontSignedUrlAction::class)->execute($media->getPath(), 60);
 >>>>>>> 1634e53 (.)
+=======
+                return $signedUrl;
+>>>>>>> 21a9aec (.)
             })
             ->openUrlInNewTab();
     }
