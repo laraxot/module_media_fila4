@@ -15,6 +15,8 @@ class AdminPanelProvider extends XotBasePanelProvider
     #[Override]
     public function panel(Panel $panel): Panel
     {
-        return parent::panel($panel);
+        $panel = parent::panel($panel);
+
+        return $panel;
     }
 }
