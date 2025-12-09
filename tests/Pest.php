@@ -9,6 +9,7 @@ declare(strict_types=1);
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 =======
@@ -19,6 +20,8 @@ declare(strict_types=1);
 <<<<<<< HEAD
 =======
 >>>>>>> f1c6d6e (.)
+=======
+>>>>>>> 877e05f (.)
 use Modules\Media\Models\Media;
 use Modules\Media\Models\MediaCollection;
 use Modules\Media\Tests\TestCase;
@@ -61,6 +64,7 @@ expect()->extend('toBeMediaCollection', fn () => $this->toBeInstanceOf(MediaColl
  * | global functions to help you to reduce the number of lines of code in your test files.
  * |
  */
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -118,6 +122,13 @@ expect()->extend('toBeMediaCollection', fn () => $this->toBeInstanceOf(MediaColl
 <<<<<<< HEAD
 =======
 use Modules\Media\Tests\TestCase;
+=======
+=======
+namespace Modules\Media\Tests;
+
+use Modules\Media\Models\Media;
+use Modules\Media\Models\MediaCollection;
+>>>>>>> 877e05f (.)
 
 /*
 |--------------------------------------------------------------------------
@@ -145,6 +156,7 @@ pest()->extend(TestCase::class)
 */
 
 expect()->extend('toBeMedia', function () {
+<<<<<<< HEAD
     return $this->toBeInstanceOf(\Modules\Media\Models\Media::class);
 });
 
@@ -266,6 +278,8 @@ pest()->extend(TestCase::class)
 
 expect()->extend('toBeMedia', function () {
 <<<<<<< HEAD
+=======
+>>>>>>> 877e05f (.)
     return $this->toBeInstanceOf(Media::class);
 });
 
@@ -274,6 +288,7 @@ expect()->extend('toBeMediaCollection', function () {
 });
 
 /*
+<<<<<<< HEAD
 =======
     return $this->toBeInstanceOf(\Modules\Media\Models\Media::class);
 });
@@ -285,6 +300,8 @@ expect()->extend('toBeMediaCollection', function () {
 /*
 >>>>>>> origin/develop
 >>>>>>> 47a54fe (.)
+=======
+>>>>>>> 877e05f (.)
 |--------------------------------------------------------------------------
 | Functions
 |--------------------------------------------------------------------------
@@ -294,6 +311,7 @@ expect()->extend('toBeMediaCollection', function () {
 | global functions to help you to reduce the number of lines of code in your test files.
 |
 */
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 0a466ed (.)
 <<<<<<< HEAD
@@ -322,6 +340,9 @@ expect()->extend('toBeMediaCollection', function () {
 >>>>>>> 47a54fe (.)
 =======
 >>>>>>> f1c6d6e (.)
+=======
+>>>>>>> 0a466ed (.)
+>>>>>>> 877e05f (.)
 
 function createMedia(array $attributes = []): Media
 {
