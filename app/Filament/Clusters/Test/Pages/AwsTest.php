@@ -579,6 +579,7 @@ class AwsTest extends XotBasePage
     {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         $this->test_s3_connection();
         $this->test_s3_permissions();
         $this->test_s3_file_operations();
@@ -587,6 +588,8 @@ class AwsTest extends XotBasePage
         $this->test_iam_credentials();
         $this->test_iam_policies();
 =======
+=======
+>>>>>>> 21a9aec (.)
         $this->testS3Connection();
         $this->testS3Permissions();
         $this->testS3FileOperations();
@@ -594,6 +597,7 @@ class AwsTest extends XotBasePage
         $this->testCloudFrontSignedUrls();
         $this->testIamCredentials();
         $this->testIamPolicies();
+<<<<<<< HEAD
 >>>>>>> 5200b63 (.)
 =======
         // TODO: Implement these test methods
@@ -605,9 +609,11 @@ class AwsTest extends XotBasePage
         // $this->testIamCredentials();
         // $this->testIamPolicies();
 >>>>>>> 1634e53 (.)
+=======
+>>>>>>> 21a9aec (.)
 
         $this->testResults['full'] = [
-            'status' => 'pending',
+            'status' => 'completed',
             'message' => 'Full diagnostic completed',
             'details' => $this->testResults,
         ];
