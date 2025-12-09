@@ -61,6 +61,7 @@ class SvgExistsAction
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 =======
@@ -115,6 +116,10 @@ class SvgExistsAction
 >>>>>>> f5f7069 (.)
 =======
 >>>>>>> c08a553 (.)
+=======
+=======
+>>>>>>> 37a2da6 (.)
+>>>>>>> 760b37c (.)
 
         foreach ($packs as $pack) {
             Assert::isArray($pack, 'Ogni pacchetto deve essere un array');
@@ -141,6 +146,9 @@ class SvgExistsAction
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 760b37c (.)
 =======
 >>>>>>> 89eb716 (.)
 =======
@@ -216,6 +224,7 @@ class SvgExistsAction
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 06bb10d (.)
 =======
 =======
@@ -262,6 +271,10 @@ class SvgExistsAction
 =======
 >>>>>>> 0a466ed (.)
 >>>>>>> c08a553 (.)
+=======
+=======
+>>>>>>> 37a2da6 (.)
+>>>>>>> 760b37c (.)
             foreach ($icons as $icon) {
                 if ($svgName === $icon) {
                     return true;

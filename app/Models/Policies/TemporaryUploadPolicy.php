@@ -23,6 +23,7 @@ use Modules\Media\Models\TemporaryUpload;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 =======
@@ -58,10 +59,13 @@ use Modules\Xot\Contracts\UserContract;
 >>>>>>> 7ea0764 (.)
 =======
 >>>>>>> 89eb716 (.)
+=======
+>>>>>>> 760b37c (.)
 use Modules\Xot\Contracts\UserContract;
 =======
 use Modules\Xot\Contracts\ProfileContract;
 >>>>>>> 0a466ed (.)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -123,6 +127,11 @@ use Modules\Xot\Contracts\UserContract;
 use Modules\Xot\Contracts\ProfileContract;
 >>>>>>> 0a466ed (.)
 >>>>>>> c08a553 (.)
+=======
+=======
+use Modules\Xot\Contracts\UserContract;
+>>>>>>> 37a2da6 (.)
+>>>>>>> 760b37c (.)
 
 class TemporaryUploadPolicy extends MediaBasePolicy
 {
@@ -147,6 +156,7 @@ class TemporaryUploadPolicy extends MediaBasePolicy
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 06bb10d (.)
 =======
@@ -187,6 +197,8 @@ class TemporaryUploadPolicy extends MediaBasePolicy
 >>>>>>> 89eb716 (.)
 =======
 >>>>>>> b8fda23 (.)
+=======
+>>>>>>> 760b37c (.)
     public function viewAny(UserContract $user): bool
     {
         return $user->hasPermissionTo('temporary_upload.viewAny');
@@ -231,6 +243,7 @@ class TemporaryUploadPolicy extends MediaBasePolicy
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 06bb10d (.)
 =======
 =======
@@ -238,10 +251,13 @@ class TemporaryUploadPolicy extends MediaBasePolicy
 =======
 >>>>>>> 89eb716 (.)
 =======
+>>>>>>> 760b37c (.)
+=======
     public function viewAny(UserContract $user): bool
     {
         return $user->hasPermissionTo('temporary_upload.viewAny');
 >>>>>>> 37a2da6 (.)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 98c37f4 (.)
@@ -291,11 +307,14 @@ class TemporaryUploadPolicy extends MediaBasePolicy
 >>>>>>> f5f7069 (.)
 =======
 >>>>>>> c08a553 (.)
+=======
+>>>>>>> 760b37c (.)
     }
 
     /**
      * Determine whether the user can view the model.
      */
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -354,6 +373,8 @@ class TemporaryUploadPolicy extends MediaBasePolicy
 >>>>>>> 89eb716 (.)
 =======
 >>>>>>> b8fda23 (.)
+=======
+>>>>>>> 760b37c (.)
     public function view(UserContract $user, TemporaryUpload $_temporary_upload): bool
     {
         return $user->hasPermissionTo('temporary_upload.view');
@@ -398,6 +419,7 @@ class TemporaryUploadPolicy extends MediaBasePolicy
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 06bb10d (.)
 =======
 =======
@@ -405,10 +427,13 @@ class TemporaryUploadPolicy extends MediaBasePolicy
 =======
 >>>>>>> 89eb716 (.)
 =======
+>>>>>>> 760b37c (.)
+=======
     public function view(UserContract $user, TemporaryUpload $_temporary_upload): bool
     {
         return $user->hasPermissionTo('temporary_upload.view');
 >>>>>>> 37a2da6 (.)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 98c37f4 (.)
@@ -458,11 +483,14 @@ class TemporaryUploadPolicy extends MediaBasePolicy
 >>>>>>> f5f7069 (.)
 =======
 >>>>>>> c08a553 (.)
+=======
+>>>>>>> 760b37c (.)
     }
 
     /**
      * Determine whether the user can create models.
      */
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -521,6 +549,8 @@ class TemporaryUploadPolicy extends MediaBasePolicy
 >>>>>>> 89eb716 (.)
 =======
 >>>>>>> b8fda23 (.)
+=======
+>>>>>>> 760b37c (.)
     public function create(UserContract $user): bool
     {
         return $user->hasPermissionTo('temporary_upload.create');
@@ -565,6 +595,7 @@ class TemporaryUploadPolicy extends MediaBasePolicy
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 06bb10d (.)
 =======
 =======
@@ -572,10 +603,13 @@ class TemporaryUploadPolicy extends MediaBasePolicy
 =======
 >>>>>>> 89eb716 (.)
 =======
+>>>>>>> 760b37c (.)
+=======
     public function create(UserContract $user): bool
     {
         return $user->hasPermissionTo('temporary_upload.create');
 >>>>>>> 37a2da6 (.)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 98c37f4 (.)
@@ -625,11 +659,14 @@ class TemporaryUploadPolicy extends MediaBasePolicy
 >>>>>>> f5f7069 (.)
 =======
 >>>>>>> c08a553 (.)
+=======
+>>>>>>> 760b37c (.)
     }
 
     /**
      * Determine whether the user can update the model.
      */
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -688,6 +725,8 @@ class TemporaryUploadPolicy extends MediaBasePolicy
 >>>>>>> 89eb716 (.)
 =======
 >>>>>>> b8fda23 (.)
+=======
+>>>>>>> 760b37c (.)
     public function update(UserContract $user, TemporaryUpload $_temporary_upload): bool
     {
         return $user->hasPermissionTo('temporary_upload.update');
@@ -732,6 +771,7 @@ class TemporaryUploadPolicy extends MediaBasePolicy
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 06bb10d (.)
 =======
 =======
@@ -739,10 +779,13 @@ class TemporaryUploadPolicy extends MediaBasePolicy
 =======
 >>>>>>> 89eb716 (.)
 =======
+>>>>>>> 760b37c (.)
+=======
     public function update(UserContract $user, TemporaryUpload $_temporary_upload): bool
     {
         return $user->hasPermissionTo('temporary_upload.update');
 >>>>>>> 37a2da6 (.)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 98c37f4 (.)
@@ -792,11 +835,14 @@ class TemporaryUploadPolicy extends MediaBasePolicy
 >>>>>>> f5f7069 (.)
 =======
 >>>>>>> c08a553 (.)
+=======
+>>>>>>> 760b37c (.)
     }
 
     /**
      * Determine whether the user can delete the model.
      */
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -855,6 +901,8 @@ class TemporaryUploadPolicy extends MediaBasePolicy
 >>>>>>> 89eb716 (.)
 =======
 >>>>>>> b8fda23 (.)
+=======
+>>>>>>> 760b37c (.)
     public function delete(UserContract $user, TemporaryUpload $_temporary_upload): bool
     {
         return $user->hasPermissionTo('temporary_upload.delete');
@@ -899,6 +947,7 @@ class TemporaryUploadPolicy extends MediaBasePolicy
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 06bb10d (.)
 =======
 =======
@@ -906,10 +955,13 @@ class TemporaryUploadPolicy extends MediaBasePolicy
 =======
 >>>>>>> 89eb716 (.)
 =======
+>>>>>>> 760b37c (.)
+=======
     public function delete(UserContract $user, TemporaryUpload $_temporary_upload): bool
     {
         return $user->hasPermissionTo('temporary_upload.delete');
 >>>>>>> 37a2da6 (.)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 98c37f4 (.)
@@ -959,11 +1011,14 @@ class TemporaryUploadPolicy extends MediaBasePolicy
 >>>>>>> f5f7069 (.)
 =======
 >>>>>>> c08a553 (.)
+=======
+>>>>>>> 760b37c (.)
     }
 
     /**
      * Determine whether the user can restore the model.
      */
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1022,6 +1077,8 @@ class TemporaryUploadPolicy extends MediaBasePolicy
 >>>>>>> 89eb716 (.)
 =======
 >>>>>>> b8fda23 (.)
+=======
+>>>>>>> 760b37c (.)
     public function restore(UserContract $user, TemporaryUpload $_temporary_upload): bool
     {
         return $user->hasPermissionTo('temporary_upload.restore');
@@ -1066,6 +1123,7 @@ class TemporaryUploadPolicy extends MediaBasePolicy
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 06bb10d (.)
 =======
 =======
@@ -1073,10 +1131,13 @@ class TemporaryUploadPolicy extends MediaBasePolicy
 =======
 >>>>>>> 89eb716 (.)
 =======
+>>>>>>> 760b37c (.)
+=======
     public function restore(UserContract $user, TemporaryUpload $_temporary_upload): bool
     {
         return $user->hasPermissionTo('temporary_upload.restore');
 >>>>>>> 37a2da6 (.)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 98c37f4 (.)
@@ -1126,11 +1187,14 @@ class TemporaryUploadPolicy extends MediaBasePolicy
 >>>>>>> f5f7069 (.)
 =======
 >>>>>>> c08a553 (.)
+=======
+>>>>>>> 760b37c (.)
     }
 
     /**
      * Determine whether the user can permanently delete the model.
      */
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1213,6 +1277,8 @@ class TemporaryUploadPolicy extends MediaBasePolicy
 >>>>>>> f5f7069 (.)
 =======
 >>>>>>> c08a553 (.)
+=======
+>>>>>>> 760b37c (.)
     public function forceDelete(UserContract $user, TemporaryUpload $temporary_upload): bool
     {
         return $user->hasPermissionTo('temporary_upload.forceDelete');
@@ -1221,6 +1287,11 @@ class TemporaryUploadPolicy extends MediaBasePolicy
     {
         return $user->hasPermissionTo('temporary_upload.forceDelete'); /** @phpstan-ignore method.nonObject */
 >>>>>>> 0a466ed (.)
+=======
+    public function forceDelete(UserContract $user, TemporaryUpload $temporary_upload): bool
+    {
+        return $user->hasPermissionTo('temporary_upload.forceDelete');
+>>>>>>> 37a2da6 (.)
     }
 }
 <<<<<<< HEAD
