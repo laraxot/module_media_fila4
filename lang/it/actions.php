@@ -6,6 +6,11 @@ return [
     'add_attachment' => [
         'title' => 'Allegati',
         'label' => 'Carica allegato',
+<<<<<<< HEAD
         'fields' => [],
+=======
+        'fields' => [
+        ],
+>>>>>>> 0a466ed (.)
     ],
 ];
