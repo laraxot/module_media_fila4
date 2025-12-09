@@ -22,6 +22,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 3f50d25 (.)
 =======
@@ -42,6 +43,8 @@
 >>>>>>> d44d947 (.)
 =======
 >>>>>>> ece6f0a (.)
+=======
+>>>>>>> a45d99f (.)
 # Analisi Modelli, Factory e Seeder - Modulo Media
 
 ## Panoramica
@@ -76,6 +79,7 @@ Questo documento analizza tutti i modelli del modulo Media verificando la presen
 - **Versioning**: Gestione versioni multiple file
 
 **Relazioni Business Logic**:
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -172,6 +176,9 @@ Questo documento analizza tutti i modelli del modulo Media verificando la presen
 >>>>>>> 5af33b9 (.)
 =======
 >>>>>>> 22d28e3 (.)
+=======
+- **<nome progetto>**: Documenti pazienti, referti medici, immagini profilo
+>>>>>>> a45d99f (.)
 - **SaluteOra**: Documenti pazienti, referti medici, immagini profilo
 - **User**: Avatar utenti, documenti identità
 - **Cms**: Immagini contenuti, allegati pagine
@@ -365,6 +372,7 @@ Tutti i file factory devono essere validati con PHPStan livello 9:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 - [<nome progetto> Module](../../<nome progetto>/docs/modelli_factory_seeder_analisi.md) - Documenti medici
 >>>>>>> 7df6a71 (.)
@@ -431,6 +439,9 @@ Tutti i file factory devono essere validati con PHPStan livello 9:
 >>>>>>> 5af33b9 (.)
 =======
 >>>>>>> 22d28e3 (.)
+=======
+- [<nome progetto> Module](../../<nome progetto>/docs/modelli_factory_seeder_analisi.md) - Documenti medici
+>>>>>>> a45d99f (.)
 - [SaluteOra Module](../../SaluteOra/docs/modelli_factory_seeder_analisi.md) - Documenti medici
 - [User Module](../../User/docs/modelli_factory_seeder_analisi.md) - Avatar e documenti utente
 - [Cms Module](../../Cms/docs/modelli_factory_seeder_analisi.md) - Contenuti multimediali
@@ -445,6 +456,7 @@ Tutti i file factory devono essere validati con PHPStan livello 9:
 *Ultimo aggiornamento: Gennaio 2025*
 *Analisi completa di 4 modelli attivi, sistema media completo*
 *Supporto upload, conversioni, storage locale/cloud*
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -503,3 +515,5 @@ Tutti i file factory devono essere validati con PHPStan livello 9:
 >>>>>>> ece6f0a (.)
 =======
 >>>>>>> d6f82fc (.)
+=======
+>>>>>>> a45d99f (.)
