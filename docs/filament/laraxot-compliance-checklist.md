@@ -159,6 +159,7 @@ namespace Modules\Media\Models;               // Corretto
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 cd /var/www/html/_bases/base_saluteora/laravel
 =======
 cd /var/www/html/_bases/base_techplanner_fila3_mono/laravel
@@ -233,6 +234,9 @@ cd /var/www/html/_bases/base_<nome progetto>/laravel
 cd /var/www/html/_bases/base_techplanner_fila3_mono/laravel
 >>>>>>> 9348522 (.)
 >>>>>>> 494c61a (.)
+=======
+cd /var/www/html/_bases/base_saluteora/laravel
+>>>>>>> 0eaf2b7 (.)
 ./vendor/bin/phpstan analyze Modules/Media --level=9
 ```
 
