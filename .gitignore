@@ -1,101 +1,14 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> b93ef594b4 (.)
->>>>>>> e9b0959 (.)
 # ==============================================
 # LARAXOT MODULE MEDIA - .GITIGNORE
 # ==============================================
 # Modulo Media Laraxot - Template standardizzato
-<<<<<<< HEAD
-# Ultimo aggiornamento: 2025-01-31
-=======
 # Ultimo aggiornamento: 2025-01-06
->>>>>>> e9b0959 (.)
 # ==============================================
 
 # ==============================================
 # DEPENDENCIES & PACKAGES
 # ==============================================
-<<<<<<< HEAD
-/vendor/
-/vendor
-/node_modules/
-/node_modules
-/docs/vendor/
-package-lock.json
-yarn.lock
-composer.lock
-yarn-error.log
-npm-debug.log
-=======
 vendor/
-<<<<<<< HEAD
-/vendor/
-node_modules/
-/node_modules/
-/docs/vendor/
-package-lock.json
-yarn.lock
-yarn-error.log
-composer.lock
->>>>>>> e9b0959 (.)
-
-# ==============================================
-# BUILD & COMPILED FILES
-# ==============================================
-/build
-/build/
-build/
-dist/
-docs/cache/
-cache/
-
-# ==============================================
-# CACHE & TEMPORARY FILES
-# ==============================================
-*.cache
-*.lock
-*.phar
-*.jar
-*.tmp
-*.swp
-*.swo
-*.stackdump
-<<<<<<< HEAD
-=======
-*.exe
->>>>>>> e9b0959 (.)
-*:Zone.Identifier
-v8-compile-cache-*
-.php-cs-fixer.cache
-.phpunit.result.cache
-
-# ==============================================
-# LOG FILES
-# ==============================================
-*.log
-error_log
-npm-debug.log*
-<<<<<<< HEAD
-=======
-npm-debug.log
->>>>>>> e9b0959 (.)
-yarn-error.log*
-lerna-debug.log*
-
-# ==============================================
-# LARAVEL SPECIFIC
-# ==============================================
-<<<<<<< HEAD
-=======
-=======
-# Dependencies and packages
-=======
->>>>>>> b93ef594b4 (.)
 /vendor/
 node_modules/
 /node_modules/
@@ -115,10 +28,6 @@ dist/
 docs/cache/
 cache/
 
-<<<<<<< HEAD
-# Laravel specific
->>>>>>> a12f125f4a (.)
-=======
 # ==============================================
 # CACHE & TEMPORARY FILES
 # ==============================================
@@ -149,34 +58,6 @@ lerna-debug.log*
 # ==============================================
 # LARAVEL SPECIFIC
 # ==============================================
->>>>>>> b93ef594b4 (.)
-=======
-# Dependencies and packages
-/vendor/
-/node_modules/
-/docs/vendor/
-
-# Lock files and cache
-*.lock
-composer.lock
-package-lock.json
-*.cache
-yarn-error.log
-npm-debug.log
-.phpunit.result.cache
-.php-cs-fixer.cache
-
-# Log files
-*.log
-
-# Build directories
-/build/
-/build
-build/
-
-# Laravel specific
->>>>>>> origin/develop
->>>>>>> e9b0959 (.)
 bootstrap/compiled.php
 app/storage/
 public/storage
@@ -185,12 +66,6 @@ public_html/storage
 public_html/hot
 storage/*.key
 .env
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> e9b0959 (.)
 .env.*
 !.env.example
 
@@ -247,130 +122,6 @@ docs/phpstan/
 docs/cache/
 
 # ==============================================
-<<<<<<< HEAD
-# LANGUAGE FILES
-# ==============================================
-lang/lang/
-resources/lang/
-
-# ==============================================
-# OLD DIRECTORIES (LEGACY CLEANUP)
-# ==============================================
-resources/views/Components_old/
-database/Migrations_old/
-database/Seeders_old/
-database/Factories_old/
-database_old/
-=======
-# OLD DIRECTORIES (LEGACY CLEANUP)
-# ==============================================
-resources/views/Components_old/
-resources/views/Components_old
-database/Migrations_old/
-database/Migrations_old
-database/Seeders_old/
-database/Seeders_old
-database/Factories_old/
-database/Factories_old
-database/Factories_
-database_old/
-database_old
->>>>>>> e9b0959 (.)
-
-# ==============================================
-# MODULE SPECIFIC - MEDIA
-# ==============================================
-# File di configurazione locale
-config/local.php
-config/development.php
-
-# File media temporanei
-media/temp/
-media/uploads/temp/
-media/thumbnails/temp/
-
-# Cache media
-storage/media/
-storage/thumbnails/
-
-# File di test media
-media_test_data.json
-test_media_files/
-
-# ==============================================
-# END OF MEDIA .GITIGNORE
-# ==============================================
-
-# 🚫 File specifici del progetto
-*.fila2
-laravel
-<<<<<<< HEAD
-public_html
-=======
-public_html
-=======
-=======
-.env.*
-!.env.example
->>>>>>> b93ef594b4 (.)
-
-# ==============================================
-# ENVIRONMENT & CONFIGURATION
-# ==============================================
-Homestead.yaml
-Homestead.json
-/.vagrant
-/.idea
-.phpintel
-
-# ==============================================
-# GIT SPECIFIC
-# ==============================================
-.git-rewrite/
-.git-rewrite
-.git-blame-ignore-revs
-
-# ==============================================
-# SYSTEM FILES
-# ==============================================
-.DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-Thumbs.db
-
-# ==============================================
-# BACKUP FILES
-# ==============================================
-*.old
-*.old1
-*.old2
-*.backup
-*.backup.*
-*.bak
-*.bakcup
-*.new
-
-# ==============================================
-# DEVELOPMENT TOOLS
-# ==============================================
-.windsurf/
-.cursor/
-.phpstorm.meta.php
-
-# ==============================================
-# DOCUMENTATION CACHE
-# ==============================================
-docs/phpstan/
-docs/cache/
-<<<<<<< HEAD
-cache/
->>>>>>> a12f125f4a (.)
-=======
-
-# ==============================================
 # OLD DIRECTORIES (LEGACY CLEANUP)
 # ==============================================
 resources/views/Components_old/
@@ -413,35 +164,3 @@ test_media_files/
 *.fila2
 laravel
 public_html
->>>>>>> b93ef594b4 (.)
-=======
-
-# Local configurations
-Homestead.yaml
-Homestead.json
-/.vagrant
-
-# Git specific
-.git-blame-ignore-revs
-.git-rewrite/
-.git-rewrite
-
-# Temporary and system files
-*.tmp
-*.swp
-*.swo
-*.stackdump
-*.exe
-*:Zone.Identifier
-.DS_Store
-*.old
-*.old1
-*.backup
-*.bak
-
-# Documentation and cache
-docs/phpstan/
-docs/cache/
-cache/
->>>>>>> origin/develop
->>>>>>> e9b0959 (.)

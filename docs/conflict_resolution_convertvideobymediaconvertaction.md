@@ -72,10 +72,6 @@ FFMpeg::fromDisk($data->disk)
 - [Media Module Documentation](module_media.md)
 - [FFMpeg Integration Guide](ffmpeg_integration.md)
 - [PHPStan Fixes Documentation](phpstan_fixes.md)
-<<<<<<< HEAD
 - [Root Conflict Resolution Guidelines](../../../docs/conflict-resolution-guidelines.md)
-=======
-- [Root Conflict Resolution Guidelines](../../../project_docs/conflict-resolution-guidelines.md)
->>>>>>> e9b0959 (.)
 
 *Ultimo aggiornamento: giugno 2025*
