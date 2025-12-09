@@ -1,3 +1,7 @@
+# player
+
+<!-- Contenuto migrato da _docs/player.txt -->
+
 https://github.com/spatie/laravel-sitemap/blob/main/resources/views/video.blade.php
 
 https://github.com/anggadarkprince/beats-laravel-web/blob/master/resources/views/pages/video.blade.php

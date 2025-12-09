@@ -1,3 +1,7 @@
+# ffmpeg
+
+<!-- Contenuto migrato da _docs/ffmpeg.txt -->
+
 WINDOWS
 
 https://www.gyan.dev/ffmpeg/builds/
@@ -14,6 +18,3 @@ $ which ffprobe
 add to .env
 FFMPEG_PATH=c:/ProgramData/chocolatey/bin/ffmpeg.exe
 FFPROBE_PATH=c:/ProgramData/chocolatey/bin/ffprobe.exe
-
-
--------------------------------------------------------------
