@@ -765,6 +765,7 @@ class S3Test extends XotBasePage
 
         $output = [];
 <<<<<<< HEAD
+<<<<<<< HEAD
         foreach ($this->debugResults as $category => $result) {
 <<<<<<< HEAD
             if (! is_array($result) || ! isset($result['title'], $result['status'], $result['data'])) {
@@ -772,6 +773,9 @@ class S3Test extends XotBasePage
 =======
         foreach ($this->debugResults as $result) {
 >>>>>>> 13d1d7e (.)
+=======
+        foreach ($this->debugResults as $category => $result) {
+>>>>>>> 2a4b5df (.)
             if (!is_array($result) || !isset($result['title'], $result['status'], $result['data'])) {
 >>>>>>> 5200b63 (.)
                 continue;

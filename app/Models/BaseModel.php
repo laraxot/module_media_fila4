@@ -4,17 +4,18 @@ declare(strict_types=1);
 
 namespace Modules\Media\Models;
 
-use Modules\Xot\Models\XotBaseModel;
+use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+use Modules\Xot\Actions\Factory\GetFactoryAction;
+use Modules\Xot\Traits\Updater;
 
 /**
- * Base Model for Media module.
- *
- * Extends XotBaseModel which provides all standard properties and methods.
- *
- * @see \Modules\Xot\Models\XotBaseModel
+ * Class BaseModel.
  */
-abstract class BaseModel extends XotBaseModel
+abstract class BaseModel extends Model
 {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -29,20 +30,43 @@ abstract class BaseModel extends XotBaseModel
 >>>>>>> 1b9d086 (.)
     use \Modules\Xot\Models\Traits\HasXotFactory;
 >>>>>>> 13d1d7e (.)
+=======
+    use HasFactory;
+>>>>>>> 2a4b5df (.)
 
     // use Searchable;
     // //use Cachable;
     use Updater;
 
+<<<<<<< HEAD
 =======
 >>>>>>> fbf6035 (.)
+=======
+>>>>>>> 2a4b5df (.)
     /**
-     * The connection name for the model.
+     * Indicates whether attributes are snake cased on arrays.
      *
-     * @var string
+     * @see https://laravel-news.com/6-eloquent-secrets
+     *
+     * @var bool
      */
+    public static $snakeAttributes = true;
+
+    /** @var bool */
+    public $incrementing = true;
+
+    /** @var bool */
+    public $timestamps = true;
+
+    /** @var int */
+    protected $perPage = 30;
+
+    /** @var string */
     protected $connection = 'media';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 2a4b5df (.)
 
     /** @var list<string> */
     protected $fillable = [
@@ -62,8 +86,11 @@ abstract class BaseModel extends XotBaseModel
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     
 =======
+=======
+>>>>>>> 2a4b5df (.)
     /**
      * ----
      * Create a new factory instance for the model.
@@ -74,10 +101,14 @@ abstract class BaseModel extends XotBaseModel
     {
         return app(GetFactoryAction::class)->execute(static::class);
     }
+<<<<<<< HEAD
 >>>>>>> 5200b63 (.)
 
 =======
 >>>>>>> 13d1d7e (.)
+=======
+
+>>>>>>> 2a4b5df (.)
     /** @return array<string, string> */
     protected function casts(): array
     {
@@ -93,6 +124,9 @@ abstract class BaseModel extends XotBaseModel
             'deleted_by' => 'string',
         ];
     }
+<<<<<<< HEAD
 =======
 >>>>>>> fbf6035 (.)
+=======
+>>>>>>> 2a4b5df (.)
 }

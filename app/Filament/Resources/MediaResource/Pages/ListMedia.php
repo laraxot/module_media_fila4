@@ -75,9 +75,6 @@ class ListMedia extends XotBaseListRecords
      * @return array<string, Tables\Columns\Column>
      */
     #[Override]
-    /**
-     * @return array<string, mixed>
-     */
     public function getTableColumns(): array
     {
         return [
@@ -115,9 +112,6 @@ class ListMedia extends XotBaseListRecords
      * @return array<string, BaseFilter>
      */
     #[Override]
-    /**
-     * @return array<string, mixed>
-     */
     public function getTableFilters(): array
     {
         return [
@@ -136,9 +130,6 @@ class ListMedia extends XotBaseListRecords
      * @return array<string, Action|ActionGroup>
      */
     #[Override]
-    /**
-     * @return array<string, mixed>
-     */
     public function getTableActions(): array
     {
         return [
@@ -160,6 +151,7 @@ class ListMedia extends XotBaseListRecords
             'download' => Action::make('download_attachment')
                 ->icon('heroicon-o-arrow-down-tray')
                 ->color('primary')
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -191,6 +183,9 @@ class ListMedia extends XotBaseListRecords
                     return null;
                 }),
 >>>>>>> 13d1d7e (.)
+=======
+                ->action(static fn ($record) => response()->download($record->getPath(), $record->file_name)),
+>>>>>>> 2a4b5df (.)
             'convert' => Action::make('convert')
                 ->icon('media-convert')
                 ->color('gray')

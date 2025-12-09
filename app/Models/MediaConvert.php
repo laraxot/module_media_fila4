@@ -160,6 +160,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  * @property-read ProfileContract|null $updater
  *
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> f41e45e (.)
  * @mixin IdeHelperMediaConvert
 =======
@@ -219,6 +220,9 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  * @method static Builder<static>|MediaConvert whereUpdatedAt($value)
  * @method static Builder<static>|MediaConvert whereUpdatedBy($value)
  * @method static Builder<static>|MediaConvert whereWidth($value)
+=======
+ * @mixin IdeHelperMediaConvert
+>>>>>>> 2a4b5df (.)
  * @mixin \Eloquent
  */
 class MediaConvert extends BaseModel
@@ -271,10 +275,10 @@ class MediaConvert extends BaseModel
     public function getDiskAttribute(?string $value): ?string
 >>>>>>> f41e45e (.)
     {
-        $media = $this->media;
-        if ($media === null) {
+        if ($this->media === null) {
             return null;
         }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -284,6 +288,10 @@ class MediaConvert extends BaseModel
         $disk = $media->getAttribute('disk');
         return is_string($disk) ? $disk : null;
 >>>>>>> 8bb13d7 (.)
+=======
+
+        return $this->media->disk;
+>>>>>>> 2a4b5df (.)
     }
 
     public function getFileAttribute(?string $value): ?string
@@ -301,10 +309,10 @@ class MediaConvert extends BaseModel
     public function getFileAttribute(?string $value): ?string
 >>>>>>> f41e45e (.)
     {
-        $media = $this->media;
-        if ($media === null) {
+        if ($this->media === null) {
             return null;
         }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -318,6 +326,10 @@ class MediaConvert extends BaseModel
         }
         return $path.'/'.$fileName;
 >>>>>>> 8bb13d7 (.)
+=======
+
+        return $this->media->path.'/'.$this->media->file_name;
+>>>>>>> 2a4b5df (.)
     }
 
     public function getConvertedFileAttribute(?string $value): ?string
@@ -335,22 +347,16 @@ class MediaConvert extends BaseModel
     public function getConvertedFileAttribute(?string $value): ?string
 >>>>>>> f41e45e (.)
     {
-        $media = $this->media;
-        if ($media === null) {
+        if ($this->media === null) {
             return null;
         }
-        $fileName = $media->getAttribute('file_name');
-        $path = $media->getAttribute('path');
-        $format = $this->getAttribute('format');
-        if (! is_string($fileName) || ! is_string($path) || ! is_string($format)) {
-            return null;
-        }
-        $info = pathinfo($fileName);
+        $info = pathinfo($this->media->file_name);
         // "dirname" => "."
         // "basename" => "20600550-uhd_3840_2160_30fps.mp4"
         // "extension" => "mp4"
         // "filename" => "20600550-uhd_3840_2160_30fps"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -364,5 +370,8 @@ class MediaConvert extends BaseModel
 =======
         return $path.'/conversions/'.$info['filename'].'_'.$this->id.'.'.$format;
 >>>>>>> 8bb13d7 (.)
+=======
+        return $this->media->path.'/conversions/'.$info['filename'].'_'.$this->id.'.'.$this->format;
+>>>>>>> 2a4b5df (.)
     }
 }
