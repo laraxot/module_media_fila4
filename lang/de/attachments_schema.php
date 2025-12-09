@@ -100,7 +100,11 @@ return [
         'delete_error' => 'Fehler beim Löschen der Datei',
     ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 ];
 =======
 ]; 
 >>>>>>> 0a466ed (.)
+=======
+];
+>>>>>>> 37a2da6 (.)
