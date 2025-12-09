@@ -17,6 +17,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 =======
@@ -77,11 +78,14 @@
 =======
 >>>>>>> 37a2da6 (.)
 >>>>>>> 760b37c (.)
+=======
+>>>>>>> 3f513a2 (.)
 <?php
 
 declare(strict_types=1);
 
 ?>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -179,6 +183,8 @@ declare(strict_types=1);
 =======
 >>>>>>> 37a2da6 (.)
 >>>>>>> 760b37c (.)
+=======
+>>>>>>> 3f513a2 (.)
 @extends('media::layouts.master')
 
 @section('content')
