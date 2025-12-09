@@ -71,6 +71,7 @@ return [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 =======
@@ -81,6 +82,8 @@ return [
 >>>>>>> 9a4eacb (.)
 =======
 >>>>>>> c4425b4 (.)
+=======
+>>>>>>> ece6f0a (.)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -94,6 +97,7 @@ return [
 
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -197,6 +201,8 @@ return [
 >>>>>>> e5c049f (.)
 =======
 >>>>>>> a70c4fa (.)
+=======
+>>>>>>> ece6f0a (.)
     'notifications' => [
         'credentials_tested' => 'Credenziali AWS testate',
         'bucket_policy_tested' => 'Policy bucket testata',
@@ -242,6 +248,7 @@ return [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 06bb10d (.)
 =======
@@ -272,10 +279,13 @@ return [
 >>>>>>> 91c1d65 (.)
 =======
 >>>>>>> c4425b4 (.)
+=======
+>>>>>>> ece6f0a (.)
     'debug' => [
         'run_tests_message' => 'Esegui i test per vedere i risultati qui...',
     ],
 =======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -299,12 +309,15 @@ return [
 >>>>>>> 9a4eacb (.)
 =======
 >>>>>>> c4425b4 (.)
+=======
+>>>>>>> ece6f0a (.)
     'debug' => [
         'run_tests_message' => 'Esegui i test per vedere i risultati qui...',
     ],
 =======
 =======
 >>>>>>> origin/develop
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -330,11 +343,14 @@ return [
 >>>>>>> 10ef3f7 (.)
 =======
 >>>>>>> c4425b4 (.)
+=======
+>>>>>>> ece6f0a (.)
 
     'debug' => [
         'run_tests_message' => 'Esegui i test per vedere i risultati qui...',
     ],
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -356,6 +372,8 @@ return [
 >>>>>>> 9a4eacb (.)
 =======
 >>>>>>> c4425b4 (.)
+=======
+>>>>>>> ece6f0a (.)
 >>>>>>> a12f125f4a (.)
 =======
     'debug' => [
@@ -365,6 +383,7 @@ return [
 =======
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -497,6 +516,8 @@ return [
         'run_tests_message' => 'Esegui i test per vedere i risultati qui...',
     ],
 >>>>>>> a70c4fa (.)
+=======
+>>>>>>> ece6f0a (.)
     'fields' => [
         'attachment' => [
             'label' => 'Allegato',
@@ -539,6 +560,7 @@ return [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 =======
@@ -549,6 +571,8 @@ return [
 >>>>>>> 9a4eacb (.)
 =======
 >>>>>>> c4425b4 (.)
+=======
+>>>>>>> ece6f0a (.)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -562,6 +586,7 @@ return [
 
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -665,6 +690,8 @@ return [
 >>>>>>> e5c049f (.)
 =======
 >>>>>>> a70c4fa (.)
+=======
+>>>>>>> ece6f0a (.)
     'messages' => [
         'test_successful' => 'Test completato con successo',
         'test_failed' => 'Test fallito',
@@ -705,6 +732,7 @@ return [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 =======
@@ -715,6 +743,8 @@ return [
 >>>>>>> 9a4eacb (.)
 =======
 >>>>>>> c4425b4 (.)
+=======
+>>>>>>> ece6f0a (.)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -728,6 +758,7 @@ return [
 
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -831,6 +862,8 @@ return [
 >>>>>>> e5c049f (.)
 =======
 >>>>>>> a70c4fa (.)
+=======
+>>>>>>> ece6f0a (.)
     'errors' => [
         'aws_credentials_invalid' => 'Credenziali AWS non valide',
         's3_bucket_inaccessible' => 'Bucket S3 non accessibile',
@@ -869,6 +902,7 @@ return [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 =======
@@ -879,6 +913,8 @@ return [
 >>>>>>> 9a4eacb (.)
 =======
 >>>>>>> c4425b4 (.)
+=======
+>>>>>>> ece6f0a (.)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -892,6 +928,7 @@ return [
 
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -995,6 +1032,8 @@ return [
 >>>>>>> e5c049f (.)
 =======
 >>>>>>> a70c4fa (.)
+=======
+>>>>>>> ece6f0a (.)
     'solutions' => [
         'check_credentials' => 'Verifica le credenziali AWS in .env',
         'check_bucket_name' => 'Verifica il nome del bucket S3',

@@ -28,6 +28,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 =======
@@ -39,12 +40,15 @@
 =======
 >>>>>>> c4425b4 (.)
 =======
+>>>>>>> ece6f0a (.)
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> b93ef594b4 (.)
 >>>>>>> e9b0959 (.)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -118,10 +122,13 @@
 >>>>>>> e5c049f (.)
 =======
 >>>>>>> a70c4fa (.)
+=======
+>>>>>>> ece6f0a (.)
 # ==============================================
 # LARAXOT MODULE MEDIA - .GITIGNORE
 # ==============================================
 # Modulo Media Laraxot - Template standardizzato
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -198,10 +205,13 @@
 >>>>>>> 9a4eacb (.)
 =======
 >>>>>>> c4425b4 (.)
+=======
+>>>>>>> ece6f0a (.)
 # Ultimo aggiornamento: 2025-01-31
 =======
 # Ultimo aggiornamento: 2025-01-06
 >>>>>>> e9b0959 (.)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -525,6 +535,8 @@
 =======
 # Ultimo aggiornamento: 2025-01-06
 >>>>>>> 71fafa8 (.)
+=======
+>>>>>>> ece6f0a (.)
 # ==============================================
 
 # ==============================================
@@ -596,10 +608,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 1d21a10 (.)
 =======
 >>>>>>> b8fda23 (.)
+=======
+>>>>>>> ece6f0a (.)
 /vendor/
 /vendor
 /node_modules/
@@ -611,6 +626,7 @@ composer.lock
 yarn-error.log
 npm-debug.log
 =======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -633,6 +649,8 @@ npm-debug.log
 >>>>>>> 8e24560 (.)
 =======
 >>>>>>> e0b877b (.)
+=======
+>>>>>>> ece6f0a (.)
 vendor/
 <<<<<<< HEAD
 /vendor/
@@ -699,6 +717,7 @@ lerna-debug.log*
 >>>>>>> b93ef594b4 (.)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 vendor/
 >>>>>>> 5200b63 (.)
@@ -721,6 +740,8 @@ vendor/
 <<<<<<< HEAD
 =======
 >>>>>>> 1d21a10 (.)
+=======
+>>>>>>> ece6f0a (.)
 /vendor/
 node_modules/
 /node_modules/
@@ -730,9 +751,12 @@ yarn.lock
 yarn-error.log
 composer.lock
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> e9b0959 (.)
 =======
 >>>>>>> 1d21a10 (.)
+=======
+>>>>>>> ece6f0a (.)
 
 # ==============================================
 # BUILD & COMPILED FILES
@@ -744,6 +768,7 @@ dist/
 docs/cache/
 cache/
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1351,6 +1376,11 @@ dist/
 docs/cache/
 cache/
 
+=======
+# Laravel specific
+>>>>>>> a12f125f4a (.)
+=======
+>>>>>>> ece6f0a (.)
 # ==============================================
 # CACHE & TEMPORARY FILES
 # ==============================================
@@ -1384,8 +1414,12 @@ lerna-debug.log*
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b93ef594b4 (.)
 >>>>>>> c4425b4 (.)
+=======
+>>>>>>> b93ef594b4 (.)
+>>>>>>> ece6f0a (.)
 =======
 # Dependencies and packages
 /vendor/
@@ -1411,6 +1445,7 @@ npm-debug.log
 build/
 
 # Laravel specific
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1511,6 +1546,10 @@ build/
 >>>>>>> e5c049f (.)
 =======
 >>>>>>> a70c4fa (.)
+=======
+>>>>>>> origin/develop
+>>>>>>> e9b0959 (.)
+>>>>>>> ece6f0a (.)
 bootstrap/compiled.php
 app/storage/
 public/storage
@@ -1549,6 +1588,7 @@ storage/*.key
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 =======
@@ -1560,10 +1600,13 @@ storage/*.key
 =======
 >>>>>>> c4425b4 (.)
 =======
+>>>>>>> ece6f0a (.)
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> e9b0959 (.)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1637,6 +1680,8 @@ storage/*.key
 >>>>>>> e5c049f (.)
 =======
 >>>>>>> a70c4fa (.)
+=======
+>>>>>>> ece6f0a (.)
 .env.*
 !.env.example
 
@@ -1759,6 +1804,7 @@ docs/cache/
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 80a2320 (.)
 =======
@@ -1775,6 +1821,8 @@ docs/cache/
 >>>>>>> b3fe6db (.)
 =======
 >>>>>>> c4425b4 (.)
+=======
+>>>>>>> ece6f0a (.)
 # LANGUAGE FILES
 # ==============================================
 lang/lang/
@@ -1901,6 +1949,7 @@ cache/
 =======
 
 # ==============================================
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -2704,6 +2753,8 @@ database_old/
 >>>>>>> 5a393f1 (.)
 =======
 >>>>>>> 71fafa8 (.)
+=======
+>>>>>>> ece6f0a (.)
 # OLD DIRECTORIES (LEGACY CLEANUP)
 # ==============================================
 resources/views/Components_old/
@@ -2755,8 +2806,12 @@ public_html
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b93ef594b4 (.)
 >>>>>>> c4425b4 (.)
+=======
+>>>>>>> b93ef594b4 (.)
+>>>>>>> ece6f0a (.)
 =======
 
 # Local configurations
@@ -2796,6 +2851,7 @@ cache/
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
 =======
@@ -2951,3 +3007,7 @@ public_html
 >>>>>>> e0b877b (.)
 =======
 >>>>>>> 39b1a61 (.)
+=======
+>>>>>>> origin/develop
+>>>>>>> e9b0959 (.)
+>>>>>>> ece6f0a (.)
