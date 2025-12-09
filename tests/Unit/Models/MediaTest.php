@@ -14,6 +14,7 @@ class MediaTest extends TestCase
 
     public function test_can_create_media_with_minimal_data(): void
     {
+        /** @var \Illuminate\Database\Eloquent\Collection */
         $media = Media::factory()->create([
             'model_type' => 'App\Models\User',
             'model_id' => '1',
@@ -24,6 +25,7 @@ class MediaTest extends TestCase
             'size' => 1024,
         ]);
 
+        /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertDatabaseHas('media', [
             'id' => $media->id,
             'model_type' => 'App\Models\User',
@@ -68,8 +70,10 @@ class MediaTest extends TestCase
             'curations' => ['featured' => true, 'gallery' => false],
         ];
 
+        /** @var \Illuminate\Database\Eloquent\Collection */
         $media = Media::factory()->create($mediaData);
 
+        /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertDatabaseHas('media', [
             'id' => $media->id,
             'model_type' => 'App\Models\Post',
@@ -106,32 +110,42 @@ class MediaTest extends TestCase
 
     public function test_media_has_soft_deletes(): void
     {
+        /** @var \Illuminate\Database\Eloquent\Collection */
         $media = Media::factory()->create();
         $mediaId = $media->id;
 
+        /** @phpstan-ignore-next-line method.nonObject */
         $media->delete();
 
+        /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertSoftDeleted('media', ['id' => $mediaId]);
+        /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertDatabaseMissing('media', ['id' => $mediaId]);
     }
 
     public function test_can_restore_soft_deleted_media(): void
     {
+        /** @var \Illuminate\Database\Eloquent\Collection */
         $media = Media::factory()->create();
         $mediaId = $media->id;
 
+        /** @phpstan-ignore-next-line method.nonObject */
         $media->delete();
+        /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertSoftDeleted('media', ['id' => $mediaId]);
 
         $restoredMedia = Media::withTrashed()->find($mediaId);
+        /** @phpstan-ignore-next-line method.nonObject */
         $restoredMedia->restore();
 
+        /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertDatabaseHas('media', ['id' => $mediaId]);
         static::assertNull($restoredMedia->deleted_at);
     }
 
     public function test_can_find_media_by_model_type(): void
     {
+        /** @var \Illuminate\Database\Eloquent\Collection */
         $media = Media::factory()->create(['model_type' => 'App\Models\UniqueModel']);
 
         $foundMedia = Media::where('model_type', 'App\Models\UniqueModel')->first();
@@ -142,6 +156,7 @@ class MediaTest extends TestCase
 
     public function test_can_find_media_by_model_id(): void
     {
+        /** @var \Illuminate\Database\Eloquent\Collection */
         $media = Media::factory()->create(['model_id' => '999']);
 
         $foundMedia = Media::where('model_id', '999')->first();
@@ -159,11 +174,13 @@ class MediaTest extends TestCase
         $avatarMedia = Media::where('collection_name', 'avatars')->get();
 
         static::assertCount(1, $avatarMedia);
+        /** @phpstan-ignore-next-line method.nonObject */
         static::assertSame('avatars', $avatarMedia->first()->collection_name);
     }
 
     public function test_can_find_media_by_name(): void
     {
+        /** @var \Illuminate\Database\Eloquent\Collection */
         $media = Media::factory()->create(['name' => 'unique-media-name']);
 
         $foundMedia = Media::where('name', 'unique-media-name')->first();
@@ -174,6 +191,7 @@ class MediaTest extends TestCase
 
     public function test_can_find_media_by_file_name(): void
     {
+        /** @var \Illuminate\Database\Eloquent\Collection */
         $media = Media::factory()->create(['file_name' => 'unique-file.jpg']);
 
         $foundMedia = Media::where('file_name', 'unique-file.jpg')->first();
@@ -191,6 +209,7 @@ class MediaTest extends TestCase
         $publicMedia = Media::where('disk', 'public')->get();
 
         static::assertCount(1, $publicMedia);
+        /** @phpstan-ignore-next-line method.nonObject */
         static::assertSame('public', $publicMedia->first()->disk);
     }
 
@@ -203,6 +222,7 @@ class MediaTest extends TestCase
         $jpegMedia = Media::where('mime_type', 'image/jpeg')->get();
 
         static::assertCount(1, $jpegMedia);
+        /** @phpstan-ignore-next-line method.nonObject */
         static::assertSame('image/jpeg', $jpegMedia->first()->mime_type);
     }
 
@@ -215,6 +235,7 @@ class MediaTest extends TestCase
         $largeMedia = Media::where('size', '>', 1000)->get();
 
         static::assertCount(2, $largeMedia);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -259,6 +280,9 @@ class MediaTest extends TestCase
 >>>>>>> fa7b90f (.)
 =======
 >>>>>>> dd8be58 (.)
+=======
+        /** @phpstan-ignore-next-line method.nonObject */
+>>>>>>> 4b10075 (.)
         static::assertTrue($largeMedia->every(fn ($media) => $media->size > 1000));
 =======
         static::assertTrue($largeMedia->every(fn($media) => $media->size > 1000));
@@ -319,6 +343,7 @@ class MediaTest extends TestCase
         $imageMedia = Media::where('type', 'image')->get();
 
         static::assertCount(1, $imageMedia);
+        /** @phpstan-ignore-next-line method.nonObject */
         static::assertSame('image', $imageMedia->first()->type);
     }
 
@@ -331,6 +356,7 @@ class MediaTest extends TestCase
         $jpgMedia = Media::where('ext', 'jpg')->get();
 
         static::assertCount(1, $jpgMedia);
+        /** @phpstan-ignore-next-line method.nonObject */
         static::assertSame('jpg', $jpgMedia->first()->ext);
     }
 
@@ -343,6 +369,7 @@ class MediaTest extends TestCase
         $hdMedia = Media::where('width', '>=', 1920)->get();
 
         static::assertCount(1, $hdMedia);
+        /** @phpstan-ignore-next-line method.nonObject */
         static::assertSame(1920, $hdMedia->first()->width);
     }
 
@@ -355,6 +382,7 @@ class MediaTest extends TestCase
         $profileMedia = Media::where('name', 'like', '%profile%')->get();
 
         static::assertCount(1, $profileMedia);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -399,6 +427,9 @@ class MediaTest extends TestCase
 >>>>>>> fa7b90f (.)
 =======
 >>>>>>> dd8be58 (.)
+=======
+        /** @phpstan-ignore-next-line method.nonObject */
+>>>>>>> 4b10075 (.)
         static::assertTrue($profileMedia->every(fn ($media) => str_contains($media->name, 'profile')));
 =======
         static::assertTrue($profileMedia->every(fn($media) => str_contains($media->name, 'profile')));
@@ -463,6 +494,7 @@ class MediaTest extends TestCase
         $avatarMedia = Media::whereJsonContains('custom_properties->category', 'avatar')->get();
 
         static::assertCount(1, $avatarMedia);
+        /** @phpstan-ignore-next-line method.nonObject */
         static::assertSame('avatar', $avatarMedia->first()->custom_properties['category']);
     }
 
@@ -479,15 +511,19 @@ class MediaTest extends TestCase
         $resizeMedia = Media::whereJsonContains('manipulations->resize', ['width' => 800, 'height' => 600])->get();
 
         static::assertCount(1, $resizeMedia);
+        /** @phpstan-ignore-next-line method.nonObject */
         static::assertArrayHasKey('resize', $resizeMedia->first()->manipulations);
     }
 
     public function test_can_update_media(): void
     {
+        /** @var \Illuminate\Database\Eloquent\Collection */
         $media = Media::factory()->create(['name' => 'Old Name']);
 
+        /** @phpstan-ignore-next-line method.nonObject */
         $media->update(['name' => 'New Name']);
 
+        /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertDatabaseHas('media', [
             'id' => $media->id,
             'name' => 'New Name',
@@ -496,6 +532,7 @@ class MediaTest extends TestCase
 
     public function test_can_handle_null_values(): void
     {
+        /** @var \Illuminate\Database\Eloquent\Collection */
         $media = Media::factory()->create([
             'model_type' => 'App\Models\Test',
             'model_id' => '1',
@@ -526,6 +563,7 @@ class MediaTest extends TestCase
             'curations' => null,
         ]);
 
+        /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->assertDatabaseHas('media', [
             'id' => $media->id,
             'uuid' => null,
@@ -562,12 +600,15 @@ class MediaTest extends TestCase
         $avatarImages = Media::where('collection_name', 'avatars')->where('type', 'image')->get();
 
         static::assertCount(1, $avatarImages);
+        /** @phpstan-ignore-next-line method.nonObject */
         static::assertSame('avatars', $avatarImages->first()->collection_name);
+        /** @phpstan-ignore-next-line method.nonObject */
         static::assertSame('image', $avatarImages->first()->type);
     }
 
     public function test_media_has_media_converts_relationship(): void
     {
+        /** @var \Illuminate\Database\Eloquent\Collection */
         $media = Media::factory()->create();
 
         static::assertTrue(method_exists($media, 'mediaConverts'));
@@ -575,6 +616,7 @@ class MediaTest extends TestCase
 
     public function test_media_has_temporary_upload_relationship(): void
     {
+        /** @var \Illuminate\Database\Eloquent\Collection */
         $media = Media::factory()->create();
 
         static::assertTrue(method_exists($media, 'temporaryUpload'));
@@ -582,6 +624,7 @@ class MediaTest extends TestCase
 
     public function test_media_has_creator_relationship(): void
     {
+        /** @var \Illuminate\Database\Eloquent\Collection */
         $media = Media::factory()->create();
 
         static::assertTrue(method_exists($media, 'creator'));
@@ -589,23 +632,28 @@ class MediaTest extends TestCase
 
     public function test_media_can_get_url_conversion(): void
     {
+        /** @var \Illuminate\Database\Eloquent\Collection */
         $media = Media::factory()->create([
             'file_name' => 'test-image.jpg',
             'directory' => 'test',
         ]);
 
+        /** @phpstan-ignore-next-line method.nonObject */
         $thumbUrl = $media->getUrlConv('thumb');
         static::assertStringContainsString('thumb.jpg', $thumbUrl);
 
+        /** @phpstan-ignore-next-line method.nonObject */
         $url800 = $media->getUrlConv('800');
         static::assertStringContainsString('800.jpg', $url800);
 
+        /** @phpstan-ignore-next-line method.nonObject */
         $url400 = $media->getUrlConv('400');
         static::assertStringContainsString('400.jpg', $url400);
     }
 
     public function test_media_has_entry_conversions_attribute(): void
     {
+        /** @var \Illuminate\Database\Eloquent\Collection */
         $media = Media::factory()->create([
             'generated_conversions' => ['thumb' => true, 'medium' => false],
         ]);
@@ -614,13 +662,17 @@ class MediaTest extends TestCase
 
         static::assertIsArray($entryConversions);
         static::assertCount(2, $entryConversions);
+        /** @phpstan-ignore-next-line offsetAccess.nonOffsetAccessible */
         static::assertArrayHasKey('name', $entryConversions[0]);
+        /** @phpstan-ignore-next-line offsetAccess.nonOffsetAccessible */
         static::assertArrayHasKey('generated', $entryConversions[0]);
+        /** @phpstan-ignore-next-line offsetAccess.nonOffsetAccessible */
         static::assertArrayHasKey('src', $entryConversions[0]);
     }
 
     public function test_media_has_factory(): void
     {
+        /** @var \Illuminate\Database\Eloquent\Collection */
         $media = Media::factory()->create();
 
         static::assertNotNull($media->id);
@@ -678,6 +730,7 @@ class MediaTest extends TestCase
             'responsive_images' => 'array',
         ];
 
+        /** @phpstan-ignore-next-line method.nonObject */
         static::assertSame($expectedCasts, $media->getCasts());
     }
 }
