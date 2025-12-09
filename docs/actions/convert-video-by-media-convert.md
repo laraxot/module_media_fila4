@@ -19,6 +19,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 3f50d25 (.)
 =======
@@ -261,3 +262,5 @@ $convertedPath = $action->execute($data, $record);
 =======
 [Torna alla documentazione Media](../README.md) 
 >>>>>>> d44d947 (.)
+=======
+>>>>>>> e398f47 (.)
