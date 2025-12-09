@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Checklist Conformità Laraxot - Modulo Media
 
 ## 🎯 **CHECKLIST PRE-COMMIT OBBLIGATORIA**
@@ -228,3 +229,5 @@ class ExamplePage extends XotBasePage
 **Versione**: 1.0  
 **Data**: 2025-08-07  
 **Applicabilità**: Tutti i file Filament del modulo Media
+=======
+>>>>>>> 8cdc78f (.)
