@@ -92,38 +92,17 @@ class AddAttachmentAction extends Action
             throw new Exception('wip');
         }
 
-        $file = $data['file'] ?? null;
-        $fileName = $data['name'] ?? null;
-        $originalFileName = $data['original_file_name'] ?? null;
-        
-        if (!is_string($file) || !is_string($originalFileName)) {
-            throw new Exception('Invalid file data');
-        }
-        
-        $media = $ownerRecord->addMediaFromDisk($file, config('attachment.upload.disk.driver'));
-        
-        if (is_object($media) && method_exists($media, 'setName')) {
-            $name = $fileName ?? Str::beforeLast($originalFileName, '.');
-            $media = $media->setName($name);
-        }
-        
-        if (is_object($media) && method_exists($media, 'preservingOriginal')) {
-            $media = $media->preservingOriginal();
-        }
-        
-        if (is_object($media) && method_exists($media, 'toMediaCollection')) {
-            $attachment = $media->toMediaCollection($mediaCollection);
-        } else {
-            throw new Exception('Cannot add media to collection');
-        }
+        $attachment = $ownerRecord
+            ->addMediaFromDisk($data['file'], config('attachment.upload.disk.driver'))
+            ->setName($data['name'] ?? Str::beforeLast($data['original_file_name'], '.'))
+            ->preservingOriginal()
+            ->toMediaCollection($mediaCollection);
 
         $user_id = authId();
-        if (is_object($attachment) && method_exists($attachment, 'update')) {
-            $attachment->update([
-                'created_by' => $user_id,
-                'updated_by' => $user_id,
-            ]);
-        }
+        $attachment->update([
+            'created_by' => $user_id,
+            'updated_by' => $user_id,
+        ]);
 
         /*
          * $attachment->created_by=$user_id;
