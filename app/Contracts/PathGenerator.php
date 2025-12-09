@@ -20,6 +20,7 @@ use Modules\Media\Models\Media;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 =======
@@ -89,6 +90,12 @@ use Modules\Media\Models\Media;
 =======
  *
 >>>>>>> 146bbc3 (.)
+=======
+ *
+=======
+ * 
+>>>>>>> 0a466ed (.)
+>>>>>>> 054dfa6 (.)
  * Definisce i metodi necessari per la generazione dei percorsi dei file media.
  */
 interface PathGenerator
@@ -136,7 +143,9 @@ interface PathGenerator
      * @return string Il percorso generato
      */
     public function getPathForResponsiveImages(Media $media): string;
+<<<<<<< HEAD
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -208,3 +217,8 @@ interface PathGenerator
 >>>>>>> 1d21a10 (.)
 =======
 >>>>>>> 146bbc3 (.)
+=======
+=======
+} 
+>>>>>>> 0a466ed (.)
+>>>>>>> 054dfa6 (.)
