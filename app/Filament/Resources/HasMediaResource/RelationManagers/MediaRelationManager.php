@@ -141,13 +141,7 @@ class MediaRelationManager extends XotBaseRelationManager
     protected static ?string $inverseRelationship = 'model';
 >>>>>>> f41e45e (.)
 
-    /**
-     * @return array<string, Action|ActionGroup>
-     */
     #[Override]
-    /**
-     * @return array<string, mixed>
-     */
     public function getTableHeaderActions(): array
     {
         return [
