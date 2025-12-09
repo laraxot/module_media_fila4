@@ -24,6 +24,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 =======
@@ -33,12 +34,15 @@
 =======
 >>>>>>> 9a4eacb (.)
 =======
+>>>>>>> c4425b4 (.)
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> b93ef594b4 (.)
 >>>>>>> e9b0959 (.)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -103,10 +107,13 @@
 >>>>>>> 91c1d65 (.)
 =======
 >>>>>>> c90879e (.)
+=======
+>>>>>>> c4425b4 (.)
 # ==============================================
 # LARAXOT MODULE MEDIA - .GITIGNORE
 # ==============================================
 # Modulo Media Laraxot - Template standardizzato
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -159,10 +166,13 @@
 >>>>>>> b8fda23 (.)
 =======
 >>>>>>> 9a4eacb (.)
+=======
+>>>>>>> c4425b4 (.)
 # Ultimo aggiornamento: 2025-01-31
 =======
 # Ultimo aggiornamento: 2025-01-06
 >>>>>>> e9b0959 (.)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -372,6 +382,8 @@
 =======
 # Ultimo aggiornamento: 2025-01-31
 >>>>>>> b3fe6db (.)
+=======
+>>>>>>> c4425b4 (.)
 # ==============================================
 
 # ==============================================
@@ -421,6 +433,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 1d21a10 (.)
 =======
@@ -948,6 +961,8 @@ npm-debug.log
 vendor/
 =======
 >>>>>>> b3fe6db (.)
+=======
+>>>>>>> c4425b4 (.)
 /vendor/
 /vendor
 /node_modules/
@@ -958,6 +973,18 @@ yarn.lock
 composer.lock
 yarn-error.log
 npm-debug.log
+=======
+vendor/
+<<<<<<< HEAD
+/vendor/
+node_modules/
+/node_modules/
+/docs/vendor/
+package-lock.json
+yarn.lock
+yarn-error.log
+composer.lock
+>>>>>>> e9b0959 (.)
 
 # ==============================================
 # BUILD & COMPILED FILES
@@ -980,6 +1007,10 @@ cache/
 *.swp
 *.swo
 *.stackdump
+<<<<<<< HEAD
+=======
+*.exe
+>>>>>>> e9b0959 (.)
 *:Zone.Identifier
 v8-compile-cache-*
 .php-cs-fixer.cache
@@ -991,6 +1022,10 @@ v8-compile-cache-*
 *.log
 error_log
 npm-debug.log*
+<<<<<<< HEAD
+=======
+npm-debug.log
+>>>>>>> e9b0959 (.)
 yarn-error.log*
 lerna-debug.log*
 
@@ -1002,12 +1037,74 @@ lerna-debug.log*
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b93ef594b4 (.)
 >>>>>>> 9a4eacb (.)
 =======
 >>>>>>> 10ef3f7 (.)
 =======
 >>>>>>> 91c1d65 (.)
+=======
+=======
+=======
+# Dependencies and packages
+=======
+>>>>>>> b93ef594b4 (.)
+/vendor/
+node_modules/
+/node_modules/
+/docs/vendor/
+package-lock.json
+yarn.lock
+yarn-error.log
+composer.lock
+
+# ==============================================
+# BUILD & COMPILED FILES
+# ==============================================
+/build
+/build/
+build/
+dist/
+docs/cache/
+cache/
+
+<<<<<<< HEAD
+# Laravel specific
+>>>>>>> a12f125f4a (.)
+=======
+# ==============================================
+# CACHE & TEMPORARY FILES
+# ==============================================
+*.cache
+*.lock
+*.phar
+*.jar
+*.tmp
+*.swp
+*.swo
+*.stackdump
+*.exe
+*:Zone.Identifier
+v8-compile-cache-*
+.php-cs-fixer.cache
+.phpunit.result.cache
+
+# ==============================================
+# LOG FILES
+# ==============================================
+*.log
+error_log
+npm-debug.log*
+npm-debug.log
+yarn-error.log*
+lerna-debug.log*
+
+# ==============================================
+# LARAVEL SPECIFIC
+# ==============================================
+>>>>>>> b93ef594b4 (.)
+>>>>>>> c4425b4 (.)
 =======
 # Dependencies and packages
 /vendor/
@@ -1042,6 +1139,7 @@ build/
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
 =======
@@ -1122,6 +1220,10 @@ build/
 >>>>>>> 91c1d65 (.)
 =======
 >>>>>>> c90879e (.)
+=======
+>>>>>>> origin/develop
+>>>>>>> e9b0959 (.)
+>>>>>>> c4425b4 (.)
 bootstrap/compiled.php
 app/storage/
 public/storage
@@ -1156,6 +1258,7 @@ storage/*.key
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 =======
@@ -1165,10 +1268,13 @@ storage/*.key
 =======
 >>>>>>> 9a4eacb (.)
 =======
+>>>>>>> c4425b4 (.)
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> e9b0959 (.)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1233,6 +1339,8 @@ storage/*.key
 >>>>>>> 91c1d65 (.)
 =======
 >>>>>>> c90879e (.)
+=======
+>>>>>>> c4425b4 (.)
 .env.*
 !.env.example
 
@@ -1333,6 +1441,7 @@ docs/cache/
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 80a2320 (.)
 =======
@@ -1347,6 +1456,8 @@ docs/cache/
 >>>>>>> 9a4eacb (.)
 =======
 >>>>>>> b3fe6db (.)
+=======
+>>>>>>> c4425b4 (.)
 # LANGUAGE FILES
 # ==============================================
 lang/lang/
@@ -2011,6 +2122,21 @@ database/Migrations_old/
 database/Seeders_old/
 database/Factories_old/
 database_old/
+=======
+# OLD DIRECTORIES (LEGACY CLEANUP)
+# ==============================================
+resources/views/Components_old/
+resources/views/Components_old
+database/Migrations_old/
+database/Migrations_old
+database/Seeders_old/
+database/Seeders_old
+database/Factories_old/
+database/Factories_old
+database/Factories_
+database_old/
+database_old
+>>>>>>> e9b0959 (.)
 
 # ==============================================
 # MODULE SPECIFIC - MEDIA
@@ -2050,12 +2176,123 @@ public_html
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b93ef594b4 (.)
 >>>>>>> 9a4eacb (.)
 =======
 >>>>>>> 10ef3f7 (.)
 =======
 >>>>>>> 91c1d65 (.)
+=======
+=======
+public_html
+=======
+=======
+.env.*
+!.env.example
+>>>>>>> b93ef594b4 (.)
+
+# ==============================================
+# ENVIRONMENT & CONFIGURATION
+# ==============================================
+Homestead.yaml
+Homestead.json
+/.vagrant
+/.idea
+.phpintel
+
+# ==============================================
+# GIT SPECIFIC
+# ==============================================
+.git-rewrite/
+.git-rewrite
+.git-blame-ignore-revs
+
+# ==============================================
+# SYSTEM FILES
+# ==============================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# ==============================================
+# BACKUP FILES
+# ==============================================
+*.old
+*.old1
+*.old2
+*.backup
+*.backup.*
+*.bak
+*.bakcup
+*.new
+
+# ==============================================
+# DEVELOPMENT TOOLS
+# ==============================================
+.windsurf/
+.cursor/
+.phpstorm.meta.php
+
+# ==============================================
+# DOCUMENTATION CACHE
+# ==============================================
+docs/phpstan/
+docs/cache/
+<<<<<<< HEAD
+cache/
+>>>>>>> a12f125f4a (.)
+=======
+
+# ==============================================
+# OLD DIRECTORIES (LEGACY CLEANUP)
+# ==============================================
+resources/views/Components_old/
+resources/views/Components_old
+database/Migrations_old/
+database/Migrations_old
+database/Seeders_old/
+database/Seeders_old
+database/Factories_old/
+database/Factories_old
+database/Factories_
+database_old/
+database_old
+
+# ==============================================
+# MODULE SPECIFIC - MEDIA
+# ==============================================
+# File di configurazione locale
+config/local.php
+config/development.php
+
+# File media temporanei
+media/temp/
+media/uploads/temp/
+media/thumbnails/temp/
+
+# Cache media
+storage/media/
+storage/thumbnails/
+
+# File di test media
+media_test_data.json
+test_media_files/
+
+# ==============================================
+# END OF MEDIA .GITIGNORE
+# ==============================================
+
+# 🚫 File specifici del progetto
+*.fila2
+laravel
+public_html
+>>>>>>> b93ef594b4 (.)
+>>>>>>> c4425b4 (.)
 =======
 
 # Local configurations
@@ -2094,6 +2331,7 @@ cache/
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
 =======
@@ -2218,3 +2456,7 @@ public_html
 =======
 public_html
 >>>>>>> b3fe6db (.)
+=======
+>>>>>>> origin/develop
+>>>>>>> e9b0959 (.)
+>>>>>>> c4425b4 (.)
