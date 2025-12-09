@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 🎯 MEDIA MODULE - ROADMAP 2025
 
 **Modulo**: Media ([Description])  
@@ -219,6 +220,8 @@ Media Module
 =======
 =======
 >>>>>>> 9ffe7a9 (.)
+=======
+>>>>>>> 446a02b (.)
 # Media Module Roadmap
 
 ## Module Progress Overview
@@ -324,6 +327,9 @@ Overall Module Completion: 60%
 ---
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 0caa3cf (.)
 =======
 >>>>>>> 9ffe7a9 (.)
+=======
+>>>>>>> 446a02b (.)
