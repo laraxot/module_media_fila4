@@ -19,6 +19,7 @@ class GetVideoDurationAction
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function execute(string $disk, string $file): ?int
     {
         if (! Storage::disk($disk)->exists($file)) {
@@ -29,6 +30,8 @@ class GetVideoDurationAction
 =======
 >>>>>>> 37a2da6 (.)
 >>>>>>> 98c37f4 (.)
+=======
+>>>>>>> a80d398 (.)
     public function execute(string $disk, string $file): null|int
     {
         if (!Storage::disk($disk)->exists($file)) {
@@ -37,19 +40,5 @@ class GetVideoDurationAction
         } // returns an int
 
         return FFMpeg::fromDisk($disk)->open($file)->getDurationInSeconds();
-<<<<<<< HEAD
-=======
-    public function execute(string $disk, string $file): ?int
-    {
-        if (! Storage::disk($disk)->exists($file)) {
-            return null;
-        } // returns an int
-
-        return FFMpeg::fromDisk($disk)
-            ->open($file)
-            ->getDurationInSeconds();
->>>>>>> 0a466ed (.)
-=======
->>>>>>> 37a2da6 (.)
     }
 }

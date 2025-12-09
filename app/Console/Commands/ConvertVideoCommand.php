@@ -24,6 +24,7 @@ class ConvertVideoCommand extends Command
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         $this->info('disk: '.print_r($disk, true));
         $this->info('file: '.print_r($file, true));
 
@@ -36,11 +37,14 @@ class ConvertVideoCommand extends Command
 =======
 >>>>>>> 37a2da6 (.)
 >>>>>>> 98c37f4 (.)
+=======
+>>>>>>> a80d398 (.)
         $this->info('disk: ' . print_r($disk, true));
         $this->info('file: ' . print_r($file, true));
 
         if (!Storage::disk($disk)->exists($file)) {
             $this->error('[' . $disk . '] file [' . $file . '] Not Exists');
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 5200b63 (.)
@@ -60,10 +64,13 @@ class ConvertVideoCommand extends Command
 =======
 >>>>>>> 37a2da6 (.)
 >>>>>>> 98c37f4 (.)
+=======
+>>>>>>> a80d398 (.)
 
             return '';
         }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -97,6 +104,11 @@ class ConvertVideoCommand extends Command
         $file_new = Str::of($file)->replaceLast('.mp4', '.' . $extension)->toString();
 >>>>>>> 37a2da6 (.)
 >>>>>>> 98c37f4 (.)
+=======
+        $format = new WebM();
+        $extension = mb_strtolower(class_basename($format));
+        $file_new = Str::of($file)->replaceLast('.mp4', '.' . $extension)->toString();
+>>>>>>> a80d398 (.)
 
         $media = FFMpeg::fromDisk($disk)->open($file);
         $export = $media->export();
@@ -106,20 +118,9 @@ class ConvertVideoCommand extends Command
             $this->info("{$remaining} seconds left at rate: {$rate}");
         });
         // @phpstan-ignore method.nonObject, method.nonObject
-<<<<<<< HEAD
-<<<<<<< HEAD
         $export
             ->toDisk($disk)
             // @phpstan-ignore method.nonObject
-=======
-        $export->toDisk($disk)
-        // @phpstan-ignore method.nonObject
->>>>>>> 0a466ed (.)
-=======
-        $export
-            ->toDisk($disk)
-            // @phpstan-ignore method.nonObject
->>>>>>> 37a2da6 (.)
             ->inFormat($format)
             // @phpstan-ignore method.nonObject
             ->save($file_new);
