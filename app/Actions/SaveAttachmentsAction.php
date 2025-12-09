@@ -61,6 +61,7 @@ class SaveAttachmentsAction
 
         foreach ($attachments as $attachment) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             Assert::string($attachment, '['.__LINE__.']['.class_basename(__CLASS__).']');
 
 =======
@@ -96,6 +97,17 @@ class SaveAttachmentsAction
 >>>>>>> 47a54fe (.)
 =======
 >>>>>>> f1c6d6e (.)
+=======
+            $attachmentKey = is_string($attachment) ? $attachment : (string) $attachment;
+            if (empty($data[$attachmentKey])) {
+                continue;
+            }
+
+            $path = $data[$attachmentKey];
+            if (!is_string($path)) {
+                continue;
+            }
+>>>>>>> 13d1d7e (.)
 
             // Metodo compatibile con Laravel 9+ e Flysystem 3.x
             $storage = Storage::disk($disk);
@@ -165,11 +177,11 @@ class SaveAttachmentsAction
 
             try {
                 $media = $record->addMedia($tempPath)->usingFileName(basename($path))->toMediaCollection(
-                    $attachment,
+                    $attachmentKey,
                     $disk,
                 );
 
-                $dataAttachments[$attachment] = $media->getPathRelativeToRoot();
+                $dataAttachments[$attachmentKey] = $media->getPathRelativeToRoot();
             } finally {
                 // Cleanup del file temporaneo
                 if (file_exists($tempPath)) {
@@ -204,9 +216,17 @@ class SaveAttachmentsAction
         $data_attachments = [];
         foreach ($attachments as $attachment) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             Assert::string($attachment, '['.__LINE__.']['.class_basename(__CLASS__).']');
             $path = $data[$attachment];
             Assert::string($path, '['.__LINE__.']['.class_basename(__CLASS__).']');
+=======
+            $attachmentKey = is_string($attachment) ? $attachment : (string) $attachment;
+            $path = $data[$attachmentKey] ?? null;
+            if (!is_string($path)) {
+                continue;
+            }
+>>>>>>> 13d1d7e (.)
             $full_path = Storage::disk($disk)->path($path);
             // *
 =======
@@ -253,12 +273,15 @@ class SaveAttachmentsAction
                 throw new Exception('Method addMediaFromDisk not found');
             }
             $media = $record
-                ->addMediaFromDisk($path, $disk)
-                // $media=$record->addMediaFromRequest($attachment)
-
-                // $media=$record->addMedia($full_path)
-                ->toMediaCollection($attachment);
-            $data_attachments[$attachment] = $media->getPathRelativeToRoot();
+                ->addMediaFromDisk($path, $disk);
+            
+            if (is_object($media) && method_exists($media, 'toMediaCollection')) {
+                $media = $media->toMediaCollection($attachmentKey);
+            }
+            
+            if (is_object($media) && method_exists($media, 'getPathRelativeToRoot')) {
+                $data_attachments[$attachmentKey] = $media->getPathRelativeToRoot();
+            }
         }
 >>>>>>> 5200b63 (.)
         $record->update($data_attachments);
