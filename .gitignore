@@ -39,6 +39,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 # Ultimo aggiornamento: 2025-01-31
@@ -63,11 +64,15 @@
 # Ultimo aggiornamento: 2025-01-31
 >>>>>>> e361059 (.)
 >>>>>>> 9932c65 (.)
+=======
+# Ultimo aggiornamento: 2025-01-31
+>>>>>>> 91d10e9 (.)
 # ==============================================
 
 # ==============================================
 # DEPENDENCIES & PACKAGES
 # ==============================================
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -262,6 +267,8 @@ yarn.lock
 yarn-error.log
 composer.lock
 =======
+=======
+>>>>>>> 91d10e9 (.)
 /vendor/
 /vendor
 /node_modules/
@@ -272,7 +279,6 @@ yarn.lock
 composer.lock
 yarn-error.log
 npm-debug.log
->>>>>>> e361059 (.)
 
 # ==============================================
 # BUILD & COMPILED FILES
@@ -295,10 +301,6 @@ cache/
 *.swp
 *.swo
 *.stackdump
-<<<<<<< HEAD
-*.exe
-=======
->>>>>>> e361059 (.)
 *:Zone.Identifier
 v8-compile-cache-*
 .php-cs-fixer.cache
@@ -310,10 +312,6 @@ v8-compile-cache-*
 *.log
 error_log
 npm-debug.log*
-<<<<<<< HEAD
-npm-debug.log
-=======
->>>>>>> e361059 (.)
 yarn-error.log*
 lerna-debug.log*
 
@@ -469,6 +467,7 @@ docs/cache/
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 80a2320 (.)
 =======
@@ -747,6 +746,8 @@ database/Factories_
 database_old/
 database_old
 =======
+=======
+>>>>>>> 91d10e9 (.)
 # LANGUAGE FILES
 # ==============================================
 lang/lang/
@@ -760,7 +761,6 @@ database/Migrations_old/
 database/Seeders_old/
 database/Factories_old/
 database_old/
->>>>>>> e361059 (.)
 
 # ==============================================
 # MODULE SPECIFIC - MEDIA
@@ -769,28 +769,30 @@ database_old/
 config/local.php
 config/development.php
 
-# File media temporanei
-media/temp/
-media/uploads/temp/
-media/thumbnails/temp/
-
-# Cache media
+# File media
 storage/media/
+storage/uploads/
 storage/thumbnails/
+storage/conversions/
+
+# File temporanei di media
+media/temp/
+media/cache/
+media/drafts/
 
 # File di test media
 media_test_data.json
-test_media_files/
+test_media.sql
 
 # ==============================================
 # END OF MEDIA .GITIGNORE
 # ==============================================
 
-# 🚫 File specifici del progetto
+# File specifici del progetto
 *.fila2
 laravel
-<<<<<<< HEAD
 public_html
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b93ef594b4 (.)
@@ -854,3 +856,5 @@ public_html
 public_html
 >>>>>>> e361059 (.)
 >>>>>>> 9932c65 (.)
+=======
+>>>>>>> 91d10e9 (.)
