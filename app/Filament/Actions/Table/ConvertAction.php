@@ -22,7 +22,11 @@ class ConvertAction extends Action
             ->tooltip('convert')
             ->openUrlInNewTab()
             ->icon('media-convert')
+<<<<<<< HEAD
             ->schema([
+=======
+            ->form([
+>>>>>>> 0a466ed (.)
                 Radio::make('format')
                     ->options([
                         'webm01' => 'webm01',
@@ -31,8 +35,12 @@ class ConvertAction extends Action
                     ->inline()
                     ->inlineLabel(false),
             ])
+<<<<<<< HEAD
             ->action(dddx(...));
 
+=======
+            ->action(fn ($record): string => dddx($record));
+>>>>>>> 0a466ed (.)
         // ->requiresConfirmation()
     }
 }
