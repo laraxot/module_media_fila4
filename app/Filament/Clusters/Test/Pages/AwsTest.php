@@ -13,6 +13,7 @@ namespace Modules\Media\Filament\Clusters\Test\Pages;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Aws\Exception\AwsException;
 use Aws\S3\S3Client;
 use Aws\Sts\StsClient;
@@ -32,9 +33,12 @@ use Modules\Xot\Filament\Pages\XotBasePage;
 =======
 >>>>>>> 07b5575 (.)
 =======
+>>>>>>> 517d97d (.)
+=======
 use Override;
 use Filament\Schemas\Schema;
 >>>>>>> 1999eb3 (.)
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 446bc61 (.)
 =======
@@ -51,6 +55,8 @@ use Filament\Schemas\Schema;
 >>>>>>> 76e8f34 (.)
 =======
 >>>>>>> 71435ff (.)
+=======
+>>>>>>> 517d97d (.)
 use Filament\Schemas\Components\Tabs;
 use Filament\Schemas\Components\Tabs\Tab;
 use Filament\Schemas\Components\Actions;
@@ -108,6 +114,7 @@ class AwsTest extends XotBasePage
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -116,6 +123,8 @@ class AwsTest extends XotBasePage
 >>>>>>> 07b5575 (.)
 =======
 >>>>>>> 76e8f34 (.)
+=======
+>>>>>>> 517d97d (.)
 =======
     #[Override]
     public function form(Schema $schema): Schema
@@ -129,6 +138,7 @@ class AwsTest extends XotBasePage
             ]),
         ]);
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -151,6 +161,9 @@ class AwsTest extends XotBasePage
 >>>>>>> 76e8f34 (.)
 =======
 >>>>>>> 71435ff (.)
+=======
+>>>>>>> 1999eb3 (.)
+>>>>>>> 517d97d (.)
 
 >>>>>>> 5200b63 (.)
     protected function getS3TestSchema(): array
@@ -172,6 +185,7 @@ class AwsTest extends XotBasePage
                             ->color('success')
                             ->action('testS3FileOperations'),
                     ])->fullWidth(),
+<<<<<<< HEAD
                     Textarea::make('s3_results')
                         ->label('S3 Test Results')
                         ->rows(10)
@@ -180,6 +194,7 @@ class AwsTest extends XotBasePage
                         ->default(fn () => json_encode($this->testResults['s3'] ?? [], JSON_PRETTY_PRINT)),
 =======
                         ->default(fn() => json_encode($this->testResults['s3'] ?? [], JSON_PRETTY_PRINT)),
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -197,9 +212,12 @@ class AwsTest extends XotBasePage
 =======
 >>>>>>> 76e8f34 (.)
 =======
+>>>>>>> 517d97d (.)
+=======
                     ViewField::make('s3_results')
                         ->view('ui::filament.components.test-results')
                         ->viewData(fn() => ['results' => $this->testResults['s3'] ?? null]),
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -222,6 +240,9 @@ class AwsTest extends XotBasePage
 >>>>>>> 76e8f34 (.)
 =======
 >>>>>>> 71435ff (.)
+=======
+>>>>>>> 1999eb3 (.)
+>>>>>>> 517d97d (.)
                 ]),
         ];
     }
