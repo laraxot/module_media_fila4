@@ -17,6 +17,7 @@ namespace Modules\Media\Filament\Resources\MediaResource\Pages;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 446bc61 (.)
@@ -111,6 +112,8 @@ use Filament\Schemas\Components\Actions;
 >>>>>>> c3b81ef (.)
 =======
 >>>>>>> 9a7a2fa (.)
+=======
+>>>>>>> 1634e53 (.)
 use Filament\Actions\Action;
 use Filament\Actions\DeleteAction;
 use Filament\Infolists\Components\ImageEntry;
@@ -118,24 +121,35 @@ use Filament\Infolists\Components\RepeatableEntry;
 use Filament\Infolists\Components\TextEntry;
 use Filament\Infolists\Infolist;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 1634e53 (.)
 use Filament\Schemas\Components\Actions;
 use Filament\Schemas\Components\Component;
 use Filament\Schemas\Components\Grid;
 use Filament\Schemas\Components\Section;
+<<<<<<< HEAD
 =======
 use Filament\Resources\Pages\ViewRecord;
 use Modules\Media\Actions\Video\ConvertVideoByConvertDataAction;
 >>>>>>> 5200b63 (.)
+=======
+>>>>>>> 1634e53 (.)
 use Modules\Media\Datas\ConvertData;
 use Modules\Media\Filament\Infolists\VideoEntry;
 use Modules\Media\Filament\Resources\MediaConvertResource;
 use Modules\Media\Filament\Resources\MediaResource;
 use Modules\Media\Filament\Resources\MediaResource\Widgets\ConvertWidget;
+use Modules\Media\Models\Media;
 use Modules\Xot\Filament\Resources\Pages\XotBaseViewRecord;
+<<<<<<< HEAD
 <<<<<<< HEAD
 use Override;
 =======
 >>>>>>> 5200b63 (.)
+=======
+use Override;
+>>>>>>> 1634e53 (.)
 
 class ViewMedia extends XotBaseViewRecord
 {
@@ -159,6 +173,7 @@ class ViewMedia extends XotBaseViewRecord
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                     Section::make()->schema([
                         ImageEntry::make('url')
                             ->defaultImageUrl(fn (\Modules\Media\Models\Media $record) => $record->getUrl())
@@ -168,6 +183,17 @@ class ViewMedia extends XotBaseViewRecord
                             ->defaultImageUrl(fn (\Modules\Media\Models\Media $record) => $record->getUrl())
                             ->size(500)
                             ->visible(fn (\Modules\Media\Models\Media $record): bool => $record->type === 'video'),
+=======
+                    Section::make()->schema([
+                        ImageEntry::make('url')
+                            ->defaultImageUrl(fn (Media $record): string => $record->getUrl())
+                            ->size(500)
+                            ->visible(fn (Media $record): bool => $record->type === 'image'),
+                        VideoEntry::make('url')
+                            ->defaultImageUrl(fn (Media $record): string => $record->getUrl())
+                            ->size(500)
+                            ->visible(fn (Media $record): bool => $record->type === 'video'),
+>>>>>>> 1634e53 (.)
                     ]),
                     Section::make()->schema([
                         Actions::make([
@@ -175,6 +201,7 @@ class ViewMedia extends XotBaseViewRecord
                                 ->tooltip('convert')
                                 ->icon('heroicon-o-scale')
                                 ->schema(MediaConvertResource::getFormSchema())
+<<<<<<< HEAD
                                 ->action(function (\Modules\Media\Models\Media $record, array $data): void {
                                     /** @var array<string, mixed> $actionData */
                                     $actionData = $data;
@@ -238,13 +265,21 @@ class ViewMedia extends XotBaseViewRecord
                                 $convert_data = ConvertData::from($data);
                                 $record->mediaConverts()->create($convert_data->toArray());
                             }),
+=======
+                                ->action(function (Media $record, array $data): void {
+                                    $data['disk'] = $record->disk;
+                                    $data['file'] = $record->path.'/'.$record->file_name;
+                                    $convert_data = ConvertData::from($data);
+
+                                    /** @var array<string, mixed> $attributes */
+                                    $attributes = $convert_data->all();
+                                    $record->mediaConverts()->create($attributes);
+                                }),
+                        ]),
+>>>>>>> 1634e53 (.)
                     ]),
-                    TextEntry::make('name'),
-                    TextEntry::make('collection_name'),
-                    TextEntry::make('mime_type'),
-                    TextEntry::make('human_readable_size'),
-                    TextEntry::make('created_at'),
                 ]),
+<<<<<<< HEAD
             ]),
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -284,6 +319,8 @@ class ViewMedia extends XotBaseViewRecord
 >>>>>>> c3b81ef (.)
 =======
 >>>>>>> 9a7a2fa (.)
+=======
+>>>>>>> 1634e53 (.)
             RepeatableEntry::make('entry_conversions')
                 ->schema([
                     TextEntry::make('name'),

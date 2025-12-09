@@ -197,6 +197,7 @@ class AddAttachmentAction extends Action
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         $fileAdder = $ownerRecord->addMediaFromDisk($data['file'], config('attachment.upload.disk.driver'));
 
         if ($fileAdder === null || ! is_object($fileAdder)) {
@@ -277,12 +278,47 @@ class AddAttachmentAction extends Action
 >>>>>>> 13d1d7e (.)
 =======
 >>>>>>> 2a4b5df (.)
+=======
+        $media = $ownerRecord->addMediaFromDisk($data['file'], config('attachment.upload.disk.driver'));
+
+        if (! is_object($media)) {
+            throw new Exception('Failed to create media attachment - addMediaFromDisk did not return an object');
+        }
+
+        /** @phpstan-ignore-next-line */
+        if (method_exists($media, 'setName')) {
+            /** @phpstan-ignore-next-line */
+            $media = $media->setName($data['name'] ?? (isset($data['original_file_name']) ? Str::beforeLast((string) $data['original_file_name'], '.') : ''));
+        }
+
+        /** @phpstan-ignore-next-line */
+        if (is_object($media) && method_exists($media, 'preservingOriginal')) {
+            /** @phpstan-ignore-next-line */
+            $media = $media->preservingOriginal();
+        }
+
+        /** @phpstan-ignore-next-line */
+        if (is_object($media) && method_exists($media, 'toMediaCollection')) {
+            /** @phpstan-ignore-next-line */
+            $media = $media->toMediaCollection($mediaCollection);
+        }
+
+        if (! is_object($media)) {
+            throw new Exception('Media object was lost during processing');
+        }
+
+        $attachment = $media;
+>>>>>>> 1634e53 (.)
 
         $user_id = authId();
-        $attachment->update([
-            'created_by' => $user_id,
-            'updated_by' => $user_id,
-        ]);
+        /** @phpstan-ignore-next-line */
+        if (method_exists($attachment, 'update')) {
+            /** @phpstan-ignore-next-line */
+            $attachment->update([
+                'created_by' => $user_id,
+                'updated_by' => $user_id,
+            ]);
+        }
 
         /*
          * $attachment->created_by=$user_id;
