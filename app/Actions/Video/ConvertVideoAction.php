@@ -135,11 +135,14 @@ class ConvertVideoAction
         $format = new X264;
         $format->setKiloBitrate(1000);
 
+        /** @phpstan-ignore-next-line - FFMpeg fluent API */
         $toDiskMedia = $exportedMedia->toDisk($disk_mp4);
 >>>>>>> 21a9aec (.)
 
+        /** @phpstan-ignore-next-line - FFMpeg fluent API */
         $formattedMedia = $toDiskMedia->inFormat($format);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -191,6 +194,9 @@ class ConvertVideoAction
 >>>>>>> 47a54fe (.)
 =======
 >>>>>>> f1c6d6e (.)
+=======
+        /** @phpstan-ignore-next-line - FFMpeg fluent API */
+>>>>>>> 1900eb1 (.)
         $formattedMedia->save($file_new);
 =======
         if (is_object($formattedMedia) && method_exists($formattedMedia, 'save')) {
