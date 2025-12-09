@@ -21,6 +21,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 =======
@@ -92,11 +93,14 @@
 >>>>>>> fa051fc (.)
 =======
 >>>>>>> 22b1256 (.)
+=======
+>>>>>>> 10ef3f7 (.)
 <?php
 
 declare(strict_types=1);
 
 ?>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -209,6 +213,10 @@ declare(strict_types=1);
 >>>>>>> fa051fc (.)
 =======
 >>>>>>> 22b1256 (.)
+=======
+=======
+>>>>>>> 0a466ed (.)
+>>>>>>> 10ef3f7 (.)
 <x-filament-widgets::widget>
     <x-filament::section>
         {{-- Widget content --}}
