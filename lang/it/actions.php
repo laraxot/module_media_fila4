@@ -6,6 +6,24 @@ return [
     'add_attachment' => [
         'title' => 'Allegati',
         'label' => 'Carica allegato',
+<<<<<<< HEAD
         'fields' => [],
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+        'fields' => [],
+=======
+        'fields' => [
+        ],
+>>>>>>> a12f125f4a (.)
+=======
+        'fields' => [],
+>>>>>>> b93ef594b4 (.)
+=======
+        'fields' => [
+        ],
+>>>>>>> origin/develop
+>>>>>>> e9b0959 (.)
     ],
 ];
