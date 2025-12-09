@@ -7,6 +7,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 3f50d25 (.)
 =======
@@ -15,6 +16,8 @@
 >>>>>>> 2883a97 (.)
 =======
 >>>>>>> b8fda23 (.)
+=======
+>>>>>>> d2f9543 (.)
 # Media Module - Testing Guidelines
 
 ## Testing Framework Requirements
@@ -24,6 +27,7 @@ All tests MUST use `.env.testing` configuration:
 ```env
 APP_ENV=testing
 DB_CONNECTION=sqlite
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -63,6 +67,9 @@ DB_DATABASE=<nome progetto>_data_test
 >>>>>>> 09fde8f (.)
 =======
 >>>>>>> 667ff46 (.)
+=======
+DB_DATABASE=<nome progetto>_data_test
+>>>>>>> d2f9543 (.)
 DB_DATABASE=saluteora_data_test
 FILESYSTEM_DISK=local
 MEDIA_DISK=local
@@ -526,6 +533,7 @@ describe('Media Performance Tests', function () {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 8cdc78f (.)
 =======
@@ -544,3 +552,5 @@ describe('Media Performance Tests', function () {
 >>>>>>> b8fda23 (.)
 =======
 >>>>>>> 60ceacf (.)
+=======
+>>>>>>> d2f9543 (.)
