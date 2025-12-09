@@ -29,6 +29,7 @@ abstract class BaseModel extends XotBaseModel
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -43,3 +44,5 @@ abstract class BaseModel extends XotBaseModel
 
 
 >>>>>>> fa1fb90 (.)
+=======
+>>>>>>> 53e059b (.)
