@@ -29,6 +29,7 @@ class GetVideoFrameContentAction
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (! Storage::disk($disk_mp4)->exists($file_mp4)) {
 =======
         if (!Storage::disk($disk_mp4)->exists($file_mp4)) {
@@ -47,11 +48,15 @@ class GetVideoFrameContentAction
         if (!Storage::disk($disk_mp4)->exists($file_mp4)) {
 >>>>>>> 37a2da6 (.)
 >>>>>>> 98c37f4 (.)
+=======
+        if (!Storage::disk($disk_mp4)->exists($file_mp4)) {
+>>>>>>> a80d398 (.)
             return '';
         }
 
         $seconds = 3600;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -63,6 +68,8 @@ class GetVideoFrameContentAction
 =======
 >>>>>>> 37a2da6 (.)
 >>>>>>> 98c37f4 (.)
+=======
+>>>>>>> a80d398 (.)
         $cache_key = Str::slug($disk_mp4 . ' ' . $file_mp4 . ' ' . $time . ' 1');
 >>>>>>> 5200b63 (.)
 
@@ -81,27 +88,5 @@ class GetVideoFrameContentAction
                 return Storage::disk('public_html')->get('img/video_not_exists.jpg');
             }
         });
-<<<<<<< HEAD
-=======
-        $cache_key = Str::slug($disk_mp4.' '.$file_mp4.' '.$time.' 1');
-
-        return Cache::store('file')->remember(
-            $cache_key,
-            $seconds,
-            static function () use ($disk_mp4, $file_mp4, $time) {
-                try {
-                    return FFMpeg::fromDisk($disk_mp4)
-                        ->open($file_mp4)
-                        ->getFrameFromSeconds($time)
-                        ->export()
-                        ->getFrameContents();
-                } catch (Exception) {
-                    return Storage::disk('public_html')->get('img/video_not_exists.jpg');
-                }
-            }
-        );
->>>>>>> 0a466ed (.)
-=======
->>>>>>> 37a2da6 (.)
     }
 }

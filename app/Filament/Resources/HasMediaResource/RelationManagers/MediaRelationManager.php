@@ -9,6 +9,7 @@ use Filament\Actions\ActionGroup;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Modules\Media\Filament\Resources\HasMediaResource\Actions\AddAttachmentAction;
 use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
 use Override;
@@ -19,6 +20,8 @@ use Override;
 =======
 >>>>>>> 37a2da6 (.)
 >>>>>>> 98c37f4 (.)
+=======
+>>>>>>> a80d398 (.)
 use Override;
 use Filament\Schemas\Schema;
 use Illuminate\Database\Eloquent\Model;
@@ -36,6 +39,7 @@ class MediaRelationManager extends XotBaseRelationManager
     protected static ?string $inverseRelationship = 'model';
 =======
     protected static null|string $inverseRelationship = 'model';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 5200b63 (.)
@@ -68,18 +72,13 @@ class MediaRelationManager extends XotBaseRelationManager
 =======
 >>>>>>> 37a2da6 (.)
 >>>>>>> 98c37f4 (.)
+=======
+>>>>>>> a80d398 (.)
 
     /**
      * @return array<string, Action|ActionGroup>
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     #[Override]
-=======
->>>>>>> 0a466ed (.)
-=======
-    #[Override]
->>>>>>> 37a2da6 (.)
     public function getTableHeaderActions(): array
     {
         return [
