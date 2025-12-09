@@ -5,29 +5,10 @@ declare(strict_types=1);
 namespace Modules\Media\Actions;
 
 use Exception;
-use Filament\Forms;
-use Filament\Forms\Components\FileUpload;
-use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
-use Filament\Forms\Components\TextInput;
-use Filament\Schemas\Schema;
-use Filament\Forms\Set;
-use Filament\Pages\SubNavigationPosition;
-use Filament\Resources\Resource as FilamentResource;
-use Illuminate\Contracts\Support\Htmlable;
-use Illuminate\Contracts\Support\Renderable;
-use Illuminate\Contracts\View\View;
-use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Storage;
-use Illuminate\Support\HtmlString;
-use Illuminate\Support\Str;
-use Modules\UI\Actions\Icon\GetAllIconsAction;
-use Modules\Xot\Actions\ModelClass\CountAction;
-use Modules\Xot\Filament\Traits\NavigationLabelTrait;
 use Spatie\MediaLibrary\HasMedia;
-use Webmozart\Assert\Assert;
 
 use function Safe\file_put_contents;
-use function Safe\glob;
 use function Safe\tempnam;
 use function Safe\unlink;
 
@@ -47,7 +28,7 @@ class SaveAttachmentsAction
             // Metodo compatibile con Laravel 9+ e Flysystem 3.x
             $storage = Storage::disk($disk);
 
-            if (!$storage->exists($path)) {
+            if (! $storage->exists($path)) {
                 continue;
             }
 
@@ -72,7 +53,7 @@ class SaveAttachmentsAction
             }
         }
 
-        if (!empty($dataAttachments)) {
+        if (! empty($dataAttachments)) {
             $record->update($dataAttachments);
         }
     }
@@ -83,20 +64,20 @@ class SaveAttachmentsAction
         foreach ($attachments as $attachment) {
             $path = $data[$attachment];
             $full_path = Storage::disk($disk)->path($path);
-            //*
+            // *
             dddx([
                 'exists' => Storage::disk($disk)->exists($path),
                 'path' => $path,
                 'disk' => $disk,
                 'full_path' => Storage::disk($disk)->path($path),
             ]);
-            //*/
-            if (!method_exists($record, 'addMediaFromDisk')) {
+            // */
+            if (! method_exists($record, 'addMediaFromDisk')) {
                 throw new Exception('Method addMediaFromDisk not found');
             }
             $media = $record
                 ->addMediaFromDisk($path, $disk)
-                //$media=$record->addMediaFromRequest($attachment)
+                // $media=$record->addMediaFromRequest($attachment)
 
                 // $media=$record->addMedia($full_path)
                 ->toMediaCollection($attachment);

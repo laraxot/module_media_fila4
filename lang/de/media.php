@@ -2,7 +2,6 @@
 
 declare(strict_types=1);
 
-
 return [
     'pages' => 'Seiten',
     'widgets' => 'Widgets',

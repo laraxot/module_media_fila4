@@ -19,8 +19,8 @@ class FileExtensionRule implements Rule
     }
 
     /**
-     * @param  mixed $_attribute The attribute being validated (not used in this rule)
-     * @param  UploadedFile  $value The uploaded file to validate
+     * @param  mixed  $_attribute  The attribute being validated (not used in this rule)
+     * @param  UploadedFile  $value  The uploaded file to validate
      */
     public function passes($_attribute, $value): bool
     {

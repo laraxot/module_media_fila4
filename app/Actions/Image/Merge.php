@@ -4,23 +4,22 @@ declare(strict_types=1);
 
 namespace Modules\Media\Actions\Image;
 
-use Intervention\Image\ImageManager as InterventionImageManager;
 use Intervention\Image\Drivers\Gd\Driver as GdDriver;
+use Intervention\Image\ImageManager as InterventionImageManager;
 
 class Merge
 {
     /**
      * Unisce due immagini in una sola.
      *
-     * @param string $path1 Percorso della prima immagine
-     * @param string $path2 Percorso della seconda immagine
-     * @param string $outputPath Percorso di salvataggio
-     * @return bool
+     * @param  string  $path1  Percorso della prima immagine
+     * @param  string  $path2  Percorso della seconda immagine
+     * @param  string  $outputPath  Percorso di salvataggio
      */
     public function handle(string $path1, string $path2, string $outputPath): bool
     {
         // Intervention Image v3: il costruttore richiede un DriverInterface
-        $manager = new InterventionImageManager(new GdDriver());
+        $manager = new InterventionImageManager(new GdDriver);
 
         // Carica le immagini
         $image1 = $manager->read($path1);
