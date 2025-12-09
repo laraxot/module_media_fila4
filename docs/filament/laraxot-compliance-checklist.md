@@ -9,6 +9,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 3f50d25 (.)
 =======
@@ -19,6 +20,8 @@
 >>>>>>> 446a02b (.)
 =======
 >>>>>>> d2f9543 (.)
+=======
+>>>>>>> cb6b71e (.)
 # Checklist Conformità Laraxot - Modulo Media
 
 ## 🎯 **CHECKLIST PRE-COMMIT OBBLIGATORIA**
@@ -154,6 +157,7 @@ namespace Modules\Media\Models;               // Corretto
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 cd /var/www/html/_bases/base_saluteora/laravel
 =======
 cd /var/www/html/_bases/base_techplanner_fila3_mono/laravel
@@ -217,6 +221,9 @@ cd /var/www/html/_bases/base_techplanner_fila3_mono/laravel
 cd /var/www/html/_bases/base_saluteora/laravel
 cd /var/www/html/_bases/base_techplanner_fila3_mono/laravel
 >>>>>>> d2f9543 (.)
+=======
+cd /var/www/html/_bases/base_saluteora/laravel
+>>>>>>> cb6b71e (.)
 ./vendor/bin/phpstan analyze Modules/Media --level=9
 ```
 
@@ -306,6 +313,7 @@ class ExamplePage extends XotBasePage
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 8cdc78f (.)
 =======
@@ -328,3 +336,5 @@ class ExamplePage extends XotBasePage
 >>>>>>> d2f9543 (.)
 =======
 >>>>>>> ffc92bd (.)
+=======
+>>>>>>> cb6b71e (.)
