@@ -64,6 +64,7 @@ return [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 =======
@@ -165,6 +166,11 @@ return [
 >>>>>>> fa051fc (.)
 =======
 >>>>>>> 22b1256 (.)
+=======
+=======
+
+>>>>>>> 0a466ed (.)
+>>>>>>> 10ef3f7 (.)
     'notifications' => [
         'credentials_tested' => 'Credenziali AWS testate',
         'bucket_policy_tested' => 'Policy bucket testata',
@@ -203,6 +209,7 @@ return [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 06bb10d (.)
 =======
@@ -227,10 +234,13 @@ return [
 >>>>>>> 760b37c (.)
 =======
 >>>>>>> 9a4eacb (.)
+=======
+>>>>>>> 10ef3f7 (.)
     'debug' => [
         'run_tests_message' => 'Esegui i test per vedere i risultati qui...',
     ],
 =======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -276,11 +286,14 @@ return [
 >>>>>>> c08a553 (.)
 =======
 >>>>>>> 9a4eacb (.)
+=======
+>>>>>>> 10ef3f7 (.)
 
     'debug' => [
         'run_tests_message' => 'Esegui i test per vedere i risultati qui...',
     ],
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -407,6 +420,9 @@ return [
         'run_tests_message' => 'Esegui i test per vedere i risultati qui...',
     ],
 >>>>>>> 22b1256 (.)
+=======
+>>>>>>> 0a466ed (.)
+>>>>>>> 10ef3f7 (.)
     'fields' => [
         'attachment' => [
             'label' => 'Allegato',
@@ -442,6 +458,7 @@ return [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 =======
@@ -543,6 +560,11 @@ return [
 >>>>>>> fa051fc (.)
 =======
 >>>>>>> 22b1256 (.)
+=======
+=======
+
+>>>>>>> 0a466ed (.)
+>>>>>>> 10ef3f7 (.)
     'messages' => [
         'test_successful' => 'Test completato con successo',
         'test_failed' => 'Test fallito',
@@ -576,6 +598,7 @@ return [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 =======
@@ -677,6 +700,11 @@ return [
 >>>>>>> fa051fc (.)
 =======
 >>>>>>> 22b1256 (.)
+=======
+=======
+
+>>>>>>> 0a466ed (.)
+>>>>>>> 10ef3f7 (.)
     'errors' => [
         'aws_credentials_invalid' => 'Credenziali AWS non valide',
         's3_bucket_inaccessible' => 'Bucket S3 non accessibile',
@@ -708,6 +736,7 @@ return [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 =======
@@ -809,6 +838,11 @@ return [
 >>>>>>> fa051fc (.)
 =======
 >>>>>>> 22b1256 (.)
+=======
+=======
+
+>>>>>>> 0a466ed (.)
+>>>>>>> 10ef3f7 (.)
     'solutions' => [
         'check_credentials' => 'Verifica le credenziali AWS in .env',
         'check_bucket_name' => 'Verifica il nome del bucket S3',
