@@ -10,6 +10,7 @@ namespace Modules\Media\Filament\Resources\MediaResource\Pages;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Modules\Media\Filament\Resources\MediaResource;
 use Modules\Xot\Filament\Resources\Pages\XotBaseViewRecord;
 use Override;
@@ -30,6 +31,11 @@ use Filament\Resources\Pages\ViewRecord;
 use Modules\Media\Filament\Resources\MediaResource;
 use Modules\Xot\Filament\Resources\Pages\XotBaseViewRecord;
 >>>>>>> 5200b63 (.)
+=======
+use Modules\Media\Filament\Resources\MediaResource;
+use Modules\Xot\Filament\Resources\Pages\XotBaseViewRecord;
+use Override;
+>>>>>>> f41e45e (.)
 
 class ConvertMedia extends XotBaseViewRecord
 {

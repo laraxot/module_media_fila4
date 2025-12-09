@@ -11,6 +11,7 @@ namespace Modules\Media\Models;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Support\Carbon;
@@ -24,12 +25,18 @@ use Modules\Xot\Contracts\ProfileContract;
 >>>>>>> 47a54fe (.)
 =======
 >>>>>>> f1c6d6e (.)
+=======
+use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+>>>>>>> f41e45e (.)
 use Illuminate\Support\Carbon;
 use Modules\Media\Database\Factories\MediaConvertFactory;
-use Illuminate\Database\Eloquent\Builder;
 use Modules\Xot\Contracts\ProfileContract;
+<<<<<<< HEAD
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 >>>>>>> 5200b63 (.)
+=======
+>>>>>>> f41e45e (.)
 
 /**
  * @property int $id
@@ -60,6 +67,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
  *
 =======
 >>>>>>> 5200b63 (.)
@@ -70,6 +78,9 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 >>>>>>> 47a54fe (.)
 =======
 >>>>>>> f1c6d6e (.)
+=======
+ *
+>>>>>>> f41e45e (.)
  * @method static MediaConvertFactory factory($count = null, $state = [])
  * @method static Builder|MediaConvert newModelQuery()
  * @method static Builder|MediaConvert newQuery()
@@ -95,6 +106,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  * @method static Builder|MediaConvert whereUpdatedAt($value)
  * @method static Builder|MediaConvert whereUpdatedBy($value)
  * @method static Builder|MediaConvert whereWidth($value)
+<<<<<<< HEAD
 <<<<<<< HEAD
  *
  * @property-read ProfileContract|null $creator
@@ -142,6 +154,12 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 >>>>>>> 47a54fe (.)
 =======
 >>>>>>> f1c6d6e (.)
+=======
+ *
+ * @property-read ProfileContract|null $creator
+ * @property-read ProfileContract|null $updater
+ *
+>>>>>>> f41e45e (.)
  * @mixin IdeHelperMediaConvert
  * @mixin \Eloquent
  */
@@ -176,6 +194,7 @@ class MediaConvert extends BaseModel
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getDiskAttribute(?string $value): ?string
 =======
 =======
@@ -190,10 +209,14 @@ class MediaConvert extends BaseModel
 >>>>>>> f1c6d6e (.)
     public function getDiskAttribute(null|string $value): null|string
 >>>>>>> 5200b63 (.)
+=======
+    public function getDiskAttribute(?string $value): ?string
+>>>>>>> f41e45e (.)
     {
         if ($this->media === null) {
             return null;
         }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         return $this->media->disk;
@@ -206,10 +229,18 @@ class MediaConvert extends BaseModel
 
     public function getFileAttribute(null|string $value): null|string
 >>>>>>> 5200b63 (.)
+=======
+
+        return $this->media->disk;
+    }
+
+    public function getFileAttribute(?string $value): ?string
+>>>>>>> f41e45e (.)
     {
         if ($this->media === null) {
             return null;
         }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         return $this->media->path.'/'.$this->media->file_name;
@@ -222,6 +253,13 @@ class MediaConvert extends BaseModel
 
     public function getConvertedFileAttribute(null|string $value): null|string
 >>>>>>> 5200b63 (.)
+=======
+
+        return $this->media->path.'/'.$this->media->file_name;
+    }
+
+    public function getConvertedFileAttribute(?string $value): ?string
+>>>>>>> f41e45e (.)
     {
         if ($this->media === null) {
             return null;
@@ -233,9 +271,13 @@ class MediaConvert extends BaseModel
         // "filename" => "20600550-uhd_3840_2160_30fps"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         return $this->media->path.'/conversions/'.$info['filename'].'_'.$this->id.'.'.$this->format;
 =======
         return $this->media->path . '/conversions/' . $info['filename'] . '_' . $this->id . '.' . $this->format;
 >>>>>>> 5200b63 (.)
+=======
+        return $this->media->path.'/conversions/'.$info['filename'].'_'.$this->id.'.'.$this->format;
+>>>>>>> f41e45e (.)
     }
 }

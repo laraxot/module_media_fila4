@@ -16,6 +16,7 @@ use Modules\Xot\Database\Migrations\XotBaseMigration;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 return new class extends XotBaseMigration
 {
 =======
@@ -61,6 +62,10 @@ return new class extends XotBaseMigration
 =======
 return new class extends XotBaseMigration {
 >>>>>>> f1c6d6e (.)
+=======
+return new class extends XotBaseMigration
+{
+>>>>>>> f41e45e (.)
     /**
      * Run the migrations.
      */

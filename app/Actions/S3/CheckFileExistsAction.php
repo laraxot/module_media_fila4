@@ -50,6 +50,7 @@ class CheckFileExistsAction extends BaseS3Action
 
             $this->logger->info('File existence check completed', ['key' => $key, 'exists' => true]);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             return true;
 <<<<<<< HEAD
@@ -90,10 +91,14 @@ class CheckFileExistsAction extends BaseS3Action
 <<<<<<< HEAD
 >>>>>>> e9b0959 (.)
 =======
+=======
+
+>>>>>>> f41e45e (.)
             return true;
         } catch (S3Exception $exception) {
             if ($exception->getStatusCode() === 404) {
                 $this->logger->info('File existence check completed', ['key' => $key, 'exists' => false]);
+
                 return false;
             }
 <<<<<<< HEAD

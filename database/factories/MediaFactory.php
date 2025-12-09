@@ -42,10 +42,14 @@ class MediaFactory extends Factory
             'collection_name' => $this->faker->randomElement(['default', 'avatars', 'documents']),
             'name' => $fileName,
 <<<<<<< HEAD
+<<<<<<< HEAD
             'file_name' => $fileName.'.'.$extension,
 =======
             'file_name' => $fileName . '.' . $extension,
 >>>>>>> 5200b63 (.)
+=======
+            'file_name' => $fileName.'.'.$extension,
+>>>>>>> f41e45e (.)
             'mime_type' => $this->getMimeTypeFromExtension($extension),
             'disk' => 'public',
             'conversions_disk' => 'public',
@@ -57,10 +61,14 @@ class MediaFactory extends Factory
             'order_column' => $this->faker->numberBetween(1, 100),
             'directory' => $this->faker->randomElement(['uploads', 'documents', 'images']),
 <<<<<<< HEAD
+<<<<<<< HEAD
             'path' => '/storage/'.$fileName.'.'.$extension,
 =======
             'path' => '/storage/' . $fileName . '.' . $extension,
 >>>>>>> 5200b63 (.)
+=======
+            'path' => '/storage/'.$fileName.'.'.$extension,
+>>>>>>> f41e45e (.)
             'width' => $this->faker->optional()->numberBetween(100, 1920),
             'height' => $this->faker->optional()->numberBetween(100, 1080),
             'type' => $extension,
@@ -71,16 +79,20 @@ class MediaFactory extends Factory
     /**
      * Create an image media.
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
      *
      * @return static
 >>>>>>> 5200b63 (.)
+=======
+>>>>>>> f41e45e (.)
      */
     public function image(): static
     {
         $extension = (string) $this->faker->randomElement(['jpg', 'png', 'gif']);
         $fileName = (string) $this->faker->word();
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         return $this->state(fn (array $_attributes): array => [
             'mime_type' => $this->getMimeTypeFromExtension($extension),
@@ -90,6 +102,11 @@ class MediaFactory extends Factory
             'mime_type' => $this->getMimeTypeFromExtension($extension),
             'file_name' => $fileName . '.' . $extension,
 >>>>>>> 5200b63 (.)
+=======
+        return $this->state(fn (array $_attributes): array => [
+            'mime_type' => $this->getMimeTypeFromExtension($extension),
+            'file_name' => $fileName.'.'.$extension,
+>>>>>>> f41e45e (.)
             'type' => $extension,
             'ext' => $extension,
             'width' => $this->faker->numberBetween(100, 1920),
@@ -100,16 +117,20 @@ class MediaFactory extends Factory
     /**
      * Create a document media.
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
      *
      * @return static
 >>>>>>> 5200b63 (.)
+=======
+>>>>>>> f41e45e (.)
      */
     public function document(): static
     {
         $extension = (string) $this->faker->randomElement(['pdf', 'doc', 'docx']);
         $fileName = (string) $this->faker->word();
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         return $this->state(fn (array $_attributes): array => [
             'mime_type' => $this->getMimeTypeFromExtension($extension),
@@ -119,6 +140,11 @@ class MediaFactory extends Factory
             'mime_type' => $this->getMimeTypeFromExtension($extension),
             'file_name' => $fileName . '.' . $extension,
 >>>>>>> 5200b63 (.)
+=======
+        return $this->state(fn (array $_attributes): array => [
+            'mime_type' => $this->getMimeTypeFromExtension($extension),
+            'file_name' => $fileName.'.'.$extension,
+>>>>>>> f41e45e (.)
             'type' => $extension,
             'ext' => $extension,
             'width' => null,
@@ -129,11 +155,14 @@ class MediaFactory extends Factory
     /**
      * Get MIME type from file extension.
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
      *
      * @param string $extension
      * @return string
 >>>>>>> 5200b63 (.)
+=======
+>>>>>>> f41e45e (.)
      */
     private function getMimeTypeFromExtension(string $extension): string
     {
