@@ -23,6 +23,7 @@ class PowerPoint extends ImageGenerator
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function convert(string $file, ?Conversion $_conversion = null): string
 =======
     public function convert(string $file, null|Conversion $_conversion = null): string
@@ -65,6 +66,9 @@ class PowerPoint extends ImageGenerator
 =======
     public function convert(string $file, null|Conversion $_conversion = null): string
 >>>>>>> f1c6d6e (.)
+=======
+    public function convert(string $file, ?Conversion $_conversion = null): string
+>>>>>>> f41e45e (.)
     {
         // Here you should convert the file to an image and return generated conversion path.
         // EXAMPLE
@@ -72,6 +76,7 @@ class PowerPoint extends ImageGenerator
         // EXAMPLE
         // \PowerPoint::convertFileToImage($file)->store($pathToImageFile);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -120,6 +125,9 @@ class PowerPoint extends ImageGenerator
 =======
         return pathinfo($file, PATHINFO_DIRNAME) . '/' . pathinfo($file, PATHINFO_FILENAME) . '.jpg';
 >>>>>>> f1c6d6e (.)
+=======
+        return pathinfo($file, PATHINFO_DIRNAME).'/'.pathinfo($file, PATHINFO_FILENAME).'.jpg';
+>>>>>>> f41e45e (.)
     }
 
     public function requirementsAreInstalled(): bool

@@ -14,10 +14,14 @@ class GetAttachmentsSchemaActionTest extends TestCase
     {
         // Arrange
 <<<<<<< HEAD
+<<<<<<< HEAD
         $action = new GetAttachmentsSchemaAction;
 =======
         $action = new GetAttachmentsSchemaAction();
 >>>>>>> 5200b63 (.)
+=======
+        $action = new GetAttachmentsSchemaAction;
+>>>>>>> f41e45e (.)
         $attachments = ['invoice', 'contract', 'receipt'];
 
         // Act
@@ -37,10 +41,14 @@ class GetAttachmentsSchemaActionTest extends TestCase
     {
         // Arrange
 <<<<<<< HEAD
+<<<<<<< HEAD
         $action = new GetAttachmentsSchemaAction;
 =======
         $action = new GetAttachmentsSchemaAction();
 >>>>>>> 5200b63 (.)
+=======
+        $action = new GetAttachmentsSchemaAction;
+>>>>>>> f41e45e (.)
         $attachments = ['invoice', 'contract'];
 
         // Act
@@ -55,10 +63,14 @@ class GetAttachmentsSchemaActionTest extends TestCase
     {
         // Arrange
 <<<<<<< HEAD
+<<<<<<< HEAD
         $action = new GetAttachmentsSchemaAction;
 =======
         $action = new GetAttachmentsSchemaAction();
 >>>>>>> 5200b63 (.)
+=======
+        $action = new GetAttachmentsSchemaAction;
+>>>>>>> f41e45e (.)
         $attachments = ['invoice'];
 
         // Act
@@ -72,10 +84,14 @@ class GetAttachmentsSchemaActionTest extends TestCase
     {
         // Arrange
 <<<<<<< HEAD
+<<<<<<< HEAD
         $action = new GetAttachmentsSchemaAction;
 =======
         $action = new GetAttachmentsSchemaAction();
 >>>>>>> 5200b63 (.)
+=======
+        $action = new GetAttachmentsSchemaAction;
+>>>>>>> f41e45e (.)
         $attachments = ['invoice'];
 
         // Act
@@ -93,10 +109,14 @@ class GetAttachmentsSchemaActionTest extends TestCase
     {
         // Arrange
 <<<<<<< HEAD
+<<<<<<< HEAD
         $action = new GetAttachmentsSchemaAction;
 =======
         $action = new GetAttachmentsSchemaAction();
 >>>>>>> 5200b63 (.)
+=======
+        $action = new GetAttachmentsSchemaAction;
+>>>>>>> f41e45e (.)
         $attachments = ['invoice'];
 
         // Act
@@ -111,10 +131,14 @@ class GetAttachmentsSchemaActionTest extends TestCase
     {
         // Arrange
 <<<<<<< HEAD
+<<<<<<< HEAD
         $action = new GetAttachmentsSchemaAction;
 =======
         $action = new GetAttachmentsSchemaAction();
 >>>>>>> 5200b63 (.)
+=======
+        $action = new GetAttachmentsSchemaAction;
+>>>>>>> f41e45e (.)
         $attachments = ['invoice'];
 
         // Act
@@ -129,10 +153,14 @@ class GetAttachmentsSchemaActionTest extends TestCase
     {
         // Arrange
 <<<<<<< HEAD
+<<<<<<< HEAD
         $action = new GetAttachmentsSchemaAction;
 =======
         $action = new GetAttachmentsSchemaAction();
 >>>>>>> 5200b63 (.)
+=======
+        $action = new GetAttachmentsSchemaAction;
+>>>>>>> f41e45e (.)
         $attachments = ['invoice'];
 
         // Act
@@ -147,10 +175,14 @@ class GetAttachmentsSchemaActionTest extends TestCase
     {
         // Arrange
 <<<<<<< HEAD
+<<<<<<< HEAD
         $action = new GetAttachmentsSchemaAction;
 =======
         $action = new GetAttachmentsSchemaAction();
 >>>>>>> 5200b63 (.)
+=======
+        $action = new GetAttachmentsSchemaAction;
+>>>>>>> f41e45e (.)
         $attachments = ['invoice'];
 
         // Act
@@ -165,10 +197,14 @@ class GetAttachmentsSchemaActionTest extends TestCase
     {
         // Arrange
 <<<<<<< HEAD
+<<<<<<< HEAD
         $action = new GetAttachmentsSchemaAction;
 =======
         $action = new GetAttachmentsSchemaAction();
 >>>>>>> 5200b63 (.)
+=======
+        $action = new GetAttachmentsSchemaAction;
+>>>>>>> f41e45e (.)
         $attachments = ['invoice'];
 
         // Act
@@ -183,10 +219,14 @@ class GetAttachmentsSchemaActionTest extends TestCase
     {
         // Arrange
 <<<<<<< HEAD
+<<<<<<< HEAD
         $action = new GetAttachmentsSchemaAction;
 =======
         $action = new GetAttachmentsSchemaAction();
 >>>>>>> 5200b63 (.)
+=======
+        $action = new GetAttachmentsSchemaAction;
+>>>>>>> f41e45e (.)
         $attachments = ['invoice'];
 
         // Act
@@ -201,10 +241,14 @@ class GetAttachmentsSchemaActionTest extends TestCase
     {
         // Arrange
 <<<<<<< HEAD
+<<<<<<< HEAD
         $action = new GetAttachmentsSchemaAction;
 =======
         $action = new GetAttachmentsSchemaAction();
 >>>>>>> 5200b63 (.)
+=======
+        $action = new GetAttachmentsSchemaAction;
+>>>>>>> f41e45e (.)
         $attachments = ['invoice'];
 
         // Act
@@ -219,10 +263,14 @@ class GetAttachmentsSchemaActionTest extends TestCase
     {
         // Arrange
 <<<<<<< HEAD
+<<<<<<< HEAD
         $action = new GetAttachmentsSchemaAction;
 =======
         $action = new GetAttachmentsSchemaAction();
 >>>>>>> 5200b63 (.)
+=======
+        $action = new GetAttachmentsSchemaAction;
+>>>>>>> f41e45e (.)
         $attachments = ['invoice'];
 
         // Act
@@ -237,10 +285,14 @@ class GetAttachmentsSchemaActionTest extends TestCase
     {
         // Arrange
 <<<<<<< HEAD
+<<<<<<< HEAD
         $action = new GetAttachmentsSchemaAction;
 =======
         $action = new GetAttachmentsSchemaAction();
 >>>>>>> 5200b63 (.)
+=======
+        $action = new GetAttachmentsSchemaAction;
+>>>>>>> f41e45e (.)
         $attachments = ['invoice'];
 
         // Act
@@ -255,10 +307,14 @@ class GetAttachmentsSchemaActionTest extends TestCase
     {
         // Arrange
 <<<<<<< HEAD
+<<<<<<< HEAD
         $action = new GetAttachmentsSchemaAction;
 =======
         $action = new GetAttachmentsSchemaAction();
 >>>>>>> 5200b63 (.)
+=======
+        $action = new GetAttachmentsSchemaAction;
+>>>>>>> f41e45e (.)
         $attachments = ['invoice'];
 
         // Act
@@ -273,10 +329,14 @@ class GetAttachmentsSchemaActionTest extends TestCase
     {
         // Arrange
 <<<<<<< HEAD
+<<<<<<< HEAD
         $action = new GetAttachmentsSchemaAction;
 =======
         $action = new GetAttachmentsSchemaAction();
 >>>>>>> 5200b63 (.)
+=======
+        $action = new GetAttachmentsSchemaAction;
+>>>>>>> f41e45e (.)
         $attachments = ['invoice'];
 
         // Act
@@ -291,10 +351,14 @@ class GetAttachmentsSchemaActionTest extends TestCase
     {
         // Arrange
 <<<<<<< HEAD
+<<<<<<< HEAD
         $action = new GetAttachmentsSchemaAction;
 =======
         $action = new GetAttachmentsSchemaAction();
 >>>>>>> 5200b63 (.)
+=======
+        $action = new GetAttachmentsSchemaAction;
+>>>>>>> f41e45e (.)
         $attachments = ['invoice'];
 
         // Act
@@ -309,10 +373,14 @@ class GetAttachmentsSchemaActionTest extends TestCase
     {
         // Arrange
 <<<<<<< HEAD
+<<<<<<< HEAD
         $action = new GetAttachmentsSchemaAction;
 =======
         $action = new GetAttachmentsSchemaAction();
 >>>>>>> 5200b63 (.)
+=======
+        $action = new GetAttachmentsSchemaAction;
+>>>>>>> f41e45e (.)
         $attachments = ['invoice'];
 
         // Act

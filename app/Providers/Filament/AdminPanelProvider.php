@@ -10,6 +10,7 @@ namespace Modules\Media\Providers\Filament;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Filament\Panel;
 use Modules\Xot\Providers\Filament\XotBasePanelProvider;
 use Override;
@@ -28,6 +29,11 @@ use Override;
 use Filament\Panel;
 use Modules\Xot\Providers\Filament\XotBasePanelProvider;
 >>>>>>> 5200b63 (.)
+=======
+use Filament\Panel;
+use Modules\Xot\Providers\Filament\XotBasePanelProvider;
+use Override;
+>>>>>>> f41e45e (.)
 
 class AdminPanelProvider extends XotBasePanelProvider
 {

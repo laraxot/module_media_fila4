@@ -10,6 +10,7 @@ namespace Modules\Media\Filament\Resources;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 06bb10d (.)
@@ -40,17 +41,23 @@ use Modules\Media\Filament\Resources\MediaResource\Pages\ConvertMedia;
 >>>>>>> 47a54fe (.)
 =======
 >>>>>>> f1c6d6e (.)
+=======
+>>>>>>> f41e45e (.)
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Radio;
 use Filament\Forms\Components\TextInput;
 use Filament\Resources\Pages\PageRegistration;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f41e45e (.)
 use Filament\Schemas\Components\Component;
 use Modules\Media\Filament\Resources\MediaResource\Pages\ConvertMedia;
 use Modules\Media\Filament\Resources\MediaResource\Pages\CreateMedia;
 use Modules\Media\Filament\Resources\MediaResource\Pages\EditMedia;
 use Modules\Media\Filament\Resources\MediaResource\Pages\ListMedia;
 use Modules\Media\Filament\Resources\MediaResource\Pages\ViewMedia;
+<<<<<<< HEAD
 use Modules\Media\Models\Media;
 use Modules\Xot\Filament\Resources\XotBaseResource;
 use Override;
@@ -60,13 +67,20 @@ class MediaResource extends XotBaseResource
     protected static ?string $model = Media::class;
 =======
 use Modules\Media\Filament\Resources\MediaResource\Pages;
+=======
+>>>>>>> f41e45e (.)
 use Modules\Media\Models\Media;
 use Modules\Xot\Filament\Resources\XotBaseResource;
+use Override;
 
 class MediaResource extends XotBaseResource
 {
+<<<<<<< HEAD
     protected static null|string $model = Media::class;
 >>>>>>> 5200b63 (.)
+=======
+    protected static ?string $model = Media::class;
+>>>>>>> f41e45e (.)
 
     /**
      * @return array<string, Component>

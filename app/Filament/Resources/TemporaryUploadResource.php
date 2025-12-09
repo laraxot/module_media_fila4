@@ -10,6 +10,7 @@ namespace Modules\Media\Filament\Resources;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Filament\Forms\Components\DateTimePicker;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\TextInput;
@@ -36,24 +37,32 @@ use Override;
 >>>>>>> f1c6d6e (.)
 use Filament\Schemas\Components\Component;
 use Override;
+=======
+use Filament\Forms\Components\DateTimePicker;
+>>>>>>> f41e45e (.)
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\TextInput;
-use Filament\Forms\Components\DateTimePicker;
 use Filament\Resources\Pages\PageRegistration;
+use Filament\Schemas\Components\Component;
 use Modules\Media\Filament\Resources\TemporaryUploadResource\Pages\CreateTemporaryUpload;
-// use Modules\Media\Filament\Resources\TemporaryUploadResource\RelationManagers;
 use Modules\Media\Filament\Resources\TemporaryUploadResource\Pages\EditTemporaryUpload;
-// use Filament\Forms;
+// use Modules\Media\Filament\Resources\TemporaryUploadResource\RelationManagers;
 use Modules\Media\Filament\Resources\TemporaryUploadResource\Pages\ListTemporaryUploads;
+// use Filament\Forms;
 use Modules\Media\Models\TemporaryUpload;
 use Modules\Xot\Filament\Resources\XotBaseResource;
+<<<<<<< HEAD
 >>>>>>> 5200b63 (.)
+=======
+use Override;
+>>>>>>> f41e45e (.)
 
 // use Illuminate\Database\Eloquent\Builder;
 // use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class TemporaryUploadResource extends XotBaseResource
 {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -81,6 +90,9 @@ class TemporaryUploadResource extends XotBaseResource
 >>>>>>> f1c6d6e (.)
     protected static null|string $model = TemporaryUpload::class;
 >>>>>>> 5200b63 (.)
+=======
+    protected static ?string $model = TemporaryUpload::class;
+>>>>>>> f41e45e (.)
 
     /**
      * @return array<string, Component>

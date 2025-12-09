@@ -5,9 +5,12 @@ declare(strict_types=1);
 namespace Modules\Media\Actions\Image;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 use Illuminate\Support\Arr;
 >>>>>>> 5200b63 (.)
+=======
+>>>>>>> f41e45e (.)
 use Modules\UI\Actions\Icon\GetAllIconsAction;
 use Webmozart\Assert\Assert;
 
@@ -22,10 +25,14 @@ class SvgExistsAction
      * Verifica se l'SVG esiste nei set di icone registrati.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  string  $svgName  Il nome dell'SVG da verificare (es: 'heroicon-o-user')
 =======
      * @param  string $svgName  Il nome dell'SVG da verificare (es: 'heroicon-o-user')
 >>>>>>> 5200b63 (.)
+=======
+     * @param  string  $svgName  Il nome dell'SVG da verificare (es: 'heroicon-o-user')
+>>>>>>> f41e45e (.)
      * @return bool True se l'SVG esiste, false altrimenti
      */
     public function execute(string $svgName): bool

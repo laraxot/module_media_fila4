@@ -109,9 +109,9 @@ pest()->extend(TestCase::class)->in('Feature', 'Unit');
  * |
  */
 
-expect()->extend('toBeMedia', fn() => $this->toBeInstanceOf(Media::class));
+expect()->extend('toBeMedia', fn () => $this->toBeInstanceOf(Media::class));
 
-expect()->extend('toBeMediaCollection', fn() => $this->toBeInstanceOf(MediaCollection::class));
+expect()->extend('toBeMediaCollection', fn () => $this->toBeInstanceOf(MediaCollection::class));
 
 /*
 <<<<<<< HEAD

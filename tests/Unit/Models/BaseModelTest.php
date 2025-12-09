@@ -13,6 +13,7 @@ uses(TestCase::class, RefreshDatabase::class);
 
 beforeEach(function () {
 <<<<<<< HEAD
+<<<<<<< HEAD
     $this->baseModel = new class extends BaseModel
     {
 =======
@@ -67,6 +68,10 @@ beforeEach(function () {
 >>>>>>> 47a54fe (.)
 =======
 >>>>>>> f1c6d6e (.)
+=======
+    $this->baseModel = new class extends BaseModel
+    {
+>>>>>>> f41e45e (.)
         protected $table = 'test_media_table';
     };
 });
