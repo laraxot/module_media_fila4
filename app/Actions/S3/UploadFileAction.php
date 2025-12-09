@@ -196,9 +196,13 @@ class UploadFileAction extends BaseS3Action
             ]);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             /** @var array{ObjectURL?: string, ETag?: string} $result AWS SDK returns array */
 =======
 >>>>>>> 5200b63 (.)
+=======
+            /** @var array{ObjectURL?: string, ETag?: string} $result AWS SDK returns array */
+>>>>>>> 1900eb1 (.)
             $result = $uploader->upload();
 
             // Close the file after successful upload
