@@ -17,6 +17,7 @@ namespace Modules\Media\database\seeders;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 =======
@@ -79,6 +80,13 @@ namespace Modules\Media\database\seeders;
 
 >>>>>>> 0a466ed (.)
 >>>>>>> 054dfa6 (.)
+=======
+=======
+
+>>>>>>> 0a466ed (.)
+=======
+>>>>>>> 37a2da6 (.)
+>>>>>>> 89eb716 (.)
 use Illuminate\Database\Seeder;
 
 class MediaDatabaseSeeder extends Seeder
