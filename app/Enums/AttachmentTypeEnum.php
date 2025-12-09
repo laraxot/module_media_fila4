@@ -22,6 +22,7 @@ enum AttachmentTypeEnum: string implements HasLabel
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             ->mapWithKeys(static fn (self $case): array => [$case->value => $case->getTypeNote()])
 =======
             ->mapWithKeys(static fn(self $case): array => [$case->value => $case->getTypeNote()])
@@ -65,18 +66,13 @@ enum AttachmentTypeEnum: string implements HasLabel
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
 >>>>>>> 47a54fe (.)
+=======
+            ->mapWithKeys(static fn(self $case): array => [$case->value => $case->getTypeNote()])
+>>>>>>> f1c6d6e (.)
             ->toArray();
     }
 
     /* Method Modules\Media\Enums\AttachmentTypeEnum::operationCases() never returns null so it can be removed from the return type
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> b93ef594b4 (.)
->>>>>>> e9b0959 (.)
      * public static function operationCases(): ?array
      * {
      * $originalCases = self::cases();
@@ -85,12 +81,12 @@ enum AttachmentTypeEnum: string implements HasLabel
      * return $originalCases;
      * }
      */
-<<<<<<< HEAD
 
 <<<<<<< HEAD
     public function getTypeNote(): ?string
 =======
     public function getTypeNote(): null|string
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -140,6 +136,8 @@ enum AttachmentTypeEnum: string implements HasLabel
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
 >>>>>>> 47a54fe (.)
+=======
+>>>>>>> f1c6d6e (.)
     {
         $translationKey = sprintf('media::attachments.type_notes.%s', $this->value);
         if (Lang::has($translationKey)) {
@@ -151,6 +149,7 @@ enum AttachmentTypeEnum: string implements HasLabel
 
     public function getLabel(): string
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -195,6 +194,9 @@ enum AttachmentTypeEnum: string implements HasLabel
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
 >>>>>>> 47a54fe (.)
+=======
+        return trans('media::attachments.types.' . $this->value);
+>>>>>>> f1c6d6e (.)
     }
 
     // private static function translateBaseUniquePath(): string

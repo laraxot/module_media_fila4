@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Modules\Media\Filament\Resources\HasMediaResource\RelationManagers;
 
-<<<<<<< HEAD
 use Filament\Actions\Action;
 use Filament\Actions\ActionGroup;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -33,6 +33,8 @@ use Filament\Actions\ActionGroup;
 <<<<<<< HEAD
 >>>>>>> e9b0959 (.)
 >>>>>>> 47a54fe (.)
+=======
+>>>>>>> f1c6d6e (.)
 use Override;
 use Filament\Schemas\Schema;
 use Illuminate\Database\Eloquent\Model;
@@ -50,6 +52,7 @@ class MediaRelationManager extends XotBaseRelationManager
     protected static ?string $inverseRelationship = 'model';
 =======
     protected static null|string $inverseRelationship = 'model';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -125,25 +128,13 @@ class MediaRelationManager extends XotBaseRelationManager
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
 >>>>>>> 47a54fe (.)
+=======
+>>>>>>> f1c6d6e (.)
 
     /**
      * @return array<string, Action|ActionGroup>
      */
-<<<<<<< HEAD
     #[Override]
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    #[Override]
-=======
->>>>>>> a12f125f4a (.)
-=======
-    #[Override]
->>>>>>> b93ef594b4 (.)
-=======
->>>>>>> origin/develop
->>>>>>> e9b0959 (.)
     public function getTableHeaderActions(): array
     {
         return [

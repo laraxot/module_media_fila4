@@ -6,18 +6,15 @@ namespace Modules\Media\Datas;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 use FFMpeg\Format\Video\DefaultVideo;
 use FFMpeg\Format\Video\WebM;
 =======
 =======
 >>>>>>> 47a54fe (.)
-use FFMpeg\Format\Video\WebM;
 =======
-<<<<<<< HEAD
+>>>>>>> f1c6d6e (.)
 use FFMpeg\Format\Video\WebM;
-=======
->>>>>>> origin/develop
->>>>>>> e9b0959 (.)
 use FFMpeg\Format\Video\DefaultVideo;
 >>>>>>> 5200b63 (.)
 use Illuminate\Support\Facades\Storage;
@@ -54,6 +51,7 @@ class ConvertData extends Data implements Wireable
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     public ?int $width = null;
 
     public ?int $height = null;
@@ -79,6 +77,8 @@ class ConvertData extends Data implements Wireable
 <<<<<<< HEAD
 >>>>>>> e9b0959 (.)
 >>>>>>> 47a54fe (.)
+=======
+>>>>>>> f1c6d6e (.)
     public null|int $width = null;
 
     public null|int $height = null;
@@ -88,6 +88,7 @@ class ConvertData extends Data implements Wireable
 
     // -speed 4: imposta la velocità del codec VP9 a 4, che è un valore elevato per massimizzare la velocità di codifica.
     public null|int $speed = null;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -141,6 +142,8 @@ class ConvertData extends Data implements Wireable
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
 >>>>>>> 47a54fe (.)
+=======
+>>>>>>> f1c6d6e (.)
 
     public function exists(): bool
     {
@@ -149,15 +152,7 @@ class ConvertData extends Data implements Wireable
 
     public function getFFMpegFormat(): DefaultVideo
     {
-<<<<<<< HEAD
         $format = new WebM($this->codec_audio, $this->codec_video);
-=======
-<<<<<<< HEAD
-        $format = new WebM($this->codec_audio, $this->codec_video);
-=======
-        $format = new \FFMpeg\Format\Video\WebM($this->codec_audio, $this->codec_video);
->>>>>>> origin/develop
->>>>>>> e9b0959 (.)
         $format = $format->setKiloBitrate((int) $this->bitrate);
         Assert::isInstanceOf($format, DefaultVideo::class);
 
@@ -169,6 +164,7 @@ class ConvertData extends Data implements Wireable
         $format = $this->getFFMpegFormat();
         $extension = mb_strtolower(class_basename($format));
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -217,5 +213,8 @@ class ConvertData extends Data implements Wireable
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
 >>>>>>> 47a54fe (.)
+=======
+        return Str::of($this->file)->replaceLast('.mp4', '.' . $extension)->toString();
+>>>>>>> f1c6d6e (.)
     }
 }
