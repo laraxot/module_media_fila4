@@ -24,6 +24,7 @@ class CheckFileExistsAction extends BaseS3Action
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 =======
@@ -48,6 +49,10 @@ class CheckFileExistsAction extends BaseS3Action
 >>>>>>> f1c6d6e (.)
 =======
 >>>>>>> 877e05f (.)
+=======
+=======
+>>>>>>> 37a2da6 (.)
+>>>>>>> 7ea0764 (.)
                 'Key' => $key,
             ]);
 
@@ -56,6 +61,7 @@ class CheckFileExistsAction extends BaseS3Action
 <<<<<<< HEAD
 
             return true;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -76,6 +82,8 @@ class CheckFileExistsAction extends BaseS3Action
 =======
 >>>>>>> 877e05f (.)
 =======
+>>>>>>> 7ea0764 (.)
+=======
                 'Key'    => $key,
             ]);
             
@@ -83,14 +91,21 @@ class CheckFileExistsAction extends BaseS3Action
             return true;
             
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
+=======
+>>>>>>> 0a466ed (.)
+=======
+>>>>>>> 37a2da6 (.)
+>>>>>>> 7ea0764 (.)
         } catch (S3Exception $exception) {
             if ($exception->getStatusCode() === 404) {
                 $this->logger->info('File existence check completed', ['key' => $key, 'exists' => false]);
 
                 return false;
             }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -139,6 +154,11 @@ class CheckFileExistsAction extends BaseS3Action
 >>>>>>> f1c6d6e (.)
 =======
 >>>>>>> 877e05f (.)
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 37a2da6 (.)
+>>>>>>> 7ea0764 (.)
 
             $this->logger->error('Error checking file existence in S3', [
                 'key' => $key,
@@ -158,6 +178,9 @@ class CheckFileExistsAction extends BaseS3Action
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 7ea0764 (.)
 =======
 >>>>>>> 47a54fe (.)
 =======
@@ -212,6 +235,7 @@ class CheckFileExistsAction extends BaseS3Action
 =======
 >>>>>>> 0a466ed (.)
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 06bb10d (.)
 =======
 =======
@@ -228,3 +252,7 @@ class CheckFileExistsAction extends BaseS3Action
 =======
 >>>>>>> 0a466ed (.)
 >>>>>>> 877e05f (.)
+=======
+=======
+>>>>>>> 37a2da6 (.)
+>>>>>>> 7ea0764 (.)
