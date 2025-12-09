@@ -28,6 +28,7 @@ class VideoStream
     private int $size = 0; // Total size of the video
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     private ?string $mime = null; // MIME type of the video
 
     private ?int $fileModifiedTime = null; // Last modified time of the video file
@@ -36,6 +37,16 @@ class VideoStream
 
     private null|int $fileModifiedTime = null; // Last modified time of the video file
 >>>>>>> 5200b63 (.)
+=======
+    private null|string $mime = null; // MIME type of the video
+
+    private null|int $fileModifiedTime = null; // Last modified time of the video file
+=======
+    private ?string $mime = null; // MIME type of the video
+
+    private ?int $fileModifiedTime = null; // Last modified time of the video file
+>>>>>>> 0a466ed (.)
+>>>>>>> 06bb10d (.)
 
     /** @var resource|null */
     private $stream = null; // File stream resource
@@ -66,7 +77,11 @@ class VideoStream
         }
 
         $mime = $filesystem->mimeType($path);
+<<<<<<< HEAD
         if ($mime === false) {
+=======
+        if($mime==false){
+>>>>>>> 0a466ed (.)
             throw new Exception('Unable to determine MIME type.');
         }
         $this->stream = $filesystem->readStream($path);
@@ -136,23 +151,39 @@ class VideoStream
         if ($unit !== 'bytes') {
             header('HTTP/1.1 416 Requested Range Not Satisfiable');
             header(sprintf('Content-Range: bytes %d-%d/%d', $this->start, $this->end, $this->size));
+<<<<<<< HEAD
             exit();
+=======
+            exit;
+>>>>>>> 0a466ed (.)
         }
 
         $rangeParts = explode('-', $range);
         $start = (int) $rangeParts[0];
+<<<<<<< HEAD
         $end = isset($rangeParts[1]) ? ((int) $rangeParts[1]) : $this->end;
+=======
+        $end = isset($rangeParts[1]) ? (int) $rangeParts[1] : $this->end;
+>>>>>>> 0a466ed (.)
 
         if ($start > $end || $start >= $this->size || $end >= $this->size) {
             header('HTTP/1.1 416 Requested Range Not Satisfiable');
             header(sprintf('Content-Range: bytes %d-%d/%d', $this->start, $this->end, $this->size));
+<<<<<<< HEAD
             exit();
+=======
+            exit;
+>>>>>>> 0a466ed (.)
         }
 
         $this->start = $start;
         $this->end = $end;
 
+<<<<<<< HEAD
         $length = ($this->end - $this->start) + 1;
+=======
+        $length = $this->end - $this->start + 1;
+>>>>>>> 0a466ed (.)
         header('HTTP/1.1 206 Partial Content');
 <<<<<<< HEAD
         header('Content-Length: '.$length);
@@ -170,20 +201,34 @@ class VideoStream
         set_time_limit(0); // Disable time limit for streaming
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (! is_resource($this->stream)) {
 =======
         if (!is_resource($this->stream)) {
 >>>>>>> 5200b63 (.)
+=======
+        if (!is_resource($this->stream)) {
+=======
+        if (! is_resource($this->stream)) {
+>>>>>>> 0a466ed (.)
+>>>>>>> 06bb10d (.)
             throw new Exception('Stream resource is not valid.');
         }
 
         fseek($this->stream, $this->start);
 <<<<<<< HEAD
+<<<<<<< HEAD
         while (! feof($this->stream) && $this->start <= $this->end) {
 =======
+=======
+>>>>>>> 06bb10d (.)
         while (!feof($this->stream) && $this->start <= $this->end) {
 >>>>>>> 5200b63 (.)
             $bytesToRead = min($this->bufferSize, ($this->end - $this->start) + 1);
+=======
+        while (! feof($this->stream) && $this->start <= $this->end) {
+            $bytesToRead = min($this->bufferSize, $this->end - $this->start + 1);
+>>>>>>> 0a466ed (.)
             if ($bytesToRead > 0) {
                 $data = fread($this->stream, $bytesToRead);
                 echo $data;
@@ -204,6 +249,10 @@ class VideoStream
             fclose($this->stream);
         }
 
+<<<<<<< HEAD
         exit();
+=======
+        exit;
+>>>>>>> 0a466ed (.)
     }
 }

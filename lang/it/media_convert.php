@@ -2,6 +2,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -12,6 +13,8 @@
 declare(strict_types=1);
 
 =======
+=======
+>>>>>>> 06bb10d (.)
 declare(strict_types=1);
 
 
@@ -34,11 +37,15 @@ return [
 ];
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/develop
+=======
+=======
+>>>>>>> 06bb10d (.)
 return array (
   'navigation' => 
   array (
@@ -60,6 +67,7 @@ return array (
   ),
 );
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> a12f125f4a (.)
 =======
 >>>>>>> b93ef594b4 (.)
@@ -68,3 +76,6 @@ return array (
 >>>>>>> e9b0959 (.)
 =======
 >>>>>>> 5200b63 (.)
+=======
+>>>>>>> 0a466ed (.)
+>>>>>>> 06bb10d (.)

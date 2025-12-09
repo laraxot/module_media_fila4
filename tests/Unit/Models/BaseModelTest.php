@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Modules\Media\Tests\Unit\Models;
 
 use Illuminate\Database\Eloquent\Model;
+<<<<<<< HEAD
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Modules\Media\Models\BaseModel;
 use Tests\TestCase;
@@ -17,7 +18,17 @@ beforeEach(function () {
     {
 =======
     $this->baseModel = new class extends BaseModel {
+<<<<<<< HEAD
 >>>>>>> 5200b63 (.)
+=======
+=======
+use Modules\Media\Models\BaseModel;
+
+beforeEach(function () {
+    $this->baseModel = new class extends BaseModel
+    {
+>>>>>>> 0a466ed (.)
+>>>>>>> 06bb10d (.)
         protected $table = 'test_media_table';
     };
 });
