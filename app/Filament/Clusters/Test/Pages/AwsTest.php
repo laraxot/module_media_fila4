@@ -580,6 +580,9 @@ class AwsTest extends XotBasePage
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 1900eb1 (.)
         $this->test_s3_connection();
         $this->test_s3_permissions();
         $this->test_s3_file_operations();
@@ -587,6 +590,7 @@ class AwsTest extends XotBasePage
         $this->test_cloud_front_signed_urls();
         $this->test_iam_credentials();
         $this->test_iam_policies();
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 21a9aec (.)
@@ -611,6 +615,8 @@ class AwsTest extends XotBasePage
 >>>>>>> 1634e53 (.)
 =======
 >>>>>>> 21a9aec (.)
+=======
+>>>>>>> 1900eb1 (.)
 
         $this->testResults['full'] = [
             'status' => 'completed',
