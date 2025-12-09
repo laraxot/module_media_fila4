@@ -159,10 +159,14 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  * @property-read ProfileContract|null $creator
  * @property-read ProfileContract|null $updater
  *
+<<<<<<< HEAD
 >>>>>>> f41e45e (.)
  * @mixin IdeHelperMediaConvert
+=======
+>>>>>>> 13d1d7e (.)
  * @mixin \Eloquent
  */
+/** */
 class MediaConvert extends BaseModel
 {
     /** @var list<string> */
