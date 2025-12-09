@@ -6,6 +6,7 @@ namespace Modules\Media\Filament\Clusters\Test\Pages;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Aws\Exception\AwsException;
 use Aws\S3\S3Client;
 use Aws\Sts\StsClient;
@@ -27,6 +28,8 @@ use Override;
 use Filament\Schemas\Schema;
 >>>>>>> 1999eb3 (.)
 >>>>>>> 446bc61 (.)
+=======
+>>>>>>> 36d5713 (.)
 use Filament\Schemas\Components\Tabs;
 use Filament\Schemas\Components\Tabs\Tab;
 use Filament\Schemas\Components\Actions;
@@ -77,6 +80,7 @@ class AwsTest extends XotBasePage
     ];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -94,6 +98,8 @@ class AwsTest extends XotBasePage
     }
 >>>>>>> 1999eb3 (.)
 >>>>>>> 446bc61 (.)
+=======
+>>>>>>> 36d5713 (.)
 
 >>>>>>> 5200b63 (.)
     protected function getS3TestSchema(): array
@@ -115,7 +121,6 @@ class AwsTest extends XotBasePage
                             ->color('success')
                             ->action('testS3FileOperations'),
                     ])->fullWidth(),
-<<<<<<< HEAD
                     Textarea::make('s3_results')
                         ->label('S3 Test Results')
                         ->rows(10)
@@ -125,6 +130,7 @@ class AwsTest extends XotBasePage
 =======
                         ->default(fn() => json_encode($this->testResults['s3'] ?? [], JSON_PRETTY_PRINT)),
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 5200b63 (.)
 =======
 =======
@@ -133,6 +139,8 @@ class AwsTest extends XotBasePage
                         ->viewData(fn() => ['results' => $this->testResults['s3'] ?? null]),
 >>>>>>> 1999eb3 (.)
 >>>>>>> 446bc61 (.)
+=======
+>>>>>>> 36d5713 (.)
                 ]),
         ];
     }
