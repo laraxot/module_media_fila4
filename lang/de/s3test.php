@@ -54,6 +54,7 @@ return [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 =======
@@ -116,6 +117,13 @@ return [
 
 >>>>>>> 0a466ed (.)
 >>>>>>> 054dfa6 (.)
+=======
+=======
+
+>>>>>>> 0a466ed (.)
+=======
+>>>>>>> 37a2da6 (.)
+>>>>>>> 89eb716 (.)
     'notifications' => [
         'credentials_tested' => 'AWS-Anmeldedaten getestet',
         'bucket_policy_tested' => 'Bucket-Richtlinie getestet',
@@ -144,6 +152,7 @@ return [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 06bb10d (.)
 =======
@@ -158,6 +167,8 @@ return [
 >>>>>>> 1d21a10 (.)
 =======
 >>>>>>> 054dfa6 (.)
+=======
+>>>>>>> 89eb716 (.)
     'debug' => [
         'run_tests_message' => 'Führen Sie Tests aus, um Ergebnisse hier zu sehen...',
     ],
@@ -227,15 +238,19 @@ return [
 >>>>>>> 0a466ed (.)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 06bb10d (.)
 =======
 =======
 >>>>>>> 7ea0764 (.)
 =======
+>>>>>>> 89eb716 (.)
+=======
     'debug' => [
         'run_tests_message' => 'Führen Sie Tests aus, um Ergebnisse hier zu sehen...',
     ],
 >>>>>>> 37a2da6 (.)
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 98c37f4 (.)
 =======
@@ -270,6 +285,8 @@ return [
 =======
 >>>>>>> 0a466ed (.)
 >>>>>>> 054dfa6 (.)
+=======
+>>>>>>> 89eb716 (.)
     'fields' => [
         'attachment' => [
             'label' => 'Anhang',
@@ -295,6 +312,7 @@ return [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 =======
@@ -357,6 +375,13 @@ return [
 
 >>>>>>> 0a466ed (.)
 >>>>>>> 054dfa6 (.)
+=======
+=======
+
+>>>>>>> 0a466ed (.)
+=======
+>>>>>>> 37a2da6 (.)
+>>>>>>> 89eb716 (.)
     'messages' => [
         'test_successful' => 'Test erfolgreich abgeschlossen',
         'test_failed' => 'Test fehlgeschlagen',
@@ -380,6 +405,7 @@ return [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 =======
@@ -442,6 +468,13 @@ return [
 
 >>>>>>> 0a466ed (.)
 >>>>>>> 054dfa6 (.)
+=======
+=======
+
+>>>>>>> 0a466ed (.)
+=======
+>>>>>>> 37a2da6 (.)
+>>>>>>> 89eb716 (.)
     'errors' => [
         'aws_credentials_invalid' => 'Ungültige AWS-Anmeldedaten',
         's3_bucket_inaccessible' => 'S3-Bucket nicht zugänglich',
@@ -463,6 +496,7 @@ return [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 =======
@@ -525,6 +559,13 @@ return [
 
 >>>>>>> 0a466ed (.)
 >>>>>>> 054dfa6 (.)
+=======
+=======
+
+>>>>>>> 0a466ed (.)
+=======
+>>>>>>> 37a2da6 (.)
+>>>>>>> 89eb716 (.)
     'solutions' => [
         'check_credentials' => 'Überprüfen Sie die AWS-Anmeldedaten in .env',
         'check_bucket_name' => 'Überprüfen Sie den S3-Bucket-Namen',

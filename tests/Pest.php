@@ -15,6 +15,7 @@ declare(strict_types=1);
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 =======
@@ -42,6 +43,10 @@ declare(strict_types=1);
 >>>>>>> 146bbc3 (.)
 =======
 >>>>>>> 054dfa6 (.)
+=======
+=======
+>>>>>>> 37a2da6 (.)
+>>>>>>> 89eb716 (.)
 use Modules\Media\Models\Media;
 use Modules\Media\Models\MediaCollection;
 use Modules\Media\Tests\TestCase;
@@ -90,6 +95,7 @@ expect()->extend('toBe' + 'Media' + '', function () {
  * | global functions to help you to reduce the number of lines of code in your test files.
  * |
  */
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -164,6 +170,8 @@ use Modules\Media\Tests\TestCase;
 >>>>>>> 7ea0764 (.)
 =======
 >>>>>>> 054dfa6 (.)
+=======
+>>>>>>> 89eb716 (.)
 =======
 namespace Modules\Media\Tests;
 
@@ -379,6 +387,7 @@ expect()->extend('toBeMediaCollection', function () {
 >>>>>>> 0a466ed (.)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 06bb10d (.)
 =======
 =======
@@ -423,6 +432,10 @@ expect()->extend('toBeMediaCollection', function () {
 =======
 >>>>>>> 0a466ed (.)
 >>>>>>> 054dfa6 (.)
+=======
+=======
+>>>>>>> 37a2da6 (.)
+>>>>>>> 89eb716 (.)
 
 function createMedia(array $attributes = []): Media
 {
