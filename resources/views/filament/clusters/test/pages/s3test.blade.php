@@ -12,6 +12,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 =======
@@ -57,11 +58,14 @@
 =======
 >>>>>>> 37a2da6 (.)
 >>>>>>> 89eb716 (.)
+=======
+>>>>>>> af40dd6 (.)
 <?php
 
 declare(strict_types=1);
 
 ?>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -135,6 +139,8 @@ declare(strict_types=1);
 =======
 >>>>>>> 37a2da6 (.)
 >>>>>>> 89eb716 (.)
+=======
+>>>>>>> af40dd6 (.)
 {{--
     S3Test Page - Test page for email functionality
     View: ui::filament.clusters.test.pages.s3test
