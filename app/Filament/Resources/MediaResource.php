@@ -55,7 +55,7 @@ class MediaResource extends XotBaseResource
     }
 
     /**
-     * @return PageRegistration[]
+     * @return array<PageRegistration>
      *
      * @psalm-return array{index: PageRegistration, create: PageRegistration, edit: PageRegistration}
      */

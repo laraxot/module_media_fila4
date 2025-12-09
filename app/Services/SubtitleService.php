@@ -8,13 +8,12 @@ use Exception;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
-use SimpleXMLElement;
-use Webmozart\Assert\Assert;
-
 use function Safe\file_put_contents;
 use function Safe\fopen;
 use function Safe\realpath;
 use function Safe\simplexml_load_string;
+use SimpleXMLElement;
+use Webmozart\Assert\Assert;
 
 /**
  * SubtitleService.
@@ -40,7 +39,7 @@ class SubtitleService
     public static function getInstance(): self
     {
         if (! (self::$instance instanceof self)) {
-            self::$instance = new self;
+            self::$instance = new self();
         }
 
         return self::$instance;
@@ -149,8 +148,8 @@ class SubtitleService
                 }
 
                 // 00:06:35,360
-                $start = ((int) $attributes->start->__toString()) / 1000;
-                $end = ((int) $attributes->end->__toString()) / 1000;
+                $start = (int) $attributes->start->__toString() / 1000;
+                $end = (int) $attributes->end->__toString() / 1000;
                 // dddx([$start,$this->secondsToHms($start),$end,$this->secondsToHms($end)]);
                 $tmp = [
                     // 'id' => $i++,
@@ -173,11 +172,8 @@ class SubtitleService
 
     /**
      * Undocumented function.
-     *
-     * @param  string  $srtFile
-     * @param  string  $webVttFile
      */
-    public function srtToVtt($srtFile, $webVttFile): void
+    public function srtToVtt(string $srtFile, string $webVttFile): void
     {
         $fileHandle = fopen(public_path($srtFile), 'r');
         $lines = [];

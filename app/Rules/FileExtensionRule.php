@@ -6,7 +6,6 @@ namespace Modules\Media\Rules;
 
 use Illuminate\Contracts\Validation\Rule;
 use Illuminate\Http\UploadedFile;
-
 use function in_array;
 
 class FileExtensionRule implements Rule
@@ -21,6 +20,7 @@ class FileExtensionRule implements Rule
         $this->validExtensions = array_map(
             /**
              * @param  mixed  $ext
+             *
              * @return lowercase-string
              */
             static fn ($ext): string => mb_strtolower((string) $ext),
@@ -32,7 +32,7 @@ class FileExtensionRule implements Rule
      * @param  mixed  $_attribute  The attribute being validated (not used in this rule)
      * @param  UploadedFile  $value  The uploaded file to validate
      */
-    public function passes($_attribute, $value): bool
+    public function passes(mixed $_attribute, UploadedFile $value): bool
     {
         return in_array(mb_strtolower($value->getClientOriginalExtension()), $this->validExtensions, strict: false);
     }

@@ -6,12 +6,11 @@ namespace Modules\Media\Actions;
 
 use Exception;
 use Illuminate\Support\Facades\Storage;
-use Spatie\MediaLibrary\HasMedia;
-use Webmozart\Assert\Assert;
-
 use function Safe\file_put_contents;
 use function Safe\tempnam;
 use function Safe\unlink;
+use Spatie\MediaLibrary\HasMedia;
+use Webmozart\Assert\Assert;
 
 class SaveAttachmentsAction
 {
@@ -26,14 +25,14 @@ class SaveAttachmentsAction
         $dataAttachments = [];
 
         foreach ($attachments as $attachment) {
-            Assert::string($attachment, '['.__LINE__.']['.class_basename(__CLASS__).']');
+            Assert::string($attachment, '['.__LINE__.']['.class_basename(self::class).']');
 
             if (empty($data[$attachment])) {
                 continue;
             }
 
             $path = $data[$attachment];
-            Assert::string($path, '['.__LINE__.']['.class_basename(__CLASS__).']');
+            Assert::string($path, '['.__LINE__.']['.class_basename(self::class).']');
 
             // Metodo compatibile con Laravel 9+ e Flysystem 3.x
             $storage = Storage::disk($disk);
@@ -77,9 +76,9 @@ class SaveAttachmentsAction
     {
         $data_attachments = [];
         foreach ($attachments as $attachment) {
-            Assert::string($attachment, '['.__LINE__.']['.class_basename(__CLASS__).']');
+            Assert::string($attachment, '['.__LINE__.']['.class_basename(self::class).']');
             $path = $data[$attachment];
-            Assert::string($path, '['.__LINE__.']['.class_basename(__CLASS__).']');
+            Assert::string($path, '['.__LINE__.']['.class_basename(self::class).']');
             $full_path = Storage::disk($disk)->path($path);
             // *
             dddx([
