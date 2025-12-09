@@ -42,6 +42,7 @@ class ConvertData extends Data implements Wireable
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     public ?int $width = null;
 
     public ?int $height = null;
@@ -54,6 +55,10 @@ class ConvertData extends Data implements Wireable
 =======
 =======
 >>>>>>> 06bb10d (.)
+=======
+=======
+>>>>>>> 37a2da6 (.)
+>>>>>>> 98c37f4 (.)
     public null|int $width = null;
 
     public null|int $height = null;
@@ -64,8 +69,11 @@ class ConvertData extends Data implements Wireable
     // -speed 4: imposta la velocità del codec VP9 a 4, che è un valore elevato per massimizzare la velocità di codifica.
     public null|int $speed = null;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 5200b63 (.)
 =======
+=======
+>>>>>>> 98c37f4 (.)
 =======
     public ?int $width = null;
 
@@ -77,7 +85,12 @@ class ConvertData extends Data implements Wireable
     // -speed 4: imposta la velocità del codec VP9 a 4, che è un valore elevato per massimizzare la velocità di codifica.
     public ?int $speed = null;
 >>>>>>> 0a466ed (.)
+<<<<<<< HEAD
 >>>>>>> 06bb10d (.)
+=======
+=======
+>>>>>>> 37a2da6 (.)
+>>>>>>> 98c37f4 (.)
 
     public function exists(): bool
     {
@@ -100,17 +113,26 @@ class ConvertData extends Data implements Wireable
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         return Str::of($this->file)->replaceLast('.mp4', '.'.$extension)->toString();
 =======
         return Str::of($this->file)->replaceLast('.mp4', '.' . $extension)->toString();
 >>>>>>> 5200b63 (.)
 =======
+=======
+>>>>>>> 98c37f4 (.)
         return Str::of($this->file)->replaceLast('.mp4', '.' . $extension)->toString();
 =======
         return Str::of($this->file)
             ->replaceLast('.mp4', '.'.$extension)
             ->toString();
 >>>>>>> 0a466ed (.)
+<<<<<<< HEAD
 >>>>>>> 06bb10d (.)
+=======
+=======
+        return Str::of($this->file)->replaceLast('.mp4', '.' . $extension)->toString();
+>>>>>>> 37a2da6 (.)
+>>>>>>> 98c37f4 (.)
     }
 }
