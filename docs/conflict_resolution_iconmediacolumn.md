@@ -80,6 +80,7 @@ Il file `Modules/Media/app/Filament/Tables/Columns/IconMediaColumn.php` presenta
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 - [Modules/Media/docs/](../docs/)
@@ -92,5 +93,8 @@ Il file `Modules/Media/app/Filament/Tables/Columns/IconMediaColumn.php` presenta
 >>>>>>> 0caa3cf (.)
 =======
 >>>>>>> 47a54fe (.)
+=======
+- [Modules/Media/docs/](../docs/)
+>>>>>>> f1c6d6e (.)
 
 *Ultimo aggiornamento: 29 luglio 2025*

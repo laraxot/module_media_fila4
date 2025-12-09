@@ -16,6 +16,7 @@ class TemporaryUploadPathGenerator
     /**
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  Media  $media
      */
     public function getPath($media): string
@@ -43,23 +44,13 @@ class TemporaryUploadPathGenerator
 <<<<<<< HEAD
 >>>>>>> e9b0959 (.)
 >>>>>>> 47a54fe (.)
+=======
+>>>>>>> f1c6d6e (.)
      * @param Media $media
      */
     public function getPath($media): string
     {
-<<<<<<< HEAD
         return $this->getBasePath($media) . '/' . md5($media->id . $media->uuid . 'original') . '/';
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-        return $this->getBasePath($media) . '/' . md5($media->id . $media->uuid . 'original') . '/';
-=======
-        return $this->getBasePath($media).'/'.md5($media->id . $media->uuid . 'original').'/';
->>>>>>> a12f125f4a (.)
-=======
-        return $this->getBasePath($media) . '/' . md5($media->id . $media->uuid . 'original') . '/';
->>>>>>> b93ef594b4 (.)
->>>>>>> e9b0959 (.)
     }
 
     /**
@@ -67,19 +58,7 @@ class TemporaryUploadPathGenerator
      */
     public function getPathForConversions($media): string
     {
-<<<<<<< HEAD
         return $this->getBasePath($media) . '/' . md5($media->id . $media->uuid . 'conversion');
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-        return $this->getBasePath($media) . '/' . md5($media->id . $media->uuid . 'conversion');
-=======
-        return $this->getBasePath($media).'/'.md5($media->id . $media->uuid . 'conversion');
->>>>>>> a12f125f4a (.)
-=======
-        return $this->getBasePath($media) . '/' . md5($media->id . $media->uuid . 'conversion');
->>>>>>> b93ef594b4 (.)
->>>>>>> e9b0959 (.)
     }
 
     /**
@@ -87,8 +66,8 @@ class TemporaryUploadPathGenerator
      */
     public function getPathForResponsiveImages($media): string
     {
-<<<<<<< HEAD
         return $this->getBasePath($media) . '/' . md5($media->id . $media->uuid . 'responsive');
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -142,11 +121,14 @@ class TemporaryUploadPathGenerator
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
 >>>>>>> 47a54fe (.)
+=======
+>>>>>>> f1c6d6e (.)
     }
 
     /**
      * Get a unique base path for the given media.
      *
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
      * @param  Media  $media
@@ -163,6 +145,9 @@ class TemporaryUploadPathGenerator
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
 >>>>>>> 47a54fe (.)
+=======
+     * @param Media $media
+>>>>>>> f1c6d6e (.)
      */
     protected function getBasePath($media): string
     {

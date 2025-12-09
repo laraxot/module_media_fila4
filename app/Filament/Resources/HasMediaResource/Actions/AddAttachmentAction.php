@@ -6,6 +6,7 @@ namespace Modules\Media\Filament\Resources\HasMediaResource\Actions;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Exception;
 use Filament\Actions\Action;
 =======
@@ -23,18 +24,15 @@ use Exception;
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
 >>>>>>> 47a54fe (.)
+=======
+use Filament\Actions\Action;
+use Exception;
+>>>>>>> f1c6d6e (.)
 use Filament\Forms\Components\BaseFileUpload;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Radio;
 use Filament\Forms\Components\TextInput;
 use Filament\Resources\RelationManagers\RelationManager;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-use Filament\Tables\Actions\Action;
->>>>>>> origin/develop
->>>>>>> e9b0959 (.)
 use Illuminate\Support\Str;
 use Webmozart\Assert\Assert;
 
@@ -43,12 +41,6 @@ class AddAttachmentAction extends Action
     protected function setUp(): void
     {
         parent::setUp();
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> e9b0959 (.)
         $this->icon('heroicon-o-plus')
             ->color('success')
             ->button()
@@ -58,45 +50,10 @@ class AddAttachmentAction extends Action
             ->schema(fn(): array => static::getFormSchema(false))
 >>>>>>> 5200b63 (.)
             ->action(static::formHandlerCallback(...));
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> origin/develop
-        $this
-            ->icon('heroicon-o-plus')
-            ->color('success')
-            ->button()
-            ->form(
-                fn (): array => static::getFormSchema(false)
-            )
-            ->action(
-                fn (RelationManager $livewire, array $data) => static::formHandlerCallback($livewire, $data),
-            );
-<<<<<<< HEAD
->>>>>>> a12f125f4a (.)
-=======
-        $this->icon('heroicon-o-plus')
-            ->color('success')
-            ->button()
-            ->schema(fn(): array => static::getFormSchema(false))
-            ->action(static::formHandlerCallback(...));
->>>>>>> b93ef594b4 (.)
-=======
->>>>>>> origin/develop
->>>>>>> e9b0959 (.)
     }
 
     public static function trans(string $key): string
     {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> b93ef594b4 (.)
->>>>>>> e9b0959 (.)
         Assert::string(
 <<<<<<< HEAD
             $ris = trans('media::add_attachment_action.'.$key),
@@ -106,22 +63,11 @@ class AddAttachmentAction extends Action
             '[' . $key . '][' . __LINE__ . '][' . class_basename(__CLASS__) . ']',
 >>>>>>> 5200b63 (.)
         );
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-        Assert::string($ris = trans('media::add_attachment_action.'.$key), '['.$key.']['.__LINE__.']['.class_basename(__CLASS__).']');
->>>>>>> a12f125f4a (.)
-=======
->>>>>>> b93ef594b4 (.)
-=======
-        Assert::string($ris = trans('media::add_attachment_action.'.$key), '['.$key.']['.__LINE__.']['.class_basename(__CLASS__).']');
->>>>>>> origin/develop
->>>>>>> e9b0959 (.)
 
         return $ris;
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -166,6 +112,9 @@ class AddAttachmentAction extends Action
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
 >>>>>>> 47a54fe (.)
+=======
+    public static function getDefaultName(): null|string
+>>>>>>> f1c6d6e (.)
     {
         return 'add_attachment';
     }
@@ -190,14 +139,6 @@ class AddAttachmentAction extends Action
                 ->required()
                 ->columnSpanFull(),
             /*
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> b93ef594b4 (.)
->>>>>>> e9b0959 (.)
              * Radio::make('attachment_type')
              * ->hiddenLabel()
              * ->options(
@@ -210,31 +151,6 @@ class AddAttachmentAction extends Action
              * ->required()
              * ->columnSpanFull(),
              */
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/develop
-            Radio::make('attachment_type')
-                ->hiddenLabel()
-                ->options(
-                    AttachmentTypeEnum::descriptionsByValue($asset ? AttachmentTypeEnum::cases() : AttachmentTypeEnum::operationCases()),
-                )
-                ->default(AttachmentTypeEnum::Image())
-                ->columns(
-                    $asset ? \count(AttachmentTypeEnum::cases()) : \count(AttachmentTypeEnum::operationCases()),
-                )
-                ->required()
-                ->columnSpanFull(),
-            */
-<<<<<<< HEAD
->>>>>>> a12f125f4a (.)
-=======
->>>>>>> b93ef594b4 (.)
-=======
->>>>>>> origin/develop
->>>>>>> e9b0959 (.)
             // Radio::make('attachment_type')->columnSpanFull(),
             TextInput::make('name')
                 ->hint(static::trans('fields.name_hint'))
@@ -250,6 +166,7 @@ class AddAttachmentAction extends Action
         $mediaCollection = $data['attachment_type'] ?? 'default';
         // $mediaCollection = 'default';
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -293,109 +210,29 @@ class AddAttachmentAction extends Action
 >>>>>>> a80d398 (.)
 =======
 >>>>>>> 47a54fe (.)
-        if (!method_exists($ownerRecord, 'addMediaFromDisk')) {
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+>>>>>>> f1c6d6e (.)
         if (!method_exists($ownerRecord, 'addMediaFromDisk')) {
-=======
-        if (! method_exists($ownerRecord, 'addMediaFromDisk')) {
->>>>>>> a12f125f4a (.)
-=======
-        if (!method_exists($ownerRecord, 'addMediaFromDisk')) {
->>>>>>> b93ef594b4 (.)
->>>>>>> e9b0959 (.)
             throw new Exception('wip');
         }
 
         $attachment = $ownerRecord
-<<<<<<< HEAD
             ->addMediaFromDisk($data['file'], config('attachment.upload.disk.driver'))
             ->setName($data['name'] ?? Str::beforeLast($data['original_file_name'], '.'))
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-            ->addMediaFromDisk($data['file'], config('attachment.upload.disk.driver'))
-            ->setName($data['name'] ?? Str::beforeLast($data['original_file_name'], '.'))
-=======
-=======
-        if (! method_exists($ownerRecord, 'addMediaFromDisk')) {
-            throw new \Exception('wip');
-        }
-
-        $attachment = $ownerRecord
->>>>>>> origin/develop
-            ->addMediaFromDisk(
-                $data['file'],
-                config('attachment.upload.disk.driver'),
-            )
-            ->setName(
-                $data['name'] ?? Str::beforeLast($data['original_file_name'], '.'),
-            )
-<<<<<<< HEAD
->>>>>>> a12f125f4a (.)
-=======
-            ->addMediaFromDisk($data['file'], config('attachment.upload.disk.driver'))
-            ->setName($data['name'] ?? Str::beforeLast($data['original_file_name'], '.'))
->>>>>>> b93ef594b4 (.)
-=======
->>>>>>> origin/develop
->>>>>>> e9b0959 (.)
             ->preservingOriginal()
             ->toMediaCollection($mediaCollection);
 >>>>>>> 5200b63 (.)
 
         $user_id = authId();
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> b93ef594b4 (.)
->>>>>>> e9b0959 (.)
         $attachment->update([
             'created_by' => $user_id,
             'updated_by' => $user_id,
         ]);
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> e9b0959 (.)
         /*
          * $attachment->created_by=$user_id;
          * $attachment->created_by=$user_id;
          * $attachment->save();
          */
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> origin/develop
-        $attachment->update(
-            [
-                'created_by' => $user_id,
-                'updated_by' => $user_id,
-            ]
-        );
-        /*
-        $attachment->created_by=$user_id;
-        $attachment->created_by=$user_id;
-        $attachment->save();
-        */
-<<<<<<< HEAD
->>>>>>> a12f125f4a (.)
-=======
-        /*
-         * $attachment->created_by=$user_id;
-         * $attachment->created_by=$user_id;
-         * $attachment->save();
-         */
->>>>>>> b93ef594b4 (.)
-=======
->>>>>>> origin/develop
->>>>>>> e9b0959 (.)
     }
 }

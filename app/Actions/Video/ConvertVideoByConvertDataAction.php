@@ -9,8 +9,8 @@ declare(strict_types=1);
 
 namespace Modules\Media\Actions\Video;
 
-<<<<<<< HEAD
 use Exception;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -36,6 +36,8 @@ use Exception;
 <<<<<<< HEAD
 >>>>>>> e9b0959 (.)
 >>>>>>> 47a54fe (.)
+=======
+>>>>>>> f1c6d6e (.)
 use FFMpeg\Format\Video\DefaultVideo;
 use Filament\Notifications\Notification;
 use Illuminate\Support\Facades\Storage;
@@ -44,35 +46,6 @@ use ProtoneMedia\LaravelFFMpeg\FFMpeg\FFMpegExporter;
 use ProtoneMedia\LaravelFFMpeg\MediaOpener;
 use ProtoneMedia\LaravelFFMpeg\Support\FFMpeg;
 use Spatie\QueueableAction\QueueableAction;
-<<<<<<< HEAD
-=======
-=======
-=======
-use FFMpeg\Format\Video\DefaultVideo;
->>>>>>> b93ef594b4 (.)
-use Filament\Notifications\Notification;
-use Illuminate\Support\Facades\Storage;
-use Modules\Media\Datas\ConvertData;
-use ProtoneMedia\LaravelFFMpeg\FFMpeg\FFMpegExporter;
-use ProtoneMedia\LaravelFFMpeg\MediaOpener;
-use ProtoneMedia\LaravelFFMpeg\Support\FFMpeg;
-use Spatie\QueueableAction\QueueableAction;
-<<<<<<< HEAD
-use FFMpeg\Format\Video\DefaultVideo;
->>>>>>> a12f125f4a (.)
-=======
->>>>>>> b93ef594b4 (.)
-=======
-use Filament\Notifications\Notification;
-use Illuminate\Support\Facades\Storage;
-use Modules\Media\Datas\ConvertData;
-use ProtoneMedia\LaravelFFMpeg\Support\FFMpeg;
-use ProtoneMedia\LaravelFFMpeg\MediaOpener;
-use ProtoneMedia\LaravelFFMpeg\FFMpeg\FFMpegExporter;
-use Spatie\QueueableAction\QueueableAction;
-use FFMpeg\Format\Video\DefaultVideo;
->>>>>>> origin/develop
->>>>>>> e9b0959 (.)
 use Webmozart\Assert\Assert;
 >>>>>>> 5200b63 (.)
 
@@ -93,18 +66,14 @@ class ConvertVideoByConvertDataAction
 =======
         if (!$data->exists()) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 5200b63 (.)
 =======
 <<<<<<< HEAD
 >>>>>>> 47a54fe (.)
-            throw new Exception('Il file non esiste');
 =======
-<<<<<<< HEAD
+>>>>>>> f1c6d6e (.)
             throw new Exception('Il file non esiste');
-=======
-            throw new \Exception('Il file non esiste');
->>>>>>> origin/develop
->>>>>>> e9b0959 (.)
         }
 
         $format = $data->getFFMpegFormat();
@@ -115,18 +84,14 @@ class ConvertVideoByConvertDataAction
 =======
         if (!$file_new) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 5200b63 (.)
 =======
 <<<<<<< HEAD
 >>>>>>> 47a54fe (.)
-            throw new Exception('Il nome del file convertito non è stato specificato');
 =======
-<<<<<<< HEAD
+>>>>>>> f1c6d6e (.)
             throw new Exception('Il nome del file convertito non è stato specificato');
-=======
-            throw new \Exception('Il nome del file convertito non è stato specificato');
->>>>>>> origin/develop
->>>>>>> e9b0959 (.)
         }
 
         // Instanziamo il formato prima di usarlo
@@ -144,21 +109,7 @@ class ConvertVideoByConvertDataAction
                 // Gestione del progresso
                 $msg = "{$percentage}% transcoded";
                 $msg .= "{$remaining} seconds left at rate: {$rate}";
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> a12f125f4a (.)
-=======
-
->>>>>>> b93ef594b4 (.)
-=======
->>>>>>> origin/develop
->>>>>>> e9b0959 (.)
                 // Log o notifica del progresso
             })
             ->addFilter('-preset', 'ultrafast')

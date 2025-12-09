@@ -13,6 +13,7 @@ namespace Modules\Media\Models;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 06bb10d (.)
@@ -22,43 +23,19 @@ namespace Modules\Media\Models;
 >>>>>>> a80d398 (.)
 =======
 >>>>>>> 47a54fe (.)
-use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+>>>>>>> f1c6d6e (.)
 use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
-=======
->>>>>>> a12f125f4a (.)
-=======
-use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
->>>>>>> b93ef594b4 (.)
->>>>>>> e9b0959 (.)
 use Modules\Xot\Datas\XotData;
 use Illuminate\Support\Carbon;
 use Modules\Xot\Contracts\UserContract;
 use Illuminate\Database\Eloquent\Model;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
->>>>>>> a12f125f4a (.)
-=======
->>>>>>> b93ef594b4 (.)
->>>>>>> e9b0959 (.)
 use Modules\Xot\Contracts\ProfileContract;
 use Modules\Media\Database\Factories\MediaFactory;
 use Illuminate\Database\Eloquent\Factories\Factory;
 >>>>>>> 5200b63 (.)
 use Eloquent;
 use Exception;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> e9b0959 (.)
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection as EloquentCollection;
 <<<<<<< HEAD
@@ -83,6 +60,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 use Modules\Media\Enums\AttachmentTypeEnum;
 use Modules\Xot\Actions\Factory\GetFactoryAction;
 use Modules\Xot\Traits\Updater;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -142,6 +120,8 @@ use Modules\Xot\Traits\Updater;
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
 >>>>>>> 47a54fe (.)
+=======
+>>>>>>> f1c6d6e (.)
 use Spatie\MediaLibrary\MediaCollections\Models\Media as SpatieMedia;
 
 /**
@@ -163,18 +143,8 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media as SpatieMedia;
  * @property array|null $generated_conversions
  * @property array|null $responsive_images
  * @property int|null $order_column
-<<<<<<< HEAD
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
-=======
-<<<<<<< HEAD
- * @property Carbon|null $created_at
- * @property Carbon|null $updated_at
-=======
- * @property \Illuminate\Support\Carbon|null $created_at
- * @property \Illuminate\Support\Carbon|null $updated_at
->>>>>>> origin/develop
->>>>>>> e9b0959 (.)
  * @property string|null $created_by
  * @property string|null $updated_by
  * @property int|null $user_id
@@ -190,10 +160,6 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media as SpatieMedia;
  * @property string|null $caption
  * @property string|null $exif
  * @property string|null $curations
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> e9b0959 (.)
  * @property UserContract|null $creator
  * @property Model|Eloquent $model
  * @property TemporaryUpload|null $temporaryUpload
@@ -240,6 +206,7 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media as SpatieMedia;
  * @method static Builder|Media whereUserId($value)
  * @method static Builder|Media whereUuid($value)
  * @method static Builder|Media whereWidth($value)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
  *
@@ -293,10 +260,13 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media as SpatieMedia;
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
 >>>>>>> 47a54fe (.)
+=======
+>>>>>>> f1c6d6e (.)
  * @property mixed $extension
  * @property mixed $human_readable_size
  * @property mixed $original_url
  * @property mixed $preview_url
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
  *
@@ -307,6 +277,8 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media as SpatieMedia;
 <<<<<<< HEAD
 >>>>>>> e9b0959 (.)
 >>>>>>> 47a54fe (.)
+=======
+>>>>>>> f1c6d6e (.)
  * @method static MediaCollection<int, static> all($columns = ['*'])
  * @method static MediaCollection<int, static> get($columns = ['*'])
  * @method static MediaCollection<int, static> all($columns = ['*'])
@@ -481,6 +453,7 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media as SpatieMedia;
  * @mixin IdeHelperMedia
  * @method static MediaFactory factory($count = null, $state = [])
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 5200b63 (.)
 =======
 <<<<<<< HEAD
@@ -618,6 +591,8 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media as SpatieMedia;
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
 >>>>>>> 47a54fe (.)
+=======
+>>>>>>> f1c6d6e (.)
  * @mixin Eloquent
  */
 class Media extends SpatieMedia
@@ -629,22 +604,6 @@ class Media extends SpatieMedia
 >>>>>>> 5200b63 (.)
     use Updater;
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
->>>>>>> a12f125f4a (.)
-=======
->>>>>>> b93ef594b4 (.)
-=======
-
-
->>>>>>> origin/develop
->>>>>>> e9b0959 (.)
     /** @var string */
     protected $connection = 'media';
 
@@ -656,6 +615,7 @@ class Media extends SpatieMedia
         // MediaLibraryPro::ensureInstalled();
 
         return static::whereIn('uuid', $uuids)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -680,23 +640,13 @@ class Media extends SpatieMedia
 >>>>>>> b93ef594b4 (.)
 >>>>>>> e9b0959 (.)
 >>>>>>> 47a54fe (.)
+=======
+>>>>>>> f1c6d6e (.)
             ->whereHasMorph('model', [TemporaryUpload::class], static fn(Builder $builder) => $builder->where(
 >>>>>>> 5200b63 (.)
                 'session_id',
                 session()->getId(),
             ))
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-            ->whereHasMorph('model', [TemporaryUpload::class], static fn (Builder $builder) => $builder->where('session_id', session()->getId()))
->>>>>>> a12f125f4a (.)
-=======
->>>>>>> b93ef594b4 (.)
-=======
-            ->whereHasMorph('model', [TemporaryUpload::class], static fn (Builder $builder) => $builder->where('session_id', session()->getId()))
->>>>>>> origin/develop
->>>>>>> e9b0959 (.)
             ->get();
     }
 
@@ -714,10 +664,6 @@ class Media extends SpatieMedia
 
     /**
      * Relazione con il creatore del media.
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> e9b0959 (.)
      *
      * @return BelongsTo<Model, self>
 <<<<<<< HEAD
@@ -730,6 +676,7 @@ class Media extends SpatieMedia
     {
         /** @var class-string<Model> $userClass */
         $userClass = XotData::make()->getUserClass();
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -749,6 +696,8 @@ class Media extends SpatieMedia
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
 >>>>>>> 47a54fe (.)
+=======
+>>>>>>> f1c6d6e (.)
         return $this->belongsTo($userClass, 'created_by');
     }
 
@@ -766,6 +715,7 @@ class Media extends SpatieMedia
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (! isset($info['dirname'])) {
             throw new Exception('['.__LINE__.']['.class_basename($this).']');
 =======
@@ -814,6 +764,10 @@ class Media extends SpatieMedia
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
 >>>>>>> 47a54fe (.)
+=======
+        if (!isset($info['dirname'])) {
+            throw new Exception('[' . __LINE__ . '][' . class_basename($this) . ']');
+>>>>>>> f1c6d6e (.)
         }
         $url = '#';
         switch ($conv) {
@@ -823,6 +777,7 @@ class Media extends SpatieMedia
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $url = $info['dirname'].'/conversions/'.$info['filename'].'-thumb.jpg';
 
                 break;
@@ -848,6 +803,8 @@ class Media extends SpatieMedia
 <<<<<<< HEAD
 >>>>>>> e9b0959 (.)
 >>>>>>> 47a54fe (.)
+=======
+>>>>>>> f1c6d6e (.)
                 $url = $info['dirname'] . '/conversions/' . $info['filename'] . '-thumb.jpg';
 
                 break;
@@ -857,6 +814,7 @@ class Media extends SpatieMedia
                 break;
             case '400':
                 $url = $info['dirname'] . '/conversions/' . $info['filename'] . '-400.jpg';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -910,6 +868,8 @@ class Media extends SpatieMedia
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
 >>>>>>> 47a54fe (.)
+=======
+>>>>>>> f1c6d6e (.)
 
                 break;
         }
@@ -922,33 +882,9 @@ class Media extends SpatieMedia
         $conversions = [];
         foreach ($this->getGeneratedConversions() as $conv => $state) {
             $item = [
-<<<<<<< HEAD
                 'name' => is_string($conv) ? $conv : ((string) $conv),
                 'generated' => $state,
                 'src' => $this->getUrlConv(is_string($conv) ? $conv : ((string) $conv)),
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-                'name' => is_string($conv) ? $conv : ((string) $conv),
-                'generated' => $state,
-                'src' => $this->getUrlConv(is_string($conv) ? $conv : ((string) $conv)),
-=======
-                'name' => is_string($conv) ? $conv : (string) $conv,
-                'generated' => $state,
-                'src' => $this->getUrlConv(is_string($conv) ? $conv : (string) $conv),
->>>>>>> a12f125f4a (.)
-=======
-                'name' => is_string($conv) ? $conv : ((string) $conv),
-                'generated' => $state,
-                'src' => $this->getUrlConv(is_string($conv) ? $conv : ((string) $conv)),
->>>>>>> b93ef594b4 (.)
-=======
-                'name' => is_string($conv) ? $conv : (string) $conv,
-                'generated' => $state,
-                'src' => $this->getUrlConv(is_string($conv) ? $conv : (string) $conv),
->>>>>>> origin/develop
->>>>>>> e9b0959 (.)
             ];
             $conversions[] = $item;
         }
@@ -965,35 +901,9 @@ class Media extends SpatieMedia
             'created_at' => 'datetime',
             'updated_at' => 'datetime',
             'deleted_at' => 'datetime',
-<<<<<<< HEAD
             'updated_by' => 'string',
             'created_by' => 'string',
             'deleted_by' => 'string',
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-            'updated_by' => 'string',
-            'created_by' => 'string',
-            'deleted_by' => 'string',
-=======
-=======
->>>>>>> origin/develop
-
-            'updated_by' => 'string',
-            'created_by' => 'string',
-            'deleted_by' => 'string',
-
-<<<<<<< HEAD
->>>>>>> a12f125f4a (.)
-=======
-            'updated_by' => 'string',
-            'created_by' => 'string',
-            'deleted_by' => 'string',
->>>>>>> b93ef594b4 (.)
-=======
->>>>>>> origin/develop
->>>>>>> e9b0959 (.)
             // 'attachment_type' => AttachmentTypeEnum::class,
             'manipulations' => 'array',
             'custom_properties' => 'array',
@@ -1002,6 +912,7 @@ class Media extends SpatieMedia
         ];
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1017,36 +928,18 @@ class Media extends SpatieMedia
 >>>>>>> a80d398 (.)
 =======
 >>>>>>> 47a54fe (.)
+=======
+>>>>>>> f1c6d6e (.)
     /**
      * Create a new factory instance for the model.
      *
      * @return Factory<static>
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    /**
-=======
-   /**
->>>>>>> a12f125f4a (.)
-=======
-    /**
->>>>>>> b93ef594b4 (.)
-     * Create a new factory instance for the model.
-     *
-     * @return Factory<static>
-=======
-   /**
-     * Create a new factory instance for the model.
-     *
-     * @return \Illuminate\Database\Eloquent\Factories\Factory<static>
->>>>>>> origin/develop
->>>>>>> e9b0959 (.)
      */
     protected static function newFactory()
     {
         return app(GetFactoryAction::class)->execute(static::class);
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1082,4 +975,6 @@ class Media extends SpatieMedia
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
 >>>>>>> 47a54fe (.)
+=======
+>>>>>>> f1c6d6e (.)
 }

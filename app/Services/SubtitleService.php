@@ -6,19 +6,15 @@ namespace Modules\Media\Services;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 47a54fe (.)
+=======
+>>>>>>> f1c6d6e (.)
 use SimpleXMLElement;
 >>>>>>> 5200b63 (.)
 use Exception;
-=======
-<<<<<<< HEAD
-use SimpleXMLElement;
-use Exception;
-=======
->>>>>>> origin/develop
->>>>>>> e9b0959 (.)
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
@@ -49,6 +45,7 @@ class SubtitleService
 
     public Model $model;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -93,12 +90,16 @@ class SubtitleService
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
 >>>>>>> 47a54fe (.)
+=======
+    private static null|self $instance = null;
+>>>>>>> f1c6d6e (.)
 
     /**
      * ---.
      */
     public static function getInstance(): self
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -152,6 +153,10 @@ class SubtitleService
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
 >>>>>>> 47a54fe (.)
+=======
+        if (!(self::$instance instanceof self)) {
+            self::$instance = new self();
+>>>>>>> f1c6d6e (.)
         }
 
         return self::$instance;
@@ -208,6 +213,7 @@ class SubtitleService
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $txt .= $item->__toString().' ';
 =======
                 $txt .= $item->__toString() . ' ';
@@ -247,6 +253,9 @@ class SubtitleService
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
 >>>>>>> 47a54fe (.)
+=======
+                $txt .= $item->__toString() . ' ';
+>>>>>>> f1c6d6e (.)
             }
         }
 
@@ -264,6 +273,7 @@ class SubtitleService
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (! isset($info['extension'])) {
             return [];
         }
@@ -285,11 +295,14 @@ class SubtitleService
 <<<<<<< HEAD
 >>>>>>> e9b0959 (.)
 >>>>>>> 47a54fe (.)
+=======
+>>>>>>> f1c6d6e (.)
         if (!isset($info['extension'])) {
             return [];
         }
 
         $func = 'getFrom' . Str::studly($info['extension']);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -334,6 +347,8 @@ class SubtitleService
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
 >>>>>>> 47a54fe (.)
+=======
+>>>>>>> f1c6d6e (.)
 
         Assert::isArray($res = $this->{$func}());
 
@@ -373,6 +388,7 @@ class SubtitleService
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 if (! ($attributes instanceof SimpleXMLElement)) {
                     throw new Exception('['.__LINE__.']['.class_basename($this).']');
 =======
@@ -391,6 +407,8 @@ class SubtitleService
 <<<<<<< HEAD
 >>>>>>> e9b0959 (.)
 >>>>>>> 47a54fe (.)
+=======
+>>>>>>> f1c6d6e (.)
                 if (!($attributes instanceof SimpleXMLElement)) {
                     throw new Exception('[' . __LINE__ . '][' . class_basename($this) . ']');
 >>>>>>> 5200b63 (.)
@@ -399,34 +417,6 @@ class SubtitleService
                 // 00:06:35,360
                 $start = ((int) $attributes->start->__toString()) / 1000;
                 $end = ((int) $attributes->end->__toString()) / 1000;
-<<<<<<< HEAD
-=======
-=======
-                if (! $attributes instanceof SimpleXMLElement) {
-                    throw new Exception('['.__LINE__.']['.class_basename($this).']');
-=======
-                if (! $attributes instanceof \SimpleXMLElement) {
-                    throw new \Exception('['.__LINE__.']['.class_basename($this).']');
->>>>>>> origin/develop
-                }
-
-                // 00:06:35,360
-                $start = (int) $attributes->start->__toString() / 1000;
-                $end = (int) $attributes->end->__toString() / 1000;
-<<<<<<< HEAD
->>>>>>> a12f125f4a (.)
-=======
-                if (!($attributes instanceof SimpleXMLElement)) {
-                    throw new Exception('[' . __LINE__ . '][' . class_basename($this) . ']');
-                }
-
-                // 00:06:35,360
-                $start = ((int) $attributes->start->__toString()) / 1000;
-                $end = ((int) $attributes->end->__toString()) / 1000;
->>>>>>> b93ef594b4 (.)
-=======
->>>>>>> origin/develop
->>>>>>> e9b0959 (.)
                 // dddx([$start,$this->secondsToHms($start),$end,$this->secondsToHms($end)]);
                 $tmp = [
                     // 'id' => $i++,
@@ -434,6 +424,7 @@ class SubtitleService
                     'item_i' => $item_i,
                     'start' => $start,
                     'end' => $end,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -478,6 +469,9 @@ class SubtitleService
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
 >>>>>>> 47a54fe (.)
+=======
+                    'time' => secondsToHms($start) . ',' . secondsToHms($end),
+>>>>>>> f1c6d6e (.)
                     'text' => $item->__toString(),
                 ];
                 $data[] = $tmp;
@@ -516,6 +510,7 @@ class SubtitleService
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             if (! feof($fileHandle)) {
 =======
             if (!feof($fileHandle)) {
@@ -555,6 +550,9 @@ class SubtitleService
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
 >>>>>>> 47a54fe (.)
+=======
+            if (!feof($fileHandle)) {
+>>>>>>> f1c6d6e (.)
                 exit("Error: unexpected fgets() fail\n");
             }
 
@@ -575,6 +573,7 @@ class SubtitleService
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         file_put_contents(public_path($webVttFile), $header.implode('', $lines));
 =======
         file_put_contents(public_path($webVttFile), $header . implode('', $lines));
@@ -614,5 +613,8 @@ class SubtitleService
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
 >>>>>>> 47a54fe (.)
+=======
+        file_put_contents(public_path($webVttFile), $header . implode('', $lines));
+>>>>>>> f1c6d6e (.)
     }
 }
