@@ -12,6 +12,10 @@ use FFMpeg\Format\Video\X264;
 use Illuminate\Support\Facades\Storage;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+use ProtoneMedia\LaravelFFMpeg\Exporters\MediaExporter;
+>>>>>>> 1634e53 (.)
 use ProtoneMedia\LaravelFFMpeg\Support\FFMpeg;
 use Spatie\QueueableAction\QueueableAction;
 =======
@@ -82,9 +86,12 @@ class ConvertVideoAction
 
     /**
      * Execute the action.
+     *
+     * @throws \Exception
      */
     public function execute(string $disk_mp4, string $file_mp4, string $file_new): string
     {
+<<<<<<< HEAD
         $media = FFMpeg::fromDisk($disk_mp4);
 
         $openedMedia = $media->open($file_mp4);
@@ -111,9 +118,20 @@ class ConvertVideoAction
         $format->setKiloBitrate(1000);
 
         $toDiskMedia = $exportedMedia->toDisk($disk_mp4);
+=======
+        $format = new X264;
+        $format->setKiloBitrate(1000);
 
-        $formattedMedia = $toDiskMedia->inFormat($format);
+        $exporter = FFMpeg::fromDisk($disk_mp4)
+            ->open($file_mp4)
+            ->export();
+>>>>>>> 1634e53 (.)
 
+        if (! $exporter instanceof MediaExporter) {
+            throw new \Exception('Failed to create exporter');
+        }
+
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -174,6 +192,21 @@ class ConvertVideoAction
 =======
         $formattedMedia->save($file_new);
 >>>>>>> 2a4b5df (.)
+=======
+        $toDisk = $exporter->toDisk($disk_mp4);
+
+        if (! is_object($toDisk) || ! method_exists($toDisk, 'inFormat')) {
+            throw new \Exception('Failed to set disk');
+        }
+
+        $formatted = $toDisk->inFormat($format);
+
+        if (! is_object($formatted) || ! method_exists($formatted, 'save')) {
+            throw new \Exception('Failed to set format');
+        }
+
+        $formatted->save($file_new);
+>>>>>>> 1634e53 (.)
 
         return Storage::disk($disk_mp4)->url($file_new);
     }
