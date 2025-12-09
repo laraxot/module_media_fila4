@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 3f50d25 (.)
 # Analisi Modelli, Factory e Seeder - Modulo Media
@@ -252,3 +253,5 @@ Tutti i file factory devono essere validati con PHPStan livello 9:
 >>>>>>> 8cdc78f (.)
 =======
 >>>>>>> 3f50d25 (.)
+=======
+>>>>>>> 960f18d (.)

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 3f50d25 (.)
 # ConvertVideoByConvertDataAction
@@ -88,3 +89,5 @@ $convertedPath = $action->execute($data);
 =======
 [Torna alla documentazione Media](../README.md) 
 >>>>>>> 3f50d25 (.)
+=======
+>>>>>>> 960f18d (.)
