@@ -1018,7 +1018,7 @@ class Media extends SpatieMedia
     }
 
     /**
-     * @return array<string, mixed>
+     * @return list<array<string, mixed>>
      */
     public function getEntryConversionsAttribute(): array
     {
