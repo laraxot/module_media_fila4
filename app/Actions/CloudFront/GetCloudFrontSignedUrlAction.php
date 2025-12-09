@@ -25,6 +25,7 @@ use Spatie\QueueableAction\QueueableAction;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 =======
@@ -103,6 +104,11 @@ use Spatie\QueueableAction\QueueableAction;
 >>>>>>> b8fda23 (.)
 =======
 >>>>>>> f5f7069 (.)
+=======
+=======
+
+>>>>>>> 0a466ed (.)
+>>>>>>> c08a553 (.)
 /**
  * Action per la traduzione di elementi di una collezione.
  */
@@ -127,6 +133,7 @@ class GetCloudFrontSignedUrlAction
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 =======
@@ -179,6 +186,8 @@ class GetCloudFrontSignedUrlAction
 >>>>>>> b8fda23 (.)
 =======
 >>>>>>> f5f7069 (.)
+=======
+>>>>>>> c08a553 (.)
     public function execute(string $key, int $expiry = 30): string
     {
         $data = CloudFrontData::make();
@@ -186,6 +195,7 @@ class GetCloudFrontSignedUrlAction
         $cloudFront = new CloudFrontClient([
             'region' => $data->region,
             'version' => 'latest',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -250,6 +260,9 @@ class GetCloudFrontSignedUrlAction
 >>>>>>> 054dfa6 (.)
 =======
 >>>>>>> b8fda23 (.)
+=======
+=======
+>>>>>>> c08a553 (.)
    
     public function execute(string $key, int $expiry = 30): string
     {
@@ -259,6 +272,7 @@ class GetCloudFrontSignedUrlAction
         $cloudFront = new CloudFrontClient([
             'region' => $data->region,
             'version' => 'latest'
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -301,15 +315,20 @@ class GetCloudFrontSignedUrlAction
 >>>>>>> b8fda23 (.)
 =======
 >>>>>>> f5f7069 (.)
+=======
+>>>>>>> 0a466ed (.)
+>>>>>>> c08a553 (.)
         ]);
 
         return $cloudFront->getSignedUrl([
             'url' => $data->base_url.'/'.ltrim($key, '/'),
             'expires' => time() + ($expiry * 60),
             'key_pair_id' => $data->key_pair_id,
+<<<<<<< HEAD
             'private_key' => $data->getPrivateKey(),
         ]);
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -345,6 +364,9 @@ class GetCloudFrontSignedUrlAction
 >>>>>>> 054dfa6 (.)
 =======
 >>>>>>> b8fda23 (.)
+=======
+=======
+>>>>>>> c08a553 (.)
             'private_key' => $data->getPrivateKey()
             ,
         ]);
@@ -353,6 +375,7 @@ class GetCloudFrontSignedUrlAction
    
 
   
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -482,4 +505,7 @@ class GetCloudFrontSignedUrlAction
 >>>>>>> b8fda23 (.)
 =======
 >>>>>>> f5f7069 (.)
+=======
+>>>>>>> 0a466ed (.)
+>>>>>>> c08a553 (.)
 }
