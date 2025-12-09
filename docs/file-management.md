@@ -42,6 +42,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 3f50d25 (.)
@@ -53,6 +54,8 @@
 >>>>>>> f81fb2b (.)
 =======
 >>>>>>> d44d947 (.)
+=======
+>>>>>>> a45d99f (.)
 # Gestione dei File in 
 
 ## Panoramica
@@ -62,6 +65,7 @@ Questo documento descrive le best practice per la gestione dei file in , inclusi
 ## Struttura delle Directory
 
  utilizza una struttura organizzata per l'archiviazione dei file:
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -126,6 +130,8 @@ Questo documento descrive le best practice per la gestione dei file in , inclusi
 >>>>>>> 5af33b9 (.)
 =======
 >>>>>>> 22d28e3 (.)
+=======
+>>>>>>> a45d99f (.)
 # Gestione dei File in SaluteOra
 
 ## Panoramica
@@ -181,6 +187,7 @@ SaluteOra utilizza una struttura organizzata per l'archiviazione dei file:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 Per i form amministrativi,  utilizza il componente `FileUpload` di Filament:
 >>>>>>> 7df6a71 (.)
@@ -247,6 +254,9 @@ Per i form amministrativi,  utilizza il componente `FileUpload` di Filament:
 >>>>>>> 5af33b9 (.)
 =======
 >>>>>>> 22d28e3 (.)
+=======
+Per i form amministrativi,  utilizza il componente `FileUpload` di Filament:
+>>>>>>> a45d99f (.)
 Per i form amministrativi, SaluteOra utilizza il componente `FileUpload` di Filament:
 
 ```php
@@ -259,6 +269,7 @@ FileUpload::make('certifications')
     ->maxSize(5120) // 5MB
 ```
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -358,11 +369,14 @@ Per una documentazione dettagliata sull'utilizzo di `FileUpload`, consulta la [G
 >>>>>>> f81fb2b (.)
 =======
 >>>>>>> d44d947 (.)
+=======
+>>>>>>> a45d99f (.)
 Per una documentazione dettagliata sull'utilizzo di `FileUpload`, consulta la [Gestione dei File Upload in Filament](../../UI/docs/filament-file-uploads.md).
 
 ### Utilizzo di Livewire
 
 Per i form frontend,  utilizza Livewire:
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -391,6 +405,8 @@ Per i form frontend,  utilizza Livewire:
 >>>>>>> d44d947 (.)
 =======
 >>>>>>> 71b97ae (.)
+=======
+>>>>>>> a45d99f (.)
 Per i form frontend, SaluteOra utilizza Livewire:
 
 ```php
@@ -459,6 +475,7 @@ Schema::table('users', function (Blueprint $table) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 Per una documentazione dettagliata sulla mappatura dei campi, consulta la [Mappatura dei Campi Database nel Modulo Patient](/laravel/Modules/Patient/docs/DATABASE_FIELD_MAPPING.md).
 =======
 Per una documentazione dettagliata sulla mappatura dei campi, consulta la Mappatura dei Campi Database nel Modulo Patient (da creare se necessario).
@@ -577,6 +594,9 @@ Per una documentazione dettagliata sulla mappatura dei campi, consulta la Mappat
 =======
 Per una documentazione dettagliata sulla mappatura dei campi, consulta la [Mappatura dei Campi Database nel Modulo Patient](/laravel/Modules/Patient/docs/DATABASE_FIELD_MAPPING.md).
 >>>>>>> 22d28e3 (.)
+=======
+Per una documentazione dettagliata sulla mappatura dei campi, consulta la Mappatura dei Campi Database nel Modulo Patient (da creare se necessario).
+>>>>>>> a45d99f (.)
 
 ## Accesso ai File
 
@@ -620,6 +640,7 @@ $url = Storage::url($path);
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
  implementa un sistema di controllo degli accessi per i file sensibili:
 >>>>>>> 7df6a71 (.)
@@ -686,6 +707,9 @@ $url = Storage::url($path);
 >>>>>>> 5af33b9 (.)
 =======
 >>>>>>> 22d28e3 (.)
+=======
+ implementa un sistema di controllo degli accessi per i file sensibili:
+>>>>>>> a45d99f (.)
 SaluteOra implementa un sistema di controllo degli accessi per i file sensibili:
 
 ```php
@@ -747,6 +771,7 @@ protected static function booted()
 
 ## Documentazione Correlata
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -891,10 +916,13 @@ protected static function booted()
 =======
 =======
 >>>>>>> 5af33b9 (.)
+=======
+>>>>>>> a45d99f (.)
 - [Gestione dei File Upload in Filament](../../UI/docs/filament-file-uploads.md)
 - [Migrazioni del Database](../../Xot/docs/migration-standards.md)
 - [Gestione degli Utenti](../../User/docs/user-management.md)
 - [Pattern di Ereditarietà dei Modelli](../../Xot/docs/archive/model-inheritance-patterns.md)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1005,3 +1033,5 @@ protected static function booted()
 >>>>>>> 22d28e3 (.)
 =======
 >>>>>>> d6f82fc (.)
+=======
+>>>>>>> a45d99f (.)
