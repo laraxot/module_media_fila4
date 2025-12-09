@@ -9,16 +9,26 @@ use Modules\Media\Models\Media;
 
 /**
  * Media Factory
+<<<<<<< HEAD
  *
  * Factory for creating Media model instances for testing and seeding.
  *
+=======
+ * 
+ * Factory for creating Media model instances for testing and seeding.
+ * 
+>>>>>>> 0a466ed (.)
  * @extends Factory<Media>
  */
 class MediaFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
+<<<<<<< HEAD
      *
+=======
+     * 
+>>>>>>> 0a466ed (.)
      * @var class-string<Media>
      */
     protected $model = Media::class;
@@ -34,7 +44,11 @@ class MediaFactory extends Factory
         $fileName = $this->faker->word();
         /** @var string $extension */
         $extension = $this->faker->randomElement(['jpg', 'png', 'pdf', 'doc']);
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> 0a466ed (.)
         return [
             'model_type' => 'App\\Models\\User',
             'model_id' => $this->faker->numberBetween(1, 100),
@@ -91,6 +105,7 @@ class MediaFactory extends Factory
     {
         $extension = (string) $this->faker->randomElement(['jpg', 'png', 'gif']);
         $fileName = (string) $this->faker->word();
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -99,6 +114,10 @@ class MediaFactory extends Factory
             'file_name' => $fileName.'.'.$extension,
 =======
         return $this->state(fn(array $_attributes): array => [
+=======
+        
+        return $this->state(fn (array $attributes): array => [
+>>>>>>> 0a466ed (.)
             'mime_type' => $this->getMimeTypeFromExtension($extension),
             'file_name' => $fileName . '.' . $extension,
 >>>>>>> 5200b63 (.)
@@ -129,6 +148,7 @@ class MediaFactory extends Factory
     {
         $extension = (string) $this->faker->randomElement(['pdf', 'doc', 'docx']);
         $fileName = (string) $this->faker->word();
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -137,6 +157,10 @@ class MediaFactory extends Factory
             'file_name' => $fileName.'.'.$extension,
 =======
         return $this->state(fn(array $_attributes): array => [
+=======
+        
+        return $this->state(fn (array $attributes): array => [
+>>>>>>> 0a466ed (.)
             'mime_type' => $this->getMimeTypeFromExtension($extension),
             'file_name' => $fileName . '.' . $extension,
 >>>>>>> 5200b63 (.)
@@ -176,4 +200,8 @@ class MediaFactory extends Factory
             default => 'application/octet-stream',
         };
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 0a466ed (.)
