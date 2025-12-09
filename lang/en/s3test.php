@@ -41,13 +41,6 @@ return [
             'tooltip' => 'Send email with attachment for testing',
         ],
     ],
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> 0a466ed (.)
-=======
->>>>>>> 37a2da6 (.)
     'notifications' => [
         'credentials_tested' => 'AWS credentials tested',
         'bucket_policy_tested' => 'Bucket policy tested',
@@ -63,23 +56,9 @@ return [
         'email_with_attachment' => 'Email with attachment sent successfully',
         'email_failed' => 'Email sending failed',
     ],
-<<<<<<< HEAD
-<<<<<<< HEAD
     'debug' => [
         'run_tests_message' => 'Run tests to see results here...',
     ],
-=======
-
-    'debug' => [
-        'run_tests_message' => 'Run tests to see results here...',
-    ],
-
->>>>>>> 0a466ed (.)
-=======
-    'debug' => [
-        'run_tests_message' => 'Run tests to see results here...',
-    ],
->>>>>>> 37a2da6 (.)
     'fields' => [
         'attachment' => [
             'label' => 'Attachment',
@@ -92,13 +71,6 @@ return [
             'helper_text' => 'Detailed output of executed tests',
         ],
     ],
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> 0a466ed (.)
-=======
->>>>>>> 37a2da6 (.)
     'messages' => [
         'test_successful' => 'Test completed successfully',
         'test_failed' => 'Test failed',
@@ -109,13 +81,6 @@ return [
         'connection_ok' => 'Connection established',
         'connection_failed' => 'Connection failed',
     ],
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> 0a466ed (.)
-=======
->>>>>>> 37a2da6 (.)
     'errors' => [
         'aws_credentials_invalid' => 'Invalid AWS credentials',
         's3_bucket_inaccessible' => 'S3 bucket not accessible',
@@ -124,13 +89,6 @@ return [
         'permissions_insufficient' => 'Insufficient permissions',
         'unknown_error' => 'Unknown error',
     ],
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> 0a466ed (.)
-=======
->>>>>>> 37a2da6 (.)
     'solutions' => [
         'check_credentials' => 'Check AWS credentials in .env',
         'check_bucket_name' => 'Check S3 bucket name',
