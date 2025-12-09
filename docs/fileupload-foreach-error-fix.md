@@ -73,6 +73,7 @@ L'errore si verifica nel metodo `getUploadedFiles` di `Filament\Forms\Components
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 - **Resource**: `Modules\<nome modulo>\Filament\Resources\PatientResource`
 >>>>>>> 7df6a71 (.)
@@ -128,11 +129,9 @@ L'errore si verifica nel metodo `getUploadedFiles` di `Filament\Forms\Components
 >>>>>>> 776536a (.)
 =======
 >>>>>>> cec545b (.)
-- **Resource**: `Modules\SaluteOra\Filament\Resources\PatientResource`
 =======
-- **Resource**: `Modules\<nome modulo>\Filament\Resources\PatientResource`
-- **Resource**: `Modules\<nome modulo>\Filament\Resources\PatientResource`
->>>>>>> 9348522 (.)
+>>>>>>> 71fafa8 (.)
+- **Resource**: `Modules\SaluteOra\Filament\Resources\PatientResource`
 - **Campi coinvolti**:
   - `data.health_card`
   - `data.identity_document`
