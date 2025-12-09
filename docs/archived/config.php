@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 3f50d25 (.)
 <?php
 
 declare(strict_types=1);
@@ -11,6 +14,7 @@ return [
     'siteName' => 'Modulo Media',
     'siteDescription' => 'Modulo Media',
     'lang' => 'it',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -44,6 +48,8 @@ return [
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 3f50d25 (.)
     'collections' => [
         'posts' => [
             'path' => fn($page): string => $page->lang . '/posts/' . Str::slug($page->getFilename()),
@@ -63,11 +69,14 @@ return [
     'isActiveParent' => function ($page, $menuItem) {
         if (is_object($menuItem) && $menuItem->children) {
             return $menuItem->children->contains(fn($child): bool => trimPath($page->getPath()) === trimPath($child));
+<<<<<<< HEAD
 >>>>>>> 7df6a71 (.)
 =======
 >>>>>>> 0caa3cf (.)
 =======
 >>>>>>> c9ef35c (.)
+=======
+>>>>>>> 3f50d25 (.)
         }
     },
     'url' => function ($page, $path) {
@@ -76,6 +85,7 @@ return [
         }
 
         // return Str::startsWith($path, 'http') ? $path : '/' . trimPath($path);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -92,12 +102,15 @@ return [
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 3f50d25 (.)
         return url('/' . $page->lang . '/' . trimPath($path));
     },
     'children' => fn($_page, $_docs): array => (
         // return $docs->where('parent_id', $page->);
         []
     ),
+<<<<<<< HEAD
 >>>>>>> 7df6a71 (.)
 =======
 >>>>>>> 0caa3cf (.)
@@ -106,3 +119,6 @@ return [
 ];
 =======
 >>>>>>> 8cdc78f (.)
+=======
+];
+>>>>>>> 3f50d25 (.)
