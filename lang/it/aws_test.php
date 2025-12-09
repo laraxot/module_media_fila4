@@ -32,6 +32,7 @@ return [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 06bb10d (.)
 =======
@@ -246,4 +247,9 @@ return [
         'group' => 'Media',
     ],
 >>>>>>> e5c049f (.)
+=======
+    'navigation' => [
+        'group' => 'Media',
+    ],
+>>>>>>> a70c4fa (.)
 ];
