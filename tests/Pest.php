@@ -5,6 +5,7 @@ declare(strict_types=1);
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -63,6 +64,10 @@ namespace Modules\Media\Tests;
 >>>>>>> 5200b63 (.)
 =======
 >>>>>>> 06bb10d (.)
+=======
+=======
+>>>>>>> 37a2da6 (.)
+>>>>>>> 98c37f4 (.)
 use Modules\Media\Models\Media;
 use Modules\Media\Models\MediaCollection;
 use Modules\Media\Tests\TestCase;
@@ -161,11 +166,14 @@ expect()->extend('toBeMediaCollection', function () {
  */
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b93ef594b4 (.)
 >>>>>>> e9b0959 (.)
 =======
 >>>>>>> 5200b63 (.)
 =======
+=======
+>>>>>>> 98c37f4 (.)
 =======
 namespace Modules\Media\Tests;
 
@@ -216,7 +224,12 @@ expect()->extend('toBeMediaCollection', function () {
 |
 */
 >>>>>>> 0a466ed (.)
+<<<<<<< HEAD
 >>>>>>> 06bb10d (.)
+=======
+=======
+>>>>>>> 37a2da6 (.)
+>>>>>>> 98c37f4 (.)
 
 function createMedia(array $attributes = []): Media
 {

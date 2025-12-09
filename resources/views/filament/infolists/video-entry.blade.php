@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -12,11 +13,16 @@
 >>>>>>> 5200b63 (.)
 =======
 >>>>>>> 06bb10d (.)
+=======
+=======
+>>>>>>> 37a2da6 (.)
+>>>>>>> 98c37f4 (.)
 <?php
 
 declare(strict_types=1);
 
 ?>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -35,6 +41,12 @@ declare(strict_types=1);
 =======
 >>>>>>> 0a466ed (.)
 >>>>>>> 06bb10d (.)
+=======
+=======
+>>>>>>> 0a466ed (.)
+=======
+>>>>>>> 37a2da6 (.)
+>>>>>>> 98c37f4 (.)
 <x-dynamic-component :component="$getEntryWrapperView()" :entry="$entry">
     @php
         $limit = $getLimit();
@@ -155,6 +167,7 @@ declare(strict_types=1);
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 06bb10d (.)
             <div class="fi-in-placeholder text-gray-400 dark:text-gray-500">
@@ -165,6 +178,8 @@ declare(strict_types=1);
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> 98c37f4 (.)
             <div class="fi-in-placeholder text-gray-400 dark:text-gray-500">
                 {{ $placeholder }}
             </div>
@@ -194,7 +209,15 @@ declare(strict_types=1);
                 {{ $placeholder }}
             </x-filament-infolists::entries.placeholder>
 >>>>>>> 0a466ed (.)
+<<<<<<< HEAD
 >>>>>>> 06bb10d (.)
+=======
+=======
+            <div class="fi-in-placeholder text-gray-400 dark:text-gray-500">
+                {{ $placeholder }}
+            </div>
+>>>>>>> 37a2da6 (.)
+>>>>>>> 98c37f4 (.)
         @endif
     </div>
 </x-dynamic-component>
