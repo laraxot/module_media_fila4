@@ -150,6 +150,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 =======
@@ -368,11 +369,15 @@
 =======
 # Ultimo aggiornamento: 2025-01-06
 >>>>>>> 43e94ec (.)
+=======
+# Ultimo aggiornamento: 2025-01-31
+>>>>>>> b3fe6db (.)
 # ==============================================
 
 # ==============================================
 # DEPENDENCIES & PACKAGES
 # ==============================================
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -941,14 +946,18 @@ npm-debug.log
 =======
 >>>>>>> 43e94ec (.)
 vendor/
+=======
+>>>>>>> b3fe6db (.)
 /vendor/
-node_modules/
+/vendor
 /node_modules/
+/node_modules
 /docs/vendor/
 package-lock.json
 yarn.lock
-yarn-error.log
 composer.lock
+yarn-error.log
+npm-debug.log
 
 # ==============================================
 # BUILD & COMPILED FILES
@@ -971,7 +980,6 @@ cache/
 *.swp
 *.swo
 *.stackdump
-*.exe
 *:Zone.Identifier
 v8-compile-cache-*
 .php-cs-fixer.cache
@@ -983,7 +991,6 @@ v8-compile-cache-*
 *.log
 error_log
 npm-debug.log*
-npm-debug.log
 yarn-error.log*
 lerna-debug.log*
 
@@ -1325,6 +1332,7 @@ docs/cache/
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 80a2320 (.)
 =======
@@ -1337,12 +1345,15 @@ docs/cache/
 >>>>>>> 95812b2 (.)
 =======
 >>>>>>> 9a4eacb (.)
+=======
+>>>>>>> b3fe6db (.)
 # LANGUAGE FILES
 # ==============================================
 lang/lang/
 resources/lang/
 
 # ==============================================
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 # OLD DIRECTORIES (LEGACY CLEANUP)
@@ -1991,19 +2002,15 @@ database_old/
 >>>>>>> 5a393f1 (.)
 =======
 >>>>>>> 43e94ec (.)
+=======
+>>>>>>> b3fe6db (.)
 # OLD DIRECTORIES (LEGACY CLEANUP)
 # ==============================================
 resources/views/Components_old/
-resources/views/Components_old
 database/Migrations_old/
-database/Migrations_old
 database/Seeders_old/
-database/Seeders_old
 database/Factories_old/
-database/Factories_old
-database/Factories_
 database_old/
-database_old
 
 # ==============================================
 # MODULE SPECIFIC - MEDIA
@@ -2032,6 +2039,7 @@ test_media_files/
 # 🚫 File specifici del progetto
 *.fila2
 laravel
+<<<<<<< HEAD
 public_html
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2207,3 +2215,6 @@ public_html
 >>>>>>> 91c1d65 (.)
 =======
 >>>>>>> c90879e (.)
+=======
+public_html
+>>>>>>> b3fe6db (.)
