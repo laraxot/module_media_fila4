@@ -12,6 +12,7 @@ use Tests\TestCase;
 uses(TestCase::class, RefreshDatabase::class);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 beforeEach(function () {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -19,6 +20,10 @@ beforeEach(function () {
 beforeEach(function (): void {
 >>>>>>> 13d1d7e (.)
     $this->baseModel = new class extends BaseModel
+=======
+test('base model extends eloquent model', function (): void {
+    $baseModel = new class extends BaseModel
+>>>>>>> b69c36d (.)
     {
 =======
     $this->baseModel = new class extends BaseModel {
@@ -78,31 +83,43 @@ beforeEach(function () {
 >>>>>>> f41e45e (.)
         protected $table = 'test_media_table';
     };
-});
 
-test('base model extends eloquent model', function (): void {
-    /** @phpstan-ignore-next-line property.notFound */
-    expect($this->baseModel)->toBeInstanceOf(Model::class);
+    expect($baseModel)->toBeInstanceOf(Model::class);
 });
 
 test('base model has correct table name', function (): void {
-    /** @phpstan-ignore-next-line property.notFound */
-    expect($this->baseModel->getTable())->toBe('test_media_table');
+    $baseModel = new class extends BaseModel
+    {
+        protected $table = 'test_media_table';
+    };
+
+    expect($baseModel->getTable())->toBe('test_media_table');
 });
 
 test('base model can be instantiated', function (): void {
-    /** @phpstan-ignore-next-line property.notFound */
-    expect($this->baseModel)->toBeInstanceOf(BaseModel::class);
+    $baseModel = new class extends BaseModel
+    {
+        protected $table = 'test_media_table';
+    };
+
+    expect($baseModel)->toBeInstanceOf(BaseModel::class);
 });
 
 test('base model has proper inheritance chain', function (): void {
-    /** @phpstan-ignore-next-line property.notFound */
-    expect($this->baseModel)->toBeInstanceOf(BaseModel::class);
-    /** @phpstan-ignore-next-line property.notFound */
-    expect($this->baseModel)->toBeInstanceOf(Model::class);
+    $baseModel = new class extends BaseModel
+    {
+        protected $table = 'test_media_table';
+    };
+
+    expect($baseModel)->toBeInstanceOf(BaseModel::class);
+    expect($baseModel)->toBeInstanceOf(Model::class);
 });
 
 test('base model has timestamps enabled', function (): void {
-    /** @phpstan-ignore-next-line property.notFound */
-    expect($this->baseModel->usesTimestamps())->toBeTrue();
+    $baseModel = new class extends BaseModel
+    {
+        protected $table = 'test_media_table';
+    };
+
+    expect($baseModel->usesTimestamps())->toBeTrue();
 });
