@@ -26,6 +26,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 =======
@@ -112,11 +113,14 @@
 >>>>>>> c4425b4 (.)
 =======
 >>>>>>> 37b6a94 (.)
+=======
+>>>>>>> e5c049f (.)
 <?php
 
 declare(strict_types=1);
 
 ?>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -253,6 +257,8 @@ declare(strict_types=1);
 >>>>>>> c4425b4 (.)
 =======
 >>>>>>> 37b6a94 (.)
+=======
+>>>>>>> e5c049f (.)
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
