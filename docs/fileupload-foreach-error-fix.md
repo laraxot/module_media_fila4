@@ -10,6 +10,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 3f50d25 (.)
 =======
@@ -316,3 +317,5 @@ public function getFormFill(): array
 =======
 *Versione: 1.0* 
 >>>>>>> cb6b71e (.)
+=======
+>>>>>>> 4b6364d (.)
