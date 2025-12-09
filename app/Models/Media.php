@@ -538,6 +538,7 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media as SpatieMedia;
  * @method static MediaCollection<int, static> get($columns = ['*'])
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
  *
  * @mixin Eloquent
 <<<<<<< HEAD
@@ -552,6 +553,8 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media as SpatieMedia;
  * @mixin Eloquent
  *
 >>>>>>> 2a4b5df (.)
+=======
+>>>>>>> 1900eb1 (.)
  * @method static MediaCollection<int, static> all($columns = ['*'])
  * @method static MediaCollection<int, static> get($columns = ['*'])
  * @method static MediaCollection<int, static> all($columns = ['*'])
@@ -783,6 +786,7 @@ class Media extends SpatieMedia
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     use \Modules\Xot\Models\Traits\HasXotFactory;
 =======
     use HasFactory;
@@ -796,6 +800,9 @@ class Media extends SpatieMedia
 =======
     use HasFactory;
 >>>>>>> 2a4b5df (.)
+=======
+    use \Modules\Xot\Models\Traits\HasXotFactory;
+>>>>>>> 1900eb1 (.)
     use Updater;
 
     /** @var string */
@@ -1147,6 +1154,7 @@ class Media extends SpatieMedia
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
    
 =======
 =======
@@ -1214,4 +1222,7 @@ class Media extends SpatieMedia
 >>>>>>> 13d1d7e (.)
 =======
 >>>>>>> 2a4b5df (.)
+=======
+   
+>>>>>>> 1900eb1 (.)
 }

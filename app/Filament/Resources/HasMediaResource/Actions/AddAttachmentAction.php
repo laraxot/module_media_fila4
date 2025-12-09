@@ -199,6 +199,9 @@ class AddAttachmentAction extends Action
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 1900eb1 (.)
         $fileAdder = $ownerRecord->addMediaFromDisk($data['file'], config('attachment.upload.disk.driver'));
 
         if ($fileAdder === null || ! is_object($fileAdder)) {
@@ -224,6 +227,7 @@ class AddAttachmentAction extends Action
         if (! is_object($attachment) || ! method_exists($attachment, 'update')) {
             throw new Exception('toMediaCollection did not return valid object');
         }
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 06bb10d (.)
@@ -315,6 +319,8 @@ class AddAttachmentAction extends Action
 >>>>>>> 1634e53 (.)
 =======
 >>>>>>> 21a9aec (.)
+=======
+>>>>>>> 1900eb1 (.)
 
         $user_id = authId();
         $attachment->update([

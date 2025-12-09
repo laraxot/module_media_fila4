@@ -32,6 +32,7 @@ use Modules\Xot\Filament\Traits\NavigationLabelTrait;
 use Illuminate\Support\Facades\Storage;
 >>>>>>> f41e45e (.)
 use Spatie\MediaLibrary\HasMedia;
+use Webmozart\Assert\Assert;
 
 use function Safe\file_put_contents;
 <<<<<<< HEAD
@@ -49,12 +50,16 @@ class SaveAttachmentsAction
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 1900eb1 (.)
     /**
      * Save attachments to media library.
      *
      * @param  array<int, string>  $attachments
      * @param  array<string, mixed>  $data
      */
+<<<<<<< HEAD
 =======
 >>>>>>> 5200b63 (.)
 =======
@@ -65,6 +70,8 @@ class SaveAttachmentsAction
 >>>>>>> 1634e53 (.)
 =======
 >>>>>>> 21a9aec (.)
+=======
+>>>>>>> 1900eb1 (.)
     public function execute(HasMedia $record, array $attachments, array $data, string $disk = 'attachments'): void
     {
         $dataAttachments = [];
@@ -73,15 +80,21 @@ class SaveAttachmentsAction
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             Assert::string($attachment, '['.__LINE__.']['.class_basename(__CLASS__).']');
 
 =======
 >>>>>>> 5200b63 (.)
+=======
+            Assert::string($attachment, '['.__LINE__.']['.class_basename(__CLASS__).']');
+
+>>>>>>> 1900eb1 (.)
             if (empty($data[$attachment])) {
                 continue;
             }
 
             $path = $data[$attachment];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -126,6 +139,9 @@ class SaveAttachmentsAction
 
             $path = $data[$attachment];
 >>>>>>> 2a4b5df (.)
+=======
+            Assert::string($path, '['.__LINE__.']['.class_basename(__CLASS__).']');
+>>>>>>> 1900eb1 (.)
 
             // Metodo compatibile con Laravel 9+ e Flysystem 3.x
             $storage = Storage::disk($disk);
@@ -212,12 +228,15 @@ class SaveAttachmentsAction
 <<<<<<< HEAD
         if (! empty($dataAttachments)) {
             /** @var array<string, string> $dataAttachments */
+<<<<<<< HEAD
 =======
         if (!empty($dataAttachments)) {
 >>>>>>> 5200b63 (.)
 =======
         if (! empty($dataAttachments)) {
 >>>>>>> f41e45e (.)
+=======
+>>>>>>> 1900eb1 (.)
             $record->update($dataAttachments);
         }
     }
@@ -225,10 +244,14 @@ class SaveAttachmentsAction
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 1900eb1 (.)
     /**
      * @param  array<int, string>  $attachments
      * @param  array<string, mixed>  $data
      */
+<<<<<<< HEAD
 =======
 >>>>>>> 5200b63 (.)
 =======
@@ -239,10 +262,13 @@ class SaveAttachmentsAction
 >>>>>>> 1634e53 (.)
 =======
 >>>>>>> 21a9aec (.)
+=======
+>>>>>>> 1900eb1 (.)
     public function executeOLD(HasMedia $record, array $attachments, array $data, string $disk = 'attachments'): void
     {
         $data_attachments = [];
         foreach ($attachments as $attachment) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -266,6 +292,11 @@ class SaveAttachmentsAction
 =======
             $path = $data[$attachment];
 >>>>>>> 2a4b5df (.)
+=======
+            Assert::string($attachment, '['.__LINE__.']['.class_basename(__CLASS__).']');
+            $path = $data[$attachment];
+            Assert::string($path, '['.__LINE__.']['.class_basename(__CLASS__).']');
+>>>>>>> 1900eb1 (.)
             $full_path = Storage::disk($disk)->path($path);
             // *
 =======
@@ -289,6 +320,7 @@ class SaveAttachmentsAction
             if (! method_exists($record, 'addMediaFromDisk')) {
                 throw new Exception('Method addMediaFromDisk not found');
             }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             $fileAdder = $record->addMediaFromDisk($path, $disk);
@@ -336,6 +368,21 @@ class SaveAttachmentsAction
             $data_attachments[$attachment] = $media->getPathRelativeToRoot();
         }
 >>>>>>> 5200b63 (.)
+=======
+            $fileAdder = $record->addMediaFromDisk($path, $disk);
+            // $media=$record->addMediaFromRequest($attachment)
+
+            // $media=$record->addMedia($full_path)
+            if ($fileAdder === null) {
+                continue;
+            }
+            /** @phpstan-ignore-next-line - Spatie MediaLibrary fluent API */
+            $media = $fileAdder->toMediaCollection($attachment);
+            /** @phpstan-ignore-next-line - Spatie MediaLibrary Media model */
+            $data_attachments[$attachment] = $media->getPathRelativeToRoot();
+        }
+        /** @var array<string, string> $data_attachments */
+>>>>>>> 1900eb1 (.)
         $record->update($data_attachments);
     }
 }

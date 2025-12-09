@@ -185,18 +185,22 @@ class ViewMedia extends XotBaseViewRecord
 =======
                     Section::make()->schema([
                         ImageEntry::make('url')
-                            ->defaultImageUrl(fn ($record) => $record->getUrl())
+                            ->defaultImageUrl(fn (\Modules\Media\Models\Media $record) => $record->getUrl())
                             ->size(500)
-                            ->visible(fn ($record): bool => $record->type === 'image'),
+                            ->visible(fn (\Modules\Media\Models\Media $record): bool => $record->type === 'image'),
                         VideoEntry::make('url')
-                            ->defaultImageUrl(fn ($record) => $record->getUrl())
+                            ->defaultImageUrl(fn (\Modules\Media\Models\Media $record) => $record->getUrl())
                             ->size(500)
+<<<<<<< HEAD
 <<<<<<< HEAD
                             ->visible(fn (Media $record): bool => $record->type === 'video'),
 >>>>>>> 1634e53 (.)
 =======
                             ->visible(fn ($record): bool => $record->type === 'video'),
 >>>>>>> 21a9aec (.)
+=======
+                            ->visible(fn (\Modules\Media\Models\Media $record): bool => $record->type === 'video'),
+>>>>>>> 1900eb1 (.)
                     ]),
                     Section::make()->schema([
                         Actions::make([
@@ -206,6 +210,9 @@ class ViewMedia extends XotBaseViewRecord
                                 ->schema(MediaConvertResource::getFormSchema())
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 1900eb1 (.)
                                 ->action(function (\Modules\Media\Models\Media $record, array $data): void {
                                     /** @var array<string, mixed> $actionData */
                                     $actionData = $data;

@@ -47,6 +47,9 @@ class GetAttachmentsSchemaAction
         }
         foreach ($attachments as $attachment) {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 1900eb1 (.)
             $attachmentStr = (string) $attachment;
             $form[$attachmentStr] = FileUpload::make($attachmentStr)
                 // $form[$attachment]=SpatieMediaLibraryFileUpload::make($attachment)
@@ -153,6 +156,7 @@ class GetAttachmentsSchemaAction
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                     // Set expects Component|string, pass attachment as string
                     \Webmozart\Assert\Assert::string($attachment, 'Attachment must be string');
 =======
@@ -163,6 +167,10 @@ class GetAttachmentsSchemaAction
 >>>>>>> 1634e53 (.)
 =======
 >>>>>>> 21a9aec (.)
+=======
+                    // Set expects Component|string, pass attachment as string
+                    \Webmozart\Assert\Assert::string($attachment, 'Attachment must be string');
+>>>>>>> 1900eb1 (.)
                     $set($attachment, $sessionFiles);
 =======
                     $set($attachmentKey, $sessionFiles);

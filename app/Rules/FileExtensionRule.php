@@ -16,6 +16,9 @@ class FileExtensionRule implements Rule
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 1900eb1 (.)
     /**
      * @param  array<int, string>  $validExtensions
      */
