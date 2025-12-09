@@ -15,6 +15,7 @@ return [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 =======
@@ -52,6 +53,8 @@ return [
 >>>>>>> 1d21a10 (.)
 =======
 >>>>>>> 146bbc3 (.)
+=======
+>>>>>>> 054dfa6 (.)
     'navigation' => [
         'group' => 'Media',
     ],
@@ -113,6 +116,7 @@ return [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 7ea0764 (.)
 =======
@@ -137,6 +141,9 @@ return [
 >>>>>>> 877e05f (.)
 =======
 >>>>>>> 1d21a10 (.)
+=======
+=======
+>>>>>>> 054dfa6 (.)
   'navigation' => [
     'group' => 'Media',
   ],
@@ -146,6 +153,7 @@ return [
       'label' => 'Output Debug',
       'placeholder' => 'Risultati del test verranno mostrati qui',
       'helper_text' => 'Informazioni di debug per la connessione S3',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -218,6 +226,8 @@ return [
 >>>>>>> 877e05f (.)
 =======
 >>>>>>> 1d21a10 (.)
+=======
+>>>>>>> 054dfa6 (.)
     ],
     'attachment' => [
       'label' => 'Allegato',
@@ -234,6 +244,7 @@ return [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/develop
 =======
 >>>>>>> 06bb10d (.)
@@ -245,6 +256,8 @@ return [
 =======
 >>>>>>> origin/develop
 >>>>>>> 1d21a10 (.)
+=======
+>>>>>>> 054dfa6 (.)
     'clearResults' => [
       'label' => 'Cancella Risultati',
     ],
@@ -273,6 +286,7 @@ return [
       'label' => 'Test 01',
     ],
   ],
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -320,4 +334,7 @@ return [
 >>>>>>> 1d21a10 (.)
 =======
 >>>>>>> 146bbc3 (.)
+=======
+>>>>>>> 0a466ed (.)
+>>>>>>> 054dfa6 (.)
 ];
