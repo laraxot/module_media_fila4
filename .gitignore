@@ -70,6 +70,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 =======
@@ -107,6 +108,8 @@
 >>>>>>> 8b93fd8 (.)
 =======
 >>>>>>> 22abc4a (.)
+=======
+>>>>>>> cfd7061 (.)
 # Ultimo aggiornamento: 2025-01-31
 =======
 # Ultimo aggiornamento: 2025-01-06
@@ -118,6 +121,7 @@
 =======
 # Ultimo aggiornamento: 2025-01-06
 >>>>>>> 9348522 (.)
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> c9ef35c (.)
 =======
@@ -153,11 +157,17 @@
 # Ultimo aggiornamento: 2025-01-06
 >>>>>>> 9348522 (.)
 >>>>>>> 22abc4a (.)
+=======
+=======
+# Ultimo aggiornamento: 2025-01-06
+>>>>>>> 5a393f1 (.)
+>>>>>>> cfd7061 (.)
 # ==============================================
 
 # ==============================================
 # DEPENDENCIES & PACKAGES
 # ==============================================
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -421,6 +431,8 @@ composer.lock
 >>>>>>> 29d7386 (.)
 =======
 >>>>>>> 22abc4a (.)
+=======
+>>>>>>> cfd7061 (.)
 /vendor/
 /vendor
 /node_modules/
@@ -434,6 +446,8 @@ npm-debug.log
 =======
 =======
 >>>>>>> 9348522 (.)
+=======
+>>>>>>> 5a393f1 (.)
 vendor/
 /vendor/
 node_modules/
@@ -444,9 +458,12 @@ yarn.lock
 yarn-error.log
 composer.lock
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> c14635e (.)
 =======
 >>>>>>> 9348522 (.)
+=======
+>>>>>>> 5a393f1 (.)
 
 # ==============================================
 # BUILD & COMPILED FILES
@@ -479,12 +496,16 @@ cache/
 *.stackdump
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 *.exe
 >>>>>>> c14635e (.)
 =======
 *.exe
 >>>>>>> 9348522 (.)
+=======
+*.exe
+>>>>>>> 5a393f1 (.)
 *:Zone.Identifier
 v8-compile-cache-*
 .php-cs-fixer.cache
@@ -498,12 +519,16 @@ error_log
 npm-debug.log*
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 npm-debug.log
 >>>>>>> c14635e (.)
 =======
 npm-debug.log
 >>>>>>> 9348522 (.)
+=======
+npm-debug.log
+>>>>>>> 5a393f1 (.)
 yarn-error.log*
 lerna-debug.log*
 
@@ -720,6 +745,7 @@ docs/cache/
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 80a2320 (.)
 =======
@@ -1055,6 +1081,8 @@ database_old
 >>>>>>> 29d7386 (.)
 =======
 >>>>>>> 22abc4a (.)
+=======
+>>>>>>> cfd7061 (.)
 # LANGUAGE FILES
 # ==============================================
 lang/lang/
@@ -1071,6 +1099,8 @@ database_old/
 =======
 =======
 >>>>>>> 9348522 (.)
+=======
+>>>>>>> 5a393f1 (.)
 # OLD DIRECTORIES (LEGACY CLEANUP)
 # ==============================================
 resources/views/Components_old/
@@ -1085,9 +1115,12 @@ database/Factories_
 database_old/
 database_old
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> c14635e (.)
 =======
 >>>>>>> 9348522 (.)
+=======
+>>>>>>> 5a393f1 (.)
 
 # ==============================================
 # MODULE SPECIFIC - MEDIA
@@ -1096,6 +1129,7 @@ database_old
 config/local.php
 config/development.php
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 # File media
@@ -1115,6 +1149,8 @@ test_media.sql
 =======
 =======
 >>>>>>> 9348522 (.)
+=======
+>>>>>>> 5a393f1 (.)
 # File media temporanei
 media/temp/
 media/uploads/temp/
@@ -1128,14 +1164,18 @@ storage/thumbnails/
 media_test_data.json
 test_media_files/
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> c14635e (.)
 =======
 >>>>>>> 9348522 (.)
+=======
+>>>>>>> 5a393f1 (.)
 
 # ==============================================
 # END OF MEDIA .GITIGNORE
 # ==============================================
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 # File specifici del progetto
@@ -1145,6 +1185,9 @@ test_media_files/
 =======
 # 🚫 File specifici del progetto
 >>>>>>> 9348522 (.)
+=======
+# 🚫 File specifici del progetto
+>>>>>>> 5a393f1 (.)
 *.fila2
 laravel
 public_html
