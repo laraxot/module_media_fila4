@@ -13,7 +13,7 @@ class EditMedia extends XotBaseEditRecord
     protected static string $resource = MediaResource::class;
 
     /**
-     * @return array<DeleteAction>
+     * @return DeleteAction[]
      *
      * @psalm-return list{DeleteAction}
      */

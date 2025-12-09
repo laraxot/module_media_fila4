@@ -52,7 +52,7 @@ class TemporaryUploadResource extends XotBaseResource
     }
 
     /**
-     * @return array<PageRegistration>
+     * @return PageRegistration[]
      *
      * @psalm-return array{index: PageRegistration, create: PageRegistration, edit: PageRegistration}
      */
