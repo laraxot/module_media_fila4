@@ -33,7 +33,11 @@
 >>>>>>> 2883a97 (.)
 # Correzioni PHPStan Livello 10 - Modulo Media
 
+<<<<<<< HEAD
 > **Collegamento globale:** Per le strategie generali e le best practices sulla risoluzione dei conflitti git, vedi [docs/git_conflict_resolution.md](../../../../docs/git_conflict_resolution.md).
+=======
+> **Collegamento globale:** Per le strategie generali e le best practices sulla risoluzione dei conflitti git, vedi [docs/git_conflict_resolution.md](../../../../project_docs/git_conflict_resolution.md).
+>>>>>>> 0a466ed (.)
 
 Questo documento traccia gli errori PHPStan di livello 10 identificati nel modulo Media e le relative soluzioni implementate.
 
@@ -117,6 +121,7 @@ Questa soluzione mantiene la funzionalità originale migliorando al contempo la 
 ### 5. Risoluzione dei conflitti di merge nei file del modulo Media
 
 **Problema**: Diversi file del modulo Media contenevano conflitti di merge non risolti, indicati da marcatori git . Questi conflitti impedivano la corretta esecuzione del codice e causavano errori di sintassi.
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -232,6 +237,12 @@ Questa soluzione mantiene la funzionalità originale migliorando al contempo la 
 **Problema**: Diversi file del modulo Media contenevano conflitti di merge non risolti, indicati da marcatori git (`=======`, `>>>>>>>`, ecc.). Questi conflitti impedivano la corretta esecuzione del codice e causavano errori di sintassi.
 **Problema**: Diversi file del modulo Media contenevano conflitti di merge non risolti, indicati da marcatori git . Questi conflitti impedivano la corretta esecuzione del codice e causavano errori di sintassi.
 >>>>>>> 2883a97 (.)
+=======
+**Problema**: Diversi file del modulo Media contenevano conflitti di merge non risolti, indicati da marcatori git (`=======`, `>>>>>>>`, ecc.). Questi conflitti impedivano la corretta esecuzione del codice e causavano errori di sintassi.
+**Problema**: Diversi file del modulo Media contenevano conflitti di merge non risolti, indicati da marcatori git . Questi conflitti impedivano la corretta esecuzione del codice e causavano errori di sintassi.
+=======
+>>>>>>> 0a466ed (.)
+>>>>>>> 054dfa6 (.)
 
 **Soluzione implementata**:
 1. Analisi sistematica dei conflitti di merge in ciascun file
@@ -261,6 +272,7 @@ Questa soluzione mantiene la funzionalità originale migliorando al contempo la 
 
 ---
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -378,3 +390,9 @@ Questa soluzione mantiene la funzionalità originale migliorando al contempo la 
 =======
 > **Collegamento globale:** Questa documentazione locale dettaglia i casi concreti e le decisioni architetturali adottate nel modulo Media. Per le strategie generali e le best practices, consulta sempre anche la documentazione globale in [docs/git_conflict_resolution.md](../../../../docs/git_conflict_resolution.md). 
 >>>>>>> 2883a97 (.)
+=======
+> **Collegamento globale:** Questa documentazione locale dettaglia i casi concreti e le decisioni architetturali adottate nel modulo Media. Per le strategie generali e le best practices, consulta sempre anche la documentazione globale in [docs/git_conflict_resolution.md](../../../../docs/git_conflict_resolution.md). 
+=======
+> **Collegamento globale:** Questa documentazione locale dettaglia i casi concreti e le decisioni architetturali adottate nel modulo Media. Per le strategie generali e le best practices, consulta sempre anche la documentazione globale in [docs/git_conflict_resolution.md](../../../../project_docs/git_conflict_resolution.md). 
+>>>>>>> 0a466ed (.)
+>>>>>>> 054dfa6 (.)
