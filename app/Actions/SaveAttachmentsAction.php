@@ -19,11 +19,15 @@ class SaveAttachmentsAction
         $dataAttachments = [];
 
         foreach ($attachments as $attachment) {
-            if (empty($data[$attachment])) {
+            $attachmentKey = is_string($attachment) ? $attachment : (string) $attachment;
+            if (empty($data[$attachmentKey])) {
                 continue;
             }
 
-            $path = $data[$attachment];
+            $path = $data[$attachmentKey];
+            if (!is_string($path)) {
+                continue;
+            }
 
             // Metodo compatibile con Laravel 9+ e Flysystem 3.x
             $storage = Storage::disk($disk);
@@ -40,11 +44,11 @@ class SaveAttachmentsAction
 
             try {
                 $media = $record->addMedia($tempPath)->usingFileName(basename($path))->toMediaCollection(
-                    $attachment,
+                    $attachmentKey,
                     $disk,
                 );
 
-                $dataAttachments[$attachment] = $media->getPathRelativeToRoot();
+                $dataAttachments[$attachmentKey] = $media->getPathRelativeToRoot();
             } finally {
                 // Cleanup del file temporaneo
                 if (file_exists($tempPath)) {
@@ -62,7 +66,11 @@ class SaveAttachmentsAction
     {
         $data_attachments = [];
         foreach ($attachments as $attachment) {
-            $path = $data[$attachment];
+            $attachmentKey = is_string($attachment) ? $attachment : (string) $attachment;
+            $path = $data[$attachmentKey] ?? null;
+            if (!is_string($path)) {
+                continue;
+            }
             $full_path = Storage::disk($disk)->path($path);
             // *
             dddx([
@@ -76,12 +84,15 @@ class SaveAttachmentsAction
                 throw new Exception('Method addMediaFromDisk not found');
             }
             $media = $record
-                ->addMediaFromDisk($path, $disk)
-                // $media=$record->addMediaFromRequest($attachment)
-
-                // $media=$record->addMedia($full_path)
-                ->toMediaCollection($attachment);
-            $data_attachments[$attachment] = $media->getPathRelativeToRoot();
+                ->addMediaFromDisk($path, $disk);
+            
+            if (is_object($media) && method_exists($media, 'toMediaCollection')) {
+                $media = $media->toMediaCollection($attachmentKey);
+            }
+            
+            if (is_object($media) && method_exists($media, 'getPathRelativeToRoot')) {
+                $data_attachments[$attachmentKey] = $media->getPathRelativeToRoot();
+            }
         }
         $record->update($data_attachments);
     }
