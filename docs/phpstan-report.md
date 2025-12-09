@@ -11,6 +11,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 3f50d25 (.)
 =======
@@ -217,3 +218,5 @@ L'analisi PHPStan di livello 1 non ha rilevato errori nel modulo Media. Questo Ã
 >>>>>>> cb6b71e (.)
 =======
 >>>>>>> 4b6364d (.)
+=======
+>>>>>>> e18a671 (.)
