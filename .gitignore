@@ -30,6 +30,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 =======
@@ -43,12 +44,15 @@
 =======
 >>>>>>> ece6f0a (.)
 =======
+>>>>>>> da2a819 (.)
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> b93ef594b4 (.)
 >>>>>>> e9b0959 (.)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -127,10 +131,13 @@
 >>>>>>> ece6f0a (.)
 =======
 >>>>>>> a2b9bd0 (.)
+=======
+>>>>>>> da2a819 (.)
 # ==============================================
 # LARAXOT MODULE MEDIA - .GITIGNORE
 # ==============================================
 # Modulo Media Laraxot - Template standardizzato
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -217,10 +224,13 @@
 >>>>>>> c4425b4 (.)
 =======
 >>>>>>> ece6f0a (.)
+=======
+>>>>>>> da2a819 (.)
 # Ultimo aggiornamento: 2025-01-31
 =======
 # Ultimo aggiornamento: 2025-01-06
 >>>>>>> e9b0959 (.)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -584,6 +594,8 @@
 =======
 # Ultimo aggiornamento: 2025-01-06
 >>>>>>> 22d28e3 (.)
+=======
+>>>>>>> da2a819 (.)
 # ==============================================
 
 # ==============================================
@@ -663,12 +675,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 1d21a10 (.)
 =======
 >>>>>>> b8fda23 (.)
 =======
 >>>>>>> ece6f0a (.)
+=======
+>>>>>>> da2a819 (.)
 /vendor/
 /vendor
 /node_modules/
@@ -680,6 +695,7 @@ composer.lock
 yarn-error.log
 npm-debug.log
 =======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -707,6 +723,8 @@ npm-debug.log
 >>>>>>> ece6f0a (.)
 =======
 >>>>>>> 7ff7f03 (.)
+=======
+>>>>>>> da2a819 (.)
 vendor/
 <<<<<<< HEAD
 /vendor/
@@ -771,6 +789,7 @@ lerna-debug.log*
 # Dependencies and packages
 =======
 >>>>>>> b93ef594b4 (.)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1451,6 +1470,8 @@ npm-debug.log
 =======
 >>>>>>> 22d28e3 (.)
 vendor/
+=======
+>>>>>>> da2a819 (.)
 /vendor/
 node_modules/
 /node_modules/
@@ -1471,6 +1492,7 @@ docs/cache/
 cache/
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 # Laravel specific
 >>>>>>> a12f125f4a (.)
@@ -1478,6 +1500,11 @@ cache/
 >>>>>>> ece6f0a (.)
 =======
 >>>>>>> a2b9bd0 (.)
+=======
+# Laravel specific
+>>>>>>> a12f125f4a (.)
+=======
+>>>>>>> da2a819 (.)
 # ==============================================
 # CACHE & TEMPORARY FILES
 # ==============================================
@@ -1513,11 +1540,15 @@ lerna-debug.log*
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b93ef594b4 (.)
 >>>>>>> c4425b4 (.)
 =======
 >>>>>>> b93ef594b4 (.)
 >>>>>>> ece6f0a (.)
+=======
+>>>>>>> b93ef594b4 (.)
+>>>>>>> da2a819 (.)
 =======
 # Dependencies and packages
 /vendor/
@@ -1543,6 +1574,7 @@ npm-debug.log
 build/
 
 # Laravel specific
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1650,6 +1682,10 @@ build/
 >>>>>>> ece6f0a (.)
 =======
 >>>>>>> a2b9bd0 (.)
+=======
+>>>>>>> origin/develop
+>>>>>>> e9b0959 (.)
+>>>>>>> da2a819 (.)
 bootstrap/compiled.php
 app/storage/
 public/storage
@@ -1690,6 +1726,7 @@ storage/*.key
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 =======
@@ -1703,10 +1740,13 @@ storage/*.key
 =======
 >>>>>>> ece6f0a (.)
 =======
+>>>>>>> da2a819 (.)
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> e9b0959 (.)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1785,6 +1825,8 @@ storage/*.key
 >>>>>>> ece6f0a (.)
 =======
 >>>>>>> a2b9bd0 (.)
+=======
+>>>>>>> da2a819 (.)
 .env.*
 !.env.example
 
@@ -1915,6 +1957,7 @@ docs/cache/
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 80a2320 (.)
 =======
@@ -1933,6 +1976,8 @@ docs/cache/
 >>>>>>> c4425b4 (.)
 =======
 >>>>>>> ece6f0a (.)
+=======
+>>>>>>> da2a819 (.)
 # LANGUAGE FILES
 # ==============================================
 lang/lang/
@@ -2059,6 +2104,7 @@ cache/
 =======
 
 # ==============================================
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2911,6 +2957,8 @@ database_old/
 >>>>>>> 5a393f1 (.)
 =======
 >>>>>>> 22d28e3 (.)
+=======
+>>>>>>> da2a819 (.)
 # OLD DIRECTORIES (LEGACY CLEANUP)
 # ==============================================
 resources/views/Components_old/
@@ -2966,11 +3014,15 @@ public_html
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b93ef594b4 (.)
 >>>>>>> c4425b4 (.)
 =======
 >>>>>>> b93ef594b4 (.)
 >>>>>>> ece6f0a (.)
+=======
+>>>>>>> b93ef594b4 (.)
+>>>>>>> da2a819 (.)
 =======
 
 # Local configurations
@@ -3000,6 +3052,7 @@ Homestead.json
 docs/phpstan/
 docs/cache/
 cache/
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3179,3 +3232,7 @@ public_html
 >>>>>>> 7ff7f03 (.)
 =======
 >>>>>>> a637b97 (.)
+=======
+>>>>>>> origin/develop
+>>>>>>> e9b0959 (.)
+>>>>>>> da2a819 (.)

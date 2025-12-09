@@ -30,6 +30,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 =======
@@ -43,12 +44,15 @@
 =======
 >>>>>>> ece6f0a (.)
 =======
+>>>>>>> da2a819 (.)
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> b93ef594b4 (.)
 >>>>>>> e9b0959 (.)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -127,6 +131,8 @@
 >>>>>>> ece6f0a (.)
 =======
 >>>>>>> a2b9bd0 (.)
+=======
+>>>>>>> da2a819 (.)
 <?php
 
 declare(strict_types=1);
@@ -164,6 +170,7 @@ declare(strict_types=1);
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 =======
@@ -177,6 +184,8 @@ declare(strict_types=1);
 =======
 >>>>>>> ece6f0a (.)
 =======
+>>>>>>> da2a819 (.)
+=======
 <<<<<<< HEAD
 =======
 >>>>>>> a12f125f4a (.)
@@ -185,6 +194,7 @@ declare(strict_types=1);
 =======
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -283,6 +293,8 @@ declare(strict_types=1);
 >>>>>>> ece6f0a (.)
 =======
 >>>>>>> a2b9bd0 (.)
+=======
+>>>>>>> da2a819 (.)
 <x-dynamic-component :component="$getEntryWrapperView()" :entry="$entry">
     @php
         $limit = $getLimit();
@@ -432,6 +444,7 @@ declare(strict_types=1);
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 06bb10d (.)
 =======
@@ -454,10 +467,13 @@ declare(strict_types=1);
 >>>>>>> c4425b4 (.)
 =======
 >>>>>>> ece6f0a (.)
+=======
+>>>>>>> da2a819 (.)
             <div class="fi-in-placeholder text-gray-400 dark:text-gray-500">
                 {{ $placeholder }}
             </div>
 =======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -494,6 +510,8 @@ declare(strict_types=1);
 >>>>>>> c4425b4 (.)
 =======
 >>>>>>> ece6f0a (.)
+=======
+>>>>>>> da2a819 (.)
             <div class="fi-in-placeholder text-gray-400 dark:text-gray-500">
                 {{ $placeholder }}
             </div>
@@ -513,6 +531,7 @@ declare(strict_types=1);
             </x-filament-infolists::entries.placeholder>
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -664,6 +683,8 @@ declare(strict_types=1);
                 {{ $placeholder }}
             </div>
 >>>>>>> a2b9bd0 (.)
+=======
+>>>>>>> da2a819 (.)
         @endif
     </div>
 </x-dynamic-component>

@@ -90,6 +90,7 @@ FFMpeg::fromDisk($data->disk)
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 =======
@@ -102,10 +103,13 @@ FFMpeg::fromDisk($data->disk)
 >>>>>>> c4425b4 (.)
 =======
 >>>>>>> ece6f0a (.)
+=======
+>>>>>>> da2a819 (.)
 - [Root Conflict Resolution Guidelines](../../../docs/conflict-resolution-guidelines.md)
 =======
 - [Root Conflict Resolution Guidelines](../../../project_docs/conflict-resolution-guidelines.md)
 >>>>>>> e9b0959 (.)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -157,5 +161,7 @@ FFMpeg::fromDisk($data->disk)
 =======
 - [Root Conflict Resolution Guidelines](../../../docs/conflict-resolution-guidelines.md)
 >>>>>>> a2b9bd0 (.)
+=======
+>>>>>>> da2a819 (.)
 
 *Ultimo aggiornamento: giugno 2025*
