@@ -77,6 +77,7 @@ FFMpeg::fromDisk($data->disk)
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 =======
@@ -97,5 +98,8 @@ FFMpeg::fromDisk($data->disk)
 >>>>>>> f1c6d6e (.)
 =======
 >>>>>>> 1d21a10 (.)
+=======
+- [Root Conflict Resolution Guidelines](../../../docs/conflict-resolution-guidelines.md)
+>>>>>>> 146bbc3 (.)
 
 *Ultimo aggiornamento: giugno 2025*
