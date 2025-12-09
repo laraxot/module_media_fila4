@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # FileUpload foreach Error Fix - Internal Server Error
 
 ## Problema Identificato
@@ -217,3 +218,5 @@ public function getFormFill(): array
 *Ultimo aggiornamento: 2025-01-03*
 *Autore: AI Assistant*
 *Versione: 1.0* 
+=======
+>>>>>>> 8cdc78f (.)

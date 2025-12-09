@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 # Gestione dei File in 
 
@@ -272,3 +273,5 @@ protected static function booted()
 >>>>>>> c9ef35c (.)
 =======
 >>>>>>> aa5e51a (.)
+=======
+>>>>>>> 8cdc78f (.)
