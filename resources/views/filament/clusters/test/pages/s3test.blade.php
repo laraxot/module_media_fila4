@@ -27,6 +27,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 =======
@@ -115,11 +116,14 @@
 >>>>>>> 37b6a94 (.)
 =======
 >>>>>>> e5c049f (.)
+=======
+>>>>>>> a70c4fa (.)
 <?php
 
 declare(strict_types=1);
 
 ?>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -259,6 +263,8 @@ declare(strict_types=1);
 >>>>>>> 37b6a94 (.)
 =======
 >>>>>>> e5c049f (.)
+=======
+>>>>>>> a70c4fa (.)
 {{--
     S3Test Page - Test page for email functionality
     View: ui::filament.clusters.test.pages.s3test
