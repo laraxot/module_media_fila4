@@ -6,6 +6,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 =======
@@ -32,11 +33,16 @@
 >>>>>>> f1c6d6e (.)
 =======
 >>>>>>> 877e05f (.)
+=======
+=======
+>>>>>>> 37a2da6 (.)
+>>>>>>> 7ea0764 (.)
 <?php
 
 declare(strict_types=1);
 
 ?>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -85,6 +91,12 @@ declare(strict_types=1);
 =======
 >>>>>>> 0a466ed (.)
 >>>>>>> 877e05f (.)
+=======
+=======
+>>>>>>> 0a466ed (.)
+=======
+>>>>>>> 37a2da6 (.)
+>>>>>>> 7ea0764 (.)
 <x-filament::page>
     @php
         // Ensure $results is defined with a default value

@@ -10,6 +10,7 @@ declare(strict_types=1);
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 =======
@@ -22,6 +23,10 @@ declare(strict_types=1);
 >>>>>>> f1c6d6e (.)
 =======
 >>>>>>> 877e05f (.)
+=======
+=======
+>>>>>>> 37a2da6 (.)
+>>>>>>> 7ea0764 (.)
 use Modules\Media\Models\Media;
 use Modules\Media\Models\MediaCollection;
 use Modules\Media\Tests\TestCase;
@@ -64,6 +69,7 @@ expect()->extend('toBeMediaCollection', fn () => $this->toBeInstanceOf(MediaColl
  * | global functions to help you to reduce the number of lines of code in your test files.
  * |
  */
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -123,6 +129,8 @@ expect()->extend('toBeMediaCollection', fn () => $this->toBeInstanceOf(MediaColl
 =======
 use Modules\Media\Tests\TestCase;
 =======
+=======
+>>>>>>> 7ea0764 (.)
 =======
 namespace Modules\Media\Tests;
 
@@ -315,6 +323,7 @@ expect()->extend('toBeMediaCollection', function () {
 <<<<<<< HEAD
 >>>>>>> 0a466ed (.)
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 06bb10d (.)
 =======
 =======
@@ -343,6 +352,10 @@ expect()->extend('toBeMediaCollection', function () {
 =======
 >>>>>>> 0a466ed (.)
 >>>>>>> 877e05f (.)
+=======
+=======
+>>>>>>> 37a2da6 (.)
+>>>>>>> 7ea0764 (.)
 
 function createMedia(array $attributes = []): Media
 {
