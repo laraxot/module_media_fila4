@@ -23,13 +23,13 @@ class SaveAttachmentsActionTest extends TestCase
     public function test_executes_save_attachments_successfully(): void
     {
         // Arrange
-        $action = new SaveAttachmentsAction;
+        $action = new SaveAttachmentsAction();
 
         // Mock del record HasMedia
         $record = Mockery::mock(HasMedia::class);
         $record->shouldReceive('addMedia')->andReturnSelf();
         $record->shouldReceive('usingFileName')->andReturnSelf();
-        $record->shouldReceive('toMediaCollection')->andReturn(new Media);
+        $record->shouldReceive('toMediaCollection')->andReturn(new Media());
         $record->shouldReceive('update')->andReturn(true);
 
         $attachments = ['invoice', 'contract'];
@@ -53,7 +53,7 @@ class SaveAttachmentsActionTest extends TestCase
     public function test_handles_empty_attachments(): void
     {
         // Arrange
-        $action = new SaveAttachmentsAction;
+        $action = new SaveAttachmentsAction();
 
         $record = Mockery::mock(HasMedia::class);
         $record->shouldReceive('update')->with([])->andReturn(true);
@@ -71,7 +71,7 @@ class SaveAttachmentsActionTest extends TestCase
     public function test_skips_nonexistent_files(): void
     {
         // Arrange
-        $action = new SaveAttachmentsAction;
+        $action = new SaveAttachmentsAction();
 
         $record = Mockery::mock(HasMedia::class);
         $record->shouldReceive('update')->with([])->andReturn(true);
@@ -91,7 +91,7 @@ class SaveAttachmentsActionTest extends TestCase
     public function test_handles_storage_errors_gracefully(): void
     {
         // Arrange
-        $action = new SaveAttachmentsAction;
+        $action = new SaveAttachmentsAction();
 
         $record = Mockery::mock(HasMedia::class);
         $record->shouldReceive('addMedia')->andThrow(new Exception('Storage error'));
@@ -113,12 +113,12 @@ class SaveAttachmentsActionTest extends TestCase
     public function test_uses_correct_disk(): void
     {
         // Arrange
-        $action = new SaveAttachmentsAction;
+        $action = new SaveAttachmentsAction();
 
         $record = Mockery::mock(HasMedia::class);
         $record->shouldReceive('addMedia')->andReturnSelf();
         $record->shouldReceive('usingFileName')->andReturnSelf();
-        $record->shouldReceive('toMediaCollection')->andReturn(new Media);
+        $record->shouldReceive('toMediaCollection')->andReturn(new Media());
         $record->shouldReceive('update')->andReturn(true);
 
         $attachments = ['invoice'];
@@ -140,12 +140,12 @@ class SaveAttachmentsActionTest extends TestCase
     public function test_cleans_up_temp_files(): void
     {
         // Arrange
-        $action = new SaveAttachmentsAction;
+        $action = new SaveAttachmentsAction();
 
         $record = Mockery::mock(HasMedia::class);
         $record->shouldReceive('addMedia')->andReturnSelf();
         $record->shouldReceive('usingFileName')->andReturnSelf();
-        $record->shouldReceive('toMediaCollection')->andReturn(new Media);
+        $record->shouldReceive('toMediaCollection')->andReturn(new Media());
         $record->shouldReceive('update')->andReturn(true);
 
         $attachments = ['invoice'];
@@ -166,12 +166,12 @@ class SaveAttachmentsActionTest extends TestCase
     public function test_handles_multiple_attachments(): void
     {
         // Arrange
-        $action = new SaveAttachmentsAction;
+        $action = new SaveAttachmentsAction();
 
         $record = Mockery::mock(HasMedia::class);
         $record->shouldReceive('addMedia')->times(3)->andReturnSelf();
         $record->shouldReceive('usingFileName')->times(3)->andReturnSelf();
-        $record->shouldReceive('toMediaCollection')->times(3)->andReturn(new Media);
+        $record->shouldReceive('toMediaCollection')->times(3)->andReturn(new Media());
         $record->shouldReceive('update')->andReturn(true);
 
         $attachments = ['invoice', 'contract', 'receipt'];
