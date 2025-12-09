@@ -29,6 +29,7 @@ class EventServiceProvider extends BaseEventServiceProvider
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     protected function configureEmailVerification(): void {}
 =======
     protected function configureEmailVerification(): void
@@ -38,19 +39,33 @@ class EventServiceProvider extends BaseEventServiceProvider
 =======
 =======
 >>>>>>> 98c37f4 (.)
+=======
+    protected function configureEmailVerification(): void
+    {
+    }
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 47a54fe (.)
     protected function configureEmailVerification(): void
     {
     }
 =======
     protected function configureEmailVerification(): void {}
+<<<<<<< HEAD
 >>>>>>> 0a466ed (.)
 <<<<<<< HEAD
 >>>>>>> 06bb10d (.)
 =======
 =======
+>>>>>>> a12f125f4a (.)
+>>>>>>> 47a54fe (.)
+=======
     protected function configureEmailVerification(): void
     {
     }
+<<<<<<< HEAD
 >>>>>>> 37a2da6 (.)
 >>>>>>> 98c37f4 (.)
 =======
@@ -58,4 +73,11 @@ class EventServiceProvider extends BaseEventServiceProvider
     {
     }
 >>>>>>> a80d398 (.)
+=======
+>>>>>>> b93ef594b4 (.)
+=======
+    protected function configureEmailVerification(): void {}
+>>>>>>> origin/develop
+>>>>>>> e9b0959 (.)
+>>>>>>> 47a54fe (.)
 }
