@@ -117,6 +117,7 @@ $convertedPath = $action->execute($data);
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 [Torna alla documentazione Media](/docs/modules/module_media.md#actions) 
 =======
 [Torna alla documentazione Media](../README.md) 
@@ -137,10 +138,13 @@ $convertedPath = $action->execute($data);
 >>>>>>> efdd063 (.)
 =======
 >>>>>>> 7a2d4da (.)
+=======
+>>>>>>> cec545b (.)
 [Torna alla documentazione Media](/docs/modules/module_media.md#actions) 
 =======
 [Torna alla documentazione Media](../README.md) 
 >>>>>>> 9348522 (.)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -227,3 +231,5 @@ $convertedPath = $action->execute($data);
 >>>>>>> 776536a (.)
 =======
 >>>>>>> 232bbba (.)
+=======
+>>>>>>> cec545b (.)
