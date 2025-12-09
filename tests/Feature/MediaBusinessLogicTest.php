@@ -17,15 +17,7 @@ describe('Media Business Logic', function () {
     it('can create media from temporary upload', function () {
         $user = User::factory()->create();
         $file = UploadedFile::fake()->image('test-image.jpg', 100, 100);
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> 0a466ed (.)
-=======
-
->>>>>>> 37a2da6 (.)
         $temporaryUpload = TemporaryUpload::factory()->create([
             'user_id' => $user->id,
             'file_name' => $file->getClientOriginalName(),
@@ -42,10 +34,6 @@ describe('Media Business Logic', function () {
             'collection_name' => 'default',
         ]);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 37a2da6 (.)
         expect($media)
             ->toBeInstanceOf(Media::class)
             ->and($media->file_name)
@@ -54,15 +42,6 @@ describe('Media Business Logic', function () {
             ->toBe($temporaryUpload->file_size)
             ->and($media->mime_type)
             ->toBe($temporaryUpload->mime_type);
-<<<<<<< HEAD
-=======
-        expect($media)->toBeInstanceOf(Media::class)
-            ->and($media->file_name)->toBe($temporaryUpload->file_name)
-            ->and($media->file_size)->toBe($temporaryUpload->file_size)
-            ->and($media->mime_type)->toBe($temporaryUpload->mime_type);
->>>>>>> 0a466ed (.)
-=======
->>>>>>> 37a2da6 (.)
 
         $this->assertDatabaseHas('media', [
             'id' => $media->id,
@@ -87,10 +66,6 @@ describe('Media Business Logic', function () {
             'status' => 'pending',
         ]);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 37a2da6 (.)
         expect($mediaConvert)
             ->toBeInstanceOf(MediaConvert::class)
             ->and($mediaConvert->media_id)
@@ -99,15 +74,6 @@ describe('Media Business Logic', function () {
             ->toBe('jpeg')
             ->and($mediaConvert->target_format)
             ->toBe('png');
-<<<<<<< HEAD
-=======
-        expect($mediaConvert)->toBeInstanceOf(MediaConvert::class)
-            ->and($mediaConvert->media_id)->toBe($media->id)
-            ->and($mediaConvert->original_format)->toBe('jpeg')
-            ->and($mediaConvert->target_format)->toBe('png');
->>>>>>> 0a466ed (.)
-=======
->>>>>>> 37a2da6 (.)
 
         $this->assertDatabaseHas('media_converts', [
             'id' => $mediaConvert->id,
@@ -144,15 +110,7 @@ describe('Media Business Logic', function () {
 
     it('can manage media collections', function () {
         $user = User::factory()->create();
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> 0a466ed (.)
-=======
-
->>>>>>> 37a2da6 (.)
         $profileMedia = Media::factory()->create([
             'user_id' => $user->id,
             'collection_name' => 'profile',
@@ -165,21 +123,10 @@ describe('Media Business Logic', function () {
             'disk' => 'public',
         ]);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 37a2da6 (.)
         expect($profileMedia->collection_name)
             ->toBe('profile')
             ->and($documentMedia->collection_name)
             ->toBe('documents');
-<<<<<<< HEAD
-=======
-        expect($profileMedia->collection_name)->toBe('profile')
-            ->and($documentMedia->collection_name)->toBe('documents');
->>>>>>> 0a466ed (.)
-=======
->>>>>>> 37a2da6 (.)
 
         $this->assertDatabaseHas('media', [
             'id' => $profileMedia->id,
@@ -194,31 +141,14 @@ describe('Media Business Logic', function () {
 
     it('can validate media file types', function () {
         $user = User::factory()->create();
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> 0a466ed (.)
-=======
-
->>>>>>> 37a2da6 (.)
         $validImage = Media::factory()->create([
             'user_id' => $user->id,
             'mime_type' => 'image/jpeg',
             'file_name' => 'valid-image.jpg',
         ]);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         expect($validImage->isImage())->toBeTrue()->and($validImage->isDocument())->toBeFalse();
-=======
-        expect($validImage->isImage())->toBeTrue()
-            ->and($validImage->isDocument())->toBeFalse();
->>>>>>> 0a466ed (.)
-=======
-        expect($validImage->isImage())->toBeTrue()->and($validImage->isDocument())->toBeFalse();
->>>>>>> 37a2da6 (.)
 
         $validDocument = Media::factory()->create([
             'user_id' => $user->id,
@@ -226,16 +156,7 @@ describe('Media Business Logic', function () {
             'file_name' => 'valid-document.pdf',
         ]);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         expect($validDocument->isImage())->toBeFalse()->and($validDocument->isDocument())->toBeTrue();
-=======
-        expect($validDocument->isImage())->toBeFalse()
-            ->and($validDocument->isDocument())->toBeTrue();
->>>>>>> 0a466ed (.)
-=======
-        expect($validDocument->isImage())->toBeFalse()->and($validDocument->isDocument())->toBeTrue();
->>>>>>> 37a2da6 (.)
     });
 
     it('can track media conversion status', function () {
@@ -265,38 +186,18 @@ describe('Media Business Logic', function () {
     it('can manage media permissions', function () {
         $owner = User::factory()->create();
         $otherUser = User::factory()->create();
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> 0a466ed (.)
-=======
-
->>>>>>> 37a2da6 (.)
         $media = Media::factory()->create([
             'user_id' => $owner->id,
             'is_public' => false,
         ]);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 37a2da6 (.)
         expect($media->user_id)
             ->toBe($owner->id)
             ->and($media->is_public)
             ->toBeFalse()
             ->and($media->user_id)
             ->not->toBe($otherUser->id);
-<<<<<<< HEAD
-=======
-        expect($media->user_id)->toBe($owner->id)
-            ->and($media->is_public)->toBeFalse()
-            ->and($media->user_id)->not->toBe($otherUser->id);
->>>>>>> 0a466ed (.)
-=======
->>>>>>> 37a2da6 (.)
     });
 
     it('can handle media deletion', function () {
@@ -327,29 +228,12 @@ describe('Media Business Logic', function () {
 
         $url = $media->getUrl();
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         expect($url)->not->toBeEmpty()->and($url)->toContain('test-image.jpg');
-=======
-        expect($url)->not->toBeEmpty()
-            ->and($url)->toContain('test-image.jpg');
->>>>>>> 0a466ed (.)
-=======
-        expect($url)->not->toBeEmpty()->and($url)->toContain('test-image.jpg');
->>>>>>> 37a2da6 (.)
     });
 
     it('can validate file size limits', function () {
         $user = User::factory()->create();
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> 0a466ed (.)
-=======
-
->>>>>>> 37a2da6 (.)
         $validMedia = Media::factory()->create([
             'user_id' => $user->id,
             'file_size' => 1024 * 1024, // 1MB
@@ -367,10 +251,6 @@ describe('Media Business Logic', function () {
 
     it('can track media usage statistics', function () {
         $user = User::factory()->create();
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 37a2da6 (.)
 
         Media::factory()
             ->count(5)
@@ -391,32 +271,5 @@ describe('Media Business Logic', function () {
         $documentCount = Media::where('user_id', $user->id)->where('mime_type', 'like', 'application/%')->count();
 
         expect($totalMedia)->toBe(8)->and($imageCount)->toBe(5)->and($documentCount)->toBe(3);
-<<<<<<< HEAD
-=======
-        
-        Media::factory()->count(5)->create([
-            'user_id' => $user->id,
-            'mime_type' => 'image/jpeg',
-        ]);
-
-        Media::factory()->count(3)->create([
-            'user_id' => $user->id,
-            'mime_type' => 'application/pdf',
-        ]);
-
-        $totalMedia = Media::where('user_id', $user->id)->count();
-        $imageCount = Media::where('user_id', $user->id)
-            ->where('mime_type', 'like', 'image/%')
-            ->count();
-        $documentCount = Media::where('user_id', $user->id)
-            ->where('mime_type', 'like', 'application/%')
-            ->count();
-
-        expect($totalMedia)->toBe(8)
-            ->and($imageCount)->toBe(5)
-            ->and($documentCount)->toBe(3);
->>>>>>> 0a466ed (.)
-=======
->>>>>>> 37a2da6 (.)
     });
 });
