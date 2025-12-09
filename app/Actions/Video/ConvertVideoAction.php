@@ -112,12 +112,9 @@ class ConvertVideoAction
 
         $toDiskMedia = $exportedMedia->toDisk($disk_mp4);
 
-        if (is_object($toDiskMedia) && method_exists($toDiskMedia, 'inFormat')) {
-            $formattedMedia = $toDiskMedia->inFormat($format);
-        } else {
-            throw new \Exception('Cannot format media for disk conversion');
-        }
+        $formattedMedia = $toDiskMedia->inFormat($format);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -174,6 +171,9 @@ class ConvertVideoAction
             throw new \Exception('Cannot save formatted media');
         }
 >>>>>>> 13d1d7e (.)
+=======
+        $formattedMedia->save($file_new);
+>>>>>>> 2a4b5df (.)
 
         return Storage::disk($disk_mp4)->url($file_new);
     }
