@@ -1,8 +1,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 3f50d25 (.)
+=======
+>>>>>>> 9ffe7a9 (.)
 <?php
 
 declare(strict_types=1);
@@ -19,10 +22,13 @@ return [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 0caa3cf (.)
 =======
 >>>>>>> c9ef35c (.)
+=======
+>>>>>>> 9ffe7a9 (.)
 
     'collections' => [
         'posts' => [
@@ -46,6 +52,7 @@ return [
     'isActiveParent' => function ($page, $menuItem) {
         if (is_object($menuItem) && $menuItem->children) {
             return $menuItem->children->contains(fn ($child): bool => trimPath($page->getPath()) === trimPath($child));
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -78,6 +85,8 @@ return [
 >>>>>>> c9ef35c (.)
 =======
 >>>>>>> 3f50d25 (.)
+=======
+>>>>>>> 9ffe7a9 (.)
         }
     },
     'url' => function ($page, $path) {
@@ -90,16 +99,20 @@ return [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 0caa3cf (.)
 =======
 >>>>>>> c9ef35c (.)
+=======
+>>>>>>> 9ffe7a9 (.)
         return url('/'.$page->lang.'/'.trimPath($path));
     },
 
     'children' => fn ($page, $docs): array =>
         // return $docs->where('parent_id', $page->);
         [],
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -125,3 +138,6 @@ return [
 >>>>>>> 3f50d25 (.)
 =======
 >>>>>>> 960f18d (.)
+=======
+];
+>>>>>>> 9ffe7a9 (.)
