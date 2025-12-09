@@ -12,7 +12,11 @@ class ConvertController extends Controller
     /**
      * Show the profile for the given user.
      */
+<<<<<<< HEAD
     public function __invoke(string|int $_id): View
+=======
+    public function __invoke(string|int $id): View
+>>>>>>> 0a466ed (.)
     {
         /**
          * @phpstan-var view-string
