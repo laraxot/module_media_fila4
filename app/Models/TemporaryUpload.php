@@ -53,7 +53,7 @@ use Webmozart\Assert\Assert;
  * @property-read \Modules\Xot\Contracts\ProfileContract|null $updater
  * @mixin \Eloquent
  */
-class TemporaryUpload extends Model implements HasMedia
+class TemporaryUpload extends BaseModel implements HasMedia
 {
     use InteractsWithMedia;
     use MassPrunable;
