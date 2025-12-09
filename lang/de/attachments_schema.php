@@ -99,12 +99,4 @@ return [
         'delete_success' => 'Datei erfolgreich gelöscht',
         'delete_error' => 'Fehler beim Löschen der Datei',
     ],
-<<<<<<< HEAD
-<<<<<<< HEAD
 ];
-=======
-]; 
->>>>>>> 0a466ed (.)
-=======
-];
->>>>>>> 37a2da6 (.)
