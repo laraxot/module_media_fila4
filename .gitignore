@@ -5,6 +5,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 =======
@@ -29,6 +30,8 @@
 >>>>>>> 47a54fe (.)
 =======
 >>>>>>> f1c6d6e (.)
+=======
+>>>>>>> 877e05f (.)
 # ==============================================
 # LARAXOT MODULE MEDIA - .GITIGNORE
 # ==============================================
@@ -376,8 +379,11 @@ lerna-debug.log*
 # LARAVEL SPECIFIC
 # ==============================================
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b93ef594b4 (.)
 >>>>>>> 47a54fe (.)
+=======
+>>>>>>> 877e05f (.)
 =======
 # Dependencies and packages
 /vendor/
@@ -405,6 +411,7 @@ build/
 # Laravel specific
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
 =======
@@ -425,6 +432,9 @@ build/
 >>>>>>> 47a54fe (.)
 =======
 >>>>>>> f1c6d6e (.)
+=======
+>>>>>>> 0a466ed (.)
+>>>>>>> 877e05f (.)
 bootstrap/compiled.php
 app/storage/
 public/storage
@@ -433,6 +443,7 @@ public_html/storage
 public_html/hot
 storage/*.key
 .env
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -462,6 +473,8 @@ storage/*.key
 >>>>>>> 47a54fe (.)
 =======
 >>>>>>> f1c6d6e (.)
+=======
+>>>>>>> 877e05f (.)
 .env.*
 !.env.example
 
@@ -880,8 +893,11 @@ public_html
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b93ef594b4 (.)
 >>>>>>> 47a54fe (.)
+=======
+>>>>>>> 877e05f (.)
 =======
 
 # Local configurations
@@ -911,6 +927,7 @@ Homestead.json
 docs/phpstan/
 docs/cache/
 cache/
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/develop
@@ -943,3 +960,6 @@ public_html
 >>>>>>> 9932c65 (.)
 =======
 >>>>>>> 91d10e9 (.)
+=======
+>>>>>>> 0a466ed (.)
+>>>>>>> 877e05f (.)

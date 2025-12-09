@@ -15,6 +15,7 @@ use Spatie\QueueableAction\QueueableAction;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 =======
@@ -51,6 +52,11 @@ use Spatie\QueueableAction\QueueableAction;
 >>>>>>> 47a54fe (.)
 =======
 >>>>>>> f1c6d6e (.)
+=======
+=======
+
+>>>>>>> 0a466ed (.)
+>>>>>>> 877e05f (.)
 /**
  * Action per la traduzione di elementi di una collezione.
  */
@@ -65,6 +71,7 @@ class GetCloudFrontSignedUrlAction
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 =======
@@ -87,6 +94,8 @@ class GetCloudFrontSignedUrlAction
 >>>>>>> 47a54fe (.)
 =======
 >>>>>>> f1c6d6e (.)
+=======
+>>>>>>> 877e05f (.)
     public function execute(string $key, int $expiry = 30): string
     {
         $data = CloudFrontData::make();
@@ -94,6 +103,7 @@ class GetCloudFrontSignedUrlAction
         $cloudFront = new CloudFrontClient([
             'region' => $data->region,
             'version' => 'latest',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -128,6 +138,9 @@ class GetCloudFrontSignedUrlAction
 =======
 =======
 >>>>>>> 47a54fe (.)
+=======
+=======
+>>>>>>> 877e05f (.)
    
     public function execute(string $key, int $expiry = 30): string
     {
@@ -139,19 +152,25 @@ class GetCloudFrontSignedUrlAction
             'version' => 'latest'
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
 =======
 >>>>>>> f1c6d6e (.)
+=======
+>>>>>>> 0a466ed (.)
+>>>>>>> 877e05f (.)
         ]);
 
         return $cloudFront->getSignedUrl([
             'url' => $data->base_url.'/'.ltrim($key, '/'),
             'expires' => time() + ($expiry * 60),
             'key_pair_id' => $data->key_pair_id,
+<<<<<<< HEAD
             'private_key' => $data->getPrivateKey(),
         ]);
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -163,6 +182,9 @@ class GetCloudFrontSignedUrlAction
 =======
 =======
 >>>>>>> origin/develop
+=======
+=======
+>>>>>>> 877e05f (.)
             'private_key' => $data->getPrivateKey()
             ,
         ]);
@@ -171,6 +193,7 @@ class GetCloudFrontSignedUrlAction
    
 
   
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> a12f125f4a (.)
 =======
@@ -258,4 +281,7 @@ class GetCloudFrontSignedUrlAction
 >>>>>>> 47a54fe (.)
 =======
 >>>>>>> f1c6d6e (.)
+=======
+>>>>>>> 0a466ed (.)
+>>>>>>> 877e05f (.)
 }
