@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Modules\Media\Datas;
 
-use FFMpeg\Format\Video\DefaultVideo;
 use FFMpeg\Format\Video\WebM;
+use FFMpeg\Format\Video\DefaultVideo;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use Livewire\Wireable;
@@ -35,15 +35,15 @@ class ConvertData extends Data implements Wireable
     // -b:v 1M: Imposta il bitrate video a 1 Mbps (puoi modificarlo in base alle tue esigenze).
     public string $bitrate;
 
-    public ?int $width = null;
+    public null|int $width = null;
 
-    public ?int $height = null;
+    public null|int $height = null;
 
     // -threads 4: utilizza 4 thread per l'elaborazione, aumentando la velocità di conversione sfruttando il multi-threading.
-    public ?int $threads = null;
+    public null|int $threads = null;
 
     // -speed 4: imposta la velocità del codec VP9 a 4, che è un valore elevato per massimizzare la velocità di codifica.
-    public ?int $speed = null;
+    public null|int $speed = null;
 
     public function exists(): bool
     {
@@ -64,6 +64,6 @@ class ConvertData extends Data implements Wireable
         $format = $this->getFFMpegFormat();
         $extension = mb_strtolower(class_basename($format));
 
-        return Str::of($this->file)->replaceLast('.mp4', '.'.$extension)->toString();
+        return Str::of($this->file)->replaceLast('.mp4', '.' . $extension)->toString();
     }
 }

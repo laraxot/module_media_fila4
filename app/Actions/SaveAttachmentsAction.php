@@ -5,40 +5,49 @@ declare(strict_types=1);
 namespace Modules\Media\Actions;
 
 use Exception;
+use Filament\Forms;
+use Filament\Forms\Components\FileUpload;
+use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
+use Filament\Forms\Components\TextInput;
+use Filament\Schemas\Schema;
+use Filament\Forms\Set;
+use Filament\Pages\SubNavigationPosition;
+use Filament\Resources\Resource as FilamentResource;
+use Illuminate\Contracts\Support\Htmlable;
+use Illuminate\Contracts\Support\Renderable;
+use Illuminate\Contracts\View\View;
+use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\HtmlString;
+use Illuminate\Support\Str;
+use Modules\UI\Actions\Icon\GetAllIconsAction;
+use Modules\Xot\Actions\ModelClass\CountAction;
+use Modules\Xot\Filament\Traits\NavigationLabelTrait;
 use Spatie\MediaLibrary\HasMedia;
 use Webmozart\Assert\Assert;
 
 use function Safe\file_put_contents;
+use function Safe\glob;
 use function Safe\tempnam;
 use function Safe\unlink;
 
 class SaveAttachmentsAction
 {
-    /**
-     * Save attachments to media library.
-     *
-     * @param  array<int, string>  $attachments
-     * @param  array<string, mixed>  $data
-     */
     public function execute(HasMedia $record, array $attachments, array $data, string $disk = 'attachments'): void
     {
         $dataAttachments = [];
 
         foreach ($attachments as $attachment) {
-            Assert::string($attachment, '['.__LINE__.']['.class_basename(self::class).']');
-
             if (empty($data[$attachment])) {
                 continue;
             }
 
             $path = $data[$attachment];
-            Assert::string($path, '['.__LINE__.']['.class_basename(self::class).']');
 
             // Metodo compatibile con Laravel 9+ e Flysystem 3.x
             $storage = Storage::disk($disk);
 
-            if (! $storage->exists($path)) {
+            if (!$storage->exists($path)) {
                 continue;
             }
 
@@ -63,48 +72,36 @@ class SaveAttachmentsAction
             }
         }
 
-        if (! empty($dataAttachments)) {
-            /** @var array<string, string> $dataAttachments */
+        if (!empty($dataAttachments)) {
             $record->update($dataAttachments);
         }
     }
 
-    /**
-     * @param  array<int, string>  $attachments
-     * @param  array<string, mixed>  $data
-     */
     public function executeOLD(HasMedia $record, array $attachments, array $data, string $disk = 'attachments'): void
     {
         $data_attachments = [];
         foreach ($attachments as $attachment) {
-            Assert::string($attachment, '['.__LINE__.']['.class_basename(self::class).']');
             $path = $data[$attachment];
-            Assert::string($path, '['.__LINE__.']['.class_basename(self::class).']');
             $full_path = Storage::disk($disk)->path($path);
-            // *
+            //*
             dddx([
                 'exists' => Storage::disk($disk)->exists($path),
                 'path' => $path,
                 'disk' => $disk,
                 'full_path' => Storage::disk($disk)->path($path),
             ]);
-            // */
-            if (! method_exists($record, 'addMediaFromDisk')) {
+            //*/
+            if (!method_exists($record, 'addMediaFromDisk')) {
                 throw new Exception('Method addMediaFromDisk not found');
             }
-            $fileAdder = $record->addMediaFromDisk($path, $disk);
-            // $media=$record->addMediaFromRequest($attachment)
+            $media = $record
+                ->addMediaFromDisk($path, $disk)
+                //$media=$record->addMediaFromRequest($attachment)
 
-            // $media=$record->addMedia($full_path)
-            if ($fileAdder === null) {
-                continue;
-            }
-            /** @phpstan-ignore-next-line - Spatie MediaLibrary fluent API */
-            $media = $fileAdder->toMediaCollection($attachment);
-            /** @phpstan-ignore-next-line - Spatie MediaLibrary Media model */
+                // $media=$record->addMedia($full_path)
+                ->toMediaCollection($attachment);
             $data_attachments[$attachment] = $media->getPathRelativeToRoot();
         }
-        /** @var array<string, string> $data_attachments */
         $record->update($data_attachments);
     }
 }

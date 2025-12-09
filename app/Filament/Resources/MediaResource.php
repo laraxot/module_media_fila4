@@ -4,23 +4,24 @@ declare(strict_types=1);
 
 namespace Modules\Media\Filament\Resources;
 
+use Filament\Schemas\Components\Component;
+use Override;
+use Modules\Media\Filament\Resources\MediaResource\Pages\ListMedia;
+use Modules\Media\Filament\Resources\MediaResource\Pages\CreateMedia;
+use Modules\Media\Filament\Resources\MediaResource\Pages\EditMedia;
+use Modules\Media\Filament\Resources\MediaResource\Pages\ViewMedia;
+use Modules\Media\Filament\Resources\MediaResource\Pages\ConvertMedia;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Radio;
 use Filament\Forms\Components\TextInput;
 use Filament\Resources\Pages\PageRegistration;
-use Filament\Schemas\Components\Component;
-use Modules\Media\Filament\Resources\MediaResource\Pages\ConvertMedia;
-use Modules\Media\Filament\Resources\MediaResource\Pages\CreateMedia;
-use Modules\Media\Filament\Resources\MediaResource\Pages\EditMedia;
-use Modules\Media\Filament\Resources\MediaResource\Pages\ListMedia;
-use Modules\Media\Filament\Resources\MediaResource\Pages\ViewMedia;
+use Modules\Media\Filament\Resources\MediaResource\Pages;
 use Modules\Media\Models\Media;
 use Modules\Xot\Filament\Resources\XotBaseResource;
-use Override;
 
 class MediaResource extends XotBaseResource
 {
-    protected static ?string $model = Media::class;
+    protected static null|string $model = Media::class;
 
     /**
      * @return array<string, Component>
@@ -55,7 +56,7 @@ class MediaResource extends XotBaseResource
     }
 
     /**
-     * @return array<PageRegistration>
+     * @return PageRegistration[]
      *
      * @psalm-return array{index: PageRegistration, create: PageRegistration, edit: PageRegistration}
      */

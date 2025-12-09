@@ -4,36 +4,38 @@ declare(strict_types=1);
 
 namespace Modules\Media\Actions\S3;
 
-use Aws\S3\ObjectUploader;
 use Exception;
+use Aws\Exception\MultipartUploadException;
+use Aws\S3\Exception\S3Exception;
+use Aws\S3\MultipartUploader;
+use Aws\S3\ObjectUploader;
 
 use function Safe\fclose;
 use function Safe\filesize;
 use function Safe\fopen;
 use function Safe\mime_content_type;
+use function Safe\rewind;
 
 class UploadFileAction extends BaseS3Action
 {
     /**
      * Upload a file to S3
      *
-     * @param  array<string, mixed>  $options
+     * @param array<string, mixed> $options
      * @return array<string, mixed>
      */
     public function execute(string $localFilePath, string $destinationFilePath, array $options = []): array
     {
         // Validation
-        if (! file_exists($localFilePath)) {
+        if (!file_exists($localFilePath)) {
             $error = "Local file does not exist: {$localFilePath}";
             $this->logger->error($error);
-
             return ['success' => false, 'error' => $error];
         }
 
-        if (! is_readable($localFilePath)) {
+        if (!is_readable($localFilePath)) {
             $error = "Local file is not readable: {$localFilePath}";
             $this->logger->error($error);
-
             return ['success' => false, 'error' => $error];
         }
 
@@ -69,7 +71,6 @@ class UploadFileAction extends BaseS3Action
                 'fileSize' => filesize($localFilePath),
             ]);
 
-            /** @var array{ObjectURL?: string, ETag?: string} $result AWS SDK returns array */
             $result = $uploader->upload();
 
             // Close the file after successful upload

@@ -4,19 +4,18 @@ declare(strict_types=1);
 
 namespace Modules\Media\Filament\Resources\MediaResource\Pages;
 
-use RuntimeException;
-use Filament\Actions\Action;
+use Filament\Tables\Filters\BaseFilter;
 use Filament\Actions\ActionGroup;
-use Filament\Actions\DeleteAction;
+use Override;
 use Filament\Actions\ViewAction;
+use Filament\Actions\Action;
+use Filament\Actions\DeleteAction;
 use Filament\Tables;
 use Filament\Tables\Columns\TextColumn;
-use Filament\Tables\Filters\BaseFilter;
 use Filament\Tables\Filters\SelectFilter;
 use Modules\Media\Filament\Resources\MediaResource;
 use Modules\Media\Models\Media;
 use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
-use Override;
 use Webmozart\Assert\Assert;
 
 class ListMedia extends XotBaseListRecords
@@ -38,10 +37,10 @@ class ListMedia extends XotBaseListRecords
             'file_name' => TextColumn::make('file_name')->searchable(),
             'mime_type' => TextColumn::make('mime_type')->searchable(),
             'disk' => TextColumn::make('disk')->searchable(),
-            'size' => TextColumn::make('size')->formatStateUsing(fn (string $state): string => number_format(
+            'size' => TextColumn::make('size')->formatStateUsing(fn(string $state): string => number_format(
                 ((int) $state) / 1024,
                 2,
-            ).' KB'),
+            ) . ' KB'),
             'created_at' => TextColumn::make('created_at')->dateTime(),
         ];
     }
@@ -75,28 +74,18 @@ class ListMedia extends XotBaseListRecords
             'view_attachment' => Action::make('view_attachment')
                 ->icon('heroicon-s-eye')
                 ->color('gray')
-                ->url(static fn (Media $record): string => $record->getUrl())
+                ->url(static fn(Media $record): string => $record->getUrl())
                 ->openUrlInNewTab(true),
             'delete' => DeleteAction::make()->requiresConfirmation(),
             'download' => Action::make('download_attachment')
                 ->icon('heroicon-o-arrow-down-tray')
                 ->color('primary')
-                ->action(static function ($record) {
-                    // PHPStan Level 10: isset() per Eloquent magic property
-                    if (! is_object($record) || ! method_exists($record, 'getPath') || ! isset($record->file_name)) {
-                        throw new RuntimeException('Invalid record for download');
-                    }
-                    $filePath = $record->getPath();
-                    Assert::string($filePath, 'getPath must return string');
-
-                    return response()->download($filePath, (string) $record->file_name);
-                }),
+                ->action(static fn($record) => response()->download($record->getPath(), $record->file_name)),
             'convert' => Action::make('convert')
                 ->icon('media-convert')
                 ->color('gray')
                 ->url(function ($record): string {
                     Assert::string($res = static::$resource::getUrl('convert', ['record' => $record]));
-
                     return $res;
                 })
                 ->openUrlInNewTab(true),

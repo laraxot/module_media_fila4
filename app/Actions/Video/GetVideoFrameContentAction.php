@@ -21,16 +21,18 @@ class GetVideoFrameContentAction
 
     /**
      * Execute the action.
+     *
+     * @return string|null
      */
-    public function execute(string $disk_mp4, string $file_mp4, int $time): ?string
+    public function execute(string $disk_mp4, string $file_mp4, int $time)
     {
-        if (! Storage::disk($disk_mp4)->exists($file_mp4)) {
+        if (!Storage::disk($disk_mp4)->exists($file_mp4)) {
             return '';
         }
 
         $seconds = 3600;
 
-        $cache_key = Str::slug($disk_mp4.' '.$file_mp4.' '.$time.' 1');
+        $cache_key = Str::slug($disk_mp4 . ' ' . $file_mp4 . ' ' . $time . ' 1');
 
         return Cache::store('file')->remember($cache_key, $seconds, static function () use (
             $disk_mp4,

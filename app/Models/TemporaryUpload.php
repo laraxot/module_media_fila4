@@ -4,21 +4,22 @@ declare(strict_types=1);
 
 namespace Modules\Media\Models;
 
-use Modules\Xot\Models\Traits\HasXotFactory;
+use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
+use Modules\Media\Database\Factories\TemporaryUploadFactory;
 use Closure;
 use Exception;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\MassPrunable;
-use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Carbon;
-use Modules\Media\Database\Factories\TemporaryUploadFactory;
+use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\MassPrunable;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Http\UploadedFile;
 use Modules\Media\Exceptions\CouldNotAddUpload;
 use Modules\Media\Exceptions\TemporaryUploadDoesNotBelongToCurrentSession;
 use Spatie\Image\Enums\Fit;
 use Spatie\MediaLibrary\Conversions\Conversion;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
-use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
 use Webmozart\Assert\Assert;
 
@@ -31,7 +32,6 @@ use Webmozart\Assert\Assert;
  * @property Carbon|null $updated_at
  * @property MediaCollection<int, Media> $media
  * @property int|null $media_count
- *
  * @method static Builder<static>|TemporaryUpload newModelQuery()
  * @method static Builder<static>|TemporaryUpload newQuery()
  * @method static Builder<static>|TemporaryUpload query()
@@ -39,32 +39,37 @@ use Webmozart\Assert\Assert;
  * @method static Builder<static>|TemporaryUpload whereId($value)
  * @method static Builder<static>|TemporaryUpload whereSessionId($value)
  * @method static Builder<static>|TemporaryUpload whereUpdatedAt($value)
- *
  * @property string|null $updated_by
  * @property string|null $created_by
  * @property string|null $deleted_at
  * @property string|null $deleted_by
- *
  * @method static Builder<static>|TemporaryUpload whereCreatedBy($value)
  * @method static Builder<static>|TemporaryUpload whereDeletedAt($value)
  * @method static Builder<static>|TemporaryUpload whereDeletedBy($value)
  * @method static Builder<static>|TemporaryUpload whereUpdatedBy($value)
- *
  * @mixin IdeHelperTemporaryUpload
- *
  * @method static TemporaryUploadFactory factory($count = null, $state = [])
- *
  * @mixin \Eloquent
  */
-class TemporaryUpload extends BaseModel implements HasMedia
+class TemporaryUpload extends Model implements HasMedia
 {
+    use HasFactory;
     use InteractsWithMedia;
     use MassPrunable;
-    use HasXotFactory;
 
-    public static ?Closure $manipulatePreview = null;
+    /**
+     * Create a new factory instance for the model.
+     *
+     * @return TemporaryUploadFactory
+     */
+    protected static function newFactory(): TemporaryUploadFactory
+    {
+        return TemporaryUploadFactory::new();
+    }
 
-    public static ?string $disk = null;
+    public static null|Closure $manipulatePreview = null;
+
+    public static null|string $disk = null;
 
     /** @var string */
     protected $connection = 'media';
@@ -74,33 +79,31 @@ class TemporaryUpload extends BaseModel implements HasMedia
      */
     protected $guarded = [];
 
-    public static function findByMediaUuid(?string $mediaUuid): ?self
+    public static function findByMediaUuid(null|string $mediaUuid): null|self
     {
         Assert::string($mediaModelClass = config('media-library.media_model'));
 
         /**
-         * @var Media|null $media
-         *
-         * @phpstan-ignore-next-line
+         * @var Media $media
          */
         $media = $mediaModelClass::query()->where('uuid', $mediaUuid)->first();
 
-        if (! $media) {
+        if (!$media) {
             return null;
         }
 
         $temporaryUpload = $media->model;
 
-        if (! ($temporaryUpload instanceof self)) {
+        if (!($temporaryUpload instanceof self)) {
             return null;
         }
 
         return $temporaryUpload;
     }
 
-    public static function findByMediaUuidInCurrentSession(?string $mediaUuid): ?self
+    public static function findByMediaUuidInCurrentSession(null|string $mediaUuid): null|self
     {
-        if (! (($temporaryUpload = static::findByMediaUuid($mediaUuid)) instanceof self)) {
+        if (!(($temporaryUpload = static::findByMediaUuid($mediaUuid)) instanceof self)) {
             return null;
         }
 
@@ -172,9 +175,9 @@ class TemporaryUpload extends BaseModel implements HasMedia
         return $temporaryUpload;
     }
 
-    public function registerMediaConversions(?Media $media = null): void
+    public function registerMediaConversions(null|Media $media = null): void
     {
-        if (! config('media-library.generate_thumbnails_for_temporary_uploads')) {
+        if (!config('media-library.generate_thumbnails_for_temporary_uploads')) {
             return;
         }
 
@@ -199,7 +202,7 @@ class TemporaryUpload extends BaseModel implements HasMedia
         // if (! $media instanceof \Spatie\MediaLibrary\MediaCollections\Models\Media) {
         //    throw new \Exception('['.__LINE__.']['.class_basename($this).']');
         // }
-        Assert::isInstanceOf($media, Media::class, '['.__LINE__.']['.class_basename($this).']');
+        Assert::isInstanceOf($media, Media::class, '[' . __LINE__ . '][' . class_basename($this) . ']');
 
         $temporaryUploadModel = $media->model;
         $uuid = $media->uuid;
@@ -219,7 +222,7 @@ class TemporaryUpload extends BaseModel implements HasMedia
         if (\is_string($res)) {
             return $res;
         }
-        throw new Exception('['.__LINE__.']['.class_basename(self::class).']');
+        throw new Exception('[' . __LINE__ . '][' . class_basename(__CLASS__) . ']');
     }
 
     // public function prunable(): Builder
@@ -229,10 +232,12 @@ class TemporaryUpload extends BaseModel implements HasMedia
 
     protected function getPreviewManipulation(): Closure
     {
-        return static::$manipulatePreview ?? function (Conversion $conversion): void {
-            $conversion->fit(Fit::Crop, 300, 300);
+        return (
+            static::$manipulatePreview ?? function (Conversion $conversion): void {
+                $conversion->fit(Fit::Crop, 300, 300);
 
-            // $conversion->fit('crop', 300, 300);
-        };
+                // $conversion->fit('crop', 300, 300);
+            }
+        );
     }
 }

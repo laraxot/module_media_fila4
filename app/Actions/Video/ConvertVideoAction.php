@@ -10,8 +10,11 @@ namespace Modules\Media\Actions\Video;
 
 use FFMpeg\Format\Video\X264;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
+use ProtoneMedia\LaravelFFMpeg\MediaOpener;
 use ProtoneMedia\LaravelFFMpeg\Support\FFMpeg;
 use Spatie\QueueableAction\QueueableAction;
+use Webmozart\Assert\Assert;
 
 class ConvertVideoAction
 {
@@ -28,16 +31,13 @@ class ConvertVideoAction
 
         $exportedMedia = $openedMedia->export();
 
-        $format = new X264;
+        $format = new X264();
         $format->setKiloBitrate(1000);
 
-        /** @phpstan-ignore-next-line - FFMpeg fluent API */
         $toDiskMedia = $exportedMedia->toDisk($disk_mp4);
 
-        /** @phpstan-ignore-next-line - FFMpeg fluent API */
         $formattedMedia = $toDiskMedia->inFormat($format);
 
-        /** @phpstan-ignore-next-line - FFMpeg fluent API */
         $formattedMedia->save($file_new);
 
         return Storage::disk($disk_mp4)->url($file_new);

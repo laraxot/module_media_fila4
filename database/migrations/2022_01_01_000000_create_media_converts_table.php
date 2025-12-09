@@ -14,8 +14,7 @@ use Modules\Xot\Database\Migrations\XotBaseMigration;
 /**
  * Class CreateImagesTable.
  */
-return new class extends XotBaseMigration
-{
+return new class extends XotBaseMigration {
     /**
      * i don't write table name, it take from Model, model is singular of this class wit.
      */
@@ -41,7 +40,7 @@ return new class extends XotBaseMigration
         });
         // -- UPDATE --
         $this->tableUpdate(function (Blueprint $table): void {
-            if (! $this->hasColumn('format')) {
+            if (!$this->hasColumn('format')) {
                 $table->string('format')->nullable();
             }
 
