@@ -84,6 +84,7 @@ class Clip extends Component
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
         $up = collect($data)->only(['title', 'subtitle'])->all();
@@ -91,6 +92,8 @@ class Clip extends Component
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> 7ea0764 (.)
         $up = collect($data)->only(['title', 'subtitle'])->all();
 =======
         $up = collect($data)
@@ -125,6 +128,7 @@ class Clip extends Component
 >>>>>>> 0a466ed (.)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 06bb10d (.)
 =======
 =======
@@ -141,6 +145,11 @@ class Clip extends Component
 >>>>>>> f1c6d6e (.)
 =======
 >>>>>>> 877e05f (.)
+=======
+=======
+        $up = collect($data)->only(['title', 'subtitle'])->all();
+>>>>>>> 37a2da6 (.)
+>>>>>>> 7ea0764 (.)
 
         $this->model->update($up);
         $this->model->refresh();
