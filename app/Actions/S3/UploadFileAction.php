@@ -204,19 +204,16 @@ class UploadFileAction extends BaseS3Action
             // Close the file after successful upload
             fclose($sourceFile);
 
-            $objectUrl = is_array($result) && isset($result['ObjectURL']) ? $result['ObjectURL'] : null;
-            $etag = is_array($result) && isset($result['ETag']) ? $result['ETag'] : null;
-            
             $this->logger->info('File uploaded successfully to S3', [
                 'localPath' => $localFilePath,
                 's3Key' => $destinationFilePath,
-                'objectUrl' => $objectUrl,
+                'objectUrl' => $result['ObjectURL'] ?? null,
             ]);
 
             return [
                 'success' => true,
-                'objectUrl' => $objectUrl,
-                'etag' => $etag,
+                'objectUrl' => $result['ObjectURL'] ?? null,
+                'etag' => $result['ETag'] ?? null,
                 'key' => $destinationFilePath,
                 'bucket' => $this->bucketName,
             ];
