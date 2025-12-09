@@ -11,6 +11,9 @@ namespace Modules\Media\Actions\Video;
 
 use Exception;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 37a2da6 (.)
 use FFMpeg\Format\Video\DefaultVideo;
 use Filament\Notifications\Notification;
 use Illuminate\Support\Facades\Storage;
@@ -19,6 +22,7 @@ use ProtoneMedia\LaravelFFMpeg\FFMpeg\FFMpegExporter;
 use ProtoneMedia\LaravelFFMpeg\MediaOpener;
 use ProtoneMedia\LaravelFFMpeg\Support\FFMpeg;
 use Spatie\QueueableAction\QueueableAction;
+<<<<<<< HEAD
 =======
 use Filament\Notifications\Notification;
 use Illuminate\Support\Facades\Storage;
@@ -29,6 +33,8 @@ use ProtoneMedia\LaravelFFMpeg\FFMpeg\FFMpegExporter;
 use Spatie\QueueableAction\QueueableAction;
 use FFMpeg\Format\Video\DefaultVideo;
 >>>>>>> 0a466ed (.)
+=======
+>>>>>>> 37a2da6 (.)
 use Webmozart\Assert\Assert;
 
 /**
@@ -66,9 +72,13 @@ class ConvertVideoByConvertDataAction
                 $msg = "{$percentage}% transcoded";
                 $msg .= "{$remaining} seconds left at rate: {$rate}";
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 0a466ed (.)
+=======
+
+>>>>>>> 37a2da6 (.)
                 // Log o notifica del progresso
             })
             ->addFilter('-preset', 'ultrafast')

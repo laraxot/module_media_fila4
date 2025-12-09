@@ -5,12 +5,16 @@ declare(strict_types=1);
 namespace Modules\Media\Filament\Resources\MediaResource\Pages;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 37a2da6 (.)
 use Filament\Tables\Filters\BaseFilter;
 use Filament\Actions\ActionGroup;
 use Override;
 use Filament\Actions\ViewAction;
 use Filament\Actions\Action;
 use Filament\Actions\DeleteAction;
+<<<<<<< HEAD
 =======
 use Filament\Actions\ViewAction;
 use Filament\Actions\Action;
@@ -18,6 +22,8 @@ use Filament\Actions\DeleteAction;
 use Filament\Tables\Filters\BaseFilter;
 use Filament\Actions\ActionGroup;
 >>>>>>> 0a466ed (.)
+=======
+>>>>>>> 37a2da6 (.)
 use Filament\Tables;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Filters\SelectFilter;
@@ -34,6 +40,9 @@ class ListMedia extends XotBaseListRecords
      * @return array<string, Tables\Columns\Column>
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 37a2da6 (.)
     #[Override]
     public function getTableColumns(): array
     {
@@ -51,6 +60,7 @@ class ListMedia extends XotBaseListRecords
                 2,
             ) . ' KB'),
             'created_at' => TextColumn::make('created_at')->dateTime(),
+<<<<<<< HEAD
 =======
     public function getTableColumns(): array
     {
@@ -77,6 +87,8 @@ class ListMedia extends XotBaseListRecords
             'created_at' => TextColumn::make('created_at')
                 ->dateTime(),
 >>>>>>> 0a466ed (.)
+=======
+>>>>>>> 37a2da6 (.)
         ];
     }
 
@@ -84,6 +96,9 @@ class ListMedia extends XotBaseListRecords
      * @return array<string, BaseFilter>
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 37a2da6 (.)
     #[Override]
     public function getTableFilters(): array
     {
@@ -96,6 +111,7 @@ class ListMedia extends XotBaseListRecords
                 'mime_type',
                 'mime_type',
             )->toArray(...)),
+<<<<<<< HEAD
 =======
     public function getTableFilters(): array
     {
@@ -105,6 +121,8 @@ class ListMedia extends XotBaseListRecords
             'mime_type' => SelectFilter::make('mime_type')
                 ->options(fn () => Media::distinct()->pluck('mime_type', 'mime_type')->toArray()),
 >>>>>>> 0a466ed (.)
+=======
+>>>>>>> 37a2da6 (.)
         ];
     }
 
@@ -112,6 +130,9 @@ class ListMedia extends XotBaseListRecords
      * @return array<string, Action|ActionGroup>
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 37a2da6 (.)
     #[Override]
     public function getTableActions(): array
     {
@@ -135,6 +156,7 @@ class ListMedia extends XotBaseListRecords
                     return $res;
                 })
                 ->openUrlInNewTab(true),
+<<<<<<< HEAD
 =======
     public function getTableActions(): array
     {
@@ -168,6 +190,8 @@ class ListMedia extends XotBaseListRecords
                     }
                 )->openUrlInNewTab(true),
 >>>>>>> 0a466ed (.)
+=======
+>>>>>>> 37a2da6 (.)
         ];
     }
 }

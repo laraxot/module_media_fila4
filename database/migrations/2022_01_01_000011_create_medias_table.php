@@ -14,11 +14,15 @@ use Modules\Xot\Database\Migrations\XotBaseMigration;
  * Class CreateImagesTable.
  */
 <<<<<<< HEAD
+<<<<<<< HEAD
 return new class extends XotBaseMigration {
 =======
 return new class extends XotBaseMigration
 {
 >>>>>>> 0a466ed (.)
+=======
+return new class extends XotBaseMigration {
+>>>>>>> 37a2da6 (.)
     /**
      * i don't write table name, it take from Model, model is singular of this class wit.
      */
@@ -26,6 +30,9 @@ return new class extends XotBaseMigration
     {
         // -- CREATE --
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 37a2da6 (.)
         $this->tableCreate(function (Blueprint $table): void {
             $table->id();
             // $table->bigIncrements('id');
@@ -53,6 +60,7 @@ return new class extends XotBaseMigration
             }
             $this->updateTimestamps($table, true);
         });
+<<<<<<< HEAD
 =======
         $this->tableCreate(
             function (Blueprint $table): void {
@@ -86,5 +94,7 @@ return new class extends XotBaseMigration
             }
         );
 >>>>>>> 0a466ed (.)
+=======
+>>>>>>> 37a2da6 (.)
     }
 };

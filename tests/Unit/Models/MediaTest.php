@@ -97,12 +97,16 @@ class MediaTest extends TestCase
 
         // Verifica campi JSON
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 37a2da6 (.)
         static::assertSame(['resize' => ['width' => 800, 'height' => 600]], $media->manipulations);
         static::assertSame(['alt' => 'Test Image', 'caption' => 'A test image'], $media->custom_properties);
         static::assertSame(['thumb' => true, 'medium' => true], $media->generated_conversions);
         static::assertSame(['thumb' => 'thumb.jpg', 'medium' => 'medium.jpg'], $media->responsive_images);
         static::assertSame(['camera' => 'Canon', 'iso' => 100], $media->exif);
         static::assertSame(['featured' => true, 'gallery' => false], $media->curations);
+<<<<<<< HEAD
 =======
         $this->assertEquals(['resize' => ['width' => 800, 'height' => 600]], $media->manipulations);
         $this->assertEquals(['alt' => 'Test Image', 'caption' => 'A test image'], $media->custom_properties);
@@ -111,6 +115,8 @@ class MediaTest extends TestCase
         $this->assertEquals(['camera' => 'Canon', 'iso' => 100], $media->exif);
         $this->assertEquals(['featured' => true, 'gallery' => false], $media->curations);
 >>>>>>> 0a466ed (.)
+=======
+>>>>>>> 37a2da6 (.)
     }
 
     public function test_media_has_soft_deletes(): void
@@ -137,10 +143,14 @@ class MediaTest extends TestCase
 
         $this->assertDatabaseHas('media', ['id' => $mediaId]);
 <<<<<<< HEAD
+<<<<<<< HEAD
         static::assertNull($restoredMedia->deleted_at);
 =======
         $this->assertNull($restoredMedia->deleted_at);
 >>>>>>> 0a466ed (.)
+=======
+        static::assertNull($restoredMedia->deleted_at);
+>>>>>>> 37a2da6 (.)
     }
 
     public function test_can_find_media_by_model_type(): void
@@ -150,12 +160,17 @@ class MediaTest extends TestCase
         $foundMedia = Media::where('model_type', 'App\Models\UniqueModel')->first();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         static::assertNotNull($foundMedia);
         static::assertSame($media->id, $foundMedia->id);
 =======
         $this->assertNotNull($foundMedia);
         $this->assertEquals($media->id, $foundMedia->id);
 >>>>>>> 0a466ed (.)
+=======
+        static::assertNotNull($foundMedia);
+        static::assertSame($media->id, $foundMedia->id);
+>>>>>>> 37a2da6 (.)
     }
 
     public function test_can_find_media_by_model_id(): void
@@ -165,12 +180,17 @@ class MediaTest extends TestCase
         $foundMedia = Media::where('model_id', '999')->first();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         static::assertNotNull($foundMedia);
         static::assertSame($media->id, $foundMedia->id);
 =======
         $this->assertNotNull($foundMedia);
         $this->assertEquals($media->id, $foundMedia->id);
 >>>>>>> 0a466ed (.)
+=======
+        static::assertNotNull($foundMedia);
+        static::assertSame($media->id, $foundMedia->id);
+>>>>>>> 37a2da6 (.)
     }
 
     public function test_can_find_media_by_collection_name(): void
@@ -182,12 +202,17 @@ class MediaTest extends TestCase
         $avatarMedia = Media::where('collection_name', 'avatars')->get();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         static::assertCount(1, $avatarMedia);
         static::assertSame('avatars', $avatarMedia->first()->collection_name);
 =======
         $this->assertCount(1, $avatarMedia);
         $this->assertEquals('avatars', $avatarMedia->first()->collection_name);
 >>>>>>> 0a466ed (.)
+=======
+        static::assertCount(1, $avatarMedia);
+        static::assertSame('avatars', $avatarMedia->first()->collection_name);
+>>>>>>> 37a2da6 (.)
     }
 
     public function test_can_find_media_by_name(): void
@@ -197,12 +222,17 @@ class MediaTest extends TestCase
         $foundMedia = Media::where('name', 'unique-media-name')->first();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         static::assertNotNull($foundMedia);
         static::assertSame($media->id, $foundMedia->id);
 =======
         $this->assertNotNull($foundMedia);
         $this->assertEquals($media->id, $foundMedia->id);
 >>>>>>> 0a466ed (.)
+=======
+        static::assertNotNull($foundMedia);
+        static::assertSame($media->id, $foundMedia->id);
+>>>>>>> 37a2da6 (.)
     }
 
     public function test_can_find_media_by_file_name(): void
@@ -212,12 +242,17 @@ class MediaTest extends TestCase
         $foundMedia = Media::where('file_name', 'unique-file.jpg')->first();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         static::assertNotNull($foundMedia);
         static::assertSame($media->id, $foundMedia->id);
 =======
         $this->assertNotNull($foundMedia);
         $this->assertEquals($media->id, $foundMedia->id);
 >>>>>>> 0a466ed (.)
+=======
+        static::assertNotNull($foundMedia);
+        static::assertSame($media->id, $foundMedia->id);
+>>>>>>> 37a2da6 (.)
     }
 
     public function test_can_find_media_by_disk(): void
@@ -229,12 +264,17 @@ class MediaTest extends TestCase
         $publicMedia = Media::where('disk', 'public')->get();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         static::assertCount(1, $publicMedia);
         static::assertSame('public', $publicMedia->first()->disk);
 =======
         $this->assertCount(1, $publicMedia);
         $this->assertEquals('public', $publicMedia->first()->disk);
 >>>>>>> 0a466ed (.)
+=======
+        static::assertCount(1, $publicMedia);
+        static::assertSame('public', $publicMedia->first()->disk);
+>>>>>>> 37a2da6 (.)
     }
 
     public function test_can_find_media_by_mime_type(): void
@@ -246,12 +286,17 @@ class MediaTest extends TestCase
         $jpegMedia = Media::where('mime_type', 'image/jpeg')->get();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         static::assertCount(1, $jpegMedia);
         static::assertSame('image/jpeg', $jpegMedia->first()->mime_type);
 =======
         $this->assertCount(1, $jpegMedia);
         $this->assertEquals('image/jpeg', $jpegMedia->first()->mime_type);
 >>>>>>> 0a466ed (.)
+=======
+        static::assertCount(1, $jpegMedia);
+        static::assertSame('image/jpeg', $jpegMedia->first()->mime_type);
+>>>>>>> 37a2da6 (.)
     }
 
     public function test_can_find_media_by_size_range(): void
@@ -263,12 +308,17 @@ class MediaTest extends TestCase
         $largeMedia = Media::where('size', '>', 1000)->get();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         static::assertCount(2, $largeMedia);
         static::assertTrue($largeMedia->every(fn($media) => $media->size > 1000));
 =======
         $this->assertCount(2, $largeMedia);
         $this->assertTrue($largeMedia->every(fn ($media) => $media->size > 1000));
 >>>>>>> 0a466ed (.)
+=======
+        static::assertCount(2, $largeMedia);
+        static::assertTrue($largeMedia->every(fn($media) => $media->size > 1000));
+>>>>>>> 37a2da6 (.)
     }
 
     public function test_can_find_media_by_type(): void
@@ -280,12 +330,17 @@ class MediaTest extends TestCase
         $imageMedia = Media::where('type', 'image')->get();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         static::assertCount(1, $imageMedia);
         static::assertSame('image', $imageMedia->first()->type);
 =======
         $this->assertCount(1, $imageMedia);
         $this->assertEquals('image', $imageMedia->first()->type);
 >>>>>>> 0a466ed (.)
+=======
+        static::assertCount(1, $imageMedia);
+        static::assertSame('image', $imageMedia->first()->type);
+>>>>>>> 37a2da6 (.)
     }
 
     public function test_can_find_media_by_extension(): void
@@ -297,12 +352,17 @@ class MediaTest extends TestCase
         $jpgMedia = Media::where('ext', 'jpg')->get();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         static::assertCount(1, $jpgMedia);
         static::assertSame('jpg', $jpgMedia->first()->ext);
 =======
         $this->assertCount(1, $jpgMedia);
         $this->assertEquals('jpg', $jpgMedia->first()->ext);
 >>>>>>> 0a466ed (.)
+=======
+        static::assertCount(1, $jpgMedia);
+        static::assertSame('jpg', $jpgMedia->first()->ext);
+>>>>>>> 37a2da6 (.)
     }
 
     public function test_can_find_media_by_dimensions(): void
@@ -314,12 +374,17 @@ class MediaTest extends TestCase
         $hdMedia = Media::where('width', '>=', 1920)->get();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         static::assertCount(1, $hdMedia);
         static::assertSame(1920, $hdMedia->first()->width);
 =======
         $this->assertCount(1, $hdMedia);
         $this->assertEquals(1920, $hdMedia->first()->width);
 >>>>>>> 0a466ed (.)
+=======
+        static::assertCount(1, $hdMedia);
+        static::assertSame(1920, $hdMedia->first()->width);
+>>>>>>> 37a2da6 (.)
     }
 
     public function test_can_find_media_by_name_pattern(): void
@@ -331,12 +396,17 @@ class MediaTest extends TestCase
         $profileMedia = Media::where('name', 'like', '%profile%')->get();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         static::assertCount(1, $profileMedia);
         static::assertTrue($profileMedia->every(fn($media) => str_contains($media->name, 'profile')));
 =======
         $this->assertCount(1, $profileMedia);
         $this->assertTrue($profileMedia->every(fn ($media) => str_contains($media->name, 'profile')));
 >>>>>>> 0a466ed (.)
+=======
+        static::assertCount(1, $profileMedia);
+        static::assertTrue($profileMedia->every(fn($media) => str_contains($media->name, 'profile')));
+>>>>>>> 37a2da6 (.)
     }
 
     public function test_can_find_media_by_custom_properties(): void
@@ -352,12 +422,17 @@ class MediaTest extends TestCase
         $avatarMedia = Media::whereJsonContains('custom_properties->category', 'avatar')->get();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         static::assertCount(1, $avatarMedia);
         static::assertSame('avatar', $avatarMedia->first()->custom_properties['category']);
 =======
         $this->assertCount(1, $avatarMedia);
         $this->assertEquals('avatar', $avatarMedia->first()->custom_properties['category']);
 >>>>>>> 0a466ed (.)
+=======
+        static::assertCount(1, $avatarMedia);
+        static::assertSame('avatar', $avatarMedia->first()->custom_properties['category']);
+>>>>>>> 37a2da6 (.)
     }
 
     public function test_can_find_media_by_manipulations(): void
@@ -373,12 +448,17 @@ class MediaTest extends TestCase
         $resizeMedia = Media::whereJsonContains('manipulations->resize', ['width' => 800, 'height' => 600])->get();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         static::assertCount(1, $resizeMedia);
         static::assertArrayHasKey('resize', $resizeMedia->first()->manipulations);
 =======
         $this->assertCount(1, $resizeMedia);
         $this->assertArrayHasKey('resize', $resizeMedia->first()->manipulations);
 >>>>>>> 0a466ed (.)
+=======
+        static::assertCount(1, $resizeMedia);
+        static::assertArrayHasKey('resize', $resizeMedia->first()->manipulations);
+>>>>>>> 37a2da6 (.)
     }
 
     public function test_can_update_media(): void
@@ -459,11 +539,15 @@ class MediaTest extends TestCase
         ]);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 37a2da6 (.)
         $avatarImages = Media::where('collection_name', 'avatars')->where('type', 'image')->get();
 
         static::assertCount(1, $avatarImages);
         static::assertSame('avatars', $avatarImages->first()->collection_name);
         static::assertSame('image', $avatarImages->first()->type);
+<<<<<<< HEAD
 =======
         $avatarImages = Media::where('collection_name', 'avatars')
             ->where('type', 'image')
@@ -473,6 +557,8 @@ class MediaTest extends TestCase
         $this->assertEquals('avatars', $avatarImages->first()->collection_name);
         $this->assertEquals('image', $avatarImages->first()->type);
 >>>>>>> 0a466ed (.)
+=======
+>>>>>>> 37a2da6 (.)
     }
 
     public function test_media_has_media_converts_relationship(): void
@@ -480,10 +566,14 @@ class MediaTest extends TestCase
         $media = Media::factory()->create();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         static::assertTrue(method_exists($media, 'mediaConverts'));
 =======
         $this->assertTrue(method_exists($media, 'mediaConverts'));
 >>>>>>> 0a466ed (.)
+=======
+        static::assertTrue(method_exists($media, 'mediaConverts'));
+>>>>>>> 37a2da6 (.)
     }
 
     public function test_media_has_temporary_upload_relationship(): void
@@ -491,10 +581,14 @@ class MediaTest extends TestCase
         $media = Media::factory()->create();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         static::assertTrue(method_exists($media, 'temporaryUpload'));
 =======
         $this->assertTrue(method_exists($media, 'temporaryUpload'));
 >>>>>>> 0a466ed (.)
+=======
+        static::assertTrue(method_exists($media, 'temporaryUpload'));
+>>>>>>> 37a2da6 (.)
     }
 
     public function test_media_has_creator_relationship(): void
@@ -502,10 +596,14 @@ class MediaTest extends TestCase
         $media = Media::factory()->create();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         static::assertTrue(method_exists($media, 'creator'));
 =======
         $this->assertTrue(method_exists($media, 'creator'));
 >>>>>>> 0a466ed (.)
+=======
+        static::assertTrue(method_exists($media, 'creator'));
+>>>>>>> 37a2da6 (.)
     }
 
     public function test_media_can_get_url_conversion(): void
@@ -517,6 +615,9 @@ class MediaTest extends TestCase
 
         $thumbUrl = $media->getUrlConv('thumb');
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 37a2da6 (.)
         static::assertStringContainsString('thumb.jpg', $thumbUrl);
 
         $url800 = $media->getUrlConv('800');
@@ -524,6 +625,7 @@ class MediaTest extends TestCase
 
         $url400 = $media->getUrlConv('400');
         static::assertStringContainsString('400.jpg', $url400);
+<<<<<<< HEAD
 =======
         $this->assertStringContainsString('thumb.jpg', $thumbUrl);
 
@@ -533,6 +635,8 @@ class MediaTest extends TestCase
         $url400 = $media->getUrlConv('400');
         $this->assertStringContainsString('400.jpg', $url400);
 >>>>>>> 0a466ed (.)
+=======
+>>>>>>> 37a2da6 (.)
     }
 
     public function test_media_has_entry_conversions_attribute(): void
@@ -544,11 +648,15 @@ class MediaTest extends TestCase
         $entryConversions = $media->entry_conversions;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 37a2da6 (.)
         static::assertIsArray($entryConversions);
         static::assertCount(2, $entryConversions);
         static::assertArrayHasKey('name', $entryConversions[0]);
         static::assertArrayHasKey('generated', $entryConversions[0]);
         static::assertArrayHasKey('src', $entryConversions[0]);
+<<<<<<< HEAD
 =======
         $this->assertIsArray($entryConversions);
         $this->assertCount(2, $entryConversions);
@@ -556,6 +664,8 @@ class MediaTest extends TestCase
         $this->assertArrayHasKey('generated', $entryConversions[0]);
         $this->assertArrayHasKey('src', $entryConversions[0]);
 >>>>>>> 0a466ed (.)
+=======
+>>>>>>> 37a2da6 (.)
     }
 
     public function test_media_has_factory(): void
@@ -563,12 +673,17 @@ class MediaTest extends TestCase
         $media = Media::factory()->create();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         static::assertNotNull($media->id);
         static::assertInstanceOf(Media::class, $media);
 =======
         $this->assertNotNull($media->id);
         $this->assertInstanceOf(Media::class, $media);
 >>>>>>> 0a466ed (.)
+=======
+        static::assertNotNull($media->id);
+        static::assertInstanceOf(Media::class, $media);
+>>>>>>> 37a2da6 (.)
     }
 
     public function test_media_has_casts(): void
@@ -591,9 +706,13 @@ class MediaTest extends TestCase
         ];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         static::assertSame($expectedCasts, $media->getCasts());
 =======
         $this->assertEquals($expectedCasts, $media->getCasts());
 >>>>>>> 0a466ed (.)
+=======
+        static::assertSame($expectedCasts, $media->getCasts());
+>>>>>>> 37a2da6 (.)
     }
 }
