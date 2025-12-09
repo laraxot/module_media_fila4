@@ -5,10 +5,19 @@ declare(strict_types=1);
 namespace Modules\Media\Datas;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use FFMpeg\Format\Video\DefaultVideo;
 use FFMpeg\Format\Video\WebM;
 =======
+=======
+>>>>>>> 47a54fe (.)
 use FFMpeg\Format\Video\WebM;
+=======
+<<<<<<< HEAD
+use FFMpeg\Format\Video\WebM;
+=======
+>>>>>>> origin/develop
+>>>>>>> e9b0959 (.)
 use FFMpeg\Format\Video\DefaultVideo;
 >>>>>>> 5200b63 (.)
 use Illuminate\Support\Facades\Storage;
@@ -44,6 +53,7 @@ class ConvertData extends Data implements Wireable
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     public ?int $width = null;
 
     public ?int $height = null;
@@ -62,6 +72,13 @@ class ConvertData extends Data implements Wireable
 >>>>>>> 98c37f4 (.)
 =======
 >>>>>>> a80d398 (.)
+=======
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> e9b0959 (.)
+>>>>>>> 47a54fe (.)
     public null|int $width = null;
 
     public null|int $height = null;
@@ -74,10 +91,32 @@ class ConvertData extends Data implements Wireable
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 5200b63 (.)
 =======
 =======
 >>>>>>> 98c37f4 (.)
+=======
+=======
+=======
+    public ?int $width = null;
+=======
+    public null|int $width = null;
+>>>>>>> b93ef594b4 (.)
+
+    public null|int $height = null;
+
+    // -threads 4: utilizza 4 thread per l'elaborazione, aumentando la velocità di conversione sfruttando il multi-threading.
+    public null|int $threads = null;
+
+    // -speed 4: imposta la velocità del codec VP9 a 4, che è un valore elevato per massimizzare la velocità di codifica.
+<<<<<<< HEAD
+    public ?int $speed = null;
+>>>>>>> a12f125f4a (.)
+=======
+    public null|int $speed = null;
+>>>>>>> b93ef594b4 (.)
+>>>>>>> 47a54fe (.)
 =======
     public ?int $width = null;
 
@@ -88,6 +127,7 @@ class ConvertData extends Data implements Wireable
 
     // -speed 4: imposta la velocità del codec VP9 a 4, che è un valore elevato per massimizzare la velocità di codifica.
     public ?int $speed = null;
+<<<<<<< HEAD
 >>>>>>> 0a466ed (.)
 <<<<<<< HEAD
 >>>>>>> 06bb10d (.)
@@ -97,6 +137,10 @@ class ConvertData extends Data implements Wireable
 >>>>>>> 98c37f4 (.)
 =======
 >>>>>>> a80d398 (.)
+=======
+>>>>>>> origin/develop
+>>>>>>> e9b0959 (.)
+>>>>>>> 47a54fe (.)
 
     public function exists(): bool
     {
@@ -105,7 +149,15 @@ class ConvertData extends Data implements Wireable
 
     public function getFFMpegFormat(): DefaultVideo
     {
+<<<<<<< HEAD
         $format = new WebM($this->codec_audio, $this->codec_video);
+=======
+<<<<<<< HEAD
+        $format = new WebM($this->codec_audio, $this->codec_video);
+=======
+        $format = new \FFMpeg\Format\Video\WebM($this->codec_audio, $this->codec_video);
+>>>>>>> origin/develop
+>>>>>>> e9b0959 (.)
         $format = $format->setKiloBitrate((int) $this->bitrate);
         Assert::isInstanceOf($format, DefaultVideo::class);
 
@@ -121,6 +173,7 @@ class ConvertData extends Data implements Wireable
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         return Str::of($this->file)->replaceLast('.mp4', '.'.$extension)->toString();
 =======
         return Str::of($this->file)->replaceLast('.mp4', '.' . $extension)->toString();
@@ -128,11 +181,19 @@ class ConvertData extends Data implements Wireable
 =======
 =======
 >>>>>>> 98c37f4 (.)
+=======
+        return Str::of($this->file)->replaceLast('.mp4', '.' . $extension)->toString();
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 47a54fe (.)
         return Str::of($this->file)->replaceLast('.mp4', '.' . $extension)->toString();
 =======
         return Str::of($this->file)
             ->replaceLast('.mp4', '.'.$extension)
             ->toString();
+<<<<<<< HEAD
 >>>>>>> 0a466ed (.)
 <<<<<<< HEAD
 >>>>>>> 06bb10d (.)
@@ -144,5 +205,17 @@ class ConvertData extends Data implements Wireable
 =======
         return Str::of($this->file)->replaceLast('.mp4', '.' . $extension)->toString();
 >>>>>>> a80d398 (.)
+=======
+>>>>>>> a12f125f4a (.)
+=======
+        return Str::of($this->file)->replaceLast('.mp4', '.' . $extension)->toString();
+>>>>>>> b93ef594b4 (.)
+=======
+        return Str::of($this->file)
+            ->replaceLast('.mp4', '.'.$extension)
+            ->toString();
+>>>>>>> origin/develop
+>>>>>>> e9b0959 (.)
+>>>>>>> 47a54fe (.)
     }
 }

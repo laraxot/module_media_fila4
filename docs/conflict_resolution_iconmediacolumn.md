@@ -79,12 +79,18 @@ Il file `Modules/Media/app/Filament/Tables/Columns/IconMediaColumn.php` presenta
 - [filament_table_actions.md](filament_table_actions.md)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 47a54fe (.)
 - [Modules/Media/docs/](../docs/)
 =======
 - [Modules/Media/project_docs/](../project_docs/)
 >>>>>>> e9b0959 (.)
+<<<<<<< HEAD
 =======
 - [Modules/Media/docs/](../docs/)
 >>>>>>> 0caa3cf (.)
+=======
+>>>>>>> 47a54fe (.)
 
 *Ultimo aggiornamento: 29 luglio 2025*
