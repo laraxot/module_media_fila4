@@ -17,7 +17,6 @@ use Modules\Media\Tests\TestCase;
  * |
  */
 
-/** @phpstan-ignore-next-line method.internalClass */
 pest()->extend(TestCase::class)->in('Feature', 'Unit');
 
 /*
@@ -31,10 +30,9 @@ pest()->extend(TestCase::class)->in('Feature', 'Unit');
  * |
  */
 
-expect()->extend('toBeMedia', function (): mixed {
-    /** @phpstan-ignore-next-line variable.undefined */
-    return $this->toBeInstanceOf(Media::class);
-});
+expect()->extend('toBeMedia', fn () => $this->toBeInstanceOf(Media::class));
+
+expect()->extend('toBeMediaCollection', fn () => $this->toBeInstanceOf(MediaCollection::class));
 
 /*
  * |--------------------------------------------------------------------------
@@ -47,58 +45,22 @@ expect()->extend('toBeMedia', function (): mixed {
  * |
  */
 
-/**
- * @param array<string, mixed> $attributes
- */
 function createMedia(array $attributes = []): Media
 {
-    $Media = Media::factory()->create($attributes);
-    assert($Media instanceof Media);
-    return $Media;
+    return Media::factory()->create($attributes);
 }
 
-/**
- * @param array<string, mixed> $attributes
- */
 function makeMedia(array $attributes = []): Media
 {
-    $Media = Media::factory()->make($attributes);
-    assert($Media instanceof Media);
-    return $Media;
+    return Media::factory()->make($attributes);
 }
 
-/**
- * @param array<string, mixed> $attributes
- * @return MediaCollection
- * @phpstan-ignore-next-line class.notFound
- */
 function createMediaCollection(array $attributes = []): MediaCollection
 {
-    /** @var \Illuminate\Database\Eloquent\Factories\Factory<MediaCollection> $factory */
-    /** @phpstan-ignore-next-line class.notFound */
-    $factory = MediaCollection::factory();
-
-    /** @var MediaCollection $mediaCollection */
-    /** @phpstan-ignore-next-line class.notFound */
-    $mediaCollection = $factory->create($attributes);
-
-    return $mediaCollection;
+    return MediaCollection::factory()->create($attributes);
 }
 
-/**
- * @param array<string, mixed> $attributes
- * @return MediaCollection
- * @phpstan-ignore-next-line class.notFound
- */
 function makeMediaCollection(array $attributes = []): MediaCollection
 {
-    /** @var \Illuminate\Database\Eloquent\Factories\Factory<MediaCollection> $factory */
-    /** @phpstan-ignore-next-line class.notFound */
-    $factory = MediaCollection::factory();
-
-    /** @var MediaCollection $mediaCollection */
-    /** @phpstan-ignore-next-line class.notFound */
-    $mediaCollection = $factory->make($attributes);
-
-    return $mediaCollection;
+    return MediaCollection::factory()->make($attributes);
 }
