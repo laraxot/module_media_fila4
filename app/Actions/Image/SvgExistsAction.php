@@ -63,6 +63,7 @@ class SvgExistsAction
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 =======
@@ -70,10 +71,13 @@ class SvgExistsAction
 =======
 >>>>>>> b8fda23 (.)
 =======
+>>>>>>> 9a4eacb (.)
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> e9b0959 (.)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -123,6 +127,8 @@ class SvgExistsAction
 >>>>>>> 760b37c (.)
 =======
 >>>>>>> 3f513a2 (.)
+=======
+>>>>>>> 9a4eacb (.)
 
         foreach ($packs as $pack) {
             Assert::isArray($pack, 'Ogni pacchetto deve essere un array');
@@ -131,6 +137,7 @@ class SvgExistsAction
             $icons = $pack['icons'];
             Assert::isIterable($icons, 'icons deve essere un array o un oggetto iterabile');
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -163,6 +170,8 @@ class SvgExistsAction
 >>>>>>> 1d21a10 (.)
 =======
 >>>>>>> b8fda23 (.)
+=======
+>>>>>>> 9a4eacb (.)
 =======
 =======
         
@@ -185,6 +194,7 @@ class SvgExistsAction
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 06bb10d (.)
 =======
 >>>>>>> 98c37f4 (.)
@@ -204,6 +214,8 @@ class SvgExistsAction
 =======
 =======
 >>>>>>> c08a553 (.)
+=======
+>>>>>>> 9a4eacb (.)
         
         foreach ($packs as $pack) {
             Assert::isArray($pack, 'Ogni pacchetto deve essere un array');
@@ -212,6 +224,7 @@ class SvgExistsAction
             $icons = $pack['icons'];
             Assert::isIterable($icons, 'icons deve essere un array o un oggetto iterabile');
             
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -281,6 +294,10 @@ class SvgExistsAction
 >>>>>>> 760b37c (.)
 =======
 >>>>>>> 3f513a2 (.)
+=======
+>>>>>>> origin/develop
+>>>>>>> e9b0959 (.)
+>>>>>>> 9a4eacb (.)
             foreach ($icons as $icon) {
                 if ($svgName === $icon) {
                     return true;
