@@ -17,15 +17,19 @@ declare(strict_types=1);
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 =======
 >>>>>>> 1d21a10 (.)
 =======
+>>>>>>> b8fda23 (.)
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> e9b0959 (.)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -50,6 +54,8 @@ declare(strict_types=1);
 >>>>>>> 89eb716 (.)
 =======
 >>>>>>> af40dd6 (.)
+=======
+>>>>>>> b8fda23 (.)
 use Modules\Media\Models\Media;
 use Modules\Media\Models\MediaCollection;
 use Modules\Media\Tests\TestCase;
@@ -98,6 +104,7 @@ expect()->extend('toBe' + 'Media' + '', function () {
  * | global functions to help you to reduce the number of lines of code in your test files.
  * |
  */
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -266,6 +273,8 @@ use Modules\Media\Models\MediaCollection;
 =======
 =======
 >>>>>>> 1d21a10 (.)
+=======
+>>>>>>> b8fda23 (.)
 =======
 =======
 namespace Modules\Media\Tests;
@@ -309,9 +318,12 @@ expect()->extend('toBeMediaCollection', fn () => $this->toBeInstanceOf(MediaColl
 =======
 use Modules\Media\Tests\TestCase;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 47a54fe (.)
 =======
 >>>>>>> 1d21a10 (.)
+=======
+>>>>>>> b8fda23 (.)
 
 /*
 |--------------------------------------------------------------------------
@@ -341,6 +353,7 @@ pest()->extend(TestCase::class)
 expect()->extend('toBeMedia', function () {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 877e05f (.)
 =======
@@ -358,6 +371,8 @@ expect()->extend('toBeMediaCollection', function () {
 =======
 =======
 >>>>>>> 1d21a10 (.)
+=======
+>>>>>>> b8fda23 (.)
     return $this->toBeInstanceOf(\Modules\Media\Models\Media::class);
 });
 
@@ -368,6 +383,7 @@ expect()->extend('toBeMediaCollection', function () {
 /*
 >>>>>>> origin/develop
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 47a54fe (.)
 =======
 >>>>>>> 877e05f (.)
@@ -375,6 +391,8 @@ expect()->extend('toBeMediaCollection', function () {
 >>>>>>> 1d21a10 (.)
 =======
 >>>>>>> 054dfa6 (.)
+=======
+>>>>>>> b8fda23 (.)
 |--------------------------------------------------------------------------
 | Functions
 |--------------------------------------------------------------------------
@@ -384,6 +402,7 @@ expect()->extend('toBeMediaCollection', function () {
 | global functions to help you to reduce the number of lines of code in your test files.
 |
 */
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -403,6 +422,8 @@ expect()->extend('toBeMediaCollection', function () {
 <<<<<<< HEAD
 =======
 >>>>>>> 1d21a10 (.)
+=======
+>>>>>>> b8fda23 (.)
 >>>>>>> a12f125f4a (.)
 =======
  * |--------------------------------------------------------------------------
@@ -416,6 +437,7 @@ expect()->extend('toBeMediaCollection', function () {
  */
 >>>>>>> b93ef594b4 (.)
 >>>>>>> e9b0959 (.)
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 47a54fe (.)
 =======
@@ -442,6 +464,8 @@ expect()->extend('toBeMediaCollection', function () {
 >>>>>>> 89eb716 (.)
 =======
 >>>>>>> af40dd6 (.)
+=======
+>>>>>>> b8fda23 (.)
 
 function createMedia(array $attributes = []): Media
 {
@@ -467,10 +491,13 @@ function makeMediaCollection(array $attributes = []): MediaCollection
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 =======
 >>>>>>> 1d21a10 (.)
+=======
+>>>>>>> b8fda23 (.)
 =======
 =======
 
@@ -496,6 +523,7 @@ function makeMediaCollection(array $attributes = []): \Modules\Media\Models\Medi
 >>>>>>> e9b0959 (.)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 5200b63 (.)
 =======
@@ -506,4 +534,6 @@ function makeMediaCollection(array $attributes = []): \Modules\Media\Models\Medi
 >>>>>>> 1d21a10 (.)
 =======
 >>>>>>> 146bbc3 (.)
+=======
+>>>>>>> b8fda23 (.)
 }
