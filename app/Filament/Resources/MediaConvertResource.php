@@ -4,30 +4,11 @@ declare(strict_types=1);
 
 namespace Modules\Media\Filament\Resources;
 
-<<<<<<< HEAD
 use Filament\Schemas\Components\Component;
 use Override;
 use Modules\Media\Filament\Resources\MediaConvertResource\Pages\ListMediaConverts;
 use Modules\Media\Filament\Resources\MediaConvertResource\Pages\CreateMediaConvert;
 use Modules\Media\Filament\Resources\MediaConvertResource\Pages\EditMediaConvert;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-use Filament\Schemas\Components\Component;
-use Override;
-=======
->>>>>>> a12f125f4a (.)
-=======
-use Filament\Schemas\Components\Component;
-use Override;
->>>>>>> b93ef594b4 (.)
-use Modules\Media\Filament\Resources\MediaConvertResource\Pages\ListMediaConverts;
-use Modules\Media\Filament\Resources\MediaConvertResource\Pages\CreateMediaConvert;
-use Modules\Media\Filament\Resources\MediaConvertResource\Pages\EditMediaConvert;
-=======
->>>>>>> origin/develop
->>>>>>> e9b0959 (.)
 use Filament\Forms\Components\Radio;
 use Filament\Forms\Components\TextInput;
 use Modules\Media\Filament\Resources\MediaConvertResource\Pages;
@@ -36,42 +17,12 @@ use Modules\Xot\Filament\Resources\XotBaseResource;
 
 class MediaConvertResource extends XotBaseResource
 {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> e9b0959 (.)
     protected static null|string $model = MediaConvert::class;
 
     /**
      * @return array<string, Component>
      */
     #[Override]
-<<<<<<< HEAD
-=======
-=======
-    protected static ?string $model = MediaConvert::class;
-=======
-    protected static null|string $model = MediaConvert::class;
->>>>>>> b93ef594b4 (.)
-
-    /**
-     * @return array<string, Component>
-     */
-<<<<<<< HEAD
->>>>>>> a12f125f4a (.)
-=======
-    #[Override]
->>>>>>> b93ef594b4 (.)
-=======
-    protected static ?string $model = MediaConvert::class;
-
-    /**
-     * @return array<string, \Filament\Forms\Components\Component>
-     */
->>>>>>> origin/develop
->>>>>>> e9b0959 (.)
     public static function getFormSchema(): array
     {
         return [
@@ -112,12 +63,6 @@ class MediaConvertResource extends XotBaseResource
         ];
     }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> e9b0959 (.)
     #[Override]
     public static function getRelations(): array
     {
@@ -125,46 +70,12 @@ class MediaConvertResource extends XotBaseResource
     }
 
     #[Override]
-<<<<<<< HEAD
-=======
-=======
-=======
-    #[Override]
->>>>>>> b93ef594b4 (.)
-    public static function getRelations(): array
-    {
-        return [];
-    }
-
-<<<<<<< HEAD
->>>>>>> a12f125f4a (.)
-=======
-    #[Override]
->>>>>>> b93ef594b4 (.)
->>>>>>> e9b0959 (.)
     public static function getPages(): array
     {
         return [
             'index' => ListMediaConverts::route('/'),
             'create' => CreateMediaConvert::route('/create'),
             'edit' => EditMediaConvert::route('/{record}/edit'),
-<<<<<<< HEAD
-=======
-=======
-    public static function getRelations(): array
-    {
-        return [
-        ];
-    }
-
-    public static function getPages(): array
-    {
-        return [
-            'index' => Pages\ListMediaConverts::route('/'),
-            'create' => Pages\CreateMediaConvert::route('/create'),
-            'edit' => Pages\EditMediaConvert::route('/{record}/edit'),
->>>>>>> origin/develop
->>>>>>> e9b0959 (.)
         ];
     }
 }
