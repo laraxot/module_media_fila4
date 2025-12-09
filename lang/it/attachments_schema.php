@@ -25,6 +25,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 =======
@@ -88,6 +89,8 @@
 =======
 >>>>>>> 37a2da6 (.)
 >>>>>>> 91c1d65 (.)
+=======
+>>>>>>> c90879e (.)
 declare(strict_types=1);
 
 =======
@@ -214,6 +217,7 @@ return [
         'delete_error' => 'Errore durante l\'eliminazione del file',
     ],
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -509,3 +513,5 @@ return array (
 =======
 >>>>>>> 37a2da6 (.)
 >>>>>>> 91c1d65 (.)
+=======
+>>>>>>> c90879e (.)

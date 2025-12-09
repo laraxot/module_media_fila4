@@ -66,6 +66,7 @@ return [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 =======
@@ -179,6 +180,8 @@ return [
 =======
 >>>>>>> 37a2da6 (.)
 >>>>>>> 91c1d65 (.)
+=======
+>>>>>>> c90879e (.)
     'notifications' => [
         'credentials_tested' => 'AWS credentials tested',
         'bucket_policy_tested' => 'Bucket policy tested',
@@ -219,6 +222,7 @@ return [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 06bb10d (.)
 =======
@@ -440,6 +444,11 @@ return [
 >>>>>>> 10ef3f7 (.)
 =======
 >>>>>>> 91c1d65 (.)
+=======
+    'debug' => [
+        'run_tests_message' => 'Run tests to see results here...',
+    ],
+>>>>>>> c90879e (.)
     'fields' => [
         'attachment' => [
             'label' => 'Attachment',
@@ -477,6 +486,7 @@ return [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 =======
@@ -590,6 +600,8 @@ return [
 =======
 >>>>>>> 37a2da6 (.)
 >>>>>>> 91c1d65 (.)
+=======
+>>>>>>> c90879e (.)
     'messages' => [
         'test_successful' => 'Test completed successfully',
         'test_failed' => 'Test failed',
@@ -625,6 +637,7 @@ return [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 =======
@@ -738,6 +751,8 @@ return [
 =======
 >>>>>>> 37a2da6 (.)
 >>>>>>> 91c1d65 (.)
+=======
+>>>>>>> c90879e (.)
     'errors' => [
         'aws_credentials_invalid' => 'Invalid AWS credentials',
         's3_bucket_inaccessible' => 'S3 bucket not accessible',
@@ -771,6 +786,7 @@ return [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 =======
@@ -884,6 +900,8 @@ return [
 =======
 >>>>>>> 37a2da6 (.)
 >>>>>>> 91c1d65 (.)
+=======
+>>>>>>> c90879e (.)
     'solutions' => [
         'check_credentials' => 'Check AWS credentials in .env',
         'check_bucket_name' => 'Check S3 bucket name',
