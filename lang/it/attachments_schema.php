@@ -21,6 +21,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 =======
@@ -74,6 +75,8 @@
 >>>>>>> 3f513a2 (.)
 =======
 >>>>>>> 9a4eacb (.)
+=======
+>>>>>>> fa051fc (.)
 declare(strict_types=1);
 
 =======
@@ -200,6 +203,7 @@ return [
         'delete_error' => 'Errore durante l\'eliminazione del file',
     ],
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -473,3 +477,5 @@ return array (
 >>>>>>> 3f513a2 (.)
 =======
 >>>>>>> 9a4eacb (.)
+=======
+>>>>>>> fa051fc (.)
