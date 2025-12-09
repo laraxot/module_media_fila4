@@ -182,6 +182,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 =======
@@ -485,11 +486,18 @@
 =======
 # Ultimo aggiornamento: 2025-01-06
 >>>>>>> a70c4fa (.)
+=======
+# Ultimo aggiornamento: 2025-01-06
+=======
+# Ultimo aggiornamento: 2025-01-31
+>>>>>>> e361059 (.)
+>>>>>>> e0b877b (.)
 # ==============================================
 
 # ==============================================
 # DEPENDENCIES & PACKAGES
 # ==============================================
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -585,6 +593,8 @@ npm-debug.log
 >>>>>>> b3efbc8 (.)
 =======
 >>>>>>> 8e24560 (.)
+=======
+>>>>>>> e0b877b (.)
 vendor/
 <<<<<<< HEAD
 /vendor/
@@ -1257,6 +1267,18 @@ package-lock.json
 yarn.lock
 yarn-error.log
 composer.lock
+=======
+/vendor/
+/vendor
+/node_modules/
+/node_modules
+/docs/vendor/
+package-lock.json
+yarn.lock
+composer.lock
+yarn-error.log
+npm-debug.log
+>>>>>>> e361059 (.)
 
 # ==============================================
 # BUILD & COMPILED FILES
@@ -1279,7 +1301,10 @@ cache/
 *.swp
 *.swo
 *.stackdump
+<<<<<<< HEAD
 *.exe
+=======
+>>>>>>> e361059 (.)
 *:Zone.Identifier
 v8-compile-cache-*
 .php-cs-fixer.cache
@@ -1291,7 +1316,10 @@ v8-compile-cache-*
 *.log
 error_log
 npm-debug.log*
+<<<<<<< HEAD
 npm-debug.log
+=======
+>>>>>>> e361059 (.)
 yarn-error.log*
 lerna-debug.log*
 
@@ -1670,6 +1698,7 @@ docs/cache/
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 80a2320 (.)
 =======
@@ -2571,6 +2600,8 @@ database_old/
 >>>>>>> 776536a (.)
 =======
 >>>>>>> a70c4fa (.)
+=======
+>>>>>>> e0b877b (.)
 # OLD DIRECTORIES (LEGACY CLEANUP)
 # ==============================================
 resources/views/Components_old/
@@ -2584,6 +2615,21 @@ database/Factories_old
 database/Factories_
 database_old/
 database_old
+=======
+# LANGUAGE FILES
+# ==============================================
+lang/lang/
+resources/lang/
+
+# ==============================================
+# OLD DIRECTORIES (LEGACY CLEANUP)
+# ==============================================
+resources/views/Components_old/
+database/Migrations_old/
+database/Seeders_old/
+database/Factories_old/
+database_old/
+>>>>>>> e361059 (.)
 
 # ==============================================
 # MODULE SPECIFIC - MEDIA
@@ -2612,7 +2658,9 @@ test_media_files/
 # 🚫 File specifici del progetto
 *.fila2
 laravel
+<<<<<<< HEAD
 public_html
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2809,3 +2857,8 @@ public_html
 >>>>>>> 56f60ef (.)
 =======
 >>>>>>> a70c4fa (.)
+=======
+=======
+public_html
+>>>>>>> e361059 (.)
+>>>>>>> e0b877b (.)
