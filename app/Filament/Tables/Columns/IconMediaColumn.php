@@ -82,6 +82,7 @@ class IconMediaColumn extends IconColumn
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         $this->default(function ($record) use ($attachment) {
                 if (is_object($record) && method_exists($record, 'getFirstMedia')) {
                     return $record->getFirstMedia($attachment);
@@ -162,27 +163,12 @@ class IconMediaColumn extends IconColumn
             return $record->getFirstMedia($attachment);
         })
 >>>>>>> 1634e53 (.)
+=======
+        $this->default(fn ($record) => $record->getFirstMedia($attachment))
+>>>>>>> 21a9aec (.)
             ->icon('heroicon-o-document-text')
-            ->color(static function (mixed $record) use ($attachment): string {
-                if (! is_object($record) || ! method_exists($record, 'getFirstMedia')) {
-                    return 'danger';
-                }
-
-                return $record->getFirstMedia($attachment) ? 'success' : 'danger';
-            })
-            ->tooltip(static function (mixed $record) use ($attachment): string {
-                if (! is_object($record) || ! method_exists($record, 'getFirstMedia')) {
-                    return 'Documento non caricato';
-                }
-                $media = $record->getFirstMedia($attachment);
-                if (! $media || ! is_object($media) || ! isset($media->file_name)) {
-                    return 'Documento non caricato';
-                }
-                /** @var string $fileName */
-                $fileName = $media->file_name;
-
-                return $fileName;
-            })
+            ->color(fn ($record) => $record->getFirstMedia($attachment) ? 'success' : 'danger')
+            ->tooltip(fn ($record) => $record->getFirstMedia($attachment)->file_name ?? 'Documento non caricato')
             /*
              * ->url(function($record) use ($attachment){
              * $media = $record->getFirstMedia($attachment);
@@ -196,14 +182,11 @@ class IconMediaColumn extends IconColumn
              * ->openUrlInNewTab()
              */
 
-            ->action(static function (mixed $record, Request $request) use ($attachment): mixed {
-                /** @phpstan-ignore-next-line function.impossibleType, function.alreadyNarrowedType - Runtime safety check */
-                if (! is_object($record) || ! method_exists($record, 'getFirstMedia')) {
-                    return null;
-                }
+            ->action(function ($record, Request $request) use ($attachment) {
+                // @phpstan-ignore method.nonObject
                 $media = $record->getFirstMedia($attachment);
-                if (! $media || ! is_object($media) || ! method_exists($media, 'toInlineResponse')) {
-                    return null;
+                if (! $media) {
+                    return;
                 }
 
                 // dddx($media->getPath());

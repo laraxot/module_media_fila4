@@ -13,9 +13,12 @@ use Illuminate\Support\Facades\Storage;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 use ProtoneMedia\LaravelFFMpeg\Exporters\MediaExporter;
 >>>>>>> 1634e53 (.)
+=======
+>>>>>>> 21a9aec (.)
 use ProtoneMedia\LaravelFFMpeg\Support\FFMpeg;
 use Spatie\QueueableAction\QueueableAction;
 =======
@@ -86,18 +89,20 @@ class ConvertVideoAction
 
     /**
      * Execute the action.
-     *
-     * @throws \Exception
      */
     public function execute(string $disk_mp4, string $file_mp4, string $file_new): string
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 21a9aec (.)
         $media = FFMpeg::fromDisk($disk_mp4);
 
         $openedMedia = $media->open($file_mp4);
 
         $exportedMedia = $openedMedia->export();
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         $format = new X264;
@@ -126,11 +131,16 @@ class ConvertVideoAction
             ->open($file_mp4)
             ->export();
 >>>>>>> 1634e53 (.)
+=======
+        $format = new X264;
+        $format->setKiloBitrate(1000);
 
-        if (! $exporter instanceof MediaExporter) {
-            throw new \Exception('Failed to create exporter');
-        }
+        $toDiskMedia = $exportedMedia->toDisk($disk_mp4);
+>>>>>>> 21a9aec (.)
 
+        $formattedMedia = $toDiskMedia->inFormat($format);
+
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -207,6 +217,9 @@ class ConvertVideoAction
 
         $formatted->save($file_new);
 >>>>>>> 1634e53 (.)
+=======
+        $formattedMedia->save($file_new);
+>>>>>>> 21a9aec (.)
 
         return Storage::disk($disk_mp4)->url($file_new);
     }
