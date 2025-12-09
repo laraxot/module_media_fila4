@@ -57,10 +57,9 @@ class SaveAttachmentsActionTest extends TestCase
 
         // Mock del record HasMedia
         $record = Mockery::mock(HasMedia::class);
-        /** @phpstan-ignore-next-line method.nonObject */
         $record->shouldReceive('addMedia')->andReturnSelf();
-        /** @phpstan-ignore-next-line method.nonObject */
         $record->shouldReceive('usingFileName')->andReturnSelf();
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -106,6 +105,9 @@ class SaveAttachmentsActionTest extends TestCase
         $record->shouldReceive('toMediaCollection')->andReturn(new Media);
         /** @phpstan-ignore-next-line method.nonObject */
 >>>>>>> 4b10075 (.)
+=======
+        $record->shouldReceive('toMediaCollection')->andReturn(new Media);
+>>>>>>> 9803aa5 (.)
         $record->shouldReceive('update')->andReturn(true);
 
         $attachments = ['invoice', 'contract'];
@@ -119,7 +121,6 @@ class SaveAttachmentsActionTest extends TestCase
         Storage::disk('attachments')->put('temp/contract.pdf', 'fake content');
 
         // Act
-        /** @phpstan-ignore-next-line method.nonObject */
         $action->execute($record, $attachments, $data, 'attachments');
 
         // Assert
@@ -162,14 +163,12 @@ class SaveAttachmentsActionTest extends TestCase
 >>>>>>> f41e45e (.)
 
         $record = Mockery::mock(HasMedia::class);
-        /** @phpstan-ignore-next-line method.nonObject */
         $record->shouldReceive('update')->with([])->andReturn(true);
 
         $attachments = [];
         $data = [];
 
         // Act
-        /** @phpstan-ignore-next-line method.nonObject */
         $action->execute($record, $attachments, $data, 'attachments');
 
         // Assert - non dovrebbe lanciare eccezioni
@@ -211,7 +210,6 @@ class SaveAttachmentsActionTest extends TestCase
 >>>>>>> f41e45e (.)
 
         $record = Mockery::mock(HasMedia::class);
-        /** @phpstan-ignore-next-line method.nonObject */
         $record->shouldReceive('update')->with([])->andReturn(true);
 
         $attachments = ['invoice'];
@@ -220,7 +218,6 @@ class SaveAttachmentsActionTest extends TestCase
         ];
 
         // Act
-        /** @phpstan-ignore-next-line method.nonObject */
         $action->execute($record, $attachments, $data, 'attachments');
 
         // Assert - non dovrebbe lanciare eccezioni
@@ -262,7 +259,6 @@ class SaveAttachmentsActionTest extends TestCase
 >>>>>>> f41e45e (.)
 
         $record = Mockery::mock(HasMedia::class);
-        /** @phpstan-ignore-next-line method.nonObject */
         $record->shouldReceive('addMedia')->andThrow(new Exception('Storage error'));
 
         $attachments = ['invoice'];
@@ -273,12 +269,9 @@ class SaveAttachmentsActionTest extends TestCase
         Storage::disk('attachments')->put('temp/invoice.pdf', 'fake content');
 
         // Act & Assert
-        /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->expectException(Exception::class);
-        /** @phpstan-ignore-next-line property.notFound, method.nonObject */
         $this->expectExceptionMessage('Storage error');
 
-        /** @phpstan-ignore-next-line method.nonObject */
         $action->execute($record, $attachments, $data, 'attachments');
     }
 
@@ -317,10 +310,9 @@ class SaveAttachmentsActionTest extends TestCase
 >>>>>>> f41e45e (.)
 
         $record = Mockery::mock(HasMedia::class);
-        /** @phpstan-ignore-next-line method.nonObject */
         $record->shouldReceive('addMedia')->andReturnSelf();
-        /** @phpstan-ignore-next-line method.nonObject */
         $record->shouldReceive('usingFileName')->andReturnSelf();
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -366,6 +358,9 @@ class SaveAttachmentsActionTest extends TestCase
         $record->shouldReceive('toMediaCollection')->andReturn(new Media);
         /** @phpstan-ignore-next-line method.nonObject */
 >>>>>>> 4b10075 (.)
+=======
+        $record->shouldReceive('toMediaCollection')->andReturn(new Media);
+>>>>>>> 9803aa5 (.)
         $record->shouldReceive('update')->andReturn(true);
 
         $attachments = ['invoice'];
@@ -378,7 +373,6 @@ class SaveAttachmentsActionTest extends TestCase
         Storage::disk('custom_disk')->put('temp/invoice.pdf', 'fake content');
 
         // Act
-        /** @phpstan-ignore-next-line method.nonObject */
         $action->execute($record, $attachments, $data, 'custom_disk');
 
         // Assert
@@ -420,10 +414,9 @@ class SaveAttachmentsActionTest extends TestCase
 >>>>>>> f41e45e (.)
 
         $record = Mockery::mock(HasMedia::class);
-        /** @phpstan-ignore-next-line method.nonObject */
         $record->shouldReceive('addMedia')->andReturnSelf();
-        /** @phpstan-ignore-next-line method.nonObject */
         $record->shouldReceive('usingFileName')->andReturnSelf();
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -469,6 +462,9 @@ class SaveAttachmentsActionTest extends TestCase
         $record->shouldReceive('toMediaCollection')->andReturn(new Media);
         /** @phpstan-ignore-next-line method.nonObject */
 >>>>>>> 4b10075 (.)
+=======
+        $record->shouldReceive('toMediaCollection')->andReturn(new Media);
+>>>>>>> 9803aa5 (.)
         $record->shouldReceive('update')->andReturn(true);
 
         $attachments = ['invoice'];
@@ -479,7 +475,6 @@ class SaveAttachmentsActionTest extends TestCase
         Storage::disk('attachments')->put('temp/invoice.pdf', 'fake content');
 
         // Act
-        /** @phpstan-ignore-next-line method.nonObject */
         $action->execute($record, $attachments, $data, 'attachments');
 
         // Assert - il file temporaneo dovrebbe essere pulito
@@ -522,10 +517,9 @@ class SaveAttachmentsActionTest extends TestCase
 >>>>>>> f41e45e (.)
 
         $record = Mockery::mock(HasMedia::class);
-        /** @phpstan-ignore-next-line method.nonObject */
         $record->shouldReceive('addMedia')->times(3)->andReturnSelf();
-        /** @phpstan-ignore-next-line method.nonObject */
         $record->shouldReceive('usingFileName')->times(3)->andReturnSelf();
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -571,6 +565,9 @@ class SaveAttachmentsActionTest extends TestCase
         $record->shouldReceive('toMediaCollection')->times(3)->andReturn(new Media);
         /** @phpstan-ignore-next-line method.nonObject */
 >>>>>>> 4b10075 (.)
+=======
+        $record->shouldReceive('toMediaCollection')->times(3)->andReturn(new Media);
+>>>>>>> 9803aa5 (.)
         $record->shouldReceive('update')->andReturn(true);
 
         $attachments = ['invoice', 'contract', 'receipt'];
@@ -586,7 +583,6 @@ class SaveAttachmentsActionTest extends TestCase
         Storage::disk('attachments')->put('temp/receipt.pdf', 'fake content');
 
         // Act
-        /** @phpstan-ignore-next-line method.nonObject */
         $action->execute($record, $attachments, $data, 'attachments');
 
         // Assert
