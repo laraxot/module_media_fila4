@@ -89,6 +89,7 @@ class ConvertWidget extends Widget
          */
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         $exportedMedia = FFMpeg::fromDisk($disk_mp4)
             ->open($file_mp4)
             ->export();
@@ -131,11 +132,16 @@ class ConvertWidget extends Widget
 =======
         $ffmpeg = FFMpeg::fromDisk($disk_mp4)
 >>>>>>> 13d1d7e (.)
+=======
+        FFMpeg::fromDisk($disk_mp4)
+>>>>>>> 2a4b5df (.)
             ->open($file_mp4)
-            ->export();
-            
-        if (is_object($ffmpeg) && method_exists($ffmpeg, 'onProgress')) {
-            $ffmpeg = $ffmpeg->onProgress(function (float $percentage, float $remaining, float $rate): void {
+            ->export()
+            // ->addFilter(function (VideoFilters $filters) {
+            //    $filters->resize(new \FFMpeg\Coordinate\Dimension(640, 480));
+            // })
+            // ->resize(640, 480)
+            ->onProgress(function (float $percentage, float $remaining, float $rate): void {
                 $this->percentage = $percentage;
                 $this->remaining = $remaining;
                 $this->rate = $rate;
@@ -146,10 +152,14 @@ class ConvertWidget extends Widget
                     ->success()
                     ->send();
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 2a4b5df (.)
             })
             ->toDisk($disk_mp4)
             ->inFormat($format)
             ->save($file_new);
+<<<<<<< HEAD
 >>>>>>> 5200b63 (.)
 =======
             });
@@ -167,6 +177,8 @@ class ConvertWidget extends Widget
             $ffmpeg->save($file_new);
         }
 >>>>>>> 13d1d7e (.)
+=======
+>>>>>>> 2a4b5df (.)
 
         while ($this->percentage < 100) {
             // Stream the current count to the browser...
