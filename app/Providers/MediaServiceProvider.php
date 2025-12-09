@@ -17,6 +17,7 @@ class MediaServiceProvider extends XotBaseServiceProvider
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     
 <<<<<<< HEAD
 >>>>>>> 5200b63 (.)
@@ -28,5 +29,11 @@ class MediaServiceProvider extends XotBaseServiceProvider
         // BladeService::registerComponents($this->module_dir.'/../View/Components', 'Modules\\Media');
     }
 >>>>>>> 0a466ed (.)
+<<<<<<< HEAD
 >>>>>>> 06bb10d (.)
+=======
+=======
+    
+>>>>>>> 37a2da6 (.)
+>>>>>>> 98c37f4 (.)
 }

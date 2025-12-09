@@ -6,13 +6,20 @@ namespace Modules\Media\Filament\Resources;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 06bb10d (.)
+=======
+>>>>>>> 98c37f4 (.)
 use Filament\Schemas\Components\Component;
 use Override;
 =======
 >>>>>>> 0a466ed (.)
+=======
+use Filament\Schemas\Components\Component;
+use Override;
+>>>>>>> 37a2da6 (.)
 use Modules\Media\Filament\Resources\MediaResource\Pages\ListMedia;
 use Modules\Media\Filament\Resources\MediaResource\Pages\CreateMedia;
 use Modules\Media\Filament\Resources\MediaResource\Pages\EditMedia;
@@ -45,6 +52,9 @@ use Modules\Xot\Filament\Resources\XotBaseResource;
 class MediaResource extends XotBaseResource
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 37a2da6 (.)
     protected static null|string $model = Media::class;
 >>>>>>> 5200b63 (.)
 
@@ -52,6 +62,7 @@ class MediaResource extends XotBaseResource
      * @return array<string, Component>
      */
     #[Override]
+<<<<<<< HEAD
 =======
     protected static ?string $model = Media::class;
 
@@ -59,6 +70,8 @@ class MediaResource extends XotBaseResource
      * @return array<string, \Filament\Schemas\Components\Component>
      */
 >>>>>>> 0a466ed (.)
+=======
+>>>>>>> 37a2da6 (.)
     public static function getFormSchema(): array
     {
         return [
@@ -82,16 +95,22 @@ class MediaResource extends XotBaseResource
      * @psalm-return array<never, never>
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 37a2da6 (.)
     #[Override]
     public static function getRelations(): array
     {
         return [];
+<<<<<<< HEAD
 =======
     public static function getRelations(): array
     {
         return [
         ];
 >>>>>>> 0a466ed (.)
+=======
+>>>>>>> 37a2da6 (.)
     }
 
     /**
@@ -100,9 +119,13 @@ class MediaResource extends XotBaseResource
      * @psalm-return array{index: PageRegistration, create: PageRegistration, edit: PageRegistration}
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     #[Override]
 =======
 >>>>>>> 0a466ed (.)
+=======
+    #[Override]
+>>>>>>> 37a2da6 (.)
     public static function getPages(): array
     {
         return [

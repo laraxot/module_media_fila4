@@ -12,6 +12,7 @@ class Webm extends ImageGenerator
 {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function convert(string $file, ?Conversion $conversion = null): string
     {
         $pathToImageFile = pathinfo($file, PATHINFO_DIRNAME).'/'.pathinfo($file, PATHINFO_FILENAME).'.webmXXX';
@@ -21,6 +22,8 @@ class Webm extends ImageGenerator
         $pathToImageFile = pathinfo($file, PATHINFO_DIRNAME) . '/' . pathinfo($file, PATHINFO_FILENAME) . '.webmXXX';
 >>>>>>> 5200b63 (.)
 =======
+=======
+>>>>>>> 98c37f4 (.)
     public function convert(string $file, null|Conversion $conversion = null): string
     {
         $pathToImageFile = pathinfo($file, PATHINFO_DIRNAME) . '/' . pathinfo($file, PATHINFO_FILENAME) . '.webmXXX';
@@ -29,7 +32,15 @@ class Webm extends ImageGenerator
     {
         $pathToImageFile = pathinfo($file, PATHINFO_DIRNAME).'/'.pathinfo($file, PATHINFO_FILENAME).'.webmXXX';
 >>>>>>> 0a466ed (.)
+<<<<<<< HEAD
 >>>>>>> 06bb10d (.)
+=======
+=======
+    public function convert(string $file, null|Conversion $conversion = null): string
+    {
+        $pathToImageFile = pathinfo($file, PATHINFO_DIRNAME) . '/' . pathinfo($file, PATHINFO_FILENAME) . '.webmXXX';
+>>>>>>> 37a2da6 (.)
+>>>>>>> 98c37f4 (.)
         dddx([
             'file' => $file,
             '$pathToImageFile' => ${$pathToImageFile},
@@ -38,12 +49,16 @@ class Webm extends ImageGenerator
 
         /*
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 37a2da6 (.)
          * $image = imagecreatefromwebp($file);
          *
          * imagepng($image, $pathToImageFile, 9);
          *
          * imagedestroy($image);
          */
+<<<<<<< HEAD
 =======
         $image = imagecreatefromwebp($file);
 
@@ -52,6 +67,8 @@ class Webm extends ImageGenerator
         imagedestroy($image);
         */
 >>>>>>> 0a466ed (.)
+=======
+>>>>>>> 37a2da6 (.)
         return $pathToImageFile;
     }
 
@@ -59,6 +76,9 @@ class Webm extends ImageGenerator
     {
         /*
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 37a2da6 (.)
          * if (! function_exists('imagecreatefromwebp')) {
          * return false;
          * }
@@ -71,6 +91,7 @@ class Webm extends ImageGenerator
          * return false;
          * }
          */
+<<<<<<< HEAD
 =======
         if (! function_exists('imagecreatefromwebp')) {
             return false;
@@ -85,6 +106,8 @@ class Webm extends ImageGenerator
         }
         */
 >>>>>>> 0a466ed (.)
+=======
+>>>>>>> 37a2da6 (.)
         return true;
     }
 
