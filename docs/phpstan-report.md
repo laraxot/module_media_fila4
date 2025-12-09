@@ -126,6 +126,7 @@ L'analisi PHPStan di livello 1 non ha rilevato errori nel modulo Media. Questo Ã
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 =======
@@ -242,6 +243,10 @@ L'analisi PHPStan di livello 1 non ha rilevato errori nel modulo Media. Questo Ã
 >>>>>>> 71b97ae (.)
 =======
 >>>>>>> ece6f0a (.)
+=======
+* [phpstan_report.md](../../../Lang/docs/phpstan_report.md)
+* [phpstan_report.md](../../../Media/docs/phpstan_report.md)
+>>>>>>> a2b9bd0 (.)
 
 
 ### Versione Incoming
