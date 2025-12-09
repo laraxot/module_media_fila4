@@ -9,14 +9,13 @@ use Modules\Media\Models\MediaConvert;
 use Modules\Media\Models\TemporaryUpload;
 use Modules\User\Models\User;
 
-describe('Media Business Logic', function (): void {
-    beforeEach(function (): void {
+describe('Media Business Logic', function () {
+    beforeEach(function () {
         Storage::fake('public');
     });
 
-    it('can create media from temporary upload', function (): void {
-        /** @var User */
-        $user = User/** @phpstan-ignore-line */ ::factory()->create();
+    it('can create media from temporary upload', function () {
+        $user = User::factory()->create();
         $file = UploadedFile::fake()->image('test-image.jpg', 100, 100);
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -48,6 +47,7 @@ describe('Media Business Logic', function (): void {
 =======
 >>>>>>> b8fda23 (.)
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -185,17 +185,16 @@ describe('Media Business Logic', function (): void {
 =======
         $temporaryUpload = TemporaryUpload/** @phpstan-ignore-line */ ::factory()->create([
 >>>>>>> 627ab5c (.)
+=======
+        $temporaryUpload = TemporaryUpload::factory()->create([
+>>>>>>> de4643e (.)
             'user_id' => $user->id,
-            /** @phpstan-ignore-next-line method.nonObject */
             'file_name' => $file->getClientOriginalName(),
-            /** @phpstan-ignore-next-line method.nonObject */
             'file_size' => $file->getSize(),
-            /** @phpstan-ignore-next-line method.nonObject */
             'mime_type' => $file->getMimeType(),
         ]);
 
-        /** @var \Illuminate\Database\Eloquent\Collection */
-        $media = Media/** @phpstan-ignore-line */ ::factory()->create([
+        $media = Media::factory()->create([
             'user_id' => $user->id,
             'file_name' => $temporaryUpload->file_name,
             'file_size' => $temporaryUpload->file_size,
@@ -466,7 +465,6 @@ describe('Media Business Logic', function (): void {
 =======
 >>>>>>> 22b1256 (.)
 
-        /** @phpstan-ignore-next-line property.notFound */
         $this->assertDatabaseHas('media', [
             'id' => $media->id,
             'user_id' => $user->id,
@@ -476,17 +474,14 @@ describe('Media Business Logic', function (): void {
         ]);
     });
 
-    it('can convert media to different formats', function (): void {
-        /** @var User */
-        $user = User/** @phpstan-ignore-line */ ::factory()->create();
-        /** @var \Illuminate\Database\Eloquent\Collection */
-        $media = Media/** @phpstan-ignore-line */ ::factory()->create([
+    it('can convert media to different formats', function () {
+        $user = User::factory()->create();
+        $media = Media::factory()->create([
             'user_id' => $user->id,
             'mime_type' => 'image/jpeg',
         ]);
 
-        /** @var \Illuminate\Database\Eloquent\Collection */
-        $mediaConvert = MediaConvert/** @phpstan-ignore-line */ ::factory()->create([
+        $mediaConvert = MediaConvert::factory()->create([
             'media_id' => $media->id,
             'original_format' => 'jpeg',
             'target_format' => 'png',
@@ -755,7 +750,6 @@ describe('Media Business Logic', function (): void {
 =======
 >>>>>>> 22b1256 (.)
 
-        /** @phpstan-ignore-next-line property.notFound */
         $this->assertDatabaseHas('media_converts', [
             'id' => $mediaConvert->id,
             'media_id' => $media->id,
@@ -765,30 +759,23 @@ describe('Media Business Logic', function (): void {
         ]);
     });
 
-    it('can track temporary upload lifecycle', function (): void {
-        /** @var User */
-        $user = User/** @phpstan-ignore-line */ ::factory()->create();
+    it('can track temporary upload lifecycle', function () {
+        $user = User::factory()->create();
         $file = UploadedFile::fake()->image('test-image.jpg', 100, 100);
 
-        /** @var \Illuminate\Database\Eloquent\Collection */
-        $temporaryUpload = TemporaryUpload/** @phpstan-ignore-line */ ::factory()->create([
+        $temporaryUpload = TemporaryUpload::factory()->create([
             'user_id' => $user->id,
-            /** @phpstan-ignore-next-line method.nonObject */
             'file_name' => $file->getClientOriginalName(),
-            /** @phpstan-ignore-next-line method.nonObject */
             'file_size' => $file->getSize(),
-            /** @phpstan-ignore-next-line method.nonObject */
             'mime_type' => $file->getMimeType(),
             'status' => 'uploading',
         ]);
 
         // Simulate upload completion
-        /** @phpstan-ignore-next-line method.nonObject */
         $temporaryUpload->update(['status' => 'completed']);
 
         expect($temporaryUpload->fresh()->status)->toBe('completed');
 
-        /** @phpstan-ignore-next-line property.notFound */
         $this->assertDatabaseHas('temporary_uploads', [
             'id' => $temporaryUpload->id,
             'user_id' => $user->id,
@@ -796,6 +783,7 @@ describe('Media Business Logic', function (): void {
         ]);
     });
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     it('can manage media collections', function (): void {
@@ -955,13 +943,18 @@ describe('Media Business Logic', function (): void {
         /** @var \Illuminate\Database\Eloquent\Collection */
         $profileMedia = Media/** @phpstan-ignore-line */ ::factory()->create([
 >>>>>>> 627ab5c (.)
+=======
+    it('can manage media collections', function () {
+        $user = User::factory()->create();
+
+        $profileMedia = Media::factory()->create([
+>>>>>>> de4643e (.)
             'user_id' => $user->id,
             'collection_name' => 'profile',
             'disk' => 'public',
         ]);
 
-        /** @var \Illuminate\Database\Eloquent\Collection */
-        $documentMedia = Media/** @phpstan-ignore-line */ ::factory()->create([
+        $documentMedia = Media::factory()->create([
             'user_id' => $user->id,
             'collection_name' => 'documents',
             'disk' => 'public',
@@ -1191,19 +1184,18 @@ describe('Media Business Logic', function (): void {
 =======
 >>>>>>> 22b1256 (.)
 
-        /** @phpstan-ignore-next-line property.notFound */
         $this->assertDatabaseHas('media', [
             'id' => $profileMedia->id,
             'collection_name' => 'profile',
         ]);
 
-        /** @phpstan-ignore-next-line property.notFound */
         $this->assertDatabaseHas('media', [
             'id' => $documentMedia->id,
             'collection_name' => 'documents',
         ]);
     });
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     it('can validate media file types', function (): void {
@@ -1363,6 +1355,12 @@ describe('Media Business Logic', function (): void {
         /** @var \Illuminate\Database\Eloquent\Collection */
         $validImage = Media/** @phpstan-ignore-line */ ::factory()->create([
 >>>>>>> 627ab5c (.)
+=======
+    it('can validate media file types', function () {
+        $user = User::factory()->create();
+
+        $validImage = Media::factory()->create([
+>>>>>>> de4643e (.)
             'user_id' => $user->id,
             'mime_type' => 'image/jpeg',
             'file_name' => 'valid-image.jpg',
@@ -1520,8 +1518,7 @@ describe('Media Business Logic', function (): void {
         expect($validImage->isImage())->toBeTrue()->and($validImage->isDocument())->toBeFalse();
 >>>>>>> 22b1256 (.)
 
-        /** @var \Illuminate\Database\Eloquent\Collection */
-        $validDocument = Media/** @phpstan-ignore-line */ ::factory()->create([
+        $validDocument = Media::factory()->create([
             'user_id' => $user->id,
             'mime_type' => 'application/pdf',
             'file_name' => 'valid-document.pdf',
@@ -1680,36 +1677,31 @@ describe('Media Business Logic', function (): void {
 >>>>>>> 22b1256 (.)
     });
 
-    it('can track media conversion status', function (): void {
-        /** @var User */
-        $user = User/** @phpstan-ignore-line */ ::factory()->create();
-        /** @var \Illuminate\Database\Eloquent\Collection */
-        $media = Media/** @phpstan-ignore-line */ ::factory()->create([
+    it('can track media conversion status', function () {
+        $user = User::factory()->create();
+        $media = Media::factory()->create([
             'user_id' => $user->id,
             'mime_type' => 'image/jpeg',
         ]);
 
-        /** @var \Illuminate\Database\Eloquent\Collection */
-        $mediaConvert = MediaConvert/** @phpstan-ignore-line */ ::factory()->create([
+        $mediaConvert = MediaConvert::factory()->create([
             'media_id' => $media->id,
             'status' => 'pending',
         ]);
 
         // Simulate conversion progress
-        /** @phpstan-ignore-next-line method.nonObject */
         $mediaConvert->update(['status' => 'processing']);
-        /** @phpstan-ignore-next-line method.nonObject */
         $mediaConvert->update(['status' => 'completed']);
 
         expect($mediaConvert->fresh()->status)->toBe('completed');
 
-        /** @phpstan-ignore-next-line property.notFound */
         $this->assertDatabaseHas('media_converts', [
             'id' => $mediaConvert->id,
             'status' => 'completed',
         ]);
     });
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     it('can manage media permissions', function (): void {
@@ -1876,6 +1868,13 @@ describe('Media Business Logic', function (): void {
 =======
         $media = Media/** @phpstan-ignore-line */ ::factory()->create([
 >>>>>>> 627ab5c (.)
+=======
+    it('can manage media permissions', function () {
+        $owner = User::factory()->create();
+        $otherUser = User::factory()->create();
+
+        $media = Media::factory()->create([
+>>>>>>> de4643e (.)
             'user_id' => $owner->id,
             'is_public' => false,
         ]);
@@ -2127,40 +2126,32 @@ describe('Media Business Logic', function (): void {
 >>>>>>> 22b1256 (.)
     });
 
-    it('can handle media deletion', function (): void {
-        /** @var User */
-        $user = User/** @phpstan-ignore-line */ ::factory()->create();
-        /** @var \Illuminate\Database\Eloquent\Collection */
-        $media = Media/** @phpstan-ignore-line */ ::factory()->create([
+    it('can handle media deletion', function () {
+        $user = User::factory()->create();
+        $media = Media::factory()->create([
             'user_id' => $user->id,
         ]);
 
-        /** @phpstan-ignore-next-line method.nonObject */
         $media->delete();
 
-        /** @phpstan-ignore-next-line property.notFound */
         $this->assertSoftDeleted('media', [
             'id' => $media->id,
         ]);
 
-        /** @phpstan-ignore-next-line property.notFound */
         $this->assertDatabaseMissing('media', [
             'id' => $media->id,
             'deleted_at' => null,
         ]);
     });
 
-    it('can generate media urls', function (): void {
-        /** @var User */
-        $user = User/** @phpstan-ignore-line */ ::factory()->create();
-        /** @var \Illuminate\Database\Eloquent\Collection */
-        $media = Media/** @phpstan-ignore-line */ ::factory()->create([
+    it('can generate media urls', function () {
+        $user = User::factory()->create();
+        $media = Media::factory()->create([
             'user_id' => $user->id,
             'file_name' => 'test-image.jpg',
             'disk' => 'public',
         ]);
 
-        /** @phpstan-ignore-next-line method.nonObject */
         $url = $media->getUrl();
 
 <<<<<<< HEAD
@@ -2316,6 +2307,7 @@ describe('Media Business Logic', function (): void {
 >>>>>>> 22b1256 (.)
     });
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     it('can validate file size limits', function (): void {
@@ -2475,14 +2467,19 @@ describe('Media Business Logic', function (): void {
         /** @var \Illuminate\Database\Eloquent\Collection */
         $validMedia = Media/** @phpstan-ignore-line */ ::factory()->create([
 >>>>>>> 627ab5c (.)
+=======
+    it('can validate file size limits', function () {
+        $user = User::factory()->create();
+
+        $validMedia = Media::factory()->create([
+>>>>>>> de4643e (.)
             'user_id' => $user->id,
             'file_size' => 1024 * 1024, // 1MB
         ]);
 
         expect($validMedia->file_size)->toBeLessThanOrEqual(10 * 1024 * 1024); // 10MB limit
 
-        /** @var \Illuminate\Database\Eloquent\Collection */
-        $largeMedia = Media/** @phpstan-ignore-line */ ::factory()->create([
+        $largeMedia = Media::factory()->create([
             'user_id' => $user->id,
             'file_size' => 15 * 1024 * 1024, // 15MB
         ]);
@@ -2490,6 +2487,7 @@ describe('Media Business Logic', function (): void {
         expect($largeMedia->file_size)->toBeGreaterThan(10 * 1024 * 1024);
     });
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     it('can track media usage statistics', function (): void {
@@ -2615,6 +2613,10 @@ describe('Media Business Logic', function (): void {
 >>>>>>> df262d8 (.)
         $user = User/** @phpstan-ignore-line */ ::factory()->create();
 >>>>>>> 627ab5c (.)
+=======
+    it('can track media usage statistics', function () {
+        $user = User::factory()->create();
+>>>>>>> de4643e (.)
 
         Media::factory()
             ->count(5)
