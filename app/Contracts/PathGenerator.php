@@ -37,6 +37,7 @@ use Modules\Media\Models\Media;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 =======
@@ -187,6 +188,9 @@ use Modules\Media\Models\Media;
 =======
  *
 >>>>>>> e5c049f (.)
+=======
+ *
+>>>>>>> a70c4fa (.)
  * Definisce i metodi necessari per la generazione dei percorsi dei file media.
  */
 interface PathGenerator
@@ -256,6 +260,7 @@ interface PathGenerator
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 =======
@@ -384,3 +389,5 @@ interface PathGenerator
 >>>>>>> 37b6a94 (.)
 =======
 >>>>>>> e5c049f (.)
+=======
+>>>>>>> a70c4fa (.)
