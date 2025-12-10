@@ -89,6 +89,7 @@ Il file `Modules/Media/app/Filament/Tables/Columns/IconMediaColumn.php` presenta
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 =======
@@ -97,10 +98,13 @@ Il file `Modules/Media/app/Filament/Tables/Columns/IconMediaColumn.php` presenta
 >>>>>>> b8fda23 (.)
 =======
 >>>>>>> 9a4eacb (.)
+=======
+>>>>>>> c4425b4 (.)
 - [Modules/Media/docs/](../docs/)
 =======
 - [Modules/Media/project_docs/](../project_docs/)
 >>>>>>> e9b0959 (.)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -134,5 +138,7 @@ Il file `Modules/Media/app/Filament/Tables/Columns/IconMediaColumn.php` presenta
 =======
 - [Modules/Media/docs/](../docs/)
 >>>>>>> 77b6d88 (.)
+=======
+>>>>>>> c4425b4 (.)
 
 *Ultimo aggiornamento: 29 luglio 2025*
