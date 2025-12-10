@@ -9,6 +9,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 3f50d25 (.)
 =======
@@ -21,6 +22,8 @@
 >>>>>>> 446a02b (.)
 =======
 >>>>>>> 09fde8f (.)
+=======
+>>>>>>> d2f9543 (.)
 <?php
 
 declare(strict_types=1);
@@ -33,6 +36,7 @@ return [
     'siteName' => 'Modulo Media',
     'siteDescription' => 'Modulo Media',
     'lang' => 'it',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -88,6 +92,8 @@ return [
 >>>>>>> 3f50d25 (.)
 =======
 >>>>>>> 2883a97 (.)
+=======
+>>>>>>> d2f9543 (.)
     'collections' => [
         'posts' => [
             'path' => fn($page): string => $page->lang . '/posts/' . Str::slug($page->getFilename()),
@@ -109,6 +115,7 @@ return [
             return $menuItem->children->contains(fn($child): bool => trimPath($page->getPath()) === trimPath($child));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 7df6a71 (.)
 =======
 >>>>>>> 0caa3cf (.)
@@ -126,6 +133,8 @@ return [
 >>>>>>> 446a02b (.)
 =======
 >>>>>>> 09fde8f (.)
+=======
+>>>>>>> d2f9543 (.)
         }
     },
     'url' => function ($page, $path) {
@@ -134,6 +143,7 @@ return [
         }
 
         // return Str::startsWith($path, 'http') ? $path : '/' . trimPath($path);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -172,12 +182,15 @@ return [
 >>>>>>> 3f50d25 (.)
 =======
 >>>>>>> 2883a97 (.)
+=======
+>>>>>>> d2f9543 (.)
         return url('/' . $page->lang . '/' . trimPath($path));
     },
     'children' => fn($_page, $_docs): array => (
         // return $docs->where('parent_id', $page->);
         []
     ),
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 7df6a71 (.)
@@ -214,3 +227,6 @@ return [
 >>>>>>> 09fde8f (.)
 =======
 >>>>>>> 60ceacf (.)
+=======
+];
+>>>>>>> d2f9543 (.)
