@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 37a2da6 (.)
 # ==============================================
 # LARAXOT MODULE MEDIA - .GITIGNORE
 # ==============================================
@@ -59,6 +62,7 @@ lerna-debug.log*
 # ==============================================
 # LARAVEL SPECIFIC
 # ==============================================
+<<<<<<< HEAD
 =======
 # Dependencies and packages
 /vendor/
@@ -85,6 +89,8 @@ build/
 
 # Laravel specific
 >>>>>>> 0a466ed (.)
+=======
+>>>>>>> 37a2da6 (.)
 bootstrap/compiled.php
 app/storage/
 public/storage
@@ -94,6 +100,9 @@ public_html/hot
 storage/*.key
 .env
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 37a2da6 (.)
 .env.*
 !.env.example
 
@@ -192,6 +201,7 @@ test_media_files/
 *.fila2
 laravel
 public_html
+<<<<<<< HEAD
 =======
 
 # Local configurations
@@ -222,3 +232,5 @@ docs/phpstan/
 docs/cache/
 cache/
 >>>>>>> 0a466ed (.)
+=======
+>>>>>>> 37a2da6 (.)
