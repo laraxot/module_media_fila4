@@ -115,12 +115,20 @@ class MediaConvert extends BaseModel
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getDiskAttribute(?string $value): ?string
 =======
+=======
+>>>>>>> 06bb10d (.)
     public function getDiskAttribute(null|string $value): null|string
 >>>>>>> 5200b63 (.)
     {
         if ($this->media === null) {
+=======
+    public function getDiskAttribute(?string $value): ?string
+    {
+        if($this->media==null){
+>>>>>>> 0a466ed (.)
             return null;
         }
 <<<<<<< HEAD
@@ -133,10 +141,16 @@ class MediaConvert extends BaseModel
         return $this->media->disk;
     }
 
+<<<<<<< HEAD
     public function getFileAttribute(null|string $value): null|string
 >>>>>>> 5200b63 (.)
     {
         if ($this->media === null) {
+=======
+    public function getFileAttribute(?string $value): ?string
+    {
+        if($this->media==null){
+>>>>>>> 0a466ed (.)
             return null;
         }
 <<<<<<< HEAD
@@ -149,10 +163,16 @@ class MediaConvert extends BaseModel
         return $this->media->path . '/' . $this->media->file_name;
     }
 
+<<<<<<< HEAD
     public function getConvertedFileAttribute(null|string $value): null|string
 >>>>>>> 5200b63 (.)
     {
         if ($this->media === null) {
+=======
+    public function getConvertedFileAttribute(?string $value): ?string
+    {
+        if($this->media==null){
+>>>>>>> 0a466ed (.)
             return null;
         }
         $info = pathinfo($this->media->file_name);

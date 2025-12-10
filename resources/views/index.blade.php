@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -9,11 +10,14 @@
 >>>>>>> e9b0959 (.)
 =======
 >>>>>>> 5200b63 (.)
+=======
+>>>>>>> 06bb10d (.)
 <?php
 
 declare(strict_types=1);
 
 ?>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -27,6 +31,10 @@ declare(strict_types=1);
 >>>>>>> e9b0959 (.)
 =======
 >>>>>>> 5200b63 (.)
+=======
+=======
+>>>>>>> 0a466ed (.)
+>>>>>>> 06bb10d (.)
 @extends('media::layouts.master')
 
 @section('content')

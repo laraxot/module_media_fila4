@@ -5,9 +5,14 @@ declare(strict_types=1);
 namespace Modules\Media\Filament\Resources;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 06bb10d (.)
 use Filament\Schemas\Components\Component;
 use Override;
+=======
+>>>>>>> 0a466ed (.)
 use Modules\Media\Filament\Resources\MediaResource\Pages\ListMedia;
 use Modules\Media\Filament\Resources\MediaResource\Pages\CreateMedia;
 use Modules\Media\Filament\Resources\MediaResource\Pages\EditMedia;
@@ -39,6 +44,7 @@ use Modules\Xot\Filament\Resources\XotBaseResource;
 
 class MediaResource extends XotBaseResource
 {
+<<<<<<< HEAD
     protected static null|string $model = Media::class;
 >>>>>>> 5200b63 (.)
 
@@ -46,6 +52,13 @@ class MediaResource extends XotBaseResource
      * @return array<string, Component>
      */
     #[Override]
+=======
+    protected static ?string $model = Media::class;
+
+    /**
+     * @return array<string, \Filament\Schemas\Components\Component>
+     */
+>>>>>>> 0a466ed (.)
     public static function getFormSchema(): array
     {
         return [
@@ -68,10 +81,17 @@ class MediaResource extends XotBaseResource
     /**
      * @psalm-return array<never, never>
      */
+<<<<<<< HEAD
     #[Override]
     public static function getRelations(): array
     {
         return [];
+=======
+    public static function getRelations(): array
+    {
+        return [
+        ];
+>>>>>>> 0a466ed (.)
     }
 
     /**
@@ -79,7 +99,10 @@ class MediaResource extends XotBaseResource
      *
      * @psalm-return array{index: PageRegistration, create: PageRegistration, edit: PageRegistration}
      */
+<<<<<<< HEAD
     #[Override]
+=======
+>>>>>>> 0a466ed (.)
     public static function getPages(): array
     {
         return [

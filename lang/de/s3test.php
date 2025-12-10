@@ -43,6 +43,7 @@ return [
     ],
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -58,6 +59,11 @@ return [
 >>>>>>> e9b0959 (.)
 =======
 >>>>>>> 5200b63 (.)
+=======
+=======
+
+>>>>>>> 0a466ed (.)
+>>>>>>> 06bb10d (.)
     'notifications' => [
         'credentials_tested' => 'AWS-Anmeldedaten getestet',
         'bucket_policy_tested' => 'Bucket-Richtlinie getestet',
@@ -75,10 +81,14 @@ return [
     ],
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 06bb10d (.)
     'debug' => [
         'run_tests_message' => 'Führen Sie Tests aus, um Ergebnisse hier zu sehen...',
     ],
 =======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -88,11 +98,14 @@ return [
 =======
 =======
 >>>>>>> origin/develop
+=======
+>>>>>>> 06bb10d (.)
 
     'debug' => [
         'run_tests_message' => 'Führen Sie Tests aus, um Ergebnisse hier zu sehen...',
     ],
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> a12f125f4a (.)
 =======
@@ -108,6 +121,9 @@ return [
         'run_tests_message' => 'Führen Sie Tests aus, um Ergebnisse hier zu sehen...',
     ],
 >>>>>>> 5200b63 (.)
+=======
+>>>>>>> 0a466ed (.)
+>>>>>>> 06bb10d (.)
     'fields' => [
         'attachment' => [
             'label' => 'Anhang',
@@ -122,6 +138,7 @@ return [
     ],
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -137,6 +154,11 @@ return [
 >>>>>>> e9b0959 (.)
 =======
 >>>>>>> 5200b63 (.)
+=======
+=======
+
+>>>>>>> 0a466ed (.)
+>>>>>>> 06bb10d (.)
     'messages' => [
         'test_successful' => 'Test erfolgreich abgeschlossen',
         'test_failed' => 'Test fehlgeschlagen',
@@ -149,6 +171,7 @@ return [
     ],
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -164,6 +187,11 @@ return [
 >>>>>>> e9b0959 (.)
 =======
 >>>>>>> 5200b63 (.)
+=======
+=======
+
+>>>>>>> 0a466ed (.)
+>>>>>>> 06bb10d (.)
     'errors' => [
         'aws_credentials_invalid' => 'Ungültige AWS-Anmeldedaten',
         's3_bucket_inaccessible' => 'S3-Bucket nicht zugänglich',
@@ -174,6 +202,7 @@ return [
     ],
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -189,6 +218,11 @@ return [
 >>>>>>> e9b0959 (.)
 =======
 >>>>>>> 5200b63 (.)
+=======
+=======
+
+>>>>>>> 0a466ed (.)
+>>>>>>> 06bb10d (.)
     'solutions' => [
         'check_credentials' => 'Überprüfen Sie die AWS-Anmeldedaten in .env',
         'check_bucket_name' => 'Überprüfen Sie den S3-Bucket-Namen',
