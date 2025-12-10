@@ -23,10 +23,13 @@ use Spatie\QueueableAction\QueueableAction;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 =======
 >>>>>>> 1d21a10 (.)
+=======
+>>>>>>> b8fda23 (.)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -40,6 +43,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -94,6 +98,8 @@ use Spatie\QueueableAction\QueueableAction;
 >>>>>>> 89eb716 (.)
 =======
 >>>>>>> af40dd6 (.)
+=======
+>>>>>>> b8fda23 (.)
 /**
  * Action per la traduzione di elementi di una collezione.
  */
@@ -116,15 +122,19 @@ class GetCloudFrontSignedUrlAction
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 =======
 >>>>>>> 1d21a10 (.)
 =======
+>>>>>>> b8fda23 (.)
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> e9b0959 (.)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -161,6 +171,8 @@ class GetCloudFrontSignedUrlAction
 >>>>>>> 89eb716 (.)
 =======
 >>>>>>> af40dd6 (.)
+=======
+>>>>>>> b8fda23 (.)
     public function execute(string $key, int $expiry = 30): string
     {
         $data = CloudFrontData::make();
@@ -168,6 +180,7 @@ class GetCloudFrontSignedUrlAction
         $cloudFront = new CloudFrontClient([
             'region' => $data->region,
             'version' => 'latest',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -192,6 +205,8 @@ class GetCloudFrontSignedUrlAction
 =======
 >>>>>>> 1d21a10 (.)
 =======
+>>>>>>> b8fda23 (.)
+=======
 =======
    
 =======
@@ -211,6 +226,7 @@ class GetCloudFrontSignedUrlAction
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 06bb10d (.)
 =======
 >>>>>>> 98c37f4 (.)
@@ -225,6 +241,8 @@ class GetCloudFrontSignedUrlAction
 =======
 =======
 >>>>>>> 054dfa6 (.)
+=======
+>>>>>>> b8fda23 (.)
    
     public function execute(string $key, int $expiry = 30): string
     {
@@ -234,6 +252,7 @@ class GetCloudFrontSignedUrlAction
         $cloudFront = new CloudFrontClient([
             'region' => $data->region,
             'version' => 'latest'
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -269,12 +288,17 @@ class GetCloudFrontSignedUrlAction
 >>>>>>> 89eb716 (.)
 =======
 >>>>>>> af40dd6 (.)
+=======
+>>>>>>> origin/develop
+>>>>>>> e9b0959 (.)
+>>>>>>> b8fda23 (.)
         ]);
 
         return $cloudFront->getSignedUrl([
             'url' => $data->base_url.'/'.ltrim($key, '/'),
             'expires' => time() + ($expiry * 60),
             'key_pair_id' => $data->key_pair_id,
+<<<<<<< HEAD
             'private_key' => $data->getPrivateKey(),
         ]);
     }
@@ -285,8 +309,11 @@ class GetCloudFrontSignedUrlAction
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 1d21a10 (.)
+=======
+>>>>>>> b8fda23 (.)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -298,6 +325,7 @@ class GetCloudFrontSignedUrlAction
 =======
 >>>>>>> origin/develop
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 877e05f (.)
@@ -306,6 +334,8 @@ class GetCloudFrontSignedUrlAction
 =======
 =======
 >>>>>>> 054dfa6 (.)
+=======
+>>>>>>> b8fda23 (.)
             'private_key' => $data->getPrivateKey()
             ,
         ]);
@@ -318,8 +348,11 @@ class GetCloudFrontSignedUrlAction
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 1d21a10 (.)
+=======
+>>>>>>> b8fda23 (.)
 >>>>>>> a12f125f4a (.)
 =======
             'private_key' => $data->getPrivateKey(),
@@ -329,6 +362,7 @@ class GetCloudFrontSignedUrlAction
 =======
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -435,4 +469,6 @@ class GetCloudFrontSignedUrlAction
 >>>>>>> 89eb716 (.)
 =======
 >>>>>>> af40dd6 (.)
+=======
+>>>>>>> b8fda23 (.)
 }

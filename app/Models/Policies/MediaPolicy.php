@@ -20,10 +20,13 @@ use Modules\Media\Models\Media;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 =======
 >>>>>>> 1d21a10 (.)
+=======
+>>>>>>> b8fda23 (.)
 use Modules\Xot\Contracts\UserContract;
 =======
 <<<<<<< HEAD
@@ -40,6 +43,7 @@ use Modules\Xot\Contracts\UserContract;
 use Modules\Xot\Contracts\UserContract;
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -106,6 +110,8 @@ use Modules\Xot\Contracts\UserContract;
 =======
 use Modules\Xot\Contracts\UserContract;
 >>>>>>> af40dd6 (.)
+=======
+>>>>>>> b8fda23 (.)
 
 class MediaPolicy extends MediaBasePolicy
 {
@@ -127,6 +133,7 @@ class MediaPolicy extends MediaBasePolicy
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 06bb10d (.)
 =======
@@ -137,10 +144,13 @@ class MediaPolicy extends MediaBasePolicy
 >>>>>>> 1d21a10 (.)
 =======
 >>>>>>> 054dfa6 (.)
+=======
+>>>>>>> b8fda23 (.)
     public function viewAny(UserContract $user): bool
     {
         return $user->hasPermissionTo('media.viewAny');
 =======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -159,6 +169,8 @@ class MediaPolicy extends MediaBasePolicy
 >>>>>>> 1d21a10 (.)
 =======
 >>>>>>> 89eb716 (.)
+=======
+>>>>>>> b8fda23 (.)
     public function viewAny(UserContract $user): bool
     {
         return $user->hasPermissionTo('media.viewAny');
@@ -178,6 +190,7 @@ class MediaPolicy extends MediaBasePolicy
         return $user->hasPermissionTo('media.viewAny');
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -250,11 +263,14 @@ class MediaPolicy extends MediaBasePolicy
     {
         return $user->hasPermissionTo('media.viewAny');
 >>>>>>> af40dd6 (.)
+=======
+>>>>>>> b8fda23 (.)
     }
 
     /**
      * Determine whether the user can view the model.
      */
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -280,10 +296,13 @@ class MediaPolicy extends MediaBasePolicy
 >>>>>>> 1d21a10 (.)
 =======
 >>>>>>> 054dfa6 (.)
+=======
+>>>>>>> b8fda23 (.)
     public function view(UserContract $user, Media $_media): bool
     {
         return $user->hasPermissionTo('media.view');
 =======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -302,6 +321,8 @@ class MediaPolicy extends MediaBasePolicy
 >>>>>>> 1d21a10 (.)
 =======
 >>>>>>> 89eb716 (.)
+=======
+>>>>>>> b8fda23 (.)
     public function view(UserContract $user, Media $_media): bool
     {
         return $user->hasPermissionTo('media.view');
@@ -323,6 +344,7 @@ class MediaPolicy extends MediaBasePolicy
 >>>>>>> e9b0959 (.)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     public function view(UserContract $user, Media $_media): bool
     {
@@ -393,11 +415,14 @@ class MediaPolicy extends MediaBasePolicy
     {
         return $user->hasPermissionTo('media.view');
 >>>>>>> af40dd6 (.)
+=======
+>>>>>>> b8fda23 (.)
     }
 
     /**
      * Determine whether the user can create models.
      */
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -423,10 +448,13 @@ class MediaPolicy extends MediaBasePolicy
 >>>>>>> 1d21a10 (.)
 =======
 >>>>>>> 054dfa6 (.)
+=======
+>>>>>>> b8fda23 (.)
     public function create(UserContract $user): bool
     {
         return $user->hasPermissionTo('media.create');
 =======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -445,6 +473,8 @@ class MediaPolicy extends MediaBasePolicy
 >>>>>>> 1d21a10 (.)
 =======
 >>>>>>> 89eb716 (.)
+=======
+>>>>>>> b8fda23 (.)
     public function create(UserContract $user): bool
     {
         return $user->hasPermissionTo('media.create');
@@ -464,6 +494,7 @@ class MediaPolicy extends MediaBasePolicy
         return $user->hasPermissionTo('media.create');
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -536,11 +567,14 @@ class MediaPolicy extends MediaBasePolicy
     {
         return $user->hasPermissionTo('media.create');
 >>>>>>> af40dd6 (.)
+=======
+>>>>>>> b8fda23 (.)
     }
 
     /**
      * Determine whether the user can update the model.
      */
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -566,10 +600,13 @@ class MediaPolicy extends MediaBasePolicy
 >>>>>>> 1d21a10 (.)
 =======
 >>>>>>> 054dfa6 (.)
+=======
+>>>>>>> b8fda23 (.)
     public function update(UserContract $user, Media $_media): bool
     {
         return $user->hasPermissionTo('media.update');
 =======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -588,6 +625,8 @@ class MediaPolicy extends MediaBasePolicy
 >>>>>>> 1d21a10 (.)
 =======
 >>>>>>> 89eb716 (.)
+=======
+>>>>>>> b8fda23 (.)
     public function update(UserContract $user, Media $_media): bool
     {
         return $user->hasPermissionTo('media.update');
@@ -609,6 +648,7 @@ class MediaPolicy extends MediaBasePolicy
 >>>>>>> e9b0959 (.)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     public function update(UserContract $user, Media $_media): bool
     {
@@ -679,11 +719,14 @@ class MediaPolicy extends MediaBasePolicy
     {
         return $user->hasPermissionTo('media.update');
 >>>>>>> af40dd6 (.)
+=======
+>>>>>>> b8fda23 (.)
     }
 
     /**
      * Determine whether the user can delete the model.
      */
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -709,10 +752,13 @@ class MediaPolicy extends MediaBasePolicy
 >>>>>>> 1d21a10 (.)
 =======
 >>>>>>> 054dfa6 (.)
+=======
+>>>>>>> b8fda23 (.)
     public function delete(UserContract $user, Media $_media): bool
     {
         return $user->hasPermissionTo('media.delete');
 =======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -731,6 +777,8 @@ class MediaPolicy extends MediaBasePolicy
 >>>>>>> 1d21a10 (.)
 =======
 >>>>>>> 89eb716 (.)
+=======
+>>>>>>> b8fda23 (.)
     public function delete(UserContract $user, Media $_media): bool
     {
         return $user->hasPermissionTo('media.delete');
@@ -752,6 +800,7 @@ class MediaPolicy extends MediaBasePolicy
 >>>>>>> e9b0959 (.)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     public function delete(UserContract $user, Media $_media): bool
     {
@@ -822,11 +871,14 @@ class MediaPolicy extends MediaBasePolicy
     {
         return $user->hasPermissionTo('media.delete');
 >>>>>>> af40dd6 (.)
+=======
+>>>>>>> b8fda23 (.)
     }
 
     /**
      * Determine whether the user can restore the model.
      */
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -852,10 +904,13 @@ class MediaPolicy extends MediaBasePolicy
 >>>>>>> 1d21a10 (.)
 =======
 >>>>>>> 054dfa6 (.)
+=======
+>>>>>>> b8fda23 (.)
     public function restore(UserContract $user, Media $_media): bool
     {
         return $user->hasPermissionTo('media.restore');
 =======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -874,6 +929,8 @@ class MediaPolicy extends MediaBasePolicy
 >>>>>>> 1d21a10 (.)
 =======
 >>>>>>> 89eb716 (.)
+=======
+>>>>>>> b8fda23 (.)
     public function restore(UserContract $user, Media $_media): bool
     {
         return $user->hasPermissionTo('media.restore');
@@ -893,6 +950,7 @@ class MediaPolicy extends MediaBasePolicy
         return $user->hasPermissionTo('media.restore');
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -965,6 +1023,8 @@ class MediaPolicy extends MediaBasePolicy
     {
         return $user->hasPermissionTo('media.restore');
 >>>>>>> af40dd6 (.)
+=======
+>>>>>>> b8fda23 (.)
     }
 
     /**
@@ -985,10 +1045,13 @@ class MediaPolicy extends MediaBasePolicy
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 =======
 >>>>>>> 1d21a10 (.)
+=======
+>>>>>>> b8fda23 (.)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1012,6 +1075,7 @@ class MediaPolicy extends MediaBasePolicy
 >>>>>>> e9b0959 (.)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 5200b63 (.)
 =======
@@ -1040,11 +1104,14 @@ class MediaPolicy extends MediaBasePolicy
 >>>>>>> 89eb716 (.)
 =======
 >>>>>>> af40dd6 (.)
+=======
+>>>>>>> b8fda23 (.)
     public function forceDelete(UserContract $user, Media $media): bool
     {
         return $user->hasPermissionTo('media.forceDelete');
     }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1070,3 +1137,8 @@ class MediaPolicy extends MediaBasePolicy
 >>>>>>> 1d21a10 (.)
 =======
 >>>>>>> 146bbc3 (.)
+=======
+=======
+>>>>>>> origin/develop
+>>>>>>> e9b0959 (.)
+>>>>>>> b8fda23 (.)
