@@ -4,11 +4,14 @@ declare(strict_types=1);
 
 return [
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> e9b0959 (.)
+=======
+>>>>>>> 5200b63 (.)
     'navigation' => [
         'group' => 'Media',
     ],
@@ -58,6 +61,7 @@ return [
             'label' => 'Test 01',
         ],
     ],
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -174,4 +178,6 @@ return [
 =======
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
+=======
+>>>>>>> 5200b63 (.)
 ];

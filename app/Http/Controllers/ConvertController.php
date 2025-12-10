@@ -13,6 +13,7 @@ class ConvertController extends Controller
      * Show the profile for the given user.
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function __invoke(string|int $_id): View
 =======
 <<<<<<< HEAD
@@ -29,6 +30,9 @@ class ConvertController extends Controller
     public function __invoke(string|int $id): View
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
+=======
+    public function __invoke(string|int $_id): View
+>>>>>>> 5200b63 (.)
     {
         /**
          * @phpstan-var view-string

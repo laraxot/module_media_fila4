@@ -4,25 +4,42 @@ declare(strict_types=1);
 
 namespace Modules\Media\Actions\S3;
 
+<<<<<<< HEAD
 use Aws\S3\ObjectUploader;
 use Exception;
+=======
+use Exception;
+use Aws\Exception\MultipartUploadException;
+use Aws\S3\Exception\S3Exception;
+use Aws\S3\MultipartUploader;
+use Aws\S3\ObjectUploader;
+>>>>>>> 5200b63 (.)
 
 use function Safe\fclose;
 use function Safe\filesize;
 use function Safe\fopen;
 use function Safe\mime_content_type;
+<<<<<<< HEAD
+=======
+use function Safe\rewind;
+>>>>>>> 5200b63 (.)
 
 class UploadFileAction extends BaseS3Action
 {
     /**
      * Upload a file to S3
      *
+<<<<<<< HEAD
      * @param  array<string, mixed>  $options
+=======
+     * @param array<string, mixed> $options
+>>>>>>> 5200b63 (.)
      * @return array<string, mixed>
      */
     public function execute(string $localFilePath, string $destinationFilePath, array $options = []): array
     {
         // Validation
+<<<<<<< HEAD
         if (! file_exists($localFilePath)) {
             $error = "Local file does not exist: {$localFilePath}";
             $this->logger->error($error);
@@ -34,6 +51,17 @@ class UploadFileAction extends BaseS3Action
             $error = "Local file is not readable: {$localFilePath}";
             $this->logger->error($error);
 
+=======
+        if (!file_exists($localFilePath)) {
+            $error = "Local file does not exist: {$localFilePath}";
+            $this->logger->error($error);
+            return ['success' => false, 'error' => $error];
+        }
+
+        if (!is_readable($localFilePath)) {
+            $error = "Local file is not readable: {$localFilePath}";
+            $this->logger->error($error);
+>>>>>>> 5200b63 (.)
             return ['success' => false, 'error' => $error];
         }
 
@@ -69,7 +97,10 @@ class UploadFileAction extends BaseS3Action
                 'fileSize' => filesize($localFilePath),
             ]);
 
+<<<<<<< HEAD
             /** @var array{ObjectURL?: string, ETag?: string} $result AWS SDK returns array */
+=======
+>>>>>>> 5200b63 (.)
             $result = $uploader->upload();
 
             // Close the file after successful upload

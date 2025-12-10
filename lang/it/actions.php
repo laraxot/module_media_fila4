@@ -7,6 +7,7 @@ return [
         'title' => 'Allegati',
         'label' => 'Carica allegato',
 <<<<<<< HEAD
+<<<<<<< HEAD
         'fields' => [],
 =======
 <<<<<<< HEAD
@@ -25,5 +26,8 @@ return [
         ],
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
+=======
+        'fields' => [],
+>>>>>>> 5200b63 (.)
     ],
 ];

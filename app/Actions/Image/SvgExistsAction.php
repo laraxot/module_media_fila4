@@ -4,6 +4,10 @@ declare(strict_types=1);
 
 namespace Modules\Media\Actions\Image;
 
+<<<<<<< HEAD
+=======
+use Illuminate\Support\Arr;
+>>>>>>> 5200b63 (.)
 use Modules\UI\Actions\Icon\GetAllIconsAction;
 use Webmozart\Assert\Assert;
 
@@ -17,7 +21,11 @@ class SvgExistsAction
     /**
      * Verifica se l'SVG esiste nei set di icone registrati.
      *
+<<<<<<< HEAD
      * @param  string  $svgName  Il nome dell'SVG da verificare (es: 'heroicon-o-user')
+=======
+     * @param  string $svgName  Il nome dell'SVG da verificare (es: 'heroicon-o-user')
+>>>>>>> 5200b63 (.)
      * @return bool True se l'SVG esiste, false altrimenti
      */
     public function execute(string $svgName): bool
@@ -29,11 +37,14 @@ class SvgExistsAction
         $packs = app(GetAllIconsAction::class)->execute();
         Assert::isArray($packs, 'Il risultato di GetAllIconsAction deve essere un array');
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> e9b0959 (.)
+=======
+>>>>>>> 5200b63 (.)
 
         foreach ($packs as $pack) {
             Assert::isArray($pack, 'Ogni pacchetto deve essere un array');
@@ -42,6 +53,7 @@ class SvgExistsAction
             $icons = $pack['icons'];
             Assert::isIterable($icons, 'icons deve essere un array o un oggetto iterabile');
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -72,6 +84,8 @@ class SvgExistsAction
             
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
+=======
+>>>>>>> 5200b63 (.)
             foreach ($icons as $icon) {
                 if ($svgName === $icon) {
                     return true;

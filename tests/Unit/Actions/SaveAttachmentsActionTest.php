@@ -23,13 +23,21 @@ class SaveAttachmentsActionTest extends TestCase
     public function test_executes_save_attachments_successfully(): void
     {
         // Arrange
+<<<<<<< HEAD
         $action = new SaveAttachmentsAction;
+=======
+        $action = new SaveAttachmentsAction();
+>>>>>>> 5200b63 (.)
 
         // Mock del record HasMedia
         $record = Mockery::mock(HasMedia::class);
         $record->shouldReceive('addMedia')->andReturnSelf();
         $record->shouldReceive('usingFileName')->andReturnSelf();
+<<<<<<< HEAD
         $record->shouldReceive('toMediaCollection')->andReturn(new Media);
+=======
+        $record->shouldReceive('toMediaCollection')->andReturn(new Media());
+>>>>>>> 5200b63 (.)
         $record->shouldReceive('update')->andReturn(true);
 
         $attachments = ['invoice', 'contract'];
@@ -53,7 +61,11 @@ class SaveAttachmentsActionTest extends TestCase
     public function test_handles_empty_attachments(): void
     {
         // Arrange
+<<<<<<< HEAD
         $action = new SaveAttachmentsAction;
+=======
+        $action = new SaveAttachmentsAction();
+>>>>>>> 5200b63 (.)
 
         $record = Mockery::mock(HasMedia::class);
         $record->shouldReceive('update')->with([])->andReturn(true);
@@ -71,7 +83,11 @@ class SaveAttachmentsActionTest extends TestCase
     public function test_skips_nonexistent_files(): void
     {
         // Arrange
+<<<<<<< HEAD
         $action = new SaveAttachmentsAction;
+=======
+        $action = new SaveAttachmentsAction();
+>>>>>>> 5200b63 (.)
 
         $record = Mockery::mock(HasMedia::class);
         $record->shouldReceive('update')->with([])->andReturn(true);
@@ -91,7 +107,11 @@ class SaveAttachmentsActionTest extends TestCase
     public function test_handles_storage_errors_gracefully(): void
     {
         // Arrange
+<<<<<<< HEAD
         $action = new SaveAttachmentsAction;
+=======
+        $action = new SaveAttachmentsAction();
+>>>>>>> 5200b63 (.)
 
         $record = Mockery::mock(HasMedia::class);
         $record->shouldReceive('addMedia')->andThrow(new Exception('Storage error'));
@@ -113,12 +133,20 @@ class SaveAttachmentsActionTest extends TestCase
     public function test_uses_correct_disk(): void
     {
         // Arrange
+<<<<<<< HEAD
         $action = new SaveAttachmentsAction;
+=======
+        $action = new SaveAttachmentsAction();
+>>>>>>> 5200b63 (.)
 
         $record = Mockery::mock(HasMedia::class);
         $record->shouldReceive('addMedia')->andReturnSelf();
         $record->shouldReceive('usingFileName')->andReturnSelf();
+<<<<<<< HEAD
         $record->shouldReceive('toMediaCollection')->andReturn(new Media);
+=======
+        $record->shouldReceive('toMediaCollection')->andReturn(new Media());
+>>>>>>> 5200b63 (.)
         $record->shouldReceive('update')->andReturn(true);
 
         $attachments = ['invoice'];
@@ -140,12 +168,20 @@ class SaveAttachmentsActionTest extends TestCase
     public function test_cleans_up_temp_files(): void
     {
         // Arrange
+<<<<<<< HEAD
         $action = new SaveAttachmentsAction;
+=======
+        $action = new SaveAttachmentsAction();
+>>>>>>> 5200b63 (.)
 
         $record = Mockery::mock(HasMedia::class);
         $record->shouldReceive('addMedia')->andReturnSelf();
         $record->shouldReceive('usingFileName')->andReturnSelf();
+<<<<<<< HEAD
         $record->shouldReceive('toMediaCollection')->andReturn(new Media);
+=======
+        $record->shouldReceive('toMediaCollection')->andReturn(new Media());
+>>>>>>> 5200b63 (.)
         $record->shouldReceive('update')->andReturn(true);
 
         $attachments = ['invoice'];
@@ -166,12 +202,20 @@ class SaveAttachmentsActionTest extends TestCase
     public function test_handles_multiple_attachments(): void
     {
         // Arrange
+<<<<<<< HEAD
         $action = new SaveAttachmentsAction;
+=======
+        $action = new SaveAttachmentsAction();
+>>>>>>> 5200b63 (.)
 
         $record = Mockery::mock(HasMedia::class);
         $record->shouldReceive('addMedia')->times(3)->andReturnSelf();
         $record->shouldReceive('usingFileName')->times(3)->andReturnSelf();
+<<<<<<< HEAD
         $record->shouldReceive('toMediaCollection')->times(3)->andReturn(new Media);
+=======
+        $record->shouldReceive('toMediaCollection')->times(3)->andReturn(new Media());
+>>>>>>> 5200b63 (.)
         $record->shouldReceive('update')->andReturn(true);
 
         $attachments = ['invoice', 'contract', 'receipt'];

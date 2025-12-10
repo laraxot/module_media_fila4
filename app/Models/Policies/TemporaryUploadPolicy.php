@@ -6,6 +6,7 @@ namespace Modules\Media\Models\Policies;
 
 use Modules\Media\Models\TemporaryUpload;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Modules\Xot\Contracts\UserContract;
 =======
 <<<<<<< HEAD
@@ -22,12 +23,16 @@ use Modules\Xot\Contracts\UserContract;
 use Modules\Xot\Contracts\UserContract;
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
+=======
+use Modules\Xot\Contracts\UserContract;
+>>>>>>> 5200b63 (.)
 
 class TemporaryUploadPolicy extends MediaBasePolicy
 {
     /**
      * Determine whether the user can view any models.
      */
+<<<<<<< HEAD
 <<<<<<< HEAD
     public function viewAny(UserContract $user): bool
     {
@@ -55,11 +60,17 @@ class TemporaryUploadPolicy extends MediaBasePolicy
         return $user->hasPermissionTo('temporary_upload.viewAny');
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
+=======
+    public function viewAny(UserContract $user): bool
+    {
+        return $user->hasPermissionTo('temporary_upload.viewAny');
+>>>>>>> 5200b63 (.)
     }
 
     /**
      * Determine whether the user can view the model.
      */
+<<<<<<< HEAD
 <<<<<<< HEAD
     public function view(UserContract $user, TemporaryUpload $_temporary_upload): bool
     {
@@ -87,11 +98,17 @@ class TemporaryUploadPolicy extends MediaBasePolicy
         return $user->hasPermissionTo('temporary_upload.view');
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
+=======
+    public function view(UserContract $user, TemporaryUpload $_temporary_upload): bool
+    {
+        return $user->hasPermissionTo('temporary_upload.view');
+>>>>>>> 5200b63 (.)
     }
 
     /**
      * Determine whether the user can create models.
      */
+<<<<<<< HEAD
 <<<<<<< HEAD
     public function create(UserContract $user): bool
     {
@@ -119,11 +136,17 @@ class TemporaryUploadPolicy extends MediaBasePolicy
         return $user->hasPermissionTo('temporary_upload.create');
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
+=======
+    public function create(UserContract $user): bool
+    {
+        return $user->hasPermissionTo('temporary_upload.create');
+>>>>>>> 5200b63 (.)
     }
 
     /**
      * Determine whether the user can update the model.
      */
+<<<<<<< HEAD
 <<<<<<< HEAD
     public function update(UserContract $user, TemporaryUpload $_temporary_upload): bool
     {
@@ -151,11 +174,17 @@ class TemporaryUploadPolicy extends MediaBasePolicy
         return $user->hasPermissionTo('temporary_upload.update');
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
+=======
+    public function update(UserContract $user, TemporaryUpload $_temporary_upload): bool
+    {
+        return $user->hasPermissionTo('temporary_upload.update');
+>>>>>>> 5200b63 (.)
     }
 
     /**
      * Determine whether the user can delete the model.
      */
+<<<<<<< HEAD
 <<<<<<< HEAD
     public function delete(UserContract $user, TemporaryUpload $_temporary_upload): bool
     {
@@ -183,11 +212,17 @@ class TemporaryUploadPolicy extends MediaBasePolicy
         return $user->hasPermissionTo('temporary_upload.delete');
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
+=======
+    public function delete(UserContract $user, TemporaryUpload $_temporary_upload): bool
+    {
+        return $user->hasPermissionTo('temporary_upload.delete');
+>>>>>>> 5200b63 (.)
     }
 
     /**
      * Determine whether the user can restore the model.
      */
+<<<<<<< HEAD
 <<<<<<< HEAD
     public function restore(UserContract $user, TemporaryUpload $_temporary_upload): bool
     {
@@ -215,11 +250,17 @@ class TemporaryUploadPolicy extends MediaBasePolicy
         return $user->hasPermissionTo('temporary_upload.restore');
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
+=======
+    public function restore(UserContract $user, TemporaryUpload $_temporary_upload): bool
+    {
+        return $user->hasPermissionTo('temporary_upload.restore');
+>>>>>>> 5200b63 (.)
     }
 
     /**
      * Determine whether the user can permanently delete the model.
      */
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -242,12 +283,17 @@ class TemporaryUploadPolicy extends MediaBasePolicy
 }
 =======
 >>>>>>> e9b0959 (.)
+=======
+>>>>>>> 5200b63 (.)
     public function forceDelete(UserContract $user, TemporaryUpload $temporary_upload): bool
     {
         return $user->hasPermissionTo('temporary_upload.forceDelete');
     }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
+=======
+>>>>>>> 5200b63 (.)
