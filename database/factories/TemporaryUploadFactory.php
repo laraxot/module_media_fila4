@@ -38,6 +38,7 @@ class TemporaryUploadFactory extends Factory
     /**
      * Create temporary upload for a specific session.
 <<<<<<< HEAD
+<<<<<<< HEAD
      */
     public function forSession(string $sessionId): static
     {
@@ -87,12 +88,19 @@ class TemporaryUploadFactory extends Factory
 >>>>>>> 47a54fe (.)
 =======
 >>>>>>> f1c6d6e (.)
+=======
+     */
+    public function forSession(string $sessionId): static
+    {
+        return $this->state(fn (array $_attributes): array => [
+>>>>>>> f41e45e (.)
             'session_id' => $sessionId,
         ]);
     }
 
     /**
      * Create temporary upload for current session.
+<<<<<<< HEAD
 <<<<<<< HEAD
      */
     public function currentSession(): static
@@ -106,6 +114,12 @@ class TemporaryUploadFactory extends Factory
     {
         return $this->state(fn(array $_attributes): array => [
 >>>>>>> 5200b63 (.)
+=======
+     */
+    public function currentSession(): static
+    {
+        return $this->state(fn (array $_attributes): array => [
+>>>>>>> f41e45e (.)
             'session_id' => session()->getId(),
         ]);
     }

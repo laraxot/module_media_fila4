@@ -22,6 +22,7 @@ class GetVideoDurationAction
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function execute(string $disk, string $file): ?int
     {
         if (! Storage::disk($disk)->exists($file)) {
@@ -47,6 +48,11 @@ class GetVideoDurationAction
     {
         if (!Storage::disk($disk)->exists($file)) {
 >>>>>>> 5200b63 (.)
+=======
+    public function execute(string $disk, string $file): ?int
+    {
+        if (! Storage::disk($disk)->exists($file)) {
+>>>>>>> f41e45e (.)
             return null;
         } // returns an int
 

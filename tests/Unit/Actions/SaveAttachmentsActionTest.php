@@ -29,6 +29,7 @@ class SaveAttachmentsActionTest extends TestCase
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         $action = new SaveAttachmentsAction;
 =======
 =======
@@ -50,16 +51,23 @@ class SaveAttachmentsActionTest extends TestCase
 >>>>>>> f1c6d6e (.)
         $action = new SaveAttachmentsAction();
 >>>>>>> 5200b63 (.)
+=======
+        $action = new SaveAttachmentsAction;
+>>>>>>> f41e45e (.)
 
         // Mock del record HasMedia
         $record = Mockery::mock(HasMedia::class);
         $record->shouldReceive('addMedia')->andReturnSelf();
         $record->shouldReceive('usingFileName')->andReturnSelf();
 <<<<<<< HEAD
+<<<<<<< HEAD
         $record->shouldReceive('toMediaCollection')->andReturn(new Media);
 =======
         $record->shouldReceive('toMediaCollection')->andReturn(new Media());
 >>>>>>> 5200b63 (.)
+=======
+        $record->shouldReceive('toMediaCollection')->andReturn(new Media);
+>>>>>>> f41e45e (.)
         $record->shouldReceive('update')->andReturn(true);
 
         $attachments = ['invoice', 'contract'];
@@ -89,6 +97,7 @@ class SaveAttachmentsActionTest extends TestCase
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         $action = new SaveAttachmentsAction;
 =======
 =======
@@ -109,6 +118,9 @@ class SaveAttachmentsActionTest extends TestCase
 >>>>>>> f1c6d6e (.)
         $action = new SaveAttachmentsAction();
 >>>>>>> 5200b63 (.)
+=======
+        $action = new SaveAttachmentsAction;
+>>>>>>> f41e45e (.)
 
         $record = Mockery::mock(HasMedia::class);
         $record->shouldReceive('update')->with([])->andReturn(true);
@@ -132,6 +144,7 @@ class SaveAttachmentsActionTest extends TestCase
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         $action = new SaveAttachmentsAction;
 =======
 =======
@@ -152,6 +165,9 @@ class SaveAttachmentsActionTest extends TestCase
 >>>>>>> f1c6d6e (.)
         $action = new SaveAttachmentsAction();
 >>>>>>> 5200b63 (.)
+=======
+        $action = new SaveAttachmentsAction;
+>>>>>>> f41e45e (.)
 
         $record = Mockery::mock(HasMedia::class);
         $record->shouldReceive('update')->with([])->andReturn(true);
@@ -177,6 +193,7 @@ class SaveAttachmentsActionTest extends TestCase
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         $action = new SaveAttachmentsAction;
 =======
 =======
@@ -197,6 +214,9 @@ class SaveAttachmentsActionTest extends TestCase
 >>>>>>> f1c6d6e (.)
         $action = new SaveAttachmentsAction();
 >>>>>>> 5200b63 (.)
+=======
+        $action = new SaveAttachmentsAction;
+>>>>>>> f41e45e (.)
 
         $record = Mockery::mock(HasMedia::class);
         $record->shouldReceive('addMedia')->andThrow(new Exception('Storage error'));
@@ -224,6 +244,7 @@ class SaveAttachmentsActionTest extends TestCase
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         $action = new SaveAttachmentsAction;
 =======
 =======
@@ -244,15 +265,22 @@ class SaveAttachmentsActionTest extends TestCase
 >>>>>>> f1c6d6e (.)
         $action = new SaveAttachmentsAction();
 >>>>>>> 5200b63 (.)
+=======
+        $action = new SaveAttachmentsAction;
+>>>>>>> f41e45e (.)
 
         $record = Mockery::mock(HasMedia::class);
         $record->shouldReceive('addMedia')->andReturnSelf();
         $record->shouldReceive('usingFileName')->andReturnSelf();
 <<<<<<< HEAD
+<<<<<<< HEAD
         $record->shouldReceive('toMediaCollection')->andReturn(new Media);
 =======
         $record->shouldReceive('toMediaCollection')->andReturn(new Media());
 >>>>>>> 5200b63 (.)
+=======
+        $record->shouldReceive('toMediaCollection')->andReturn(new Media);
+>>>>>>> f41e45e (.)
         $record->shouldReceive('update')->andReturn(true);
 
         $attachments = ['invoice'];
@@ -280,6 +308,7 @@ class SaveAttachmentsActionTest extends TestCase
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         $action = new SaveAttachmentsAction;
 =======
 =======
@@ -300,15 +329,22 @@ class SaveAttachmentsActionTest extends TestCase
 >>>>>>> f1c6d6e (.)
         $action = new SaveAttachmentsAction();
 >>>>>>> 5200b63 (.)
+=======
+        $action = new SaveAttachmentsAction;
+>>>>>>> f41e45e (.)
 
         $record = Mockery::mock(HasMedia::class);
         $record->shouldReceive('addMedia')->andReturnSelf();
         $record->shouldReceive('usingFileName')->andReturnSelf();
 <<<<<<< HEAD
+<<<<<<< HEAD
         $record->shouldReceive('toMediaCollection')->andReturn(new Media);
 =======
         $record->shouldReceive('toMediaCollection')->andReturn(new Media());
 >>>>>>> 5200b63 (.)
+=======
+        $record->shouldReceive('toMediaCollection')->andReturn(new Media);
+>>>>>>> f41e45e (.)
         $record->shouldReceive('update')->andReturn(true);
 
         $attachments = ['invoice'];
@@ -335,6 +371,7 @@ class SaveAttachmentsActionTest extends TestCase
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         $action = new SaveAttachmentsAction;
 =======
 =======
@@ -355,15 +392,22 @@ class SaveAttachmentsActionTest extends TestCase
 >>>>>>> f1c6d6e (.)
         $action = new SaveAttachmentsAction();
 >>>>>>> 5200b63 (.)
+=======
+        $action = new SaveAttachmentsAction;
+>>>>>>> f41e45e (.)
 
         $record = Mockery::mock(HasMedia::class);
         $record->shouldReceive('addMedia')->times(3)->andReturnSelf();
         $record->shouldReceive('usingFileName')->times(3)->andReturnSelf();
 <<<<<<< HEAD
+<<<<<<< HEAD
         $record->shouldReceive('toMediaCollection')->times(3)->andReturn(new Media);
 =======
         $record->shouldReceive('toMediaCollection')->times(3)->andReturn(new Media());
 >>>>>>> 5200b63 (.)
+=======
+        $record->shouldReceive('toMediaCollection')->times(3)->andReturn(new Media);
+>>>>>>> f41e45e (.)
         $record->shouldReceive('update')->andReturn(true);
 
         $attachments = ['invoice', 'contract', 'receipt'];

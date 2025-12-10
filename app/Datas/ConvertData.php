@@ -7,6 +7,7 @@ namespace Modules\Media\Datas;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 use FFMpeg\Format\Video\DefaultVideo;
 use FFMpeg\Format\Video\WebM;
 =======
@@ -17,6 +18,10 @@ use FFMpeg\Format\Video\WebM;
 use FFMpeg\Format\Video\WebM;
 use FFMpeg\Format\Video\DefaultVideo;
 >>>>>>> 5200b63 (.)
+=======
+use FFMpeg\Format\Video\DefaultVideo;
+use FFMpeg\Format\Video\WebM;
+>>>>>>> f41e45e (.)
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use Livewire\Wireable;
@@ -52,6 +57,7 @@ class ConvertData extends Data implements Wireable
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     public ?int $width = null;
 
     public ?int $height = null;
@@ -80,13 +86,17 @@ class ConvertData extends Data implements Wireable
 =======
 >>>>>>> f1c6d6e (.)
     public null|int $width = null;
+=======
+    public ?int $width = null;
+>>>>>>> f41e45e (.)
 
-    public null|int $height = null;
+    public ?int $height = null;
 
     // -threads 4: utilizza 4 thread per l'elaborazione, aumentando la velocità di conversione sfruttando il multi-threading.
-    public null|int $threads = null;
+    public ?int $threads = null;
 
     // -speed 4: imposta la velocità del codec VP9 a 4, che è un valore elevato per massimizzare la velocità di codifica.
+<<<<<<< HEAD
     public null|int $speed = null;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -144,6 +154,9 @@ class ConvertData extends Data implements Wireable
 >>>>>>> 47a54fe (.)
 =======
 >>>>>>> f1c6d6e (.)
+=======
+    public ?int $speed = null;
+>>>>>>> f41e45e (.)
 
     public function exists(): bool
     {
@@ -164,6 +177,7 @@ class ConvertData extends Data implements Wireable
         $format = $this->getFFMpegFormat();
         $extension = mb_strtolower(class_basename($format));
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -216,5 +230,8 @@ class ConvertData extends Data implements Wireable
 =======
         return Str::of($this->file)->replaceLast('.mp4', '.' . $extension)->toString();
 >>>>>>> f1c6d6e (.)
+=======
+        return Str::of($this->file)->replaceLast('.mp4', '.'.$extension)->toString();
+>>>>>>> f41e45e (.)
     }
 }

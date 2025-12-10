@@ -216,6 +216,7 @@ class MediaTest extends TestCase
 
         static::assertCount(2, $largeMedia);
 <<<<<<< HEAD
+<<<<<<< HEAD
         static::assertTrue($largeMedia->every(fn ($media) => $media->size > 1000));
 =======
         static::assertTrue($largeMedia->every(fn($media) => $media->size > 1000));
@@ -262,6 +263,9 @@ class MediaTest extends TestCase
 >>>>>>> 47a54fe (.)
 =======
 >>>>>>> f1c6d6e (.)
+=======
+        static::assertTrue($largeMedia->every(fn ($media) => $media->size > 1000));
+>>>>>>> f41e45e (.)
     }
 
     public function test_can_find_media_by_type(): void
@@ -310,6 +314,7 @@ class MediaTest extends TestCase
 
         static::assertCount(1, $profileMedia);
 <<<<<<< HEAD
+<<<<<<< HEAD
         static::assertTrue($profileMedia->every(fn ($media) => str_contains($media->name, 'profile')));
 =======
         static::assertTrue($profileMedia->every(fn($media) => str_contains($media->name, 'profile')));
@@ -356,6 +361,9 @@ class MediaTest extends TestCase
 >>>>>>> 47a54fe (.)
 =======
 >>>>>>> f1c6d6e (.)
+=======
+        static::assertTrue($profileMedia->every(fn ($media) => str_contains($media->name, 'profile')));
+>>>>>>> f41e45e (.)
     }
 
     public function test_can_find_media_by_custom_properties(): void
@@ -538,10 +546,14 @@ class MediaTest extends TestCase
     public function test_media_has_casts(): void
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $media = new Media;
 =======
         $media = new Media();
 >>>>>>> 5200b63 (.)
+=======
+        $media = new Media;
+>>>>>>> f41e45e (.)
 
         $expectedCasts = [
             'id' => 'string',

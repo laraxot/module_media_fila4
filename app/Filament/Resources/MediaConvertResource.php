@@ -10,6 +10,7 @@ namespace Modules\Media\Filament\Resources;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Filament\Forms\Components\Radio;
 use Filament\Forms\Components\TextInput;
 use Filament\Schemas\Components\Component;
@@ -39,16 +40,26 @@ use Override;
 use Modules\Media\Filament\Resources\MediaConvertResource\Pages\ListMediaConverts;
 use Modules\Media\Filament\Resources\MediaConvertResource\Pages\CreateMediaConvert;
 use Modules\Media\Filament\Resources\MediaConvertResource\Pages\EditMediaConvert;
+=======
+>>>>>>> f41e45e (.)
 use Filament\Forms\Components\Radio;
 use Filament\Forms\Components\TextInput;
-use Modules\Media\Filament\Resources\MediaConvertResource\Pages;
+use Filament\Schemas\Components\Component;
+use Modules\Media\Filament\Resources\MediaConvertResource\Pages\CreateMediaConvert;
+use Modules\Media\Filament\Resources\MediaConvertResource\Pages\EditMediaConvert;
+use Modules\Media\Filament\Resources\MediaConvertResource\Pages\ListMediaConverts;
 use Modules\Media\Models\MediaConvert;
 use Modules\Xot\Filament\Resources\XotBaseResource;
+use Override;
 
 class MediaConvertResource extends XotBaseResource
 {
+<<<<<<< HEAD
     protected static null|string $model = MediaConvert::class;
 >>>>>>> 5200b63 (.)
+=======
+    protected static ?string $model = MediaConvert::class;
+>>>>>>> f41e45e (.)
 
     /**
      * @return array<string, Component>

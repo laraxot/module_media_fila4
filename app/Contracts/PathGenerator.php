@@ -67,10 +67,14 @@ interface PathGenerator
      * Genera il percorso per il file originale.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  Media  $media  Il media per cui generare il percorso
 =======
      * @param Media $media Il media per cui generare il percorso
 >>>>>>> 5200b63 (.)
+=======
+     * @param  Media  $media  Il media per cui generare il percorso
+>>>>>>> f41e45e (.)
      * @return string Il percorso generato
      */
     public function getPath(Media $media): string;
@@ -79,10 +83,14 @@ interface PathGenerator
      * Genera il percorso per le conversioni.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  Media  $media  Il media per cui generare il percorso
 =======
      * @param Media $media Il media per cui generare il percorso
 >>>>>>> 5200b63 (.)
+=======
+     * @param  Media  $media  Il media per cui generare il percorso
+>>>>>>> f41e45e (.)
      * @return string Il percorso generato
      */
     public function getPathForConversions(Media $media): string;
@@ -91,6 +99,9 @@ interface PathGenerator
      * Genera il percorso per le immagini responsive.
      *
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f41e45e (.)
      * @param  Media  $media  Il media per cui generare il percorso
      * @return string Il percorso generato
      */
