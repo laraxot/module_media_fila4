@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Collegamento alle Traduzioni del Modulo Media
 
 <<<<<<< HEAD
@@ -97,3 +98,5 @@ Per ogni risorsa o campo localizzato, vedi anche il file corrispondente in quest
 >>>>>>> 8cdc78f (.)
 =======
 >>>>>>> 3f50d25 (.)
+=======
+>>>>>>> 960f18d (.)
