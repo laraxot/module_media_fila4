@@ -10,6 +10,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 3f50d25 (.)
 =======
@@ -351,3 +352,5 @@ class ExamplePage extends XotBasePage
 >>>>>>> ffc92bd (.)
 =======
 >>>>>>> cb6b71e (.)
+=======
+>>>>>>> 4b6364d (.)
