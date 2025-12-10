@@ -7,6 +7,7 @@ namespace Modules\Media\Filament\Resources;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Filament\Forms\Components\Radio;
 use Filament\Forms\Components\TextInput;
 use Filament\Schemas\Components\Component;
@@ -25,14 +26,10 @@ class MediaConvertResource extends XotBaseResource
 >>>>>>> 06bb10d (.)
 =======
 >>>>>>> 98c37f4 (.)
+=======
+>>>>>>> a80d398 (.)
 use Filament\Schemas\Components\Component;
 use Override;
-=======
->>>>>>> 0a466ed (.)
-=======
-use Filament\Schemas\Components\Component;
-use Override;
->>>>>>> 37a2da6 (.)
 use Modules\Media\Filament\Resources\MediaConvertResource\Pages\ListMediaConverts;
 use Modules\Media\Filament\Resources\MediaConvertResource\Pages\CreateMediaConvert;
 use Modules\Media\Filament\Resources\MediaConvertResource\Pages\EditMediaConvert;
@@ -44,10 +41,6 @@ use Modules\Xot\Filament\Resources\XotBaseResource;
 
 class MediaConvertResource extends XotBaseResource
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 37a2da6 (.)
     protected static null|string $model = MediaConvert::class;
 >>>>>>> 5200b63 (.)
 
@@ -55,16 +48,6 @@ class MediaConvertResource extends XotBaseResource
      * @return array<string, Component>
      */
     #[Override]
-<<<<<<< HEAD
-=======
-    protected static ?string $model = MediaConvert::class;
-
-    /**
-     * @return array<string, \Filament\Schemas\Components\Component>
-     */
->>>>>>> 0a466ed (.)
-=======
->>>>>>> 37a2da6 (.)
     public static function getFormSchema(): array
     {
         return [
@@ -105,10 +88,6 @@ class MediaConvertResource extends XotBaseResource
         ];
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 37a2da6 (.)
     #[Override]
     public static function getRelations(): array
     {
@@ -116,17 +95,6 @@ class MediaConvertResource extends XotBaseResource
     }
 
     #[Override]
-<<<<<<< HEAD
-=======
-    public static function getRelations(): array
-    {
-        return [
-        ];
-    }
-
->>>>>>> 0a466ed (.)
-=======
->>>>>>> 37a2da6 (.)
     public static function getPages(): array
     {
         return [

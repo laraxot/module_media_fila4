@@ -13,6 +13,7 @@ use Exception;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Modules\Media\Datas\ConvertData;
 use ProtoneMedia\LaravelFFMpeg\Support\FFMpeg;
 use Spatie\QueueableAction\QueueableAction;
@@ -23,6 +24,8 @@ use Spatie\QueueableAction\QueueableAction;
 =======
 >>>>>>> 37a2da6 (.)
 >>>>>>> 98c37f4 (.)
+=======
+>>>>>>> a80d398 (.)
 use FFMpeg\Format\Video\DefaultVideo;
 use Filament\Notifications\Notification;
 use Illuminate\Support\Facades\Storage;
@@ -31,19 +34,6 @@ use ProtoneMedia\LaravelFFMpeg\FFMpeg\FFMpegExporter;
 use ProtoneMedia\LaravelFFMpeg\MediaOpener;
 use ProtoneMedia\LaravelFFMpeg\Support\FFMpeg;
 use Spatie\QueueableAction\QueueableAction;
-<<<<<<< HEAD
-=======
-use Filament\Notifications\Notification;
-use Illuminate\Support\Facades\Storage;
-use Modules\Media\Datas\ConvertData;
-use ProtoneMedia\LaravelFFMpeg\Support\FFMpeg;
-use ProtoneMedia\LaravelFFMpeg\MediaOpener;
-use ProtoneMedia\LaravelFFMpeg\FFMpeg\FFMpegExporter;
-use Spatie\QueueableAction\QueueableAction;
-use FFMpeg\Format\Video\DefaultVideo;
->>>>>>> 0a466ed (.)
-=======
->>>>>>> 37a2da6 (.)
 use Webmozart\Assert\Assert;
 >>>>>>> 5200b63 (.)
 
@@ -93,14 +83,7 @@ class ConvertVideoByConvertDataAction
                 // Gestione del progresso
                 $msg = "{$percentage}% transcoded";
                 $msg .= "{$remaining} seconds left at rate: {$rate}";
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 0a466ed (.)
-=======
-
->>>>>>> 37a2da6 (.)
                 // Log o notifica del progresso
             })
             ->addFilter('-preset', 'ultrafast')
