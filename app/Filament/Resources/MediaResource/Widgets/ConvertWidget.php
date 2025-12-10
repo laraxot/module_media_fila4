@@ -51,6 +51,7 @@ class ConvertWidget extends Widget
         $format = new WebM;
         $extension = mb_strtolower(class_basename($format));
         $file_new = Str::of($file_mp4)->replaceLast('.mp4', '.'.$extension)->toString();
+<<<<<<< HEAD
 =======
         $format = new WebM();
         $extension = mb_strtolower(class_basename($format));
@@ -63,11 +64,17 @@ class ConvertWidget extends Widget
         $extension = mb_strtolower(class_basename($format));
         $file_new = Str::of($file_mp4)->replaceLast('.mp4', '.' . $extension)->toString();
 =======
+=======
+        $format = new WebM();
+        $extension = mb_strtolower(class_basename($format));
+        $file_new = Str::of($file_mp4)->replaceLast('.mp4', '.' . $extension)->toString();
+>>>>>>> 0865113 (.)
         $format = new WebM;
         $extension = mb_strtolower(class_basename($format));
         $file_new = Str::of($file_mp4)
             ->replaceLast('.mp4', '.'.$extension)
             ->toString();
+<<<<<<< HEAD
 >>>>>>> 0a466ed (.)
 <<<<<<< HEAD
 >>>>>>> 06bb10d (.)
@@ -83,6 +90,14 @@ class ConvertWidget extends Widget
         $extension = mb_strtolower(class_basename($format));
         $file_new = Str::of($file_mp4)->replaceLast('.mp4', '.' . $extension)->toString();
 >>>>>>> a80d398 (.)
+=======
+        $format = new WebM();
+        $extension = mb_strtolower(class_basename($format));
+        $file_new = Str::of($file_mp4)->replaceLast('.mp4', '.' . $extension)->toString();
+        $format = new WebM();
+        $extension = mb_strtolower(class_basename($format));
+        $file_new = Str::of($file_mp4)->replaceLast('.mp4', '.' . $extension)->toString();
+>>>>>>> 0865113 (.)
 
         /*
          * -preset ultrafast.
@@ -130,6 +145,7 @@ class ConvertWidget extends Widget
         }
 
         $formattedMedia->save($file_new);
+<<<<<<< HEAD
 =======
         FFMpeg::fromDisk($disk_mp4)
 =======
@@ -138,6 +154,9 @@ class ConvertWidget extends Widget
 =======
         FFMpeg::fromDisk($disk_mp4)
 >>>>>>> 2a4b5df (.)
+=======
+        FFMpeg::fromDisk($disk_mp4)
+>>>>>>> 0865113 (.)
             ->open($file_mp4)
             ->export()
             // ->addFilter(function (VideoFilters $filters) {
@@ -156,15 +175,21 @@ class ConvertWidget extends Widget
                     ->send();
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 2a4b5df (.)
+=======
+>>>>>>> 0865113 (.)
             })
             ->toDisk($disk_mp4)
             ->inFormat($format)
             ->save($file_new);
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 5200b63 (.)
 =======
+=======
+>>>>>>> 0865113 (.)
             });
         }
         
@@ -179,10 +204,13 @@ class ConvertWidget extends Widget
         if (is_object($ffmpeg) && method_exists($ffmpeg, 'save')) {
             $ffmpeg->save($file_new);
         }
+<<<<<<< HEAD
 >>>>>>> 13d1d7e (.)
 =======
 >>>>>>> 2a4b5df (.)
 =======
+=======
+>>>>>>> 0865113 (.)
         /** @var MediaExporter $export */
         $export = FFMpeg::fromDisk($disk_mp4)
             ->open($file_mp4)
@@ -213,8 +241,11 @@ class ConvertWidget extends Widget
         }
 
         $formatted->save($file_new);
+<<<<<<< HEAD
 >>>>>>> 1634e53 (.)
 =======
+=======
+>>>>>>> 0865113 (.)
         FFMpeg::fromDisk($disk_mp4)
             ->open($file_mp4)
             ->export()
@@ -236,8 +267,11 @@ class ConvertWidget extends Widget
             ->toDisk($disk_mp4)
             ->inFormat($format)
             ->save($file_new);
+<<<<<<< HEAD
 >>>>>>> 21a9aec (.)
 =======
+=======
+>>>>>>> 0865113 (.)
         $exportedMedia = FFMpeg::fromDisk($disk_mp4)
             ->open($file_mp4)
             ->export();
@@ -275,7 +309,10 @@ class ConvertWidget extends Widget
         }
 
         $formattedMedia->save($file_new);
+<<<<<<< HEAD
 >>>>>>> 1900eb1 (.)
+=======
+>>>>>>> 0865113 (.)
 
         while ($this->percentage < 100) {
             // Stream the current count to the browser...
@@ -291,6 +328,7 @@ class ConvertWidget extends Widget
             $this->start =
 <<<<<<< HEAD
                 "{$this->percentage}% transcoded".PHP_EOL."{$this->remaining} seconds left at rate: {$this->rate}";
+<<<<<<< HEAD
 =======
                 "{$this->percentage}% transcoded" . PHP_EOL . "{$this->remaining} seconds left at rate: {$this->rate}";
 <<<<<<< HEAD
@@ -310,6 +348,11 @@ class ConvertWidget extends Widget
 >>>>>>> 98c37f4 (.)
 =======
 >>>>>>> a80d398 (.)
+=======
+            $this->start = "{$this->percentage}% transcoded".PHP_EOL."{$this->remaining} seconds left at rate: {$this->rate}";
+            $this->start =
+                "{$this->percentage}% transcoded" . PHP_EOL . "{$this->remaining} seconds left at rate: {$this->rate}";
+>>>>>>> 0865113 (.)
 
             // Decrement the counter...
             // $this->start = $this->start - 1;

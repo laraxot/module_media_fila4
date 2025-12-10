@@ -203,6 +203,7 @@ expect()->extend('toBe' + 'Media' + '', function () {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 namespace Modules\Media\Tests;
@@ -221,6 +222,8 @@ namespace Modules\Media\Tests;
 >>>>>>> a80d398 (.)
 =======
 >>>>>>> 47a54fe (.)
+=======
+>>>>>>> 0865113 (.)
 use Modules\Media\Models\Media;
 use Modules\Media\Models\MediaCollection;
 use Modules\Media\Tests\TestCase;
@@ -260,6 +263,7 @@ expect()->extend('toBe' + 'Media' + '', function () {
 });
 
 /*
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -280,10 +284,13 @@ use Modules\Media\Tests\TestCase;
 =======
 >>>>>>> 91c1d65 (.)
 =======
+=======
+>>>>>>> 0865113 (.)
 namespace Modules\Media\Tests;
 
 use Modules\Media\Models\Media;
 use Modules\Media\Models\MediaCollection;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -294,6 +301,8 @@ use Modules\Media\Models\MediaCollection;
 >>>>>>> c08a553 (.)
 =======
 >>>>>>> 10ef3f7 (.)
+=======
+>>>>>>> 0865113 (.)
 
 /*
 |--------------------------------------------------------------------------
@@ -325,6 +334,9 @@ expect()->extend('toBeMedia', function () {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0865113 (.)
     return $this->toBeInstanceOf(\Modules\Media\Models\Media::class);
 });
 
@@ -333,7 +345,10 @@ expect()->extend('toBeMediaCollection', function () {
 });
 
 /*
+<<<<<<< HEAD
 >>>>>>> origin/develop
+=======
+>>>>>>> 0865113 (.)
 |--------------------------------------------------------------------------
 | Functions
 |--------------------------------------------------------------------------
@@ -344,10 +359,13 @@ expect()->extend('toBeMediaCollection', function () {
 |
 */
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> a12f125f4a (.)
 =======
 =======
 >>>>>>> 5200b63 (.)
+=======
+>>>>>>> 0865113 (.)
  * |--------------------------------------------------------------------------
  * | Functions
  * |--------------------------------------------------------------------------
@@ -362,6 +380,7 @@ expect()->extend('toBeMediaCollection', function () {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b93ef594b4 (.)
 >>>>>>> e9b0959 (.)
 =======
@@ -370,10 +389,13 @@ expect()->extend('toBeMediaCollection', function () {
 =======
 >>>>>>> 98c37f4 (.)
 =======
+=======
+>>>>>>> 0865113 (.)
 namespace Modules\Media\Tests;
 
 use Modules\Media\Models\Media;
 use Modules\Media\Models\MediaCollection;
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 1d21a10 (.)
@@ -393,6 +415,10 @@ namespace Modules\Media\Tests;
 
 =======
 >>>>>>> b93ef594b4 (.)
+=======
+namespace Modules\Media\Tests;
+
+>>>>>>> 0865113 (.)
 use Modules\Media\Models\Media;
 use Modules\Media\Models\MediaCollection;
 use Modules\Media\Tests\TestCase;
@@ -433,6 +459,7 @@ expect()->extend('toBe' + 'Media' + '', function () {
 
 /*
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 use Modules\Media\Tests\TestCase;
 <<<<<<< HEAD
@@ -454,6 +481,8 @@ use Modules\Media\Tests\TestCase;
 >>>>>>> ece6f0a (.)
 =======
 >>>>>>> da2a819 (.)
+=======
+>>>>>>> 0865113 (.)
 
 /*
 |--------------------------------------------------------------------------
@@ -488,6 +517,7 @@ expect()->extend('toBeMedia', function () {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 877e05f (.)
 =======
@@ -496,6 +526,8 @@ expect()->extend('toBeMedia', function () {
 >>>>>>> c08a553 (.)
 =======
 >>>>>>> 10ef3f7 (.)
+=======
+>>>>>>> 0865113 (.)
     return $this->toBeInstanceOf(Media::class);
 });
 
@@ -504,6 +536,7 @@ expect()->extend('toBeMediaCollection', function () {
 });
 
 /*
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -521,6 +554,8 @@ expect()->extend('toBeMediaCollection', function () {
 >>>>>>> ece6f0a (.)
 =======
 >>>>>>> da2a819 (.)
+=======
+>>>>>>> 0865113 (.)
     return $this->toBeInstanceOf(\Modules\Media\Models\Media::class);
 });
 
@@ -529,6 +564,7 @@ expect()->extend('toBeMediaCollection', function () {
 });
 
 /*
+<<<<<<< HEAD
 >>>>>>> origin/develop
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -557,6 +593,8 @@ expect()->extend('toBeMediaCollection', function () {
 >>>>>>> ece6f0a (.)
 =======
 >>>>>>> da2a819 (.)
+=======
+>>>>>>> 0865113 (.)
 |--------------------------------------------------------------------------
 | Functions
 |--------------------------------------------------------------------------
@@ -566,6 +604,7 @@ expect()->extend('toBeMediaCollection', function () {
 | global functions to help you to reduce the number of lines of code in your test files.
 |
 */
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -606,6 +645,8 @@ expect()->extend('toBeMediaCollection', function () {
 >>>>>>> da2a819 (.)
 >>>>>>> a12f125f4a (.)
 =======
+=======
+>>>>>>> 0865113 (.)
  * |--------------------------------------------------------------------------
  * | Functions
  * |--------------------------------------------------------------------------
@@ -615,6 +656,7 @@ expect()->extend('toBeMediaCollection', function () {
  * | global functions to help you to reduce the number of lines of code in your test files.
  * |
  */
+<<<<<<< HEAD
 >>>>>>> b93ef594b4 (.)
 >>>>>>> e9b0959 (.)
 <<<<<<< HEAD
@@ -692,6 +734,8 @@ expect()->extend('toBeMediaCollection', function () {
 >>>>>>> da2a819 (.)
 =======
 >>>>>>> 53e059b (.)
+=======
+>>>>>>> 0865113 (.)
 
 function createMedia(array $attributes = []): Media
 {
@@ -742,6 +786,7 @@ function makeMediaCollection(array $attributes = []): MediaCollection
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 =======
@@ -758,6 +803,8 @@ function makeMediaCollection(array $attributes = []): MediaCollection
 >>>>>>> da2a819 (.)
 =======
 =======
+=======
+>>>>>>> 0865113 (.)
 
 function createMedia(array $attributes = []): \Modules\Media\Models\Media
 {
@@ -777,6 +824,7 @@ function createMediaCollection(array $attributes = []): \Modules\Media\Models\Me
 function makeMediaCollection(array $attributes = []): \Modules\Media\Models\MediaCollection
 {
     return \Modules\Media\Models\MediaCollection::factory()->make($attributes);
+<<<<<<< HEAD
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
 <<<<<<< HEAD
@@ -812,6 +860,11 @@ function makeMediaCollection(array $attributes = []): \Modules\Media\Models\Medi
 >>>>>>> c5a0539 (.)
 =======
 >>>>>>> 8e41d16 (.)
+=======
+    $MediaCollection = MediaCollection::factory()->make($attributes);
+    assert($MediaCollection instanceof MediaCollection);
+    return $MediaCollection;
+>>>>>>> 0865113 (.)
     /** @var \Illuminate\Database\Eloquent\Factories\Factory<MediaCollection> $factory */
     /** @phpstan-ignore-next-line class.notFound */
     $factory = MediaCollection::factory();
@@ -821,6 +874,7 @@ function makeMediaCollection(array $attributes = []): \Modules\Media\Models\Medi
     $mediaCollection = $factory->make($attributes);
 
     return $mediaCollection;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -880,4 +934,19 @@ function makeMediaCollection(array $attributes = []): \Modules\Media\Models\Medi
 =======
     return MediaCollection::factory()->make($attributes);
 >>>>>>> 9803aa5 (.)
+=======
+    return MediaCollection::factory()->make($attributes);
+    $MediaCollection = MediaCollection::factory()->make($attributes);
+    assert($MediaCollection instanceof MediaCollection);
+    return $MediaCollection;
+    return MediaCollection::factory()->make($attributes);
+    $MediaCollection = MediaCollection::factory()->make($attributes);
+    assert($MediaCollection instanceof MediaCollection);
+    return $MediaCollection;
+    return MediaCollection::factory()->make($attributes);
+    $MediaCollection = MediaCollection::factory()->make($attributes);
+    assert($MediaCollection instanceof MediaCollection);
+    return $MediaCollection;
+    return MediaCollection::factory()->make($attributes);
+>>>>>>> 0865113 (.)
 }
