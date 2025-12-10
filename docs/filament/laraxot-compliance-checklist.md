@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 3f50d25 (.)
 # Checklist Conformità Laraxot - Modulo Media
 
 ## 🎯 **CHECKLIST PRE-COMMIT OBBLIGATORIA**
@@ -125,6 +128,7 @@ namespace Modules\Media\Models;               // Corretto
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 cd /var/www/html/_bases/base_saluteora/laravel
 =======
 cd /var/www/html/_bases/base_techplanner_fila3_mono/laravel
@@ -145,6 +149,11 @@ cd /var/www/html/_bases/base_techplanner_fila3_mono/laravel
 =======
 cd /var/www/html/_bases/base_saluteora/laravel
 >>>>>>> aa5e51a (.)
+=======
+cd /var/www/html/_bases/base_techplanner_fila3_mono/laravel
+cd /var/www/html/_bases/base_saluteora/laravel
+cd /var/www/html/_bases/base_techplanner_fila3_mono/laravel
+>>>>>>> 3f50d25 (.)
 ./vendor/bin/phpstan analyze Modules/Media --level=9
 ```
 
@@ -229,5 +238,8 @@ class ExamplePage extends XotBasePage
 **Versione**: 1.0  
 **Data**: 2025-08-07  
 **Applicabilità**: Tutti i file Filament del modulo Media
+<<<<<<< HEAD
 =======
 >>>>>>> 8cdc78f (.)
+=======
+>>>>>>> 3f50d25 (.)

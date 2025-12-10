@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 3f50d25 (.)
 # Media Module - Testing Guidelines
 
 ## Testing Framework Requirements
@@ -12,6 +15,7 @@ DB_CONNECTION=sqlite
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 DB_DATABASE=<nome progetto>_data_test
 >>>>>>> 7df6a71 (.)
@@ -21,6 +25,9 @@ DB_DATABASE=<nome progetto>_data_test
 >>>>>>> c9ef35c (.)
 =======
 >>>>>>> aa5e51a (.)
+=======
+DB_DATABASE=<nome progetto>_data_test
+>>>>>>> 3f50d25 (.)
 DB_DATABASE=saluteora_data_test
 FILESYSTEM_DISK=local
 MEDIA_DISK=local
@@ -480,5 +487,8 @@ describe('Media Performance Tests', function () {
 **Last Updated**: 2025-08-28
 **Testing Framework**: Pest
 **Environment**: .env.testing
+<<<<<<< HEAD
 =======
 >>>>>>> 8cdc78f (.)
+=======
+>>>>>>> 3f50d25 (.)
