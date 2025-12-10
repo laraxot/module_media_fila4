@@ -35,6 +35,7 @@ return [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 =======
@@ -48,10 +49,13 @@ return [
 =======
 >>>>>>> ece6f0a (.)
 =======
+>>>>>>> da2a819 (.)
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> e9b0959 (.)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -130,6 +134,8 @@ return [
 >>>>>>> ece6f0a (.)
 =======
 >>>>>>> a2b9bd0 (.)
+=======
+>>>>>>> da2a819 (.)
     'navigation' => [
         'group' => 'Media',
     ],
@@ -211,6 +217,7 @@ return [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 91c1d65 (.)
 =======
@@ -234,9 +241,12 @@ return [
 =======
 >>>>>>> ece6f0a (.)
 =======
+>>>>>>> da2a819 (.)
+=======
 =======
 =======
 >>>>>>> origin/develop
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -270,6 +280,8 @@ return [
 >>>>>>> c4425b4 (.)
 =======
 >>>>>>> ece6f0a (.)
+=======
+>>>>>>> da2a819 (.)
   'navigation' => [
     'group' => 'Media',
   ],
@@ -279,6 +291,7 @@ return [
       'label' => 'Output Debug',
       'placeholder' => 'Risultati del test verranno mostrati qui',
       'helper_text' => 'Informazioni di debug per la connessione S3',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -303,6 +316,8 @@ return [
 >>>>>>> c4425b4 (.)
 =======
 >>>>>>> ece6f0a (.)
+=======
+>>>>>>> da2a819 (.)
 =======
     'navigation' => [
         'group' => 'Media',
@@ -362,6 +377,7 @@ return [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 06bb10d (.)
 =======
@@ -384,6 +400,8 @@ return [
 >>>>>>> c4425b4 (.)
 =======
 >>>>>>> ece6f0a (.)
+=======
+>>>>>>> da2a819 (.)
     ],
     'attachment' => [
       'label' => 'Allegato',
@@ -407,6 +425,7 @@ return [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/develop
 =======
 >>>>>>> 06bb10d (.)
@@ -436,6 +455,9 @@ return [
 =======
 >>>>>>> origin/develop
 >>>>>>> ece6f0a (.)
+=======
+>>>>>>> origin/develop
+>>>>>>> da2a819 (.)
     'clearResults' => [
       'label' => 'Cancella Risultati',
     ],
@@ -476,6 +498,7 @@ return [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 =======
@@ -488,12 +511,15 @@ return [
 >>>>>>> c4425b4 (.)
 =======
 >>>>>>> ece6f0a (.)
+=======
+>>>>>>> da2a819 (.)
 >>>>>>> a12f125f4a (.)
 =======
 >>>>>>> b93ef594b4 (.)
 =======
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -582,4 +608,6 @@ return [
 >>>>>>> ece6f0a (.)
 =======
 >>>>>>> a2b9bd0 (.)
+=======
+>>>>>>> da2a819 (.)
 ];

@@ -37,6 +37,7 @@ use Modules\Media\Models\MediaConvert;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 =======
@@ -49,6 +50,8 @@ use Modules\Media\Models\MediaConvert;
 >>>>>>> c4425b4 (.)
 =======
 >>>>>>> ece6f0a (.)
+=======
+>>>>>>> da2a819 (.)
 use Modules\Xot\Contracts\UserContract;
 =======
 <<<<<<< HEAD
@@ -65,6 +68,7 @@ use Modules\Xot\Contracts\UserContract;
 use Modules\Xot\Contracts\UserContract;
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -198,6 +202,8 @@ use Modules\Xot\Contracts\UserContract;
 =======
 use Modules\Xot\Contracts\UserContract;
 >>>>>>> a2b9bd0 (.)
+=======
+>>>>>>> da2a819 (.)
 
 class MediaConvertPolicy extends MediaBasePolicy
 {
@@ -236,6 +242,7 @@ class MediaConvertPolicy extends MediaBasePolicy
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 06bb10d (.)
 =======
@@ -258,10 +265,13 @@ class MediaConvertPolicy extends MediaBasePolicy
 >>>>>>> c4425b4 (.)
 =======
 >>>>>>> ece6f0a (.)
+=======
+>>>>>>> da2a819 (.)
     public function viewAny(UserContract $user): bool
     {
         return $user->hasPermissionTo('media_convert.viewAny');
 =======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -298,6 +308,8 @@ class MediaConvertPolicy extends MediaBasePolicy
 >>>>>>> c4425b4 (.)
 =======
 >>>>>>> ece6f0a (.)
+=======
+>>>>>>> da2a819 (.)
     public function viewAny(UserContract $user): bool
     {
         return $user->hasPermissionTo('media_convert.viewAny');
@@ -317,6 +329,7 @@ class MediaConvertPolicy extends MediaBasePolicy
         return $user->hasPermissionTo('media_convert.viewAny');
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -468,6 +481,8 @@ class MediaConvertPolicy extends MediaBasePolicy
     {
         return $user->hasPermissionTo('media_convert.viewAny');
 >>>>>>> a2b9bd0 (.)
+=======
+>>>>>>> da2a819 (.)
     }
 
     /**
@@ -505,6 +520,7 @@ class MediaConvertPolicy extends MediaBasePolicy
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 06bb10d (.)
 =======
@@ -527,10 +543,13 @@ class MediaConvertPolicy extends MediaBasePolicy
 >>>>>>> c4425b4 (.)
 =======
 >>>>>>> ece6f0a (.)
+=======
+>>>>>>> da2a819 (.)
     public function view(UserContract $user, MediaConvert $_media_convert): bool
     {
         return $user->hasPermissionTo('media_convert.view');
 =======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -567,6 +586,8 @@ class MediaConvertPolicy extends MediaBasePolicy
 >>>>>>> c4425b4 (.)
 =======
 >>>>>>> ece6f0a (.)
+=======
+>>>>>>> da2a819 (.)
     public function view(UserContract $user, MediaConvert $_media_convert): bool
     {
         return $user->hasPermissionTo('media_convert.view');
@@ -586,6 +607,7 @@ class MediaConvertPolicy extends MediaBasePolicy
         return $user->hasPermissionTo('media_convert.view');
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -737,6 +759,8 @@ class MediaConvertPolicy extends MediaBasePolicy
     {
         return $user->hasPermissionTo('media_convert.view');
 >>>>>>> a2b9bd0 (.)
+=======
+>>>>>>> da2a819 (.)
     }
 
     /**
@@ -774,6 +798,7 @@ class MediaConvertPolicy extends MediaBasePolicy
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 06bb10d (.)
 =======
@@ -796,10 +821,13 @@ class MediaConvertPolicy extends MediaBasePolicy
 >>>>>>> c4425b4 (.)
 =======
 >>>>>>> ece6f0a (.)
+=======
+>>>>>>> da2a819 (.)
     public function create(UserContract $user): bool
     {
         return $user->hasPermissionTo('media_convert.create');
 =======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -836,6 +864,8 @@ class MediaConvertPolicy extends MediaBasePolicy
 >>>>>>> c4425b4 (.)
 =======
 >>>>>>> ece6f0a (.)
+=======
+>>>>>>> da2a819 (.)
     public function create(UserContract $user): bool
     {
         return $user->hasPermissionTo('media_convert.create');
@@ -855,6 +885,7 @@ class MediaConvertPolicy extends MediaBasePolicy
         return $user->hasPermissionTo('media_convert.create');
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1006,6 +1037,8 @@ class MediaConvertPolicy extends MediaBasePolicy
     {
         return $user->hasPermissionTo('media_convert.create');
 >>>>>>> a2b9bd0 (.)
+=======
+>>>>>>> da2a819 (.)
     }
 
     /**
@@ -1043,6 +1076,7 @@ class MediaConvertPolicy extends MediaBasePolicy
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 06bb10d (.)
 =======
@@ -1065,10 +1099,13 @@ class MediaConvertPolicy extends MediaBasePolicy
 >>>>>>> c4425b4 (.)
 =======
 >>>>>>> ece6f0a (.)
+=======
+>>>>>>> da2a819 (.)
     public function update(UserContract $user, MediaConvert $_media_convert): bool
     {
         return $user->hasPermissionTo('media_convert.update');
 =======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1105,6 +1142,8 @@ class MediaConvertPolicy extends MediaBasePolicy
 >>>>>>> c4425b4 (.)
 =======
 >>>>>>> ece6f0a (.)
+=======
+>>>>>>> da2a819 (.)
     public function update(UserContract $user, MediaConvert $_media_convert): bool
     {
         return $user->hasPermissionTo('media_convert.update');
@@ -1124,6 +1163,7 @@ class MediaConvertPolicy extends MediaBasePolicy
         return $user->hasPermissionTo('media_convert.update');
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1275,6 +1315,8 @@ class MediaConvertPolicy extends MediaBasePolicy
     {
         return $user->hasPermissionTo('media_convert.update');
 >>>>>>> a2b9bd0 (.)
+=======
+>>>>>>> da2a819 (.)
     }
 
     /**
@@ -1312,6 +1354,7 @@ class MediaConvertPolicy extends MediaBasePolicy
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 06bb10d (.)
 =======
@@ -1334,10 +1377,13 @@ class MediaConvertPolicy extends MediaBasePolicy
 >>>>>>> c4425b4 (.)
 =======
 >>>>>>> ece6f0a (.)
+=======
+>>>>>>> da2a819 (.)
     public function delete(UserContract $user, MediaConvert $_media_convert): bool
     {
         return $user->hasPermissionTo('media_convert.delete');
 =======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1374,6 +1420,8 @@ class MediaConvertPolicy extends MediaBasePolicy
 >>>>>>> c4425b4 (.)
 =======
 >>>>>>> ece6f0a (.)
+=======
+>>>>>>> da2a819 (.)
     public function delete(UserContract $user, MediaConvert $_media_convert): bool
     {
         return $user->hasPermissionTo('media_convert.delete');
@@ -1393,6 +1441,7 @@ class MediaConvertPolicy extends MediaBasePolicy
         return $user->hasPermissionTo('media_convert.delete');
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1544,6 +1593,8 @@ class MediaConvertPolicy extends MediaBasePolicy
     {
         return $user->hasPermissionTo('media_convert.delete');
 >>>>>>> a2b9bd0 (.)
+=======
+>>>>>>> da2a819 (.)
     }
 
     /**
@@ -1581,6 +1632,7 @@ class MediaConvertPolicy extends MediaBasePolicy
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 06bb10d (.)
 =======
@@ -1603,10 +1655,13 @@ class MediaConvertPolicy extends MediaBasePolicy
 >>>>>>> c4425b4 (.)
 =======
 >>>>>>> ece6f0a (.)
+=======
+>>>>>>> da2a819 (.)
     public function restore(UserContract $user, MediaConvert $_media_convert): bool
     {
         return $user->hasPermissionTo('media_convert.restore');
 =======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1643,6 +1698,8 @@ class MediaConvertPolicy extends MediaBasePolicy
 >>>>>>> c4425b4 (.)
 =======
 >>>>>>> ece6f0a (.)
+=======
+>>>>>>> da2a819 (.)
     public function restore(UserContract $user, MediaConvert $_media_convert): bool
     {
         return $user->hasPermissionTo('media_convert.restore');
@@ -1662,6 +1719,7 @@ class MediaConvertPolicy extends MediaBasePolicy
         return $user->hasPermissionTo('media_convert.restore');
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1813,11 +1871,14 @@ class MediaConvertPolicy extends MediaBasePolicy
     {
         return $user->hasPermissionTo('media_convert.restore');
 >>>>>>> a2b9bd0 (.)
+=======
+>>>>>>> da2a819 (.)
     }
 
     /**
      * Determine whether the user can permanently delete the model.
      */
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1863,6 +1924,8 @@ class MediaConvertPolicy extends MediaBasePolicy
 =======
 >>>>>>> ece6f0a (.)
 =======
+>>>>>>> da2a819 (.)
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1883,6 +1946,7 @@ class MediaConvertPolicy extends MediaBasePolicy
 }
 =======
 >>>>>>> e9b0959 (.)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1951,11 +2015,14 @@ class MediaConvertPolicy extends MediaBasePolicy
 >>>>>>> ece6f0a (.)
 =======
 >>>>>>> a2b9bd0 (.)
+=======
+>>>>>>> da2a819 (.)
     public function forceDelete(UserContract $user, MediaConvert $media_convert): bool
     {
         return $user->hasPermissionTo('media_convert.forceDelete');
     }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2026,3 +2093,8 @@ class MediaConvertPolicy extends MediaBasePolicy
 >>>>>>> ece6f0a (.)
 =======
 >>>>>>> a2b9bd0 (.)
+=======
+=======
+>>>>>>> origin/develop
+>>>>>>> e9b0959 (.)
+>>>>>>> da2a819 (.)
