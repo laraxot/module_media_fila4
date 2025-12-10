@@ -1,26 +1,8 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> b93ef594b4 (.)
->>>>>>> e9b0959 (.)
 <?php
 
 declare(strict_types=1);
 
 ?>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> a12f125f4a (.)
-=======
->>>>>>> b93ef594b4 (.)
-=======
->>>>>>> origin/develop
->>>>>>> e9b0959 (.)
 <x-dynamic-component :component="$getEntryWrapperView()" :entry="$entry">
     @php
         $limit = $getLimit();
@@ -138,33 +120,9 @@ declare(strict_types=1);
                 </div>
             @endif
         @elseif (($placeholder = $getPlaceholder()) !== null)
-<<<<<<< HEAD
             <div class="fi-in-placeholder text-gray-400 dark:text-gray-500">
                 {{ $placeholder }}
             </div>
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <div class="fi-in-placeholder text-gray-400 dark:text-gray-500">
-                {{ $placeholder }}
-            </div>
-=======
-            <x-filament-infolists::entries.placeholder>
-                {{ $placeholder }}
-            </x-filament-infolists::entries.placeholder>
->>>>>>> a12f125f4a (.)
-=======
-            <div class="fi-in-placeholder text-gray-400 dark:text-gray-500">
-                {{ $placeholder }}
-            </div>
->>>>>>> b93ef594b4 (.)
-=======
-            <x-filament-infolists::entries.placeholder>
-                {{ $placeholder }}
-            </x-filament-infolists::entries.placeholder>
->>>>>>> origin/develop
->>>>>>> e9b0959 (.)
         @endif
     </div>
 </x-dynamic-component>

@@ -1,26 +1,8 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> b93ef594b4 (.)
->>>>>>> e9b0959 (.)
 <?php
 
 declare(strict_types=1);
 
 ?>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> a12f125f4a (.)
-=======
->>>>>>> b93ef594b4 (.)
-=======
->>>>>>> origin/develop
->>>>>>> e9b0959 (.)
 {{--
     S3Test Page - Test page for email functionality
     View: ui::filament.clusters.test.pages.s3test
