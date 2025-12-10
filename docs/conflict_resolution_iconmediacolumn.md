@@ -81,12 +81,16 @@ Il file `Modules/Media/app/Filament/Tables/Columns/IconMediaColumn.php` presenta
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
+=======
+>>>>>>> 1d21a10 (.)
 - [Modules/Media/docs/](../docs/)
 =======
 - [Modules/Media/project_docs/](../project_docs/)
 >>>>>>> e9b0959 (.)
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 - [Modules/Media/docs/](../docs/)
@@ -96,5 +100,7 @@ Il file `Modules/Media/app/Filament/Tables/Columns/IconMediaColumn.php` presenta
 =======
 - [Modules/Media/docs/](../docs/)
 >>>>>>> f1c6d6e (.)
+=======
+>>>>>>> 1d21a10 (.)
 
 *Ultimo aggiornamento: 29 luglio 2025*
