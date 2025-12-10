@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 3f50d25 (.)
-=======
->>>>>>> 9ffe7a9 (.)
 # ConvertVideoByConvertDataAction
 
 ## Panoramica
@@ -66,35 +58,4 @@ $action = new ConvertVideoByConvertDataAction();
 $convertedPath = $action->execute($data);
 ```
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 [Torna alla documentazione Media](/docs/modules/module_media.md#actions) 
-=======
-[Torna alla documentazione Media](../README.md) 
->>>>>>> 7df6a71 (.)
-=======
-[Torna alla documentazione Media](/docs/modules/module_media.md#actions) 
->>>>>>> 0caa3cf (.)
-=======
-[Torna alla documentazione Media](/docs/modules/module_media.md#actions) 
-=======
-[Torna alla documentazione Media](../README.md) 
->>>>>>> 9348522 (.)
->>>>>>> c9ef35c (.)
-=======
-[Torna alla documentazione Media](/docs/modules/module_media.md#actions) 
->>>>>>> aa5e51a (.)
-=======
->>>>>>> 8cdc78f (.)
-=======
-[Torna alla documentazione Media](../README.md) 
->>>>>>> 3f50d25 (.)
-=======
->>>>>>> 960f18d (.)
-=======
-[Torna alla documentazione Media](/docs/modules/module_media.md#actions) 
->>>>>>> 9ffe7a9 (.)
