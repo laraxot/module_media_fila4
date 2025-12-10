@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 87135f8a (.)
 # Linee Guida Prevenzione Problemi - Modulo Media
 
 ## 🚨 Problemi Critici Risolti in S3Test.php
@@ -138,10 +141,14 @@ $this->label(__('media::s3test.actions.testCredentials.label'))
 - [ ] Type hints per parametri
 - [ ] PHPDoc completo
 <<<<<<< HEAD
+<<<<<<< HEAD
 - [ ] PHPStan Level 9+ passa
 =======
 - [ ] PHPStan level 10+ passa
 >>>>>>> 75f201c5 (.)
+=======
+- [ ] PHPStan Level 9+ passa
+>>>>>>> 87135f8a (.)
 
 ### 3. **Sistema Traduzioni**
 
@@ -364,10 +371,14 @@ jobs:
 ### 1. **Indicatori di Qualità**
 - **Architettura**: 0 import diretti tra moduli
 <<<<<<< HEAD
+<<<<<<< HEAD
 - **Tipizzazione**: 100% PHPStan Level 9 compliance
 =======
 - **Tipizzazione**: 100% PHPStan level 10 compliance
 >>>>>>> 75f201c5 (.)
+=======
+- **Tipizzazione**: 100% PHPStan Level 9 compliance
+>>>>>>> 87135f8a (.)
 - **Traduzioni**: 100% file traduzione completi
 - **Errori**: 0 errori runtime critici
 - **Performance**: < 2s per operazioni test
@@ -391,5 +402,8 @@ jobs:
 **📦 Versione**: 3.1.0  
 **🎯 Obiettivo**: Prevenzione completa problemi futuri  
 **✅ Status**: Linee guida implementate e testate
+<<<<<<< HEAD
 =======
 >>>>>>> a96927a (.)
+=======
+>>>>>>> 87135f8a (.)
