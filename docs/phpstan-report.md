@@ -59,12 +59,16 @@ L'analisi PHPStan di livello 1 non ha rilevato errori nel modulo Media. Questo Ã
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 47a54fe (.)
 * [phpstan_report.md](../../../Lang/docs/phpstan_report.md)
 * [phpstan_report.md](../../../Media/docs/phpstan_report.md)
 =======
 * [phpstan_report.md](../../../Lang/project_docs/phpstan_report.md)
 * [phpstan_report.md](../../../Media/project_docs/phpstan_report.md)
 >>>>>>> e9b0959 (.)
+<<<<<<< HEAD
 =======
 * [phpstan_report.md](../../../Lang/docs/phpstan_report.md)
 * [phpstan_report.md](../../../Media/docs/phpstan_report.md)
@@ -73,6 +77,8 @@ L'analisi PHPStan di livello 1 non ha rilevato errori nel modulo Media. Questo Ã
 * [phpstan_report.md](../../../Lang/docs/phpstan_report.md)
 * [phpstan_report.md](../../../Media/docs/phpstan_report.md)
 >>>>>>> 0caa3cf (.)
+=======
+>>>>>>> 47a54fe (.)
 
 
 ### Versione Incoming

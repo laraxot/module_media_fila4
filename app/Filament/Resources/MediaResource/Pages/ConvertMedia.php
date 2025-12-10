@@ -8,6 +8,7 @@ namespace Modules\Media\Filament\Resources\MediaResource\Pages;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Modules\Media\Filament\Resources\MediaResource;
 use Modules\Xot\Filament\Resources\Pages\XotBaseViewRecord;
 use Override;
@@ -18,18 +19,54 @@ use Override;
 >>>>>>> 98c37f4 (.)
 =======
 >>>>>>> a80d398 (.)
+=======
+>>>>>>> 47a54fe (.)
 use Override;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+use Override;
+=======
+>>>>>>> a12f125f4a (.)
+=======
+use Override;
+>>>>>>> b93ef594b4 (.)
+=======
+>>>>>>> origin/develop
+>>>>>>> e9b0959 (.)
 use Filament\Actions\DeleteAction;
 use Filament\Resources\Pages\ViewRecord;
 use Modules\Media\Filament\Resources\MediaResource;
 use Modules\Xot\Filament\Resources\Pages\XotBaseViewRecord;
 >>>>>>> 5200b63 (.)
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> e9b0959 (.)
 class ConvertMedia extends XotBaseViewRecord
 {
     protected static string $resource = MediaResource::class;
 
+<<<<<<< HEAD
     #[Override]
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+    #[Override]
+=======
+>>>>>>> a12f125f4a (.)
+=======
+    #[Override]
+>>>>>>> b93ef594b4 (.)
+=======
+class ConvertMedia extends \Modules\Xot\Filament\Resources\Pages\XotBaseViewRecord
+{
+    protected static string $resource = MediaResource::class;
+
+>>>>>>> origin/develop
+>>>>>>> e9b0959 (.)
     public function getInfolistSchema(): array
     {
         return [

@@ -8,8 +8,11 @@ return [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 06bb10d (.)
+=======
+>>>>>>> 47a54fe (.)
     'navigation' => [
         'group' => 'Media',
     ],
@@ -18,8 +21,11 @@ return [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 98c37f4 (.)
+=======
+>>>>>>> 47a54fe (.)
     'navigation' => [
         'group' => 'Media',
     ],
@@ -39,6 +45,7 @@ return [
   ],
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
+<<<<<<< HEAD
 =======
     'navigation' => [
         'group' => 'Media',
@@ -63,4 +70,6 @@ return [
         'group' => 'Media',
     ],
 >>>>>>> a80d398 (.)
+=======
+>>>>>>> 47a54fe (.)
 ];

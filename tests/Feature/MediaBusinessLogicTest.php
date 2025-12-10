@@ -22,6 +22,9 @@ describe('Media Business Logic', function () {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 47a54fe (.)
 
 =======
 <<<<<<< HEAD
@@ -38,6 +41,7 @@ describe('Media Business Logic', function () {
         
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
+<<<<<<< HEAD
 =======
 
 >>>>>>> 5200b63 (.)
@@ -58,6 +62,8 @@ describe('Media Business Logic', function () {
 =======
 
 >>>>>>> a80d398 (.)
+=======
+>>>>>>> 47a54fe (.)
         $temporaryUpload = TemporaryUpload::factory()->create([
             'user_id' => $user->id,
             'file_name' => $file->getClientOriginalName(),
@@ -79,6 +85,9 @@ describe('Media Business Logic', function () {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 47a54fe (.)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -86,6 +95,7 @@ describe('Media Business Logic', function () {
 =======
 >>>>>>> b93ef594b4 (.)
 >>>>>>> e9b0959 (.)
+<<<<<<< HEAD
 =======
 >>>>>>> 5200b63 (.)
 =======
@@ -96,6 +106,8 @@ describe('Media Business Logic', function () {
 >>>>>>> 98c37f4 (.)
 =======
 >>>>>>> a80d398 (.)
+=======
+>>>>>>> 47a54fe (.)
         expect($media)
             ->toBeInstanceOf(Media::class)
             ->and($media->file_name)
@@ -109,28 +121,38 @@ describe('Media Business Logic', function () {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 98c37f4 (.)
+=======
+>>>>>>> 47a54fe (.)
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/develop
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 06bb10d (.)
+=======
+>>>>>>> 47a54fe (.)
         expect($media)->toBeInstanceOf(Media::class)
             ->and($media->file_name)->toBe($temporaryUpload->file_name)
             ->and($media->file_size)->toBe($temporaryUpload->file_size)
             ->and($media->mime_type)->toBe($temporaryUpload->mime_type);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 47a54fe (.)
 >>>>>>> a12f125f4a (.)
 =======
 >>>>>>> b93ef594b4 (.)
 =======
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
+<<<<<<< HEAD
 =======
 >>>>>>> 5200b63 (.)
 =======
@@ -143,6 +165,8 @@ describe('Media Business Logic', function () {
 >>>>>>> 98c37f4 (.)
 =======
 >>>>>>> a80d398 (.)
+=======
+>>>>>>> 47a54fe (.)
 
         $this->assertDatabaseHas('media', [
             'id' => $media->id,
@@ -172,6 +196,9 @@ describe('Media Business Logic', function () {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 47a54fe (.)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -179,6 +206,7 @@ describe('Media Business Logic', function () {
 =======
 >>>>>>> b93ef594b4 (.)
 >>>>>>> e9b0959 (.)
+<<<<<<< HEAD
 =======
 >>>>>>> 5200b63 (.)
 =======
@@ -189,6 +217,8 @@ describe('Media Business Logic', function () {
 >>>>>>> 98c37f4 (.)
 =======
 >>>>>>> a80d398 (.)
+=======
+>>>>>>> 47a54fe (.)
         expect($mediaConvert)
             ->toBeInstanceOf(MediaConvert::class)
             ->and($mediaConvert->media_id)
@@ -202,28 +232,38 @@ describe('Media Business Logic', function () {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 98c37f4 (.)
+=======
+>>>>>>> 47a54fe (.)
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/develop
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 06bb10d (.)
+=======
+>>>>>>> 47a54fe (.)
         expect($mediaConvert)->toBeInstanceOf(MediaConvert::class)
             ->and($mediaConvert->media_id)->toBe($media->id)
             ->and($mediaConvert->original_format)->toBe('jpeg')
             ->and($mediaConvert->target_format)->toBe('png');
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 47a54fe (.)
 >>>>>>> a12f125f4a (.)
 =======
 >>>>>>> b93ef594b4 (.)
 =======
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
+<<<<<<< HEAD
 =======
 >>>>>>> 5200b63 (.)
 =======
@@ -236,6 +276,8 @@ describe('Media Business Logic', function () {
 >>>>>>> 98c37f4 (.)
 =======
 >>>>>>> a80d398 (.)
+=======
+>>>>>>> 47a54fe (.)
 
         $this->assertDatabaseHas('media_converts', [
             'id' => $mediaConvert->id,
@@ -277,6 +319,9 @@ describe('Media Business Logic', function () {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 47a54fe (.)
 
 =======
 <<<<<<< HEAD
@@ -293,6 +338,7 @@ describe('Media Business Logic', function () {
         
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
+<<<<<<< HEAD
 =======
 
 >>>>>>> 5200b63 (.)
@@ -313,6 +359,8 @@ describe('Media Business Logic', function () {
 =======
 
 >>>>>>> a80d398 (.)
+=======
+>>>>>>> 47a54fe (.)
         $profileMedia = Media::factory()->create([
             'user_id' => $user->id,
             'collection_name' => 'profile',
@@ -330,6 +378,9 @@ describe('Media Business Logic', function () {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 47a54fe (.)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -337,6 +388,7 @@ describe('Media Business Logic', function () {
 =======
 >>>>>>> b93ef594b4 (.)
 >>>>>>> e9b0959 (.)
+<<<<<<< HEAD
 =======
 >>>>>>> 5200b63 (.)
 =======
@@ -347,6 +399,8 @@ describe('Media Business Logic', function () {
 >>>>>>> 98c37f4 (.)
 =======
 >>>>>>> a80d398 (.)
+=======
+>>>>>>> 47a54fe (.)
         expect($profileMedia->collection_name)
             ->toBe('profile')
             ->and($documentMedia->collection_name)
@@ -356,6 +410,9 @@ describe('Media Business Logic', function () {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 47a54fe (.)
 =======
 <<<<<<< HEAD
 =======
@@ -369,6 +426,7 @@ describe('Media Business Logic', function () {
             ->and($documentMedia->collection_name)->toBe('documents');
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
+<<<<<<< HEAD
 =======
 >>>>>>> 5200b63 (.)
 =======
@@ -386,6 +444,8 @@ describe('Media Business Logic', function () {
 >>>>>>> 98c37f4 (.)
 =======
 >>>>>>> a80d398 (.)
+=======
+>>>>>>> 47a54fe (.)
 
         $this->assertDatabaseHas('media', [
             'id' => $profileMedia->id,
@@ -405,6 +465,9 @@ describe('Media Business Logic', function () {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 47a54fe (.)
 
 =======
 <<<<<<< HEAD
@@ -421,6 +484,7 @@ describe('Media Business Logic', function () {
         
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
+<<<<<<< HEAD
 =======
 
 >>>>>>> 5200b63 (.)
@@ -441,6 +505,8 @@ describe('Media Business Logic', function () {
 =======
 
 >>>>>>> a80d398 (.)
+=======
+>>>>>>> 47a54fe (.)
         $validImage = Media::factory()->create([
             'user_id' => $user->id,
             'mime_type' => 'image/jpeg',
@@ -452,6 +518,9 @@ describe('Media Business Logic', function () {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 47a54fe (.)
         expect($validImage->isImage())->toBeTrue()->and($validImage->isDocument())->toBeFalse();
 =======
 <<<<<<< HEAD
@@ -470,6 +539,7 @@ describe('Media Business Logic', function () {
             ->and($validImage->isDocument())->toBeFalse();
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
+<<<<<<< HEAD
 =======
         expect($validImage->isImage())->toBeTrue()->and($validImage->isDocument())->toBeFalse();
 >>>>>>> 5200b63 (.)
@@ -491,6 +561,8 @@ describe('Media Business Logic', function () {
 =======
         expect($validImage->isImage())->toBeTrue()->and($validImage->isDocument())->toBeFalse();
 >>>>>>> a80d398 (.)
+=======
+>>>>>>> 47a54fe (.)
 
         $validDocument = Media::factory()->create([
             'user_id' => $user->id,
@@ -503,6 +575,9 @@ describe('Media Business Logic', function () {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 47a54fe (.)
         expect($validDocument->isImage())->toBeFalse()->and($validDocument->isDocument())->toBeTrue();
 =======
 <<<<<<< HEAD
@@ -521,6 +596,7 @@ describe('Media Business Logic', function () {
             ->and($validDocument->isDocument())->toBeTrue();
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
+<<<<<<< HEAD
 =======
         expect($validDocument->isImage())->toBeFalse()->and($validDocument->isDocument())->toBeTrue();
 >>>>>>> 5200b63 (.)
@@ -542,6 +618,8 @@ describe('Media Business Logic', function () {
 =======
         expect($validDocument->isImage())->toBeFalse()->and($validDocument->isDocument())->toBeTrue();
 >>>>>>> a80d398 (.)
+=======
+>>>>>>> 47a54fe (.)
     });
 
     it('can track media conversion status', function () {
@@ -576,6 +654,9 @@ describe('Media Business Logic', function () {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 47a54fe (.)
 
 =======
 <<<<<<< HEAD
@@ -592,6 +673,7 @@ describe('Media Business Logic', function () {
         
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
+<<<<<<< HEAD
 =======
 
 >>>>>>> 5200b63 (.)
@@ -612,6 +694,8 @@ describe('Media Business Logic', function () {
 =======
 
 >>>>>>> a80d398 (.)
+=======
+>>>>>>> 47a54fe (.)
         $media = Media::factory()->create([
             'user_id' => $owner->id,
             'is_public' => false,
@@ -622,6 +706,9 @@ describe('Media Business Logic', function () {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 47a54fe (.)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -629,6 +716,7 @@ describe('Media Business Logic', function () {
 =======
 >>>>>>> b93ef594b4 (.)
 >>>>>>> e9b0959 (.)
+<<<<<<< HEAD
 =======
 >>>>>>> 5200b63 (.)
 =======
@@ -639,6 +727,8 @@ describe('Media Business Logic', function () {
 >>>>>>> 98c37f4 (.)
 =======
 >>>>>>> a80d398 (.)
+=======
+>>>>>>> 47a54fe (.)
         expect($media->user_id)
             ->toBe($owner->id)
             ->and($media->is_public)
@@ -650,6 +740,7 @@ describe('Media Business Logic', function () {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -661,6 +752,14 @@ describe('Media Business Logic', function () {
             ->and($media->is_public)->toBeFalse()
             ->and($media->user_id)->not->toBe($otherUser->id);
 <<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+=======
+        expect($media->user_id)->toBe($owner->id)
+            ->and($media->is_public)->toBeFalse()
+            ->and($media->user_id)->not->toBe($otherUser->id);
+>>>>>>> 47a54fe (.)
 >>>>>>> a12f125f4a (.)
 =======
 >>>>>>> b93ef594b4 (.)
@@ -670,6 +769,7 @@ describe('Media Business Logic', function () {
             ->and($media->user_id)->not->toBe($otherUser->id);
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
+<<<<<<< HEAD
 =======
 >>>>>>> 5200b63 (.)
 =======
@@ -682,6 +782,8 @@ describe('Media Business Logic', function () {
 >>>>>>> 98c37f4 (.)
 =======
 >>>>>>> a80d398 (.)
+=======
+>>>>>>> 47a54fe (.)
     });
 
     it('can handle media deletion', function () {
@@ -717,6 +819,9 @@ describe('Media Business Logic', function () {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 47a54fe (.)
         expect($url)->not->toBeEmpty()->and($url)->toContain('test-image.jpg');
 =======
 <<<<<<< HEAD
@@ -735,6 +840,7 @@ describe('Media Business Logic', function () {
             ->and($url)->toContain('test-image.jpg');
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
+<<<<<<< HEAD
 =======
         expect($url)->not->toBeEmpty()->and($url)->toContain('test-image.jpg');
 >>>>>>> 5200b63 (.)
@@ -756,6 +862,8 @@ describe('Media Business Logic', function () {
 =======
         expect($url)->not->toBeEmpty()->and($url)->toContain('test-image.jpg');
 >>>>>>> a80d398 (.)
+=======
+>>>>>>> 47a54fe (.)
     });
 
     it('can validate file size limits', function () {
@@ -765,6 +873,9 @@ describe('Media Business Logic', function () {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 47a54fe (.)
 
 =======
 <<<<<<< HEAD
@@ -781,6 +892,7 @@ describe('Media Business Logic', function () {
         
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
+<<<<<<< HEAD
 =======
 
 >>>>>>> 5200b63 (.)
@@ -801,6 +913,8 @@ describe('Media Business Logic', function () {
 =======
 
 >>>>>>> a80d398 (.)
+=======
+>>>>>>> 47a54fe (.)
         $validMedia = Media::factory()->create([
             'user_id' => $user->id,
             'file_size' => 1024 * 1024, // 1MB
@@ -823,11 +937,15 @@ describe('Media Business Logic', function () {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 47a54fe (.)
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> e9b0959 (.)
+<<<<<<< HEAD
 =======
 >>>>>>> 5200b63 (.)
 =======
@@ -838,6 +956,8 @@ describe('Media Business Logic', function () {
 >>>>>>> 98c37f4 (.)
 =======
 >>>>>>> a80d398 (.)
+=======
+>>>>>>> 47a54fe (.)
 
         Media::factory()
             ->count(5)
@@ -863,15 +983,21 @@ describe('Media Business Logic', function () {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 98c37f4 (.)
+=======
+>>>>>>> 47a54fe (.)
 =======
 =======
 =======
 >>>>>>> origin/develop
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 06bb10d (.)
+=======
+>>>>>>> 47a54fe (.)
         
         Media::factory()->count(5)->create([
             'user_id' => $user->id,
@@ -879,6 +1005,9 @@ describe('Media Business Logic', function () {
         ]);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 47a54fe (.)
 =======
 >>>>>>> b93ef594b4 (.)
 
@@ -909,8 +1038,11 @@ describe('Media Business Logic', function () {
         expect($totalMedia)->toBe(8)->and($imageCount)->toBe(5)->and($documentCount)->toBe(3);
 >>>>>>> b93ef594b4 (.)
 =======
+<<<<<<< HEAD
 =======
 >>>>>>> 06bb10d (.)
+=======
+>>>>>>> 47a54fe (.)
 
         Media::factory()->count(3)->create([
             'user_id' => $user->id,
@@ -929,6 +1061,7 @@ describe('Media Business Logic', function () {
             ->and($imageCount)->toBe(5)
             ->and($documentCount)->toBe(3);
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
 =======
@@ -943,5 +1076,9 @@ describe('Media Business Logic', function () {
 >>>>>>> 98c37f4 (.)
 =======
 >>>>>>> a80d398 (.)
+=======
+>>>>>>> origin/develop
+>>>>>>> e9b0959 (.)
+>>>>>>> 47a54fe (.)
     });
 });

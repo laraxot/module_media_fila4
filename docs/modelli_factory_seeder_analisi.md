@@ -33,9 +33,12 @@ Questo documento analizza tutti i modelli del modulo Media verificando la presen
 
 **Relazioni Business Logic**:
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 - **<nome progetto>**: Documenti pazienti, referti medici, immagini profilo
 >>>>>>> 7df6a71 (.)
+=======
+>>>>>>> 47a54fe (.)
 - **SaluteOra**: Documenti pazienti, referti medici, immagini profilo
 - **User**: Avatar utenti, documenti identità
 - **Cms**: Immagini contenuti, allegati pagine
@@ -200,9 +203,12 @@ Tutti i file factory devono essere validati con PHPStan livello 9:
 
 ### Moduli Collegati
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 - [<nome progetto> Module](../../<nome progetto>/docs/modelli_factory_seeder_analisi.md) - Documenti medici
 >>>>>>> 7df6a71 (.)
+=======
+>>>>>>> 47a54fe (.)
 - [SaluteOra Module](../../SaluteOra/docs/modelli_factory_seeder_analisi.md) - Documenti medici
 - [User Module](../../User/docs/modelli_factory_seeder_analisi.md) - Avatar e documenti utente
 - [Cms Module](../../Cms/docs/modelli_factory_seeder_analisi.md) - Contenuti multimediali
