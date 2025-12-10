@@ -14,62 +14,8 @@ use Modules\Xot\Database\Migrations\XotBaseMigration;
 /**
  * Class CreateImagesTable.
  */
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 return new class extends XotBaseMigration
 {
-=======
-return new class extends XotBaseMigration {
->>>>>>> 5200b63 (.)
-=======
-=======
->>>>>>> 98c37f4 (.)
-=======
-return new class extends XotBaseMigration {
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 47a54fe (.)
-return new class extends XotBaseMigration {
-=======
-return new class extends XotBaseMigration
-{
-<<<<<<< HEAD
->>>>>>> 0a466ed (.)
-<<<<<<< HEAD
->>>>>>> 06bb10d (.)
-=======
-=======
-return new class extends XotBaseMigration {
->>>>>>> 37a2da6 (.)
->>>>>>> 98c37f4 (.)
-=======
-return new class extends XotBaseMigration {
->>>>>>> a80d398 (.)
-=======
->>>>>>> a12f125f4a (.)
-=======
-return new class extends XotBaseMigration {
->>>>>>> b93ef594b4 (.)
-=======
-return new class extends XotBaseMigration
-{
->>>>>>> origin/develop
->>>>>>> e9b0959 (.)
->>>>>>> 47a54fe (.)
-=======
-return new class extends XotBaseMigration {
->>>>>>> f1c6d6e (.)
-=======
-return new class extends XotBaseMigration
-{
->>>>>>> f41e45e (.)
     /**
      * i don't write table name, it take from Model, model is singular of this class wit.
      */
@@ -95,15 +41,7 @@ return new class extends XotBaseMigration
         });
         // -- UPDATE --
         $this->tableUpdate(function (Blueprint $table): void {
-<<<<<<< HEAD
-<<<<<<< HEAD
             if (! $this->hasColumn('format')) {
-=======
-            if (!$this->hasColumn('format')) {
->>>>>>> 5200b63 (.)
-=======
-            if (! $this->hasColumn('format')) {
->>>>>>> f41e45e (.)
                 $table->string('format')->nullable();
             }
 
