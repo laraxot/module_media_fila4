@@ -26,6 +26,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 =======
@@ -112,10 +113,13 @@
 >>>>>>> c4425b4 (.)
 =======
 >>>>>>> 37b6a94 (.)
+=======
+>>>>>>> e5c049f (.)
 # ==============================================
 # LARAXOT MODULE MEDIA - .GITIGNORE
 # ==============================================
 # Modulo Media Laraxot - Template standardizzato
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -431,11 +435,15 @@
 =======
 # Ultimo aggiornamento: 2025-01-06
 >>>>>>> 55b5531 (.)
+=======
+# Ultimo aggiornamento: 2025-01-06
+>>>>>>> e5c049f (.)
 # ==============================================
 
 # ==============================================
 # DEPENDENCIES & PACKAGES
 # ==============================================
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1144,6 +1152,9 @@ npm-debug.log
 =======
 >>>>>>> 55b5531 (.)
 vendor/
+=======
+vendor/
+>>>>>>> e5c049f (.)
 /vendor/
 node_modules/
 /node_modules/
@@ -1193,6 +1204,7 @@ lerna-debug.log*
 # ==============================================
 # LARAVEL SPECIFIC
 # ==============================================
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b93ef594b4 (.)
 >>>>>>> c4425b4 (.)
@@ -1317,6 +1329,8 @@ build/
 >>>>>>> c4425b4 (.)
 =======
 >>>>>>> 37b6a94 (.)
+=======
+>>>>>>> e5c049f (.)
 bootstrap/compiled.php
 app/storage/
 public/storage
@@ -1325,6 +1339,7 @@ public_html/storage
 public_html/hot
 storage/*.key
 .env
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1437,6 +1452,8 @@ storage/*.key
 >>>>>>> c4425b4 (.)
 =======
 >>>>>>> 37b6a94 (.)
+=======
+>>>>>>> e5c049f (.)
 .env.*
 !.env.example
 
@@ -1493,6 +1510,7 @@ docs/phpstan/
 docs/cache/
 
 # ==============================================
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2398,6 +2416,8 @@ database_old/
 >>>>>>> 5a393f1 (.)
 =======
 >>>>>>> 55b5531 (.)
+=======
+>>>>>>> e5c049f (.)
 # OLD DIRECTORIES (LEGACY CLEANUP)
 # ==============================================
 resources/views/Components_old/
@@ -2440,6 +2460,7 @@ test_media_files/
 *.fila2
 laravel
 public_html
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2621,3 +2642,5 @@ public_html
 >>>>>>> b3efbc8 (.)
 =======
 >>>>>>> 18dbd95 (.)
+=======
+>>>>>>> e5c049f (.)
