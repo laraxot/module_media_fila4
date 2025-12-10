@@ -136,7 +136,11 @@ $this->label(__('media::s3test.actions.testCredentials.label'))
 - [ ] Tipi di ritorno espliciti
 - [ ] Type hints per parametri
 - [ ] PHPDoc completo
+<<<<<<< HEAD
 - [ ] PHPStan Level 9+ passa
+=======
+- [ ] PHPStan level 10+ passa
+>>>>>>> 75f201c5 (.)
 
 ### 3. **Sistema Traduzioni**
 
@@ -358,7 +362,11 @@ jobs:
 
 ### 1. **Indicatori di Qualità**
 - **Architettura**: 0 import diretti tra moduli
+<<<<<<< HEAD
 - **Tipizzazione**: 100% PHPStan Level 9 compliance
+=======
+- **Tipizzazione**: 100% PHPStan level 10 compliance
+>>>>>>> 75f201c5 (.)
 - **Traduzioni**: 100% file traduzione completi
 - **Errori**: 0 errori runtime critici
 - **Performance**: < 2s per operazioni test
