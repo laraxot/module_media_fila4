@@ -11,7 +11,9 @@ namespace Modules\Media\Filament\Resources\MediaResource\Pages;
 use Modules\Media\Filament\Resources\MediaResource;
 use Modules\Xot\Filament\Resources\Pages\XotBaseCreateRecord;
 
+<<<<<<< HEAD
 class CreateMedia extends XotBaseCreateRecord
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -22,12 +24,15 @@ class CreateMedia extends XotBaseCreateRecord
 =======
 >>>>>>> b8fda23 (.)
 =======
+>>>>>>> 9a4eacb (.)
+=======
 <<<<<<< HEAD
 class CreateMedia extends XotBaseCreateRecord
 =======
 class CreateMedia extends \Modules\Xot\Filament\Resources\Pages\XotBaseCreateRecord
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -58,6 +63,8 @@ class CreateMedia extends \Modules\Xot\Filament\Resources\Pages\XotBaseCreateRec
 >>>>>>> b8fda23 (.)
 =======
 >>>>>>> f5f7069 (.)
+=======
+>>>>>>> 9a4eacb (.)
 {
     protected static string $resource = MediaResource::class;
 }
