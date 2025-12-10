@@ -1,8 +1,13 @@
 {
     "name": "Media",
     "alias": "media",
+<<<<<<< HEAD
     "description": "Gestione avanzata di file multimediali con supporto per upload, ottimizzazione e organizzazione",
     "keywords": ["media", "files", "upload", "images", "storage"],
+=======
+    "description": "",
+    "keywords": [],
+>>>>>>> f0b0032 (.)
     "priority": 0,
     "providers": [
         "Modules\\Media\\Providers\\MediaServiceProvider",
