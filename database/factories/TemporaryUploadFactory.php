@@ -10,6 +10,7 @@ use Modules\Media\Models\TemporaryUpload;
 /**
  * TemporaryUpload Factory
 <<<<<<< HEAD
+<<<<<<< HEAD
  *
  * Factory for creating TemporaryUpload model instances for testing and seeding.
  *
@@ -18,6 +19,11 @@ use Modules\Media\Models\TemporaryUpload;
  * Factory for creating TemporaryUpload model instances for testing and seeding.
  * 
 >>>>>>> 0a466ed (.)
+=======
+ *
+ * Factory for creating TemporaryUpload model instances for testing and seeding.
+ *
+>>>>>>> 37a2da6 (.)
  * @extends Factory<TemporaryUpload>
  */
 class TemporaryUploadFactory extends Factory
@@ -25,10 +31,14 @@ class TemporaryUploadFactory extends Factory
     /**
      * The name of the factory's corresponding model.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
 =======
      * 
 >>>>>>> 0a466ed (.)
+=======
+     *
+>>>>>>> 37a2da6 (.)
      * @var class-string<TemporaryUpload>
      */
     protected $model = TemporaryUpload::class;
@@ -60,6 +70,7 @@ class TemporaryUploadFactory extends Factory
     public function forSession(string $sessionId): static
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         return $this->state(fn(array $_attributes): array => [
 <<<<<<< HEAD
 >>>>>>> 5200b63 (.)
@@ -67,7 +78,13 @@ class TemporaryUploadFactory extends Factory
 =======
         return $this->state(fn (array $attributes): array => [
 >>>>>>> 0a466ed (.)
+<<<<<<< HEAD
 >>>>>>> 06bb10d (.)
+=======
+=======
+        return $this->state(fn(array $_attributes): array => [
+>>>>>>> 37a2da6 (.)
+>>>>>>> 98c37f4 (.)
             'session_id' => $sessionId,
         ]);
     }
@@ -86,12 +103,16 @@ class TemporaryUploadFactory extends Factory
     public function currentSession(): static
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 37a2da6 (.)
         return $this->state(fn(array $_attributes): array => [
 >>>>>>> 5200b63 (.)
             'session_id' => session()->getId(),
         ]);
     }
 }
+<<<<<<< HEAD
 =======
         return $this->state(fn (array $attributes): array => [
             'session_id' => session()->getId(),
@@ -99,3 +120,5 @@ class TemporaryUploadFactory extends Factory
     }
 }
 >>>>>>> 0a466ed (.)
+=======
+>>>>>>> 37a2da6 (.)

@@ -6,6 +6,7 @@ namespace Modules\Media\Filament\Resources\MediaConvertResource\Pages;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Filament\Actions\Action;
 use Filament\Actions\ActionGroup;
 use Filament\Actions\BulkAction;
@@ -18,21 +19,31 @@ use Filament\Tables\Filters\BaseFilter;
 =======
 =======
 >>>>>>> 06bb10d (.)
+=======
+=======
+>>>>>>> 37a2da6 (.)
+>>>>>>> 98c37f4 (.)
 use Filament\Actions\BulkAction;
 use Filament\Tables\Filters\BaseFilter;
 use Filament\Actions\ActionGroup;
 use Override;
+<<<<<<< HEAD
 =======
 >>>>>>> 0a466ed (.)
+=======
+>>>>>>> 37a2da6 (.)
 use Filament\Actions\ViewAction;
 use Filament\Actions\EditAction;
 use Filament\Actions\Action;
 use Filament\Actions\DeleteBulkAction;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 use Filament\Tables\Filters\BaseFilter;
 use Filament\Actions\ActionGroup;
 >>>>>>> 0a466ed (.)
+=======
+>>>>>>> 37a2da6 (.)
 use Filament\Tables;
 use Filament\Tables\Columns\TextColumn;
 >>>>>>> 5200b63 (.)
@@ -56,6 +67,9 @@ class ListMediaConverts extends XotBaseListRecords
      * @return array<string, Tables\Columns\Column>
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 37a2da6 (.)
     #[Override]
     public function getTableColumns(): array
     {
@@ -75,6 +89,7 @@ class ListMediaConverts extends XotBaseListRecords
             'remaining' => TextColumn::make('remaining')->numeric(),
             'rate' => TextColumn::make('rate')->numeric(),
             'execution_time' => TextColumn::make('execution_time')->numeric(),
+<<<<<<< HEAD
 =======
     public function getTableColumns(): array
     {
@@ -109,6 +124,8 @@ class ListMediaConverts extends XotBaseListRecords
             'execution_time' => TextColumn::make('execution_time')
                 ->numeric(),
 >>>>>>> 0a466ed (.)
+=======
+>>>>>>> 37a2da6 (.)
         ];
     }
 
@@ -116,6 +133,9 @@ class ListMediaConverts extends XotBaseListRecords
      * @return array<string, BaseFilter>
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 37a2da6 (.)
     #[Override]
     public function getTableFilters(): array
     {
@@ -132,6 +152,7 @@ class ListMediaConverts extends XotBaseListRecords
                 'codec_audio',
                 'codec_audio',
             )->toArray(...)),
+<<<<<<< HEAD
 =======
     public function getTableFilters(): array
     {
@@ -143,6 +164,8 @@ class ListMediaConverts extends XotBaseListRecords
             'codec_audio' => SelectFilter::make('codec_audio')
                 ->options(fn () => MediaConvert::distinct()->pluck('codec_audio', 'codec_audio')->toArray()),
 >>>>>>> 0a466ed (.)
+=======
+>>>>>>> 37a2da6 (.)
         ];
     }
 
@@ -150,15 +173,22 @@ class ListMediaConverts extends XotBaseListRecords
      * @return array<string, Action|ActionGroup>
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     #[Override]
 =======
 >>>>>>> 0a466ed (.)
+=======
+    #[Override]
+>>>>>>> 37a2da6 (.)
     public function getTableActions(): array
     {
         return [
             'view' => ViewAction::make(),
             'edit' => EditAction::make(),
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 37a2da6 (.)
             'convert' => Action::make('convert')->action(function (MediaConvert $record): void {
                 $record->update(['percentage' => 0]);
                 $data = ConvertData::from([
@@ -167,6 +197,7 @@ class ListMediaConverts extends XotBaseListRecords
                 ]);
                 app(ConvertVideoByMediaConvertAction::class)->onQueue()->execute($data, $record);
             }),
+<<<<<<< HEAD
 =======
             'convert' => Action::make('convert')
                 ->action(function (MediaConvert $record): void {
@@ -180,10 +211,13 @@ class ListMediaConverts extends XotBaseListRecords
                         ->execute($data, $record);
                 }),
 >>>>>>> 0a466ed (.)
+=======
+>>>>>>> 37a2da6 (.)
         ];
     }
 
     /**
+<<<<<<< HEAD
 <<<<<<< HEAD
      * @return array<string, BulkAction>
      */
@@ -192,6 +226,11 @@ class ListMediaConverts extends XotBaseListRecords
      * @return array<string, \Filament\Actions\BulkAction>
      */
 >>>>>>> 0a466ed (.)
+=======
+     * @return array<string, BulkAction>
+     */
+    #[Override]
+>>>>>>> 37a2da6 (.)
     public function getTableBulkActions(): array
     {
         return [

@@ -19,16 +19,25 @@ class PowerPoint extends ImageGenerator
      */
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function convert(string $file, ?Conversion $_conversion = null): string
 =======
     public function convert(string $file, null|Conversion $_conversion = null): string
 >>>>>>> 5200b63 (.)
 =======
+=======
+>>>>>>> 98c37f4 (.)
     public function convert(string $file, null|Conversion $_conversion = null): string
 =======
     public function convert(string $file, ?Conversion $conversion = null): string
 >>>>>>> 0a466ed (.)
+<<<<<<< HEAD
 >>>>>>> 06bb10d (.)
+=======
+=======
+    public function convert(string $file, null|Conversion $_conversion = null): string
+>>>>>>> 37a2da6 (.)
+>>>>>>> 98c37f4 (.)
     {
         // Here you should convert the file to an image and return generated conversion path.
         // EXAMPLE
@@ -38,16 +47,25 @@ class PowerPoint extends ImageGenerator
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         return pathinfo($file, PATHINFO_DIRNAME).'/'.pathinfo($file, PATHINFO_FILENAME).'.jpg';
 =======
         return pathinfo($file, PATHINFO_DIRNAME) . '/' . pathinfo($file, PATHINFO_FILENAME) . '.jpg';
 >>>>>>> 5200b63 (.)
 =======
+=======
+>>>>>>> 98c37f4 (.)
         return pathinfo($file, PATHINFO_DIRNAME) . '/' . pathinfo($file, PATHINFO_FILENAME) . '.jpg';
 =======
         return pathinfo($file, PATHINFO_DIRNAME).'/'.pathinfo($file, PATHINFO_FILENAME).'.jpg';
 >>>>>>> 0a466ed (.)
+<<<<<<< HEAD
 >>>>>>> 06bb10d (.)
+=======
+=======
+        return pathinfo($file, PATHINFO_DIRNAME) . '/' . pathinfo($file, PATHINFO_FILENAME) . '.jpg';
+>>>>>>> 37a2da6 (.)
+>>>>>>> 98c37f4 (.)
     }
 
     public function requirementsAreInstalled(): bool

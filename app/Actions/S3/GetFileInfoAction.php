@@ -21,6 +21,7 @@ class GetFileInfoAction extends BaseS3Action
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -30,6 +31,10 @@ class GetFileInfoAction extends BaseS3Action
 >>>>>>> 5200b63 (.)
 =======
 >>>>>>> 06bb10d (.)
+=======
+=======
+>>>>>>> 37a2da6 (.)
+>>>>>>> 98c37f4 (.)
                 'Key' => $key,
             ]);
 
@@ -40,6 +45,9 @@ class GetFileInfoAction extends BaseS3Action
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 98c37f4 (.)
 =======
 =======
 =======
@@ -71,7 +79,12 @@ class GetFileInfoAction extends BaseS3Action
 >>>>>>> 5200b63 (.)
 =======
 >>>>>>> 0a466ed (.)
+<<<<<<< HEAD
 >>>>>>> 06bb10d (.)
+=======
+=======
+>>>>>>> 37a2da6 (.)
+>>>>>>> 98c37f4 (.)
 
             $fileInfo = [
                 'exists' => true,
@@ -81,6 +94,7 @@ class GetFileInfoAction extends BaseS3Action
                 'contentType' => $result['ContentType'] ?? null,
                 'lastModified' => $result['LastModified'] ?? null,
                 'etag' => $result['ETag'] ?? null,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -104,15 +118,24 @@ class GetFileInfoAction extends BaseS3Action
                 'metadata' => $result['Metadata'] ?? [],
 >>>>>>> 5200b63 (.)
 =======
+=======
+>>>>>>> 98c37f4 (.)
                 'metadata' => $result['Metadata'] ?? [],
 =======
                 'metadata' => $result['Metadata'] ?? []
 >>>>>>> 0a466ed (.)
+<<<<<<< HEAD
 >>>>>>> 06bb10d (.)
+=======
+=======
+                'metadata' => $result['Metadata'] ?? [],
+>>>>>>> 37a2da6 (.)
+>>>>>>> 98c37f4 (.)
             ];
 
             $this->logger->info('File info retrieved successfully', [
                 'key' => $key,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -125,6 +148,10 @@ class GetFileInfoAction extends BaseS3Action
 >>>>>>> 5200b63 (.)
 =======
 >>>>>>> 06bb10d (.)
+=======
+=======
+>>>>>>> 37a2da6 (.)
+>>>>>>> 98c37f4 (.)
                 'size' => $fileInfo['contentLength'],
             ]);
 
@@ -132,6 +159,9 @@ class GetFileInfoAction extends BaseS3Action
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 98c37f4 (.)
 =======
 =======
 =======
@@ -160,11 +190,17 @@ class GetFileInfoAction extends BaseS3Action
 >>>>>>> 5200b63 (.)
 =======
 >>>>>>> 0a466ed (.)
+<<<<<<< HEAD
 >>>>>>> 06bb10d (.)
+=======
+=======
+>>>>>>> 37a2da6 (.)
+>>>>>>> 98c37f4 (.)
         } catch (S3Exception $exception) {
             $this->logger->error('Error getting file info from S3', [
                 'key' => $key,
                 'error' => $exception->getMessage(),
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -188,11 +224,19 @@ class GetFileInfoAction extends BaseS3Action
                 'statusCode' => $exception->getStatusCode(),
 >>>>>>> 5200b63 (.)
 =======
+=======
+>>>>>>> 98c37f4 (.)
                 'statusCode' => $exception->getStatusCode(),
 =======
                 'statusCode' => $exception->getStatusCode()
 >>>>>>> 0a466ed (.)
+<<<<<<< HEAD
 >>>>>>> 06bb10d (.)
+=======
+=======
+                'statusCode' => $exception->getStatusCode(),
+>>>>>>> 37a2da6 (.)
+>>>>>>> 98c37f4 (.)
             ]);
 
             return [
@@ -202,6 +246,7 @@ class GetFileInfoAction extends BaseS3Action
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -211,11 +256,16 @@ class GetFileInfoAction extends BaseS3Action
 >>>>>>> 5200b63 (.)
 =======
 >>>>>>> 06bb10d (.)
+=======
+=======
+>>>>>>> 37a2da6 (.)
+>>>>>>> 98c37f4 (.)
                 'errorCode' => $exception->getStatusCode(),
             ];
         }
     }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -236,6 +286,8 @@ class GetFileInfoAction extends BaseS3Action
 =======
 >>>>>>> 06bb10d (.)
 =======
+>>>>>>> 98c37f4 (.)
+=======
                 'errorCode' => $exception->getStatusCode()
             ];
         }
@@ -248,4 +300,9 @@ class GetFileInfoAction extends BaseS3Action
 >>>>>>> 5200b63 (.)
 =======
 >>>>>>> 0a466ed (.)
+<<<<<<< HEAD
 >>>>>>> 06bb10d (.)
+=======
+=======
+>>>>>>> 37a2da6 (.)
+>>>>>>> 98c37f4 (.)

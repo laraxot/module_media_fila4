@@ -10,6 +10,7 @@ use Modules\Media\Models\Media;
 /**
  * Media Factory
 <<<<<<< HEAD
+<<<<<<< HEAD
  *
  * Factory for creating Media model instances for testing and seeding.
  *
@@ -18,6 +19,11 @@ use Modules\Media\Models\Media;
  * Factory for creating Media model instances for testing and seeding.
  * 
 >>>>>>> 0a466ed (.)
+=======
+ *
+ * Factory for creating Media model instances for testing and seeding.
+ *
+>>>>>>> 37a2da6 (.)
  * @extends Factory<Media>
  */
 class MediaFactory extends Factory
@@ -25,10 +31,14 @@ class MediaFactory extends Factory
     /**
      * The name of the factory's corresponding model.
 <<<<<<< HEAD
+<<<<<<< HEAD
      *
 =======
      * 
 >>>>>>> 0a466ed (.)
+=======
+     *
+>>>>>>> 37a2da6 (.)
      * @var class-string<Media>
      */
     protected $model = Media::class;
@@ -45,10 +55,14 @@ class MediaFactory extends Factory
         /** @var string $extension */
         $extension = $this->faker->randomElement(['jpg', 'png', 'pdf', 'doc']);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
         
 >>>>>>> 0a466ed (.)
+=======
+
+>>>>>>> 37a2da6 (.)
         return [
             'model_type' => 'App\\Models\\User',
             'model_id' => $this->faker->numberBetween(1, 100),
@@ -95,6 +109,7 @@ class MediaFactory extends Factory
         $extension = (string) $this->faker->randomElement(['jpg', 'png', 'gif']);
         $fileName = (string) $this->faker->word();
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
         return $this->state(fn (array $_attributes): array => [
@@ -106,6 +121,10 @@ class MediaFactory extends Factory
         
         return $this->state(fn (array $attributes): array => [
 >>>>>>> 0a466ed (.)
+=======
+
+        return $this->state(fn(array $_attributes): array => [
+>>>>>>> 37a2da6 (.)
             'mime_type' => $this->getMimeTypeFromExtension($extension),
             'file_name' => $fileName . '.' . $extension,
 >>>>>>> 5200b63 (.)
@@ -129,6 +148,7 @@ class MediaFactory extends Factory
         $extension = (string) $this->faker->randomElement(['pdf', 'doc', 'docx']);
         $fileName = (string) $this->faker->word();
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
         return $this->state(fn (array $_attributes): array => [
@@ -140,6 +160,10 @@ class MediaFactory extends Factory
         
         return $this->state(fn (array $attributes): array => [
 >>>>>>> 0a466ed (.)
+=======
+
+        return $this->state(fn(array $_attributes): array => [
+>>>>>>> 37a2da6 (.)
             'mime_type' => $this->getMimeTypeFromExtension($extension),
             'file_name' => $fileName . '.' . $extension,
 >>>>>>> 5200b63 (.)
@@ -172,7 +196,11 @@ class MediaFactory extends Factory
         };
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 }
 >>>>>>> 0a466ed (.)
+=======
+}
+>>>>>>> 37a2da6 (.)

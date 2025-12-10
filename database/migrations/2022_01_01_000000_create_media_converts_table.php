@@ -16,18 +16,27 @@ use Modules\Xot\Database\Migrations\XotBaseMigration;
  */
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 return new class extends XotBaseMigration
 {
 =======
 return new class extends XotBaseMigration {
 >>>>>>> 5200b63 (.)
 =======
+=======
+>>>>>>> 98c37f4 (.)
 return new class extends XotBaseMigration {
 =======
 return new class extends XotBaseMigration
 {
 >>>>>>> 0a466ed (.)
+<<<<<<< HEAD
 >>>>>>> 06bb10d (.)
+=======
+=======
+return new class extends XotBaseMigration {
+>>>>>>> 37a2da6 (.)
+>>>>>>> 98c37f4 (.)
     /**
      * i don't write table name, it take from Model, model is singular of this class wit.
      */
@@ -35,6 +44,9 @@ return new class extends XotBaseMigration
     {
         // -- CREATE --
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 37a2da6 (.)
         $this->tableCreate(function (Blueprint $table): void {
             $table->id();
             $table->foreignIdFor(Media::class, 'media_id');
@@ -64,6 +76,7 @@ return new class extends XotBaseMigration
 
             $this->updateTimestamps($table, true);
         });
+<<<<<<< HEAD
 =======
         $this->tableCreate(
             function (Blueprint $table): void {
@@ -95,5 +108,7 @@ return new class extends XotBaseMigration
             }
         );
 >>>>>>> 0a466ed (.)
+=======
+>>>>>>> 37a2da6 (.)
     }
 };
