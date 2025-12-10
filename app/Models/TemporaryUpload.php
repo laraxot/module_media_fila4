@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Media\Models;
 
+use Modules\Xot\Models\Traits\HasXotFactory;
 use Closure;
 use Exception;
 use Illuminate\Database\Eloquent\Builder;
@@ -13,7 +14,6 @@ use Illuminate\Support\Carbon;
 use Modules\Media\Database\Factories\TemporaryUploadFactory;
 use Modules\Media\Exceptions\CouldNotAddUpload;
 use Modules\Media\Exceptions\TemporaryUploadDoesNotBelongToCurrentSession;
-use Modules\Xot\Models\Traits\HasXotFactory;
 use Spatie\Image\Enums\Fit;
 use Spatie\MediaLibrary\Conversions\Conversion;
 use Spatie\MediaLibrary\HasMedia;
@@ -58,9 +58,9 @@ use Webmozart\Assert\Assert;
  */
 class TemporaryUpload extends BaseModel implements HasMedia
 {
-    use HasXotFactory;
     use InteractsWithMedia;
     use MassPrunable;
+    use HasXotFactory;
 
     public static ?Closure $manipulatePreview = null;
 

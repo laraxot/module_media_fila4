@@ -8,6 +8,7 @@ declare(strict_types=1);
 
 namespace Modules\Media\Models;
 
+use Modules\Xot\Models\Traits\HasXotFactory;
 use Eloquent;
 use Exception;
 use Illuminate\Database\Eloquent\Builder;
@@ -20,7 +21,6 @@ use Modules\Media\Database\Factories\MediaFactory;
 use Modules\Xot\Contracts\ProfileContract;
 use Modules\Xot\Contracts\UserContract;
 use Modules\Xot\Datas\XotData;
-use Modules\Xot\Models\Traits\HasXotFactory;
 use Modules\Xot\Traits\Updater;
 use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
 use Spatie\MediaLibrary\MediaCollections\Models\Media as SpatieMedia;
