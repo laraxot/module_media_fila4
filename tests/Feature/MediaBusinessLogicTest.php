@@ -39,6 +39,7 @@ describe('Media Business Logic', function () {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 =======
@@ -165,6 +166,9 @@ describe('Media Business Logic', function () {
 =======
 
 >>>>>>> fa051fc (.)
+=======
+
+>>>>>>> 22b1256 (.)
         $temporaryUpload = TemporaryUpload::factory()->create([
 =======
         $temporaryUpload = TemporaryUpload/** @phpstan-ignore-line */ ::factory()->create([
@@ -187,6 +191,7 @@ describe('Media Business Logic', function () {
             'collection_name' => 'default',
         ]);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -278,6 +283,8 @@ describe('Media Business Logic', function () {
 >>>>>>> 9a4eacb (.)
 =======
 >>>>>>> fa051fc (.)
+=======
+>>>>>>> 22b1256 (.)
         expect($media)
             ->toBeInstanceOf(Media::class)
             ->and($media->file_name)
@@ -286,6 +293,7 @@ describe('Media Business Logic', function () {
             ->toBe($temporaryUpload->file_size)
             ->and($media->mime_type)
             ->toBe($temporaryUpload->mime_type);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -442,6 +450,8 @@ describe('Media Business Logic', function () {
 >>>>>>> 9a4eacb (.)
 =======
 >>>>>>> fa051fc (.)
+=======
+>>>>>>> 22b1256 (.)
 
         $this->assertDatabaseHas('media', [
             'id' => $media->id,
@@ -466,6 +476,7 @@ describe('Media Business Logic', function () {
             'status' => 'pending',
         ]);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -557,6 +568,8 @@ describe('Media Business Logic', function () {
 >>>>>>> 9a4eacb (.)
 =======
 >>>>>>> fa051fc (.)
+=======
+>>>>>>> 22b1256 (.)
         expect($mediaConvert)
             ->toBeInstanceOf(MediaConvert::class)
             ->and($mediaConvert->media_id)
@@ -565,6 +578,7 @@ describe('Media Business Logic', function () {
             ->toBe('jpeg')
             ->and($mediaConvert->target_format)
             ->toBe('png');
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -721,6 +735,8 @@ describe('Media Business Logic', function () {
 >>>>>>> 9a4eacb (.)
 =======
 >>>>>>> fa051fc (.)
+=======
+>>>>>>> 22b1256 (.)
 
         $this->assertDatabaseHas('media_converts', [
             'id' => $mediaConvert->id,
@@ -778,6 +794,7 @@ describe('Media Business Logic', function () {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 =======
@@ -883,6 +900,9 @@ describe('Media Business Logic', function () {
         /** @var \Illuminate\Database\Eloquent\Collection */
 <<<<<<< HEAD
 >>>>>>> 13d1d7e (.)
+=======
+
+>>>>>>> 22b1256 (.)
         $profileMedia = Media::factory()->create([
 =======
         $profileMedia = Media/** @phpstan-ignore-line */ ::factory()->create([
@@ -926,6 +946,7 @@ describe('Media Business Logic', function () {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 =======
@@ -995,10 +1016,13 @@ describe('Media Business Logic', function () {
 >>>>>>> 9a4eacb (.)
 =======
 >>>>>>> fa051fc (.)
+=======
+>>>>>>> 22b1256 (.)
         expect($profileMedia->collection_name)
             ->toBe('profile')
             ->and($documentMedia->collection_name)
             ->toBe('documents');
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1121,6 +1145,8 @@ describe('Media Business Logic', function () {
 >>>>>>> 9a4eacb (.)
 =======
 >>>>>>> fa051fc (.)
+=======
+>>>>>>> 22b1256 (.)
 
         $this->assertDatabaseHas('media', [
             'id' => $profileMedia->id,
@@ -1139,6 +1165,7 @@ describe('Media Business Logic', function () {
         /** @var \Illuminate\Database\Eloquent\Collection */
 <<<<<<< HEAD
         $user = User::factory()->create();
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1261,6 +1288,9 @@ describe('Media Business Logic', function () {
         /** @var \Illuminate\Database\Eloquent\Collection */
 <<<<<<< HEAD
 >>>>>>> 13d1d7e (.)
+=======
+
+>>>>>>> 22b1256 (.)
         $validImage = Media::factory()->create([
 =======
         $validImage = Media/** @phpstan-ignore-line */ ::factory()->create([
@@ -1298,6 +1328,7 @@ describe('Media Business Logic', function () {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 =======
@@ -1423,6 +1454,9 @@ describe('Media Business Logic', function () {
 =======
         expect($validImage->isImage())->toBeTrue()->and($validImage->isDocument())->toBeFalse();
 >>>>>>> fa051fc (.)
+=======
+        expect($validImage->isImage())->toBeTrue()->and($validImage->isDocument())->toBeFalse();
+>>>>>>> 22b1256 (.)
 
         $validDocument = Media::factory()->create([
             'user_id' => $user->id,
@@ -1452,6 +1486,7 @@ describe('Media Business Logic', function () {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 =======
@@ -1577,6 +1612,9 @@ describe('Media Business Logic', function () {
 =======
         expect($validDocument->isImage())->toBeFalse()->and($validDocument->isDocument())->toBeTrue();
 >>>>>>> fa051fc (.)
+=======
+        expect($validDocument->isImage())->toBeFalse()->and($validDocument->isDocument())->toBeTrue();
+>>>>>>> 22b1256 (.)
     });
 
     it('can track media conversion status', function () {
@@ -1611,6 +1649,7 @@ describe('Media Business Logic', function () {
         /** @var \Illuminate\Database\Eloquent\Collection */
 <<<<<<< HEAD
         $otherUser = User::factory()->create();
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1733,6 +1772,9 @@ describe('Media Business Logic', function () {
         /** @var \Illuminate\Database\Eloquent\Collection */
 <<<<<<< HEAD
 >>>>>>> 13d1d7e (.)
+=======
+
+>>>>>>> 22b1256 (.)
         $media = Media::factory()->create([
 =======
         $media = Media/** @phpstan-ignore-line */ ::factory()->create([
@@ -1748,6 +1790,7 @@ describe('Media Business Logic', function () {
             'is_public' => false,
         ]);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1839,12 +1882,15 @@ describe('Media Business Logic', function () {
 >>>>>>> 9a4eacb (.)
 =======
 >>>>>>> fa051fc (.)
+=======
+>>>>>>> 22b1256 (.)
         expect($media->user_id)
             ->toBe($owner->id)
             ->and($media->is_public)
             ->toBeFalse()
             ->and($media->user_id)
             ->not->toBe($otherUser->id);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1987,6 +2033,8 @@ describe('Media Business Logic', function () {
 >>>>>>> 9a4eacb (.)
 =======
 >>>>>>> fa051fc (.)
+=======
+>>>>>>> 22b1256 (.)
     });
 
     it('can handle media deletion', function () {
@@ -2039,6 +2087,7 @@ describe('Media Business Logic', function () {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 =======
@@ -2164,6 +2213,9 @@ describe('Media Business Logic', function () {
 =======
         expect($url)->not->toBeEmpty()->and($url)->toContain('test-image.jpg');
 >>>>>>> fa051fc (.)
+=======
+        expect($url)->not->toBeEmpty()->and($url)->toContain('test-image.jpg');
+>>>>>>> 22b1256 (.)
     });
 
 <<<<<<< HEAD
@@ -2172,6 +2224,7 @@ describe('Media Business Logic', function () {
         /** @var \Illuminate\Database\Eloquent\Collection */
 <<<<<<< HEAD
         $user = User::factory()->create();
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2294,6 +2347,9 @@ describe('Media Business Logic', function () {
         /** @var \Illuminate\Database\Eloquent\Collection */
 <<<<<<< HEAD
 >>>>>>> 13d1d7e (.)
+=======
+
+>>>>>>> 22b1256 (.)
         $validMedia = Media::factory()->create([
 =======
         $validMedia = Media/** @phpstan-ignore-line */ ::factory()->create([
@@ -2324,6 +2380,7 @@ describe('Media Business Logic', function () {
         /** @var \Illuminate\Database\Eloquent\Collection */
 <<<<<<< HEAD
         $user = User::factory()->create();
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2427,6 +2484,8 @@ describe('Media Business Logic', function () {
 >>>>>>> 9a4eacb (.)
 =======
 >>>>>>> fa051fc (.)
+=======
+>>>>>>> 22b1256 (.)
 
         Media::factory()
             ->count(5)
@@ -2447,6 +2506,7 @@ describe('Media Business Logic', function () {
         $documentCount = Media::where('user_id', $user->id)->where('mime_type', 'like', 'application/%')->count();
 
         expect($totalMedia)->toBe(8)->and($imageCount)->toBe(5)->and($documentCount)->toBe(3);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2678,5 +2738,7 @@ describe('Media Business Logic', function () {
 >>>>>>> 9a4eacb (.)
 =======
 >>>>>>> fa051fc (.)
+=======
+>>>>>>> 22b1256 (.)
     });
 });
