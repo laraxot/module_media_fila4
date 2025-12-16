@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 3f50d25 (.)
 # FileUpload foreach Error Fix - Internal Server Error
@@ -231,3 +232,5 @@ public function getFormFill(): array
 =======
 *Versione: 1.0* 
 >>>>>>> 3f50d25 (.)
+=======
+>>>>>>> 960f18d (.)

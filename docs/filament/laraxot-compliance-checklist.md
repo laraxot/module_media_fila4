@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 3f50d25 (.)
 # Checklist Conformità Laraxot - Modulo Media
@@ -243,3 +244,5 @@ class ExamplePage extends XotBasePage
 >>>>>>> 8cdc78f (.)
 =======
 >>>>>>> 3f50d25 (.)
+=======
+>>>>>>> 960f18d (.)

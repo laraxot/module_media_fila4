@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 3f50d25 (.)
 # Media Module - Testing Guidelines
@@ -492,3 +493,5 @@ describe('Media Performance Tests', function () {
 >>>>>>> 8cdc78f (.)
 =======
 >>>>>>> 3f50d25 (.)
+=======
+>>>>>>> 960f18d (.)
