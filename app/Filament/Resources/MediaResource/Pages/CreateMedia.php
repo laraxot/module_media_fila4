@@ -22,6 +22,7 @@ class CreateMedia extends XotBaseCreateRecord
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 1d21a10 (.)
 =======
@@ -79,6 +80,8 @@ class CreateMedia extends \Modules\Xot\Filament\Resources\Pages\XotBaseCreateRec
 >>>>>>> c4425b4 (.)
 =======
 >>>>>>> 37b6a94 (.)
+=======
+>>>>>>> e5c049f (.)
 {
     protected static string $resource = MediaResource::class;
 }
