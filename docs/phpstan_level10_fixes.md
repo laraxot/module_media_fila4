@@ -66,6 +66,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 446bc61 (.)
@@ -147,6 +148,8 @@
 >>>>>>> 49268f4 (.)
 =======
 >>>>>>> b4ee9be (.)
+=======
+>>>>>>> a45d99f (.)
 # Correzioni PHPStan Livello 10 - Modulo Media
 
 > **Collegamento globale:** Per le strategie generali e le best practices sulla risoluzione dei conflitti git, vedi [docs/git_conflict_resolution.md](../../../../docs/git_conflict_resolution.md).
@@ -233,6 +236,7 @@ Questa soluzione mantiene la funzionalità originale migliorando al contempo la 
 ### 5. Risoluzione dei conflitti di merge nei file del modulo Media
 
 **Problema**: Diversi file del modulo Media contenevano conflitti di merge non risolti, indicati da marcatori git . Questi conflitti impedivano la corretta esecuzione del codice e causavano errori di sintassi.
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -575,6 +579,10 @@ Questa soluzione mantiene la funzionalità originale migliorando al contempo la 
 **Problema**: Diversi file del modulo Media contenevano conflitti di merge non risolti, indicati da marcatori git (`=======`, `>>>>>>>`, ecc.). Questi conflitti impedivano la corretta esecuzione del codice e causavano errori di sintassi.
 **Problema**: Diversi file del modulo Media contenevano conflitti di merge non risolti, indicati da marcatori git . Questi conflitti impedivano la corretta esecuzione del codice e causavano errori di sintassi.
 >>>>>>> b4ee9be (.)
+=======
+**Problema**: Diversi file del modulo Media contenevano conflitti di merge non risolti, indicati da marcatori git (`=======`, `>>>>>>>`, ecc.). Questi conflitti impedivano la corretta esecuzione del codice e causavano errori di sintassi.
+**Problema**: Diversi file del modulo Media contenevano conflitti di merge non risolti, indicati da marcatori git . Questi conflitti impedivano la corretta esecuzione del codice e causavano errori di sintassi.
+>>>>>>> a45d99f (.)
 
 **Soluzione implementata**:
 1. Analisi sistematica dei conflitti di merge in ciascun file
@@ -604,6 +612,7 @@ Questa soluzione mantiene la funzionalità originale migliorando al contempo la 
 
 ---
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -974,3 +983,6 @@ Questa soluzione mantiene la funzionalità originale migliorando al contempo la 
 >>>>>>> b4ee9be (.)
 =======
 >>>>>>> 4d8cf17 (.)
+=======
+> **Collegamento globale:** Questa documentazione locale dettaglia i casi concreti e le decisioni architetturali adottate nel modulo Media. Per le strategie generali e le best practices, consulta sempre anche la documentazione globale in [docs/git_conflict_resolution.md](../../../../docs/git_conflict_resolution.md). 
+>>>>>>> a45d99f (.)
