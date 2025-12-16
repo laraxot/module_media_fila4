@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Collegamento alle Traduzioni del Modulo Media
 
 <<<<<<< HEAD
@@ -59,3 +60,5 @@ Per ogni risorsa o campo localizzato, vedi anche il file corrispondente in quest
 * [lang-link.md](../../../Cms/project_docs/lang-link.md)
 >>>>>>> ed73e61 (.)
 
+=======
+>>>>>>> 8cdc78f (.)

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 
 declare(strict_types=1);
@@ -79,3 +80,5 @@ return [
     ),
 >>>>>>> ed73e61 (.)
 ];
+=======
+>>>>>>> 8cdc78f (.)
