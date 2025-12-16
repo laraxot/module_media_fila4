@@ -6,16 +6,10 @@ namespace Modules\Media\Tests\Unit\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Modules\Media\Models\BaseModel;
-use Tests\TestCase;
-
 
 beforeEach(function () {
-<<<<<<< HEAD
     $this->baseModel = new class extends BaseModel
     {
-=======
-    $this->baseModel = new class extends BaseModel {
->>>>>>> 5200b63 (.)
         protected $table = 'test_media_table';
     };
 });

@@ -1,8 +1,5 @@
-<<<<<<< HEAD
 
 
-=======
->>>>>>> ed73e61 (.)
 # Linee Guida Prevenzione Problemi - Modulo Media
 
 ## 🚨 Problemi Critici Risolti in S3Test.php
@@ -141,13 +138,10 @@ $this->label(__('media::s3test.actions.testCredentials.label'))
 - [ ] Tipi di ritorno espliciti
 - [ ] Type hints per parametri
 - [ ] PHPDoc completo
-<<<<<<< HEAD
 
 
 - [ ] PHPStan Level 9+ passa
 - [ ] PHPStan level 10+ passa
-=======
->>>>>>> ed73e61 (.)
 - [ ] PHPStan Level 9+ passa
 
 ### 3. **Sistema Traduzioni**
@@ -370,13 +364,10 @@ jobs:
 
 ### 1. **Indicatori di Qualità**
 - **Architettura**: 0 import diretti tra moduli
-<<<<<<< HEAD
 
 
 - **Tipizzazione**: 100% PHPStan Level 9 compliance
 - **Tipizzazione**: 100% PHPStan level 10 compliance
-=======
->>>>>>> ed73e61 (.)
 - **Tipizzazione**: 100% PHPStan Level 9 compliance
 - **Traduzioni**: 100% file traduzione completi
 - **Errori**: 0 errori runtime critici
@@ -401,7 +392,4 @@ jobs:
 **📦 Versione**: 3.1.0  
 **🎯 Obiettivo**: Prevenzione completa problemi futuri  
 **✅ Status**: Linee guida implementate e testate
-<<<<<<< HEAD
 
-=======
->>>>>>> ed73e61 (.)
