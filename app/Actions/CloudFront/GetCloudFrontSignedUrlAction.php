@@ -10,6 +10,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -25,6 +26,11 @@ use Spatie\QueueableAction\QueueableAction;
 >>>>>>> e9b0959 (.)
 =======
 >>>>>>> 5200b63 (.)
+=======
+=======
+
+>>>>>>> 0a466ed (.)
+>>>>>>> 06bb10d (.)
 /**
  * Action per la traduzione di elementi di una collezione.
  */
@@ -34,6 +40,7 @@ class GetCloudFrontSignedUrlAction
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -41,6 +48,8 @@ class GetCloudFrontSignedUrlAction
 >>>>>>> e9b0959 (.)
 =======
 >>>>>>> 5200b63 (.)
+=======
+>>>>>>> 06bb10d (.)
     public function execute(string $key, int $expiry = 30): string
     {
         $data = CloudFrontData::make();
@@ -48,6 +57,7 @@ class GetCloudFrontSignedUrlAction
         $cloudFront = new CloudFrontClient([
             'region' => $data->region,
             'version' => 'latest',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -68,6 +78,8 @@ class GetCloudFrontSignedUrlAction
             'version' => 'latest',
 >>>>>>> b93ef594b4 (.)
 =======
+>>>>>>> 06bb10d (.)
+=======
    
     public function execute(string $key, int $expiry = 30): string
     {
@@ -77,6 +89,7 @@ class GetCloudFrontSignedUrlAction
         $cloudFront = new CloudFrontClient([
             'region' => $data->region,
             'version' => 'latest'
+<<<<<<< HEAD
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
         ]);
@@ -118,14 +131,31 @@ class GetCloudFrontSignedUrlAction
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
 =======
+=======
+>>>>>>> 0a466ed (.)
+>>>>>>> 06bb10d (.)
         ]);
 
         return $cloudFront->getSignedUrl([
             'url' => $data->base_url . '/' . ltrim($key, '/'),
             'expires' => time() + ($expiry * 60),
             'key_pair_id' => $data->key_pair_id,
+<<<<<<< HEAD
             'private_key' => $data->getPrivateKey(),
         ]);
     }
+<<<<<<< HEAD
 >>>>>>> 5200b63 (.)
+=======
+=======
+            'private_key' => $data->getPrivateKey()
+            ,
+        ]);
+    }
+
+   
+
+  
+>>>>>>> 0a466ed (.)
+>>>>>>> 06bb10d (.)
 }

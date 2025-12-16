@@ -43,6 +43,7 @@ return [
     ],
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -58,6 +59,11 @@ return [
 >>>>>>> e9b0959 (.)
 =======
 >>>>>>> 5200b63 (.)
+=======
+=======
+
+>>>>>>> 0a466ed (.)
+>>>>>>> 06bb10d (.)
     'notifications' => [
         'credentials_tested' => 'AWS credentials tested',
         'bucket_policy_tested' => 'Bucket policy tested',
@@ -75,10 +81,14 @@ return [
     ],
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 06bb10d (.)
     'debug' => [
         'run_tests_message' => 'Run tests to see results here...',
     ],
 =======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -88,11 +98,14 @@ return [
 =======
 =======
 >>>>>>> origin/develop
+=======
+>>>>>>> 06bb10d (.)
 
     'debug' => [
         'run_tests_message' => 'Run tests to see results here...',
     ],
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> a12f125f4a (.)
 =======
@@ -108,6 +121,9 @@ return [
         'run_tests_message' => 'Run tests to see results here...',
     ],
 >>>>>>> 5200b63 (.)
+=======
+>>>>>>> 0a466ed (.)
+>>>>>>> 06bb10d (.)
     'fields' => [
         'attachment' => [
             'label' => 'Attachment',
@@ -122,6 +138,7 @@ return [
     ],
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -137,6 +154,11 @@ return [
 >>>>>>> e9b0959 (.)
 =======
 >>>>>>> 5200b63 (.)
+=======
+=======
+
+>>>>>>> 0a466ed (.)
+>>>>>>> 06bb10d (.)
     'messages' => [
         'test_successful' => 'Test completed successfully',
         'test_failed' => 'Test failed',
@@ -149,6 +171,7 @@ return [
     ],
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -164,6 +187,11 @@ return [
 >>>>>>> e9b0959 (.)
 =======
 >>>>>>> 5200b63 (.)
+=======
+=======
+
+>>>>>>> 0a466ed (.)
+>>>>>>> 06bb10d (.)
     'errors' => [
         'aws_credentials_invalid' => 'Invalid AWS credentials',
         's3_bucket_inaccessible' => 'S3 bucket not accessible',
@@ -174,6 +202,7 @@ return [
     ],
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -189,6 +218,11 @@ return [
 >>>>>>> e9b0959 (.)
 =======
 >>>>>>> 5200b63 (.)
+=======
+=======
+
+>>>>>>> 0a466ed (.)
+>>>>>>> 06bb10d (.)
     'solutions' => [
         'check_credentials' => 'Check AWS credentials in .env',
         'check_bucket_name' => 'Check S3 bucket name',

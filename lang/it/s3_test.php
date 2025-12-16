@@ -5,6 +5,7 @@ declare(strict_types=1);
 return [
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -12,6 +13,8 @@ return [
 >>>>>>> e9b0959 (.)
 =======
 >>>>>>> 5200b63 (.)
+=======
+>>>>>>> 06bb10d (.)
     'navigation' => [
         'group' => 'Media',
     ],
@@ -63,10 +66,14 @@ return [
     ],
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 =======
 >>>>>>> origin/develop
+=======
+=======
+>>>>>>> 06bb10d (.)
   'navigation' => [
     'group' => 'Media',
   ],
@@ -76,6 +83,7 @@ return [
       'label' => 'Output Debug',
       'placeholder' => 'Risultati del test verranno mostrati qui',
       'helper_text' => 'Informazioni di debug per la connessione S3',
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     'navigation' => [
@@ -130,6 +138,8 @@ return [
     ],
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 06bb10d (.)
     ],
     'attachment' => [
       'label' => 'Allegato',
@@ -142,7 +152,10 @@ return [
     'sendEmail' => [
       'label' => 'Invia Email',
     ],
+<<<<<<< HEAD
 >>>>>>> origin/develop
+=======
+>>>>>>> 06bb10d (.)
     'clearResults' => [
       'label' => 'Cancella Risultati',
     ],
@@ -172,6 +185,7 @@ return [
     ],
   ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> a12f125f4a (.)
 =======
 >>>>>>> b93ef594b4 (.)
@@ -180,4 +194,7 @@ return [
 >>>>>>> e9b0959 (.)
 =======
 >>>>>>> 5200b63 (.)
+=======
+>>>>>>> 0a466ed (.)
+>>>>>>> 06bb10d (.)
 ];
