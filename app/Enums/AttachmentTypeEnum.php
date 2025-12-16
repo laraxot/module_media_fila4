@@ -19,23 +19,35 @@ enum AttachmentTypeEnum: string implements HasLabel
         return collect(self::cases())
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             ->mapWithKeys(static fn (self $case): array => [$case->value => $case->getTypeNote()])
 =======
             ->mapWithKeys(static fn(self $case): array => [$case->value => $case->getTypeNote()])
 >>>>>>> 5200b63 (.)
 =======
+=======
+>>>>>>> 98c37f4 (.)
             ->mapWithKeys(static fn(self $case): array => [$case->value => $case->getTypeNote()])
 =======
             ->mapWithKeys(
                 static fn (self $case): array => [$case->value => $case->getTypeNote()],
             )
 >>>>>>> 0a466ed (.)
+<<<<<<< HEAD
 >>>>>>> 06bb10d (.)
+=======
+=======
+            ->mapWithKeys(static fn(self $case): array => [$case->value => $case->getTypeNote()])
+>>>>>>> 37a2da6 (.)
+>>>>>>> 98c37f4 (.)
             ->toArray();
     }
 
     /* Method Modules\Media\Enums\AttachmentTypeEnum::operationCases() never returns null so it can be removed from the return type
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 37a2da6 (.)
      * public static function operationCases(): ?array
      * {
      * $originalCases = self::cases();
@@ -50,8 +62,11 @@ enum AttachmentTypeEnum: string implements HasLabel
 =======
     public function getTypeNote(): null|string
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 5200b63 (.)
 =======
+=======
+>>>>>>> 98c37f4 (.)
 =======
     public static function operationCases(): ?array
     {
@@ -64,7 +79,12 @@ enum AttachmentTypeEnum: string implements HasLabel
 
     public function getTypeNote(): ?string
 >>>>>>> 0a466ed (.)
+<<<<<<< HEAD
 >>>>>>> 06bb10d (.)
+=======
+=======
+>>>>>>> 37a2da6 (.)
+>>>>>>> 98c37f4 (.)
     {
         $translationKey = sprintf('media::attachments.type_notes.%s', $this->value);
         if (Lang::has($translationKey)) {
@@ -78,16 +98,25 @@ enum AttachmentTypeEnum: string implements HasLabel
     {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         return trans('media::attachments.types.'.$this->value);
 =======
         return trans('media::attachments.types.' . $this->value);
 >>>>>>> 5200b63 (.)
 =======
+=======
+>>>>>>> 98c37f4 (.)
         return trans('media::attachments.types.' . $this->value);
 =======
         return trans('media::attachments.types.'.$this->value);
 >>>>>>> 0a466ed (.)
+<<<<<<< HEAD
 >>>>>>> 06bb10d (.)
+=======
+=======
+        return trans('media::attachments.types.' . $this->value);
+>>>>>>> 37a2da6 (.)
+>>>>>>> 98c37f4 (.)
     }
 
     // private static function translateBaseUniquePath(): string
