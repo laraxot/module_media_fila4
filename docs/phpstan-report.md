@@ -18,6 +18,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 3f50d25 (.)
 =======
@@ -34,6 +35,8 @@
 >>>>>>> f81fb2b (.)
 =======
 >>>>>>> 77b6d88 (.)
+=======
+>>>>>>> d44d947 (.)
 # Report PHPStan - Modulo Media
 
 ## Stato Attuale
@@ -92,6 +95,7 @@ L'analisi PHPStan di livello 1 non ha rilevato errori nel modulo Media. Questo Ã
 
    - Monitorare l'utilizzo dello storage 
 ## Collegamenti tra versioni di phpstan_report.md
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -219,6 +223,10 @@ L'analisi PHPStan di livello 1 non ha rilevato errori nel modulo Media. Questo Ã
 * [phpstan_report.md](../../../Lang/docs/phpstan_report.md)
 * [phpstan_report.md](../../../Media/docs/phpstan_report.md)
 >>>>>>> a70c4fa (.)
+=======
+* [phpstan_report.md](../../../Lang/docs/phpstan_report.md)
+* [phpstan_report.md](../../../Media/docs/phpstan_report.md)
+>>>>>>> d44d947 (.)
 
 
 ### Versione Incoming
@@ -227,6 +235,7 @@ L'analisi PHPStan di livello 1 non ha rilevato errori nel modulo Media. Questo Ã
 
 ---
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -275,3 +284,5 @@ L'analisi PHPStan di livello 1 non ha rilevato errori nel modulo Media. Questo Ã
 >>>>>>> 232bbba (.)
 =======
 >>>>>>> f6ae653 (.)
+=======
+>>>>>>> d44d947 (.)
