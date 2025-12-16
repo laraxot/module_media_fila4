@@ -8,7 +8,11 @@ use Modules\Xot\Filament\Pages\XotBaseDashboard;
 
 class Dashboard extends XotBaseDashboard
 {
+<<<<<<< HEAD
     //protected static string | \BackedEnum | null $navigationIcon = 'heroicon-o-home';
+=======
+    protected static string | \BackedEnum | null $navigationIcon = 'heroicon-o-home';
+>>>>>>> 42b445b5 (.)
 
     //protected string $view = 'media::filament.pages.dashboard';
 }

@@ -303,3 +303,7 @@ ffmpeg -codecs
 **🌐 Translation Standards**: File traduzione certificati ✅  
 **🚀 Performance**: 95/100 score  
 **🔧 S3Test Corrections**: Completate ✅
+<<<<<<< HEAD
+=======
+
+>>>>>>> 42b445b5 (.)
