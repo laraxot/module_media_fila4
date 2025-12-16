@@ -7,6 +7,7 @@ namespace Modules\Media\Database\Factories;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Modules\Media\Models\MediaConvert;
 =======
@@ -20,6 +21,10 @@ use Modules\Media\Models\MediaConvert;
 use Modules\Media\Models\MediaConvert;
 use Illuminate\Database\Eloquent\Factories\Factory;
 >>>>>>> 5200b63 (.)
+=======
+use Illuminate\Database\Eloquent\Factories\Factory;
+use Modules\Media\Models\MediaConvert;
+>>>>>>> f41e45e (.)
 
 /**
  * @extends Factory<MediaConvert>

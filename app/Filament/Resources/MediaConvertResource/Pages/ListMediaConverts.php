@@ -10,6 +10,7 @@ namespace Modules\Media\Filament\Resources\MediaConvertResource\Pages;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Filament\Actions\Action;
 use Filament\Actions\ActionGroup;
 use Filament\Actions\BulkAction;
@@ -45,11 +46,21 @@ use Filament\Actions\ActionGroup;
 use Override;
 use Filament\Actions\ViewAction;
 use Filament\Actions\EditAction;
+=======
+>>>>>>> f41e45e (.)
 use Filament\Actions\Action;
+use Filament\Actions\ActionGroup;
+use Filament\Actions\BulkAction;
 use Filament\Actions\DeleteBulkAction;
+use Filament\Actions\EditAction;
+use Filament\Actions\ViewAction;
 use Filament\Tables;
 use Filament\Tables\Columns\TextColumn;
+<<<<<<< HEAD
 >>>>>>> 5200b63 (.)
+=======
+use Filament\Tables\Filters\BaseFilter;
+>>>>>>> f41e45e (.)
 use Filament\Tables\Filters\SelectFilter;
 use Modules\Job\Filament\Widgets\ClockWidget;
 use Modules\Media\Actions\Video\ConvertVideoByMediaConvertAction;
@@ -58,9 +69,13 @@ use Modules\Media\Filament\Resources\MediaConvertResource;
 use Modules\Media\Models\MediaConvert;
 use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Override;
 =======
 >>>>>>> 5200b63 (.)
+=======
+use Override;
+>>>>>>> f41e45e (.)
 
 class ListMediaConverts extends XotBaseListRecords
 {

@@ -18,6 +18,7 @@ abstract class MediaBasePolicy
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function before(UserContract $user, string $_ability): ?bool
 =======
 =======
@@ -39,6 +40,9 @@ abstract class MediaBasePolicy
 >>>>>>> f1c6d6e (.)
     public function before(UserContract $user, string $_ability): null|bool
 >>>>>>> 5200b63 (.)
+=======
+    public function before(UserContract $user, string $_ability): ?bool
+>>>>>>> f41e45e (.)
     {
         $xotData = XotData::make();
         if ($user->hasRole('super-admin')) {
