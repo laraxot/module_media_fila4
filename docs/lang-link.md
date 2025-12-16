@@ -1,6 +1,7 @@
 # Collegamento alle Traduzioni del Modulo Media
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 Questo modulo utilizza le traduzioni centralizzate nella cartella [Lang](../../Lang/project_docs/).
 
@@ -13,6 +14,8 @@ Consulta la documentazione delle traduzioni:
 
 Per ogni risorsa o campo localizzato, vedi anche il file corrispondente in questo modulo e la relativa sezione in [Lang](../../Lang/project_docs/).
 >>>>>>> 7df6a71 (.)
+=======
+>>>>>>> 0caa3cf (.)
 Questo modulo utilizza le traduzioni centralizzate nella cartella [Lang](../../Lang/docs/).
 
 Consulta la documentazione delle traduzioni:
@@ -27,6 +30,7 @@ Per ogni risorsa o campo localizzato, vedi anche il file corrispondente in quest
 > Aggiorna entrambi i riferimenti se aggiungi nuove chiavi di traduzione o modifichi la struttura.
 
 ## Collegamenti tra versioni di lang-link.md
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 * [lang-link.md](../../../Chart/project_docs/lang-link.md)
@@ -44,6 +48,8 @@ Per ogni risorsa o campo localizzato, vedi anche il file corrispondente in quest
 * [lang-link.md](../../../Patient/project_docs/lang-link.md)
 * [lang-link.md](../../../Cms/project_docs/lang-link.md)
 >>>>>>> 7df6a71 (.)
+=======
+>>>>>>> 0caa3cf (.)
 * [lang-link.md](../../../Chart/docs/lang-link.md)
 * [lang-link.md](../../../Reporting/docs/lang-link.md)
 * [lang-link.md](../../../Gdpr/docs/lang-link.md)
