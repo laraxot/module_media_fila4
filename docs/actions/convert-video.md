@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 3f50d25 (.)
 # ConvertVideoByConvertDataAction
 
 ## Panoramica
@@ -63,6 +66,7 @@ $convertedPath = $action->execute($data);
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 [Torna alla documentazione Media](/docs/modules/module_media.md#actions) 
 =======
 [Torna alla documentazione Media](../README.md) 
@@ -81,3 +85,6 @@ $convertedPath = $action->execute($data);
 >>>>>>> aa5e51a (.)
 =======
 >>>>>>> 8cdc78f (.)
+=======
+[Torna alla documentazione Media](../README.md) 
+>>>>>>> 3f50d25 (.)
