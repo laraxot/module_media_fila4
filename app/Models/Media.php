@@ -235,7 +235,7 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media as SpatieMedia;
  * @method static MediaCollection<int, static> get($columns = ['*'])
  * @mixin IdeHelperMedia
  * @method static MediaFactory factory($count = null, $state = [])
- * @property-read \Modules\TechPlanner\Models\Profile|null $deleter
+ * @property-read \Modules\Xot\Contracts\ProfileContract|null $deleter
  * @mixin Eloquent
  */
 class Media extends SpatieMedia

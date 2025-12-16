@@ -48,9 +48,9 @@ use Webmozart\Assert\Assert;
  * @method static Builder<static>|TemporaryUpload whereUpdatedBy($value)
  * @mixin IdeHelperTemporaryUpload
  * @method static TemporaryUploadFactory factory($count = null, $state = [])
- * @property-read \Modules\TechPlanner\Models\Profile|null $creator
- * @property-read \Modules\TechPlanner\Models\Profile|null $deleter
- * @property-read \Modules\TechPlanner\Models\Profile|null $updater
+ * @property-read \Modules\Xot\Contracts\ProfileContract|null $creator
+ * @property-read \Modules\Xot\Contracts\ProfileContract|null $deleter
+ * @property-read \Modules\Xot\Contracts\ProfileContract|null $updater
  * @mixin \Eloquent
  */
 class TemporaryUpload extends BaseModel implements HasMedia
