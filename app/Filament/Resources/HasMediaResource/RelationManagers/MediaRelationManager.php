@@ -4,8 +4,10 @@ declare(strict_types=1);
 
 namespace Modules\Media\Filament\Resources\HasMediaResource\RelationManagers;
 
+<<<<<<< HEAD
 use Filament\Actions\Action;
 use Filament\Actions\ActionGroup;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -22,6 +24,15 @@ use Override;
 >>>>>>> 98c37f4 (.)
 =======
 >>>>>>> a80d398 (.)
+=======
+=======
+<<<<<<< HEAD
+use Filament\Actions\Action;
+use Filament\Actions\ActionGroup;
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> e9b0959 (.)
+>>>>>>> 47a54fe (.)
 use Override;
 use Filament\Schemas\Schema;
 use Illuminate\Database\Eloquent\Model;
@@ -42,6 +53,7 @@ class MediaRelationManager extends XotBaseRelationManager
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 5200b63 (.)
 =======
 =======
@@ -49,6 +61,30 @@ class MediaRelationManager extends XotBaseRelationManager
 =======
 use Filament\Forms\Form;
 use Illuminate\Database\Eloquent\Model;
+=======
+=======
+=======
+=======
+use Override;
+>>>>>>> b93ef594b4 (.)
+use Filament\Forms\Form;
+use Illuminate\Database\Eloquent\Model;
+use Modules\Media\Filament\Resources\HasMediaResource\Actions\AddAttachmentAction;
+use Modules\Media\Filament\Resources\MediaResource;
+use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
+use Modules\Xot\Filament\Traits\NavigationLabelTrait;
+
+class MediaRelationManager extends XotBaseRelationManager
+{
+    protected static string $relationship = 'media';
+
+<<<<<<< HEAD
+=======
+use Filament\Forms\Form;
+use Filament\Tables\Actions\Action;
+use Illuminate\Database\Eloquent\Model;
+use Filament\Tables\Actions\ActionGroup;
+>>>>>>> 47a54fe (.)
 use Modules\Media\Filament\Resources\MediaResource;
 use Modules\Xot\Filament\Traits\NavigationLabelTrait;
 use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
@@ -60,11 +96,16 @@ class MediaRelationManager extends XotBaseRelationManager
 
     protected static string $relationship = 'media';
 
+<<<<<<< HEAD
+=======
+>>>>>>> origin/develop
+>>>>>>> 47a54fe (.)
     protected static ?string $inverseRelationship = 'model';
 
 
 
 
+<<<<<<< HEAD
 >>>>>>> 0a466ed (.)
 <<<<<<< HEAD
 >>>>>>> 06bb10d (.)
@@ -74,11 +115,35 @@ class MediaRelationManager extends XotBaseRelationManager
 >>>>>>> 98c37f4 (.)
 =======
 >>>>>>> a80d398 (.)
+=======
+<<<<<<< HEAD
+>>>>>>> a12f125f4a (.)
+=======
+    protected static null|string $inverseRelationship = 'model';
+>>>>>>> b93ef594b4 (.)
+=======
+>>>>>>> origin/develop
+>>>>>>> e9b0959 (.)
+>>>>>>> 47a54fe (.)
 
     /**
      * @return array<string, Action|ActionGroup>
      */
+<<<<<<< HEAD
     #[Override]
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    #[Override]
+=======
+>>>>>>> a12f125f4a (.)
+=======
+    #[Override]
+>>>>>>> b93ef594b4 (.)
+=======
+>>>>>>> origin/develop
+>>>>>>> e9b0959 (.)
     public function getTableHeaderActions(): array
     {
         return [

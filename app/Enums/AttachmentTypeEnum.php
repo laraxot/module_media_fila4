@@ -21,6 +21,7 @@ enum AttachmentTypeEnum: string implements HasLabel
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             ->mapWithKeys(static fn (self $case): array => [$case->value => $case->getTypeNote()])
 =======
             ->mapWithKeys(static fn(self $case): array => [$case->value => $case->getTypeNote()])
@@ -28,11 +29,19 @@ enum AttachmentTypeEnum: string implements HasLabel
 =======
 =======
 >>>>>>> 98c37f4 (.)
+=======
+            ->mapWithKeys(static fn(self $case): array => [$case->value => $case->getTypeNote()])
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 47a54fe (.)
             ->mapWithKeys(static fn(self $case): array => [$case->value => $case->getTypeNote()])
 =======
             ->mapWithKeys(
                 static fn (self $case): array => [$case->value => $case->getTypeNote()],
             )
+<<<<<<< HEAD
 >>>>>>> 0a466ed (.)
 <<<<<<< HEAD
 >>>>>>> 06bb10d (.)
@@ -44,10 +53,30 @@ enum AttachmentTypeEnum: string implements HasLabel
 =======
             ->mapWithKeys(static fn(self $case): array => [$case->value => $case->getTypeNote()])
 >>>>>>> a80d398 (.)
+=======
+>>>>>>> a12f125f4a (.)
+=======
+            ->mapWithKeys(static fn(self $case): array => [$case->value => $case->getTypeNote()])
+>>>>>>> b93ef594b4 (.)
+=======
+            ->mapWithKeys(
+                static fn (self $case): array => [$case->value => $case->getTypeNote()],
+            )
+>>>>>>> origin/develop
+>>>>>>> e9b0959 (.)
+>>>>>>> 47a54fe (.)
             ->toArray();
     }
 
     /* Method Modules\Media\Enums\AttachmentTypeEnum::operationCases() never returns null so it can be removed from the return type
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> b93ef594b4 (.)
+>>>>>>> e9b0959 (.)
      * public static function operationCases(): ?array
      * {
      * $originalCases = self::cases();
@@ -56,6 +85,7 @@ enum AttachmentTypeEnum: string implements HasLabel
      * return $originalCases;
      * }
      */
+<<<<<<< HEAD
 
 <<<<<<< HEAD
     public function getTypeNote(): ?string
@@ -64,11 +94,21 @@ enum AttachmentTypeEnum: string implements HasLabel
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 5200b63 (.)
 =======
 =======
 >>>>>>> 98c37f4 (.)
 =======
+=======
+=======
+<<<<<<< HEAD
+
+    public function getTypeNote(): null|string
+=======
+=======
+>>>>>>> origin/develop
+>>>>>>> 47a54fe (.)
     public static function operationCases(): ?array
     {
         $originalCases = self::cases();
@@ -79,6 +119,7 @@ enum AttachmentTypeEnum: string implements HasLabel
         */
 
     public function getTypeNote(): ?string
+<<<<<<< HEAD
 >>>>>>> 0a466ed (.)
 <<<<<<< HEAD
 >>>>>>> 06bb10d (.)
@@ -88,6 +129,17 @@ enum AttachmentTypeEnum: string implements HasLabel
 >>>>>>> 98c37f4 (.)
 =======
 >>>>>>> a80d398 (.)
+=======
+<<<<<<< HEAD
+>>>>>>> a12f125f4a (.)
+=======
+
+    public function getTypeNote(): null|string
+>>>>>>> b93ef594b4 (.)
+=======
+>>>>>>> origin/develop
+>>>>>>> e9b0959 (.)
+>>>>>>> 47a54fe (.)
     {
         $translationKey = sprintf('media::attachments.type_notes.%s', $this->value);
         if (Lang::has($translationKey)) {
@@ -103,6 +155,7 @@ enum AttachmentTypeEnum: string implements HasLabel
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         return trans('media::attachments.types.'.$this->value);
 =======
         return trans('media::attachments.types.' . $this->value);
@@ -124,6 +177,24 @@ enum AttachmentTypeEnum: string implements HasLabel
 =======
         return trans('media::attachments.types.' . $this->value);
 >>>>>>> a80d398 (.)
+=======
+        return trans('media::attachments.types.' . $this->value);
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+        return trans('media::attachments.types.' . $this->value);
+=======
+        return trans('media::attachments.types.'.$this->value);
+>>>>>>> a12f125f4a (.)
+=======
+        return trans('media::attachments.types.' . $this->value);
+>>>>>>> b93ef594b4 (.)
+=======
+        return trans('media::attachments.types.'.$this->value);
+>>>>>>> origin/develop
+>>>>>>> e9b0959 (.)
+>>>>>>> 47a54fe (.)
     }
 
     // private static function translateBaseUniquePath(): string
