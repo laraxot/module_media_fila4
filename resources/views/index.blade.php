@@ -9,6 +9,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 =======
@@ -46,11 +47,14 @@
 >>>>>>> e0a46f3 (.)
 =======
 >>>>>>> 1d21a10 (.)
+=======
+>>>>>>> 146bbc3 (.)
 <?php
 
 declare(strict_types=1);
 
 ?>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -109,6 +113,8 @@ declare(strict_types=1);
 >>>>>>> e0a46f3 (.)
 =======
 >>>>>>> 1d21a10 (.)
+=======
+>>>>>>> 146bbc3 (.)
 @extends('media::layouts.master')
 
 @section('content')
