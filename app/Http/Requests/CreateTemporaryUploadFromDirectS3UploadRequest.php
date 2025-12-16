@@ -43,58 +43,7 @@ class CreateTemporaryUploadFromDirectS3UploadRequest extends FormRequest
         $mediaModelClass = config('media-library.media_model');
 
         /** @var Media $mediaModel */
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         $mediaModel = new $mediaModelClass;
-=======
-        $mediaModel = new $mediaModelClass();
->>>>>>> 5200b63 (.)
-=======
-=======
->>>>>>> 98c37f4 (.)
-        $mediaModel = new $mediaModelClass();
-=======
-        $mediaModel = new $mediaModelClass;
->>>>>>> 0a466ed (.)
-<<<<<<< HEAD
->>>>>>> 06bb10d (.)
-=======
-=======
-        $mediaModel = new $mediaModelClass();
->>>>>>> 37a2da6 (.)
->>>>>>> 98c37f4 (.)
-=======
-        $mediaModel = new $mediaModelClass();
->>>>>>> a80d398 (.)
-=======
-        $mediaModel = new $mediaModelClass();
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        $mediaModel = new $mediaModelClass();
-=======
-        $mediaModel = new $mediaModelClass;
->>>>>>> a12f125f4a (.)
-=======
-        $mediaModel = new $mediaModelClass();
->>>>>>> b93ef594b4 (.)
-=======
-        $mediaModel = new $mediaModelClass;
->>>>>>> origin/develop
->>>>>>> e9b0959 (.)
->>>>>>> 47a54fe (.)
-=======
-        $mediaModel = new $mediaModelClass();
->>>>>>> f1c6d6e (.)
-=======
-        $mediaModel = new $mediaModelClass;
->>>>>>> f41e45e (.)
 
         if ($mediaModel->getConnectionName() === 'default') {
             return '';
@@ -108,58 +57,7 @@ class CreateTemporaryUploadFromDirectS3UploadRequest extends FormRequest
         $mediaModelClass = config('media-library.media_model');
 
         /** @var Media $mediaModel */
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         $mediaModel = new $mediaModelClass;
-=======
-        $mediaModel = new $mediaModelClass();
->>>>>>> 5200b63 (.)
-=======
-=======
->>>>>>> 98c37f4 (.)
-        $mediaModel = new $mediaModelClass();
-=======
-        $mediaModel = new $mediaModelClass;
->>>>>>> 0a466ed (.)
-<<<<<<< HEAD
->>>>>>> 06bb10d (.)
-=======
-=======
-        $mediaModel = new $mediaModelClass();
->>>>>>> 37a2da6 (.)
->>>>>>> 98c37f4 (.)
-=======
-        $mediaModel = new $mediaModelClass();
->>>>>>> a80d398 (.)
-=======
-        $mediaModel = new $mediaModelClass();
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        $mediaModel = new $mediaModelClass();
-=======
-        $mediaModel = new $mediaModelClass;
->>>>>>> a12f125f4a (.)
-=======
-        $mediaModel = new $mediaModelClass();
->>>>>>> b93ef594b4 (.)
-=======
-        $mediaModel = new $mediaModelClass;
->>>>>>> origin/develop
->>>>>>> e9b0959 (.)
->>>>>>> 47a54fe (.)
-=======
-        $mediaModel = new $mediaModelClass();
->>>>>>> f1c6d6e (.)
-=======
-        $mediaModel = new $mediaModelClass;
->>>>>>> f41e45e (.)
 
         return $mediaModel->getTable();
     }
