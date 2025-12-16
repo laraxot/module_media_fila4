@@ -96,6 +96,7 @@ declare(strict_types=1);
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47a54fe (.)
 =======
@@ -174,10 +175,9 @@ declare(strict_types=1);
 >>>>>>> f5f7069 (.)
 =======
 >>>>>>> beb0131 (.)
-<x-filament::page>
 =======
-<x-fi<x-filament::page>
->>>>>>> e0ce06e (.)
+>>>>>>> 60ceacf (.)
+<x-filament::page>
     @php
         // Ensure $results is defined with a default value
         $results = $results ?? null;
