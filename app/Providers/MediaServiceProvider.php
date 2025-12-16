@@ -16,8 +16,8 @@ class MediaServiceProvider extends XotBaseServiceProvider
 <<<<<<< HEAD
 =======
 
-<<<<<<< HEAD
     
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -60,4 +60,6 @@ class MediaServiceProvider extends XotBaseServiceProvider
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
 >>>>>>> 47a54fe (.)
+=======
+>>>>>>> f1c6d6e (.)
 }
