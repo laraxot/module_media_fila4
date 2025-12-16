@@ -10,8 +10,12 @@ use Tests\TestCase;
 
 
 beforeEach(function () {
+<<<<<<< HEAD
     $this->baseModel = new class extends BaseModel
     {
+=======
+    $this->baseModel = new class extends BaseModel {
+>>>>>>> 5200b63 (.)
         protected $table = 'test_media_table';
     };
 });

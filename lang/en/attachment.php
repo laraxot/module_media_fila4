@@ -2,6 +2,10 @@
 
 declare(strict_types=1);
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5200b63 (.)
 return [
     'pages' => 'Pages',
     'widgets' => 'Widgets',

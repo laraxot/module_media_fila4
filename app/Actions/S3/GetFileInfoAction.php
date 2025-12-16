@@ -19,11 +19,14 @@ class GetFileInfoAction extends BaseS3Action
             $result = $this->s3Client->headObject([
                 'Bucket' => $this->bucketName,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> e9b0959 (.)
+=======
+>>>>>>> 5200b63 (.)
                 'Key' => $key,
             ]);
 
@@ -31,6 +34,7 @@ class GetFileInfoAction extends BaseS3Action
             $effectiveUri = is_array($metadata) && isset($metadata['effectiveUri'])
                 ? ((string) $metadata['effectiveUri'])
                 : null;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -55,6 +59,8 @@ class GetFileInfoAction extends BaseS3Action
 =======
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
+=======
+>>>>>>> 5200b63 (.)
 
             $fileInfo = [
                 'exists' => true,
@@ -64,6 +70,7 @@ class GetFileInfoAction extends BaseS3Action
                 'contentType' => $result['ContentType'] ?? null,
                 'lastModified' => $result['LastModified'] ?? null,
                 'etag' => $result['ETag'] ?? null,
+<<<<<<< HEAD
 <<<<<<< HEAD
                 'metadata' => $result['Metadata'] ?? [],
 =======
@@ -81,20 +88,27 @@ class GetFileInfoAction extends BaseS3Action
                 'metadata' => $result['Metadata'] ?? []
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
+=======
+                'metadata' => $result['Metadata'] ?? [],
+>>>>>>> 5200b63 (.)
             ];
 
             $this->logger->info('File info retrieved successfully', [
                 'key' => $key,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> e9b0959 (.)
+=======
+>>>>>>> 5200b63 (.)
                 'size' => $fileInfo['contentLength'],
             ]);
 
             return $fileInfo;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -116,10 +130,13 @@ class GetFileInfoAction extends BaseS3Action
 =======
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
+=======
+>>>>>>> 5200b63 (.)
         } catch (S3Exception $exception) {
             $this->logger->error('Error getting file info from S3', [
                 'key' => $key,
                 'error' => $exception->getMessage(),
+<<<<<<< HEAD
 <<<<<<< HEAD
                 'statusCode' => $exception->getStatusCode(),
 =======
@@ -137,6 +154,9 @@ class GetFileInfoAction extends BaseS3Action
                 'statusCode' => $exception->getStatusCode()
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
+=======
+                'statusCode' => $exception->getStatusCode(),
+>>>>>>> 5200b63 (.)
             ]);
 
             return [
@@ -144,16 +164,20 @@ class GetFileInfoAction extends BaseS3Action
                 'key' => $key,
                 'error' => $exception->getMessage(),
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> e9b0959 (.)
+=======
+>>>>>>> 5200b63 (.)
                 'errorCode' => $exception->getStatusCode(),
             ];
         }
     }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -177,3 +201,5 @@ class GetFileInfoAction extends BaseS3Action
 }
 >>>>>>> origin/develop
 >>>>>>> e9b0959 (.)
+=======
+>>>>>>> 5200b63 (.)
