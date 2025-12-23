@@ -9,6 +9,7 @@ use Filament\Schemas\Components\Utilities\Set;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Config;
 use Livewire\Features\SupportFileUploads\TemporaryUploadedFile;
+use Webmozart\Assert\Assert;
 
 class GetAttachmentsSchemaAction
 {
@@ -55,7 +56,7 @@ class GetAttachmentsSchemaAction
                     }
 
                     // Set expects Component|string, pass attachment as string
-                    \Webmozart\Assert\Assert::string($attachment, 'Attachment must be string');
+                    Assert::string($attachment, 'Attachment must be string');
                     $set($attachment, $sessionFiles);
                 });
         }

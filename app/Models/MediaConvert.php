@@ -71,6 +71,9 @@ use Modules\Xot\Contracts\ProfileContract;
  * @property-read ProfileContract|null $updater
  *
  * @mixin IdeHelperMediaConvert
+ *
+ * @property-read \Modules\Xot\Contracts\ProfileContract|null $deleter
+ *
  * @mixin \Eloquent
  */
 class MediaConvert extends BaseModel

@@ -13,6 +13,7 @@ use Illuminate\Support\Carbon;
 use Modules\Media\Database\Factories\TemporaryUploadFactory;
 use Modules\Media\Exceptions\CouldNotAddUpload;
 use Modules\Media\Exceptions\TemporaryUploadDoesNotBelongToCurrentSession;
+use Modules\Xot\Models\Traits\HasXotFactory;
 use Spatie\Image\Enums\Fit;
 use Spatie\MediaLibrary\Conversions\Conversion;
 use Spatie\MediaLibrary\HasMedia;
@@ -53,13 +54,17 @@ use Webmozart\Assert\Assert;
  *
  * @method static TemporaryUploadFactory factory($count = null, $state = [])
  *
+ * @property-read \Modules\Xot\Contracts\ProfileContract|null $creator
+ * @property-read \Modules\Xot\Contracts\ProfileContract|null $deleter
+ * @property-read \Modules\Xot\Contracts\ProfileContract|null $updater
+ *
  * @mixin \Eloquent
  */
 class TemporaryUpload extends BaseModel implements HasMedia
 {
+    use HasXotFactory;
     use InteractsWithMedia;
     use MassPrunable;
-    use \Modules\Xot\Models\Traits\HasXotFactory;
 
     public static ?Closure $manipulatePreview = null;
 

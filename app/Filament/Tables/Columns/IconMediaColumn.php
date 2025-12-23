@@ -6,6 +6,7 @@ namespace Modules\Media\Filament\Tables\Columns;
 
 use Filament\Tables\Columns\IconColumn;
 use Illuminate\Http\Request;
+use Spatie\MediaLibrary\MediaCollections\Models\Media;
 
 class IconMediaColumn extends IconColumn
 {
@@ -52,7 +53,7 @@ class IconMediaColumn extends IconColumn
                     return null;
                 }
 
-                /** @var \Spatie\MediaLibrary\MediaCollections\Models\Media|null $media */
+                /** @var Media|null $media */
                 $media = $record->getFirstMedia($attachment);
                 if ($media === null) {
                     return null;
