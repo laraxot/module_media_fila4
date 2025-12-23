@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 37a2da6 (.)
->>>>>>> laraxot/develop
 # ==============================================
 # LARAXOT MODULE MEDIA - .GITIGNORE
 # ==============================================
@@ -65,38 +58,6 @@ lerna-debug.log*
 # ==============================================
 # LARAVEL SPECIFIC
 # ==============================================
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-# Dependencies and packages
-/vendor/
-/node_modules/
-/docs/vendor/
-
-# Lock files and cache
-*.lock
-composer.lock
-package-lock.json
-*.cache
-yarn-error.log
-npm-debug.log
-.phpunit.result.cache
-.php-cs-fixer.cache
-
-# Log files
-*.log
-
-# Build directories
-/build/
-/build
-build/
-
-# Laravel specific
->>>>>>> 0a466ed (.)
-=======
->>>>>>> 37a2da6 (.)
->>>>>>> laraxot/develop
 bootstrap/compiled.php
 app/storage/
 public/storage
@@ -105,13 +66,6 @@ public_html/storage
 public_html/hot
 storage/*.key
 .env
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 37a2da6 (.)
->>>>>>> laraxot/develop
 .env.*
 !.env.example
 
@@ -210,39 +164,3 @@ test_media_files/
 *.fila2
 laravel
 public_html
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-
-# Local configurations
-Homestead.yaml
-Homestead.json
-/.vagrant
-
-# Git specific
-.git-blame-ignore-revs
-.git-rewrite/
-.git-rewrite
-
-# Temporary and system files
-*.tmp
-*.swp
-*.swo
-*.stackdump
-*.exe
-*:Zone.Identifier
-.DS_Store
-*.old
-*.old1
-*.backup
-*.bak
-
-# Documentation and cache
-docs/phpstan/
-docs/cache/
-cache/
->>>>>>> 0a466ed (.)
-=======
->>>>>>> 37a2da6 (.)
->>>>>>> laraxot/develop

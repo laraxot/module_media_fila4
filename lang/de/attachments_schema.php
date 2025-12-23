@@ -99,16 +99,4 @@ return [
         'delete_success' => 'Datei erfolgreich gelöscht',
         'delete_error' => 'Fehler beim Löschen der Datei',
     ],
-<<<<<<< HEAD
 ];
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-];
-=======
-]; 
->>>>>>> 0a466ed (.)
-=======
-];
->>>>>>> 37a2da6 (.)
->>>>>>> laraxot/develop

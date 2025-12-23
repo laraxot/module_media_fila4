@@ -16,46 +16,18 @@ class CheckFileExistsAction extends BaseS3Action
         try {
             $this->s3Client->headObject([
                 'Bucket' => $this->bucketName,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 37a2da6 (.)
->>>>>>> laraxot/develop
                 'Key' => $key,
             ]);
 
             $this->logger->info('File existence check completed', ['key' => $key, 'exists' => true]);
 
             return true;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-                'Key'    => $key,
-            ]);
-            
-            $this->logger->info('File existence check completed', ['key' => $key, 'exists' => true]);
-            return true;
-            
->>>>>>> 0a466ed (.)
-=======
->>>>>>> 37a2da6 (.)
->>>>>>> laraxot/develop
         } catch (S3Exception $exception) {
             if ($exception->getStatusCode() === 404) {
                 $this->logger->info('File existence check completed', ['key' => $key, 'exists' => false]);
 
                 return false;
             }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 37a2da6 (.)
->>>>>>> laraxot/develop
 
             $this->logger->error('Error checking file existence in S3', [
                 'key' => $key,
@@ -67,22 +39,3 @@ class CheckFileExistsAction extends BaseS3Action
         }
     }
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-            
-            $this->logger->error('Error checking file existence in S3', [
-                'key' => $key,
-                'error' => $exception->getMessage(),
-                'trace' => $exception->getTraceAsString()
-            ]);
-            
-            throw $exception;
-        }
-    }
-}
->>>>>>> 0a466ed (.)
-=======
->>>>>>> 37a2da6 (.)
->>>>>>> laraxot/develop
