@@ -13,17 +13,31 @@ class FileExtensionRule implements Rule
 {
     protected array $validExtensions = [];
 
+    /**
+     * @param  array<int, string>  $validExtensions
+     */
     public function __construct(array $validExtensions = [])
     {
-        $this->validExtensions = array_map(mb_strtolower(...), $validExtensions);
+        $this->validExtensions = array_map(
+            /**
+             * @param  mixed  $ext
+             * @return lowercase-string
+             */
+            static fn ($ext): string => mb_strtolower((string) $ext),
+            $validExtensions
+        );
     }
 
     /**
-     * @param  mixed  $_attribute  The attribute being validated (not used in this rule)
-     * @param  UploadedFile  $value  The uploaded file to validate
+     * @param  string  $attribute  The attribute being validated (not used in this rule)
+     * @param  mixed  $value  The uploaded file to validate
      */
-    public function passes($_attribute, $value): bool
+    public function passes($attribute, $value): bool
     {
+        if (! $value instanceof UploadedFile) {
+            return false;
+        }
+
         return in_array(mb_strtolower($value->getClientOriginalExtension()), $this->validExtensions, strict: false);
     }
 

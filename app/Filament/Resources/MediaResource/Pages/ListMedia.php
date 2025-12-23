@@ -16,6 +16,7 @@ use Modules\Media\Filament\Resources\MediaResource;
 use Modules\Media\Models\Media;
 use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
 use Override;
+use RuntimeException;
 use Webmozart\Assert\Assert;
 
 class ListMedia extends XotBaseListRecords
@@ -80,7 +81,16 @@ class ListMedia extends XotBaseListRecords
             'download' => Action::make('download_attachment')
                 ->icon('heroicon-o-arrow-down-tray')
                 ->color('primary')
-                ->action(static fn ($record) => response()->download($record->getPath(), $record->file_name)),
+                ->action(static function ($record) {
+                    // PHPStan Level 10: isset() per Eloquent magic property
+                    if (! is_object($record) || ! method_exists($record, 'getPath') || ! isset($record->file_name)) {
+                        throw new RuntimeException('Invalid record for download');
+                    }
+                    $filePath = $record->getPath();
+                    Assert::string($filePath, 'getPath must return string');
+
+                    return response()->download($filePath, (string) $record->file_name);
+                }),
             'convert' => Action::make('convert')
                 ->icon('media-convert')
                 ->color('gray')

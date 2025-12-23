@@ -30,7 +30,7 @@ class AddAttachmentAction extends Action
     {
         Assert::string(
             $ris = trans('media::add_attachment_action.'.$key),
-            '['.$key.']['.__LINE__.']['.class_basename(__CLASS__).']',
+            '['.$key.']['.__LINE__.']['.class_basename(self::class).']',
         );
 
         return $ris;
@@ -92,11 +92,31 @@ class AddAttachmentAction extends Action
             throw new Exception('wip');
         }
 
-        $attachment = $ownerRecord
-            ->addMediaFromDisk($data['file'], config('attachment.upload.disk.driver'))
-            ->setName($data['name'] ?? Str::beforeLast($data['original_file_name'], '.'))
-            ->preservingOriginal()
-            ->toMediaCollection($mediaCollection);
+        $fileAdder = $ownerRecord->addMediaFromDisk($data['file'], config('attachment.upload.disk.driver'));
+
+        if ($fileAdder === null || ! is_object($fileAdder)) {
+            throw new Exception('Failed to add media from disk');
+        }
+
+        if (! method_exists($fileAdder, 'setName') || ! method_exists($fileAdder, 'preservingOriginal') || ! method_exists($fileAdder, 'toMediaCollection')) {
+            throw new Exception('FileAdder does not have required methods');
+        }
+
+        $fileAdderWithName = $fileAdder->setName($data['name'] ?? Str::beforeLast((string) ($data['original_file_name'] ?? ''), '.'));
+        if (! is_object($fileAdderWithName) || ! method_exists($fileAdderWithName, 'preservingOriginal')) {
+            throw new Exception('setName did not return valid object');
+        }
+
+        $fileAdderPreserving = $fileAdderWithName->preservingOriginal();
+        if (! is_object($fileAdderPreserving) || ! method_exists($fileAdderPreserving, 'toMediaCollection')) {
+            throw new Exception('preservingOriginal did not return valid object');
+        }
+
+        $attachment = $fileAdderPreserving->toMediaCollection($mediaCollection);
+
+        if (! is_object($attachment) || ! method_exists($attachment, 'update')) {
+            throw new Exception('toMediaCollection did not return valid object');
+        }
 
         $user_id = authId();
         $attachment->update([

@@ -7,14 +7,13 @@ namespace Modules\Media\Models;
 use Closure;
 use Exception;
 use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\MassPrunable;
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Carbon;
 use Modules\Media\Database\Factories\TemporaryUploadFactory;
 use Modules\Media\Exceptions\CouldNotAddUpload;
 use Modules\Media\Exceptions\TemporaryUploadDoesNotBelongToCurrentSession;
+use Modules\Xot\Models\Traits\HasXotFactory;
 use Spatie\Image\Enums\Fit;
 use Spatie\MediaLibrary\Conversions\Conversion;
 use Spatie\MediaLibrary\HasMedia;
@@ -55,21 +54,17 @@ use Webmozart\Assert\Assert;
  *
  * @method static TemporaryUploadFactory factory($count = null, $state = [])
  *
+ * @property-read \Modules\Xot\Contracts\ProfileContract|null $creator
+ * @property-read \Modules\Xot\Contracts\ProfileContract|null $deleter
+ * @property-read \Modules\Xot\Contracts\ProfileContract|null $updater
+ *
  * @mixin \Eloquent
  */
-class TemporaryUpload extends Model implements HasMedia
+class TemporaryUpload extends BaseModel implements HasMedia
 {
-    use HasFactory;
+    use HasXotFactory;
     use InteractsWithMedia;
     use MassPrunable;
-
-    /**
-     * Create a new factory instance for the model.
-     */
-    protected static function newFactory(): TemporaryUploadFactory
-    {
-        return TemporaryUploadFactory::new();
-    }
 
     public static ?Closure $manipulatePreview = null;
 
@@ -88,7 +83,9 @@ class TemporaryUpload extends Model implements HasMedia
         Assert::string($mediaModelClass = config('media-library.media_model'));
 
         /**
-         * @var Media $media
+         * @var Media|null $media
+         *
+         * @phpstan-ignore-next-line
          */
         $media = $mediaModelClass::query()->where('uuid', $mediaUuid)->first();
 
@@ -226,7 +223,7 @@ class TemporaryUpload extends Model implements HasMedia
         if (\is_string($res)) {
             return $res;
         }
-        throw new Exception('['.__LINE__.']['.class_basename(__CLASS__).']');
+        throw new Exception('['.__LINE__.']['.class_basename(self::class).']');
     }
 
     // public function prunable(): Builder
@@ -236,11 +233,10 @@ class TemporaryUpload extends Model implements HasMedia
 
     protected function getPreviewManipulation(): Closure
     {
-        return
-            static::$manipulatePreview ?? function (Conversion $conversion): void {
-                $conversion->fit(Fit::Crop, 300, 300);
+        return static::$manipulatePreview ?? function (Conversion $conversion): void {
+            $conversion->fit(Fit::Crop, 300, 300);
 
-                // $conversion->fit('crop', 300, 300);
-            };
+            // $conversion->fit('crop', 300, 300);
+        };
     }
 }
