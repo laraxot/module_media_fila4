@@ -15,11 +15,7 @@ class MediaTest extends TestCase
     public function test_can_create_media_with_minimal_data(): void
     {
         $media = Media::factory()->create([
-<<<<<<< HEAD
             'model_type' => 'App\Models\User',
-=======
-            'model_type' => 'Modules\User\Models\User',
->>>>>>> laraxot/develop
             'model_id' => '1',
             'collection_name' => 'avatars',
             'name' => 'test-image',
@@ -30,11 +26,7 @@ class MediaTest extends TestCase
 
         $this->assertDatabaseHas('media', [
             'id' => $media->id,
-<<<<<<< HEAD
             'model_type' => 'App\Models\User',
-=======
-            'model_type' => 'Modules\User\Models\User',
->>>>>>> laraxot/develop
             'model_id' => '1',
             'collection_name' => 'avatars',
             'name' => 'test-image',

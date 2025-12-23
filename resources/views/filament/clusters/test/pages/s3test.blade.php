@@ -15,15 +15,7 @@ declare(strict_types=1);
     ✅ Accessibile: Supporto screen reader
 --}}
 
-<<<<<<< HEAD
 <x-filament::page>
-=======
-<<<<<<< HEAD
-<x-filament::page>
-=======
-<x-fi<x-filament::page>
->>>>>>> e0ce06e (.)
->>>>>>> laraxot/develop
     <x-filament::section>
         <x-slot name="heading">
             {{ __('ui::pages.s3test.heading') }}
