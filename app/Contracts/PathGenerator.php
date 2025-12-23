@@ -8,7 +8,19 @@ use Modules\Media\Models\Media;
 
 /**
  * Interface PathGenerator
+<<<<<<< HEAD
  *
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+ *
+=======
+ * 
+>>>>>>> 0a466ed (.)
+=======
+ *
+>>>>>>> 37a2da6 (.)
+>>>>>>> laraxot/develop
  * Definisce i metodi necessari per la generazione dei percorsi dei file media.
  */
 interface PathGenerator
@@ -36,4 +48,16 @@ interface PathGenerator
      * @return string Il percorso generato
      */
     public function getPathForResponsiveImages(Media $media): string;
+<<<<<<< HEAD
 }
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
+} 
+>>>>>>> 0a466ed (.)
+=======
+}
+>>>>>>> 37a2da6 (.)
+>>>>>>> laraxot/develop

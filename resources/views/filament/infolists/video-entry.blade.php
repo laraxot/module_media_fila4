@@ -1,8 +1,23 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 37a2da6 (.)
+>>>>>>> laraxot/develop
 <?php
 
 declare(strict_types=1);
 
 ?>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 0a466ed (.)
+=======
+>>>>>>> 37a2da6 (.)
+>>>>>>> laraxot/develop
 <x-dynamic-component :component="$getEntryWrapperView()" :entry="$entry">
     @php
         $limit = $getLimit();
@@ -120,9 +135,27 @@ declare(strict_types=1);
                 </div>
             @endif
         @elseif (($placeholder = $getPlaceholder()) !== null)
+<<<<<<< HEAD
             <div class="fi-in-placeholder text-gray-400 dark:text-gray-500">
                 {{ $placeholder }}
             </div>
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+            <div class="fi-in-placeholder text-gray-400 dark:text-gray-500">
+                {{ $placeholder }}
+            </div>
+=======
+            <x-filament-infolists::entries.placeholder>
+                {{ $placeholder }}
+            </x-filament-infolists::entries.placeholder>
+>>>>>>> 0a466ed (.)
+=======
+            <div class="fi-in-placeholder text-gray-400 dark:text-gray-500">
+                {{ $placeholder }}
+            </div>
+>>>>>>> 37a2da6 (.)
+>>>>>>> laraxot/develop
         @endif
     </div>
 </x-dynamic-component>
