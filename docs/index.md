@@ -19,7 +19,11 @@ Questo documento serve come indice centrale per il modulo Media, fornendo una gu
 - **Watermark Automatico**: Applicazione automatica di watermark sui media
 
 ## Collegamenti Correlati
+<<<<<<< HEAD
 - [Documentazione Generale SaluteOra](../../../../docs/README.md)
+=======
+- [Documentazione Generale <nome progetto>](../../../../docs/README.md)
+>>>>>>> laraxot/develop
 - [Collegamenti Documentazione](../../../../docs/collegamenti-documentazione.md)
 - [Standard di Documentazione](../../../../docs/DOCUMENTATION_STANDARDS.md)
 - [Modulo Xot](../../Xot/docs/README.md)
