@@ -4,11 +4,10 @@ declare(strict_types=1);
 
 namespace Modules\Media\Filament\Resources\HasMediaResource\RelationManagers;
 
-use Filament\Actions\Action;
-use Filament\Actions\ActionGroup;
 use Modules\Media\Filament\Resources\HasMediaResource\Actions\AddAttachmentAction;
+use Modules\Xot\Filament\Actions\XotBaseAction;
+use Modules\Xot\Filament\Actions\XotBaseActionGroup;
 use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
-use Override;
 
 class MediaRelationManager extends XotBaseRelationManager
 {
@@ -17,9 +16,9 @@ class MediaRelationManager extends XotBaseRelationManager
     protected static ?string $inverseRelationship = 'model';
 
     /**
-     * @return array<string, Action|ActionGroup>
+     * @return array<string, XotBaseAction|XotBaseActionGroup>
      */
-    #[Override]
+    #[\Override]
     public function getTableHeaderActions(): array
     {
         return [
