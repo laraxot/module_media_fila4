@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Media\Filament\Resources\HasMediaResource\RelationManagers;
 
+use Override;
 use Modules\Media\Filament\Resources\HasMediaResource\Actions\AddAttachmentAction;
 use Modules\Xot\Filament\Actions\XotBaseAction;
 use Modules\Xot\Filament\Actions\XotBaseActionGroup;
@@ -18,7 +19,7 @@ class MediaRelationManager extends XotBaseRelationManager
     /**
      * @return array<string, XotBaseAction|XotBaseActionGroup>
      */
-    #[\Override]
+    #[Override]
     public function getTableHeaderActions(): array
     {
         return [
