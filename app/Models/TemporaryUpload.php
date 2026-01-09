@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Media\Models;
 
-use Modules\Xot\Contracts\ProfileContract;
 use Closure;
 use Exception;
 use Illuminate\Database\Eloquent\Builder;
