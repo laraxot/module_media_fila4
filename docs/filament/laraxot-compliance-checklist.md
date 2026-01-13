@@ -120,7 +120,7 @@ namespace Modules\Media\Models;               // Corretto
 
 ### PHPStan Check
 ```bash
-cd /var/www/html/_bases/base_<nome progetto>/laravel
+cd laravel
 ./vendor/bin/phpstan analyze Modules/Media --level=9
 ```
 
